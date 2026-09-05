@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-27T21:19:03.148196+00:00",
+  "source_artifact": "labs/lab-003-herald-threshold-phase-diagram/results/q1-honeycomb-residual80-l9-l13-highp-3000-2026-08-27.json",
+  "source_config_sha256": "102658ec6f9f5cb77fc7162dfaa794ca441deb89cbd01b2c578e99f236e6eafa",
+  "lattice": "honeycomb",
+  "q": 1.0,
+  "decoder": {
+    "name": "HeraldAwareBpMatchingDecoder",
+    "recurrence_mode": "damping",
+    "damping": 0.25,
+    "max_iterations": 80,
+    "update_schedule": "residual_priority",
+    "residual_priority_order": "stable_sort",
+    "residual_priority_buffer_reuse": false,
+    "residual_priority_cached_products": false,
+    "matching_projection": "posterior_llr",
+    "p_m": 0.0,
+    "p_h": 0.0,
+    "use_numba": true
+  },
+  "sizes": [
+    9,
+    11,
+    13
+  ],
+  "shots_per_cell": 3000,
+  "source_raw_sha256": "22a5f1482328d9c39472699dba315a7a56408aab0cfac1694d530fc33b26d5f4",
+  "syndrome_fidelity": {
+    "checked_corrections": 18000,
+    "faithful_corrections": 18000,
+    "failures": 0,
+    "all_faithful": true,
+    "enforcement": "raise before raw-row write and atomic shard finalization"
+  },
+  "adjacent_crossings": [
+    {
+      "sizes": [
+        9,
+        11
+      ],
+      "status": "not_bracketed",
+      "estimate": null,
+      "observed_trend": "larger_size_lower_LER",
+      "seed_cluster_bootstrap": {
+        "replicates": 10000,
+        "seed": 532999,
+        "cluster_policy": "resample seed trajectories independently within each size and preserve all p values in a selected trajectory",
+        "larger_size_lower_at_every_p_fraction": 1.0,
+        "larger_size_higher_at_every_p_fraction": 0.0,
+        "one_or_more_directed_crossings_fraction": 0.0,
+        "directed_crossing_estimate_interval95": null,
+        "delta_LER_smaller_minus_larger": [
+          {
+            "p": 0.45,
+            "interval95": [
+              0.006333333333333333,
+              0.011666666666666669
+            ],
+            "probability_larger_size_lower_LER": 1.0
+          },
+          {
+            "p": 0.49,
+            "interval95": [
+              0.009,
+              0.016333333333333335
+            ],
+            "probability_larger_size_lower_LER": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "sizes": [
+        11,
+        13
+      ],
+      "status": "not_bracketed",
+      "estimate": null,
+      "observed_trend": "larger_size_lower_LER",
+      "seed_cluster_bootstrap": {
+        "replicates": 10000,
+        "seed": 533000,
+        "cluster_policy": "resample seed trajectories independently within each size and preserve all p values in a selected trajectory",
+        "larger_size_lower_at_every_p_fraction": 0.9524,
+        "larger_size_higher_at_every_p_fraction": 0.0,
+        "one_or_more_directed_crossings_fraction": 0.025,
+        "directed_crossing_estimate_interval95": [
+          0.4766666666666667,
+          0.4875
+        ],
+        "delta_LER_smaller_minus_larger": [
+          {
+            "p": 0.45,
+            "interval95": [
+              0.003,
+              0.006333333333333333
+            ],
+            "probability_larger_size_lower_LER": 1.0
+          },
+          {
+            "p": 0.49,
+            "interval95": [
+              -8.333333333325748e-06,
+              0.004674999999999879
+            ],
+            "probability_larger_size_lower_LER": 0.9524
+          }
+        ]
+      }
+    }
+  ],
+  "finite_size_interpretation": "no_directed_crossing_bracketed",
+  "threshold_statement": "This is a decoder-specific finite-size crossing diagnostic. It is not an asymptotic threshold estimate; N0 showed residual BP nonconvergence at large sizes."
+}

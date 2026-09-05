@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "status": "completed_prepacked_iteration_scaling_audit",
+  "phase": "R6R",
+  "title": "R6D dense recurrence iteration-cost and scaling audit",
+  "question": "What is the warm dense-kernel time per R6D BP iteration, how linear is it in a forced iteration cap, and how much of the current default pipeline is fixed graph/packing overhead?",
+  "input": "results/r6n-default-flux-policy-comparison-2026-08-29.json",
+  "scope": {
+    "records": "first 20 frozen R6N trajectories in trajectory-index order",
+    "iteration_caps": [1, 2, 5, 10, 20, 40],
+    "timing_repetitions_per_record": 10,
+    "forced_full_cap_tolerance": 1e-300,
+    "default_recurrence": "damping 0.25, cap 40, tolerance 1e-8",
+    "new_physical_samples": 0
+  },
+  "acceptance": [
+    "dense prepacked kernel agrees with the public dense wrapper on every default record",
+    "every forced-cap run performs its requested iteration count",
+    "all measurements exclude one-time JIT compilation and report it separately"
+  ],
+  "claim_boundary": "CPU microbenchmark only. It does not predict single-instance GPU latency, batched GPU throughput, larger-size scaling, or any changed BP approximation.",
+  "outputs": {
+    "result": "results/r6r-iteration-runtime-scaling-2026-08-29.json",
+    "report": "results/r6r-iteration-runtime-scaling-2026-08-29.md"
+  },
+  "execution": {
+    "records": 20,
+    "timing_repetitions_per_record": 10,
+    "mean_default_iterations": 24.5,
+    "mean_default_prepacked_microseconds_per_iteration": 309.20582487276397,
+    "mean_forced_40_iteration_seconds": 0.012676348555251026,
+    "mean_factor_graph_build_seconds": 0.01313900614331942,
+    "mean_dense_pack_seconds": 0.0013759373541688547
+  }
+}

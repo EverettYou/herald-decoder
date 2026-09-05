@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "status": "completed_production_size_cpu_baseline",
+  "phase": "R6S",
+  "title": "Production-size R6D BP runtime and topology-cache baseline",
+  "question": "At representative production lattice sizes L=5,7,9,11,13,15, how do factor-graph construction, dense packing, and the fixed R6D recurrence scale before static-topology caching?",
+  "scope": {
+    "sizes": [15],
+    "observation": "deterministic all-zero flux syndrome with all charge outcomes unmeasured; computational microbenchmark only",
+    "error_rate": 0.2,
+    "old_message_weight": 0.25,
+    "forced_iterations": 10,
+    "forced_full_cap_tolerance": 1e-300,
+    "timing_repetitions_per_size": 5,
+    "new_physical_samples": 0
+  },
+  "acceptance": [
+    "each size has 9L^2 physical edges, 27L^2 binary variables, and a finite dense recurrence",
+    "each forced run completes exactly the registered iteration cap",
+    "timing separates graph construction, dense packing, and prepacked recurrence"
+  ],
+  "claim_boundary": "This is a controlled CPU scaling baseline, not a decoder-accuracy study, GPU benchmark, or a claim about typical observation-distribution latency. It establishes the target sizes and the removable topology-construction cost before caching.",
+  "outputs": {
+    "result": "results/r6s-production-size-runtime-2026-08-29.json",
+    "report": "results/r6s-production-size-runtime-2026-08-29.md"
+  },
+  "execution": {
+    "timing_repetitions_per_size": 5,
+    "L15_graph_build_seconds": 0.35672238339902834,
+    "L15_dense_pack_seconds": 0.04642957500182092,
+    "L15_prepacked_microseconds_per_iteration": 12873.324160464108,
+    "L15_forced_10_iteration_seconds": 0.12873324160464109
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "status": "completed_exact_recurrence_equivalence_benchmark",
+  "phase": "R6Q",
+  "title": "Dense Numba equivalence and benchmark for the default R6D recurrence",
+  "question": "Can a dense Numba implementation reproduce every frozen default R6D BP decision while materially reducing recurrence runtime?",
+  "input": "results/r6n-default-flux-policy-comparison-2026-08-29.json",
+  "scope": {
+    "records": "all 100 frozen nonterminal R6N trajectories",
+    "recurrence": "same R6D graph, damping 0.25, 40 iterations, tolerance 1e-8",
+    "comparisons": ["marginals", "convergence flag", "iteration count", "message residual", "posterior-LLR MWPM correction"],
+    "new_physical_samples": 0
+  },
+  "acceptance": [
+    "maximum marginal difference at most 1e-12 on every record",
+    "convergence flag and iteration count identical on every record",
+    "dense posterior-LLR MWPM correction equals both Python and frozen R6N correction on every record",
+    "JIT compilation time is reported separately from warm runtime"
+  ],
+  "claim_boundary": "A successful benchmark validates one CPU Numba implementation of the fixed default recurrence. It does not measure GPU performance, alter the approximation, validate exact D4 posteriors, or establish asymptotic runtime scaling.",
+  "outputs": {
+    "result": "results/r6q-dense-numba-equivalence-benchmark-2026-08-29.json",
+    "report": "results/r6q-dense-numba-equivalence-benchmark-2026-08-29.md"
+  },
+  "execution": {
+    "records": 100,
+    "mismatch_count": 0,
+    "maximum_marginal_error": 0.0,
+    "mean_speedup": 124.65191157938564,
+    "median_speedup": 123.12325850457954,
+    "mean_python_recurrence_seconds": 0.526490350428503,
+    "mean_dense_numba_recurrence_and_packing_seconds": 0.004223684528842569,
+    "first_call_compilation_seconds": 0.5672620830009691
+  }
+}

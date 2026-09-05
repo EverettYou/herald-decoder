@@ -1,0 +1,579 @@
+{
+  "backend_provenance": {
+    "implementation": "r6d_dense_template_numba_v1",
+    "module": "d4_local_bp.py",
+    "numba_available": true,
+    "source_sha256": "4360eedcae12366bfb0fb49a08a85ead8849e07d1c3f562c91eefc64c5858dd1"
+  },
+  "cells": [
+    {
+      "attempted_histories": 1000,
+      "p_X": 0.31,
+      "pairings": [
+        {
+          "left": "O0_unit_weight_MWPM",
+          "matched_nonterminal_count": 1000,
+          "right": "O2_published_herald_weight_MWPM",
+          "right_improves": 177,
+          "right_minus_left_flux_failure_rate": -0.058,
+          "right_regresses": 119,
+          "ties": 704
+        },
+        {
+          "left": "O0_unit_weight_MWPM",
+          "matched_nonterminal_count": 1000,
+          "right": "R6D_local_BP_posterior_LLR_MWPM",
+          "right_improves": 712,
+          "right_minus_left_flux_failure_rate": -0.691,
+          "right_regresses": 21,
+          "ties": 267
+        },
+        {
+          "left": "O2_published_herald_weight_MWPM",
+          "matched_nonterminal_count": 1000,
+          "right": "R6D_local_BP_posterior_LLR_MWPM",
+          "right_improves": 652,
+          "right_minus_left_flux_failure_rate": -0.633,
+          "right_regresses": 19,
+          "ties": 329
+        }
+      ],
+      "size": 7,
+      "summaries": {
+        "O0_unit_weight_MWPM": {
+          "conditional_flux_failure_rate": 0.851,
+          "decoded_records": 1000,
+          "flux_union_logical_failures": 851,
+          "mean_wall_seconds": 0.012237102800514548,
+          "median_wall_seconds": 0.010722020524553955,
+          "nonterminal_records": 1000,
+          "policy": "O0_unit_weight_MWPM",
+          "unavailable_records": 0
+        },
+        "O2_published_herald_weight_MWPM": {
+          "conditional_flux_failure_rate": 0.793,
+          "decoded_records": 1000,
+          "flux_union_logical_failures": 793,
+          "mean_wall_seconds": 0.012880864875158295,
+          "median_wall_seconds": 0.011314562521874905,
+          "nonterminal_records": 1000,
+          "policy": "O2_published_herald_weight_MWPM",
+          "unavailable_records": 0
+        },
+        "R6D_local_BP_posterior_LLR_MWPM": {
+          "conditional_flux_failure_rate": 0.16,
+          "converged_records": 125,
+          "decoded_records": 1000,
+          "flux_union_logical_failures": 160,
+          "maximum_final_message_delta": 0.9999979224187219,
+          "mean_iterations": 39.487,
+          "mean_wall_seconds": 0.10200803467270453,
+          "median_wall_seconds": 0.09212958352873102,
+          "nonconverged_records": 875,
+          "nonterminal_records": 1000,
+          "policy": "R6D_local_BP_posterior_LLR_MWPM",
+          "unavailable_records": 0
+        }
+      }
+    },
+    {
+      "attempted_histories": 1000,
+      "p_X": 0.33,
+      "pairings": [
+        {
+          "left": "O0_unit_weight_MWPM",
+          "matched_nonterminal_count": 1000,
+          "right": "O2_published_herald_weight_MWPM",
+          "right_improves": 160,
+          "right_minus_left_flux_failure_rate": -0.047,
+          "right_regresses": 113,
+          "ties": 727
+        },
+        {
+          "left": "O0_unit_weight_MWPM",
+          "matched_nonterminal_count": 1000,
+          "right": "R6D_local_BP_posterior_LLR_MWPM",
+          "right_improves": 615,
+          "right_minus_left_flux_failure_rate": -0.581,
+          "right_regresses": 34,
+          "ties": 351
+        },
+        {
+          "left": "O2_published_herald_weight_MWPM",
+          "matched_nonterminal_count": 1000,
+          "right": "R6D_local_BP_posterior_LLR_MWPM",
+          "right_improves": 578,
+          "right_minus_left_flux_failure_rate": -0.534,
+          "right_regresses": 44,
+          "ties": 378
+        }
+      ],
+      "size": 7,
+      "summaries": {
+        "O0_unit_weight_MWPM": {
+          "conditional_flux_failure_rate": 0.857,
+          "decoded_records": 1000,
+          "flux_union_logical_failures": 857,
+          "mean_wall_seconds": 0.016671947968192397,
+          "median_wall_seconds": 0.01364460401237011,
+          "nonterminal_records": 1000,
+          "policy": "O0_unit_weight_MWPM",
+          "unavailable_records": 0
+        },
+        "O2_published_herald_weight_MWPM": {
+          "conditional_flux_failure_rate": 0.81,
+          "decoded_records": 1000,
+          "flux_union_logical_failures": 810,
+          "mean_wall_seconds": 0.017357895637396724,
+          "median_wall_seconds": 0.014620729489251971,
+          "nonterminal_records": 1000,
+          "policy": "O2_published_herald_weight_MWPM",
+          "unavailable_records": 0
+        },
+        "R6D_local_BP_posterior_LLR_MWPM": {
+          "conditional_flux_failure_rate": 0.276,
+          "converged_records": 80,
+          "decoded_records": 1000,
+          "flux_union_logical_failures": 276,
+          "maximum_final_message_delta": 0.9999521254777973,
+          "mean_iterations": 39.774,
+          "mean_wall_seconds": 0.13495443535991944,
+          "median_wall_seconds": 0.11401908396510407,
+          "nonconverged_records": 920,
+          "nonterminal_records": 1000,
+          "policy": "R6D_local_BP_posterior_LLR_MWPM",
+          "unavailable_records": 0
+        }
+      }
+    },
+    {
+      "attempted_histories": 1000,
+      "p_X": 0.31,
+      "pairings": [
+        {
+          "left": "O0_unit_weight_MWPM",
+          "matched_nonterminal_count": 1000,
+          "right": "O2_published_herald_weight_MWPM",
+          "right_improves": 145,
+          "right_minus_left_flux_failure_rate": -0.025,
+          "right_regresses": 120,
+          "ties": 735
+        },
+        {
+          "left": "O0_unit_weight_MWPM",
+          "matched_nonterminal_count": 1000,
+          "right": "R6D_local_BP_posterior_LLR_MWPM",
+          "right_improves": 721,
+          "right_minus_left_flux_failure_rate": -0.697,
+          "right_regresses": 24,
+          "ties": 255
+        },
+        {
+          "left": "O2_published_herald_weight_MWPM",
+          "matched_nonterminal_count": 1000,
+          "right": "R6D_local_BP_posterior_LLR_MWPM",
+          "right_improves": 696,
+          "right_minus_left_flux_failure_rate": -0.672,
+          "right_regresses": 24,
+          "ties": 280
+        }
+      ],
+      "size": 9,
+      "summaries": {
+        "O0_unit_weight_MWPM": {
+          "conditional_flux_failure_rate": 0.855,
+          "decoded_records": 1000,
+          "flux_union_logical_failures": 855,
+          "mean_wall_seconds": 0.030667230173246934,
+          "median_wall_seconds": 0.023157062532845885,
+          "nonterminal_records": 1000,
+          "policy": "O0_unit_weight_MWPM",
+          "unavailable_records": 0
+        },
+        "O2_published_herald_weight_MWPM": {
+          "conditional_flux_failure_rate": 0.83,
+          "decoded_records": 1000,
+          "flux_union_logical_failures": 830,
+          "mean_wall_seconds": 0.03227441993285902,
+          "median_wall_seconds": 0.02532320801401511,
+          "nonterminal_records": 1000,
+          "policy": "O2_published_herald_weight_MWPM",
+          "unavailable_records": 0
+        },
+        "R6D_local_BP_posterior_LLR_MWPM": {
+          "conditional_flux_failure_rate": 0.158,
+          "converged_records": 29,
+          "decoded_records": 1000,
+          "flux_union_logical_failures": 158,
+          "maximum_final_message_delta": 0.9999776212072844,
+          "mean_iterations": 39.933,
+          "mean_wall_seconds": 0.23437004673061893,
+          "median_wall_seconds": 0.189258478989359,
+          "nonconverged_records": 971,
+          "nonterminal_records": 1000,
+          "policy": "R6D_local_BP_posterior_LLR_MWPM",
+          "unavailable_records": 0
+        }
+      }
+    },
+    {
+      "attempted_histories": 1000,
+      "p_X": 0.33,
+      "pairings": [
+        {
+          "left": "O0_unit_weight_MWPM",
+          "matched_nonterminal_count": 1000,
+          "right": "O2_published_herald_weight_MWPM",
+          "right_improves": 131,
+          "right_minus_left_flux_failure_rate": -0.01,
+          "right_regresses": 121,
+          "ties": 748
+        },
+        {
+          "left": "O0_unit_weight_MWPM",
+          "matched_nonterminal_count": 1000,
+          "right": "R6D_local_BP_posterior_LLR_MWPM",
+          "right_improves": 630,
+          "right_minus_left_flux_failure_rate": -0.589,
+          "right_regresses": 41,
+          "ties": 329
+        },
+        {
+          "left": "O2_published_herald_weight_MWPM",
+          "matched_nonterminal_count": 1000,
+          "right": "R6D_local_BP_posterior_LLR_MWPM",
+          "right_improves": 618,
+          "right_minus_left_flux_failure_rate": -0.579,
+          "right_regresses": 39,
+          "ties": 343
+        }
+      ],
+      "size": 9,
+      "summaries": {
+        "O0_unit_weight_MWPM": {
+          "conditional_flux_failure_rate": 0.861,
+          "decoded_records": 1000,
+          "flux_union_logical_failures": 861,
+          "mean_wall_seconds": 0.012080795458517968,
+          "median_wall_seconds": 0.01145754149183631,
+          "nonterminal_records": 1000,
+          "policy": "O0_unit_weight_MWPM",
+          "unavailable_records": 0
+        },
+        "O2_published_herald_weight_MWPM": {
+          "conditional_flux_failure_rate": 0.851,
+          "decoded_records": 1000,
+          "flux_union_logical_failures": 851,
+          "mean_wall_seconds": 0.013524892041110433,
+          "median_wall_seconds": 0.012995958561077714,
+          "nonterminal_records": 1000,
+          "policy": "O2_published_herald_weight_MWPM",
+          "unavailable_records": 0
+        },
+        "R6D_local_BP_posterior_LLR_MWPM": {
+          "conditional_flux_failure_rate": 0.272,
+          "converged_records": 12,
+          "decoded_records": 1000,
+          "flux_union_logical_failures": 272,
+          "maximum_final_message_delta": 0.9999821838334003,
+          "mean_iterations": 39.976,
+          "mean_wall_seconds": 0.09639746231411118,
+          "median_wall_seconds": 0.09220558346714824,
+          "nonconverged_records": 988,
+          "nonterminal_records": 1000,
+          "policy": "R6D_local_BP_posterior_LLR_MWPM",
+          "unavailable_records": 0
+        }
+      }
+    },
+    {
+      "attempted_histories": 1000,
+      "p_X": 0.31,
+      "pairings": [
+        {
+          "left": "O0_unit_weight_MWPM",
+          "matched_nonterminal_count": 1000,
+          "right": "O2_published_herald_weight_MWPM",
+          "right_improves": 129,
+          "right_minus_left_flux_failure_rate": -0.009,
+          "right_regresses": 120,
+          "ties": 751
+        },
+        {
+          "left": "O0_unit_weight_MWPM",
+          "matched_nonterminal_count": 1000,
+          "right": "R6D_local_BP_posterior_LLR_MWPM",
+          "right_improves": 706,
+          "right_minus_left_flux_failure_rate": -0.687,
+          "right_regresses": 19,
+          "ties": 275
+        },
+        {
+          "left": "O2_published_herald_weight_MWPM",
+          "matched_nonterminal_count": 1000,
+          "right": "R6D_local_BP_posterior_LLR_MWPM",
+          "right_improves": 702,
+          "right_minus_left_flux_failure_rate": -0.678,
+          "right_regresses": 24,
+          "ties": 274
+        }
+      ],
+      "size": 11,
+      "summaries": {
+        "O0_unit_weight_MWPM": {
+          "conditional_flux_failure_rate": 0.862,
+          "decoded_records": 1000,
+          "flux_union_logical_failures": 862,
+          "mean_wall_seconds": 0.0219526520363288,
+          "median_wall_seconds": 0.018292416410986334,
+          "nonterminal_records": 1000,
+          "policy": "O0_unit_weight_MWPM",
+          "unavailable_records": 0
+        },
+        "O2_published_herald_weight_MWPM": {
+          "conditional_flux_failure_rate": 0.853,
+          "decoded_records": 1000,
+          "flux_union_logical_failures": 853,
+          "mean_wall_seconds": 0.025834942562272773,
+          "median_wall_seconds": 0.022080979542806745,
+          "nonterminal_records": 1000,
+          "policy": "O2_published_herald_weight_MWPM",
+          "unavailable_records": 0
+        },
+        "R6D_local_BP_posterior_LLR_MWPM": {
+          "conditional_flux_failure_rate": 0.175,
+          "converged_records": 2,
+          "decoded_records": 1000,
+          "flux_union_logical_failures": 175,
+          "maximum_final_message_delta": 0.9999843252113871,
+          "mean_iterations": 39.999,
+          "mean_wall_seconds": 0.16567676998360548,
+          "median_wall_seconds": 0.13920264545595273,
+          "nonconverged_records": 998,
+          "nonterminal_records": 1000,
+          "policy": "R6D_local_BP_posterior_LLR_MWPM",
+          "unavailable_records": 0
+        }
+      }
+    },
+    {
+      "attempted_histories": 1000,
+      "p_X": 0.33,
+      "pairings": [
+        {
+          "left": "O0_unit_weight_MWPM",
+          "matched_nonterminal_count": 1000,
+          "right": "O2_published_herald_weight_MWPM",
+          "right_improves": 107,
+          "right_minus_left_flux_failure_rate": 0.016,
+          "right_regresses": 123,
+          "ties": 770
+        },
+        {
+          "left": "O0_unit_weight_MWPM",
+          "matched_nonterminal_count": 1000,
+          "right": "R6D_local_BP_posterior_LLR_MWPM",
+          "right_improves": 621,
+          "right_minus_left_flux_failure_rate": -0.58,
+          "right_regresses": 41,
+          "ties": 338
+        },
+        {
+          "left": "O2_published_herald_weight_MWPM",
+          "matched_nonterminal_count": 1000,
+          "right": "R6D_local_BP_posterior_LLR_MWPM",
+          "right_improves": 628,
+          "right_minus_left_flux_failure_rate": -0.596,
+          "right_regresses": 32,
+          "ties": 340
+        }
+      ],
+      "size": 11,
+      "summaries": {
+        "O0_unit_weight_MWPM": {
+          "conditional_flux_failure_rate": 0.863,
+          "decoded_records": 1000,
+          "flux_union_logical_failures": 863,
+          "mean_wall_seconds": 0.020283760501421055,
+          "median_wall_seconds": 0.018356000015046448,
+          "nonterminal_records": 1000,
+          "policy": "O0_unit_weight_MWPM",
+          "unavailable_records": 0
+        },
+        "O2_published_herald_weight_MWPM": {
+          "conditional_flux_failure_rate": 0.879,
+          "decoded_records": 1000,
+          "flux_union_logical_failures": 879,
+          "mean_wall_seconds": 0.02453511741303373,
+          "median_wall_seconds": 0.022401687514502555,
+          "nonterminal_records": 1000,
+          "policy": "O2_published_herald_weight_MWPM",
+          "unavailable_records": 0
+        },
+        "R6D_local_BP_posterior_LLR_MWPM": {
+          "conditional_flux_failure_rate": 0.283,
+          "converged_records": 1,
+          "decoded_records": 1000,
+          "flux_union_logical_failures": 283,
+          "maximum_final_message_delta": 0.999999883726788,
+          "mean_iterations": 40.0,
+          "mean_wall_seconds": 0.15952199555456173,
+          "median_wall_seconds": 0.13862499955575913,
+          "nonconverged_records": 999,
+          "nonterminal_records": 1000,
+          "policy": "R6D_local_BP_posterior_LLR_MWPM",
+          "unavailable_records": 0
+        }
+      }
+    },
+    {
+      "attempted_histories": 1000,
+      "p_X": 0.31,
+      "pairings": [
+        {
+          "left": "O0_unit_weight_MWPM",
+          "matched_nonterminal_count": 1000,
+          "right": "O2_published_herald_weight_MWPM",
+          "right_improves": 100,
+          "right_minus_left_flux_failure_rate": 0.011,
+          "right_regresses": 111,
+          "ties": 789
+        },
+        {
+          "left": "O0_unit_weight_MWPM",
+          "matched_nonterminal_count": 1000,
+          "right": "R6D_local_BP_posterior_LLR_MWPM",
+          "right_improves": 727,
+          "right_minus_left_flux_failure_rate": -0.707,
+          "right_regresses": 20,
+          "ties": 253
+        },
+        {
+          "left": "O2_published_herald_weight_MWPM",
+          "matched_nonterminal_count": 1000,
+          "right": "R6D_local_BP_posterior_LLR_MWPM",
+          "right_improves": 735,
+          "right_minus_left_flux_failure_rate": -0.718,
+          "right_regresses": 17,
+          "ties": 248
+        }
+      ],
+      "size": 13,
+      "summaries": {
+        "O0_unit_weight_MWPM": {
+          "conditional_flux_failure_rate": 0.867,
+          "decoded_records": 1000,
+          "flux_union_logical_failures": 867,
+          "mean_wall_seconds": 0.031107000094489193,
+          "median_wall_seconds": 0.02767647901782766,
+          "nonterminal_records": 1000,
+          "policy": "O0_unit_weight_MWPM",
+          "unavailable_records": 0
+        },
+        "O2_published_herald_weight_MWPM": {
+          "conditional_flux_failure_rate": 0.878,
+          "decoded_records": 1000,
+          "flux_union_logical_failures": 878,
+          "mean_wall_seconds": 0.03919332804484293,
+          "median_wall_seconds": 0.036781437520403415,
+          "nonterminal_records": 1000,
+          "policy": "O2_published_herald_weight_MWPM",
+          "unavailable_records": 0
+        },
+        "R6D_local_BP_posterior_LLR_MWPM": {
+          "conditional_flux_failure_rate": 0.16,
+          "converged_records": 2,
+          "decoded_records": 1000,
+          "flux_union_logical_failures": 160,
+          "maximum_final_message_delta": 0.9999756063419714,
+          "mean_iterations": 39.996,
+          "mean_wall_seconds": 0.21664987503748853,
+          "median_wall_seconds": 0.19723468751180917,
+          "nonconverged_records": 998,
+          "nonterminal_records": 1000,
+          "policy": "R6D_local_BP_posterior_LLR_MWPM",
+          "unavailable_records": 0
+        }
+      }
+    },
+    {
+      "attempted_histories": 1000,
+      "p_X": 0.33,
+      "pairings": [
+        {
+          "left": "O0_unit_weight_MWPM",
+          "matched_nonterminal_count": 1000,
+          "right": "O2_published_herald_weight_MWPM",
+          "right_improves": 103,
+          "right_minus_left_flux_failure_rate": -0.007,
+          "right_regresses": 96,
+          "ties": 801
+        },
+        {
+          "left": "O0_unit_weight_MWPM",
+          "matched_nonterminal_count": 1000,
+          "right": "R6D_local_BP_posterior_LLR_MWPM",
+          "right_improves": 632,
+          "right_minus_left_flux_failure_rate": -0.597,
+          "right_regresses": 35,
+          "ties": 333
+        },
+        {
+          "left": "O2_published_herald_weight_MWPM",
+          "matched_nonterminal_count": 1000,
+          "right": "R6D_local_BP_posterior_LLR_MWPM",
+          "right_improves": 623,
+          "right_minus_left_flux_failure_rate": -0.59,
+          "right_regresses": 33,
+          "ties": 344
+        }
+      ],
+      "size": 13,
+      "summaries": {
+        "O0_unit_weight_MWPM": {
+          "conditional_flux_failure_rate": 0.894,
+          "decoded_records": 1000,
+          "flux_union_logical_failures": 894,
+          "mean_wall_seconds": 0.18057880783698055,
+          "median_wall_seconds": 0.07527343748370185,
+          "nonterminal_records": 1000,
+          "policy": "O0_unit_weight_MWPM",
+          "unavailable_records": 0
+        },
+        "O2_published_herald_weight_MWPM": {
+          "conditional_flux_failure_rate": 0.887,
+          "decoded_records": 1000,
+          "flux_union_logical_failures": 887,
+          "mean_wall_seconds": 0.21557128688110969,
+          "median_wall_seconds": 0.09664614556822926,
+          "nonterminal_records": 1000,
+          "policy": "O2_published_herald_weight_MWPM",
+          "unavailable_records": 0
+        },
+        "R6D_local_BP_posterior_LLR_MWPM": {
+          "conditional_flux_failure_rate": 0.297,
+          "converged_records": 0,
+          "decoded_records": 1000,
+          "flux_union_logical_failures": 297,
+          "maximum_final_message_delta": 0.9999968560296767,
+          "mean_iterations": 40.0,
+          "mean_wall_seconds": 1.1411751806432149,
+          "median_wall_seconds": 0.6011977499583736,
+          "nonconverged_records": 1000,
+          "nonterminal_records": 1000,
+          "policy": "R6D_local_BP_posterior_LLR_MWPM",
+          "unavailable_records": 0
+        }
+      }
+    }
+  ],
+  "claim_boundary": "R6AA sharpens the D4 X-only flux crossing only; it does not by itself establish the full D4 threshold or dispense with iteration stability analysis.",
+  "generated_at": "2026-09-01T00:11:39.870282+00:00",
+  "integrity_gate_report": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-004-d4-intrinsic-heralded-decoding/results/manifests/r6v-r6u-bp-integrity-audit-2026-08-30.json",
+  "manifest": "manifests/r6aa-d4-bp-threshold-interleave-manifest-2026-08-31.json",
+  "compaction": {
+    "source_name": "r6aa-d4-bp-threshold-interleave-2026-08-31.json",
+    "source_sha256": "a35cce802b1297f8958c69a8efa1ffe78ca9f37335351f512434229fbb2191b8",
+    "omitted": "per-trajectory raw rows; regenerate from manifest, seed_salt, and source hash"
+  }
+}

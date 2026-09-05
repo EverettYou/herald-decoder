@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-28T11:11:21.230013+00:00",
+  "status": "preflight_passed_not_launched",
+  "manifest": {
+    "path": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-b4-honeycomb-new-frontier-manifest-2026-08-28.json",
+    "sha256": "129097e8427e08c5e2bbc272bb21839ecc9d716cfa9829e69a86e6020f5b6c18"
+  },
+  "jobs": [
+    {
+      "branch": "independent_shots",
+      "q": 0.05,
+      "p": 0.2,
+      "sizes": [
+        7,
+        9,
+        11
+      ],
+      "stem": "phase-b4-honeycomb-l7-9-11-q005-p020-2026-08-28",
+      "result": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase-b4-honeycomb-l7-9-11-q005-p020-2026-08-28.json",
+      "raw": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase-b4-honeycomb-l7-9-11-q005-p020-2026-08-28-raw.jsonl.gz",
+      "expected_decodes": 3000,
+      "output_conflict": false,
+      "command": [
+        "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/run_research_python.sh",
+        "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/run_phase2_scout.py",
+        "--lattice",
+        "honeycomb",
+        "--q",
+        "0.05",
+        "--p",
+        "0.20",
+        "--campaign",
+        "phase-b4-honeycomb-new-frontier-2026-08-28",
+        "--stem",
+        "phase-b4-honeycomb-l7-9-11-q005-p020-2026-08-28",
+        "--shots-per-seed",
+        "200",
+        "--sizes",
+        "7",
+        "9",
+        "11",
+        "--seeds",
+        "874001",
+        "874002",
+        "874003",
+        "874004",
+        "874005",
+        "--max-iterations",
+        "80",
+        "--update-schedule",
+        "residual_priority",
+        "--residual-priority-order",
+        "stable_sort"
+      ]
+    }
+  ],
+  "job_count": 1,
+  "expected_new_decodes": 3000,
+  "gate_scripts": {
+    "audit_phase_b4_new_output.py": "e18505b79541d88f67c612a6a5f1e764220edfcf2de62639c8934dcf3c29c127",
+    "analyze_phase_b4_frontier.py": "f6c1be4c1402c81731c08febcb9c246257c7642408a8b1d2ce5e8a437dd39620",
+    "render_phase_b4_merged_map.py": "1cbf9c5bea88c629c598afb3da5dcd4ead820329d3763a1d8982021a7fe7a83c"
+  },
+  "production_launched": false,
+  "crossing_statistic_used": false,
+  "grid_expanded": false
+}

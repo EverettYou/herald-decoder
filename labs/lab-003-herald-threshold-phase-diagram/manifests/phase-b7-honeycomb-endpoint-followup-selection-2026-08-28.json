@@ -1,0 +1,570 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-28T13:13:17.470306+00:00",
+  "status": "complete",
+  "source_map": {
+    "path": "results/phase-b6-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28.json",
+    "sha256": "2648f6ec0d08ed11b809d2867c771a3a750889b11e762a56a2b0702defa795ab"
+  },
+  "source_analysis": {
+    "path": "results/phase-b6-honeycomb-four-cell-frontier-analysis-2026-08-28.json",
+    "sha256": "1db0aa45e8851ba249716e84ece3acfb8a77fae1ebed48c33b9a19571725b889"
+  },
+  "design_evidence": {
+    "path": "results/phase-b6-honeycomb-posterior-predictive-design-2026-08-28.json",
+    "sha256": "e9fcb904937a04eadc1f867df09132077293068aa150ff74aafe38fa5311d936"
+  },
+  "design_rule": "Apply the descriptive-efficiency-leading endpoints_1000 design to all four persistent cells without ranking cells after outcomes.",
+  "jobs": [
+    {
+      "branch": "endpoint_extension_1000_each",
+      "q": 0.3,
+      "p": 0.2,
+      "sizes": [
+        5,
+        13
+      ],
+      "additional_shots_per_size": 1000,
+      "expected_decodes": 2000,
+      "current_shots": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "posterior_predictive_probability_resolved": 0.3115234375,
+      "posterior_predictive_probability_false_direction_resolution": 0.021484375
+    },
+    {
+      "branch": "endpoint_extension_1000_each",
+      "q": 0.35,
+      "p": 0.2,
+      "sizes": [
+        5,
+        13
+      ],
+      "additional_shots_per_size": 1000,
+      "expected_decodes": 2000,
+      "current_shots": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "posterior_predictive_probability_resolved": 0.2578125,
+      "posterior_predictive_probability_false_direction_resolution": 0.0126953125
+    },
+    {
+      "branch": "endpoint_extension_1000_each",
+      "q": 0.55,
+      "p": 0.24,
+      "sizes": [
+        5,
+        13
+      ],
+      "additional_shots_per_size": 1000,
+      "expected_decodes": 2000,
+      "current_shots": [
+        1000,
+        3000,
+        3000,
+        3000,
+        1000
+      ],
+      "posterior_predictive_probability_resolved": 0.5634765625,
+      "posterior_predictive_probability_false_direction_resolution": 0.01953125
+    },
+    {
+      "branch": "endpoint_extension_1000_each",
+      "q": 0.6,
+      "p": 0.28,
+      "sizes": [
+        5,
+        13
+      ],
+      "additional_shots_per_size": 1000,
+      "expected_decodes": 2000,
+      "current_shots": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "posterior_predictive_probability_resolved": 0.40234375,
+      "posterior_predictive_probability_false_direction_resolution": 0.025390625
+    }
+  ],
+  "job_count": 4,
+  "expected_new_decodes": 8000,
+  "expected_resolved_cells": 1.53515625,
+  "expected_false_direction_resolutions": 0.0791015625,
+  "seed_overlap_audit": {
+    "planned_seeds": [
+      877001,
+      877002,
+      877003,
+      877004,
+      877005
+    ],
+    "summaries_checked": 113,
+    "records": [
+      {
+        "path": "results/phase-b1-honeycomb-l5-l13-q015-p045-2026-08-28.json",
+        "sha256": "324173571a9995054f74613ba1a5769810c1fc26abb5f2bec1a64e22713bfc76"
+      },
+      {
+        "path": "results/phase-b1-honeycomb-l5-l13-q045-p020-2026-08-28.json",
+        "sha256": "278b8397bc78c831b59b89a90cba637183daf4a49ebb77c4d2f950a2cbd0ccdf"
+      },
+      {
+        "path": "results/phase-b1-honeycomb-l5-l13-q065-p045-2026-08-28.json",
+        "sha256": "8e529b49c0ecb88fd7645de8bd5b4e8dcc325a8d8f4f15f94290b0e7f6e7fa5e"
+      },
+      {
+        "path": "results/phase-b1-honeycomb-l5-l13-q100-p036-2026-08-28.json",
+        "sha256": "b4b47c944f6a372060ab4eee0e98e8fd03662ffbd3da228ad0662a4777af08b8"
+      },
+      {
+        "path": "results/phase-b2-honeycomb-l5-13-q020-p008-2026-08-28.json",
+        "sha256": "b057c633284b4ddbd744030e0fe56baf23309504e1d3a62d25a0affaae1ecf57"
+      },
+      {
+        "path": "results/phase-b2-honeycomb-l7-9-11-q050-p020-2026-08-28.json",
+        "sha256": "6729a2952ed6111391e91a4e01e85ed57b50403bf2ff8f5d0d3c0c819d80a20b"
+      },
+      {
+        "path": "results/phase-b2-honeycomb-l7-9-11-q075-p040-2026-08-28.json",
+        "sha256": "26e57b6db3f5e88c6b43deebd023d584b3dfaac284560023c0a88cc5c3f01398"
+      },
+      {
+        "path": "results/phase-b3-honeycomb-l7-9-11-q055-p024-2026-08-28.json",
+        "sha256": "39d87738509a8f94726654e74f0b088ce2d89a8d12ef1446d5544a78c15984f3"
+      },
+      {
+        "path": "results/phase-b4-honeycomb-l7-9-11-q005-p020-2026-08-28.json",
+        "sha256": "af8cca45214af54229f216a343c7aac170fcd2d59c1b7d23e735b9f2d88c5b23"
+      },
+      {
+        "path": "results/phase-b5-honeycomb-l5-q030-p020-2026-08-28.json",
+        "sha256": "4eac65183207c29ec2319eb354b4d15a58665d8695da32618bc84b5c41ade97b"
+      },
+      {
+        "path": "results/phase-b5-honeycomb-l5-q035-p020-2026-08-28.json",
+        "sha256": "e068f924490e81bfd77742c4545755defc519e67baeeb9d87109b4d6feeec398"
+      },
+      {
+        "path": "results/phase-b5-honeycomb-l5-q040-p020-2026-08-28.json",
+        "sha256": "2faed5ca155b303b45cc3d52009ca6c65565b7bd8fe4c96844c604921b107e4e"
+      },
+      {
+        "path": "results/phase-b5-honeycomb-l5-q060-p028-2026-08-28.json",
+        "sha256": "dbc0cbd56ff744a56739df2d7020796060310f0c69007849c53728e42fdb7a66"
+      },
+      {
+        "path": "results/phase-b5-honeycomb-l7-9-11-q055-p024-2026-08-28.json",
+        "sha256": "452abc1429c3cbf67de6be18a5303ffd05161b72d8ccc4e382328c033f431d7e"
+      },
+      {
+        "path": "results/phase-b6-honeycomb-l5-13-q055-p024-2026-08-28.json",
+        "sha256": "4ca9f4ed32b658db4300a82defd21e16a7d813cc289c574a45827d5187b35af7"
+      },
+      {
+        "path": "results/phase-b6-honeycomb-l5-7-9-13-q030-p020-2026-08-28.json",
+        "sha256": "9b4020e3e39b756a5d19cf4617a35fdbad74e5be598bcc196588734ba7106845"
+      },
+      {
+        "path": "results/phase-b6-honeycomb-l5-7-9-13-q035-p020-2026-08-28.json",
+        "sha256": "b50054bd618324754d9fde2faa7c97b38adb34a69bdcd8c0dad5b086a8b01dd3"
+      },
+      {
+        "path": "results/phase-b6-honeycomb-l5-7-9-13-q060-p028-2026-08-28.json",
+        "sha256": "26eb86c54a1a70780bab92476e4c8f280430eab805b512d980b909402884568c"
+      },
+      {
+        "path": "results/phase-s1-honeycomb-distance-q030-p020-2026-08-28.json",
+        "sha256": "01bbc8a85c84461e1f8c5c98b31ecf69d350162cc8e121e696ff0d8970ab488c"
+      },
+      {
+        "path": "results/phase-s1-honeycomb-distance-q035-p020-2026-08-28.json",
+        "sha256": "bf855f559ab64c37e0161c1d9e110dc475d2c8d0c88e84ed2c955b435aa84b8b"
+      },
+      {
+        "path": "results/phase-s1-honeycomb-distance-q040-p020-2026-08-28.json",
+        "sha256": "38ffd79a444c116f5c19cd7b5f987218e938b0c39b71c021debf121dbb85739d"
+      },
+      {
+        "path": "results/phase-s1-honeycomb-distance-q045-p020-2026-08-28.json",
+        "sha256": "7c8636bd0046a1a78cb832c6015ff7fb88f0f4b2fbd69ce47af1acce2c614ced"
+      },
+      {
+        "path": "results/phase-s1-honeycomb-distance-q060-p028-2026-08-28.json",
+        "sha256": "acefbcde1d32ee02692a5ed2a071253bdb8cf91a3506e6e2e7239b942801aad5"
+      },
+      {
+        "path": "results/phase-s1-honeycomb-distance-q080-p045-2026-08-28.json",
+        "sha256": "da1ee05b172aea3d62c3fb3c099a4ef10a640b9621c05f10b3218057eb45ad1e"
+      },
+      {
+        "path": "results/phase-s1-honeycomb-seed-q010-p020-2026-08-28.json",
+        "sha256": "1620875aecb531c03c0b899c00d5cea846a7a605109ecd78572c4e984d47827c"
+      },
+      {
+        "path": "results/phase-s1-honeycomb-seed-q025-p020-2026-08-28.json",
+        "sha256": "3d5cb34dc9afc97b79ea99cf3dba68112ab39f534864f18edbd565a548880fdb"
+      },
+      {
+        "path": "results/phase-s1-honeycomb-seed-q070-p032-2026-08-28.json",
+        "sha256": "062281603e1fd3fb6b5b14265c75b500dbac2ada06082afe36c8a4d268e963bc"
+      },
+      {
+        "path": "results/phase-s1-honeycomb-seed-q075-p036-2026-08-28.json",
+        "sha256": "58f997bda091a2d238bcecd8d356e1af5062ae61e0f19da73ba14267fc8ce407"
+      },
+      {
+        "path": "results/phase2-honeycomb-q000-discovery-1000-2026-08-27.json",
+        "sha256": "9892b6a1b9fdda8391dce97b324ea80366e10cbcbf06c2c7096799c3b6265035"
+      },
+      {
+        "path": "results/phase2-honeycomb-q005-discovery-1000-2026-08-27.json",
+        "sha256": "2a5c13188af68ccfad5736e26edcbe0bce5190fd8143859aaf57c1cce3f2de80"
+      },
+      {
+        "path": "results/phase2-honeycomb-q010-discovery-1000-2026-08-27.json",
+        "sha256": "bbd584eb36144aba8273772e908f07bd278d148351b9cf59cb0851f884d44c88"
+      },
+      {
+        "path": "results/phase2-honeycomb-q015-discovery-1000-2026-08-27.json",
+        "sha256": "cc126baf7c658d97070eb21fc2a5301cf84587ae5bfd978f61ae446ce62d8b08"
+      },
+      {
+        "path": "results/phase2-honeycomb-q045-discovery-1000-2026-08-27.json",
+        "sha256": "724a5cc177e9c8e050277b5867ad377d4268a93db90349ee3d95c1a3c1dda5c5"
+      },
+      {
+        "path": "results/phase2-honeycomb-q050-discovery-1000-2026-08-27.json",
+        "sha256": "bc7ed2a828be3f9122bbe34d613e6b2d48483b3020875abd54fa242dd1a28c09"
+      },
+      {
+        "path": "results/phase2-honeycomb-q055-discovery-1000-2026-08-27.json",
+        "sha256": "96a4b256ba4e3ecafe0f59a867c3397f340dd1050f64e7236c6e81d451b20926"
+      },
+      {
+        "path": "results/phase2-honeycomb-q060-discovery-1000-2026-08-27.json",
+        "sha256": "c8d4a71ac563d85bf8d9dc181b05cbdd263a0e9083634e0a966d374c6ccde130"
+      },
+      {
+        "path": "results/phase2-honeycomb-q065-discovery-1000-2026-08-27.json",
+        "sha256": "1944a07d3d1ae81106cfff6007434c8f2221162530d79be95330d934bd3f2c06"
+      },
+      {
+        "path": "results/phase2-honeycomb-q070-discovery-1000-2026-08-27.json",
+        "sha256": "6643754c685485e792e8c68c4acffb1a54bc60c7558a45bbb9b3c34738c83f21"
+      },
+      {
+        "path": "results/phase2-honeycomb-q075-discovery-1000-2026-08-27.json",
+        "sha256": "9e8df16a5ea5f9d859cd53ef5e19a05bdad86869ba30c30b502204e46a57d8ba"
+      },
+      {
+        "path": "results/phase2-honeycomb-q080-discovery-1000-2026-08-27.json",
+        "sha256": "e7028aad493225f4f482b090df5b1dff0793a13b8ad508db97d2bc6a54e48c51"
+      },
+      {
+        "path": "results/phase2-honeycomb-q085-discovery-1000-2026-08-27.json",
+        "sha256": "c7cb865c0f4d02bb900c875ae38617a42810106be91200d2167500583df74798"
+      },
+      {
+        "path": "results/phase2-honeycomb-q090-discovery-1000-2026-08-27.json",
+        "sha256": "9839fcfc372fc8c2744e4182bd89f0dc248b2e8f93edeee6dca57541a7c2f8a0"
+      },
+      {
+        "path": "results/phase2-honeycomb-q095-discovery-1000-2026-08-27.json",
+        "sha256": "5e07d4ad586230ed5e52098c799f242c144ec5e2d5a38b8993f3d2e2196029ed"
+      },
+      {
+        "path": "results/phase2-honeycomb-q100-discovery-1000-2026-08-27.json",
+        "sha256": "f14f690e1b36303cd290236e0c44b9e37b453be3963a324ea220f88445685fbc"
+      },
+      {
+        "path": "results/phase2-residual80-honeycomb-q000-discovery-1000-2026-08-28.json",
+        "sha256": "6eebc790f5405f6ef9948f0d50bbfc1c31f155bfed3537adf9febb3c078b4b55"
+      },
+      {
+        "path": "results/phase2-residual80-honeycomb-q005-discovery-1000-2026-08-28.json",
+        "sha256": "6d81b6a6007f1ab6cadc6c15fc9175f24111e0874afe2cfa86077814213aad28"
+      },
+      {
+        "path": "results/phase2-residual80-honeycomb-q010-discovery-1000-2026-08-28.json",
+        "sha256": "727025282ac3029f30dc44560a07ebb4597e9a72a461e33385f103c823260d59"
+      },
+      {
+        "path": "results/phase2-residual80-honeycomb-q015-discovery-1000-2026-08-28.json",
+        "sha256": "250d9a7cbc7b5e851ca671331f978dc2cc793f477f2bc36ee0d40ff5b1b2c827"
+      },
+      {
+        "path": "results/phase2-residual80-honeycomb-q020-discovery-1000-2026-08-28.json",
+        "sha256": "bc604074a79d34c0192d25ca0a14da12a397564052febfd89b8adeb78c40c4da"
+      },
+      {
+        "path": "results/phase2-residual80-honeycomb-q025-discovery-1000-2026-08-28.json",
+        "sha256": "654256e2ec174b624921d46064d4d069aabc241a4471161d9ca8589d47598f9f"
+      },
+      {
+        "path": "results/phase2-residual80-honeycomb-q030-discovery-1000-2026-08-28.json",
+        "sha256": "09a5224d65a9ee5da2dbac1f4b9d84bd51b179d38ced7ce87a4f56c3cade31be"
+      },
+      {
+        "path": "results/phase2-residual80-honeycomb-q035-discovery-1000-2026-08-28.json",
+        "sha256": "ee9d2028b249416d5baa6adcd67a43bc693638b224d98083b71428bbde00186c"
+      },
+      {
+        "path": "results/phase2-residual80-honeycomb-q040-discovery-1000-2026-08-28.json",
+        "sha256": "4d8264c1b57d1dfb58262bffbf9698016a11c9ac75cfade6e6790690cd807ec1"
+      },
+      {
+        "path": "results/phase2-residual80-honeycomb-q045-discovery-1000-2026-08-28.json",
+        "sha256": "47bfc1eaee54f6d0586549f0816f64695a708fe435419682fb9a3efd71211feb"
+      },
+      {
+        "path": "results/phase2-residual80-honeycomb-q050-discovery-1000-2026-08-28.json",
+        "sha256": "1fbfbff012cfddd669b74bf86a66a9a5c75933d4330c634c5621213301629fda"
+      },
+      {
+        "path": "results/phase2-residual80-honeycomb-q055-discovery-1000-2026-08-28.json",
+        "sha256": "f8290e0fb35de1097aaa174468002409cdda64b9a04dc598300ac66a09768df0"
+      },
+      {
+        "path": "results/phase2-residual80-honeycomb-q060-discovery-1000-2026-08-28.json",
+        "sha256": "170aa1cc5d6873c3baa2d9dd2957c76e268838deb537940e0d91a4e3aa0b5984"
+      },
+      {
+        "path": "results/phase2-residual80-honeycomb-q065-discovery-1000-2026-08-28.json",
+        "sha256": "9a7452e95697a76556de87510e51098074ef0b131461e5d36e7d6189b5e6e5f7"
+      },
+      {
+        "path": "results/phase2-residual80-honeycomb-q070-discovery-1000-2026-08-28.json",
+        "sha256": "963a4495463828cae30c45c20cd865434844cbc3d8f7514aec8d8ae0998060ee"
+      },
+      {
+        "path": "results/phase2-residual80-honeycomb-q075-discovery-1000-2026-08-28.json",
+        "sha256": "c7127a88b66fc28575000eec1a71cf9b2d51e615acce2a2a4a1aff7bccc4dcac"
+      },
+      {
+        "path": "results/phase2-residual80-honeycomb-q080-discovery-1000-2026-08-28.json",
+        "sha256": "fd8e329ceaf09e802241a2514f598ac1ef5986fbcc0c7c2d1c156d33188ecfbf"
+      },
+      {
+        "path": "results/phase2-residual80-honeycomb-q085-discovery-1000-2026-08-28.json",
+        "sha256": "812659dc5ff5a44a77ebf2864f8447bc4ae1dd6575355753f5c635cb07429bcb"
+      },
+      {
+        "path": "results/phase2-residual80-honeycomb-q090-discovery-1000-2026-08-28.json",
+        "sha256": "d140fdd61513577f7b953da05d129f1d99c06bfcc9cc721d948a3dcfb74ea9a8"
+      },
+      {
+        "path": "results/phase2-residual80-honeycomb-q095-discovery-1000-2026-08-28.json",
+        "sha256": "94565085a542d2a80763eb155ba5d9fcb5d77b1fb165754a942e3526a0379bfd"
+      },
+      {
+        "path": "results/phase2-residual80-honeycomb-q100-discovery-1000-2026-08-28.json",
+        "sha256": "fdec525e4d30fb4e8f33946877ec59ab5e3ac0a0d14f3846b80dd307cfce81ee"
+      },
+      {
+        "path": "results/phase2-square-q000-discovery-1000-2026-08-27.json",
+        "sha256": "3c7a43c6a9b557355595dbc6b5a7267f61d284b9714891658a15d8e92e967692"
+      },
+      {
+        "path": "results/phase2-square-q005-discovery-1000-2026-08-27.json",
+        "sha256": "1ffebd13d479b998ab1b983000beeb832a8557bb22d311889ebb022de715faba"
+      },
+      {
+        "path": "results/phase2-square-q010-discovery-1000-2026-08-27.json",
+        "sha256": "a0d97fd6db31f198fcd0f7f9e60940c39e2ff5aea524606b554aad5be8a70b12"
+      },
+      {
+        "path": "results/phase2-square-q015-discovery-1000-2026-08-27.json",
+        "sha256": "c3cd2752552c098e0f275f7a5cc0ebd986e61f3f597dd7914e0ce638260bd07e"
+      },
+      {
+        "path": "results/phase2-square-q020-discovery-1000-2026-08-27.json",
+        "sha256": "ba41d58d2a4c64945fea4b40301fd8508b857caebe07e25c70b1c531cf2ea3a0"
+      },
+      {
+        "path": "results/phase2-square-q050-discovery-1000-2026-08-27.json",
+        "sha256": "c19350aab1b76e8196cfa5804e55e4a95a556f1e40cf0f9d4271a2ba86694019"
+      },
+      {
+        "path": "results/phase2-square-q055-discovery-1000-2026-08-27.json",
+        "sha256": "1e3b51efe57cbcaf10a37f2967a0e8ad63b28804df57cd3d29fbc396dd128447"
+      },
+      {
+        "path": "results/phase2-square-q060-discovery-1000-2026-08-27.json",
+        "sha256": "48727fff0fe1518ff8f9d3dc393b49b867b732117a4d6bc9fe699b5053470989"
+      },
+      {
+        "path": "results/phase2-square-q065-discovery-1000-2026-08-27.json",
+        "sha256": "28fc21c1bd15e0c7a1439b23f387dca169ab63ae2300803ed94097c751ec571c"
+      },
+      {
+        "path": "results/phase2-square-q070-discovery-1000-2026-08-27.json",
+        "sha256": "9d34cce1c5080d43b95f23d9e0aa54c6dd2ce27ca0f86e3c6bde4957c8fa36b6"
+      },
+      {
+        "path": "results/phase2-square-q075-discovery-1000-2026-08-27.json",
+        "sha256": "5036a16e6aad462a830816494b8563b11aa885affb14e3e9774d70ba5fbc0f54"
+      },
+      {
+        "path": "results/phase2-square-q080-discovery-1000-2026-08-27.json",
+        "sha256": "98e738c14a2764752ccb2e38e747975a66bc3571bf58309a1de6357c0ae43c9a"
+      },
+      {
+        "path": "results/phase2-square-q085-discovery-1000-2026-08-27.json",
+        "sha256": "e0783d728dc2261fe33ed71806d4177a8656dd51d13c83c1f1f8d6fed9be3006"
+      },
+      {
+        "path": "results/phase2-square-q090-discovery-1000-2026-08-27.json",
+        "sha256": "42340d6ea7c3a23037c621bbfd3e3cbf674d80f8d87d57b57a0e019991f28ede"
+      },
+      {
+        "path": "results/phase2-square-q095-discovery-1000-2026-08-27.json",
+        "sha256": "02b61c6e690c047b240555402062111a92a60accf0e0b8482cab922d6414d987"
+      },
+      {
+        "path": "results/phase2-square-q100-discovery-1000-2026-08-27.json",
+        "sha256": "9123f38f2a864647b0d0f4cb86c2df65fc7abba9ffe3e5be369b54bd222c0971"
+      },
+      {
+        "path": "results/phase3-residual80-honeycomb-q085-highq-refinement-4000-2026-08-28.json",
+        "sha256": "e89a5c4a1f0fd7ed3c02763475d7124db63400a54907ea8f3b5a77adadf984c3"
+      },
+      {
+        "path": "results/phase3-residual80-honeycomb-q090-highq-refinement-4000-2026-08-28.json",
+        "sha256": "5de8f6ce243e1a9c64f0529c25a12e7975857cac0e3db7aa3906d38acd454de3"
+      },
+      {
+        "path": "results/phase3-residual80-honeycomb-q095-highq-refinement-4000-2026-08-28.json",
+        "sha256": "1fd9b6b1dcc5e401487fc941018c2159ebc147d001c33d5df4ffe24b581c55c1"
+      },
+      {
+        "path": "results/phase4-residual80-honeycomb-q085-adaptive-p-confirmation-4000-2026-08-28.json",
+        "sha256": "4ed6a35a7ee0c93223fe63f4474d63c83d8579c86c5af71acbf05e0b4d320863"
+      },
+      {
+        "path": "results/phase4-residual80-honeycomb-q085-l11-l13-scaling-4000-2026-08-28.json",
+        "sha256": "5fe93fdcd8f699383a705cc6678a69346c7a14ec53410bdae4382225603eec27"
+      },
+      {
+        "path": "results/phase4-residual80-honeycomb-q090-adaptive-p-confirmation-4000-2026-08-28.json",
+        "sha256": "2acd313de6a626a765170a86eb915ca82a175eb703a7ad615284ea989c9512a6"
+      },
+      {
+        "path": "results/phase4-residual80-honeycomb-q090-l11-l13-scaling-4000-2026-08-28.json",
+        "sha256": "5f1adec854e8f6649b3bc296c0f504422e2b00b715625554f18bb7449fd1e43e"
+      },
+      {
+        "path": "results/phase4-residual80-honeycomb-q095-adaptive-p-confirmation-4000-2026-08-28.json",
+        "sha256": "88d91be2b3fb24406f3c0519aa69e73055bc1890a5275a8eec6103db09906aca"
+      },
+      {
+        "path": "results/phase4-residual80-honeycomb-q095-l11-l13-scaling-4000-2026-08-28.json",
+        "sha256": "0de2171855b22e46ed8b0c34cff3525940969df46f837a9ec431c2304589d540"
+      },
+      {
+        "path": "results/q0-calibration.json",
+        "sha256": "c8412de6d02b8e9928347b3da6039f8e1ea4ff3b23a3097fef1e8785416eb52d"
+      },
+      {
+        "path": "results/q0-square-production-2026-08-27.json",
+        "sha256": "7088ced63d0bd65dc9ba57cbedac2b65f91260b854285b27ba5ff08f575d74a0"
+      },
+      {
+        "path": "results/q0-square-refined-5000-2026-08-27.json",
+        "sha256": "f0d29382fa0654d17ad7b7e3580c62309db2276d7d9e162c3fde80570fc311ff"
+      },
+      {
+        "path": "results/q075-honeycomb-residual80-confirmation-5000-2026-08-27.json",
+        "sha256": "f2fa0f4675726ebe0cf524b1de7af82b5c58f9c743c848bd6a43ef19aefc5992"
+      },
+      {
+        "path": "results/q075-honeycomb-residual80-discovery-1000-2026-08-27.json",
+        "sha256": "88da3ddd031f3f6255c96519edd7555295fcc5a1b8b85b7e556f063282da30d1"
+      },
+      {
+        "path": "results/q075-square-l11-l13-refined-5000-2026-08-27.json",
+        "sha256": "c80dc5cba071ecfa90ceeea068eedf17cf4214e8082e08584d71f55121355aa7"
+      },
+      {
+        "path": "results/q075-square-l11-l13-refined-low-5000-2026-08-27.json",
+        "sha256": "a6597661064d3da8823819a613a6a525d0e74f4b78db49d7f62cab788297d6e3"
+      },
+      {
+        "path": "results/q1-herald-scan.json",
+        "sha256": "7bebd175bcb1837318677919d76a7687828cfb95d48918cf0d61a453ef3829a0"
+      },
+      {
+        "path": "results/q1-honeycomb-full-p-endpoints-1000-2026-08-27.json",
+        "sha256": "dec6e8716c9544d3a9b0aed67071b115f8dc93eb860207ea2be9180af0947646"
+      },
+      {
+        "path": "results/q1-honeycomb-full-p-residual80-discovery-1000-2026-08-27.json",
+        "sha256": "67aafc1e13e650711c795e72b16488cb4ed4f6c9e77c6538fe43130c1bfc56bd"
+      },
+      {
+        "path": "results/q1-honeycomb-residual80-discovery-1000-2026-08-27.json",
+        "sha256": "12009a26e1e7b58d7d95e5ba4943ca41caf0e49c9f16cadeb0c94780aface0d2"
+      },
+      {
+        "path": "results/q1-honeycomb-residual80-l9-l11-crossing-refined-3000-2026-08-27.json",
+        "sha256": "5af3d788bb5732d89fe3d8bda79af68a2b5a98d12bae47fda1b4a66e4cb00594"
+      },
+      {
+        "path": "results/q1-honeycomb-residual80-l9-l13-highp-3000-2026-08-27.json",
+        "sha256": "ddc04d5c4bea00ca8af392ff4f493cd2aa4afbf46b3e965713647a93ded6d8c6"
+      },
+      {
+        "path": "results/q1-llr-highp-1000-2026-08-27.json",
+        "sha256": "7854520cefcea4cff148e06d689fbe5456decbf932adae73e0369daa5fb22fd3"
+      },
+      {
+        "path": "results/q1-llr-l11-l13-boundary-1000-2026-08-27.json",
+        "sha256": "c4cfb3685a28167515688285bb2e19732e6e3f8920639ae368ee8a3cb18df699"
+      },
+      {
+        "path": "results/q1-llr-l11-l13-bracket-1000-2026-08-27.json",
+        "sha256": "348d5a99bdb9473be360c76e4fe01c930f98f0e5037e414ac194c0681873d459"
+      },
+      {
+        "path": "results/q1-llr-pilot-2026-08-27.json",
+        "sha256": "799b9339595c193ff928cf0ae71386d1bb37cd908e0838f4f6894784a53966b8"
+      },
+      {
+        "path": "results/q1-llr-scan-1000-2026-08-27.json",
+        "sha256": "99b6e40a1e19bb2f2aeb32da5caedae157a551d09af0390b4e282022c903c463"
+      },
+      {
+        "path": "results/q1-llr-smoke-2026-08-27.json",
+        "sha256": "d8f42a6deef85ba03dee4c12ce932f1dcb701225f53bcd90f7ca0cae0ba316b1"
+      },
+      {
+        "path": "results/q1-square-l11-l13-highp-refined-5000-2026-08-27.json",
+        "sha256": "39979ec4ae591d0733cee31ffec7fab46987a6ee70c45a0bc7d5c4a7a24c14db"
+      },
+      {
+        "path": "results/q1-square-l11-l13-refined-5000-2026-08-27.json",
+        "sha256": "9f6cec87835b6369ad3245bad688402171a6f00cf0c337c6f9b16b19373c89e7"
+      },
+      {
+        "path": "results/q1-square-l3-l9-highp-refined-5000-2026-08-27.json",
+        "sha256": "32161599d478ea91d8ce5c4e7de508904a463b77e9051764538cb9db8af07954"
+      },
+      {
+        "path": "results/q1-square-l5-l13-crossing-refined-10000-2026-08-27.json",
+        "sha256": "eebf42fa0bc4e378f6899bbbf053da730367598d89bdf7b865330dd5dd04bb30"
+      }
+    ],
+    "overlaps": []
+  },
+  "claim_boundary": "Registration only: same four cells, L=5/13 only, fixed 0.90 gate, no interpolation, no square lattice, and no asymptotic phase claim."
+}

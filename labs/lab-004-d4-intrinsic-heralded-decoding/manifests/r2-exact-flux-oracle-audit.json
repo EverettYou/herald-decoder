@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-08-28T23:29:29.435159+00:00",
+  "purpose": "source-normalized exhaustive first-stage execution oracle",
+  "protocol": {
+    "size": 2,
+    "edge_count": 36,
+    "affine_dimension": 13,
+    "chains_per_syndrome": 8192,
+    "error_rates": [
+      0.0,
+      0.05,
+      0.1
+    ],
+    "seeds_per_rate": 32,
+    "modes": [
+      "syndrome_only",
+      "heralded"
+    ]
+  },
+  "audited_flux_records": 192,
+  "counts": {
+    "syndrome_only": {
+      "logical_ambiguous": 9,
+      "logical_unambiguous": 87,
+      "objective_exact": 96,
+      "tied_optimum": 12,
+      "unique_optimum": 84
+    },
+    "heralded": {
+      "logical_ambiguous": 5,
+      "logical_unambiguous": 91,
+      "objective_exact": 96,
+      "tied_optimum": 6,
+      "unique_optimum": 90
+    }
+  },
+  "tie_examples": [
+    {
+      "p": 0.05,
+      "seed": 2,
+      "mode": "syndrome_only",
+      "minimum_weight": 3.0,
+      "minimizer_count": 2,
+      "optimal_union_logical_values": [
+        false
+      ],
+      "pipeline_union_logical": false
+    },
+    {
+      "p": 0.05,
+      "seed": 14,
+      "mode": "syndrome_only",
+      "minimum_weight": 6.0,
+      "minimizer_count": 5,
+      "optimal_union_logical_values": [
+        false,
+        true
+      ],
+      "pipeline_union_logical": false
+    },
+    {
+      "p": 0.05,
+      "seed": 14,
+      "mode": "heralded",
+      "minimum_weight": -210.0,
+      "minimizer_count": 2,
+      "optimal_union_logical_values": [
+        false,
+        true
+      ],
+      "pipeline_union_logical": false
+    },
+    {
+      "p": 0.05,
+      "seed": 17,
+      "mode": "syndrome_only",
+      "minimum_weight": 4.0,
+      "minimizer_count": 2,
+      "optimal_union_logical_values": [
+        false,
+        true
+      ],
+      "pipeline_union_logical": true
+    },
+    {
+      "p": 0.05,
+      "seed": 21,
+      "mode": "syndrome_only",
+      "minimum_weight": 3.0,
+      "minimizer_count": 2,
+      "optimal_union_logical_values": [
+        false
+      ],
+      "pipeline_union_logical": false
+    },
+    {
+      "p": 0.05,
+      "seed": 21,
+      "mode": "heralded",
+      "minimum_weight": 3.0,
+      "minimizer_count": 2,
+      "optimal_union_logical_values": [
+        false
+      ],
+      "pipeline_union_logical": false
+    },
+    {
+      "p": 0.1,
+      "seed": 2,
+      "mode": "syndrome_only",
+      "minimum_weight": 4.0,
+      "minimizer_count": 2,
+      "optimal_union_logical_values": [
+        false,
+        true
+      ],
+      "pipeline_union_logical": true
+    },
+    {
+      "p": 0.1,
+      "seed": 6,
+      "mode": "syndrome_only",
+      "minimum_weight": 7.0,
+      "minimizer_count": 3,
+      "optimal_union_logical_values": [
+        false,
+        true
+      ],
+      "pipeline_union_logical": false
+    }
+  ],
+  "claim_boundary": "This is an exhaustive execution-objective and tie-homology audit for the first MWPM stage. It is not the R3 constrained fusion oracle and not a Bayes-optimal logical posterior."
+}

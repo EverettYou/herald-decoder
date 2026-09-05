@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "status": "registered",
+  "phase": "R6U",
+  "title": "D4-native matched O0/O2/BP finite-size curve pilot",
+  "question": "Under X-only physical noise (p_X varied, p_Z=0), do O0, published O2, and D4-likelihood BP produce different matched flux-recovery finite-size curves near the paper threshold window?",
+  "scope": {
+    "sizes": [5, 7, 9, 11, 13],
+    "physical_error_rates": [0.14, 0.18, 0.22],
+    "noise_model": {"p_X": "physical_error_rates", "p_Z": 0.0, "other_channels": 0.0},
+    "histories_per_cell": 25,
+    "seed_salt": 68291,
+    "flux_policies": ["O0_unit_weight_MWPM", "O2_published_herald_weight_MWPM", "R6D_local_BP_posterior_LLR_MWPM"],
+    "score": "first-stage Boolean-union flux logical failure under X-only noise, conditional on nonterminal physical winding; charge recovery is excluded",
+    "bp_defaults": {"old_message_weight": 0.25, "max_iterations": 40, "tolerance": 1e-8, "terminal_screened": false},
+    "new_physical_samples": 375
+  },
+  "acceptance": ["all policies consume identical physical errors and D4 public observations", "report every terminal/unavailable/nonconverged record", "no threshold promotion from this pilot"],
+  "claim_boundary": "Bounded D4-native X-only finite-size pilot only. It can choose a subsequent flux-threshold-window allocation but cannot establish an asymptotic threshold, a full X/Z D4 LER, charge-recovery performance, or a numerical comparison to Lab 003.",
+  "outputs": {"result": "results/r6u-d4-native-three-policy-curve-sufficient-statistics-2026-09-05.json"}
+}

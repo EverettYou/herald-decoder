@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "registered_at": "2026-08-27T21:14:49Z",
+  "phase": "N2",
+  "experiment": "Honeycomb q=1 residual-priority-80 high-p sentinel",
+  "scientific_role": "bounded high-p finite-size trend and convergence diagnostic",
+  "lattice": "honeycomb",
+  "q": 1.0,
+  "sizes": [9, 11, 13],
+  "p_grid": [0.45, 0.49],
+  "seeds": [532001, 532002, 532003, 532004, 532005],
+  "shots_per_seed": 600,
+  "shots_per_cell": 3000,
+  "total_decodes": 18000,
+  "decoder": {
+    "name": "HeraldAwareBpMatchingDecoder",
+    "recurrence_mode": "damping",
+    "damping": 0.25,
+    "max_iterations": 80,
+    "update_schedule": "residual_priority",
+    "residual_priority_order": "stable_sort",
+    "residual_priority_buffer_reuse": false,
+    "residual_priority_cached_products": false,
+    "matching_projection": "posterior_llr",
+    "p_m": 0.0,
+    "p_h": 0.0,
+    "use_numba": true
+  },
+  "cohort_policy": "same registered runner/source cohort as N1, fresh independent seeds",
+  "acceptance_gates": {
+    "raw_records": 18000,
+    "gzip_integrity": true,
+    "raw_sha256_matches_summary": true,
+    "syndrome_fidelity_failures": 0,
+    "syndrome_fidelity_rate_every_cell": 1.0,
+    "source_hashes_match_n1": true
+  },
+  "planned_outputs": {
+    "summary": "results/q1-honeycomb-residual80-l9-l13-highp-3000-2026-08-27.json",
+    "raw": "results/q1-honeycomb-residual80-l9-l13-highp-3000-2026-08-27-raw.jsonl.gz",
+    "analysis": "results/q1-honeycomb-residual80-l9-l13-highp-3000-2026-08-27-analysis.json",
+    "figure": "figures/q1-honeycomb-residual80-l9-l13-highp-3000-2026-08-27.png"
+  },
+  "stopping_rule": "Run exactly this balanced matrix and inspect both adjacent-size trends, seed-cluster stability, convergence, fidelity, raw integrity, and provenance before considering held-out L=15.",
+  "evidence_boundary": "The result may support or reject decreasing finite-size LER at p=0.45 and 0.49. It cannot establish a ceiling-compatible phase or asymptotic threshold without the registered held-out and convergence qualifications."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "status": "registered_integrity_gate_pending",
+  "phase": "R6V",
+  "title": "D4 X-only flux-threshold validation",
+  "backend_id": "r6d_dense_template_numba_v1",
+  "question": "Do matched O0, O2, and D4-BP flux-recovery curves exhibit a reproducible finite-size crossing on the real D4 channel, and is any BP advantage robust to nonconvergence and scoring audits?",
+  "gates": [
+    "Replay all R6U BP zero-failure rows from serialized physical error, public observation, and correction provenance; independently verify Boolean-union scorer and no decoder truth leakage.",
+    "Repeat each R6U cell with both final-iterate and converged-only accounting; register a damping/iteration sensitivity only if nonconvergence changes policy ordering.",
+    "After the integrity gate, sample matched X-only D4 trajectories at L=5,7,9,11,13 over the preregistered p_X grid 0.14,0.16,...,0.30. Stage 1 has 1000 attempted histories per cell; any Stage 2 expansion is a predeclared 1000-history increment up to 5000, restricted to p/size pairs selected by the Stage 1 crossing-precision rule.",
+    "Report binomial intervals, paired policy contrasts, adjacent-size LER differences, terminal-winding rate, and BP convergence. A crossing is finite-size evidence only; threshold promotion requires stable multi-size behavior and a completed scoring gate."
+  ],
+  "noise_model": {"p_X": "varied", "p_Z": 0.0, "charge_recovery": "excluded"},
+  "scan_design": {
+    "sizes": [5, 7, 9, 11, 13],
+    "p_X_grid": [0.14, 0.16, 0.18, 0.2, 0.22, 0.24, 0.26, 0.28, 0.3],
+    "stage_1_attempted_histories_per_cell": 1000,
+    "stage_1_total_attempted_histories": 45000,
+    "stage_2_increment_attempted_histories": 1000,
+    "stage_2_max_attempted_histories_per_cell": 5000,
+    "stage_2_selection_rule": "For a policy and adjacent size pair, allocate the next matched 1000-history increment only to grid p_X values whose 90% independent-size risk-difference interval contains zero, plus their immediately adjacent grid points. Apply the same selected trajectories to O0, O2, and BP. Stop a policy/pair after no selected grid point remains, the per-cell cap is reached, or the BP convergence-sensitivity gate changes the policy ordering.",
+    "inference_accounting": ["all finite BP final iterates", "BP-converged-only sensitivity"],
+    "seed_salt": 68292,
+    "bp_defaults": {"old_message_weight": 0.25, "max_iterations": 40, "tolerance": 1e-8, "terminal_screened": false}
+  },
+  "launch_guard": {
+    "required_integrity_report": "results/r6v-r6u-bp-integrity-audit-2026-08-30.json",
+    "required_field": "integrity_gate_passed",
+    "required_value": true,
+    "reason": "The R6U zero-failure BP signal must be provenance- and scorer-audited before any large threshold allocation."
+  },
+  "claim_boundary": "This studies the X-only first-stage D4 flux-decoding threshold proxy, not full D4 two-stage fault tolerance or Lab 003 equivalence.",
+  "depends_on": "r6u-d4-native-three-policy-curve-2026-08-30.json"
+}

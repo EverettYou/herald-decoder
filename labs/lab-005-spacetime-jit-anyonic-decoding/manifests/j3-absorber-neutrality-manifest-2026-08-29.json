@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "status": "implemented_and_verified",
+  "registered_at": "2026-08-29T10:34:00Z",
+  "title": "Lyons-Brown absorber geometry and neutrality-measurement preflight",
+  "scope": {
+    "geometry": "Inclusive integer spacetime boxes with an explicit L-infinity distance and causally opened or terminated absorbers.",
+    "linking": "Deterministic enforcement of the three direct-link restrictions stated in Lyons-Brown Theorem 4.",
+    "neutrality": "Binary e/m parity observations recorded only for an active, cluster-owned ungauged region and then passed to the abstract schedule state.",
+    "not_in_scope": [
+      "microscopic D(S3) gauging or ungauging circuits",
+      "derivation of e/m parities from a circuit-level measurement model",
+      "cluster discovery from noisy detector histories",
+      "proof or numerical reproduction of the Q >= 60 linking bound",
+      "noisy D4 spacetime measurements",
+      "schedule performance, threshold, or fault tolerance"
+    ]
+  },
+  "invariants": [
+    "all geometry uses an explicit equal-dimensional L-infinity metric",
+    "only causally active absorbers contribute to nearest-distance queries",
+    "an absorber is opened once and terminated once on a monotone clock",
+    "a cluster's own absorbing region can be excluded from its nearest-external-absorber query",
+    "direct links point from a smaller level to a strictly larger level",
+    "a smaller cluster has at most one directly linked larger cluster",
+    "an absorbing region has at most one directly linked child at each level",
+    "neutrality is measured only in an active ungauged region owned by the schedule cluster",
+    "neutrality measurements are current-round records and cannot precede ungauging",
+    "the schedule consumes measured parity labels rather than simulation truth"
+  ],
+  "implementation": {
+    "module": "scripts/lyons_absorber.py",
+    "fixtures": "scripts/test_lyons_absorber.py",
+    "module_sha256": "cb2ac932c2158dc41d621018b9e4bb921ccd07864486191ff70db34a69b168b5",
+    "fixtures_sha256": "29335b0d291ee030062514c8eff6a59b5547882fe13612bfae0150ddf5cdcbcd",
+    "lyons_source_sha256": "9d7473adeaffbb4065e1f279d5dff8a5911483f5773101bba506b66ba532d6ea"
+  },
+  "verification": {
+    "focused_tests": "7/7 passed",
+    "full_lab_tests": "40/40 passed",
+    "verified_cases": [
+      "nearest active absorber is selected by box-to-box L-infinity distance and bound into the schedule age gate",
+      "terminated absorbers disappear from later nearest-distance queries",
+      "a cluster-owned absorbing region can be excluded from an external-distance query",
+      "all three direct-link restrictions reject invalid forests",
+      "neutral e/m parities update an owned active D(Z3) cluster",
+      "non-neutral parity is retained while a terminated region rejects later measurement",
+      "future-round and wrong-owner neutrality records are rejected"
+    ]
+  },
+  "claim_boundary": "This verifies a deterministic source-level geometry and measurement interface. It does not implement microscopic D(S3) operations, derive detector clusters or parity readouts from noisy circuits, reproduce the Q >= 60 proof, or establish schedule performance, a threshold, or fault tolerance.",
+  "next_gate": "Implement the smallest deterministic gauging/ungauging lifecycle adapter that creates and terminates the measured D(Z3) region while preserving an explicit supplied fusion outcome; keep it independent of the noisy D4 extension."
+}

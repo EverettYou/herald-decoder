@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "status": "verified, analyzed, and reported",
+  "registered_at": "2026-08-29T17:23:00Z",
+  "title": "R6G exact elimination-width and junction feasibility gate",
+  "rigor_tier": "bounded exact structural algorithm audit",
+  "literature_basis": [
+    {
+      "source": "Dechter, Bucket elimination: A unifying framework for reasoning, Artificial Intelligence 113 (1999), DOI 10.1016/S0004-3702(99)00059-4",
+      "role": "exact variable-elimination time and space are exponential in induced width, which depends on ordering"
+    },
+    {
+      "source": "Yedidia, Freeman, and Weiss, Generalized Belief Propagation, NeurIPS 2000",
+      "role": "larger regions can improve loopy-BP accuracy at adjustable complexity; region choice must therefore be measured rather than assumed"
+    }
+  ],
+  "program_alignment": {
+    "central_question": "What structural growth is required to turn the exact R6D likelihood representation into controlled exact posterior inference?",
+    "scientific_layer": "WP3 scalable decoding",
+    "epistemic_role": "prerequisite feasibility audit after R6F showed exact global elimination but non-exact bounded local clustering",
+    "upstream_evidence": "R6D likelihood and R6E messages are exact; R6F localizes residual error to bounded loopy inference",
+    "downstream_gate": "do not implement generalized BP, correction, or LER sampling until region size or exact elimination width is measured"
+  },
+  "question": {
+    "research_question": "How do exact-preserving representation and elimination order change induced width from the 12-edge primitive graph to paper-normalized L=2?",
+    "smallest_claim": "Deterministic induced-width upper bounds for registered graph/order pairs, plus exact primitive evidence checks where the predicted peak table is within the cap.",
+    "H1": "bounded superfactor clustering lowers induced width relative to the unclustered R6D graph under at least one matched ordering",
+    "H2": "global min-fill lowers induced width relative to either constrained group-first ordering",
+    "H3": "paper-L2 projected peak tables remain exponential and exceed the exact numeric cap, blocking a naive junction-tree implementation",
+    "falsification": "a symbolic-width inconsistency or primitive exact-evidence mismatch rejects the audit implementation; widths are upper bounds, not optimal treewidth proofs"
+  },
+  "matrix": {
+    "representations": ["r6d_unclustered", "r6f_bounded_superfactor"],
+    "geometries": ["primitive: 12 physical edges, 36 binary variables", "paper_L2: 36 physical edges, 108 binary variables"],
+    "orders": [
+      "auxiliary_first_min_fill: greedily min-fill among remaining flow auxiliaries, then physical variables",
+      "physical_first_min_fill: greedily min-fill among remaining physical variables, then auxiliaries",
+      "global_min_fill: greedily min-fill among every remaining variable"
+    ],
+    "tie_break": "minimum fill-edge count, then current degree, variable class, and integer variable id",
+    "primary_metrics": ["induced width", "maximum cluster variables", "log2 maximum binary table entries", "total fill edges"],
+    "numeric_gate": "on one fixed primitive maximum-candidate observation at p=0.10, run dense exact bucket elimination only when maximum cluster variables <=20; compare partition evidence with the registered 4096-mask exact target within 1e-10 relative error",
+    "budget": "under ten CPU minutes and 2 GiB; zero correction, generalized-BP, LER, threshold, or performance samples"
+  },
+  "analysis": {
+    "branch_logic": "run all six representation/order branches on both geometries; numeric cap censors rather than approximates oversized primitive contractions",
+    "interpretation": "induced widths are deterministic upper bounds for the registered heuristic orders, not proofs of minimum treewidth or scalable complexity",
+    "stop_rule": "if every paper-L2 order has a peak cluster above 20 variables, report the structural barrier and route future work to controlled regions, cutset conditioning, or tensor-network approximations rather than implementing dense exact junction inference"
+  },
+  "acceptance_items": [
+    {"item": "R6G matrix and literature basis registered before computation", "status": "complete", "evidence": "r6g-elimination-width-gate-manifest-2026-08-29.json"},
+    {"item": "deterministic primal-graph elimination implementation and analytic graph controls", "status": "verified", "evidence": "scripts/d4_elimination_width.py and scripts/test_d4_elimination_width.py; path, cycle, clique, exact partition, and cap controls pass"},
+    {"item": "complete geometry/representation/order width matrix and capped primitive evidence checks", "status": "analyzed", "evidence": "results/r6g-elimination-width-gate.json; all 12 structural rows complete, 4/6 primitive numeric branches computed and 2/6 prospectively censored, maximum relative evidence error 1.780e-15"},
+    {"item": "analysis, report, roadmap, Lab index, and durable-state update", "status": "reported", "evidence": "results/r6g-elimination-width-gate.md; Plan, Report, Wiki roadmap/log, lab.json, labs.json, and state updated; 4 focused and 147 full Lab tests, Wiki lint, 12 knowledge-graph tests, and 6 affected dashboard interface tests pass"}
+  ],
+  "claim_boundary": "R6G does not compute optimal treewidth, generalized-BP accuracy, decoder corrections, logical performance, thresholds, or fault tolerance.",
+  "planned_outputs": [
+    "scripts/d4_elimination_width.py",
+    "scripts/run_r6g_elimination_width_gate.py",
+    "scripts/test_d4_elimination_width.py",
+    "results/r6g-elimination-width-gate.json",
+    "results/r6g-elimination-width-gate.md"
+  ]
+}

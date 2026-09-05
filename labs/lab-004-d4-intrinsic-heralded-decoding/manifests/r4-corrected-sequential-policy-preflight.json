@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-29T08:49:33.423842+00:00",
+  "status": "corrected_sequential_preflight_passed",
+  "lattice": {
+    "size": 2,
+    "vertex_count": 8,
+    "edge_count": 12
+  },
+  "channel": {
+    "o0_observation_count": 128,
+    "o2_observation_count": 16230,
+    "candidate_observation_pair_count": 49855,
+    "first_actions_per_syndrome": [
+      32
+    ],
+    "unique_physical_first_action_pairs": 127136,
+    "terminal_unique_pairs": 120320,
+    "nonterminal_unique_pairs": 6816,
+    "o0_second_record_transition_contributions": 257020,
+    "o2_candidate_first_action_pairs": 1595360,
+    "o2_terminal_transition_contributions": 1545772,
+    "o2_second_record_transition_contributions": 2063916,
+    "total_streamed_second_record_transition_contributions": 2320936,
+    "maximum_second_records_per_nonterminal_pair": 64,
+    "maximum_active_vertices": 8,
+    "maximum_parity_components": 8
+  },
+  "channel_count_mismatches": {},
+  "branch_representation": {
+    "relation_occurrences": 48000,
+    "unique_relation_signatures": 322,
+    "kernel_candidate_chains_checked": 2994,
+    "kernel_closed_chains_checked": 458,
+    "representative_boundary_checks": 514040,
+    "failure_witnesses": []
+  },
+  "charge_action_quotient": {
+    "blue": {
+      "even_syndrome_count": 8,
+      "affine_actions_per_syndrome": 512,
+      "sector_count": 4,
+      "sector_sizes": [
+        128
+      ],
+      "quotient_failures": 0
+    },
+    "green": {
+      "even_syndrome_count": 8,
+      "affine_actions_per_syndrome": 512,
+      "sector_count": 4,
+      "sector_sizes": [
+        128
+      ],
+      "quotient_failures": 0
+    }
+  },
+  "resource_projection": {
+    "corrected_channel_scan_seconds": 60.170447167009115,
+    "o2_count_lookup_seconds": 0.18706220801686868,
+    "public_and_quotient_seconds": 0.01677704101894051,
+    "total_preflight_seconds": 60.37432025000453,
+    "conservative_four_prior_projection_seconds": 1196.8677778051288,
+    "projection_basis": "one corrected hidden-transition precompute plus the source-frozen original R4.5 conservative four-prior streaming projection",
+    "source_frozen_original_four_prior_projection_seconds": 1136.6973306381196,
+    "overcounted_first_projection_seconds": 2176.794375950808,
+    "projected_streaming_memory_gib": 0.0001220703125
+  },
+  "validation": {
+    "source_freeze_pass": true,
+    "channel_count_reproduction_pass": true,
+    "maximum_second_channel_normalization_error": 0.0,
+    "observable_key_failures": 0,
+    "branch_provenance_failures": 0,
+    "endpoint_projection_failures": 0,
+    "relation_cycle_kernel_invariance_pass": true,
+    "nontrivial_relation_cycle_kernel_count": 0,
+    "representative_boundary_failures": 0,
+    "representative_affine_membership_failures": 0,
+    "four_sector_quotient_pass": true,
+    "expanded_public_boundary_failures": 0,
+    "expanded_public_affine_membership_failures": 0,
+    "expanded_public_sector_failures": 0,
+    "expanded_public_objective_failures": 0,
+    "maximum_expanded_public_objective_error": 0.0,
+    "kernel_check_guard_pass": true,
+    "transition_guard_pass": true,
+    "preflight_wall_guard_pass": true,
+    "projected_total_wall_guard_pass": true,
+    "projected_memory_guard_pass": true,
+    "policy_risk_intentionally_not_computed": true,
+    "decoder_key_fields": [
+      "initial_observation",
+      "first_action_mask",
+      "binary_Y"
+    ],
+    "forbidden_decoder_key_fields": [
+      "physical_error",
+      "active_vertices",
+      "relation_components",
+      "effective_error"
+    ]
+  },
+  "new_stochastic_samples": 0,
+  "claim_boundary": "Corrected primitive structural and resource preflight only. No posterior policy risk, algorithmic gap, LER, threshold, noisy-measurement, or scalable result is computed.",
+  "source_hashes": {
+    "scripts/d4_sequential_corrected.py": "67fb1766e3201b1a6acafc9c1e885d89483ef01a3a34684f8f1034a67eddad29",
+    "scripts/run_r4_corrected_sequential_preflight.py": "84222bed2806882962c91e21a37e8e8cd194009bcabc5d6595504a2a5a5a844b"
+  },
+  "structural_digest_sha256": "73d0771bc2422bff020d863ce4280fe0b1c6cc6b2b163c18b2bff68be76b019d"
+}

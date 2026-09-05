@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-28T05:23:18.090Z",
+  "analysis_kind": "matched_high_q_l13_convergence_cap_diagnostic",
+  "source": {
+    "path": "phase4-honeycomb-highq-l13-convergence-cap-2026-08-28.json",
+    "sha256": "9e80ee82b43863880a3b1a33e9e827eb393d0617d55a24e76bcd016aadf8d650"
+  },
+  "figure": {
+    "path": "../figures/phase4-honeycomb-highq-l13-convergence-cap-2026-08-28.png",
+    "sha256": "5797f801a77cf88af37569066186c13a960a852fc5c9f657fd13b16a70a43799"
+  },
+  "design": {
+    "lattice": "honeycomb",
+    "L": 13,
+    "q_values": [0.85, 0.9, 0.95],
+    "p_values": [0.4, 0.45, 0.49],
+    "matched_observations_per_cell": 64,
+    "matched_observations_total": 576,
+    "max_iterations": [80, 160, 320],
+    "schedule": "residual_priority",
+    "priority_order": "stable_sort",
+    "matching_projection": "posterior_llr",
+    "confidence_level": 0.9
+  },
+  "aggregate": {
+    "residual_priority_80": {
+      "converged": 19,
+      "convergence_rate": 0.03298611111111111,
+      "logical_failures": 87,
+      "mean_runtime_ms": 10.341477891112541,
+      "mean_edge_log_loss": 0.18872693808220672,
+      "mean_edge_brier": 0.058690418128700385
+    },
+    "residual_priority_160": {
+      "converged": 199,
+      "convergence_rate": 0.3454861111111111,
+      "logical_failures": 87,
+      "mean_runtime_ms": 16.91964772524241,
+      "mean_edge_log_loss": 0.1887265954874983,
+      "mean_edge_brier": 0.058688635694200214
+    },
+    "residual_priority_320": {
+      "converged": 342,
+      "convergence_rate": 0.59375,
+      "logical_failures": 87,
+      "mean_runtime_ms": 25.17380591345702,
+      "mean_edge_log_loss": 0.1887297176500652,
+      "mean_edge_brier": 0.058689202830999175
+    }
+  },
+  "matched_correction_effects": {
+    "residual_priority_160_minus_residual_priority_80": {
+      "correction_disagreements": 57,
+      "rescued_failures": 0,
+      "introduced_failures": 0
+    },
+    "residual_priority_320_minus_residual_priority_160": {
+      "correction_disagreements": 45,
+      "rescued_failures": 0,
+      "introduced_failures": 0
+    }
+  },
+  "per_cell_converged_counts_by_cap": [
+    {"q": 0.85, "p": 0.4, "80": 2, "160": 33, "320": 51},
+    {"q": 0.85, "p": 0.45, "80": 6, "160": 36, "320": 57},
+    {"q": 0.85, "p": 0.49, "80": 9, "160": 41, "320": 56},
+    {"q": 0.9, "p": 0.4, "80": 0, "160": 16, "320": 37},
+    {"q": 0.9, "p": 0.45, "80": 0, "160": 21, "320": 43},
+    {"q": 0.9, "p": 0.49, "80": 1, "160": 28, "320": 42},
+    {"q": 0.95, "p": 0.4, "80": 1, "160": 4, "320": 13},
+    {"q": 0.95, "p": 0.45, "80": 0, "160": 10, "320": 20},
+    {"q": 0.95, "p": 0.49, "80": 0, "160": 10, "320": 23}
+  ],
+  "integrity": {
+    "all_corrections_syndrome_faithful": true,
+    "source_start_equals_end": true,
+    "all_cells_cap_sensitive_at_both_steps": true
+  },
+  "interpretation": {
+    "finding": "The L13 fixed-point flag is strongly cap-sensitive: aggregate convergence rises from 19/576 to 199/576 and 342/576 at caps 80, 160, and 320.",
+    "logical_effect": "All three arms have exactly 87 logical failures. The 57 and 45 successive correction disagreements produce zero rescues and zero introduced failures in every cell.",
+    "posterior_effect": "Aggregate edge log loss and Brier score remain stable at approximately the 1e-6 scale despite the large convergence-count change.",
+    "remaining_nonconvergence": "Cap 320 still leaves 234/576 observations nonconverged. At q=0.95 only 13/64, 20/64, and 23/64 converge in the three p cells.",
+    "decision": "The near-zero cap-80 convergence flag does not by itself invalidate the matched logical outcomes, and increasing the cap is not supported as a primary-decoder change. Retain residual-priority-80 and keep every phase statement explicitly decoder-operational.",
+    "next_prerequisite": "Register a fresh fluctuation-efficient L11/L13 adaptive-p confirmation matrix that increases independent seed-cluster count around the q=0.85 crossing, q=0.90 ceiling-adjacent crossing, and q=0.95 high-p sign."
+  },
+  "evidence_boundary": "This bounded matched mechanism diagnostic resolves the cap-sensitivity question for L13 on 576 observations. It does not update p_c(q), q_c, or the primary decoder configuration."
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "status": "analyzed_unresolved",
+  "campaign": "phase4-residual80-honeycomb-highq-adaptive-p-confirmation-4000-2026-08-28",
+  "q_grid_policy": "explicit",
+  "q_values": [0.85, 0.9, 0.95],
+  "lattices": ["honeycomb"],
+  "deferred_lattices": ["square"],
+  "sizes": [11, 13],
+  "seeds": [611001, 611002, 611003, 611004, 611005, 611006, 611007, 611008, 611009, 611010, 611011, 611012, 611013, 611014, 611015, 611016, 611017, 611018, 611019, 611020, 611021, 611022, 611023, 611024, 611025, 611026, 611027, 611028, 611029, 611030, 611031, 611032, 611033, 611034, 611035, 611036, 611037, 611038, 611039, 611040],
+  "shots_per_seed": 100,
+  "shots_per_cell": 4000,
+  "workers": 3,
+  "p_grid": {
+    "honeycomb": [0.39, 0.4, 0.41, 0.42, 0.43, 0.44, 0.45, 0.46, 0.47, 0.48, 0.49]
+  },
+  "decoder": {
+    "name": "HeraldAwareBpMatchingDecoder",
+    "recurrence_mode": "damping",
+    "damping": 0.25,
+    "max_iterations": 80,
+    "update_schedule": "residual_priority",
+    "residual_priority_order": "stable_sort",
+    "residual_priority_buffer_reuse": false,
+    "residual_priority_cached_products": false,
+    "matching_projection": "posterior_llr",
+    "p_m": 0.0,
+    "p_h": 0.0,
+    "use_numba": true
+  },
+  "artifact_stem_template": "phase4-residual80-{lattice}-{q_tag}-adaptive-p-confirmation-4000-2026-08-28",
+  "expected_shards": 3,
+  "expected_raw_records": 264000,
+  "inference": {
+    "confidence_level": 0.9,
+    "bootstrap_replicates": 20000,
+    "bootstrap_seed": 611047,
+    "cluster_policy": "Resample all eleven nested-p observations for one fresh seed as a complete trajectory, independently within L=11 and L=13. Forty clusters at 100 shots each preserve 4000 shots/cell while doubling independent trajectory count relative to the previous wave.",
+    "crossing_policy": "Retain no-crossing and multiple-crossing outcomes. Quote a conditional central 90% interval only with topology support and compare it against the previous fresh L11/L13 wave without pooling cohorts.",
+    "cell_sign_policy": "Classify the L11/L13 LER difference only when its central 90% seed-trajectory bootstrap interval excludes zero.",
+    "selection_rationale": "The dense common p=0.39:0.01:0.49 grid brackets the q=0.85 crossing near 0.414, resolves the q=0.90 ceiling-adjacent crossing near 0.483, and repeats the q=0.95 high-p sign test. A common grid preserves complete nested trajectories and avoids post-outcome p selection.",
+    "reproducibility_gate": "A crossing or ceiling label must reproduce the previous wave's qualitative topology and satisfy the registered 90% sign/topology rules in this independent 40-cluster cohort. Discordance remains unresolved rather than being pooled away.",
+    "promotion_gate": "Do not promote p_c(q), q_c, add q=0.925, reveal L15, or start square unless the independent confirmation passes its reproducibility and central-90% gates."
+  },
+  "provenance_policy": "Every shard must use one identical runtime/source cohort and pass raw-count, gzip/SHA-256, syndrome-fidelity, configuration, and start/end source-stability checks. This 40-cluster confirmation is never pooled with earlier discovery or refinement cohorts.",
+  "execution_gate": "Passed 29/29 runner, dispatcher, analyzer, recovery, cap-diagnostic, scaling, and adaptive-confirmation tests plus a three-job dry run on 2026-08-28. Production may start; every shard remains fail-closed on syndrome fidelity and source stability.",
+  "purpose": "Smallest common-grid confirmation that simultaneously increases independent trajectory count, refines the two finite-like crossing regions, and tests the unresolved q=0.95 high-p sign under the frozen primary decoder."
+}

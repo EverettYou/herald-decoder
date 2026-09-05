@@ -1,0 +1,306 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-29T09:06:06.295802+00:00",
+  "status": "corrected_sequential_policy_audited",
+  "lattice": {
+    "size": 2,
+    "vertex_count": 8,
+    "edge_count": 12
+  },
+  "matrix": {
+    "o0_observation_count": 128,
+    "o2_observation_count": 16230,
+    "first_actions_per_syndrome": 32,
+    "joint_second_sector_actions": 16,
+    "priors": [
+      0.1,
+      0.3,
+      0.5,
+      0.6
+    ],
+    "observable_history_action_aggregations": 8564264,
+    "transition_pair_count": 127136,
+    "terminal_transition_pairs": 120320,
+    "nonterminal_transition_pairs": 6816,
+    "unique_hidden_second_outcomes": 257020,
+    "maximum_channel_normalization_error": 0.0,
+    "observable_key_failures": 0
+  },
+  "prior_summaries": [
+    {
+      "p": 0.1,
+      "o0_flux_only": {
+        "nonwinding_observation_mass": 0.9995992344369992,
+        "nonwinding_conditioned_risks": {
+          "public_fixed": 0.1635541966887015,
+          "fixed_first_exact_continuation": 0.1416170426141106,
+          "myopic_first_exact_continuation": 0.13665564961457372,
+          "future_aware_exact": 0.1366550515037465
+        },
+        "first_action_difference_probability": {
+          "future_vs_public": 0.07983700100465592,
+          "future_vs_myopic": 0.0032168673856689182,
+          "myopic_vs_public": 0.07983700100465592
+        },
+        "observation_count": 128,
+        "terminal_physical_winding_mass": 0.00040076556300000017,
+        "full_risks_with_terminal_mass": {
+          "public_fixed": 0.1638894153619844,
+          "fixed_first_exact_continuation": 0.14196105294329683,
+          "myopic_first_exact_continuation": 0.13700164829921868,
+          "future_aware_exact": 0.13700105042809368
+        }
+      },
+      "o2_flux_and_charge": {
+        "nonwinding_observation_mass": 0.9995992344370643,
+        "nonwinding_conditioned_risks": {
+          "public_fixed": 0.13087063957777373,
+          "fixed_first_exact_continuation": 0.09646978843141212,
+          "myopic_first_exact_continuation": 0.04817599933149205,
+          "future_aware_exact": 0.04817599933149205
+        },
+        "first_action_difference_probability": {
+          "future_vs_public": 0.28683016727698946,
+          "future_vs_myopic": 0.0,
+          "myopic_vs_public": 0.28683016727698946
+        },
+        "observation_count": 16230,
+        "terminal_physical_winding_mass": 0.00040076556300000017,
+        "full_risks_with_terminal_mass": {
+          "public_fixed": 0.1312189566952316,
+          "fixed_first_exact_continuation": 0.09683189222534512,
+          "myopic_first_exact_continuation": 0.048557457612999975,
+          "future_aware_exact": 0.048557457612999975
+        }
+      },
+      "decomposition": {
+        "future_aware_exact_information_gain_o0_minus_o2": 0.08847905217225444,
+        "o0": {
+          "public_full_policy_excess": 0.02689914518495501,
+          "second_stage_mwpm_excess_at_public_first": 0.021937154074590903,
+          "public_first_action_excess_after_exact_continuation": 0.004961991110364106,
+          "myopia_cost": 5.981108272268276e-07
+        },
+        "o2": {
+          "public_full_policy_excess": 0.08269464024628168,
+          "second_stage_mwpm_excess_at_public_first": 0.03440085114636161,
+          "public_first_action_excess_after_exact_continuation": 0.04829378909992006,
+          "myopia_cost": 0.0
+        }
+      }
+    },
+    {
+      "p": 0.3,
+      "o0_flux_only": {
+        "nonwinding_observation_mass": 0.9868136047569972,
+        "nonwinding_conditioned_risks": {
+          "public_fixed": 0.7209069861914087,
+          "fixed_first_exact_continuation": 0.6484850272630187,
+          "myopic_first_exact_continuation": 0.6333619847224102,
+          "future_aware_exact": 0.633336635336767
+        },
+        "first_action_difference_probability": {
+          "future_vs_public": 0.3822344576379082,
+          "future_vs_myopic": 0.014648620353749224,
+          "myopic_vs_public": 0.3822344576379082
+        },
+        "observation_count": 128,
+        "terminal_physical_winding_mass": 0.013186395242999992,
+        "full_risks_with_terminal_mass": {
+          "public_fixed": 0.7245872169810469,
+          "fixed_first_exact_continuation": 0.6531202426273591,
+          "myopic_first_exact_continuation": 0.6381966185029678,
+          "future_aware_exact": 0.6381716033843429
+        }
+      },
+      "o2_flux_and_charge": {
+        "nonwinding_observation_mass": 0.9868136047569718,
+        "nonwinding_conditioned_risks": {
+          "public_fixed": 0.6401236220054642,
+          "fixed_first_exact_continuation": 0.5159366602655878,
+          "myopic_first_exact_continuation": 0.3028682464543067,
+          "future_aware_exact": 0.3028682464543067
+        },
+        "first_action_difference_probability": {
+          "future_vs_public": 0.707855531384058,
+          "future_vs_myopic": 0.0,
+          "myopic_vs_public": 0.707855531384058
+        },
+        "observation_count": 16230,
+        "terminal_physical_winding_mass": 0.013186395242999992,
+        "full_risks_with_terminal_mass": {
+          "public_fixed": 0.6448690941643014,
+          "fixed_first_exact_continuation": 0.5223197107859578,
+          "myopic_first_exact_continuation": 0.3120609012929973,
+          "future_aware_exact": 0.3120609012929973
+        }
+      },
+      "decomposition": {
+        "future_aware_exact_information_gain_o0_minus_o2": 0.3304683888824603,
+        "o0": {
+          "public_full_policy_excess": 0.08757035085464171,
+          "second_stage_mwpm_excess_at_public_first": 0.07242195892838998,
+          "public_first_action_excess_after_exact_continuation": 0.015148391926251725,
+          "myopia_cost": 2.5349385643247402e-05
+        },
+        "o2": {
+          "public_full_policy_excess": 0.33725537555115753,
+          "second_stage_mwpm_excess_at_public_first": 0.12418696173987642,
+          "public_first_action_excess_after_exact_continuation": 0.2130684138112811,
+          "myopia_cost": 0.0
+        }
+      }
+    },
+    {
+      "p": 0.5,
+      "o0_flux_only": {
+        "nonwinding_observation_mass": 0.969970703125,
+        "nonwinding_conditioned_risks": {
+          "public_fixed": 0.9434581865089353,
+          "fixed_first_exact_continuation": 0.8939521457337025,
+          "myopic_first_exact_continuation": 0.8935627988925245,
+          "future_aware_exact": 0.8920132771205638
+        },
+        "first_action_difference_probability": {
+          "future_vs_public": 0.41782028693682355,
+          "future_vs_myopic": 0.23357664233576642,
+          "myopic_vs_public": 0.3775484520513466
+        },
+        "observation_count": 128,
+        "terminal_physical_winding_mass": 0.030029296875,
+        "full_risks_with_terminal_mass": {
+          "public_fixed": 0.9451560974121094,
+          "fixed_first_exact_continuation": 0.8971366882324219,
+          "myopic_first_exact_continuation": 0.896759033203125,
+          "future_aware_exact": 0.8952560424804688
+        }
+      },
+      "o2_flux_and_charge": {
+        "nonwinding_observation_mass": 0.969970703125,
+        "nonwinding_conditioned_risks": {
+          "public_fixed": 0.9233058004813742,
+          "fixed_first_exact_continuation": 0.8435317298011579,
+          "myopic_first_exact_continuation": 0.6699754593506166,
+          "future_aware_exact": 0.669000125849484
+        },
+        "first_action_difference_probability": {
+          "future_vs_public": 0.8803879310344828,
+          "future_vs_myopic": 0.027938585451799648,
+          "myopic_vs_public": 0.8792552856783287
+        },
+        "observation_count": 16230,
+        "terminal_physical_winding_mass": 0.030029296875,
+        "full_risks_with_terminal_mass": {
+          "public_fixed": 0.9256088733673096,
+          "fixed_first_exact_continuation": 0.8482303619384766,
+          "myopic_first_exact_continuation": 0.6798858642578125,
+          "future_aware_exact": 0.6789398193359375
+        }
+      },
+      "decomposition": {
+        "future_aware_exact_information_gain_o0_minus_o2": 0.2230131512710798,
+        "o0": {
+          "public_full_policy_excess": 0.05144490938837154,
+          "second_stage_mwpm_excess_at_public_first": 0.049506040775232796,
+          "public_first_action_excess_after_exact_continuation": 0.0019388686131387445,
+          "myopia_cost": 0.0015495217719607712
+        },
+        "o2": {
+          "public_full_policy_excess": 0.25430567463189024,
+          "second_stage_mwpm_excess_at_public_first": 0.07977407068021636,
+          "public_first_action_excess_after_exact_continuation": 0.17453160395167389,
+          "myopia_cost": 0.000975333501132658
+        }
+      }
+    },
+    {
+      "p": 0.6,
+      "o0_flux_only": {
+        "nonwinding_observation_mass": 0.9730704056319994,
+        "nonwinding_conditioned_risks": {
+          "public_fixed": 0.9732536893102861,
+          "fixed_first_exact_continuation": 0.9423712609535395,
+          "myopic_first_exact_continuation": 0.9421898713737331,
+          "future_aware_exact": 0.9419607476939771
+        },
+        "first_action_difference_probability": {
+          "future_vs_public": 0.4375201146719566,
+          "future_vs_myopic": 0.11590566844415297,
+          "myopic_vs_public": 0.4042767236359399
+        },
+        "observation_count": 128,
+        "terminal_physical_winding_mass": 0.026929594368,
+        "full_risks_with_terminal_mass": {
+          "public_fixed": 0.973973956608,
+          "fixed_first_exact_continuation": 0.9439231795199995,
+          "myopic_first_exact_continuation": 0.9437466746879999,
+          "future_aware_exact": 0.9435237212159998
+        }
+      },
+      "o2_flux_and_charge": {
+        "nonwinding_observation_mass": 0.9730704056319691,
+        "nonwinding_conditioned_risks": {
+          "public_fixed": 0.9738773829181495,
+          "fixed_first_exact_continuation": 0.9332769914857,
+          "myopic_first_exact_continuation": 0.824078660206711,
+          "future_aware_exact": 0.824078660206711
+        },
+        "first_action_difference_probability": {
+          "future_vs_public": 0.9250309588681663,
+          "future_vs_myopic": 0.0,
+          "myopic_vs_public": 0.9250309588681663
+        },
+        "observation_count": 16230,
+        "terminal_physical_winding_mass": 0.026929594368,
+        "full_risks_with_terminal_mass": {
+          "public_fixed": 0.9745808543999642,
+          "fixed_first_exact_continuation": 0.9350738150399739,
+          "myopic_first_exact_continuation": 0.8288161505279938,
+          "future_aware_exact": 0.8288161505279938
+        }
+      },
+      "decomposition": {
+        "future_aware_exact_information_gain_o0_minus_o2": 0.11788208748726614,
+        "o0": {
+          "public_full_policy_excess": 0.03129294161630902,
+          "second_stage_mwpm_excess_at_public_first": 0.030882428356746594,
+          "public_first_action_excess_after_exact_continuation": 0.00041051325956242835,
+          "myopia_cost": 0.000229123679756027
+        },
+        "o2": {
+          "public_full_policy_excess": 0.14979872271143857,
+          "second_stage_mwpm_excess_at_public_first": 0.040600391432449534,
+          "public_first_action_excess_after_exact_continuation": 0.10919833127898904,
+          "myopia_cost": 0.0
+        }
+      }
+    }
+  ],
+  "validation": {
+    "maximum_second_channel_normalization_error": 0.0,
+    "observable_key_failures": 0,
+    "maximum_action_branch_mass_conservation_error": 1.3877787807814457e-15,
+    "maximum_o0_vs_marginalized_o2_flux_evidence_error": 1.3877787807814457e-15,
+    "maximum_global_normalization_error": 6.439293542825908e-14,
+    "maximum_registered_policy_risk_order_violation": 0.0,
+    "maximum_o2_vs_o0_exact_information_order_violation": 0.0,
+    "public_first_action_membership_failures": 0,
+    "public_second_prediction_count": 64,
+    "production_decoder_truth_inputs": [],
+    "new_stochastic_samples": 0,
+    "larger_lattice_sizes": 0
+  },
+  "resource": {
+    "transition_cache_seconds": 316.62789500004146,
+    "total_wall_time_seconds": 355.80008116702083,
+    "wall_guard_seconds": 1800.0,
+    "streamed_transition_guard": 120000000
+  },
+  "claim_boundary": "Exact primitive L=2 noiseless sequential-policy audit under the registered observation model. It is not an LER, threshold, larger-lattice, noisy-measurement, fault-tolerance, or scalable-optimality result.",
+  "source_hashes": {
+    "scripts/run_r4_corrected_sequential_policy.py": "eba9f0104c64a33273dd77011d00aadeb0e3c62ffc741406a45a930a738c14c9",
+    "scripts/d4_sequential_corrected.py": "67fb1766e3201b1a6acafc9c1e885d89483ef01a3a34684f8f1034a67eddad29",
+    "results/r4-corrected-sequential-policy-preflight.json": "e9e02b090485c8ab38880bc3c0aaccdc5d0a59b20c1e70772a5bcda7c4acea7f"
+  },
+  "prior_summary_digest_sha256": "e049e797309ff77cf5594f99ef189da0cee36adf6fc62056a2a278932da3e54a"
+}

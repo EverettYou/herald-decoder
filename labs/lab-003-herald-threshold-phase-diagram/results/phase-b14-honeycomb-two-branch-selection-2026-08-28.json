@@ -1,0 +1,310 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-28T19:09:42.744017+00:00",
+  "status": "registered_no_data_launched",
+  "scientific_question": "At moderate-LER lower-transition cells, does adding new distance leverage or adding same-window precision yield more posterior trend-sign information per decode?",
+  "selection_rule": {
+    "source": "current Phase B13 continuous trend evidence with Phase B9 count vectors",
+    "required_current_sizes": [
+      7,
+      9,
+      11
+    ],
+    "mean_ler_range": [
+      0.05,
+      0.45
+    ],
+    "minimum_binary_sign_entropy_nats": 0.5,
+    "maximum_p": 0.32,
+    "required_within_row_neighbor_log_odds_sign_contrast": true,
+    "q_strata": [
+      [
+        0.0,
+        0.4
+      ],
+      [
+        0.6,
+        0.8
+      ]
+    ],
+    "choice_within_stratum": "maximum combined sign entropy; lower q deterministic tie-break"
+  },
+  "selected_pairs": [
+    {
+      "q": 0.2,
+      "p_pair": [
+        0.16,
+        0.2
+      ],
+      "cells": [
+        {
+          "q": 0.2,
+          "p": 0.16,
+          "sizes": [
+            7,
+            9,
+            11
+          ],
+          "logical_errors": [
+            134,
+            144,
+            125
+          ],
+          "shots": [
+            1000,
+            1000,
+            1000
+          ],
+          "mean_ler": 0.13433333333333333,
+          "posterior_probability_upward_trend": 0.2742156982421875,
+          "posterior_probability_downward_trend": 0.7257843017578125,
+          "posterior_log_odds_upward_vs_downward": -0.9733378491085353,
+          "sign_entropy_nats": 0.5874069312374135
+        },
+        {
+          "q": 0.2,
+          "p": 0.2,
+          "sizes": [
+            7,
+            9,
+            11
+          ],
+          "logical_errors": [
+            276,
+            273,
+            291
+          ],
+          "shots": [
+            1000,
+            1000,
+            1000
+          ],
+          "mean_ler": 0.28,
+          "posterior_probability_upward_trend": 0.771728515625,
+          "posterior_probability_downward_trend": 0.228271484375,
+          "posterior_log_odds_upward_vs_downward": 1.2180971829269307,
+          "sign_entropy_nats": 0.5371793065634625
+        }
+      ],
+      "combined_sign_entropy_nats": 1.124586237800876
+    },
+    {
+      "q": 0.7,
+      "p_pair": [
+        0.28,
+        0.32
+      ],
+      "cells": [
+        {
+          "q": 0.7,
+          "p": 0.28,
+          "sizes": [
+            7,
+            9,
+            11
+          ],
+          "logical_errors": [
+            207,
+            188,
+            198
+          ],
+          "shots": [
+            1000,
+            1000,
+            1000
+          ],
+          "mean_ler": 0.19766666666666666,
+          "posterior_probability_upward_trend": 0.308441162109375,
+          "posterior_probability_downward_trend": 0.691558837890625,
+          "posterior_log_odds_upward_vs_downward": -0.8074171321602622,
+          "sign_entropy_nats": 0.6178477227147849
+        },
+        {
+          "q": 0.7,
+          "p": 0.32,
+          "sizes": [
+            7,
+            9,
+            11
+          ],
+          "logical_errors": [
+            272,
+            279,
+            287
+          ],
+          "shots": [
+            1000,
+            1000,
+            1000
+          ],
+          "mean_ler": 0.2793333333333334,
+          "posterior_probability_upward_trend": 0.7727813720703125,
+          "posterior_probability_downward_trend": 0.2272186279296875,
+          "posterior_log_odds_upward_vs_downward": 1.2240835055306925,
+          "sign_entropy_nats": 0.5358936754362733
+        }
+      ],
+      "combined_sign_entropy_nats": 1.1537413981510583
+    }
+  ],
+  "selected_cell_count": 4,
+  "branches": {
+    "distance_leverage_L5_L13": "500 fresh shots at each previously unmeasured endpoint",
+    "same_window_precision_L7_L9_L11": "500 fresh shots at each existing distance"
+  },
+  "jobs": [
+    {
+      "branch": "distance_leverage_L5_L13",
+      "q": 0.2,
+      "p": 0.16,
+      "sizes": [
+        5,
+        13
+      ],
+      "seeds": [
+        891001,
+        891002,
+        891003,
+        891004,
+        891005
+      ],
+      "shots_per_seed": 100,
+      "expected_decodes": 1000
+    },
+    {
+      "branch": "same_window_precision_L7_L9_L11",
+      "q": 0.2,
+      "p": 0.16,
+      "sizes": [
+        7,
+        9,
+        11
+      ],
+      "seeds": [
+        892001,
+        892002,
+        892003,
+        892004,
+        892005
+      ],
+      "shots_per_seed": 100,
+      "expected_decodes": 1500
+    },
+    {
+      "branch": "distance_leverage_L5_L13",
+      "q": 0.2,
+      "p": 0.2,
+      "sizes": [
+        5,
+        13
+      ],
+      "seeds": [
+        891001,
+        891002,
+        891003,
+        891004,
+        891005
+      ],
+      "shots_per_seed": 100,
+      "expected_decodes": 1000
+    },
+    {
+      "branch": "same_window_precision_L7_L9_L11",
+      "q": 0.2,
+      "p": 0.2,
+      "sizes": [
+        7,
+        9,
+        11
+      ],
+      "seeds": [
+        892001,
+        892002,
+        892003,
+        892004,
+        892005
+      ],
+      "shots_per_seed": 100,
+      "expected_decodes": 1500
+    },
+    {
+      "branch": "distance_leverage_L5_L13",
+      "q": 0.7,
+      "p": 0.28,
+      "sizes": [
+        5,
+        13
+      ],
+      "seeds": [
+        891001,
+        891002,
+        891003,
+        891004,
+        891005
+      ],
+      "shots_per_seed": 100,
+      "expected_decodes": 1000
+    },
+    {
+      "branch": "same_window_precision_L7_L9_L11",
+      "q": 0.7,
+      "p": 0.28,
+      "sizes": [
+        7,
+        9,
+        11
+      ],
+      "seeds": [
+        892001,
+        892002,
+        892003,
+        892004,
+        892005
+      ],
+      "shots_per_seed": 100,
+      "expected_decodes": 1500
+    },
+    {
+      "branch": "distance_leverage_L5_L13",
+      "q": 0.7,
+      "p": 0.32,
+      "sizes": [
+        5,
+        13
+      ],
+      "seeds": [
+        891001,
+        891002,
+        891003,
+        891004,
+        891005
+      ],
+      "shots_per_seed": 100,
+      "expected_decodes": 1000
+    },
+    {
+      "branch": "same_window_precision_L7_L9_L11",
+      "q": 0.7,
+      "p": 0.32,
+      "sizes": [
+        7,
+        9,
+        11
+      ],
+      "seeds": [
+        892001,
+        892002,
+        892003,
+        892004,
+        892005
+      ],
+      "shots_per_seed": 100,
+      "expected_decodes": 1500
+    }
+  ],
+  "job_count": 8,
+  "expected_new_decodes": 10000,
+  "new_data_launched": false,
+  "phase_interpretation": null,
+  "boundary_inference": null
+}

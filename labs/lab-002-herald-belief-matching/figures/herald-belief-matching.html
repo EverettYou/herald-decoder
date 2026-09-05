@@ -1,0 +1,199 @@
+<div id="belief-matching-explorer">
+  <style>
+    #belief-matching-explorer { color:#172033; background:#f7f8fb; font:14px/1.4 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; padding:18px; box-sizing:border-box; }
+    #belief-matching-explorer * { box-sizing:border-box; }
+    #belief-matching-explorer .bm-head { display:flex; align-items:flex-end; justify-content:space-between; gap:16px; margin-bottom:12px; }
+    #belief-matching-explorer h1 { font-size:22px; line-height:1.15; margin:0 0 3px; font-weight:650; letter-spacing:-.02em; }
+    #belief-matching-explorer .bm-subtitle { color:#64748b; margin:0; }
+    #belief-matching-explorer .bm-status { color:#475569; min-height:20px; text-align:right; }
+    #belief-matching-explorer .bm-layout { display:grid; grid-template-columns:minmax(0,1fr) 260px; gap:16px; align-items:start; }
+    #belief-matching-explorer .bm-main { min-width:0; }
+    #belief-matching-explorer .bm-pipeline { display:grid; grid-template-columns:repeat(4,1fr); gap:6px; margin-bottom:8px; }
+    #belief-matching-explorer button { font:inherit; }
+    #belief-matching-explorer .bm-pipeline button, #belief-matching-explorer .bm-segment button { border:1px solid #d5dbe5; background:#fff; color:#475569; padding:8px 10px; cursor:pointer; }
+    #belief-matching-explorer .bm-pipeline button { border-radius:7px; position:relative; }
+    #belief-matching-explorer .bm-pipeline button[aria-pressed="true"], #belief-matching-explorer .bm-segment button[aria-pressed="true"] { background:#e8f4f1; border-color:#168173; color:#0c5d53; font-weight:650; }
+    #belief-matching-explorer .bm-pipeline button:not(:last-child)::after { content:"›"; position:absolute; right:-7px; top:50%; transform:translateY(-52%); color:#94a3b8; z-index:2; }
+    #belief-matching-explorer .bm-canvas { position:relative; background:#fff; border:1px solid #d9dee8; border-radius:10px; overflow:hidden; min-height:520px; }
+    #belief-matching-explorer svg { display:block; width:100%; height:auto; min-height:520px; }
+    #belief-matching-explorer .bm-loading { position:absolute; inset:0; display:none; place-items:center; background:rgba(255,255,255,.72); color:#0f766e; font-weight:650; z-index:4; }
+    #belief-matching-explorer .bm-canvas[aria-busy="true"] .bm-loading { display:grid; }
+    #belief-matching-explorer .bm-legend { display:flex; flex-wrap:wrap; gap:12px; min-height:24px; align-items:center; padding:8px 2px 0; color:#526176; }
+    #belief-matching-explorer .bm-legend span { display:inline-flex; align-items:center; gap:5px; }
+    #belief-matching-explorer .bm-key { width:18px; height:0; border-top:4px solid #94a3b8; border-radius:3px; }
+    #belief-matching-explorer .bm-dot { width:12px; height:12px; border-radius:50%; background:#fbbf24; border:1px solid #7c4a03; }
+    #belief-matching-explorer .bm-diamond { width:11px; height:11px; transform:rotate(45deg); background:#2563eb; border:1px solid #172554; }
+    #belief-matching-explorer .bm-panel { background:#fff; border:1px solid #d9dee8; border-radius:10px; overflow:hidden; }
+    #belief-matching-explorer .bm-section { padding:14px; border-bottom:1px solid #e7eaf0; }
+    #belief-matching-explorer .bm-section:last-child { border-bottom:0; }
+    #belief-matching-explorer .bm-label { display:block; color:#64748b; font-size:12px; font-weight:650; letter-spacing:.04em; text-transform:uppercase; margin-bottom:8px; }
+    #belief-matching-explorer .bm-segment { display:grid; grid-template-columns:1fr 1fr; }
+    #belief-matching-explorer .bm-segment-three { grid-template-columns:repeat(3,1fr); }
+    #belief-matching-explorer .bm-segment button:first-child { border-radius:7px 0 0 7px; }
+    #belief-matching-explorer .bm-segment button:last-child { border-radius:0 7px 7px 0; border-left:0; }
+    #belief-matching-explorer .bm-segment button + button { border-left:0; }
+    #belief-matching-explorer .bm-segment + dl { margin-top:10px; }
+    #belief-matching-explorer .bm-note { margin:8px 0 0; color:#64748b; font-size:12px; }
+    #belief-matching-explorer .bm-subcontrol { margin-top:12px; padding-top:11px; border-top:1px solid #e7eaf0; }
+    #belief-matching-explorer .bm-sub-label { display:block; margin-bottom:7px; color:#536661; font-size:11px; font-weight:700; }
+    #belief-matching-explorer .bm-control { display:block; margin-top:11px; }
+    #belief-matching-explorer .bm-control:first-of-type { margin-top:0; }
+    #belief-matching-explorer .bm-control-head { display:flex; justify-content:space-between; gap:12px; color:#334155; margin-bottom:5px; }
+    #belief-matching-explorer input[type="range"] { width:100%; accent-color:#168173; }
+    #belief-matching-explorer .bm-seed { display:grid; grid-template-columns:1fr 38px; gap:6px; }
+    #belief-matching-explorer .bm-seed input { width:100%; border:1px solid #d5dbe5; border-radius:7px; padding:8px; color:#172033; background:#fff; }
+    #belief-matching-explorer .bm-seed button { border:1px solid #d5dbe5; border-radius:7px; background:#fff; cursor:pointer; font-size:18px; }
+    #belief-matching-explorer dl { margin:0; display:grid; gap:7px; }
+    #belief-matching-explorer [hidden] { display:none !important; }
+    #belief-matching-explorer dl div { display:flex; justify-content:space-between; gap:12px; }
+    #belief-matching-explorer dt { color:#64748b; }
+    #belief-matching-explorer dd { margin:0; text-align:right; font-variant-numeric:tabular-nums; color:#1e293b; }
+    #belief-matching-explorer .bm-good { color:#087a61; }
+    #belief-matching-explorer .bm-bad { color:#b4332d; }
+    #belief-matching-explorer .bm-edge-detail { min-height:158px; }
+    #belief-matching-explorer .bm-empty { color:#64748b; margin:0; }
+    #belief-matching-explorer .bm-error { color:#b42318; padding:10px 2px 0; min-height:22px; }
+    @media (max-width:780px) {
+      #belief-matching-explorer .bm-layout { grid-template-columns:1fr; }
+      #belief-matching-explorer .bm-panel { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); }
+      #belief-matching-explorer .bm-section { border-right:1px solid #e7eaf0; }
+      #belief-matching-explorer .bm-head { align-items:flex-start; flex-direction:column; }
+      #belief-matching-explorer .bm-status { text-align:left; }
+    }
+    @media (max-width:520px) {
+      #belief-matching-explorer { padding:10px; }
+      #belief-matching-explorer .bm-pipeline { grid-template-columns:1fr 1fr; }
+      #belief-matching-explorer .bm-pipeline button::after { display:none; }
+      #belief-matching-explorer .bm-panel { grid-template-columns:1fr; }
+      #belief-matching-explorer .bm-canvas, #belief-matching-explorer svg { min-height:390px; }
+    }
+  </style>
+
+  <div class="bm-head">
+    <div><h1>Herald-aware belief matching</h1><p class="bm-subtitle">From fusion-remnant observations to posterior-weighted correction</p></div>
+    <div class="bm-status" id="bm-status" aria-live="polite"></div>
+  </div>
+  <div class="bm-layout">
+    <main class="bm-main">
+      <nav class="bm-pipeline" aria-label="Inference layer">
+        <button type="button" data-view="observation" aria-pressed="true">1 · Observation</button>
+        <button type="button" data-view="posterior" aria-pressed="false">2 · BP posterior</button>
+        <button type="button" data-view="influence" aria-pressed="false">3 · Herald effect</button>
+        <button type="button" data-view="decoder" aria-pressed="false">4 · Decoding result</button>
+      </nav>
+      <div class="bm-canvas" id="bm-canvas" aria-busy="true">
+        <div class="bm-loading">Running BP and PyMatching…</div>
+        <svg id="bm-lattice" viewBox="0 0 760 560" role="img" aria-label="Herald-aware decoding lattice"></svg>
+      </div>
+      <div class="bm-legend" id="bm-legend"></div>
+      <div class="bm-error" id="bm-error" role="alert"></div>
+    </main>
+
+    <aside class="bm-panel">
+      <section class="bm-section">
+        <span class="bm-label">Lattice</span>
+        <div class="bm-segment">
+          <button type="button" data-lattice="square" aria-pressed="true">Square</button>
+          <button type="button" data-lattice="honeycomb" aria-pressed="false">Honeycomb</button>
+        </div>
+        <label class="bm-control"><span class="bm-control-head"><span>Size (L)</span><b id="bm-L-value">9</b></span><input id="bm-L" type="range" min="3" max="11" step="2" value="9"></label>
+      </section>
+
+      <section class="bm-section">
+        <span class="bm-label">Tuning parameters</span>
+        <label class="bm-control"><span class="bm-control-head"><span>Edge error (p)</span><b id="bm-p-value">0.10</b></span><input id="bm-p" type="range" min="0" max="1" step="0.01" value="0.10"></label>
+        <label class="bm-control"><span class="bm-control-head"><span>Herald probability (q)</span><b id="bm-q-value">0.75</b></span><input id="bm-q" type="range" min="0" max="1" step="0.05" value="0.75"></label>
+      </section>
+
+      <section class="bm-section">
+        <span class="bm-label">Decoder</span>
+        <span class="bm-sub-label">BP recurrence</span>
+        <div class="bm-segment">
+          <button type="button" data-recurrence="damping" aria-pressed="true">Damping</button>
+          <button type="button" data-recurrence="memory" aria-pressed="false">Memory</button>
+        </div>
+        <dl>
+          <div><dt>Active recurrence</dt><dd id="bm-bp-recurrence">—</dd></div>
+          <div><dt>Matching projection</dt><dd>LLR · log((1−r)/r)</dd></div>
+          <div><dt>BP candidate</dt><dd id="bm-bp-candidate">—</dd></div>
+          <div><dt>BP candidate score</dt><dd id="bm-bp-score">—</dd></div>
+          <div><dt>BP converged</dt><dd id="bm-bp-state">—</dd></div>
+          <div><dt>Logical coset</dt><dd id="bm-herald-logical">—</dd></div>
+          <div><dt>Error mismatch</dt><dd id="bm-changed">—</dd></div>
+          <div><dt>Decode runtime</dt><dd id="bm-runtime">—</dd></div>
+        </dl>
+        <p class="bm-note">Green = decoder and simulated error agree; purple = decoder-only; red = true-error-only (missed). This is an edge-level diagnostic; the logical outcome above is the actual decoding criterion.</p>
+      </section>
+
+      <section class="bm-section">
+        <span class="bm-label">Measurement errors</span>
+        <label class="bm-control"><span class="bm-control-head"><span>Syndrome flip (pₘ)</span><b id="bm-pm-value">0.00</b></span><input id="bm-pm" type="range" min="0" max="0.5" step="0.01" value="0"></label>
+        <label class="bm-control"><span class="bm-control-head"><span>Herald loss (pₕ)</span><b id="bm-ph-value">0.00</b></span><input id="bm-ph" type="range" min="0" max="1" step="0.05" value="0"></label>
+      </section>
+
+      <section class="bm-section">
+        <span class="bm-label">Random seed</span>
+        <div class="bm-seed"><input id="bm-seed" type="number" min="0" max="4294967295" value="12" aria-label="Random seed"><button id="bm-refresh" type="button" title="New random seed" aria-label="New random seed">↻</button></div>
+      </section>
+
+      <section class="bm-section">
+        <span class="bm-label">Soft posterior quality</span>
+        <dl>
+          <div><dt>Prior</dt><dd id="bm-prior-quality">—</dd></div>
+          <div><dt>After syndrome BP</dt><dd id="bm-syndrome-quality">—</dd></div>
+          <div><dt>After herald BP</dt><dd id="bm-herald-quality">—</dd></div>
+        </dl>
+        <p class="bm-note">Log loss / Brier; lower is better. Uses latent edge truth, so this is a simulation-only diagnostic.</p>
+      </section>
+
+      <section class="bm-section">
+        <span class="bm-label">Measured syndrome density</span>
+        <dl>
+          <div><dt>Input</dt><dd id="bm-density-input">—</dd></div>
+          <div><dt>After soft BP</dt><dd id="bm-density-soft">—</dd></div>
+          <div><dt>Hard-BP diagnostic</dt><dd id="bm-density-hard">—</dd></div>
+          <div><dt>After MWPM</dt><dd id="bm-density-final">—</dd></div>
+        </dl>
+        <p class="bm-note">Soft BP does not apply a correction, so the first two values must agree. The hard step is a separate marginal-MAP diagnostic.</p>
+      </section>
+
+      <section class="bm-section bm-edge-detail">
+        <span class="bm-label">Selected edge</span>
+        <p class="bm-empty" id="bm-edge-empty">Click an edge to inspect how the herald changes its posterior and matching weight.</p>
+        <dl id="bm-edge-values" hidden>
+          <div><dt>Edge</dt><dd id="bm-edge-id">—</dd></div>
+          <div><dt>Prior</dt><dd id="bm-edge-prior">—</dd></div>
+          <div><dt>Syndrome posterior</dt><dd id="bm-edge-syndrome">—</dd></div>
+          <div><dt>Herald posterior</dt><dd id="bm-edge-herald">—</dd></div>
+          <div><dt>Herald change</dt><dd id="bm-edge-delta">—</dd></div>
+          <div><dt>Matching weight</dt><dd id="bm-edge-weight">—</dd></div>
+          <div><dt>Correction</dt><dd id="bm-edge-correction">—</dd></div>
+        </dl>
+      </section>
+    </aside>
+  </div>
+
+  <script>
+    (() => {
+      const root=document.getElementById('belief-matching-explorer'),svg=root.querySelector('#bm-lattice'),canvas=root.querySelector('#bm-canvas'),status=root.querySelector('#bm-status'),legend=root.querySelector('#bm-legend'),errorBox=root.querySelector('#bm-error');
+      const controls={L:root.querySelector('#bm-L'),p:root.querySelector('#bm-p'),q:root.querySelector('#bm-q'),pm:root.querySelector('#bm-pm'),ph:root.querySelector('#bm-ph'),seed:root.querySelector('#bm-seed')};
+      let lattice='square',recurrenceMode='damping',view='observation',data=null,selectedEdge=null,revision=0,timer;
+      const cache=new Map(),setOf=values=>new Set(values||[]),clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x)),fmt=x=>x===null||x===undefined?'—':Number(x).toFixed(3);
+      const setText=(selector,value)=>{const element=root.querySelector(selector);if(element)element.textContent=value;};
+      function mix(a,b,t){t=clamp(t);const A=a.match(/\w\w/g).map(x=>parseInt(x,16)),B=b.match(/\w\w/g).map(x=>parseInt(x,16));return '#'+A.map((x,i)=>Math.round(x+(B[i]-x)*t).toString(16).padStart(2,'0')).join('');}
+      function params(){return {lattice,recurrence_mode:recurrenceMode,L:Number(controls.L.value),p:Number(controls.p.value),q:Number(controls.q.value),p_m:Number(controls.pm.value),p_h:Number(controls.ph.value),seed:Math.max(0,Math.min(4294967295,Math.trunc(Number(controls.seed.value)||0)))>>>0};}
+      function syncLabels(){setText('#bm-L-value',controls.L.value);setText('#bm-p-value',Number(controls.p.value).toFixed(2));setText('#bm-q-value',Number(controls.q.value).toFixed(2));setText('#bm-pm-value',Number(controls.pm.value).toFixed(2));setText('#bm-ph-value',Number(controls.ph.value).toFixed(2));}
+      function rotatedFit(graph){const rotate=p=>({x:p.y,y:-p.x}),vertices=graph.vertices.map(v=>({...v,...rotate(v)})),line=graph.logical_line.map(rotate),all=[...vertices,...line],xs=all.map(p=>p.x),ys=all.map(p=>p.y),minX=Math.min(...xs),maxX=Math.max(...xs),minY=Math.min(...ys),maxY=Math.max(...ys),scale=Math.min(680/(maxX-minX||1),470/(maxY-minY||1)),ox=380-scale*(minX+maxX)/2,oy=280-scale*(minY+maxY)/2,map=p=>({...p,x:ox+scale*p.x,y:oy+scale*p.y});return {vertices:vertices.map(map),line:line.map(map),scale};}
+      function markerScale(graph,fit){const lengths=graph.edges.map(([a,b])=>Math.hypot(fit.vertices[a].x-fit.vertices[b].x,fit.vertices[a].y-fit.vertices[b].y));return clamp(Math.min(...lengths)/50,.32,1);}
+      function key(color,label,type='line'){return `<span><i class="${type==='line'?'bm-key':type==='dot'?'bm-dot':'bm-diamond'}"${type==='line'?` style="border-color:${color}"`:''}></i>${label}</span>`;}
+      function renderLegend(){if(view==='observation')legend.innerHTML=key('#e4572e','true error (simulation truth only)')+key('', 'syndrome','dot')+key('', 'herald','diamond');else if(view==='posterior')legend.innerHTML=key('#e4572e','true error')+key('#cbd5e1','true no-error')+key('#334155','thicker = higher P(error | syndrome, herald)')+key('', 'herald','diamond');else if(view==='influence')legend.innerHTML=key('#2563eb','herald lowers posterior')+key('#cbd5e1','little change')+key('#e4572e','herald raises posterior');else legend.innerHTML=key('#188f65','decoder and true error')+key('#8b5cf6','decoder only')+key('#e4572e','true error missed')+key('', 'residual syndrome','dot')+key('', 'unexplained herald','diamond');}
+      function edgeStyle(index,sets){if(view==='observation'){const active=sets.errors.has(index);return {color:active?'#e4572e':'#cbd5e1',width:active?7:1.7,opacity:1};}if(view==='posterior'){const r=data.posterior.herald_aware[index];return {color:sets.errors.has(index)?'#e4572e':'#cbd5e1',width:1.5+7*Math.sqrt(r),opacity:1};}if(view==='influence'){const d=data.posterior.herald_delta[index],max=Math.max(.02,...data.posterior.herald_delta.map(Math.abs)),t=clamp(Math.abs(d)/max),color=Math.abs(d)<1e-6?'#cbd5e1':d>0?mix('#cbd5e1','#e4572e',t):mix('#cbd5e1','#2563eb',t);return {color,width:1.5+7*t,opacity:.55+.45*t};}const truth=sets.errors.has(index),chosen=sets.heraldCorrection.has(index);if(!truth&&!chosen)return {color:'#d7dce5',width:1.5,opacity:1};return {color:truth&&chosen?'#188f65':chosen?'#8b5cf6':'#e4572e',width:7,opacity:1};}
+      function updateInspector(){const empty=root.querySelector('#bm-edge-empty'),values=root.querySelector('#bm-edge-values');if(data===null||selectedEdge===null){empty.hidden=false;values.hidden=true;return;}empty.hidden=true;values.hidden=false;const i=selectedEdge,truth=setOf(data.observation.error_edge_indices).has(i),chosen=setOf(data.herald_decoder.correction_edge_indices).has(i),delta=data.posterior.herald_delta[i];root.querySelector('#bm-edge-id').textContent=`${i} · ${data.graph.edges[i].join('–')}`;root.querySelector('#bm-edge-prior').textContent=fmt(data.posterior.prior);root.querySelector('#bm-edge-syndrome').textContent=fmt(data.posterior.syndrome_only[i]);root.querySelector('#bm-edge-herald').textContent=fmt(data.posterior.herald_aware[i]);root.querySelector('#bm-edge-delta').textContent=`${delta>=0?'+':''}${fmt(delta)}`;root.querySelector('#bm-edge-weight').textContent=fmt(data.posterior.matching_weights[i]);root.querySelector('#bm-edge-correction').textContent=truth&&chosen?'decoder and true error':chosen?'decoder only':truth?'true error missed':'neither';}
+      function updateStats(){if(!data)return;const bp=data.herald_decoder.bp,bpEl=root.querySelector('#bm-bp-state'),mode=data.model.recurrence_mode;setText('#bm-bp-recurrence',mode);setText('#bm-bp-candidate',mode==='memory'?`${bp.selected_leg+1} / ${bp.legs}`:'single trajectory');setText('#bm-bp-score',fmt(bp.score));bpEl.textContent=`${bp.converged?'yes':'no'} · ${bp.iterations} iter`;bpEl.className=bp.converged?'bm-good':'bm-bad';const logical=root.querySelector('#bm-herald-logical');logical.textContent=data.herald_decoder.logical_error?'wrong':'correct';logical.className=data.herald_decoder.logical_error?'bm-bad':'bm-good';const truth=setOf(data.observation.error_edge_indices),chosen=setOf(data.herald_decoder.correction_edge_indices),changed=new Set([...truth,...chosen].filter(i=>truth.has(i)!==chosen.has(i)));root.querySelector('#bm-changed').textContent=`${changed.size} / ${data.graph.edges.length}`;root.querySelector('#bm-runtime').textContent=`${data.herald_decoder.decode_ms.toFixed(1)} ms`;for(const [id,name] of [['#bm-prior-quality','prior'],['#bm-syndrome-quality','syndrome_bp'],['#bm-herald-quality','herald_bp']]){const score=data.soft_quality[name];root.querySelector(id).textContent=`${fmt(score.log_loss)} / ${fmt(score.brier)}`;}const flow=data.staged_diagnostic.density_flow;root.querySelector('#bm-density-input').textContent=fmt(flow.input_syndrome);root.querySelector('#bm-density-soft').textContent=fmt(flow.after_soft_bp_inference);root.querySelector('#bm-density-hard').textContent=fmt(flow.after_hard_bp_predecode);root.querySelector('#bm-density-final').textContent=fmt(flow.after_mwpm_completion);}
+      function render(){if(!data)return;const graph=data.graph,fit=rotatedFit(graph),scale=markerScale(graph,fit),syndromes=view==='decoder'?data.herald_decoder.residual_syndrome_vertices:data.observation.syndrome_vertices,heralds=view==='decoder'?data.herald_decoder.unexplained_herald_vertices:data.observation.herald_vertices,syndromeLabel=view==='decoder'?'residual syndrome':'syndrome',heraldLabel=view==='decoder'?'unexplained herald':'herald',sets={errors:setOf(data.observation.error_edge_indices),syndromes:setOf(syndromes),heralds:setOf(heralds),heraldCorrection:setOf(data.herald_decoder.correction_edge_indices)};let out='<rect width="760" height="560" fill="#fff"/>';graph.edges.forEach(([a,b],i)=>{const u=fit.vertices[a],v=fit.vertices[b],s=edgeStyle(i,sets);out+=`<line x1="${u.x}" y1="${u.y}" x2="${v.x}" y2="${v.y}" stroke="${s.color}" stroke-width="${s.width}" opacity="${s.opacity}" stroke-linecap="round"><title>edge ${i}: posterior ${fmt(data.posterior.herald_aware[i])}, change ${fmt(data.posterior.herald_delta[i])}</title></line>`;});const points=fit.line.map(p=>`${p.x},${p.y}`).join(' ');out+=`<polyline points="${points}" fill="none" stroke="#fff" stroke-width="5"/><polyline points="${points}" fill="none" stroke="#0f766e" stroke-width="2" stroke-dasharray="7 6"/>`;fit.vertices.forEach((v,id)=>{if(!v.detector)return;const syndrome=sets.syndromes.has(id),herald=sets.heralds.has(id),r=Math.max(3.5,8*scale),dot=Math.max(1.5,3*scale),offset=Math.max(4,9*scale);out+=`<g><title>vertex ${id}; incident degree ${data.observation.detector_degrees[id]}; ${syndromeLabel} ${syndrome?1:0}; ${heraldLabel} ${herald?1:0}</title>${syndrome?`<circle cx="${v.x}" cy="${v.y}" r="${r}" fill="#fbbf24" stroke="#7c4a03" stroke-width="${Math.max(1,1.8*scale)}"/>`:`<circle cx="${v.x}" cy="${v.y}" r="${dot}" fill="#334155"/>`}${herald?`<path d="M ${v.x+(syndrome?offset:0)} ${v.y-(syndrome?offset:0)-r} L ${v.x+(syndrome?offset:0)+r} ${v.y-(syndrome?offset:0)} L ${v.x+(syndrome?offset:0)} ${v.y-(syndrome?offset:0)+r} L ${v.x+(syndrome?offset:0)-r} ${v.y-(syndrome?offset:0)} Z" fill="#2563eb" stroke="#172554" stroke-width="${Math.max(1,1.5*scale)}"/>`:''}</g>`;});graph.edges.forEach(([a,b],i)=>{const u=fit.vertices[a],v=fit.vertices[b];out+=`<line data-edge="${i}" x1="${u.x}" y1="${u.y}" x2="${v.x}" y2="${v.y}" stroke="transparent" stroke-width="14" pointer-events="stroke" style="cursor:pointer"/>`;});if(selectedEdge!==null&&graph.edges[selectedEdge]){const [a,b]=graph.edges[selectedEdge],u=fit.vertices[a],v=fit.vertices[b];out+=`<line x1="${u.x}" y1="${u.y}" x2="${v.x}" y2="${v.y}" stroke="#111827" stroke-width="2" stroke-dasharray="3 3" pointer-events="none"/>`;}svg.innerHTML=out;svg.querySelectorAll('[data-edge]').forEach(line=>line.addEventListener('click',()=>{selectedEdge=Number(line.dataset.edge);render();updateInspector();}));renderLegend();updateInspector();updateStats();svg.setAttribute('aria-label',`${data.model.lattice} L ${data.model.L}, ${view} view, ${sets.errors.size} true errors, ${sets.syndromes.size} ${syndromeLabel}s, ${sets.heralds.size} ${heraldLabel}s, herald decoder logical coset ${data.herald_decoder.logical_error?'wrong':'correct'}`);}
+      async function load(){syncLabels();const request=params(),key=JSON.stringify(request),current=++revision;canvas.setAttribute('aria-busy','true');errorBox.textContent='';status.textContent='Computing posterior…';try{if(!cache.has(key))cache.set(key,fetch('/api/labs/lab-002-herald-belief-matching/artifact',{method:'POST',headers:{'Content-Type':'application/json'},body:key}).then(async response=>{if(!response.ok)throw new Error((await response.json().catch(()=>({}))).detail||`Request failed (${response.status})`);return response.json();}).catch(error=>{cache.delete(key);throw error;}));const result=await cache.get(key);if(current!==revision)return;data=result;selectedEdge=null;canvas.setAttribute('aria-busy','false');status.textContent=`${result.graph.edges.length} edges · ${result.observation.herald_vertices.length} heralds`;render();}catch(error){if(current!==revision)return;canvas.setAttribute('aria-busy','false');status.textContent='Unavailable';errorBox.textContent=error.message;}}
+      function schedule(){clearTimeout(timer);timer=setTimeout(load,180);}
+      root.querySelectorAll('[data-view]').forEach(button=>button.addEventListener('click',()=>{view=button.dataset.view;root.querySelectorAll('[data-view]').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));render();}));root.querySelectorAll('[data-lattice]').forEach(button=>button.addEventListener('click',()=>{lattice=button.dataset.lattice;root.querySelectorAll('[data-lattice]').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));schedule();}));root.querySelectorAll('[data-recurrence]').forEach(button=>button.addEventListener('click',()=>{recurrenceMode=button.dataset.recurrence;root.querySelectorAll('[data-recurrence]').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));schedule();}));Object.values(controls).forEach(control=>control.addEventListener('input',schedule));root.querySelector('#bm-refresh').addEventListener('click',()=>{controls.seed.value=globalThis.crypto?.getRandomValues?globalThis.crypto.getRandomValues(new Uint32Array(1))[0]:Math.floor(Math.random()*4294967296);schedule();});load();
+    })();
+  </script>
+</div>

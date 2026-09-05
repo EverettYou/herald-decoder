@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "status": "executed; all branches verified and old adapter restriction localized",
+  "registered_at": "2026-08-29T12:39:37Z",
+  "executed_at": "2026-08-29T12:51:29Z",
+  "title": "E1 typed public-record to D4 policy translation matrix",
+  "rigor_tier": "deterministic interface validation; no performance study",
+  "parent_contract": "manifests/j1-e1-projector-instrument-matrix-manifest-2026-08-29.json",
+  "program_alignment": {
+    "central_question": "Can the source-bounded repeated D4 public record enter both validated spatial-policy modes without losing mode-available information or exposing hidden truth?",
+    "scientific_layer": "physical information structure to method interface",
+    "epistemic_role": "validation and falsification of the E1-to-policy observation translation",
+    "upstream_dependencies": [
+      "verified E1A private projector update",
+      "verified E1B typed public report channel",
+      "verified E0 two-mode public D4 policy interface"
+    ],
+    "downstream_consumers": [
+      "causal schedule integration",
+      "matched immediate/fixed-delay/JIT/offline comparison",
+      "future noisy-measurement performance study"
+    ],
+    "information_value": "The gate determines whether the localized multi-label gap is representational or requires a new public policy schema."
+  },
+  "question_and_knowledge_states": {
+    "question": "Is a multi-label E1 report losslessly factorable into the existing flux-syndrome and charge-measurement fields for the heralded policy, while syndrome-only receives exactly its declared projection?",
+    "smallest_claim": "A deterministic typed adapter can preserve every observation available to each current public mode, or identify the exact record that the schema cannot represent.",
+    "established_external_knowledge": [
+      "Jing 2026 represents species-resolved spacetime measurement errors separately.",
+      "The E1 source-bounded model represents false negatives and false positives as independent species-membership reports after the hidden update."
+    ],
+    "current_project_evidence": [
+      "E1B retains simultaneous m_flux and e_charge reports rather than coercing them.",
+      "D4SpatialCommitRequestV1 already carries separate flux_syndrome_vertices and initial_charge_measurements fields.",
+      "The syndrome_only mode forbids charge measurements; the heralded mode consumes explicit measured 0/1 charge outcomes."
+    ],
+    "modeling_assumption": "Within E1B only, a reported label set is a pair of observed membership bits, not a mutually exclusive inferred true label. Translation therefore preserves reported membership and does not infer latent truth.",
+    "competing_outcomes": [
+      "The existing two-field request represents multi-label E1 reports losslessly in heralded mode and by declared projection in syndrome_only mode.",
+      "The existing request cannot preserve a registered report or provenance invariant, requiring a versioned policy schema extension.",
+      "The apparent gap is caused by an implementation restriction only; the negative-control rejecting adapter disagrees with the representable manual request."
+    ]
+  },
+  "translation_model": {
+    "input": "PublicReportedRecordV1 plus a scheduler-owned causal-prefix digest",
+    "flux_projection": "a site enters flux_syndrome_vertices iff m_flux is in its reported label set",
+    "charge_projection_heralded": "every projected site supplies an explicit charge outcome equal to one iff e_charge is in its reported label set",
+    "charge_projection_syndrome_only": "charge measurements are withheld exactly as required by the declared lower-information mode",
+    "multi_label_semantics": "a site reporting both labels appears in the flux set and has charge outcome one; no latent-label choice is made",
+    "provenance_binding": "the request causal-prefix digest is a canonical digest over the scheduler prefix digest, E1 report digest, mode, and schema version",
+    "forbidden_inputs": ["true labels", "hidden state-update digest", "physical fault", "future record", "seed", "logical outcome"],
+    "resolution_limit": "This validates representability and mode-specific information flow, not statistical optimality, channel calibration, decoder performance, or fault tolerance."
+  },
+  "fork_classification": {
+    "T1A_syndrome_only_projection": "independent deterministic public-mode branch",
+    "T1B_heralded_factorization": "independent deterministic public-mode branch",
+    "T1C_rejecting_adapter_negative_control": "independent reversible falsification check against the current restriction",
+    "schema_extension": "dependent fallback only if T1A or T1B cannot preserve the registered fields/invariants",
+    "performance_sampling": "blocked until this translation gate passes"
+  },
+  "matrix": [
+    {
+      "id": "T1A-syndrome-only-projection",
+      "fixtures": ["perfect singleton/empty record", "simultaneous flux-plus-charge report", "charge-only perturbation"],
+      "acceptance": [
+        "flux membership maps exactly to the committed even syndrome",
+        "no charge measurement enters syndrome_only",
+        "charge-only changes leave syndrome-only decoded fields and action invariant while public provenance changes",
+        "perfect singleton/empty records reproduce the prior restricted adapter",
+        "the translated public request contains no forbidden truth field"
+      ]
+    },
+    {
+      "id": "T1B-heralded-lossless-factorization",
+      "fixtures": ["perfect singleton/empty record", "simultaneous flux-plus-charge report", "explicit vacuum and charge-only sites"],
+      "acceptance": [
+        "flux membership maps exactly to flux_syndrome_vertices",
+        "charge membership maps exactly to explicit measured 0/1 outcomes on every projected site",
+        "a multi-label site is represented in both fields without conflict",
+        "the translated request and public action equal a manually constructed request with the same visible bits",
+        "perfect singleton/empty records reproduce the prior restricted adapter action"
+      ]
+    },
+    {
+      "id": "T1C-provenance-and-negative-control",
+      "fixtures": ["deterministic replay", "changed scheduler prefix", "changed E1 report", "old rejecting adapter on a representable multi-label record"],
+      "acceptance": [
+        "identical inputs reproduce request and action digests",
+        "changing either public provenance input changes the combined causal digest",
+        "private E1 state is absent from translated serialization and callable signature",
+        "if T1B passes, the old multi-label rejection is classified as an implementation restriction rather than a schema impossibility"
+      ]
+    }
+  ],
+  "implementation_contract": {
+    "planned_module_change": "scripts/d4_projector_instrument.py",
+    "planned_fixture_change": "scripts/test_d4_projector_instrument.py",
+    "planned_results": [
+      "manifests/j1-e1-typed-policy-translation-2026-08-29.json",
+      "results/j1-e1-typed-policy-translation-2026-08-29.md"
+    ],
+    "source_hashes": {
+      "d4_projector_instrument.py": "7601ac3257f65eb60fc161bf9260c481a995a6c93a15a231e24e91f67ca84262",
+      "d4_spatial_policy.py": "ad271b7836043dfac696afaa4ea6090e2ec94180e19ff864f7dbd1f54a8654f4",
+      "test_d4_projector_instrument.py": "e6dc5a04ecb427e3c95cd41a03390fa8e2881f0b1044825383b2f2d5b1b49216"
+    },
+    "execution_hashes": {
+      "d4_projector_instrument.py": "83b7d65d99542dde08638d45393f2f81528f036729aa95d1ad83ad6781561ee1",
+      "test_d4_projector_instrument.py": "30a337e33846d758e51bd380211f48f7bcd33376bdd230553a27362a7635d245"
+    }
+  },
+  "budget": {
+    "lattice": "existing paper L=2 interface fixtures only",
+    "rounds": "one translated committed round",
+    "compute": "under five CPU minutes and 1 GiB",
+    "sampling": "deterministic fixtures only; no Monte Carlo"
+  },
+  "analysis_and_stop_rules": {
+    "success": "T1A and T1B pass through their actual public policy modes, and T1C proves deterministic truth-free provenance binding.",
+    "localized_negative": "If only one mode fails, preserve the passing mode and localize the missing field or invariant.",
+    "schema_fallback": "Register a minimal versioned request extension only if a concrete typed record cannot be represented by the existing two fields.",
+    "stop": "Do not add decoder heuristics, latent-label inference, stochastic sampling, larger lattices, or schedule logic to repair an interface failure.",
+    "escalation": "Ask the researcher only if a schema extension would change the accepted information budget or physical interpretation.",
+    "prohibited_claims": ["optimal translation", "performance advantage", "logical-error rate", "threshold", "fault tolerance"]
+  },
+  "acceptance_items": [
+    {"item": "research-workflow registration", "status": "complete", "evidence": "manifests/j1-e1-typed-policy-translation-manifest-2026-08-29.json"},
+    {"item": "T1A/T1B typed adapter implementation", "status": "complete", "evidence": "scripts/d4_projector_instrument.py"},
+    {"item": "all public-mode and negative-control fixtures", "status": "complete", "evidence": "6 translation cases; 20 focused and 106 full-Lab tests pass"},
+    {"item": "machine-readable analysis and report", "status": "complete", "evidence": "manifests/j1-e1-typed-policy-translation-2026-08-29.json"},
+    {"item": "parent E1 translation gate decision", "status": "complete", "evidence": "existing schema adequate; old adapter restriction localized"}
+  ],
+  "execution_result": {
+    "T1A": "pass",
+    "T1B": "pass",
+    "T1C": "pass",
+    "schema_extension_required": false,
+    "gap_classification": "old adapter implementation restriction",
+    "verification": "6 translation cases; 20 focused and all 106 Lab 005 tests pass",
+    "performance_samples": 0
+  },
+  "next_gate": "Completed by the corrected J2 R1-I3 integration at manifests/j2-e1-causal-integration-remediation-2026-08-29.json; any new performance study requires a separately registered workflow."
+}

@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "status": "complete F0-F2 primitive-size-2 factorization matrix verified; paper-L=2 wording remediated; constructive and scale validation pending; no performance sampling",
+  "registered_at": "2026-08-29T15:33:00Z",
+  "title": "R6A public D4 likelihood factorization gate for belief matching",
+  "rigor_tier": "exploratory method-validation audit; no decoder comparison",
+  "program_alignment": {
+    "central_question": "Can physically available D4 fusion information support a scalable decoder without changing the observation channel or leaking simulation truth?",
+    "scientific_layer": "WP2/WP3 scalable decoding under the validated D4 record",
+    "epistemic_role": "interface validation and falsification",
+    "upstream_dependencies": [
+      "validated Lab 004 paper-normalized D4 observation likelihood and support",
+      "R4.2 complete primitive-size-2 distinct-observation oracle",
+      "R4.4/R4.5c exact action-loss and sequential-policy evidence",
+      "frozen Lab 002 posterior-LLR belief-matching backend"
+    ],
+    "downstream_consumers": [
+      "R6 scalable D4 belief-matching adapter",
+      "matched public-MWPM versus belief-matching comparison",
+      "future Lab 005 inner-decoder comparison after its physical model is resolved"
+    ],
+    "information_value": "A decoder benchmark is uninterpretable until the D4 public record has a declared factor-graph likelihood. The exact 8-vertex, 12-edge primitive control can falsify an incorrect local adapter without new Monte Carlo cost, but cannot validate paper-normalized scale behavior."
+  },
+  "question_and_knowledge_states": {
+    "question": "Does the validated first-stage public D4 observation likelihood admit a truth-free factor-graph representation whose weights agree exactly with the existing oracle on the complete primitive-size-2 support?",
+    "smallest_claim": "The audit may establish or reject exact finite-support factor-graph expressibility for the registered representations; it cannot establish BP accuracy, scalability, or logical performance.",
+    "established_external_knowledge": [
+      "Jing et al. Appendix A defines the D4 observation support and conditional likelihood through flux boundary, degree-two charge measurements, and independent parity constraints.",
+      "Belief matching requires an explicit factorized likelihood over latent error variables before BP marginals can be interpreted as approximating a declared posterior.",
+      "The published D4 [2] practical decoder is herald-weighted PyMatching, not belief propagation or ILP."
+    ],
+    "current_project_evidence": [
+      "R4.2 enumerates all 4096 physical masks, 16230 distinct nonwinding public observations, and 49855 compatible observation-error pairs with exact normalization.",
+      "Lab 002's current vertex likelihood is specific to a binary degree-threshold herald and is not a D4 likelihood adapter.",
+      "R5a validates the published public D4 policies as finite-size baselines but does not define a belief factor graph."
+    ],
+    "assumptions_and_constraints": [
+      "latent variables are the twelve binary edge indicators of the primitive periodic size-2 fixture; this is not paper-normalized L=2",
+      "public inputs are only the flux syndrome and typed charge outcomes",
+      "physical error, component decomposition, fusion history, logical sector, and simulator relation metadata are forbidden decoder inputs",
+      "the Bernoulli edge prior uses the same p values as R4.2: 0.1, 0.3, 0.5, and 0.6"
+    ],
+    "competing_outcomes": [
+      "Local degree/support and explicit parity factors reproduce every oracle likelihood exactly.",
+      "Local support is insufficient but a public auxiliary-variable parity construction is exact.",
+      "No registered bounded factorization is exact; any scalable D4 belief-matching adapter must be labelled a variational approximation or use a richer representation."
+    ],
+    "negative_and_censored_outcomes": "Any positive oracle weight assigned zero by a candidate, any forbidden chain assigned positive weight, or any normalized posterior discrepancy rejects that branch. Resource overflow censors implementation rather than supporting non-factorizability."
+  },
+  "research_basis": {
+    "wiki": [
+      "wiki/thesis.md",
+      "wiki/questions/program-level-scientific-roadmap.md",
+      "wiki/methods/herald-aware-belief-matching.md",
+      "wiki/methods/fault-tolerant-anyonic-decoding.md"
+    ],
+    "primary_source": {
+      "path": "references/jing2025-intrinsic-heralding/paper.pdf",
+      "location": "Appendix A and D4 [2] decoder discussion",
+      "effect": "fixes the observation support and likelihood while prohibiting the project's phenomenological binary-herald factor from being treated as source-equivalent"
+    },
+    "prior_lab_evidence": [
+      "results/r1-periodic-constraint-generator-audit.json",
+      "results/r4-distinct-observation-matrix-audit.json",
+      "results/r4-first-stage-loss-bridge-audit.json",
+      "results/r5a-paper-lattice-public-decoder-analysis.json"
+    ],
+    "remaining_gap": "No public observation-only D4 factor graph has been shown to reproduce the exact conditional likelihood consumed by the validated oracle."
+  },
+  "scientific_model": {
+    "physical_system": "primitive periodic D4 size-2 honeycomb fixture with 8 vertices and 12 binary red-X error edges; paper-normalized L=2 instead has 24 vertices and 36 edges",
+    "operational_observation": "public flux syndrome plus per-vertex vacuum/e-charge/unmeasured record",
+    "hidden_information": "physical error, connected components, pairing or fusion history, logical sector, and truth-derived post-flux relations",
+    "target_weight": "P(E;p) P(O2|E) for each public observation and candidate physical error",
+    "exact_control": "the frozen R4.2 distinct-observation likelihood and posterior enumeration",
+    "invariants": [
+      "zero support agrees exactly with the oracle",
+      "positive conditional likelihood agrees to absolute tolerance 1e-14",
+      "posterior weights normalize for p in {0.1,0.3,0.5,0.6}",
+      "marginalized O2 evidence agrees with the corresponding O0 evidence",
+      "public factor serialization contains no forbidden hidden fields"
+    ],
+    "resolution_limit": "Exact primitive-size-2 expressibility does not establish the same representation on the paper-normalized L=2 supercell, BP accuracy, or acceptable scaling of factor arity and runtime."
+  },
+  "fork_classification": {
+    "exact_oracle_control": "common prerequisite",
+    "local_support_only": "independent reversible negative/ablation branch",
+    "support_plus_public_parity_auxiliaries": "independent reversible exact-candidate branch",
+    "current_binary_degree_threshold_adapter": "structural negative control only; it changes the observation semantics and is not a candidate",
+    "performance_sampling": "blocked"
+  },
+  "matrix": [
+    {
+      "id": "F0-exact-oracle",
+      "role": "control",
+      "acceptance": "replay the frozen R4.2 complete support, likelihood, and posterior normalization with identical digest"
+    },
+    {
+      "id": "F1-local-support",
+      "role": "ablation",
+      "acceptance": "encode flux-boundary and degree-two charge-measurement support using only public fixed local factors; report every mismatch rather than tuning after inspection"
+    },
+    {
+      "id": "F2-support-plus-parity",
+      "role": "candidate",
+      "acceptance": "add explicit public auxiliary parity factors derived from the fixed lattice and observation, then require exact equality on all 49855 compatible pairs and rejection of incompatible pairs"
+    }
+  ],
+  "registered_methods": {
+    "design": "complete deterministic primitive-size-2 enumeration over all 12-edge physical masks and distinct public O2 observations for F0-F2",
+    "inputs": "frozen R4.2 enumeration and source-hashed D4 likelihood plus Lab 002 BP interface",
+    "verification": "unit fixtures for vacuum, open string, branched component, trivial loop, winding terminal, parity violation, and hidden-field rejection before the complete matrix",
+    "analysis": "classify each factorization as exact, support-only, mismatched, or resource-censored; identify the smallest exact public representation if one exists",
+    "budget": "under ten CPU minutes and 2 GiB; deterministic enumeration only; zero Monte Carlo samples",
+    "stop": "do not implement BP recurrence, produce logical corrections, time scalability, or run R6 performance if no exact/public candidate passes",
+    "escalation": "no human ranking is needed: all three registered branches are cheap and discriminating; consult only if every exact candidate fails and adopting an approximate likelihood would change the scientific interpretation"
+  },
+  "implementation_contract": {
+    "planned_module": "scripts/d4_belief_factorization.py",
+    "planned_test_module": "scripts/test_d4_belief_factorization.py",
+    "planned_runner": "scripts/run_r6a_d4_belief_factorization.py",
+    "planned_results": [
+      "results/r6a-d4-belief-factorization-audit.json",
+      "results/r6a-d4-belief-factorization-audit.md"
+    ],
+    "source_hashes": {
+      "d4_observation.py": "1d293d688ca8c551c1e9b428c8e6be53b2adb1dc7e296702add04a2bf010a32d",
+      "d4_sampler.py": "6294b71a20a372526ae0d812b62d3f9aced2ced724709297b6900e54a72b26a1",
+      "src/herald_decoder/herald_bp_decoder.py": "990af03ac4c99684e9e9dac6e5a8bb64d773015879c1638906f5fb592cdc6a43",
+      "src/herald_decoder/numba_bp_kernels.py": "c2254c95600c4f5e3a8c2279d5686a99c8d3810a4bb0c814a4fd0cbf16c184cc",
+      "r4-distinct-observation-matrix-audit.json": "f8087db5044474ea6d7768c4a059a065508752c31a0d7e1b2ec49b51c42a9824"
+    }
+  },
+  "acceptance_items": [
+    {
+      "item": "research-workflow registration",
+      "status": "complete",
+      "evidence": "r6a-d4-belief-factorization-manifest-2026-08-29.json; results/r6a-d4-belief-factorization-registration-2026-08-29.md"
+    },
+    {
+      "item": "public factorization implementation and exact fixtures",
+      "status": "verified",
+      "evidence": "scripts/d4_belief_factorization.py; scripts/test_d4_belief_factorization.py; results/r6a-d4-belief-factorization-fixture-2026-08-29.json; results/r6a-d4-belief-factorization-fixture-2026-08-29.md; 7/7 focused and 137/137 full-Lab tests pass"
+    },
+    {
+      "item": "complete F0-F2 exact enumeration matrix",
+      "status": "verified",
+      "evidence": "scripts/run_r6a_d4_belief_factorization.py; results/r6a-d4-belief-factorization-audit.json; results/r6a-d4-belief-factorization-audit.md; on the primitive 8-vertex/12-edge fixture F0 digest replay passes, F1 has 64/49855 weight mismatches, F2 has 0/49855 likelihood mismatches, and fixed-scope consistency passes on all 16230 supported public observations; 7/7 focused and 137/137 full-Lab tests pass"
+    },
+    {
+      "item": "primitive-versus-paper topology claim remediation",
+      "status": "verified",
+      "evidence": "The runner now asserts and serializes primitive size=2, 8 vertices, 12 edges, paper_normalized=false; registration, fixtures, matrix report, PLAN, REPORT, Wiki, Lab metadata, and index explicitly withdraw paper-L=2 wording. Replacement audit JSON/Markdown regenerated; JSON validation, Wiki lint, 7/7 focused tests, and 16/16 dashboard knowledge/document tests pass."
+    },
+    {
+      "item": "bounded analysis and report",
+      "status": "pending",
+      "evidence": null
+    },
+    {
+      "item": "downstream R6 release decision",
+      "status": "pending",
+      "evidence": null
+    }
+  ],
+  "claim_boundary": {
+    "allowed": "exact or rejected finite-support public factor-graph representation of the validated primitive-size-2 D4 likelihood",
+    "prohibited": [
+      "BP accuracy or convergence",
+      "logical-error rate",
+      "decoder advantage",
+      "scalability",
+      "threshold",
+      "fault tolerance"
+    ]
+  },
+  "next_gate": "Derive a public fixed-lattice parity-scope construction and validate it on bounded paper-normalized geometry without exhaustive 2^36 enumeration. Do not release BP or performance sampling from the primitive-size-2 result alone."
+}

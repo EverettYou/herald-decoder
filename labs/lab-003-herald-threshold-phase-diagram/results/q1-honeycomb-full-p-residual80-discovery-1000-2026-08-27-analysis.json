@@ -1,0 +1,742 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-27T21:33:04.859795+00:00",
+  "source_artifact": "labs/lab-003-herald-threshold-phase-diagram/results/q1-honeycomb-full-p-residual80-discovery-1000-2026-08-27.json",
+  "source_config_sha256": "bb70590797798feb117a48fc7a900bb2fe7a0c42da9a47316a59a08f3547d0bf",
+  "lattice": "honeycomb",
+  "q": 1.0,
+  "decoder": {
+    "name": "HeraldAwareBpMatchingDecoder",
+    "recurrence_mode": "damping",
+    "damping": 0.25,
+    "max_iterations": 80,
+    "update_schedule": "residual_priority",
+    "residual_priority_order": "stable_sort",
+    "residual_priority_buffer_reuse": false,
+    "residual_priority_cached_products": false,
+    "matching_projection": "posterior_llr",
+    "p_m": 0.0,
+    "p_h": 0.0,
+    "use_numba": true
+  },
+  "sizes": [
+    5,
+    7,
+    9,
+    11
+  ],
+  "shots_per_cell": 1000,
+  "source_raw_sha256": "6e899618c650f9d7c3edde3054e2d2af93d52278c9ec136a6ba64a48c3b6aeab",
+  "endpoint_source_artifact": "labs/lab-003-herald-threshold-phase-diagram/results/q1-honeycomb-full-p-endpoints-1000-2026-08-27.json",
+  "endpoint_rows": [
+    {
+      "lattice": "honeycomb",
+      "L": 5,
+      "p": 0.0,
+      "q": 1.0,
+      "shots": 1000,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.0
+      ],
+      "decoder": "deterministic_known_configuration_endpoint",
+      "syndrome_fidelity_rate": 1.0,
+      "interpretation": "exact deterministic endpoint; not BP"
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 5,
+      "p": 1.0,
+      "q": 1.0,
+      "shots": 1000,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.0
+      ],
+      "decoder": "deterministic_known_configuration_endpoint",
+      "syndrome_fidelity_rate": 1.0,
+      "interpretation": "exact deterministic endpoint; not BP"
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 7,
+      "p": 0.0,
+      "q": 1.0,
+      "shots": 1000,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.0
+      ],
+      "decoder": "deterministic_known_configuration_endpoint",
+      "syndrome_fidelity_rate": 1.0,
+      "interpretation": "exact deterministic endpoint; not BP"
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 7,
+      "p": 1.0,
+      "q": 1.0,
+      "shots": 1000,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.0
+      ],
+      "decoder": "deterministic_known_configuration_endpoint",
+      "syndrome_fidelity_rate": 1.0,
+      "interpretation": "exact deterministic endpoint; not BP"
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 9,
+      "p": 0.0,
+      "q": 1.0,
+      "shots": 1000,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.0
+      ],
+      "decoder": "deterministic_known_configuration_endpoint",
+      "syndrome_fidelity_rate": 1.0,
+      "interpretation": "exact deterministic endpoint; not BP"
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 9,
+      "p": 1.0,
+      "q": 1.0,
+      "shots": 1000,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.0
+      ],
+      "decoder": "deterministic_known_configuration_endpoint",
+      "syndrome_fidelity_rate": 1.0,
+      "interpretation": "exact deterministic endpoint; not BP"
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 11,
+      "p": 0.0,
+      "q": 1.0,
+      "shots": 1000,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.0
+      ],
+      "decoder": "deterministic_known_configuration_endpoint",
+      "syndrome_fidelity_rate": 1.0,
+      "interpretation": "exact deterministic endpoint; not BP"
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 11,
+      "p": 1.0,
+      "q": 1.0,
+      "shots": 1000,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.0
+      ],
+      "decoder": "deterministic_known_configuration_endpoint",
+      "syndrome_fidelity_rate": 1.0,
+      "interpretation": "exact deterministic endpoint; not BP"
+    }
+  ],
+  "syndrome_fidelity": {
+    "checked_corrections": 84000,
+    "faithful_corrections": 84000,
+    "failures": 0,
+    "all_faithful": true,
+    "enforcement": "raise before raw-row write and atomic shard finalization"
+  },
+  "adjacent_crossings": [
+    {
+      "sizes": [
+        5,
+        7
+      ],
+      "status": "not_bracketed",
+      "estimate": null,
+      "observed_trend": "nonmonotone_or_unresolved",
+      "seed_cluster_bootstrap": {
+        "replicates": 10000,
+        "seed": 531999,
+        "cluster_policy": "resample seed trajectories independently within each size and preserve all p values in a selected trajectory",
+        "larger_size_lower_at_every_p_fraction": 0.0,
+        "larger_size_higher_at_every_p_fraction": 0.0,
+        "one_or_more_directed_crossings_fraction": 0.0,
+        "directed_crossing_estimate_interval95": null,
+        "delta_LER_smaller_minus_larger": [
+          {
+            "p": 0.01,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "probability_larger_size_lower_LER": 0.0
+          },
+          {
+            "p": 0.05,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "probability_larger_size_lower_LER": 0.0
+          },
+          {
+            "p": 0.1,
+            "interval95": [
+              -0.003,
+              0.0
+            ],
+            "probability_larger_size_lower_LER": 0.0
+          },
+          {
+            "p": 0.15,
+            "interval95": [
+              -0.002,
+              0.002
+            ],
+            "probability_larger_size_lower_LER": 0.3358
+          },
+          {
+            "p": 0.2,
+            "interval95": [
+              0.003,
+              0.016
+            ],
+            "probability_larger_size_lower_LER": 0.997
+          },
+          {
+            "p": 0.25,
+            "interval95": [
+              0.015,
+              0.029
+            ],
+            "probability_larger_size_lower_LER": 1.0
+          },
+          {
+            "p": 0.3,
+            "interval95": [
+              0.023,
+              0.042
+            ],
+            "probability_larger_size_lower_LER": 1.0
+          },
+          {
+            "p": 0.35,
+            "interval95": [
+              0.025,
+              0.052000000000000005
+            ],
+            "probability_larger_size_lower_LER": 1.0
+          },
+          {
+            "p": 0.4,
+            "interval95": [
+              0.039999999999999994,
+              0.07899999999999999
+            ],
+            "probability_larger_size_lower_LER": 1.0
+          },
+          {
+            "p": 0.45,
+            "interval95": [
+              0.049999999999999996,
+              0.083
+            ],
+            "probability_larger_size_lower_LER": 1.0
+          },
+          {
+            "p": 0.5,
+            "interval95": [
+              0.039999999999999994,
+              0.087
+            ],
+            "probability_larger_size_lower_LER": 1.0
+          },
+          {
+            "p": 0.55,
+            "interval95": [
+              0.046000000000000006,
+              0.09
+            ],
+            "probability_larger_size_lower_LER": 1.0
+          },
+          {
+            "p": 0.6,
+            "interval95": [
+              0.033,
+              0.066
+            ],
+            "probability_larger_size_lower_LER": 1.0
+          },
+          {
+            "p": 0.65,
+            "interval95": [
+              0.020000000000000004,
+              0.05099999999999999
+            ],
+            "probability_larger_size_lower_LER": 1.0
+          },
+          {
+            "p": 0.7,
+            "interval95": [
+              0.028999999999999998,
+              0.045
+            ],
+            "probability_larger_size_lower_LER": 1.0
+          },
+          {
+            "p": 0.75,
+            "interval95": [
+              0.017,
+              0.024999999999999998
+            ],
+            "probability_larger_size_lower_LER": 1.0
+          },
+          {
+            "p": 0.8,
+            "interval95": [
+              0.006,
+              0.018
+            ],
+            "probability_larger_size_lower_LER": 1.0
+          },
+          {
+            "p": 0.85,
+            "interval95": [
+              0.0,
+              0.007
+            ],
+            "probability_larger_size_lower_LER": 0.9232
+          },
+          {
+            "p": 0.9,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "probability_larger_size_lower_LER": 0.0
+          },
+          {
+            "p": 0.95,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "probability_larger_size_lower_LER": 0.0
+          },
+          {
+            "p": 0.99,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "probability_larger_size_lower_LER": 0.0
+          }
+        ]
+      }
+    },
+    {
+      "sizes": [
+        7,
+        9
+      ],
+      "status": "not_bracketed",
+      "estimate": null,
+      "observed_trend": "nonmonotone_or_unresolved",
+      "seed_cluster_bootstrap": {
+        "replicates": 10000,
+        "seed": 532000,
+        "cluster_policy": "resample seed trajectories independently within each size and preserve all p values in a selected trajectory",
+        "larger_size_lower_at_every_p_fraction": 0.0,
+        "larger_size_higher_at_every_p_fraction": 0.0,
+        "one_or_more_directed_crossings_fraction": 0.1349,
+        "directed_crossing_estimate_interval95": [
+          0.16666666666666666,
+          0.3837499999999999
+        ],
+        "delta_LER_smaller_minus_larger": [
+          {
+            "p": 0.01,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "probability_larger_size_lower_LER": 0.0
+          },
+          {
+            "p": 0.05,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "probability_larger_size_lower_LER": 0.0
+          },
+          {
+            "p": 0.1,
+            "interval95": [
+              0.0,
+              0.003
+            ],
+            "probability_larger_size_lower_LER": 0.6749
+          },
+          {
+            "p": 0.15,
+            "interval95": [
+              0.0,
+              0.003
+            ],
+            "probability_larger_size_lower_LER": 0.6749
+          },
+          {
+            "p": 0.2,
+            "interval95": [
+              -0.002,
+              0.002
+            ],
+            "probability_larger_size_lower_LER": 0.3432
+          },
+          {
+            "p": 0.25,
+            "interval95": [
+              -0.002,
+              0.005
+            ],
+            "probability_larger_size_lower_LER": 0.5654
+          },
+          {
+            "p": 0.3,
+            "interval95": [
+              0.0,
+              0.014
+            ],
+            "probability_larger_size_lower_LER": 0.9749
+          },
+          {
+            "p": 0.35,
+            "interval95": [
+              0.002,
+              0.024
+            ],
+            "probability_larger_size_lower_LER": 0.9899
+          },
+          {
+            "p": 0.4,
+            "interval95": [
+              0.0019999999999999983,
+              0.024999999999999998
+            ],
+            "probability_larger_size_lower_LER": 0.9912
+          },
+          {
+            "p": 0.45,
+            "interval95": [
+              0.012,
+              0.03
+            ],
+            "probability_larger_size_lower_LER": 1.0
+          },
+          {
+            "p": 0.5,
+            "interval95": [
+              0.011000000000000003,
+              0.024999999999999998
+            ],
+            "probability_larger_size_lower_LER": 1.0
+          },
+          {
+            "p": 0.55,
+            "interval95": [
+              0.006000000000000002,
+              0.032
+            ],
+            "probability_larger_size_lower_LER": 0.9984
+          },
+          {
+            "p": 0.6,
+            "interval95": [
+              0.006999999999999999,
+              0.023
+            ],
+            "probability_larger_size_lower_LER": 0.9998
+          },
+          {
+            "p": 0.65,
+            "interval95": [
+              0.006,
+              0.024999999999999998
+            ],
+            "probability_larger_size_lower_LER": 0.9996
+          },
+          {
+            "p": 0.7,
+            "interval95": [
+              0.002,
+              0.012
+            ],
+            "probability_larger_size_lower_LER": 0.9901
+          },
+          {
+            "p": 0.75,
+            "interval95": [
+              0.003,
+              0.007
+            ],
+            "probability_larger_size_lower_LER": 0.9999
+          },
+          {
+            "p": 0.8,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "probability_larger_size_lower_LER": 0.0
+          },
+          {
+            "p": 0.85,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "probability_larger_size_lower_LER": 0.0
+          },
+          {
+            "p": 0.9,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "probability_larger_size_lower_LER": 0.0
+          },
+          {
+            "p": 0.95,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "probability_larger_size_lower_LER": 0.0
+          },
+          {
+            "p": 0.99,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "probability_larger_size_lower_LER": 0.0
+          }
+        ]
+      }
+    },
+    {
+      "sizes": [
+        9,
+        11
+      ],
+      "status": "not_bracketed",
+      "estimate": null,
+      "observed_trend": "nonmonotone_or_unresolved",
+      "seed_cluster_bootstrap": {
+        "replicates": 10000,
+        "seed": 532001,
+        "cluster_policy": "resample seed trajectories independently within each size and preserve all p values in a selected trajectory",
+        "larger_size_lower_at_every_p_fraction": 0.0,
+        "larger_size_higher_at_every_p_fraction": 0.0,
+        "one_or_more_directed_crossings_fraction": 0.2362,
+        "directed_crossing_estimate_interval95": [
+          0.27,
+          0.5464285714285715
+        ],
+        "delta_LER_smaller_minus_larger": [
+          {
+            "p": 0.01,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "probability_larger_size_lower_LER": 0.0
+          },
+          {
+            "p": 0.05,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "probability_larger_size_lower_LER": 0.0
+          },
+          {
+            "p": 0.1,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "probability_larger_size_lower_LER": 0.0
+          },
+          {
+            "p": 0.15,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "probability_larger_size_lower_LER": 0.0
+          },
+          {
+            "p": 0.2,
+            "interval95": [
+              0.0,
+              0.003
+            ],
+            "probability_larger_size_lower_LER": 0.6791
+          },
+          {
+            "p": 0.25,
+            "interval95": [
+              0.0,
+              0.003
+            ],
+            "probability_larger_size_lower_LER": 0.6791
+          },
+          {
+            "p": 0.3,
+            "interval95": [
+              -0.001,
+              0.008
+            ],
+            "probability_larger_size_lower_LER": 0.8598
+          },
+          {
+            "p": 0.35,
+            "interval95": [
+              -0.002,
+              0.009999999999999998
+            ],
+            "probability_larger_size_lower_LER": 0.8791
+          },
+          {
+            "p": 0.4,
+            "interval95": [
+              0.001,
+              0.014000000000000002
+            ],
+            "probability_larger_size_lower_LER": 0.9798
+          },
+          {
+            "p": 0.45,
+            "interval95": [
+              0.0010000000000000009,
+              0.018000000000000002
+            ],
+            "probability_larger_size_lower_LER": 0.9848
+          },
+          {
+            "p": 0.5,
+            "interval95": [
+              0.003000000000000001,
+              0.016999999999999998
+            ],
+            "probability_larger_size_lower_LER": 0.9968
+          },
+          {
+            "p": 0.55,
+            "interval95": [
+              -0.006,
+              0.018
+            ],
+            "probability_larger_size_lower_LER": 0.7647
+          },
+          {
+            "p": 0.6,
+            "interval95": [
+              0.001,
+              0.017
+            ],
+            "probability_larger_size_lower_LER": 0.9839
+          },
+          {
+            "p": 0.65,
+            "interval95": [
+              0.002,
+              0.012
+            ],
+            "probability_larger_size_lower_LER": 0.9901
+          },
+          {
+            "p": 0.7,
+            "interval95": [
+              0.002,
+              0.005
+            ],
+            "probability_larger_size_lower_LER": 0.9998
+          },
+          {
+            "p": 0.75,
+            "interval95": [
+              0.0,
+              0.003
+            ],
+            "probability_larger_size_lower_LER": 0.6707
+          },
+          {
+            "p": 0.8,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "probability_larger_size_lower_LER": 0.0
+          },
+          {
+            "p": 0.85,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "probability_larger_size_lower_LER": 0.0
+          },
+          {
+            "p": 0.9,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "probability_larger_size_lower_LER": 0.0
+          },
+          {
+            "p": 0.95,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "probability_larger_size_lower_LER": 0.0
+          },
+          {
+            "p": 0.99,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "probability_larger_size_lower_LER": 0.0
+          }
+        ]
+      }
+    }
+  ],
+  "finite_size_interpretation": "no_directed_crossing_bracketed",
+  "threshold_statement": "This is a decoder-specific finite-size crossing diagnostic. It is not an asymptotic threshold estimate; N0 showed residual BP nonconvergence at large sizes."
+}

@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "status": "complete; corrected deterministic causal integration released",
+  "registered_at": "2026-08-29T13:02:05Z",
+  "title": "J2 causal callback remediation and typed E1 schedule integration matrix",
+  "rigor_tier": "deterministic correctness remediation and interface validation; no performance study",
+  "program_alignment": {
+    "central_question": "Can each schedule invoke the verified typed E1 D4 policy using only observations causally available at its decision time while all branches share one physical trace?",
+    "scientific_layer": "fault-tolerance method interface",
+    "epistemic_role": "correctness remediation, validation, and falsification",
+    "upstream_dependencies": [
+      "verified E1 typed public-record translation",
+      "existing four-branch matched-history harness",
+      "verified D4 public stage-1 policy"
+    ],
+    "downstream_consumers": [
+      "post-action charge integration",
+      "matched noisy schedule comparison",
+      "future fault-tolerance analysis"
+    ],
+    "information_value": "The matrix removes a demonstrated future-sensitive callback digest before connecting physical observations or producing downstream samples."
+  },
+  "defect_and_knowledge_states": {
+    "defect": "Causal InnerDecoderRequest objects contain a digest of the complete visible history, including future rows, and their request/response digests depend on it.",
+    "minimal_counterfactual": "Two histories identical through immediate invocation have identical prefix digests but different immediate request digests when only later rows change.",
+    "evidence": "results/j2-causal-request-future-digest-audit-2026-08-29.json",
+    "affected_prior_evidence": "J2 causal request/response isolation is invalidated; no stochastic or performance data consumed it.",
+    "unaffected_prior_evidence": [
+      "branch timing on the original fixture",
+      "immutable shared-history storage",
+      "explicitly noncausal offline branch",
+      "truth-field exclusion"
+    ],
+    "smallest_supportable_claim": "After remediation, causal callback outputs are invariant to every future-only record change, and verified typed E1 records can drive both public modes at each branch's invocation horizon.",
+    "competing_outcomes": [
+      "Removing full-history identity from the callback restores causal invariance and integration passes.",
+      "Another request field or integration side channel remains future-sensitive and the causal branch stays invalid.",
+      "Causality is repaired but a round-local E1 record or D4 policy invariant fails, localizing integration rather than schedule timing."
+    ]
+  },
+  "model": {
+    "shared_trace": "one immutable SpacetimeRecord whose syndrome_readout and herald_readout arrays are the sole public source for both scheduling and round-local E1 reports",
+    "round_local_e1_record": "at invocation round t, m_flux membership equals syndrome_readout[t] and e_charge membership equals herald_readout[t] at each D4 site",
+    "hidden_information": "syndrome/herald truth decompositions, readout-fault masks, physical faults, future rows for causal branches, and logical outcomes",
+    "causal_callback": "contains the causal prefix and prefix digest but no full-history digest; full-history identity remains outside the decoder callback in branch/run provenance",
+    "offline_callback": "receives the final causal prefix and remains explicitly noncausal; a full-history digest is unnecessary because the final prefix digest already binds its visible record",
+    "policy_translation": "typed_record_to_commit_request binds the callback prefix digest and round-local E1 report digest before invoking syndrome_only or heralded",
+    "resolution_limit": "The study validates causal information flow and stage-1 policy invocation only, not post-action charge recovery, schedule advantage, or fault tolerance."
+  },
+  "fork_classification": {
+    "R1_callback_causality": "prerequisite; run before all dependent integration cells",
+    "I1_round_local_E1_derivation": "dependent deterministic observation adapter",
+    "I2_mode_schedule_matrix": "eight cheap reversible cells: two public modes by four schedule branches; run all",
+    "I3_negative_controls": "future mutation, private-truth mutation, multi-label report, and explicit offline sensitivity; run all",
+    "performance_sampling": "blocked until every registered cell passes"
+  },
+  "matrix": [
+    {
+      "id": "R1-causal-callback-remediation",
+      "acceptance": [
+        "full visible-history digest is absent from InnerDecoderRequest and request_digest",
+        "immediate output is invariant when only rounds after immediate invocation change",
+        "fixed-delay output is invariant when only rows after its invocation change",
+        "JIT output is invariant when only rows after its invocation change",
+        "offline remains explicitly noncausal and may change with final-history changes",
+        "branch/run provenance still binds all branches to one full visible-history digest outside the callback"
+      ]
+    },
+    {
+      "id": "I1-round-local-E1-record",
+      "acceptance": [
+        "the public E1 record is derived only from the last row of the supplied causal prefix",
+        "its round and trial identity match the invocation",
+        "flux and charge membership equal the public syndrome/herald bits site by site",
+        "changing private truth/fault decompositions without changing readouts leaves the record identical",
+        "future-only public changes leave every earlier causal E1 record identical"
+      ]
+    },
+    {
+      "id": "I2-two-modes-by-four-schedules",
+      "cells": [
+        "syndrome_only/immediate",
+        "syndrome_only/fixed_delay_1",
+        "syndrome_only/jit_lyons_brown",
+        "syndrome_only/offline_full_history",
+        "heralded/immediate",
+        "heralded/fixed_delay_1",
+        "heralded/jit_lyons_brown",
+        "heralded/offline_full_history"
+      ],
+      "acceptance": [
+        "all cells invoke the actual public D4 stage-1 policy",
+        "both modes share the same trace, cluster timing, and scheduler configuration",
+        "each causal policy request binds only its invocation prefix and round-local E1 report",
+        "syndrome-only and heralded retain their verified information budgets",
+        "multi-label public rows execute in heralded mode without coercion",
+        "deterministic replay is bit identical"
+      ]
+    },
+    {
+      "id": "I3-boundary-negative-controls",
+      "acceptance": [
+        "future-only mutations do not change earlier causal D4 requests or actions",
+        "private truth-only mutations do not change any public request or action",
+        "an odd reported flux syndrome fails closed at the existing policy invariant",
+        "offline outputs remain explicitly labeled noncausal"
+      ]
+    }
+  ],
+  "implementation_contract": {
+    "planned_changes": [
+      "scripts/baseline_harness.py",
+      "scripts/test_baseline_harness.py"
+    ],
+    "planned_additions": [
+      "scripts/e1_schedule_integration.py",
+      "scripts/test_e1_schedule_integration.py"
+    ],
+    "planned_results": [
+      "manifests/j2-e1-causal-integration-remediation-2026-08-29.json",
+      "results/j2-e1-causal-integration-remediation-2026-08-29.md"
+    ],
+    "source_hashes": {
+      "baseline_harness.py": "ee94606fa604d87694c9ca4408e291fe50c6e49b15e61382ee6c90983b2ec836",
+      "test_baseline_harness.py": "7808c8d6284e3c264c810f5f8cc5152e587bfde115f3c637aaf19f7b2e22ba85",
+      "test_generic_history.py": "b0a3d47ae74f9ce030b9b5600a8c38f1c422e242572f3dd5c0b4277c0e116a9e",
+      "d4_projector_instrument.py": "83b7d65d99542dde08638d45393f2f81528f036729aa95d1ad83ad6781561ee1",
+      "d4_spatial_policy.py": "ad271b7836043dfac696afaa4ea6090e2ec94180e19ff864f7dbd1f54a8654f4",
+      "spacetime_record.py": "0d8204a7734295fe7defd8822f982d84a5a5a604108bb6c9f6145b7ea7454722"
+    },
+    "i1_implementation_hashes": {
+      "e1_schedule_integration.py": "76c3eb21d17f78294312b094f58d31e942fc200a07de330986694c48e14f4465",
+      "test_e1_schedule_integration.py": "b965e817813e7901e8ff6bc5e144e7ea674556952457d4d7cee194c5561bd0cb"
+    },
+    "i2_i3_implementation_hashes": {
+      "e1_schedule_integration.py": "9d9dda06d514263ab83631c1d1030ac67b1f0e8a0862815660dddfecd72145db",
+      "test_e1_schedule_integration.py": "3b3b99002460beb449babab10582a50dc50bf78390bfde461018ce98161a7343"
+    }
+  },
+  "budget": {
+    "lattice": "paper L=2 only",
+    "rounds": "at most four readout rows",
+    "histories": "deterministic counterfactual pairs only",
+    "compute": "under five CPU minutes and 1 GiB",
+    "sampling": "none"
+  },
+  "analysis_and_stop_rules": {
+    "success": "R1 passes before I1-I3, and all eight mode/schedule cells execute with causal invariance where declared.",
+    "localized_negative": "Preserve unaffected branch timing and truth-exclusion evidence while marking any future-sensitive or policy-invalid cell unresolved.",
+    "stop": "Do not weaken digest binding, hide a failed causal cell, add stochastic samples, or implement post-action recovery to compensate for a stage-1 failure.",
+    "escalation": "Ask the researcher only if repairing causality requires changing the accepted information budget or abandoning the matched-history design.",
+    "prohibited_claims": ["schedule advantage", "logical-error rate", "threshold", "fault tolerance", "complete two-stage D4 recovery"]
+  },
+  "acceptance_items": [
+    {"item": "research-workflow registration and prior-evidence invalidation", "status": "complete", "evidence": "manifests/j2-e1-causal-integration-remediation-manifest-2026-08-29.json; results/j2-causal-request-future-digest-audit-2026-08-29.json"},
+    {"item": "R1 causal callback remediation", "status": "verified", "evidence": "manifests/j2-r1-causal-callback-remediation-2026-08-29.json; results/j2-r1-causal-callback-remediation-2026-08-29.md"},
+    {"item": "I1 round-local E1 adapter", "status": "verified", "evidence": "manifests/j2-i1-round-local-e1-adapter-2026-08-29.json; results/j2-i1-round-local-e1-adapter-2026-08-29.md"},
+    {"item": "I2/I3 public-mode, schedule, and negative-control coverage", "status": "verified", "evidence": "manifests/j2-i2-i3-policy-matrix-2026-08-29.json; results/j2-i2-i3-policy-matrix-2026-08-29.md"},
+    {"item": "machine-readable analysis and report", "status": "reported", "evidence": "manifests/j2-e1-causal-integration-remediation-2026-08-29.json; results/j2-e1-causal-integration-remediation-2026-08-29.md"},
+    {"item": "downstream causal integration release", "status": "complete", "evidence": "results/j2-downstream-causal-release-audit-2026-08-29.json; results/j2-downstream-causal-release-audit-2026-08-29.md"}
+  ],
+  "next_gate": "Contract complete. Invoke the research workflow to reassess Lab 005 from the earliest unsupported post-stage-1 dependency before any new experiment; performance sampling remains blocked."
+}

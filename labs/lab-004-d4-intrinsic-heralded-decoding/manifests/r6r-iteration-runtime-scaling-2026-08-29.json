@@ -1,0 +1,98 @@
+{
+  "claim_boundary": "CPU microbenchmark only. It does not predict single-instance GPU latency, batched GPU throughput, larger-size scaling, or any changed BP approximation.",
+  "default_early_stopping": {
+    "count": 20,
+    "maximum_seconds": 0.022573154198471456,
+    "mean_iterations": 24.5,
+    "mean_microseconds_per_performed_iteration": 309.20582487276397,
+    "mean_seconds": 0.007575542709382715,
+    "median_seconds": 0.0062992854014737535,
+    "minimum_seconds": 0.004782345803687349
+  },
+  "fixed_overhead": {
+    "dense_pack": {
+      "count": 20,
+      "maximum_seconds": 0.0044038749765604734,
+      "mean_seconds": 0.0013759373541688547,
+      "median_seconds": 0.0009894169925246388,
+      "minimum_seconds": 0.000709415995515883
+    },
+    "factor_graph_build": {
+      "count": 20,
+      "maximum_seconds": 0.021707832987885922,
+      "mean_seconds": 0.01313900614331942,
+      "median_seconds": 0.011786708986619487,
+      "minimum_seconds": 0.009054415975697339
+    }
+  },
+  "forced_full_cap": {
+    "1": {
+      "count": 20,
+      "maximum_seconds": 0.0009659458009991795,
+      "mean_microseconds_per_iteration": 362.6785351661965,
+      "mean_seconds": 0.00036267853516619653,
+      "median_microseconds_per_iteration": 297.8770527988673,
+      "median_seconds": 0.00029787705279886727,
+      "minimum_seconds": 0.0001777458004653454
+    },
+    "10": {
+      "count": 20,
+      "maximum_seconds": 0.004632308403961361,
+      "mean_microseconds_per_iteration": 290.04723098478286,
+      "mean_seconds": 0.0029004723098478282,
+      "median_microseconds_per_iteration": 278.39396003400907,
+      "median_seconds": 0.0027839396003400906,
+      "minimum_seconds": 0.0022125290997792035
+    },
+    "2": {
+      "count": 20,
+      "maximum_seconds": 0.0012167792010586709,
+      "mean_microseconds_per_iteration": 335.3226024773904,
+      "mean_seconds": 0.0006706452049547808,
+      "median_microseconds_per_iteration": 320.7239249604754,
+      "median_seconds": 0.0006414478499209509,
+      "minimum_seconds": 0.00038389579858630893
+    },
+    "20": {
+      "count": 20,
+      "maximum_seconds": 0.016617904201848433,
+      "mean_microseconds_per_iteration": 343.53028150508186,
+      "mean_seconds": 0.006870605630101637,
+      "median_microseconds_per_iteration": 311.4629175979644,
+      "median_seconds": 0.006229258351959288,
+      "minimum_seconds": 0.005139949999283999
+    },
+    "40": {
+      "count": 20,
+      "maximum_seconds": 0.016537866700673476,
+      "mean_microseconds_per_iteration": 316.9087138812757,
+      "mean_seconds": 0.012676348555251026,
+      "median_microseconds_per_iteration": 295.3297912608832,
+      "median_seconds": 0.011813191650435328,
+      "minimum_seconds": 0.009430195798631757
+    },
+    "5": {
+      "count": 20,
+      "maximum_seconds": 0.0018844916950911284,
+      "mean_microseconds_per_iteration": 287.30654192622745,
+      "mean_seconds": 0.0014365327096311374,
+      "median_microseconds_per_iteration": 271.9195798272267,
+      "median_seconds": 0.0013595978991361335,
+      "minimum_seconds": 0.0010383124987129121
+    }
+  },
+  "generated_at": "2026-08-30T04:21:20.709354+00:00",
+  "manifest": "manifests/r6r-iteration-runtime-scaling-manifest-2026-08-29.json",
+  "records": 20,
+  "schema_version": 1,
+  "source": "r6n-default-flux-policy-comparison-2026-08-29.json",
+  "status": "completed_prepacked_iteration_scaling_audit",
+  "timing_repetitions_per_record": 10,
+  "topology": {
+    "R6D_binary_variables": 108,
+    "R6D_factor_count": 144,
+    "directed_messages": 504,
+    "maximum_factor_arity": 6,
+    "physical_edges": 36
+  }
+}

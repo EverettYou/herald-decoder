@@ -1,0 +1,1580 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-27T15:45:39.108173+00:00",
+  "q": 1.0,
+  "seeds": [
+    1
+  ],
+  "shots_per_seed": 1,
+  "total_shots_per_cell": 1,
+  "fixed_decoder": {
+    "recurrence_mode": "damping",
+    "damping": 0.25,
+    "max_iterations": 40,
+    "matching_projection": "posterior_llr"
+  },
+  "p_grid": {
+    "square": [
+      0.04,
+      0.085,
+      0.13,
+      0.175,
+      0.22
+    ],
+    "honeycomb": [
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3
+    ]
+  },
+  "sizes": [
+    5,
+    7,
+    9,
+    11
+  ],
+  "pymatching_version": "2.4.0",
+  "runtime": {
+    "python_executable": "/Users/home/Documents/GitHub/emergent_classicality/lab/.venv/bin/python3",
+    "python_version": "3.13.2",
+    "numpy_version": "1.26.4",
+    "numba_version": "0.65.0",
+    "pymatching_version": "2.4.0",
+    "numba_available": true
+  },
+  "rows": [
+    {
+      "lattice": "square",
+      "L": 5,
+      "edges": 32,
+      "detectors": 15,
+      "q": 1.0,
+      "p": 0.04,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 0.11454202467575669,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 5,
+      "edges": 32,
+      "detectors": 15,
+      "q": 1.0,
+      "p": 0.04,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 449.85899998573586,
+      "paired_rescued_failures": 0,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "square",
+      "L": 5,
+      "edges": 32,
+      "detectors": 15,
+      "q": 1.0,
+      "p": 0.085,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 0.06925000343471766,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 5,
+      "edges": 32,
+      "detectors": 15,
+      "q": 1.0,
+      "p": 0.085,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 0.5232080002315342,
+      "paired_rescued_failures": 0,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "square",
+      "L": 5,
+      "edges": 32,
+      "detectors": 15,
+      "q": 1.0,
+      "p": 0.13,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 0.1431250129826367,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 5,
+      "edges": 32,
+      "detectors": 15,
+      "q": 1.0,
+      "p": 0.13,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 0.6512079853564501,
+      "paired_rescued_failures": 0,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "square",
+      "L": 5,
+      "edges": 32,
+      "detectors": 15,
+      "q": 1.0,
+      "p": 0.175,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 1,
+      "logical_error_rate": 1.0,
+      "logical_error_ci95": [
+        0.20654931437723745,
+        1.0
+      ],
+      "mean_decode_ms": 0.05500001134350896,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 5,
+      "edges": 32,
+      "detectors": 15,
+      "q": 1.0,
+      "p": 0.175,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 0.49291702453047037,
+      "paired_rescued_failures": 1,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "square",
+      "L": 5,
+      "edges": 32,
+      "detectors": 15,
+      "q": 1.0,
+      "p": 0.22,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 0.06370799383148551,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 5,
+      "edges": 32,
+      "detectors": 15,
+      "q": 1.0,
+      "p": 0.22,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 0.556290993699804,
+      "paired_rescued_failures": 0,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "square",
+      "L": 7,
+      "edges": 72,
+      "detectors": 35,
+      "q": 1.0,
+      "p": 0.04,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 0.16141700325533748,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 7,
+      "edges": 72,
+      "detectors": 35,
+      "q": 1.0,
+      "p": 0.04,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 0.6749170133844018,
+      "paired_rescued_failures": 0,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "square",
+      "L": 7,
+      "edges": 72,
+      "detectors": 35,
+      "q": 1.0,
+      "p": 0.085,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 0.14241598546504974,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 7,
+      "edges": 72,
+      "detectors": 35,
+      "q": 1.0,
+      "p": 0.085,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 0.6559999892488122,
+      "paired_rescued_failures": 0,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "square",
+      "L": 7,
+      "edges": 72,
+      "detectors": 35,
+      "q": 1.0,
+      "p": 0.13,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 0.14141702558845282,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 7,
+      "edges": 72,
+      "detectors": 35,
+      "q": 1.0,
+      "p": 0.13,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 0.6858750130049884,
+      "paired_rescued_failures": 0,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "square",
+      "L": 7,
+      "edges": 72,
+      "detectors": 35,
+      "q": 1.0,
+      "p": 0.175,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 0.16399999731220305,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 7,
+      "edges": 72,
+      "detectors": 35,
+      "q": 1.0,
+      "p": 0.175,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 0.9773750207386911,
+      "paired_rescued_failures": 0,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "square",
+      "L": 7,
+      "edges": 72,
+      "detectors": 35,
+      "q": 1.0,
+      "p": 0.22,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 0.14662501052953303,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 7,
+      "edges": 72,
+      "detectors": 35,
+      "q": 1.0,
+      "p": 0.22,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 0.7094999891705811,
+      "paired_rescued_failures": 0,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "square",
+      "L": 9,
+      "edges": 128,
+      "detectors": 63,
+      "q": 1.0,
+      "p": 0.04,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 0.3707080031745136,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 9,
+      "edges": 128,
+      "detectors": 63,
+      "q": 1.0,
+      "p": 0.04,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 1.325416989857331,
+      "paired_rescued_failures": 0,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "square",
+      "L": 9,
+      "edges": 128,
+      "detectors": 63,
+      "q": 1.0,
+      "p": 0.085,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 0.32608400215394795,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 9,
+      "edges": 128,
+      "detectors": 63,
+      "q": 1.0,
+      "p": 0.085,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 1.507625012891367,
+      "paired_rescued_failures": 0,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "square",
+      "L": 9,
+      "edges": 128,
+      "detectors": 63,
+      "q": 1.0,
+      "p": 0.13,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 0.3217080084141344,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 9,
+      "edges": 128,
+      "detectors": 63,
+      "q": 1.0,
+      "p": 0.13,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 1.6036249871831387,
+      "paired_rescued_failures": 0,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "square",
+      "L": 9,
+      "edges": 128,
+      "detectors": 63,
+      "q": 1.0,
+      "p": 0.175,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 0.44916701153852046,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 9,
+      "edges": 128,
+      "detectors": 63,
+      "q": 1.0,
+      "p": 0.175,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 1.7899580125231296,
+      "paired_rescued_failures": 0,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "square",
+      "L": 9,
+      "edges": 128,
+      "detectors": 63,
+      "q": 1.0,
+      "p": 0.22,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 1,
+      "logical_error_rate": 1.0,
+      "logical_error_ci95": [
+        0.20654931437723745,
+        1.0
+      ],
+      "mean_decode_ms": 0.31595799373462796,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 9,
+      "edges": 128,
+      "detectors": 63,
+      "q": 1.0,
+      "p": 0.22,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 2.285665977979079,
+      "paired_rescued_failures": 1,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "square",
+      "L": 11,
+      "edges": 200,
+      "detectors": 99,
+      "q": 1.0,
+      "p": 0.04,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 1.0242499993182719,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 11,
+      "edges": 200,
+      "detectors": 99,
+      "q": 1.0,
+      "p": 0.04,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 2.577417006250471,
+      "paired_rescued_failures": 0,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "square",
+      "L": 11,
+      "edges": 200,
+      "detectors": 99,
+      "q": 1.0,
+      "p": 0.085,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 1,
+      "logical_error_rate": 1.0,
+      "logical_error_ci95": [
+        0.20654931437723745,
+        1.0
+      ],
+      "mean_decode_ms": 0.5062500131316483,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 11,
+      "edges": 200,
+      "detectors": 99,
+      "q": 1.0,
+      "p": 0.085,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 2.802542003337294,
+      "paired_rescued_failures": 1,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "square",
+      "L": 11,
+      "edges": 200,
+      "detectors": 99,
+      "q": 1.0,
+      "p": 0.13,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 1,
+      "logical_error_rate": 1.0,
+      "logical_error_ci95": [
+        0.20654931437723745,
+        1.0
+      ],
+      "mean_decode_ms": 1.0758749849628657,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 11,
+      "edges": 200,
+      "detectors": 99,
+      "q": 1.0,
+      "p": 0.13,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 16.447541012894362,
+      "paired_rescued_failures": 1,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "square",
+      "L": 11,
+      "edges": 200,
+      "detectors": 99,
+      "q": 1.0,
+      "p": 0.175,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 2.6087919832207263,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 11,
+      "edges": 200,
+      "detectors": 99,
+      "q": 1.0,
+      "p": 0.175,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 100.61024999595247,
+      "paired_rescued_failures": 0,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "square",
+      "L": 11,
+      "edges": 200,
+      "detectors": 99,
+      "q": 1.0,
+      "p": 0.22,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 0.8086249872576445,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 11,
+      "edges": 200,
+      "detectors": 99,
+      "q": 1.0,
+      "p": 0.22,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 7.4495000008028,
+      "paired_rescued_failures": 0,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 5,
+      "edges": 74,
+      "detectors": 48,
+      "q": 1.0,
+      "p": 0.1,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 0.29495800845324993,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 5,
+      "edges": 74,
+      "detectors": 48,
+      "q": 1.0,
+      "p": 0.1,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 2.74770800024271,
+      "paired_rescued_failures": 0,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 5,
+      "edges": 74,
+      "detectors": 48,
+      "q": 1.0,
+      "p": 0.15,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 0.24020799901336432,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 5,
+      "edges": 74,
+      "detectors": 48,
+      "q": 1.0,
+      "p": 0.15,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 0.9064589976333082,
+      "paired_rescued_failures": 0,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 5,
+      "edges": 74,
+      "detectors": 48,
+      "q": 1.0,
+      "p": 0.2,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 1,
+      "logical_error_rate": 1.0,
+      "logical_error_ci95": [
+        0.20654931437723745,
+        1.0
+      ],
+      "mean_decode_ms": 0.35266601480543613,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 5,
+      "edges": 74,
+      "detectors": 48,
+      "q": 1.0,
+      "p": 0.2,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 6.964000000152737,
+      "paired_rescued_failures": 1,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 5,
+      "edges": 74,
+      "detectors": 48,
+      "q": 1.0,
+      "p": 0.25,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 1.228457986144349,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 5,
+      "edges": 74,
+      "detectors": 48,
+      "q": 1.0,
+      "p": 0.25,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 1.2286249839235097,
+      "paired_rescued_failures": 0,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 5,
+      "edges": 74,
+      "detectors": 48,
+      "q": 1.0,
+      "p": 0.3,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 0.25787498452700675,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 5,
+      "edges": 74,
+      "detectors": 48,
+      "q": 1.0,
+      "p": 0.3,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 2.183249976951629,
+      "paired_rescued_failures": 0,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 7,
+      "edges": 146,
+      "detectors": 96,
+      "q": 1.0,
+      "p": 0.1,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 0.7547910208813846,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 7,
+      "edges": 146,
+      "detectors": 96,
+      "q": 1.0,
+      "p": 0.1,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 5.8007089828606695,
+      "paired_rescued_failures": 0,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 7,
+      "edges": 146,
+      "detectors": 96,
+      "q": 1.0,
+      "p": 0.15,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 0.6341250264085829,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 7,
+      "edges": 146,
+      "detectors": 96,
+      "q": 1.0,
+      "p": 0.15,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 1.7006249981932342,
+      "paired_rescued_failures": 0,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 7,
+      "edges": 146,
+      "detectors": 96,
+      "q": 1.0,
+      "p": 0.2,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 1,
+      "logical_error_rate": 1.0,
+      "logical_error_ci95": [
+        0.20654931437723745,
+        1.0
+      ],
+      "mean_decode_ms": 0.49495798884890974,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 7,
+      "edges": 146,
+      "detectors": 96,
+      "q": 1.0,
+      "p": 0.2,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 4.8017090011853725,
+      "paired_rescued_failures": 1,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 7,
+      "edges": 146,
+      "detectors": 96,
+      "q": 1.0,
+      "p": 0.25,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 0.9862500010058284,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 7,
+      "edges": 146,
+      "detectors": 96,
+      "q": 1.0,
+      "p": 0.25,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 1.8880830029956996,
+      "paired_rescued_failures": 0,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 7,
+      "edges": 146,
+      "detectors": 96,
+      "q": 1.0,
+      "p": 0.3,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 0.5655410059262067,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 7,
+      "edges": 146,
+      "detectors": 96,
+      "q": 1.0,
+      "p": 0.3,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 2.1929999929852784,
+      "paired_rescued_failures": 0,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 9,
+      "edges": 242,
+      "detectors": 160,
+      "q": 1.0,
+      "p": 0.1,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 0.8729159890208393,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 9,
+      "edges": 242,
+      "detectors": 160,
+      "q": 1.0,
+      "p": 0.1,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 3.3206660009454936,
+      "paired_rescued_failures": 0,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 9,
+      "edges": 242,
+      "detectors": 160,
+      "q": 1.0,
+      "p": 0.15,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 1.057999994372949,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 9,
+      "edges": 242,
+      "detectors": 160,
+      "q": 1.0,
+      "p": 0.15,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 3.88137498521246,
+      "paired_rescued_failures": 0,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 9,
+      "edges": 242,
+      "detectors": 160,
+      "q": 1.0,
+      "p": 0.2,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 1.0131659801118076,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 9,
+      "edges": 242,
+      "detectors": 160,
+      "q": 1.0,
+      "p": 0.2,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 6.209207989741117,
+      "paired_rescued_failures": 0,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 9,
+      "edges": 242,
+      "detectors": 160,
+      "q": 1.0,
+      "p": 0.25,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 1,
+      "logical_error_rate": 1.0,
+      "logical_error_ci95": [
+        0.20654931437723745,
+        1.0
+      ],
+      "mean_decode_ms": 0.878083985298872,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 9,
+      "edges": 242,
+      "detectors": 160,
+      "q": 1.0,
+      "p": 0.25,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 3.6218749883119017,
+      "paired_rescued_failures": 1,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 9,
+      "edges": 242,
+      "detectors": 160,
+      "q": 1.0,
+      "p": 0.3,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 1,
+      "logical_error_rate": 1.0,
+      "logical_error_ci95": [
+        0.20654931437723745,
+        1.0
+      ],
+      "mean_decode_ms": 0.75179198756814,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 9,
+      "edges": 242,
+      "detectors": 160,
+      "q": 1.0,
+      "p": 0.3,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 3.6241250054445118,
+      "paired_rescued_failures": 1,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 11,
+      "edges": 362,
+      "detectors": 240,
+      "q": 1.0,
+      "p": 0.1,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 1.1873749899677932,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 11,
+      "edges": 362,
+      "detectors": 240,
+      "q": 1.0,
+      "p": 0.1,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 3.883208002662286,
+      "paired_rescued_failures": 0,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 11,
+      "edges": 362,
+      "detectors": 240,
+      "q": 1.0,
+      "p": 0.15,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 1.2808329774998128,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 11,
+      "edges": 362,
+      "detectors": 240,
+      "q": 1.0,
+      "p": 0.15,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 3.5562500124797225,
+      "paired_rescued_failures": 0,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 11,
+      "edges": 362,
+      "detectors": 240,
+      "q": 1.0,
+      "p": 0.2,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 1.1171670048497617,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 11,
+      "edges": 362,
+      "detectors": 240,
+      "q": 1.0,
+      "p": 0.2,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 4.8759159981273115,
+      "paired_rescued_failures": 0,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 11,
+      "edges": 362,
+      "detectors": 240,
+      "q": 1.0,
+      "p": 0.25,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 1,
+      "logical_error_rate": 1.0,
+      "logical_error_ci95": [
+        0.20654931437723745,
+        1.0
+      ],
+      "mean_decode_ms": 1.0889999975915998,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 11,
+      "edges": 362,
+      "detectors": 240,
+      "q": 1.0,
+      "p": 0.25,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 4.200208000838757,
+      "paired_rescued_failures": 1,
+      "paired_introduced_failures": 0
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 11,
+      "edges": 362,
+      "detectors": 240,
+      "q": 1.0,
+      "p": 0.3,
+      "decoder": "mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 1.333749998593703,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 11,
+      "edges": 362,
+      "detectors": 240,
+      "q": 1.0,
+      "p": 0.3,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "mean_decode_ms": 4.289000004064292,
+      "paired_rescued_failures": 0,
+      "paired_introduced_failures": 0
+    }
+  ],
+  "crossings_l7_l9": {
+    "square": {
+      "estimate": null,
+      "status": "not_bracketed"
+    },
+    "honeycomb": {
+      "estimate": null,
+      "status": "not_bracketed"
+    }
+  },
+  "evidence_boundary": "Initial fixed-grid finite-shot LER curves only; not an asymptotic threshold estimate."
+}

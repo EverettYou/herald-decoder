@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "status": "analyzed and reported; physical-model decision pending",
+  "recorded_at": "2026-08-29T15:14:00Z",
+  "acceptance_item": "machine-readable completeness analysis and bounded report",
+  "title": "J1 E3 repeated D4 transition-kernel completeness analysis",
+  "question": "Do the present source-backed and project-defined components jointly specify a normalized causal repeated D4 transition kernel and a private accumulated logical scorer?",
+  "answer": "No. The result is a verified localized negative: K1 and K3 are missing, K2 is localized-only, and K4 is partial.",
+  "kernel_target": "P(X_{t+1}, O_{t+1} | X_t, F_t, A_t)",
+  "factor_conclusions": {
+    "K1_physical_state_evolution": {
+      "status": "missing",
+      "supported": "Static D4 observations can be sampled conditional on a supplied physical chain, and externally supplied projector labels can be chained deterministically.",
+      "missing": "There is no normalized law for the next hidden D4 state conditional on the previous state, a data-fault increment, and the applied correction."
+    },
+    "K2_public_measurement_kernel": {
+      "status": "localized_only",
+      "supported": "The E1 local report rows and generic categorical rows normalize exactly, and perfect-report limits are defined.",
+      "missing": "Those channels condition on externally supplied truth; they do not define a joint multisite, cross-round distribution of true D4 outcomes."
+    },
+    "K3_action_conditioned_postflux_kernel": {
+      "status": "missing",
+      "supported": "E2 verifies exact action/report binding, temporal order, and deterministic composition when a physical post-flux report is supplied.",
+      "missing": "No current component evolves the physical residual state under the flux action and then generates a normalized physical charge/vacuum report from that updated state."
+    },
+    "K4_private_logical_scorer": {
+      "status": "partial",
+      "supported": "One completed spatial cycle can be scored privately using the ground-state-relative homology criterion.",
+      "missing": "There is no canonical accumulated spacetime residual across repeated faults and two-stage corrections, nor a derivation that the single-shot criterion is sufficient for it."
+    }
+  },
+  "causal_dependency": {
+    "earliest_missing": "K1_physical_state_evolution",
+    "dependent_missing": "K3_action_conditioned_postflux_kernel",
+    "why_other_factors_do_not_close_the_kernel": "Normalized report noise in K2 cannot create the missing true-state distribution, and the partial K4 scorer cannot define the preceding physical transition."
+  },
+  "model_comparison": [
+    {
+      "model": "explicit phenomenological Markov transition",
+      "what_it_adds": "A declared finite hidden D4 state and an explicit normalized project transition law.",
+      "benefit": "Smallest implementable extension and compatible with bounded exact enumeration.",
+      "cost": "Introduces a new physical assumption and is not a reproduction of a transition law supplied by the audited sources."
+    },
+    {
+      "model": "stateful projector or density-operator evolution",
+      "what_it_adds": "Quantum-state memory with projector outcomes and action-conditioned Born-rule transitions.",
+      "benefit": "Closest in semantics to the source projector description and can retain noncommuting cross-round information.",
+      "cost": "Requires a larger mathematical state space and additional state-update definitions not currently present in the project."
+    },
+    {
+      "model": "ancilla or circuit-derived repeated extraction channel",
+      "what_it_adds": "A fault map over explicit measurement and correction primitives from which the repeated transition can be derived.",
+      "benefit": "Strongest operational grounding for measurement faults and hardware-facing schedules.",
+      "cost": "Requires circuit/source dependencies and materially broadens scope; the audited sources do not currently supply a complete D4 circuit."
+    }
+  ],
+  "decision_status": {
+    "bounded_checks_can_discriminate": false,
+    "reason": "All three model classes can be made internally normalized and can pass the present exact interface checks, but they make different physical assumptions and require different dependencies and compute budgets.",
+    "choice_materially_changes": [
+      "physical interpretation",
+      "dependency and compute budget",
+      "meaning of a future fault-tolerance result"
+    ],
+    "human_consultation_required": true,
+    "consultation_not_yet_opened": "This tick completes only the registered analysis/report transition; the next contract item is the decision gate."
+  },
+  "verified_claims": [
+    "K1 and K3 are missing, K2 is localized-only, and K4 is partial.",
+    "The current pieces do not define P(X_{t+1}, O_{t+1} | X_t, F_t, A_t).",
+    "Independent per-round fusion resampling is not justified by the audited source or project evidence.",
+    "The earliest unsupported dependency is physical hidden-state evolution, before schedule sampling."
+  ],
+  "prohibited_inferences": [
+    "a complete noisy D4 generator",
+    "decoder or schedule advantage",
+    "logical-error rate",
+    "threshold",
+    "hardware fidelity",
+    "fault tolerance"
+  ],
+  "verification": {
+    "new_matrix_tests": "6/6 pass",
+    "full_lab005_suite": "137/137 pass",
+    "wiki_lint": "0 errors, 0 warnings",
+    "knowledge_graph_tests": "12/12 pass",
+    "document_viewer_tests": "4/4 pass",
+    "sampling": 0
+  },
+  "provenance": {
+    "matrix": "manifests/j1-e3-d4-transition-kernel-matrix-2026-08-29.json",
+    "matrix_sha256": "9bf2ec493c1772d6b0171eca607187bc2992d9c4ac9ec3a1ee3f350fb40c6042",
+    "audit_script_sha256": "cc8d920da55167be2ce01175f50bbcc6e8b640e9ff49191266707be402ca7107",
+    "test_script_sha256": "3a77efd98b0abaf55e3fff5cfa0b69ce40dc51b502402143509d6262097b39c9"
+  },
+  "next_gate": "Open an evidence-backed researcher consultation about the physical transition model; keep stochastic generation and sampling blocked."
+}

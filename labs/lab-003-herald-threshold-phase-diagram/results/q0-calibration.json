@@ -1,0 +1,816 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-27T06:01:37.948174+00:00",
+  "q": 0.0,
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "shots_per_seed": 5,
+  "total_shots_per_cell": 25,
+  "fixed_decoder": {
+    "recurrence_mode": "damping",
+    "damping": 0.25,
+    "max_iterations": 40,
+    "weight_rule": "negative_log"
+  },
+  "p_grid": {
+    "square": [
+      0.04,
+      0.085,
+      0.13,
+      0.175,
+      0.22
+    ],
+    "honeycomb": [
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3
+    ]
+  },
+  "sizes": [
+    5,
+    7,
+    9,
+    11
+  ],
+  "pymatching_version": "2.3.1",
+  "rows": [
+    {
+      "lattice": "square",
+      "L": 5,
+      "edges": 32,
+      "detectors": 15,
+      "q": 0.0,
+      "p": 0.04,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        1.3877787807814457e-17,
+        0.13319225093904846
+      ],
+      "mean_decode_ms": 0.01074987929314375,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 5,
+      "edges": 32,
+      "detectors": 15,
+      "q": 0.0,
+      "p": 0.085,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 5,
+      "logical_error_rate": 0.2,
+      "logical_error_ci95": [
+        0.08860584686802572,
+        0.3913095036954033
+      ],
+      "mean_decode_ms": 0.009450038196519017,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 5,
+      "edges": 32,
+      "detectors": 15,
+      "q": 0.0,
+      "p": 0.13,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 7,
+      "logical_error_rate": 0.28,
+      "logical_error_ci95": [
+        0.14283853850956563,
+        0.47576605190361576
+      ],
+      "mean_decode_ms": 0.009875043760985136,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 5,
+      "edges": 32,
+      "detectors": 15,
+      "q": 0.0,
+      "p": 0.175,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 9,
+      "logical_error_rate": 0.36,
+      "logical_error_ci95": [
+        0.20247880774458224,
+        0.5548150225183514
+      ],
+      "mean_decode_ms": 0.00989672145806253,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 5,
+      "edges": 32,
+      "detectors": 15,
+      "q": 0.0,
+      "p": 0.22,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 15,
+      "logical_error_rate": 0.6,
+      "logical_error_ci95": [
+        0.40739457358966996,
+        0.7659669762225203
+      ],
+      "mean_decode_ms": 0.01061327988281846,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 7,
+      "edges": 72,
+      "detectors": 35,
+      "q": 0.0,
+      "p": 0.04,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        1.3877787807814457e-17,
+        0.13319225093904846
+      ],
+      "mean_decode_ms": 0.014086558949202299,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 7,
+      "edges": 72,
+      "detectors": 35,
+      "q": 0.0,
+      "p": 0.085,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 3,
+      "logical_error_rate": 0.12,
+      "logical_error_ci95": [
+        0.04166817150440358,
+        0.2995579392092732
+      ],
+      "mean_decode_ms": 0.015653278678655624,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 7,
+      "edges": 72,
+      "detectors": 35,
+      "q": 0.0,
+      "p": 0.13,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 6,
+      "logical_error_rate": 0.24,
+      "logical_error_ci95": [
+        0.11496313693401444,
+        0.4342968335542908
+      ],
+      "mean_decode_ms": 0.016716760583221912,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 7,
+      "edges": 72,
+      "detectors": 35,
+      "q": 0.0,
+      "p": 0.175,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 8,
+      "logical_error_rate": 0.32,
+      "logical_error_ci95": [
+        0.1720519030690798,
+        0.5158973072689775
+      ],
+      "mean_decode_ms": 0.023293234407901764,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 7,
+      "edges": 72,
+      "detectors": 35,
+      "q": 0.0,
+      "p": 0.22,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 14,
+      "logical_error_rate": 0.56,
+      "logical_error_ci95": [
+        0.3706733186979878,
+        0.7333436111893266
+      ],
+      "mean_decode_ms": 0.020901799434795976,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 9,
+      "edges": 128,
+      "detectors": 63,
+      "q": 0.0,
+      "p": 0.04,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        1.3877787807814457e-17,
+        0.13319225093904846
+      ],
+      "mean_decode_ms": 0.020583360455930233,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 9,
+      "edges": 128,
+      "detectors": 63,
+      "q": 0.0,
+      "p": 0.085,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 4,
+      "logical_error_rate": 0.16,
+      "logical_error_ci95": [
+        0.0640345145667644,
+        0.3465362160717886
+      ],
+      "mean_decode_ms": 0.025026717921718955,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 9,
+      "edges": 128,
+      "detectors": 63,
+      "q": 0.0,
+      "p": 0.13,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 4,
+      "logical_error_rate": 0.16,
+      "logical_error_ci95": [
+        0.0640345145667644,
+        0.3465362160717886
+      ],
+      "mean_decode_ms": 0.0339983613230288,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 9,
+      "edges": 128,
+      "detectors": 63,
+      "q": 0.0,
+      "p": 0.175,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 8,
+      "logical_error_rate": 0.32,
+      "logical_error_ci95": [
+        0.1720519030690798,
+        0.5158973072689775
+      ],
+      "mean_decode_ms": 0.03460500156506896,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 9,
+      "edges": 128,
+      "detectors": 63,
+      "q": 0.0,
+      "p": 0.22,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 11,
+      "logical_error_rate": 0.44,
+      "logical_error_ci95": [
+        0.2666563888106735,
+        0.6293266813020122
+      ],
+      "mean_decode_ms": 0.033453357173129916,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 11,
+      "edges": 200,
+      "detectors": 99,
+      "q": 0.0,
+      "p": 0.04,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        1.3877787807814457e-17,
+        0.13319225093904846
+      ],
+      "mean_decode_ms": 0.03185819834470749,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 11,
+      "edges": 200,
+      "detectors": 99,
+      "q": 0.0,
+      "p": 0.085,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 2,
+      "logical_error_rate": 0.08,
+      "logical_error_ci95": [
+        0.022220401284847563,
+        0.24966108950395313
+      ],
+      "mean_decode_ms": 0.032621839782223105,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 11,
+      "edges": 200,
+      "detectors": 99,
+      "q": 0.0,
+      "p": 0.13,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 8,
+      "logical_error_rate": 0.32,
+      "logical_error_ci95": [
+        0.1720519030690798,
+        0.5158973072689775
+      ],
+      "mean_decode_ms": 0.042748277774080634,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 11,
+      "edges": 200,
+      "detectors": 99,
+      "q": 0.0,
+      "p": 0.175,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 12,
+      "logical_error_rate": 0.48,
+      "logical_error_ci95": [
+        0.30031285954112974,
+        0.6650148304964322
+      ],
+      "mean_decode_ms": 0.052975036669522524,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 11,
+      "edges": 200,
+      "detectors": 99,
+      "q": 0.0,
+      "p": 0.22,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 10,
+      "logical_error_rate": 0.4,
+      "logical_error_ci95": [
+        0.2340330237774797,
+        0.5926054264103301
+      ],
+      "mean_decode_ms": 0.05219999817200005,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 5,
+      "edges": 74,
+      "detectors": 48,
+      "q": 0.0,
+      "p": 0.1,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 2,
+      "logical_error_rate": 0.08,
+      "logical_error_ci95": [
+        0.022220401284847563,
+        0.24966108950395313
+      ],
+      "mean_decode_ms": 0.0208966841455549,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 5,
+      "edges": 74,
+      "detectors": 48,
+      "q": 0.0,
+      "p": 0.15,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 1,
+      "logical_error_rate": 0.04,
+      "logical_error_ci95": [
+        0.007096233501987265,
+        0.19544063736193734
+      ],
+      "mean_decode_ms": 0.02051840187050402,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 5,
+      "edges": 74,
+      "detectors": 48,
+      "q": 0.0,
+      "p": 0.2,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 5,
+      "logical_error_rate": 0.2,
+      "logical_error_ci95": [
+        0.08860584686802572,
+        0.3913095036954033
+      ],
+      "mean_decode_ms": 0.022053279681131244,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 5,
+      "edges": 74,
+      "detectors": 48,
+      "q": 0.0,
+      "p": 0.25,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 10,
+      "logical_error_rate": 0.4,
+      "logical_error_ci95": [
+        0.2340330237774797,
+        0.5926054264103301
+      ],
+      "mean_decode_ms": 0.023615037789568305,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 5,
+      "edges": 74,
+      "detectors": 48,
+      "q": 0.0,
+      "p": 0.3,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 16,
+      "logical_error_rate": 0.64,
+      "logical_error_ci95": [
+        0.44518497748164865,
+        0.7975211922554178
+      ],
+      "mean_decode_ms": 0.023779955226927996,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 7,
+      "edges": 146,
+      "detectors": 96,
+      "q": 0.0,
+      "p": 0.1,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 1,
+      "logical_error_rate": 0.04,
+      "logical_error_ci95": [
+        0.007096233501987265,
+        0.19544063736193734
+      ],
+      "mean_decode_ms": 0.030656680464744568,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 7,
+      "edges": 146,
+      "detectors": 96,
+      "q": 0.0,
+      "p": 0.15,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 6,
+      "logical_error_rate": 0.24,
+      "logical_error_ci95": [
+        0.11496313693401444,
+        0.4342968335542908
+      ],
+      "mean_decode_ms": 0.0385066366288811,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 7,
+      "edges": 146,
+      "detectors": 96,
+      "q": 0.0,
+      "p": 0.2,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 12,
+      "logical_error_rate": 0.48,
+      "logical_error_ci95": [
+        0.30031285954112974,
+        0.6650148304964322
+      ],
+      "mean_decode_ms": 0.04479164141230285,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 7,
+      "edges": 146,
+      "detectors": 96,
+      "q": 0.0,
+      "p": 0.25,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 10,
+      "logical_error_rate": 0.4,
+      "logical_error_ci95": [
+        0.2340330237774797,
+        0.5926054264103301
+      ],
+      "mean_decode_ms": 0.04576832288876176,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 7,
+      "edges": 146,
+      "detectors": 96,
+      "q": 0.0,
+      "p": 0.3,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 9,
+      "logical_error_rate": 0.36,
+      "logical_error_ci95": [
+        0.20247880774458224,
+        0.5548150225183514
+      ],
+      "mean_decode_ms": 0.04666995955631137,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 9,
+      "edges": 242,
+      "detectors": 160,
+      "q": 0.0,
+      "p": 0.1,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        1.3877787807814457e-17,
+        0.13319225093904846
+      ],
+      "mean_decode_ms": 0.04790819715708494,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 9,
+      "edges": 242,
+      "detectors": 160,
+      "q": 0.0,
+      "p": 0.15,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 5,
+      "logical_error_rate": 0.2,
+      "logical_error_ci95": [
+        0.08860584686802572,
+        0.3913095036954033
+      ],
+      "mean_decode_ms": 0.05666016018949449,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 9,
+      "edges": 242,
+      "detectors": 160,
+      "q": 0.0,
+      "p": 0.2,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 10,
+      "logical_error_rate": 0.4,
+      "logical_error_ci95": [
+        0.2340330237774797,
+        0.5926054264103301
+      ],
+      "mean_decode_ms": 0.06876319879665971,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 9,
+      "edges": 242,
+      "detectors": 160,
+      "q": 0.0,
+      "p": 0.25,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 14,
+      "logical_error_rate": 0.56,
+      "logical_error_ci95": [
+        0.3706733186979878,
+        0.7333436111893266
+      ],
+      "mean_decode_ms": 0.07332163746468723,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 9,
+      "edges": 242,
+      "detectors": 160,
+      "q": 0.0,
+      "p": 0.3,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 13,
+      "logical_error_rate": 0.52,
+      "logical_error_ci95": [
+        0.3349851695035678,
+        0.6996871404588704
+      ],
+      "mean_decode_ms": 0.0752883602399379,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 11,
+      "edges": 362,
+      "detectors": 240,
+      "q": 0.0,
+      "p": 0.1,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        1.3877787807814457e-17,
+        0.13319225093904846
+      ],
+      "mean_decode_ms": 0.06326167960651219,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 11,
+      "edges": 362,
+      "detectors": 240,
+      "q": 0.0,
+      "p": 0.15,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 2,
+      "logical_error_rate": 0.08,
+      "logical_error_ci95": [
+        0.022220401284847563,
+        0.24966108950395313
+      ],
+      "mean_decode_ms": 0.08155160350725055,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 11,
+      "edges": 362,
+      "detectors": 240,
+      "q": 0.0,
+      "p": 0.2,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 14,
+      "logical_error_rate": 0.56,
+      "logical_error_ci95": [
+        0.3706733186979878,
+        0.7333436111893266
+      ],
+      "mean_decode_ms": 0.10209340136498213,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 11,
+      "edges": 362,
+      "detectors": 240,
+      "q": 0.0,
+      "p": 0.25,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 12,
+      "logical_error_rate": 0.48,
+      "logical_error_ci95": [
+        0.30031285954112974,
+        0.6650148304964322
+      ],
+      "mean_decode_ms": 0.11434151907451451,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 11,
+      "edges": 362,
+      "detectors": 240,
+      "q": 0.0,
+      "p": 0.3,
+      "decoder": "mwpm",
+      "shots": 25,
+      "logical_errors": 14,
+      "logical_error_rate": 0.56,
+      "logical_error_ci95": [
+        0.3706733186979878,
+        0.7333436111893266
+      ],
+      "mean_decode_ms": 0.12216659961268306,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    }
+  ],
+  "crossings_l7_l9": {
+    "square": {
+      "estimate": 0.1,
+      "status": "linear_interpolation"
+    },
+    "honeycomb": {
+      "estimate": 0.21666666666666667,
+      "status": "linear_interpolation"
+    }
+  },
+  "evidence_boundary": "Initial fixed-grid finite-shot LER curves only; not an asymptotic threshold estimate."
+}

@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "status": "analyzed",
+  "campaign": "phase-s1-honeycomb-slope-flow-gray-frontier-2026-08-28",
+  "purpose": "Smallest discriminating matrix for the ten measured gray cells that sit between both resolved phase colors in the crossing-free slope-flow map.",
+  "source_evidence": {
+    "slope_flow_result": "results/phase2-residual80-honeycomb-slope-flow-2026-08-28.json",
+    "slope_flow_sha256": "6f8d1d4d54142fd41f7e1313d57d938bb98c6251c5ad1b31bfd1f8a563298a85",
+    "stability_result": "results/phase2-residual80-honeycomb-slope-flow-stability-2026-08-28.json",
+    "stability_sha256": "e1eab31ed2974c24503de6e019274a143dd765f5fb6a7763f75c90a8e03d73cc",
+    "baseline_source_shard": "results/phase2-residual80-honeycomb-q000-discovery-1000-2026-08-28.json",
+    "baseline_source_shard_sha256": "6eebc790f5405f6ef9948f0d50bbfc1c31f155bfed3537adf9febb3c078b4b55"
+  },
+  "lattice": "honeycomb",
+  "new_seeds": [770001, 770002, 770003, 770004, 770005],
+  "shots_per_seed": 200,
+  "decoder": {
+    "name": "HeraldAwareBpMatchingDecoder",
+    "recurrence_mode": "damping",
+    "damping": 0.25,
+    "max_iterations": 80,
+    "update_schedule": "residual_priority",
+    "residual_priority_order": "stable_sort",
+    "residual_priority_buffer_reuse": false,
+    "residual_priority_cached_products": false,
+    "matching_projection": "posterior_llr",
+    "p_m": 0.0,
+    "p_h": 0.0,
+    "use_numba": true
+  },
+  "branches": [
+    {
+      "id": "seed-limited-pinch",
+      "hypothesis": "The beta sign is stable across size subsets but unresolved because five seed trajectories do not determine it precisely enough.",
+      "action": "Add five independent 200-shot trajectories at every existing distance, doubling the seed-cluster count from five to ten.",
+      "sizes": [7, 9, 11],
+      "cells": [
+        {"q": 0.10, "p": 0.20},
+        {"q": 0.25, "p": 0.20},
+        {"q": 0.70, "p": 0.32},
+        {"q": 0.75, "p": 0.36}
+      ],
+      "expected_new_decodes": 12000
+    },
+    {
+      "id": "distance-limited-pinch",
+      "hypothesis": "The three-distance beta sign is unstable because the LER scaling has size-window curvature that same-distance shots cannot resolve.",
+      "action": "Add a matched L=11,13 pair with five independent 200-shot trajectories; L=11 anchors the new cohort and L=13 extends the scaling window.",
+      "sizes": [11, 13],
+      "cells": [
+        {"q": 0.30, "p": 0.20},
+        {"q": 0.35, "p": 0.20},
+        {"q": 0.40, "p": 0.20},
+        {"q": 0.45, "p": 0.20},
+        {"q": 0.60, "p": 0.28},
+        {"q": 0.80, "p": 0.45}
+      ],
+      "expected_new_decodes": 12000
+    }
+  ],
+  "jobs": 10,
+  "workers_cap": 4,
+  "expected_new_decodes": 24000,
+  "inference": {
+    "primary_statistic": "beta in logit(P_logical) = alpha + beta log(L)",
+    "bootstrap_replicates": 20000,
+    "confidence_level": 0.90,
+    "cluster_policy": "Resample complete seed trajectories independently by distance; never treat shots as independent bootstrap clusters.",
+    "seed_limited_analysis": "Pool only source-compatible old and new seed clusters at L=7,9,11, then refit beta. Promotion requires the central 90% interval to exclude zero, sign probability at least 0.95, and all leave-one-distance-out signs to agree.",
+    "distance_limited_analysis": "Use the new matched L11/L13 cohort to test the large-distance direction, then fit source-compatible L=7,9,11,13 counts. Promotion requires the four-distance beta interval to exclude zero, sign probability at least 0.95, all four leave-one-distance-out signs to agree, and the new L11/L13 sign to agree with beta.",
+    "failure_policy": "Any cell missing a gate remains gray; no neighboring cell, contour, p_c, or q_c is inferred from it.",
+    "crossing_statistic_used": false
+  },
+  "provenance_policy": "Every new shard must pass syndrome fidelity, gzip row-count and SHA-256 integrity, accelerated-runtime verification, and start/end source-hash equality. Pooling with Phase 2 is allowed only when the complete source hash set and decoder configuration match.",
+  "stop_rule": "Stop after these ten cells and 24000 new decodes. Do not add p or q midpoints, unrestricted L15, square-lattice cells, or a phase boundary without a new registered decision.",
+  "launch_gate": "Execution and preregistered analysis are complete. All ten jobs and 24000 rows passed the completion audit. Slope-flow gates resolved one target as undecodable and left nine unresolved; the updated map contains 81 green, 37 red, and 113 gray cells. Evidence: results/phase-s1-honeycomb-slope-flow-gray-frontier-analysis-2026-08-28.json. The dispatcher will not relaunch an analyzed manifest."
+}

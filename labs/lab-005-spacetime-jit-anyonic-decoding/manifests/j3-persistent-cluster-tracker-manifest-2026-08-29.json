@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "status": "implemented_and_verified",
+  "registered_at": "2026-08-29T10:59:00Z",
+  "title": "Persistent causal detector-cluster tracker preflight",
+  "scope": {
+    "identity": "Assign stable persistent identifiers to snapshot components across monotone causal prefixes.",
+    "ownership": "Record each event's immutable origin identifier while maintaining a current canonical owner after merges.",
+    "merges": "When a new event joins prior components, merge deterministically into the earliest persistent identifier and retain aliases.",
+    "geometry": "Refresh snapshot age, extent, separation, nearest active absorber, and link candidates at every prefix.",
+    "schedule_handoff": "Use the persistent identifier when a tracked component touches the current detector frontier.",
+    "not_in_scope": [
+      "event deletion or retrospective rewrite in the raw observation record",
+      "cluster splitting",
+      "proof that the registered radius-one adjacency is physically optimal",
+      "ILP correction or fusion inference",
+      "microscopic D(S3), noisy D4, schedule performance, threshold, or fault tolerance"
+    ]
+  },
+  "invariants": [
+    "prefix horizons are monotone and previously observed events remain unchanged",
+    "each new event receives one immutable origin cluster identifier",
+    "a component overlapping one prior cluster retains its identifier",
+    "a component overlapping multiple prior clusters chooses the earliest identifier deterministically and records all aliases",
+    "fixed-radius append-only components may merge but never split",
+    "current ownership is total and agrees with the active persistent components",
+    "geometry and absorber candidates are refreshed from the current causal prefix",
+    "schedule handoff exposes only current-frontier detector vertices under the persistent identifier"
+  ],
+  "implementation": {
+    "module": "scripts/persistent_clusters.py",
+    "fixtures": "scripts/test_persistent_clusters.py",
+    "module_sha256": "f02f4e483b03bcd399a93546741a96e8ce78eb746bb376a704275ca67830852e",
+    "fixtures_sha256": "97485830ef7854416960bd08027d32a22fd0f229a08aa63c54c648436839c16d"
+  },
+  "verification": {
+    "status": "passed",
+    "focused_tests": "7/7 passed",
+    "full_lab_tests": "60/60 passed",
+    "verified_cases": [
+      "a component retains its persistent identifier when a new event extends it",
+      "a disconnected new component receives a new identifier",
+      "a bridge event merges two components into the earliest identifier while preserving an alias and immutable event origins",
+      "removed or changed historical detector events are rejected",
+      "an idempotent same-prefix refresh does not duplicate event origins",
+      "absorber candidates refresh after lifecycle changes and exclude a persistent-ID-owned absorber",
+      "the persistent identifier drives the public current-frontier schedule handoff"
+    ]
+  },
+  "claim_boundary": "This verifies deterministic state management over the registered snapshot rule. It does not license record deletion, establish the physical clustering rule, or provide noisy-channel or threshold evidence.",
+  "next_gate": "After persistent tracking passes, audit the remaining J1/J2 prerequisites and register the smallest shared-fault-history scheduling baseline matrix before introducing new physics claims."
+}

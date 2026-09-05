@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-28T08:57:38.286312+00:00",
+  "title": "Selected q=0.75 square and honeycomb LER evidence",
+  "figure": "figures/q075-square-honeycomb-selected-ler-2026-08-28.png",
+  "panels": [
+    {
+      "lattice": "square",
+      "q": 0.75,
+      "sources": [
+        "results/q075-square-l11-l13-refined-low-5000-2026-08-27.json",
+        "results/q075-square-l11-l13-refined-5000-2026-08-27.json"
+      ],
+      "analysis": "results/q075-square-l11-l13-refined-5000-2026-08-27-analysis.json",
+      "sizes": [
+        11,
+        13
+      ],
+      "shots_per_cell": 5000,
+      "directed_crossing": 0.1725
+    },
+    {
+      "lattice": "honeycomb",
+      "q": 0.75,
+      "source": "results/q075-honeycomb-residual80-confirmation-5000-2026-08-27.json",
+      "analysis": "results/q075-honeycomb-residual80-confirmation-5000-2026-08-27-analysis.json",
+      "sizes": [
+        5,
+        7,
+        9,
+        11
+      ],
+      "shots_per_cell": 5000,
+      "first_directed_adjacent_crossings": [
+        0.3904,
+        0.34728682170542635,
+        0.26428571428571435
+      ]
+    }
+  ],
+  "comparison_boundary": "The panels use independent p ranges, size sets, and decoder schedules. They ground lattice-specific operational crossings and must not be read as a same-p performance comparison or pooled threshold fit."
+}

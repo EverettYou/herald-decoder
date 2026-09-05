@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "status": "analyzed and reported; downstream release audit pending",
+  "recorded_at": "2026-08-29T13:40:10Z",
+  "title": "Corrected J2 typed E1 causal schedule integration",
+  "question": "Can every registered schedule invoke the verified typed E1 D4 stage-1 policy using only information available at its decision horizon while both public modes share one physical trace?",
+  "answer": "Yes for the bounded deterministic paper-L=2 stage-1 interface. This is not a performance or fault-tolerance result.",
+  "evidence_states": {
+    "invalid_history": {
+      "artifact": "j2-shared-history-baseline-preflight-2026-08-29.md",
+      "invalid_claims": ["causal request digest future-isolation", "causal response digest future-isolation"],
+      "cause": "the original InnerDecoderRequest included the complete visible-history digest",
+      "audit": "j2-causal-request-future-digest-audit-2026-08-29.json",
+      "status": "retained for provenance and not retroactively rehabilitated"
+    },
+    "unaffected_original_evidence": [
+      "registered branch timing",
+      "shared-history immutability in outer provenance",
+      "explicit offline noncausality",
+      "truth-field exclusion"
+    ],
+    "corrected_evidence": [
+      {"gate": "R1", "artifact": "manifests/j2-r1-causal-callback-remediation-2026-08-29.json", "status": "verified"},
+      {"gate": "I1", "artifact": "manifests/j2-i1-round-local-e1-adapter-2026-08-29.json", "status": "verified"},
+      {"gate": "I2/I3", "artifact": "manifests/j2-i2-i3-policy-matrix-2026-08-29.json", "status": "verified"}
+    ]
+  },
+  "analysis": {
+    "causal_identity": "R1 removes complete-history identity from the decoder callback and request digest while retaining it in event, branch, and run provenance.",
+    "observation_translation": "I1 derives the E1 report only from the final row of the bound causal prefix and independently maps syndrome/herald membership to m_flux/e_charge over all 24 paper-L=2 vertices.",
+    "branch_coverage": "I2 executes syndrome_only and heralded under immediate, fixed_delay_1, jit_lyons_brown, and offline_full_history: 8/8 cells invoke the actual public D4 stage-1 policy.",
+    "scientific_output_check": "Every returned correction has boundary equal to the supplied two-vertex flux syndrome.",
+    "information_budget": "Both modes share trace, timing, scheduler request, and policy implementation; syndrome_only receives no charge measurements and heralded receives the public charge-membership record.",
+    "boundary_controls": "Future-only, private-truth, simultaneous-label, odd-parity, explicit-offline, and deterministic-replay controls all pass.",
+    "uncertainty": "Not applicable to these exact deterministic correctness checks; no stochastic estimate or confidence interval was produced."
+  },
+  "verified_claims": [
+    "causal callback requests and responses are invariant to record changes strictly after their invocation",
+    "the round-local typed E1 adapter has no full-history or private-truth input",
+    "all eight registered mode/schedule cells execute through the actual public stage-1 D4 policy",
+    "the stage-1 actions are flux-syndrome faithful on the bounded fixture",
+    "offline access is explicit and remains noncausal"
+  ],
+  "prohibited_inferences": [
+    "heralded decoding is better than syndrome-only decoding",
+    "one schedule is better than another",
+    "logical-error-rate improvement",
+    "threshold",
+    "complete post-action D4 recovery",
+    "runtime scalability",
+    "fault tolerance"
+  ],
+  "verification": {
+    "final_focused_suite": "14 passed in 0.92s",
+    "final_full_lab_suite": "121 passed in 0.97s",
+    "dashboard_suite": "28 passed",
+    "wiki_lint": "0 errors, 0 warnings",
+    "sampling": "none"
+  },
+  "provenance_hashes": {
+    "invalidating_audit": "8a91f0d6fa6411d74011e3483d388236783d2e0c5d10286bfd497a9cba608cb7",
+    "r1_evidence": "21af8855d9bb8b3fc47326fc39509d2b6282fa7e2109bb19fc5d839196386ff8",
+    "i1_evidence": "a3cebb58763eb0da27f2d26b3e73ef7df11b1fbff3d0e0e2fa4ac284be4f3a2c",
+    "i2_i3_evidence": "dbc3dfa194e08d3c52729161643f2a845e6ac22b2e88ab3d597be8fdd618466e",
+    "baseline_harness.py": "ee94606fa604d87694c9ca4408e291fe50c6e49b15e61382ee6c90983b2ec836",
+    "e1_schedule_integration.py": "9d9dda06d514263ab83631c1d1030ac67b1f0e8a0862815660dddfecd72145db",
+    "test_e1_schedule_integration.py": "3b3b99002460beb449babab10582a50dc50bf78390bfde461018ce98161a7343"
+  },
+  "next_gate": "Audit all downstream consumers for stale dependence on the invalid J2 callback evidence and release only the corrected causal integration artifacts; keep performance sampling blocked."
+}

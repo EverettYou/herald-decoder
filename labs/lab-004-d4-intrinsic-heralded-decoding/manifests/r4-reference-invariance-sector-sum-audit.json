@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-08-29T01:00:00Z",
+  "purpose": "R4 reference relabeling and genuine within-sector evidence-sum audit",
+  "reference_invariance": {
+    "observation_fixture": "mask-73 four-explanation record",
+    "references_checked": [73, 82, 268, 279],
+    "posterior_probability_multiset_invariant": true,
+    "bayes_risk_invariant": true,
+    "conditional_entropy_invariant": true
+  },
+  "within_sector_sum_fixture": {
+    "flux_syndrome": [1, 0, 1, 1, 1, 1, 0, 1],
+    "charge_outcomes": [-1, -1, -1, -1, -1, -1, -1, -1],
+    "compatible_error_masks": [98, 140],
+    "relative_sector_count": 1,
+    "candidate_count_in_sector": 2,
+    "log2_sector_evidence_gain_over_one_candidate": 1.0,
+    "posterior_probability": 1.0,
+    "bayes_logical_failure_probability": 0.0
+  },
+  "tests_passed": 93,
+  "claim_boundary": "This verifies reference-label invariance and genuine evidence summation on primitive fixtures. It is not a performance sweep or an asymptotic posterior calculation."
+}

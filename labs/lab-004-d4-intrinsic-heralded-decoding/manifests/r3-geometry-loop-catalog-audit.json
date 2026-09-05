@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-08-29T00:30:00Z",
+  "purpose": "geometry-derived trivial-loop component catalog",
+  "algorithm": {
+    "method": "bounded DFS enumeration of simple graph cycles",
+    "deduplication": "edge mask",
+    "source_filter": "one nonbranching homologically trivial component with two colour constraints",
+    "edge_subset_scan": false,
+    "guards": ["maximum cycle length", "maximum cycle count"]
+  },
+  "primitive_l2": {
+    "edge_count": 12,
+    "geometry_catalog_masks": [238, 1589, 2947, 3416],
+    "matches_complete_4096_edge_subset_catalog": true
+  },
+  "paper_l2": {
+    "edge_count": 36,
+    "maximum_cycle_length": 6,
+    "trivial_hexagons_found": 12,
+    "cycle_limit": 10000
+  },
+  "tests_passed": 86,
+  "claim_boundary": "The generator removes the 2^E component-discovery scan and supplies bounded local loop components. Longer cycles remain length-guarded, and winding errors follow the existing researcher-approved terminal logical-failure contract rather than receiving an invented sector likelihood."
+}

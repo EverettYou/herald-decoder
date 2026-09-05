@@ -1,0 +1,2317 @@
+{
+  "campaign": "phase2-residual80-q-skeleton-2026-08-28",
+  "config_sha256": "31a30ad81e44edc9f07d4bb2d0cd554f145f4d3e84bfa722738d6b54a081dec2",
+  "decoder": {
+    "damping": 0.25,
+    "matching_projection": "posterior_llr",
+    "max_iterations": 80,
+    "name": "HeraldAwareBpMatchingDecoder",
+    "p_h": 0.0,
+    "p_m": 0.0,
+    "recurrence_mode": "damping",
+    "residual_priority_buffer_reuse": false,
+    "residual_priority_cached_products": false,
+    "residual_priority_order": "stable_sort",
+    "update_schedule": "residual_priority",
+    "use_numba": true
+  },
+  "evidence_boundary": "Phase 2 finite-size scouting cell map; crossings require adaptive refinement and confirmation before threshold claims.",
+  "experiment": "Lab 003 Phase 2 full q-skeleton discovery shard",
+  "generated_at": "2026-08-28T03:07:19.139800+00:00",
+  "lattice": "honeycomb",
+  "p_grid": [
+    0.08,
+    0.12,
+    0.16,
+    0.2,
+    0.24,
+    0.28,
+    0.32,
+    0.36,
+    0.4,
+    0.45,
+    0.49
+  ],
+  "per_seed": [
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 0,
+      "p": 0.08,
+      "q": 0.75,
+      "seed": 570001,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 0,
+      "p": 0.12,
+      "q": 0.75,
+      "seed": 570001,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 5,
+      "p": 0.16,
+      "q": 0.75,
+      "seed": 570001,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 8,
+      "p": 0.2,
+      "q": 0.75,
+      "seed": 570001,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 14,
+      "p": 0.24,
+      "q": 0.75,
+      "seed": 570001,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 25,
+      "p": 0.28,
+      "q": 0.75,
+      "seed": 570001,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 43,
+      "p": 0.32,
+      "q": 0.75,
+      "seed": 570001,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 63,
+      "p": 0.36,
+      "q": 0.75,
+      "seed": 570001,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 69,
+      "p": 0.4,
+      "q": 0.75,
+      "seed": 570001,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 85,
+      "p": 0.45,
+      "q": 0.75,
+      "seed": 570001,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 76,
+      "p": 0.49,
+      "q": 0.75,
+      "seed": 570001,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 0,
+      "p": 0.08,
+      "q": 0.75,
+      "seed": 570002,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 0,
+      "p": 0.12,
+      "q": 0.75,
+      "seed": 570002,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 3,
+      "p": 0.16,
+      "q": 0.75,
+      "seed": 570002,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 10,
+      "p": 0.2,
+      "q": 0.75,
+      "seed": 570002,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 25,
+      "p": 0.24,
+      "q": 0.75,
+      "seed": 570002,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 38,
+      "p": 0.28,
+      "q": 0.75,
+      "seed": 570002,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 46,
+      "p": 0.32,
+      "q": 0.75,
+      "seed": 570002,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 54,
+      "p": 0.36,
+      "q": 0.75,
+      "seed": 570002,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 65,
+      "p": 0.4,
+      "q": 0.75,
+      "seed": 570002,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 77,
+      "p": 0.45,
+      "q": 0.75,
+      "seed": 570002,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 78,
+      "p": 0.49,
+      "q": 0.75,
+      "seed": 570002,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 0,
+      "p": 0.08,
+      "q": 0.75,
+      "seed": 570003,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 2,
+      "p": 0.12,
+      "q": 0.75,
+      "seed": 570003,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 4,
+      "p": 0.16,
+      "q": 0.75,
+      "seed": 570003,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 7,
+      "p": 0.2,
+      "q": 0.75,
+      "seed": 570003,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 21,
+      "p": 0.24,
+      "q": 0.75,
+      "seed": 570003,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 39,
+      "p": 0.28,
+      "q": 0.75,
+      "seed": 570003,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 52,
+      "p": 0.32,
+      "q": 0.75,
+      "seed": 570003,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 58,
+      "p": 0.36,
+      "q": 0.75,
+      "seed": 570003,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 74,
+      "p": 0.4,
+      "q": 0.75,
+      "seed": 570003,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 75,
+      "p": 0.45,
+      "q": 0.75,
+      "seed": 570003,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 94,
+      "p": 0.49,
+      "q": 0.75,
+      "seed": 570003,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 0,
+      "p": 0.08,
+      "q": 0.75,
+      "seed": 570004,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 1,
+      "p": 0.12,
+      "q": 0.75,
+      "seed": 570004,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 3,
+      "p": 0.16,
+      "q": 0.75,
+      "seed": 570004,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 10,
+      "p": 0.2,
+      "q": 0.75,
+      "seed": 570004,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 16,
+      "p": 0.24,
+      "q": 0.75,
+      "seed": 570004,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 28,
+      "p": 0.28,
+      "q": 0.75,
+      "seed": 570004,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 45,
+      "p": 0.32,
+      "q": 0.75,
+      "seed": 570004,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 52,
+      "p": 0.36,
+      "q": 0.75,
+      "seed": 570004,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 64,
+      "p": 0.4,
+      "q": 0.75,
+      "seed": 570004,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 75,
+      "p": 0.45,
+      "q": 0.75,
+      "seed": 570004,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 74,
+      "p": 0.49,
+      "q": 0.75,
+      "seed": 570004,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 0,
+      "p": 0.08,
+      "q": 0.75,
+      "seed": 570005,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 1,
+      "p": 0.12,
+      "q": 0.75,
+      "seed": 570005,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 7,
+      "p": 0.16,
+      "q": 0.75,
+      "seed": 570005,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 15,
+      "p": 0.2,
+      "q": 0.75,
+      "seed": 570005,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 26,
+      "p": 0.24,
+      "q": 0.75,
+      "seed": 570005,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 39,
+      "p": 0.28,
+      "q": 0.75,
+      "seed": 570005,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 51,
+      "p": 0.32,
+      "q": 0.75,
+      "seed": 570005,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 58,
+      "p": 0.36,
+      "q": 0.75,
+      "seed": 570005,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 65,
+      "p": 0.4,
+      "q": 0.75,
+      "seed": 570005,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 83,
+      "p": 0.45,
+      "q": 0.75,
+      "seed": 570005,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 89,
+      "p": 0.49,
+      "q": 0.75,
+      "seed": 570005,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 0,
+      "p": 0.08,
+      "q": 0.75,
+      "seed": 570001,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 0,
+      "p": 0.12,
+      "q": 0.75,
+      "seed": 570001,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 1,
+      "p": 0.16,
+      "q": 0.75,
+      "seed": 570001,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 8,
+      "p": 0.2,
+      "q": 0.75,
+      "seed": 570001,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 11,
+      "p": 0.24,
+      "q": 0.75,
+      "seed": 570001,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 25,
+      "p": 0.28,
+      "q": 0.75,
+      "seed": 570001,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 41,
+      "p": 0.32,
+      "q": 0.75,
+      "seed": 570001,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 61,
+      "p": 0.36,
+      "q": 0.75,
+      "seed": 570001,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 72,
+      "p": 0.4,
+      "q": 0.75,
+      "seed": 570001,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 87,
+      "p": 0.45,
+      "q": 0.75,
+      "seed": 570001,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 84,
+      "p": 0.49,
+      "q": 0.75,
+      "seed": 570001,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 0,
+      "p": 0.08,
+      "q": 0.75,
+      "seed": 570002,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 2,
+      "p": 0.12,
+      "q": 0.75,
+      "seed": 570002,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 4,
+      "p": 0.16,
+      "q": 0.75,
+      "seed": 570002,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 8,
+      "p": 0.2,
+      "q": 0.75,
+      "seed": 570002,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 24,
+      "p": 0.24,
+      "q": 0.75,
+      "seed": 570002,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 30,
+      "p": 0.28,
+      "q": 0.75,
+      "seed": 570002,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 47,
+      "p": 0.32,
+      "q": 0.75,
+      "seed": 570002,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 57,
+      "p": 0.36,
+      "q": 0.75,
+      "seed": 570002,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 76,
+      "p": 0.4,
+      "q": 0.75,
+      "seed": 570002,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 85,
+      "p": 0.45,
+      "q": 0.75,
+      "seed": 570002,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 85,
+      "p": 0.49,
+      "q": 0.75,
+      "seed": 570002,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 0,
+      "p": 0.08,
+      "q": 0.75,
+      "seed": 570003,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 0,
+      "p": 0.12,
+      "q": 0.75,
+      "seed": 570003,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 1,
+      "p": 0.16,
+      "q": 0.75,
+      "seed": 570003,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 4,
+      "p": 0.2,
+      "q": 0.75,
+      "seed": 570003,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 14,
+      "p": 0.24,
+      "q": 0.75,
+      "seed": 570003,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 19,
+      "p": 0.28,
+      "q": 0.75,
+      "seed": 570003,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 40,
+      "p": 0.32,
+      "q": 0.75,
+      "seed": 570003,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 58,
+      "p": 0.36,
+      "q": 0.75,
+      "seed": 570003,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 59,
+      "p": 0.4,
+      "q": 0.75,
+      "seed": 570003,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 66,
+      "p": 0.45,
+      "q": 0.75,
+      "seed": 570003,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 85,
+      "p": 0.49,
+      "q": 0.75,
+      "seed": 570003,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 0,
+      "p": 0.08,
+      "q": 0.75,
+      "seed": 570004,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 0,
+      "p": 0.12,
+      "q": 0.75,
+      "seed": 570004,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 3,
+      "p": 0.16,
+      "q": 0.75,
+      "seed": 570004,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 7,
+      "p": 0.2,
+      "q": 0.75,
+      "seed": 570004,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 20,
+      "p": 0.24,
+      "q": 0.75,
+      "seed": 570004,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 33,
+      "p": 0.28,
+      "q": 0.75,
+      "seed": 570004,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 53,
+      "p": 0.32,
+      "q": 0.75,
+      "seed": 570004,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 48,
+      "p": 0.36,
+      "q": 0.75,
+      "seed": 570004,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 71,
+      "p": 0.4,
+      "q": 0.75,
+      "seed": 570004,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 94,
+      "p": 0.45,
+      "q": 0.75,
+      "seed": 570004,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 92,
+      "p": 0.49,
+      "q": 0.75,
+      "seed": 570004,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 0,
+      "p": 0.08,
+      "q": 0.75,
+      "seed": 570005,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 0,
+      "p": 0.12,
+      "q": 0.75,
+      "seed": 570005,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 0,
+      "p": 0.16,
+      "q": 0.75,
+      "seed": 570005,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 5,
+      "p": 0.2,
+      "q": 0.75,
+      "seed": 570005,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 19,
+      "p": 0.24,
+      "q": 0.75,
+      "seed": 570005,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 39,
+      "p": 0.28,
+      "q": 0.75,
+      "seed": 570005,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 47,
+      "p": 0.32,
+      "q": 0.75,
+      "seed": 570005,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 65,
+      "p": 0.36,
+      "q": 0.75,
+      "seed": 570005,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 76,
+      "p": 0.4,
+      "q": 0.75,
+      "seed": 570005,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 82,
+      "p": 0.45,
+      "q": 0.75,
+      "seed": 570005,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 94,
+      "p": 0.49,
+      "q": 0.75,
+      "seed": 570005,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 0,
+      "p": 0.08,
+      "q": 0.75,
+      "seed": 570001,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 0,
+      "p": 0.12,
+      "q": 0.75,
+      "seed": 570001,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 2,
+      "p": 0.16,
+      "q": 0.75,
+      "seed": 570001,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 6,
+      "p": 0.2,
+      "q": 0.75,
+      "seed": 570001,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 13,
+      "p": 0.24,
+      "q": 0.75,
+      "seed": 570001,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 30,
+      "p": 0.28,
+      "q": 0.75,
+      "seed": 570001,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 41,
+      "p": 0.32,
+      "q": 0.75,
+      "seed": 570001,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 56,
+      "p": 0.36,
+      "q": 0.75,
+      "seed": 570001,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 71,
+      "p": 0.4,
+      "q": 0.75,
+      "seed": 570001,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 92,
+      "p": 0.45,
+      "q": 0.75,
+      "seed": 570001,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 87,
+      "p": 0.49,
+      "q": 0.75,
+      "seed": 570001,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 0,
+      "p": 0.08,
+      "q": 0.75,
+      "seed": 570002,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 0,
+      "p": 0.12,
+      "q": 0.75,
+      "seed": 570002,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 1,
+      "p": 0.16,
+      "q": 0.75,
+      "seed": 570002,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 6,
+      "p": 0.2,
+      "q": 0.75,
+      "seed": 570002,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 16,
+      "p": 0.24,
+      "q": 0.75,
+      "seed": 570002,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 24,
+      "p": 0.28,
+      "q": 0.75,
+      "seed": 570002,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 46,
+      "p": 0.32,
+      "q": 0.75,
+      "seed": 570002,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 53,
+      "p": 0.36,
+      "q": 0.75,
+      "seed": 570002,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 72,
+      "p": 0.4,
+      "q": 0.75,
+      "seed": 570002,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 75,
+      "p": 0.45,
+      "q": 0.75,
+      "seed": 570002,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 78,
+      "p": 0.49,
+      "q": 0.75,
+      "seed": 570002,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 0,
+      "p": 0.08,
+      "q": 0.75,
+      "seed": 570003,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 0,
+      "p": 0.12,
+      "q": 0.75,
+      "seed": 570003,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 0,
+      "p": 0.16,
+      "q": 0.75,
+      "seed": 570003,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 2,
+      "p": 0.2,
+      "q": 0.75,
+      "seed": 570003,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 8,
+      "p": 0.24,
+      "q": 0.75,
+      "seed": 570003,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 30,
+      "p": 0.28,
+      "q": 0.75,
+      "seed": 570003,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 41,
+      "p": 0.32,
+      "q": 0.75,
+      "seed": 570003,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 69,
+      "p": 0.36,
+      "q": 0.75,
+      "seed": 570003,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 72,
+      "p": 0.4,
+      "q": 0.75,
+      "seed": 570003,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 86,
+      "p": 0.45,
+      "q": 0.75,
+      "seed": 570003,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 77,
+      "p": 0.49,
+      "q": 0.75,
+      "seed": 570003,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 0,
+      "p": 0.08,
+      "q": 0.75,
+      "seed": 570004,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 0,
+      "p": 0.12,
+      "q": 0.75,
+      "seed": 570004,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 0,
+      "p": 0.16,
+      "q": 0.75,
+      "seed": 570004,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 7,
+      "p": 0.2,
+      "q": 0.75,
+      "seed": 570004,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 16,
+      "p": 0.24,
+      "q": 0.75,
+      "seed": 570004,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 22,
+      "p": 0.28,
+      "q": 0.75,
+      "seed": 570004,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 45,
+      "p": 0.32,
+      "q": 0.75,
+      "seed": 570004,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 72,
+      "p": 0.36,
+      "q": 0.75,
+      "seed": 570004,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 81,
+      "p": 0.4,
+      "q": 0.75,
+      "seed": 570004,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 83,
+      "p": 0.45,
+      "q": 0.75,
+      "seed": 570004,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 103,
+      "p": 0.49,
+      "q": 0.75,
+      "seed": 570004,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 0,
+      "p": 0.08,
+      "q": 0.75,
+      "seed": 570005,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 0,
+      "p": 0.12,
+      "q": 0.75,
+      "seed": 570005,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 1,
+      "p": 0.16,
+      "q": 0.75,
+      "seed": 570005,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 5,
+      "p": 0.2,
+      "q": 0.75,
+      "seed": 570005,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 13,
+      "p": 0.24,
+      "q": 0.75,
+      "seed": 570005,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 33,
+      "p": 0.28,
+      "q": 0.75,
+      "seed": 570005,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 44,
+      "p": 0.32,
+      "q": 0.75,
+      "seed": 570005,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 59,
+      "p": 0.36,
+      "q": 0.75,
+      "seed": 570005,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 66,
+      "p": 0.4,
+      "q": 0.75,
+      "seed": 570005,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 85,
+      "p": 0.45,
+      "q": 0.75,
+      "seed": 570005,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 91,
+      "p": 0.49,
+      "q": 0.75,
+      "seed": 570005,
+      "shots": 200
+    }
+  ],
+  "q": 0.75,
+  "raw_records": {
+    "available_statistics": [
+      "per_seed",
+      "summaries"
+    ],
+    "format": "gzip_json_lines",
+    "path": "results/phase2-residual80-honeycomb-q075-discovery-1000-2026-08-28-raw.jsonl.gz",
+    "records": 33000,
+    "retention": "trajectory payload removed after count/hash validation",
+    "sha256": "b4b20b38f339938177f20610f247db0d10f2bff53e134bd9fad1446685fb87a9"
+  },
+  "runtime": {
+    "numba_available": true,
+    "numba_version": "0.65.0",
+    "numpy_version": "1.26.4",
+    "pymatching_version": "2.4.0",
+    "python_executable": "/Users/home/Documents/GitHub/emergent_classicality/lab/.venv/bin/python3",
+    "python_version": "3.13.2",
+    "scipy_version": "1.17.1"
+  },
+  "sampling": {
+    "error_rule": "x_e(p) = 1[u_e < p]",
+    "herald_rule": "h_v(p,q) = 1[d_v(p)>=2] 1[u_v<q]",
+    "master_rng": "numpy.default_rng(SeedSequence([0x48445233, lattice_id, L, seed]))",
+    "nested_common_random_numbers": true
+  },
+  "schema_version": 1,
+  "seeds": [
+    570001,
+    570002,
+    570003,
+    570004,
+    570005
+  ],
+  "shots_per_seed": 200,
+  "sizes": [
+    7,
+    9,
+    11
+  ],
+  "source_hashes": {
+    "damping_decoder": "a08ddf0b58e63bb2627c35cafbe570fe6a0ee8dc21bd4eaca720d6dbcbc5e182",
+    "decoder": "990af03ac4c99684e9e9dac6e5a8bb64d773015879c1638906f5fb592cdc6a43",
+    "lattice_model": "b87a5feba27675e26970360d730324b7d3740e4dc0492b4dc478e510f140c9e7",
+    "numba_kernels": "c2254c95600c4f5e3a8c2279d5686a99c8d3810a4bb0c814a4fd0cbf16c184cc",
+    "runner": "14adf7579825e64fa4dd74a6ff374207c3f7b55349b5b533c1ff054bf6d66474"
+  },
+  "source_stability": {
+    "checked_files": [
+      "damping_decoder",
+      "decoder",
+      "lattice_model",
+      "numba_kernels",
+      "runner"
+    ],
+    "enforcement": "fail before raw atomic finalization",
+    "start_equals_end": true
+  },
+  "summaries": [
+    {
+      "L": 7,
+      "bp_convergence_rate": 0.938,
+      "decoder": "herald_residual_priority_bp_llr_mwpm",
+      "detectors": 96,
+      "edges": 146,
+      "lattice": "honeycomb",
+      "logical_error_ci95": [
+        2.168404344971009e-19,
+        0.0038267584855551234
+      ],
+      "logical_error_rate": 0.0,
+      "logical_errors": 0,
+      "mean_bp_iterations": 31.707,
+      "mean_bp_max_message_delta": 3.313576605614476e-05,
+      "mean_decode_ms": 3.75545640711789,
+      "p": 0.08,
+      "q": 0.75,
+      "shots": 1000,
+      "syndrome_faithful_shots": 1000,
+      "syndrome_fidelity_rate": 1.0
+    },
+    {
+      "L": 7,
+      "bp_convergence_rate": 0.848,
+      "decoder": "herald_residual_priority_bp_llr_mwpm",
+      "detectors": 96,
+      "edges": 146,
+      "lattice": "honeycomb",
+      "logical_error_ci95": [
+        0.0015565881404084308,
+        0.010239556277262253
+      ],
+      "logical_error_rate": 0.004,
+      "logical_errors": 4,
+      "mean_bp_iterations": 42.232,
+      "mean_bp_max_message_delta": 6.894889883036947e-05,
+      "mean_decode_ms": 3.6736420456145424,
+      "p": 0.12,
+      "q": 0.75,
+      "shots": 1000,
+      "syndrome_faithful_shots": 1000,
+      "syndrome_fidelity_rate": 1.0
+    },
+    {
+      "L": 7,
+      "bp_convergence_rate": 0.72,
+      "decoder": "herald_residual_priority_bp_llr_mwpm",
+      "detectors": 96,
+      "edges": 146,
+      "lattice": "honeycomb",
+      "logical_error_ci95": [
+        0.014572707764791058,
+        0.03308567334739963
+      ],
+      "logical_error_rate": 0.022,
+      "logical_errors": 22,
+      "mean_bp_iterations": 53.846,
+      "mean_bp_max_message_delta": 9.919227910052384e-05,
+      "mean_decode_ms": 4.237889155076118,
+      "p": 0.16,
+      "q": 0.75,
+      "shots": 1000,
+      "syndrome_faithful_shots": 1000,
+      "syndrome_fidelity_rate": 1.0
+    },
+    {
+      "L": 7,
+      "bp_convergence_rate": 0.625,
+      "decoder": "herald_residual_priority_bp_llr_mwpm",
+      "detectors": 96,
+      "edges": 146,
+      "lattice": "honeycomb",
+      "logical_error_ci95": [
+        0.03813026239274882,
+        0.06531382024425081
+      ],
+      "logical_error_rate": 0.05,
+      "logical_errors": 50,
+      "mean_bp_iterations": 62.492,
+      "mean_bp_max_message_delta": 9.305973759740799e-05,
+      "mean_decode_ms": 4.839014500961639,
+      "p": 0.2,
+      "q": 0.75,
+      "shots": 1000,
+      "syndrome_faithful_shots": 1000,
+      "syndrome_fidelity_rate": 1.0
+    },
+    {
+      "L": 7,
+      "bp_convergence_rate": 0.611,
+      "decoder": "herald_residual_priority_bp_llr_mwpm",
+      "detectors": 96,
+      "edges": 146,
+      "lattice": "honeycomb",
+      "logical_error_ci95": [
+        0.08473913518484719,
+        0.12230696456965467
+      ],
+      "logical_error_rate": 0.102,
+      "logical_errors": 102,
+      "mean_bp_iterations": 66.613,
+      "mean_bp_max_message_delta": 5.9812813157140075e-05,
+      "mean_decode_ms": 5.1504416467796545,
+      "p": 0.24,
+      "q": 0.75,
+      "shots": 1000,
+      "syndrome_faithful_shots": 1000,
+      "syndrome_fidelity_rate": 1.0
+    },
+    {
+      "L": 7,
+      "bp_convergence_rate": 0.655,
+      "decoder": "herald_residual_priority_bp_llr_mwpm",
+      "detectors": 96,
+      "edges": 146,
+      "lattice": "honeycomb",
+      "logical_error_ci95": [
+        0.14704962548581355,
+        0.193483688631624
+      ],
+      "logical_error_rate": 0.169,
+      "logical_errors": 169,
+      "mean_bp_iterations": 67.489,
+      "mean_bp_max_message_delta": 2.8401701599545152e-05,
+      "mean_decode_ms": 5.046217304770835,
+      "p": 0.28,
+      "q": 0.75,
+      "shots": 1000,
+      "syndrome_faithful_shots": 1000,
+      "syndrome_fidelity_rate": 1.0
+    },
+    {
+      "L": 7,
+      "bp_convergence_rate": 0.731,
+      "decoder": "herald_residual_priority_bp_llr_mwpm",
+      "detectors": 96,
+      "edges": 146,
+      "lattice": "honeycomb",
+      "logical_error_ci95": [
+        0.21168136426041648,
+        0.2643315107029855
+      ],
+      "logical_error_rate": 0.237,
+      "logical_errors": 237,
+      "mean_bp_iterations": 65.648,
+      "mean_bp_max_message_delta": 1.5185081753127411e-05,
+      "mean_decode_ms": 5.117271004244685,
+      "p": 0.32,
+      "q": 0.75,
+      "shots": 1000,
+      "syndrome_faithful_shots": 1000,
+      "syndrome_fidelity_rate": 1.0
+    },
+    {
+      "L": 7,
+      "bp_convergence_rate": 0.812,
+      "decoder": "herald_residual_priority_bp_llr_mwpm",
+      "detectors": 96,
+      "edges": 146,
+      "lattice": "honeycomb",
+      "logical_error_ci95": [
+        0.25788577698507104,
+        0.3137597291637176
+      ],
+      "logical_error_rate": 0.285,
+      "logical_errors": 285,
+      "mean_bp_iterations": 63.215,
+      "mean_bp_max_message_delta": 7.880578271808477e-06,
+      "mean_decode_ms": 5.002214380336227,
+      "p": 0.36,
+      "q": 0.75,
+      "shots": 1000,
+      "syndrome_faithful_shots": 1000,
+      "syndrome_fidelity_rate": 1.0
+    },
+    {
+      "L": 7,
+      "bp_convergence_rate": 0.874,
+      "decoder": "herald_residual_priority_bp_llr_mwpm",
+      "detectors": 96,
+      "edges": 146,
+      "lattice": "honeycomb",
+      "logical_error_ci95": [
+        0.30837644459788477,
+        0.36687107866840624
+      ],
+      "logical_error_rate": 0.337,
+      "logical_errors": 337,
+      "mean_bp_iterations": 60.267,
+      "mean_bp_max_message_delta": 3.551244548668786e-06,
+      "mean_decode_ms": 4.873988326668041,
+      "p": 0.4,
+      "q": 0.75,
+      "shots": 1000,
+      "syndrome_faithful_shots": 1000,
+      "syndrome_fidelity_rate": 1.0
+    },
+    {
+      "L": 7,
+      "bp_convergence_rate": 0.927,
+      "decoder": "herald_residual_priority_bp_llr_mwpm",
+      "detectors": 96,
+      "edges": 146,
+      "lattice": "honeycomb",
+      "logical_error_ci95": [
+        0.3651584457395731,
+        0.4256451735423935
+      ],
+      "logical_error_rate": 0.395,
+      "logical_errors": 395,
+      "mean_bp_iterations": 56.24,
+      "mean_bp_max_message_delta": 2.140939600731001e-06,
+      "mean_decode_ms": 4.641286078491248,
+      "p": 0.45,
+      "q": 0.75,
+      "shots": 1000,
+      "syndrome_faithful_shots": 1000,
+      "syndrome_fidelity_rate": 1.0
+    },
+    {
+      "L": 7,
+      "bp_convergence_rate": 0.944,
+      "decoder": "herald_residual_priority_bp_llr_mwpm",
+      "detectors": 96,
+      "edges": 146,
+      "lattice": "honeycomb",
+      "logical_error_ci95": [
+        0.3809022198018245,
+        0.4417789432086042
+      ],
+      "logical_error_rate": 0.411,
+      "logical_errors": 411,
+      "mean_bp_iterations": 54.038,
+      "mean_bp_max_message_delta": 2.5525234022428512e-06,
+      "mean_decode_ms": 4.519657666736748,
+      "p": 0.49,
+      "q": 0.75,
+      "shots": 1000,
+      "syndrome_faithful_shots": 1000,
+      "syndrome_fidelity_rate": 1.0
+    },
+    {
+      "L": 9,
+      "bp_convergence_rate": 0.884,
+      "decoder": "herald_residual_priority_bp_llr_mwpm",
+      "detectors": 160,
+      "edges": 242,
+      "lattice": "honeycomb",
+      "logical_error_ci95": [
+        2.168404344971009e-19,
+        0.0038267584855551234
+      ],
+      "logical_error_rate": 0.0,
+      "logical_errors": 0,
+      "mean_bp_iterations": 36.766,
+      "mean_bp_max_message_delta": 5.517727564578753e-05,
+      "mean_decode_ms": 5.11745083425194,
+      "p": 0.08,
+      "q": 0.75,
+      "shots": 1000,
+      "syndrome_faithful_shots": 1000,
+      "syndrome_fidelity_rate": 1.0
+    },
+    {
+      "L": 9,
+      "bp_convergence_rate": 0.696,
+      "decoder": "herald_residual_priority_bp_llr_mwpm",
+      "detectors": 160,
+      "edges": 242,
+      "lattice": "honeycomb",
+      "logical_error_ci95": [
+        0.000548643588120728,
+        0.007262807863492177
+      ],
+      "logical_error_rate": 0.002,
+      "logical_errors": 2,
+      "mean_bp_iterations": 52.219,
+      "mean_bp_max_message_delta": 0.00012997184638505063,
+      "mean_decode_ms": 6.707963001419557,
+      "p": 0.12,
+      "q": 0.75,
+      "shots": 1000,
+      "syndrome_faithful_shots": 1000,
+      "syndrome_fidelity_rate": 1.0
+    },
+    {
+      "L": 9,
+      "bp_convergence_rate": 0.493,
+      "decoder": "herald_residual_priority_bp_llr_mwpm",
+      "detectors": 160,
+      "edges": 242,
+      "lattice": "honeycomb",
+      "logical_error_ci95": [
+        0.004742060667477063,
+        0.01701581616533807
+      ],
+      "logical_error_rate": 0.009,
+      "logical_errors": 9,
+      "mean_bp_iterations": 65.061,
+      "mean_bp_max_message_delta": 0.0002041820221678988,
+      "mean_decode_ms": 7.360045787267154,
+      "p": 0.16,
+      "q": 0.75,
+      "shots": 1000,
+      "syndrome_faithful_shots": 1000,
+      "syndrome_fidelity_rate": 1.0
+    },
+    {
+      "L": 9,
+      "bp_convergence_rate": 0.335,
+      "decoder": "herald_residual_priority_bp_llr_mwpm",
+      "detectors": 160,
+      "edges": 242,
+      "lattice": "honeycomb",
+      "logical_error_ci95": [
+        0.022757107858710962,
+        0.04482473808376865
+      ],
+      "logical_error_rate": 0.032,
+      "logical_errors": 32,
+      "mean_bp_iterations": 73.153,
+      "mean_bp_max_message_delta": 0.0001787580963935216,
+      "mean_decode_ms": 8.204877964861225,
+      "p": 0.2,
+      "q": 0.75,
+      "shots": 1000,
+      "syndrome_faithful_shots": 1000,
+      "syndrome_fidelity_rate": 1.0
+    },
+    {
+      "L": 9,
+      "bp_convergence_rate": 0.301,
+      "decoder": "herald_residual_priority_bp_llr_mwpm",
+      "detectors": 160,
+      "edges": 242,
+      "lattice": "honeycomb",
+      "logical_error_ci95": [
+        0.07198099794232085,
+        0.10717225104977657
+      ],
+      "logical_error_rate": 0.088,
+      "logical_errors": 88,
+      "mean_bp_iterations": 75.604,
+      "mean_bp_max_message_delta": 0.00011443464732338143,
+      "mean_decode_ms": 8.545669115817873,
+      "p": 0.24,
+      "q": 0.75,
+      "shots": 1000,
+      "syndrome_faithful_shots": 1000,
+      "syndrome_fidelity_rate": 1.0
+    },
+    {
+      "L": 9,
+      "bp_convergence_rate": 0.324,
+      "decoder": "herald_residual_priority_bp_llr_mwpm",
+      "detectors": 160,
+      "edges": 242,
+      "lattice": "honeycomb",
+      "logical_error_ci95": [
+        0.1254692734304005,
+        0.1692400715773725
+      ],
+      "logical_error_rate": 0.146,
+      "logical_errors": 146,
+      "mean_bp_iterations": 76.246,
+      "mean_bp_max_message_delta": 7.465040278905363e-05,
+      "mean_decode_ms": 8.738480618019821,
+      "p": 0.28,
+      "q": 0.75,
+      "shots": 1000,
+      "syndrome_faithful_shots": 1000,
+      "syndrome_fidelity_rate": 1.0
+    },
+    {
+      "L": 9,
+      "bp_convergence_rate": 0.438,
+      "decoder": "herald_residual_priority_bp_llr_mwpm",
+      "detectors": 160,
+      "edges": 242,
+      "lattice": "honeycomb",
+      "logical_error_ci95": [
+        0.20306677294819994,
+        0.25501498366794206
+      ],
+      "logical_error_rate": 0.228,
+      "logical_errors": 228,
+      "mean_bp_iterations": 75.013,
+      "mean_bp_max_message_delta": 5.009546886788291e-05,
+      "mean_decode_ms": 8.457302253576927,
+      "p": 0.32,
+      "q": 0.75,
+      "shots": 1000,
+      "syndrome_faithful_shots": 1000,
+      "syndrome_fidelity_rate": 1.0
+    },
+    {
+      "L": 9,
+      "bp_convergence_rate": 0.583,
+      "decoder": "herald_residual_priority_bp_llr_mwpm",
+      "detectors": 160,
+      "edges": 242,
+      "lattice": "honeycomb",
+      "logical_error_ci95": [
+        0.26175445197633085,
+        0.31786044010457337
+      ],
+      "logical_error_rate": 0.289,
+      "logical_errors": 289,
+      "mean_bp_iterations": 72.235,
+      "mean_bp_max_message_delta": 1.5484317925739442e-05,
+      "mean_decode_ms": 8.388244920963189,
+      "p": 0.36,
+      "q": 0.75,
+      "shots": 1000,
+      "syndrome_faithful_shots": 1000,
+      "syndrome_fidelity_rate": 1.0
+    },
+    {
+      "L": 9,
+      "bp_convergence_rate": 0.691,
+      "decoder": "herald_residual_priority_bp_llr_mwpm",
+      "detectors": 160,
+      "edges": 242,
+      "lattice": "honeycomb",
+      "logical_error_ci95": [
+        0.32497103040683056,
+        0.38414638307095145
+      ],
+      "logical_error_rate": 0.354,
+      "logical_errors": 354,
+      "mean_bp_iterations": 69.382,
+      "mean_bp_max_message_delta": 6.263706860878987e-06,
+      "mean_decode_ms": 8.31850586933433,
+      "p": 0.4,
+      "q": 0.75,
+      "shots": 1000,
+      "syndrome_faithful_shots": 1000,
+      "syndrome_fidelity_rate": 1.0
+    },
+    {
+      "L": 9,
+      "bp_convergence_rate": 0.81,
+      "decoder": "herald_residual_priority_bp_llr_mwpm",
+      "detectors": 160,
+      "edges": 242,
+      "lattice": "honeycomb",
+      "logical_error_ci95": [
+        0.3838578816406266,
+        0.44480032081888876
+      ],
+      "logical_error_rate": 0.414,
+      "logical_errors": 414,
+      "mean_bp_iterations": 65.056,
+      "mean_bp_max_message_delta": 4.206845114407457e-06,
+      "mean_decode_ms": 7.886328938679071,
+      "p": 0.45,
+      "q": 0.75,
+      "shots": 1000,
+      "syndrome_faithful_shots": 1000,
+      "syndrome_fidelity_rate": 1.0
+    },
+    {
+      "L": 9,
+      "bp_convergence_rate": 0.846,
+      "decoder": "herald_residual_priority_bp_llr_mwpm",
+      "detectors": 160,
+      "edges": 242,
+      "lattice": "honeycomb",
+      "logical_error_ci95": [
+        0.4095218538895405,
+        0.47093735712872614
+      ],
+      "logical_error_rate": 0.44,
+      "logical_errors": 440,
+      "mean_bp_iterations": 62.497,
+      "mean_bp_max_message_delta": 7.036716476996487e-06,
+      "mean_decode_ms": 7.533513419126393,
+      "p": 0.49,
+      "q": 0.75,
+      "shots": 1000,
+      "syndrome_faithful_shots": 1000,
+      "syndrome_fidelity_rate": 1.0
+    },
+    {
+      "L": 11,
+      "bp_convergence_rate": 0.829,
+      "decoder": "herald_residual_priority_bp_llr_mwpm",
+      "detectors": 240,
+      "edges": 362,
+      "lattice": "honeycomb",
+      "logical_error_ci95": [
+        2.168404344971009e-19,
+        0.0038267584855551234
+      ],
+      "logical_error_rate": 0.0,
+      "logical_errors": 0,
+      "mean_bp_iterations": 41.258,
+      "mean_bp_max_message_delta": 7.003570662761848e-05,
+      "mean_decode_ms": 8.844115692016203,
+      "p": 0.08,
+      "q": 0.75,
+      "shots": 1000,
+      "syndrome_faithful_shots": 1000,
+      "syndrome_fidelity_rate": 1.0
+    },
+    {
+      "L": 11,
+      "bp_convergence_rate": 0.579,
+      "decoder": "herald_residual_priority_bp_llr_mwpm",
+      "detectors": 240,
+      "edges": 362,
+      "lattice": "honeycomb",
+      "logical_error_ci95": [
+        2.168404344971009e-19,
+        0.0038267584855551234
+      ],
+      "logical_error_rate": 0.0,
+      "logical_errors": 0,
+      "mean_bp_iterations": 58.738,
+      "mean_bp_max_message_delta": 0.00021822436810813145,
+      "mean_decode_ms": 11.123001253698021,
+      "p": 0.12,
+      "q": 0.75,
+      "shots": 1000,
+      "syndrome_faithful_shots": 1000,
+      "syndrome_fidelity_rate": 1.0
+    },
+    {
+      "L": 11,
+      "bp_convergence_rate": 0.31,
+      "decoder": "herald_residual_priority_bp_llr_mwpm",
+      "detectors": 240,
+      "edges": 362,
+      "lattice": "honeycomb",
+      "logical_error_ci95": [
+        0.0015565881404084308,
+        0.010239556277262253
+      ],
+      "logical_error_rate": 0.004,
+      "logical_errors": 4,
+      "mean_bp_iterations": 72.339,
+      "mean_bp_max_message_delta": 0.0003246962456528837,
+      "mean_decode_ms": 12.86849684533081,
+      "p": 0.16,
+      "q": 0.75,
+      "shots": 1000,
+      "syndrome_faithful_shots": 1000,
+      "syndrome_fidelity_rate": 1.0
+    },
+    {
+      "L": 11,
+      "bp_convergence_rate": 0.152,
+      "decoder": "herald_residual_priority_bp_llr_mwpm",
+      "detectors": 240,
+      "edges": 362,
+      "lattice": "honeycomb",
+      "logical_error_ci95": [
+        0.017803938201616326,
+        0.03782382884268993
+      ],
+      "logical_error_rate": 0.026,
+      "logical_errors": 26,
+      "mean_bp_iterations": 77.638,
+      "mean_bp_max_message_delta": 0.0003108539075833181,
+      "mean_decode_ms": 14.879070585448062,
+      "p": 0.2,
+      "q": 0.75,
+      "shots": 1000,
+      "syndrome_faithful_shots": 1000,
+      "syndrome_fidelity_rate": 1.0
+    },
+    {
+      "L": 11,
+      "bp_convergence_rate": 0.12,
+      "decoder": "herald_residual_priority_bp_llr_mwpm",
+      "detectors": 240,
+      "edges": 362,
+      "lattice": "honeycomb",
+      "logical_error_ci95": [
+        0.05221235045948584,
+        0.08310927590597601
+      ],
+      "logical_error_rate": 0.066,
+      "logical_errors": 66,
+      "mean_bp_iterations": 79.028,
+      "mean_bp_max_message_delta": 0.00020588114060235546,
+      "mean_decode_ms": 14.08679865981685,
+      "p": 0.24,
+      "q": 0.75,
+      "shots": 1000,
+      "syndrome_faithful_shots": 1000,
+      "syndrome_fidelity_rate": 1.0
+    },
+    {
+      "L": 11,
+      "bp_convergence_rate": 0.117,
+      "decoder": "herald_residual_priority_bp_llr_mwpm",
+      "detectors": 240,
+      "edges": 362,
+      "lattice": "honeycomb",
+      "logical_error_ci95": [
+        0.11893638905078911,
+        0.16182653057578172
+      ],
+      "logical_error_rate": 0.139,
+      "logical_errors": 139,
+      "mean_bp_iterations": 79.041,
+      "mean_bp_max_message_delta": 0.00012882075165571196,
+      "mean_decode_ms": 14.438213491957868,
+      "p": 0.28,
+      "q": 0.75,
+      "shots": 1000,
+      "syndrome_faithful_shots": 1000,
+      "syndrome_fidelity_rate": 1.0
+    },
+    {
+      "L": 11,
+      "bp_convergence_rate": 0.227,
+      "decoder": "herald_residual_priority_bp_llr_mwpm",
+      "detectors": 240,
+      "edges": 362,
+      "lattice": "honeycomb",
+      "logical_error_ci95": [
+        0.19256080207751963,
+        0.24360514322530458
+      ],
+      "logical_error_rate": 0.217,
+      "logical_errors": 217,
+      "mean_bp_iterations": 78.167,
+      "mean_bp_max_message_delta": 7.152457613187913e-05,
+      "mean_decode_ms": 14.21751378281624,
+      "p": 0.32,
+      "q": 0.75,
+      "shots": 1000,
+      "syndrome_faithful_shots": 1000,
+      "syndrome_fidelity_rate": 1.0
+    },
+    {
+      "L": 11,
+      "bp_convergence_rate": 0.39,
+      "decoder": "herald_residual_priority_bp_llr_mwpm",
+      "detectors": 240,
+      "edges": 362,
+      "lattice": "honeycomb",
+      "logical_error_ci95": [
+        0.28113685771666347,
+        0.33832496402481854
+      ],
+      "logical_error_rate": 0.309,
+      "logical_errors": 309,
+      "mean_bp_iterations": 76.332,
+      "mean_bp_max_message_delta": 2.8121814844619843e-05,
+      "mean_decode_ms": 13.889686037495267,
+      "p": 0.36,
+      "q": 0.75,
+      "shots": 1000,
+      "syndrome_faithful_shots": 1000,
+      "syndrome_fidelity_rate": 1.0
+    },
+    {
+      "L": 11,
+      "bp_convergence_rate": 0.528,
+      "decoder": "herald_residual_priority_bp_llr_mwpm",
+      "detectors": 240,
+      "edges": 362,
+      "lattice": "honeycomb",
+      "logical_error_ci95": [
+        0.33279441286747335,
+        0.39226177247453986
+      ],
+      "logical_error_rate": 0.362,
+      "logical_errors": 362,
+      "mean_bp_iterations": 73.852,
+      "mean_bp_max_message_delta": 1.760401543673136e-05,
+      "mean_decode_ms": 13.83160542146652,
+      "p": 0.4,
+      "q": 0.75,
+      "shots": 1000,
+      "syndrome_faithful_shots": 1000,
+      "syndrome_fidelity_rate": 1.0
+    },
+    {
+      "L": 11,
+      "bp_convergence_rate": 0.68,
+      "decoder": "herald_residual_priority_bp_llr_mwpm",
+      "detectors": 240,
+      "edges": 362,
+      "lattice": "honeycomb",
+      "logical_error_ci95": [
+        0.39075893140651674,
+        0.4518456964342009
+      ],
+      "logical_error_rate": 0.421,
+      "logical_errors": 421,
+      "mean_bp_iterations": 69.71,
+      "mean_bp_max_message_delta": 1.2393400242633503e-05,
+      "mean_decode_ms": 13.4233763491211,
+      "p": 0.45,
+      "q": 0.75,
+      "shots": 1000,
+      "syndrome_faithful_shots": 1000,
+      "syndrome_fidelity_rate": 1.0
+    },
+    {
+      "L": 11,
+      "bp_convergence_rate": 0.757,
+      "decoder": "herald_residual_priority_bp_llr_mwpm",
+      "detectors": 240,
+      "edges": 362,
+      "lattice": "honeycomb",
+      "logical_error_ci95": [
+        0.4055679635294317,
+        0.46692186155671933
+      ],
+      "logical_error_rate": 0.436,
+      "logical_errors": 436,
+      "mean_bp_iterations": 67.196,
+      "mean_bp_max_message_delta": 1.4141166658692979e-05,
+      "mean_decode_ms": 12.502023591223406,
+      "p": 0.49,
+      "q": 0.75,
+      "shots": 1000,
+      "syndrome_faithful_shots": 1000,
+      "syndrome_fidelity_rate": 1.0
+    }
+  ],
+  "syndrome_fidelity": {
+    "all_faithful": true,
+    "checked_corrections": 33000,
+    "enforcement": "raise before raw-row write and atomic shard finalization",
+    "failures": 0,
+    "faithful_corrections": 33000
+  },
+  "total_shots_per_cell": 1000
+}

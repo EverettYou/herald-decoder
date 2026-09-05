@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-29T07:04:20.273041+00:00",
+  "status": "first_stage_loss_bridge_audited",
+  "lattice": {
+    "size": 2,
+    "vertex_count": 8,
+    "edge_count": 12
+  },
+  "matrix": {
+    "o0_observation_count": 128,
+    "o2_observation_count": 16230,
+    "action_counts_per_syndrome": [
+      32
+    ],
+    "candidate_action_evaluations": 127136,
+    "distinct_union_masks_classified": 4096,
+    "distinct_herald_decoder_inputs": 3068,
+    "o0_xor_sector_loss_insufficient_observation_count": 128,
+    "o2_xor_sector_loss_insufficient_observation_count": 2485
+  },
+  "prior_summaries": [
+    {
+      "p": 0.1,
+      "terminal_winding_prior_mass": 0.00040076556300000017,
+      "o0_flux_only": {
+        "nonwinding_observation_mass": 0.9995992344369992,
+        "exact_union_loss_bayes_risk": 0.136158604133643,
+        "production_union_loss_risk": 0.14140301708475192,
+        "algorithmic_excess_risk": 0.005244412951108964,
+        "xor_sector_bayes_risk": 0.1354854026906878,
+        "xor_sector_loss_insufficient_probability": 1.0
+      },
+      "o2_flux_and_charge": {
+        "nonwinding_observation_mass": 0.9995992344370643,
+        "exact_union_loss_bayes_risk": 0.04806116205266543,
+        "production_union_loss_risk": 0.09645675229210919,
+        "algorithmic_excess_risk": 0.0483955902394486,
+        "xor_sector_bayes_risk": 0.04768175260842604,
+        "xor_sector_loss_insufficient_probability": 0.009072992817073864
+      },
+      "decomposition": {
+        "exact_union_loss_information_gain": 0.08809744208097757,
+        "syndrome_only_algorithmic_excess": 0.005244412951108964,
+        "heralded_algorithmic_excess": 0.0483955902394486,
+        "production_risk_difference_o0_minus_o2": 0.04494626479264273
+      }
+    },
+    {
+      "p": 0.3,
+      "terminal_winding_prior_mass": 0.013186395242999992,
+      "o0_flux_only": {
+        "nonwinding_observation_mass": 0.9868136047569971,
+        "exact_union_loss_bayes_risk": 0.6187458652278679,
+        "production_union_loss_risk": 0.6364221470372327,
+        "algorithmic_excess_risk": 0.017676281809364987,
+        "xor_sector_bayes_risk": 0.5998500400009834,
+        "xor_sector_loss_insufficient_probability": 1.0
+      },
+      "o2_flux_and_charge": {
+        "nonwinding_observation_mass": 0.9868136047569718,
+        "exact_union_loss_bayes_risk": 0.2991599934687803,
+        "production_union_loss_risk": 0.5149759841403201,
+        "algorithmic_excess_risk": 0.21581599067156051,
+        "xor_sector_bayes_risk": 0.26563684495265777,
+        "xor_sector_loss_insufficient_probability": 0.1687292220043976
+      },
+      "decomposition": {
+        "exact_union_loss_information_gain": 0.3195858717590876,
+        "syndrome_only_algorithmic_excess": 0.017676281809364987,
+        "heralded_algorithmic_excess": 0.21581599067156051,
+        "production_risk_difference_o0_minus_o2": 0.12144616289691257
+      }
+    },
+    {
+      "p": 0.5,
+      "terminal_winding_prior_mass": 0.030029296875,
+      "o0_flux_only": {
+        "nonwinding_observation_mass": 0.969970703125,
+        "exact_union_loss_bayes_risk": 0.8560281902844198,
+        "production_union_loss_risk": 0.8560281902844198,
+        "algorithmic_excess_risk": 0.0,
+        "xor_sector_bayes_risk": 0.7767430153536371,
+        "xor_sector_loss_insufficient_probability": 1.0
+      },
+      "o2_flux_and_charge": {
+        "nonwinding_observation_mass": 0.969970703125,
+        "exact_union_loss_bayes_risk": 0.6617165869619934,
+        "production_union_loss_risk": 0.8407650075509691,
+        "algorithmic_excess_risk": 0.17904842058897558,
+        "xor_sector_bayes_risk": 0.511955700981626,
+        "xor_sector_loss_insufficient_probability": 0.4596023156305059
+      },
+      "decomposition": {
+        "exact_union_loss_information_gain": 0.19431160332242636,
+        "syndrome_only_algorithmic_excess": 0.0,
+        "heralded_algorithmic_excess": 0.17904842058897558,
+        "production_risk_difference_o0_minus_o2": 0.01526318273345073
+      }
+    },
+    {
+      "p": 0.6,
+      "terminal_winding_prior_mass": 0.026929594368,
+      "o0_flux_only": {
+        "nonwinding_observation_mass": 0.9730704056319994,
+        "exact_union_loss_bayes_risk": 0.9047424699636234,
+        "production_union_loss_risk": 0.905615322076979,
+        "algorithmic_excess_risk": 0.000872852113355945,
+        "xor_sector_bayes_risk": 0.7308987547659231,
+        "xor_sector_loss_insufficient_probability": 1.0
+      },
+      "o2_flux_and_charge": {
+        "nonwinding_observation_mass": 0.9730704056319691,
+        "exact_union_loss_bayes_risk": 0.8138785649632879,
+        "production_union_loss_risk": 0.9307235154765457,
+        "algorithmic_excess_risk": 0.11684495051327466,
+        "xor_sector_bayes_risk": 0.5332126269558242,
+        "xor_sector_loss_insufficient_probability": 0.6164594197831228
+      },
+      "decomposition": {
+        "exact_union_loss_information_gain": 0.09086390500033548,
+        "syndrome_only_algorithmic_excess": 0.000872852113355945,
+        "heralded_algorithmic_excess": 0.11684495051327466,
+        "production_risk_difference_o0_minus_o2": -0.025108193399566714
+      }
+    }
+  ],
+  "validation": {
+    "maximum_action_boundary_error": 0,
+    "syndrome_only_action_membership_failures": 0,
+    "heralded_action_membership_failures": 0,
+    "maximum_o0_vs_marginalized_o2_flux_evidence_error": 1.3877787807814457e-15,
+    "maximum_global_normalization_error": 6.439293542825908e-14,
+    "maximum_exact_lower_bound_violation": 0.0,
+    "maximum_r4_3_xor_sector_risk_recovery_error": 6.217248937900877e-15,
+    "maximum_observation_direct_union_vs_xor_sector_risk_gap": 1.0,
+    "production_decoder_truth_inputs": [],
+    "postflux_second_measurement_used": false
+  },
+  "new_stochastic_samples": 0,
+  "claim_boundary": "Complete exact first-stage primitive nonwinding audit under Appendix-A Boolean-union loss. It excludes the adaptive second measurement and is not a full decoder benchmark, LER, threshold, or scalable result.",
+  "prior_summary_digest_sha256": "412d92af86132dfd9ec459f480a383f054ea9411000df15682f39c4af3fd4b4b",
+  "manifest": {
+    "path": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-004-d4-intrinsic-heralded-decoding/manifests/r4-first-stage-loss-bridge-manifest-2026-08-29.json",
+    "sha256": "fc7abc53eefa5408e699370b47dfe717cdb2d650f128fdf4eb80a73a8c7e1645"
+  },
+  "implementation": {
+    "path": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-004-d4-intrinsic-heralded-decoding/scripts/run_r4_first_stage_loss_bridge.py",
+    "sha256": "d60cd198946476a2aaa07a8bc72709693884a61bd48a8e5520f94d9103a8d3f5"
+  }
+}

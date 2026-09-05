@@ -1,0 +1,44 @@
+{
+  "acceptance": {
+    "all_stored_corrections_match_public_syndrome": true,
+    "independent_boolean_union_scorer_matches": true,
+    "provenance_regenerated": true,
+    "public_only_shadow_replay_exact_matches": true
+  },
+  "claim_boundary": "This audits R6U provenance, scorer, and decoder input boundary. It neither validates BP convergence nor establishes an LER curve or threshold.",
+  "compaction": {
+    "retained": [
+      "scope",
+      "acceptance",
+      "shadow_summary",
+      "truth_leakage_boundary",
+      "claim_boundary"
+    ],
+    "rows_omitted": 375,
+    "source_bytes": 7005681,
+    "source_sha256": "42f216d7a1ef5856098efafe68f7efe2e9172caf0a3d007ccfe866d354ccbd07",
+    "validation": "omitted row count equals registered replay scope"
+  },
+  "generated_at": "2026-08-31T04:04:07.156064+00:00",
+  "input": "r6u-d4-native-three-policy-curve-2026-08-30.json",
+  "integrity_gate_passed": true,
+  "schema_version": 1,
+  "scope": {
+    "all_r6u_nonterminal_rows": 375,
+    "zero_failure_rows_replayed": 375
+  },
+  "shadow_summary": {
+    "shadow_converged": 1,
+    "shadow_correction_matches": 1,
+    "shadow_correction_mismatches": 0,
+    "shadow_nonconverged": 0
+  },
+  "status": "completed_r6u_bp_zero_failure_integrity_audit",
+  "truth_leakage_boundary": {
+    "bp_graph_constructed": true,
+    "bp_graph_input_constructed_as_public_observation": true,
+    "interpretation": "The implementation builds BP from public syndrome/charge; physical truth is passed only to the subsequent scorer. The dynamic shadow replay separately enforces this boundary.",
+    "source": "run_r6n_default_flux_policy_comparison.py",
+    "truth_referenced_score_call_present": true
+  }
+}

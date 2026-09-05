@@ -1,0 +1,37 @@
+{
+  "id": "lab006-a3-full-irrep-interface-remediation-2026-09-04",
+  "status": "complete",
+  "registered_before_implementation": true,
+  "model_correction": "The only decoder-visible vertex record is s_v=(m_v,R_v). R_v itself is the representation-resolved heralding signal; H_v is not an alternate observation mode.",
+  "frozen_observation": {
+    "m_v": "directly supplied binary boundary syndrome",
+    "R_v": "directly supplied complete local irrep outcome",
+    "excluded": [
+      "coarse-graining R_v to a binary herald",
+      "a separate H_v field",
+      "a herald response channel",
+      "a herald flip parameter eta",
+      "a latent sum over the observed R_v in the full-irrep arm"
+    ]
+  },
+  "frozen_local_factor": "psi_v(e_partial_v;m_v,R_v)=K_m(m_v||L_v(e)| mod 2) P(R_v|L_v(e))",
+  "scope": [
+    "Lab 006 derivation and plan",
+    "reference and accelerated BP implementations",
+    "small-graph and A1 deterministic evidence",
+    "A2 backend, API payload, controls, labels, and rendered artifact",
+    "Lab metadata, durable research state, and the Global Wiki synthesis"
+  ],
+  "acceptance_gates": [
+    "Every current Lab 006 public formula defines the observation as (m_v,R_v) only.",
+    "Current Lab 006 source code has no auxiliary H/coarse-graining/eta interface or likelihood factor; any heralding language refers only to the full R record.",
+    "Reference BP, compiled scalar BP, and compiled batch BP accept only m and full irrep arrays.",
+    "Registered tree exactness, loopy comparison, compiled equivalence, and syndrome-fidelity checks pass after deterministic regeneration.",
+    "The artifact request, API payload, controls, legend, node marks, and accessible text expose full irreps and m only.",
+    "The artifact compares paired m-only and (m,R) posteriors and visualizes Delta r=P(e|m,R)-P(e|m) with a signed color and magnitude encoding.",
+    "The exact Lab Results artifact and the Global Wiki page render without H/herald/coarse-graining claims.",
+    "Wiki lint and targeted Markdown/KaTeX rendering checks pass."
+  ],
+  "sampling": "No new scientific sampling allocation; deterministic fixtures and fixed-seed engineering evidence are regenerated under the corrected interface.",
+  "stop_rule": "Fail closed and keep this manifest active if any current Lab 006 public surface or executable interface still depends on an auxiliary H, coarse-graining, or eta."
+}

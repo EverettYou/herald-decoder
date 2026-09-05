@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-29T06:44:03.357823+00:00",
+  "status": "matched_nonwinding_information_hierarchy_audited",
+  "lattice": {
+    "size": 2,
+    "vertex_count": 8,
+    "edge_count": 12
+  },
+  "observation_hierarchy": {
+    "o2_distinct_flux_charge_observations": 16230,
+    "o0_distinct_flux_observations": 128,
+    "o2_to_o0_mapping_is_total_and_single_valued": true,
+    "mapping_digest_sha256": "ecd47002c87618fd35f9c3fc6815c7728bf2208ec16354d6ade45b189e87ad29",
+    "conditioned_channel": "nonwinding physical masks only",
+    "terminal_winding_status_is_decoder_visible": false
+  },
+  "prior_summaries": [
+    {
+      "p": 0.1,
+      "terminal_winding_prior_mass": 0.00040076556300000017,
+      "nonwinding_observation_mass": 0.9995992344370612,
+      "o0_flux_only": {
+        "mean_bayes_risk": 0.13548540269068823,
+        "mean_conditional_entropy_bits": 0.4369897580947585
+      },
+      "o2_flux_and_charge": {
+        "mean_bayes_risk": 0.04768175260843149,
+        "mean_conditional_entropy_bits": 0.10331380730563629
+      },
+      "fusion_charge_increment": {
+        "bayes_risk_reduction": 0.08780365008225674,
+        "conditional_mutual_information_bits": 0.3336759507891222
+      },
+      "data_processing": {
+        "bayes_risk_monotone": true,
+        "conditional_entropy_monotone": true
+      },
+      "r4_2_recovery_errors": {
+        "nonterminal_mass": 6.072919944699606e-14,
+        "o2_bayes_risk": 2.5396351688300456e-15,
+        "o2_entropy_bits": 4.010680676458378e-15
+      },
+      "maximum_charge_refinements_per_flux": 425
+    },
+    {
+      "p": 0.3,
+      "terminal_winding_prior_mass": 0.013186395242999992,
+      "nonwinding_observation_mass": 0.9868136047569287,
+      "o0_flux_only": {
+        "mean_bayes_risk": 0.599850040000983,
+        "mean_conditional_entropy_bits": 2.090666460289238
+      },
+      "o2_flux_and_charge": {
+        "mean_bayes_risk": 0.26563684495266293,
+        "mean_conditional_entropy_bits": 0.701365240881409
+      },
+      "fusion_charge_increment": {
+        "bayes_risk_reduction": 0.33421319504832003,
+        "conditional_mutual_information_bits": 1.389301219407829
+      },
+      "data_processing": {
+        "bayes_risk_monotone": true,
+        "conditional_entropy_monotone": true
+      },
+      "r4_2_recovery_errors": {
+        "nonterminal_mass": 7.049916206369744e-14,
+        "o2_bayes_risk": 1.3822276656583199e-14,
+        "o2_entropy_bits": 1.4210854715202004e-14
+      },
+      "maximum_charge_refinements_per_flux": 425
+    },
+    {
+      "p": 0.5,
+      "terminal_winding_prior_mass": 0.030029296875,
+      "nonwinding_observation_mass": 0.969970703125,
+      "o0_flux_only": {
+        "mean_bayes_risk": 0.7767430153536371,
+        "mean_conditional_entropy_bits": 2.604582314180473
+      },
+      "o2_flux_and_charge": {
+        "mean_bayes_risk": 0.511955700981626,
+        "mean_conditional_entropy_bits": 1.4821189215530466
+      },
+      "fusion_charge_increment": {
+        "bayes_risk_reduction": 0.2647873143720111,
+        "conditional_mutual_information_bits": 1.1224633926274263
+      },
+      "data_processing": {
+        "bayes_risk_monotone": true,
+        "conditional_entropy_monotone": true
+      },
+      "r4_2_recovery_errors": {
+        "nonterminal_mass": 0.0,
+        "o2_bayes_risk": 0.0,
+        "o2_entropy_bits": 4.5075054799781356e-14
+      },
+      "maximum_charge_refinements_per_flux": 425
+    },
+    {
+      "p": 0.6,
+      "terminal_winding_prior_mass": 0.026929594368,
+      "nonwinding_observation_mass": 0.9730704056319865,
+      "o0_flux_only": {
+        "mean_bayes_risk": 0.7308987547659227,
+        "mean_conditional_entropy_bits": 2.6228909796149855
+      },
+      "o2_flux_and_charge": {
+        "mean_bayes_risk": 0.533212626955818,
+        "mean_conditional_entropy_bits": 1.7248664206554276
+      },
+      "fusion_charge_increment": {
+        "bayes_risk_reduction": 0.19768612781010475,
+        "conditional_mutual_information_bits": 0.8980245589595579
+      },
+      "data_processing": {
+        "bayes_risk_monotone": true,
+        "conditional_entropy_monotone": true
+      },
+      "r4_2_recovery_errors": {
+        "nonterminal_mass": 1.3655743202889425e-14,
+        "o2_bayes_risk": 2.1094237467877974e-15,
+        "o2_entropy_bits": 7.038813976123492e-14
+      },
+      "maximum_charge_refinements_per_flux": 425
+    }
+  ],
+  "validation": {
+    "maximum_o0_posterior_normalization_error": 2.220446049250313e-16,
+    "maximum_o2_posterior_normalization_error": 2.220446049250313e-16,
+    "maximum_per_flux_sector_evidence_conservation_error": 1.3322676295501878e-15,
+    "maximum_total_nonwinding_mass_conservation_error": 6.916689443414725e-14,
+    "maximum_r4_2_aggregate_recovery_error": 7.049916206369744e-14,
+    "all_bayes_risk_inequalities_pass": true,
+    "all_conditional_entropy_inequalities_pass": true
+  },
+  "new_stochastic_samples": 0,
+  "claim_boundary": "Exact O0-versus-O2 information comparison on the primitive nonwinding-conditioned channel only; not a complete physical-channel comparison, LER, threshold, or scalable-decoder result.",
+  "manifest": {
+    "path": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-004-d4-intrinsic-heralded-decoding/manifests/r4-nonwinding-information-hierarchy-manifest-2026-08-29.json",
+    "sha256": "2e58f25f1caeda29f597cc656d2d37186ec6b1d5b1aab2cf3a1a37974cc1311f"
+  },
+  "implementation": {
+    "path": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-004-d4-intrinsic-heralded-decoding/scripts/run_r4_nonwinding_information_hierarchy.py",
+    "sha256": "bc570da7e95b12e0e5671596400a94013bffbcc4c78a0f7235f62f59559e66b2"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "registered_at": "2026-08-27T22:45:00Z",
+  "phase": "Phase 2 residual-priority confirmation",
+  "experiment": "Honeycomb q=0.75 residual-priority-80 5000-shot LER confirmation",
+  "scientific_role": "higher-statistics finite-size LER and crossing confirmation",
+  "lattice": "honeycomb",
+  "q": 0.75,
+  "sizes": [5, 7, 9, 11],
+  "p_grid": [0.08, 0.12, 0.16, 0.20, 0.24, 0.28, 0.32, 0.36, 0.40, 0.45, 0.49],
+  "seeds": [561001, 561002, 561003, 561004, 561005],
+  "shots_per_seed": 1000,
+  "shots_per_cell": 5000,
+  "total_decodes": 220000,
+  "decoder": {
+    "name": "HeraldAwareBpMatchingDecoder",
+    "recurrence_mode": "damping",
+    "damping": 0.25,
+    "max_iterations": 80,
+    "update_schedule": "residual_priority",
+    "residual_priority_order": "stable_sort",
+    "residual_priority_buffer_reuse": false,
+    "residual_priority_cached_products": false,
+    "matching_projection": "posterior_llr",
+    "p_m": 0.0,
+    "p_h": 0.0,
+    "use_numba": true
+  },
+  "cohort_policy": "standalone fresh-seed confirmation; compare with but do not silently pool the 1000-shot discovery wave",
+  "acceptance_gates": {
+    "raw_records": 220000,
+    "gzip_integrity": true,
+    "raw_sha256_matches_summary": true,
+    "syndrome_fidelity_failures": 0,
+    "syndrome_fidelity_rate_every_cell": 1.0,
+    "source_hashes_start_equal_end": true
+  },
+  "planned_outputs": {
+    "summary": "results/q075-honeycomb-residual80-confirmation-5000-2026-08-27.json",
+    "raw": "results/q075-honeycomb-residual80-confirmation-5000-2026-08-27-raw.jsonl.gz",
+    "analysis": "results/q075-honeycomb-residual80-confirmation-5000-2026-08-27-analysis.json",
+    "figure": "figures/q075-honeycomb-residual80-confirmation-5000-2026-08-27.png"
+  },
+  "stopping_rule": "Run exactly this 5000-shot matched grid, validate fidelity and provenance, then compare crossing stability with the discovery wave before any denser p refinement.",
+  "evidence_boundary": "This higher-statistics curve can confirm finite-size LER trends but cannot alone establish an asymptotic threshold."
+}

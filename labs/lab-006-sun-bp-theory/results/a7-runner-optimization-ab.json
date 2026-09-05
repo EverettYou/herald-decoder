@@ -1,0 +1,59 @@
+{
+  "protocol": "lab006-a7-runner-optimization-ab",
+  "status": "passed",
+  "fixed_seed_scope": {
+    "p": 0.18,
+    "record_batch": 256,
+    "full_runner_cells": [
+      {
+        "lattice": "square",
+        "L": 5,
+        "shots": 32,
+        "rows_match_exactly": true,
+        "legacy_seconds": 0.2393419579602778,
+        "optimized_seconds": 0.19426874991040677,
+        "speedup": 1.232014711942389
+      },
+      {
+        "lattice": "square",
+        "L": 9,
+        "shots": 32,
+        "rows_match_exactly": true,
+        "legacy_seconds": 4.445094708935358,
+        "optimized_seconds": 2.3201366249704733,
+        "speedup": 1.9158762725845626
+      },
+      {
+        "lattice": "honeycomb",
+        "L": 5,
+        "shots": 32,
+        "rows_match_exactly": true,
+        "legacy_seconds": 1.4697521249763668,
+        "optimized_seconds": 0.7224169169785455,
+        "speedup": 2.0344929505852307
+      },
+      {
+        "lattice": "honeycomb",
+        "L": 9,
+        "shots": 32,
+        "rows_match_exactly": true,
+        "legacy_seconds": 17.50059654098004,
+        "optimized_seconds": 2.3607589999446645,
+        "speedup": 7.413122873359902
+      }
+    ]
+  },
+  "record_generator": {
+    "m_and_all_group_label_codes_match_exactly": true,
+    "legacy_ms_per_shot": 6.3502029652227066,
+    "numba_ms_per_shot": 0.007518066468037432,
+    "speedup": 844.659061238708
+  },
+  "fixed_weight_matching": {
+    "scalar_and_decode_batch_corrections_match_exactly": true,
+    "scalar_ms_per_shot": 0.0687140313857526,
+    "decode_batch_ms_per_shot": 0.049218589992960915,
+    "speedup": 1.3960991445626514
+  },
+  "promotion": "passed: optimized implementation is exact on the stated A/B fixtures and faster in every measured component and full-run cell."
+}

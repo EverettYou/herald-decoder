@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "status": "analyzed",
+  "campaign": "phase-b2-honeycomb-gray-frontier-2026-08-28",
+  "purpose": "Smallest two-arm cohort that covers unresolved distance curvature and both upward- and downward-leaning shot-limited cells on the observed red/green frontier.",
+  "selection_evidence": {
+    "path": "results/phase-b2-honeycomb-gray-frontier-selection-2026-08-28.json",
+    "sha256": "04de23dedb794b5a796441d39e12e2096b8281ba5f4a49c18cc256512810062d",
+    "phase_map": "results/phase2-residual80-honeycomb-bayesian-fuzzy-trend-phase-2026-08-28.json",
+    "phase_map_sha256": "bf9b692081a64960ddbdb5fb2127c34547de3eae72b9498db678dbd335c7c27f",
+    "phase_b1": "results/phase-b1-honeycomb-l5-l13-bayesian-fuzzy-trend-2026-08-28.json",
+    "phase_b1_sha256": "e103b6bc29ea5e2862a3b3fc665d2f3b9415decd3b32f6cbbe729725a8090650"
+  },
+  "lattice": "honeycomb",
+  "new_seeds": [871001, 871002, 871003, 871004, 871005],
+  "shots_per_seed": 200,
+  "jobs": [
+    {"branch": "distance_leverage", "q": 0.20, "p": 0.08, "sizes": [5, 13], "expected_decodes": 2000},
+    {"branch": "shot_limited_upward_frontier", "q": 0.75, "p": 0.40, "sizes": [7, 9, 11], "expected_decodes": 3000},
+    {"branch": "shot_limited_downward_frontier", "q": 0.50, "p": 0.20, "sizes": [7, 9, 11], "expected_decodes": 3000}
+  ],
+  "reused_evidence": [
+    {
+      "q": 0.45,
+      "p": 0.20,
+      "sizes": [5, 7, 9, 11, 13],
+      "classification": "decodable",
+      "path": "results/phase-b1-honeycomb-l5-l13-bayesian-fuzzy-trend-2026-08-28.json",
+      "reason": "The full-grid curvature route is already resolved by audited Phase B1 data, so rerunning it would be duplicate compute."
+    }
+  ],
+  "job_count": 3,
+  "workers_cap": 3,
+  "expected_new_decodes": 8000,
+  "decoder": {
+    "name": "HeraldAwareBpMatchingDecoder",
+    "recurrence_mode": "damping",
+    "damping": 0.25,
+    "max_iterations": 80,
+    "update_schedule": "residual_priority",
+    "residual_priority_order": "stable_sort",
+    "residual_priority_buffer_reuse": false,
+    "residual_priority_cached_products": false,
+    "matching_projection": "posterior_llr",
+    "p_m": 0.0,
+    "p_h": 0.0,
+    "use_numba": true
+  },
+  "required_source_hashes": {
+    "runner": "14adf7579825e64fa4dd74a6ff374207c3f7b55349b5b533c1ff054bf6d66474",
+    "lattice_model": "b87a5feba27675e26970360d730324b7d3740e4dc0492b4dc478e510f140c9e7",
+    "decoder": "990af03ac4c99684e9e9dac6e5a8bb64d773015879c1638906f5fb592cdc6a43",
+    "damping_decoder": "a08ddf0b58e63bb2627c35cafbe570fe6a0ee8dc21bd4eaca720d6dbcbc5e182",
+    "numba_kernels": "c2254c95600c4f5e3a8c2279d5686a99c8d3810a4bb0c814a4fd0cbf16c184cc"
+  },
+  "analysis": {
+    "primary": "Bayesian posterior OLS linear-projection slope against code distance",
+    "classification_threshold": 0.90,
+    "prior_sensitivity": "Jeffreys Beta(1/2,1/2) primary and uniform Beta(1,1) sensitivity",
+    "distance_job_pooling": "Combine new L5/L13 counts with the existing audited L7/L9/L11 cohort at the same q,p.",
+    "shot_job_pooling": "Combine new independent L7/L9/L11 counts with the existing 1000 shots per size at the same q,p.",
+    "claim_boundary": "Update only these target cells; no interpolated boundary or asymptotic phase claim."
+  },
+  "preflight_gate": "Implement and test a non-overwriting job-specific dispatcher, completion audit, and pooled fuzzy-trend analyzer before launch.",
+  "stop_rule": "Stop after three jobs and 8000 new decodes. Do not add other gray cells, q/p midpoints, square jobs, or further distances before audit and analysis.",
+  "launch_gate": "closed_data_complete"
+}

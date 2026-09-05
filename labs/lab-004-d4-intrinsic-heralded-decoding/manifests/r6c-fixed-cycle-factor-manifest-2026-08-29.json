@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "status": "fixed cycle-activation representation verified on registered matrix; scalability unresolved",
+  "registered_at": "2026-08-29T16:25:00Z",
+  "title": "R6C fixed cycle-activation factor graph",
+  "rigor_tier": "bounded exact representation validation",
+  "program_alignment": {
+    "central_question": "Can the public D4 record be represented by an exact truth-free fixed factor graph before belief propagation is attempted?",
+    "scientific_layer": "WP3 scalable-decoder likelihood interface",
+    "epistemic_role": "exact finite-graph control and prerequisite",
+    "upstream_evidence": "R6B rejects preprocessing one direct parity-scope list from the public observation",
+    "downstream_gate": "a local connectivity-auxiliary compression may be attempted only after this fixed finite-graph control is exact"
+  },
+  "question": {
+    "research_question": "Does a fixed catalog of cycle-activation factors over latent edge variables, boundary edges, and public charge bits reproduce the exact D4 likelihood?",
+    "smallest_claim": "Exactness on the complete primitive fixture and the registered paper-L2 ambiguity records; no polynomial factor-count or BP claim.",
+    "G0": "direct observation-only scope preprocessing, rejected by R6B",
+    "G1": "one fixed activation factor for each homologically trivial simple cycle and charge colour",
+    "G2": "local connectivity auxiliaries, deferred until G1 exactness is verified"
+  },
+  "model": {
+    "activation": "a catalog cycle is active iff every cycle edge is selected and every other edge incident to its vertices is unselected",
+    "factor_value": "inactive -> 1; active and observed colour parity even -> 2; active and parity odd -> 0",
+    "local_weight": "flux/degree support times 2^{-number of measured degree-two vertices}",
+    "terminal": "nontrivial winding components remain terminal and receive no ordinary O2 likelihood",
+    "truth_boundary": "factor specifications are built from fixed lattice geometry only; activation depends on latent edge variables inside the factor, not simulator truth supplied as decoder input"
+  },
+  "matrix": {
+    "primitive_complete": "all 49855 compatible pairs from the frozen primitive-size-2 R4.2 catalog",
+    "paper_ambiguity": "all stored example candidate masks from every R6B ambiguous public record, with even-charge and one-bit parity-violation probes",
+    "catalogs": ["primitive periodic size=2 full trivial-cycle catalog", "paper-normalized L=2 full trivial-cycle catalog"],
+    "tolerance": 1e-14,
+    "budget": "under ten CPU minutes and 2 GiB; zero decoder-performance samples"
+  },
+  "acceptance_items": [
+    {"item": "registered G0/G1/G2 representation matrix", "status": "complete", "evidence": "r6c-fixed-cycle-factor-manifest-2026-08-29.json"},
+    {"item": "fixed cycle-factor implementation", "status": "verified", "evidence": "scripts/d4_belief_factorization.py; fixed geometry catalog and latent cycle/boundary activation factors; 9/9 focused tests pass"},
+    {"item": "primitive complete and paper ambiguity verification", "status": "verified", "evidence": "results/r6c-fixed-cycle-factor-audit.json; 0/49855 primitive mismatches and 0/120 paper ambiguity-probe mismatches across all nine R6B records"},
+    {"item": "factor-count/arity analysis and report", "status": "reported", "evidence": "results/r6c-fixed-cycle-factor-audit.md; primitive catalog 4 cycles, paper-L2 catalog 1068 cycles, maximum edge scope 36 and per-colour charge scope 11; 139/139 full-Lab tests pass"}
+  ],
+  "claim_boundary": "G1 exactness establishes a fixed finite-graph representation only. It does not establish polynomial scaling, local bounded arity, BP convergence, logical performance, threshold, or fault tolerance.",
+  "planned_outputs": [
+    "scripts/d4_belief_factorization.py",
+    "scripts/run_r6c_fixed_cycle_factor.py",
+    "results/r6c-fixed-cycle-factor-audit.json",
+    "results/r6c-fixed-cycle-factor-audit.md"
+  ]
+}

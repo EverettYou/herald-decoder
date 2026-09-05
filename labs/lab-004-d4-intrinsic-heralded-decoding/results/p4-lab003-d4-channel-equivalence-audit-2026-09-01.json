@@ -1,0 +1,190 @@
+{
+  "acceptance": {
+    "all_required_evidence_present": true,
+    "correlations_checked": true,
+    "decoder_checked": true,
+    "decoder_visible_record_checked": true,
+    "error_parameter_checked": true,
+    "geometry_checked": true,
+    "herald_conditioning_checked": true,
+    "latent_event_checked": true,
+    "logical_loss_checked": true
+  },
+  "candidate_reductions": [
+    {
+      "name": "degree-at-most-two support-only q=1 fixture",
+      "reason": "Conditions the physical ensemble, discards D4 signal values/correlations, changes q, geometry, decoder, and loss.",
+      "status": "toy_support_alignment_only"
+    },
+    {
+      "name": "randomly thin D4 degree-two signals to an apparent 3/4 rate",
+      "reason": "Added randomness cannot create Lab 003 degree-three herald support or remove D4 component correlations without changing the record.",
+      "status": "new_hybrid_channel_not_equivalence"
+    }
+  ],
+  "claim_boundary": "This audit prohibits direct numerical threshold or LER comparison. It does not assert that no separately derived common channel can ever be constructed.",
+  "closed_hexagon_support": {
+    "d4_colour_parity_constrained_support": 16,
+    "lab_003_conditional_independent_binary_support": 64
+  },
+  "comparison_allowed": false,
+  "corrected_d4_signal_event_table": [
+    {
+      "P_matching_colour_e_signal": 0.0,
+      "P_wrong_colour_e_signal": 0.0,
+      "P_zero_signal": 1.0,
+      "degree": 0
+    },
+    {
+      "P_matching_colour_e_signal": 0.0,
+      "P_wrong_colour_e_signal": 0.0,
+      "P_zero_signal": 1.0,
+      "degree": 1
+    },
+    {
+      "P_matching_colour_e_signal": 0.5,
+      "P_wrong_colour_e_signal": 0.0,
+      "P_zero_signal": 0.5,
+      "degree": 2
+    },
+    {
+      "P_matching_colour_e_signal": 0.0,
+      "P_wrong_colour_e_signal": 0.0,
+      "P_zero_signal": 1.0,
+      "degree": 3
+    }
+  ],
+  "decoder_provenance": {
+    "lab_003_manifest": "labs/lab-003-herald-threshold-phase-diagram/manifests/phase-b14-honeycomb-two-branch-acquisition-manifest-2026-08-28.json",
+    "lab_003_manifest_decoder": {
+      "damping": 0.25,
+      "matching_projection": "posterior_llr",
+      "max_iterations": 80,
+      "name": "HeraldAwareBpMatchingDecoder",
+      "p_h": 0.0,
+      "p_m": 0.0,
+      "recurrence_mode": "damping",
+      "residual_priority_buffer_reuse": false,
+      "residual_priority_cached_products": false,
+      "residual_priority_order": "stable_sort",
+      "update_schedule": "residual_priority",
+      "use_numba": true
+    },
+    "r6ae_bp_defaults": {
+      "max_iterations": 40,
+      "old_message_weight": 0.25,
+      "terminal_screened": false,
+      "tolerance": 1e-08
+    },
+    "r6ae_manifest": "labs/lab-004-d4-intrinsic-heralded-decoding/manifests/r6ae-signal-only-bp-threshold-manifest-2026-09-01.json"
+  },
+  "equivalence_matrix": [
+    {
+      "consequence": "The local Bernoulli form matches, but the edge spaces and physical channel do not.",
+      "d4": "IID Bernoulli-p_X red-X error edges on the paper periodic coloured honeycomb quotient.",
+      "dimension": "latent physical event",
+      "lab_003": "IID Bernoulli-p errors on every retained edge of an open honeycomb patch.",
+      "status": "partial_form_match_only"
+    },
+    {
+      "consequence": "Degree-2 probabilities differ and degree-3 support is disjoint.",
+      "d4": "Matching-colour e_B/e_G signal with probability 1/2 only at degree=2; zero is ambiguous between vacuum and absent support.",
+      "dimension": "herald conditioning",
+      "lab_003": "Uncoloured h=1 independently with probability 3/4 whenever degree>=2.",
+      "status": "non_equivalent"
+    },
+    {
+      "consequence": "No vertexwise deterministic coarse-graining preserves the joint law.",
+      "d4": "Colour-resolved e signals obey component parity constraints; the six-vertex hexagon has 16 allowed records rather than 64 independent binary records.",
+      "dimension": "correlation structure",
+      "lab_003": "Herald draws are conditionally independent across eligible vertices.",
+      "status": "non_equivalent"
+    },
+    {
+      "consequence": "The same size label denotes different graphs and logical sectors.",
+      "d4": "Periodic torus with coloured A/B sublattices and two primitive winding directions.",
+      "dimension": "geometry and boundary",
+      "lab_003": "Open rough-boundary honeycomb patch with one recorded logical cut.",
+      "status": "non_equivalent"
+    },
+    {
+      "consequence": "Equal numeric p and p_X do not define a common channel coordinate.",
+      "d4": "p_X is the red-X edge probability on the periodic D4 graph; p_Z=0 in R6AE.",
+      "dimension": "error parameter",
+      "lab_003": "p is the retained-edge Bernoulli probability on the open phenomenological graph.",
+      "status": "not_calibrated"
+    },
+    {
+      "consequence": "The information budgets and sufficient statistics differ.",
+      "d4": "Flux syndrome plus sublattice-labelled binary e_B/e_G signals; hidden degree-two support is unavailable.",
+      "dimension": "decoder-visible record",
+      "lab_003": "One parity syndrome plus an uncoloured binary herald field H.",
+      "status": "non_equivalent"
+    },
+    {
+      "consequence": "The common BP-to-MWPM label does not make the algorithms or likelihoods identical.",
+      "d4": "D4 local coloured-flow factors, damping 0.25, synchronous dense BP, 40-iteration cap, posterior-LLR MWPM; O0 and O2 are separate arms.",
+      "dimension": "decoder",
+      "lab_003": "Phenomenological factor graph, damping 0.25, stable-sort residual-priority BP, 80-iteration cap, posterior-LLR MWPM.",
+      "status": "non_equivalent"
+    },
+    {
+      "consequence": "Reported LERs are different observables and denominators.",
+      "d4": "Paper-unconditional first-stage Boolean union over periodic winding sectors, with physical winding already terminal failure.",
+      "dimension": "logical-loss convention",
+      "lab_003": "Parity of error XOR correction across one open-patch logical cut.",
+      "status": "non_equivalent"
+    }
+  ],
+  "evidence": [
+    "labs/lab-004-d4-intrinsic-heralded-decoding/manifests/r6ac-d4-sublattice-herald-model-audit-2026-08-31.json",
+    "labs/lab-004-d4-intrinsic-heralded-decoding/manifests/r6ae-signal-only-bp-threshold-manifest-2026-09-01.json",
+    "labs/lab-003-herald-threshold-phase-diagram/manifests/phase-b14-honeycomb-two-branch-acquisition-manifest-2026-08-28.json",
+    "src/herald_decoder/lattice_model.py",
+    "src/herald_decoder/herald_bp_decoder.py",
+    "labs/lab-004-d4-intrinsic-heralded-decoding/scripts/d4_honeycomb.py",
+    "labs/lab-004-d4-intrinsic-heralded-decoding/scripts/run_r6v_x_only_flux_threshold_scan.py"
+  ],
+  "generated_at": "2026-09-01T12:44:21.520541+00:00",
+  "lab_003_event_table": [
+    {
+      "P_h_equals_1": 0.0,
+      "degree": 0
+    },
+    {
+      "P_h_equals_1": 0.0,
+      "degree": 1
+    },
+    {
+      "P_h_equals_1": 0.75,
+      "degree": 2
+    },
+    {
+      "P_h_equals_1": 0.75,
+      "degree": 3
+    }
+  ],
+  "question": "Can Lab 003 q=3/4 and corrected signal-only D4 data be compared as one channel?",
+  "schema_version": 1,
+  "shared_structure": [
+    "binary edge variables with an IID Bernoulli local prior form",
+    "vertex parity syndrome as a marginal observation",
+    "matching-based correction after a belief front end"
+  ],
+  "size_5_geometry": {
+    "d4": {
+      "boundary_vertices": 0,
+      "edges": 225,
+      "primitive_winding_directions": 2,
+      "vertices": 150
+    },
+    "lab_003": {
+      "boundary_vertices": 22,
+      "edges": 74,
+      "logical_cut_edges": 6,
+      "vertices": 70
+    }
+  },
+  "status": "complete_non_equivalence_audit",
+  "verdict": "non_equivalent_cross_lab_numerical_comparison_prohibited"
+}

@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "status": "verified and reported with nonnegative edge-flow representation",
+  "registered_at": "2026-08-29T16:39:00Z",
+  "title": "R6D bounded local auxiliary-spin compression",
+  "rigor_tier": "bounded exact representation validation",
+  "program_alignment": {
+    "central_question": "Can the public D4 likelihood be represented by a fixed bounded-arity local factor graph before belief propagation is attempted?",
+    "scientific_layer": "WP3 scalable-decoder likelihood interface",
+    "epistemic_role": "exact local representation prerequisite",
+    "upstream_evidence": "R6C is exact but enumerates 1068 simple cycles already at paper-normalized L=2",
+    "downstream_gate": "BP message updates may be implemented only if the local representation matches the exact likelihood matrix"
+  },
+  "question": {
+    "research_question": "Does one binary auxiliary spin per vertex and charge colour reproduce the closed-component parity multiplier without enumerating simple cycles?",
+    "smallest_claim": "Exactness on the complete primitive fixture and all registered paper-L2 ambiguity probes, plus direct auxiliary-spin summation on a bounded primitive control set.",
+    "G2_spin": "selected edges enforce equal endpoint spins; degree-not-two vertices pin their spin to +1; degree-two vertices contribute the observed same-colour charge exponent; exact but signed because z^q can be negative",
+    "G2_edge_flow": "one binary auxiliary bit per physical edge and colour; unselected edges pin the bit to zero, degree-two vertices impose a local XOR charge constraint, and other vertices contribute nonnegative normalization 2^(-selected_degree/2)",
+    "G3_component_label": "canonical component-label/root auxiliaries, retained only as a fallback if G2_spin fails",
+    "fork_classification": "G2_spin is the cheapest prerequisite because it has binary bounded domains and fixed local arity; G3 is dependent fallback, not a human ranking question"
+  },
+  "model": {
+    "per_colour_partition": "sum over z_v in {-1,+1}; a selected edge contributes 1[z_u=z_v]; a vertex contributes 1[z_v=+1] when selected degree is not two and z_v^(observed charge) when selected degree is two and the vertex has the chosen colour",
+    "component_contraction": "an open or branched component is pinned and contributes 1; an isolated degree-two closed component contributes 2 for even colour parity and 0 for odd colour parity",
+    "two_colour_multiplier": "product of the blue and green partitions; hence an allowed closed component contributes 4",
+    "local_weight": "flux/degree support times 2^{-number of measured degree-two vertices}",
+    "terminal": "the existing ground-state-relative winding gate remains separate; R6D does not claim to localize the logical-sector test",
+    "source_boundary": "Jing et al. supply Eq. A12 and a nonlocal 2^C reweighting with constraints checked by graph search; the auxiliary-spin compression is a project-derived identity to be independently verified, not a formula attributed to the paper"
+  },
+  "method_revision": {
+    "recorded_at": "2026-08-29T16:47:00Z",
+    "finding": "G2_spin is an exact signed tensor network, not a nonnegative probability factor graph, because a charge exponent can contribute -1.",
+    "correction": "retain G2_spin as an independent Fourier-character control and register G2_edge_flow as the BP-compatible nonnegative candidate before claiming the likelihood graph is probabilistic.",
+    "edge_flow_identity": "cut every non-cycle selected component at degree-not-two vertices into maximal degree-two chains. Each chain has two auxiliary assignments and receives total endpoint normalization 1/2, hence contributes one. A pure cycle has two assignments iff its same-colour charge XOR is even and none otherwise."
+  },
+  "matrix": {
+    "primitive_complete": "all 49855 compatible candidate-observation pairs from the frozen primitive-size-2 R4.2 catalog, evaluated by analytic contraction and exact oracle",
+    "primitive_explicit_spin_sum": "64 deterministic evenly spaced compatible-pair probes plus explicit vacuum, open, branch, allowed loop, and parity-violating loop controls; enumerate all 2^V spins per colour",
+    "primitive_explicit_edge_flow_sum": "the same 69 controls; enumerate all 2^E edge-flow assignments per colour and require nonnegative local-factor contraction to match the exact oracle",
+    "paper_ambiguity": "all stored example candidate masks from every R6B ambiguous public record, with even-charge and one-bit parity-violation probes",
+    "complexity_audit": "record auxiliary-variable count, factor count, domain size, and maximum arity for primitive and paper-L2 geometries",
+    "tolerance": 1e-14,
+    "budget": "under ten CPU minutes and 2 GiB; zero BP, correction, LER, threshold, or decoder-performance samples"
+  },
+  "acceptance_items": [
+    {
+      "item": "G2/G3 experimental fork registered before implementation",
+      "status": "complete",
+      "evidence": "r6d-local-spin-factor-manifest-2026-08-29.json"
+    },
+    {
+      "item": "fixed local-spin implementation and explicit partition-sum control",
+      "status": "verified",
+      "evidence": "scripts/d4_belief_factorization.py and results/r6d-local-spin-factor-audit.json; 69/69 signed vertex-spin sums and 69/69 nonnegative edge-flow sums match analytic contraction"
+    },
+    {
+      "item": "primitive complete and paper ambiguity exactness matrix",
+      "status": "verified",
+      "evidence": "results/r6d-local-spin-factor-audit.json; 0/49855 primitive mismatches and 0/120 paper-L2 ambiguity-probe mismatches"
+    },
+    {
+      "item": "bounded-arity complexity audit, tests, and report",
+      "status": "reported",
+      "evidence": "results/r6d-local-spin-factor-audit.md and results/r6d-local-edge-flow-method-note-2026-08-29.md; paper-L2 uses 72 binary edge-flow auxiliaries and 120 nonnegative local factors; 10/10 focused and 141/141 full-Lab tests pass"
+    }
+  ],
+  "claim_boundary": "Passing R6D would establish a fixed local likelihood representation, not BP convergence, a polynomial-time decoder, winding-sector localization, logical performance, threshold, or fault tolerance.",
+  "planned_outputs": [
+    "scripts/d4_belief_factorization.py",
+    "scripts/run_r6d_local_spin_factor.py",
+    "results/r6d-local-spin-factor-audit.json",
+    "results/r6d-local-spin-factor-audit.md",
+    "results/r6d-local-edge-flow-method-note-2026-08-29.md"
+  ]
+}

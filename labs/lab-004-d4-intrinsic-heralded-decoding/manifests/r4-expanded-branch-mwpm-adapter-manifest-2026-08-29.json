@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "status": "registered",
+  "phase": "R4.5b",
+  "purpose": "Preserve all primitive parallel charge branches in one PyMatching graph by replacing every physical branch with a private two-edge path through a zero-syndrome auxiliary detector.",
+  "epistemic_role": "Bounded decoder-representation remediation only. It validates graph equivalence and branch identity before any sequential-policy risk is recomputed.",
+  "source_freeze": {
+    "results/r4-public-decoder-branch-fidelity-audit.json": "444a3cbcdbea4432bdfb69f734f01b0ea3e955093220b14d6e0186404e2516e1",
+    "results/r4-branch-labelled-charge-topology-audit.json": "a63a0683dd2dbbaf2c9e5328ecd3f9524dc6bd2e7cb99033871e10340f3fe22e",
+    "scripts/run_r4_public_branch_fidelity_audit.py": "e3c6221beedfc9e28d2dbd28e35d6a252570ef18383a6df5a48ade3700863b02"
+  },
+  "failed_prerequisite": {
+    "finding": "PyMatching 2.4.0 from_check_matrix collapses the twelve physical multigraph branches to six endpoint edges and retains only the minimum-weight fault id for each pair.",
+    "bounded_matrix": "Both colours, thirteen positive-weight profiles, and all eight even syndromes: 208 exhaustive comparisons have zero objective, boundary, minimizer-membership, or targeted-ID failures, but no matching graph retains both members of any parallel pair.",
+    "consequence": "The collapsed primitive graph returns a valid minimum-weight representative but is not topology-faithful enough to call the public second-stage decoder reproduced."
+  },
+  "registered_adapter": {
+    "physical_detectors": 4,
+    "private_auxiliary_detectors": 12,
+    "matching_nodes": 16,
+    "matching_edges": 24,
+    "fault_ids": 12,
+    "branch_expansion": "For physical branch e=(u,v), add private auxiliary a_e and edges (u,a_e) and (a_e,v). Give exactly one segment fault_id e and split the branch weight equally across the two segments.",
+    "syndrome_embedding": "Append twelve deterministic zero auxiliary syndrome bits to the four measured charge bits.",
+    "equivalence_mechanism": "The private auxiliary has degree two and zero syndrome, so any valid correction selects both branch segments or neither; the expanded path therefore has the original boundary, total weight, and one physical fault id."
+  },
+  "validation": {
+    "required": [
+      "all source hashes match the registration freeze",
+      "each colour produces exactly sixteen nodes, twenty-four graph edges, and twelve distinct fault ids in one matching object",
+      "every private auxiliary is incident only on its branch's two segments",
+      "the expanded syndrome has the measured four-bit charge syndrome followed by twelve zeros",
+      "for unit weights and every branch-forcing positive-weight profile, all eight even syndromes match exhaustive primitive objectives within 1e-6",
+      "every returned fault mask is an exhaustive minimum-weight primitive branch chain with the requested boundary",
+      "each branch-forcing profile selects its targeted branch and not its parallel twin on the pair-endpoint syndrome",
+      "returned branch sectors are computed with the validated linear period cochain",
+      "no sequential policy risk, stochastic sample, larger lattice, LER, threshold, or scalability claim is introduced"
+    ],
+    "fail_closed_rule": "If the expanded graph admits a half-branch, loses a fault id, changes an exact objective, or returns a non-minimizing branch mask, stop before integrating it into the sequential policy audit."
+  },
+  "alternatives_preserved": [
+    {"alternative": "Use the collapsed six-edge check-matrix graph", "reason_not_selected": "It returns a valid minimum objective but erases one physical branch and its homology label from each parallel pair."},
+    {"alternative": "Choose a fixed endpoint-pair tie representative", "reason_not_selected": "That makes an unvalidated topology-dependent tie rule part of the public decoder."},
+    {"alternative": "Use exhaustive affine-chain minimization as the public decoder", "reason_not_selected": "It is a valid bounded oracle but does not reproduce a scalable MWPM interface."},
+    {"alternative": "Switch to the larger paper-normalized lattice", "reason_not_selected": "It changes the source-frozen primitive physical ensemble and exact posterior."}
+  ],
+  "compute_budget": {
+    "new_stochastic_samples": 0,
+    "new_lattice_sizes": 0,
+    "colours": 2,
+    "weight_profiles_per_colour": 13,
+    "even_syndromes_per_profile": 8,
+    "maximum_decode_comparisons": 256,
+    "maximum_wall_time_minutes": 5,
+    "maximum_resident_memory_gib": 1,
+    "stop_rule": "Stop after one complete exhaustive adapter matrix and durable audit; do not resume R4.5 sequential risk in the same tick."
+  },
+  "outputs": {
+    "machine_result": "results/r4-expanded-branch-mwpm-adapter-audit.json",
+    "report": "results/r4-expanded-branch-mwpm-adapter-audit.md"
+  },
+  "next_action": "Implement the private-auxiliary expanded matching graph and run the registered 208-comparison exhaustive equivalence matrix before integrating any public second-stage action into R4.5."
+}

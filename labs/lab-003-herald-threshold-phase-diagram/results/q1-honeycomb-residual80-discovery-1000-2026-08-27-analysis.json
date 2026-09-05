@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-27T20:47:07.323947+00:00",
+  "source_artifact": "labs/lab-003-herald-threshold-phase-diagram/results/q1-honeycomb-residual80-discovery-1000-2026-08-27.json",
+  "source_config_sha256": "f716dc3af1ba1d0e2c05a48fd69260ead90352ca277545c300dfa96d9c1874e4",
+  "lattice": "honeycomb",
+  "q": 1.0,
+  "decoder": {
+    "name": "HeraldAwareBpMatchingDecoder",
+    "recurrence_mode": "damping",
+    "damping": 0.25,
+    "max_iterations": 80,
+    "update_schedule": "residual_priority",
+    "residual_priority_order": "stable_sort",
+    "residual_priority_buffer_reuse": false,
+    "residual_priority_cached_products": false,
+    "matching_projection": "posterior_llr",
+    "p_m": 0.0,
+    "p_h": 0.0,
+    "use_numba": true
+  },
+  "sizes": [
+    5,
+    7,
+    9,
+    11
+  ],
+  "shots_per_cell": 1000,
+  "adjacent_crossings": [
+    {
+      "sizes": [
+        5,
+        7
+      ],
+      "status": "not_bracketed",
+      "estimate": null,
+      "observed_trend": "nonmonotone_or_unresolved"
+    },
+    {
+      "sizes": [
+        7,
+        9
+      ],
+      "status": "not_bracketed",
+      "estimate": null,
+      "observed_trend": "nonmonotone_or_unresolved"
+    },
+    {
+      "sizes": [
+        9,
+        11
+      ],
+      "status": "linear_interpolation",
+      "estimate": 0.38,
+      "all_sign_changes": [
+        0.38
+      ]
+    }
+  ],
+  "finite_size_interpretation": "crossings_observed_with_size_drift",
+  "threshold_statement": "This is a decoder-specific finite-size crossing diagnostic. It is not an asymptotic threshold estimate; N0 showed residual BP nonconvergence at large sizes."
+}

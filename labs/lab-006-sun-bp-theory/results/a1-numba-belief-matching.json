@@ -1,0 +1,34 @@
+{
+  "protocol": "lab006-a3-full-irrep-belief-matching-2026-09-04",
+  "observation_record": [
+    "m",
+    "R"
+  ],
+  "graph": {
+    "kind": "oriented_ring",
+    "vertices": 64,
+    "edges": 64
+  },
+  "observations": 256,
+  "warmups_per_arm": 4,
+  "equivalence": {
+    "max_abs_python_vs_numba_scalar": 1.88079096131566e-37,
+    "max_abs_numba_scalar_vs_batch": 0.0,
+    "convergence_matches": 256,
+    "iteration_matches": 256
+  },
+  "matching": {
+    "syndrome_faithful": 16,
+    "checked": 16
+  },
+  "timing_ms_per_observation": {
+    "python_median": 144.180396,
+    "numba_scalar_median": 0.1739165,
+    "numba_batch_chunk_median": 0.09218165625
+  },
+  "speedup": {
+    "scalar_over_python": 829.0208002115958,
+    "batch_over_python": 1564.089883663812,
+    "batch_over_scalar": 1.8866714601908665
+  }
+}

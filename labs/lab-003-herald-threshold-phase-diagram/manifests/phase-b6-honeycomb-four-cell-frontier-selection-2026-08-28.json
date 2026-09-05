@@ -1,0 +1,292 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-28T12:21:09.582408+00:00",
+  "status": "complete",
+  "source_map": {
+    "path": "results/phase-b5-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28.json",
+    "sha256": "a1c2b5377697083f111be69cc3376635181ff8bce7d9b885ade0a6bdeb614813"
+  },
+  "frontier_rule": "All unresolved four-neighbor cells adjacent to both decodable and undecodable cells.",
+  "frontier_candidates": [
+    {
+      "q": 0.6,
+      "p": 0.28,
+      "lean": "downward",
+      "directional_confidence": 0.75885009765625,
+      "posterior_probability_upward_trend": 0.24114990234375,
+      "posterior_probability_downward_trend": 0.75885009765625,
+      "neighbor_classifications": [
+        "unresolved",
+        "unresolved",
+        "decodable",
+        "undecodable"
+      ]
+    },
+    {
+      "q": 0.35,
+      "p": 0.2,
+      "lean": "downward",
+      "directional_confidence": 0.7008056640625,
+      "posterior_probability_upward_trend": 0.2991943359375,
+      "posterior_probability_downward_trend": 0.7008056640625,
+      "neighbor_classifications": [
+        "unresolved",
+        "decodable",
+        "decodable",
+        "undecodable"
+      ]
+    },
+    {
+      "q": 0.3,
+      "p": 0.2,
+      "lean": "upward",
+      "directional_confidence": 0.593658447265625,
+      "posterior_probability_upward_trend": 0.593658447265625,
+      "posterior_probability_downward_trend": 0.406341552734375,
+      "neighbor_classifications": [
+        "unresolved",
+        "unresolved",
+        "decodable",
+        "undecodable"
+      ]
+    },
+    {
+      "q": 0.55,
+      "p": 0.24,
+      "lean": "upward",
+      "directional_confidence": 0.5866241455078125,
+      "posterior_probability_upward_trend": 0.5866241455078125,
+      "posterior_probability_downward_trend": 0.4133758544921875,
+      "neighbor_classifications": [
+        "undecodable",
+        "decodable",
+        "decodable",
+        "unresolved"
+      ]
+    }
+  ],
+  "source_compatibility_audit": {
+    "records": [
+      {
+        "path": "results/phase-b3-honeycomb-l7-9-11-q055-p024-2026-08-28.json",
+        "sha256": "39d87738509a8f94726654e74f0b088ce2d89a8d12ef1446d5544a78c15984f3",
+        "disposition": "already_consumed_in_phase_b5_map"
+      },
+      {
+        "path": "results/phase-b5-honeycomb-l5-q030-p020-2026-08-28.json",
+        "sha256": "4eac65183207c29ec2319eb354b4d15a58665d8695da32618bc84b5c41ade97b",
+        "disposition": "already_consumed_in_phase_b5_map"
+      },
+      {
+        "path": "results/phase-b5-honeycomb-l5-q035-p020-2026-08-28.json",
+        "sha256": "e068f924490e81bfd77742c4545755defc519e67baeeb9d87109b4d6feeec398",
+        "disposition": "already_consumed_in_phase_b5_map"
+      },
+      {
+        "path": "results/phase-b5-honeycomb-l5-q060-p028-2026-08-28.json",
+        "sha256": "dbc0cbd56ff744a56739df2d7020796060310f0c69007849c53728e42fdb7a66",
+        "disposition": "already_consumed_in_phase_b5_map"
+      },
+      {
+        "path": "results/phase-b5-honeycomb-l7-9-11-q055-p024-2026-08-28.json",
+        "sha256": "452abc1429c3cbf67de6be18a5303ffd05161b72d8ccc4e382328c033f431d7e",
+        "disposition": "already_consumed_in_phase_b5_map"
+      },
+      {
+        "path": "results/phase-s1-honeycomb-distance-q030-p020-2026-08-28.json",
+        "sha256": "01bbc8a85c84461e1f8c5c98b31ecf69d350162cc8e121e696ff0d8970ab488c",
+        "disposition": "already_consumed_in_phase_b5_map"
+      },
+      {
+        "path": "results/phase-s1-honeycomb-distance-q035-p020-2026-08-28.json",
+        "sha256": "bf855f559ab64c37e0161c1d9e110dc475d2c8d0c88e84ed2c955b435aa84b8b",
+        "disposition": "already_consumed_in_phase_b5_map"
+      },
+      {
+        "path": "results/phase-s1-honeycomb-distance-q060-p028-2026-08-28.json",
+        "sha256": "acefbcde1d32ee02692a5ed2a071253bdb8cf91a3506e6e2e7239b942801aad5",
+        "disposition": "already_consumed_in_phase_b5_map"
+      },
+      {
+        "path": "results/phase2-honeycomb-q055-discovery-1000-2026-08-27.json",
+        "sha256": "96a4b256ba4e3ecafe0f59a867c3397f340dd1050f64e7236c6e81d451b20926",
+        "disposition": "excluded_incompatible_decoder_or_source"
+      },
+      {
+        "path": "results/phase2-honeycomb-q060-discovery-1000-2026-08-27.json",
+        "sha256": "c8d4a71ac563d85bf8d9dc181b05cbdd263a0e9083634e0a966d374c6ccde130",
+        "disposition": "excluded_incompatible_decoder_or_source"
+      },
+      {
+        "path": "results/phase2-residual80-honeycomb-q030-discovery-1000-2026-08-28.json",
+        "sha256": "09a5224d65a9ee5da2dbac1f4b9d84bd51b179d38ced7ce87a4f56c3cade31be",
+        "disposition": "already_consumed_in_phase_b5_map"
+      },
+      {
+        "path": "results/phase2-residual80-honeycomb-q035-discovery-1000-2026-08-28.json",
+        "sha256": "ee9d2028b249416d5baa6adcd67a43bc693638b224d98083b71428bbde00186c",
+        "disposition": "already_consumed_in_phase_b5_map"
+      },
+      {
+        "path": "results/phase2-residual80-honeycomb-q055-discovery-1000-2026-08-28.json",
+        "sha256": "f8290e0fb35de1097aaa174468002409cdda64b9a04dc598300ac66a09768df0",
+        "disposition": "already_consumed_in_phase_b5_map"
+      },
+      {
+        "path": "results/phase2-residual80-honeycomb-q060-discovery-1000-2026-08-28.json",
+        "sha256": "170aa1cc5d6873c3baa2d9dd2957c76e268838deb537940e0d91a4e3aa0b5984",
+        "disposition": "already_consumed_in_phase_b5_map"
+      }
+    ],
+    "compatible_unused_count": 0
+  },
+  "design_rule": "Broaden the three-distance q=0.55 cell with L5/L13; for five-distance cells, add shots only at the four 1000-shot sizes so every distance reaches 2000 without oversampling L11.",
+  "new_jobs": [
+    {
+      "q": 0.3,
+      "p": 0.2,
+      "lean": "upward",
+      "directional_confidence": 0.593658447265625,
+      "posterior_probability_upward_trend": 0.593658447265625,
+      "posterior_probability_downward_trend": 0.406341552734375,
+      "neighbor_classifications": [
+        "unresolved",
+        "unresolved",
+        "decodable",
+        "undecodable"
+      ],
+      "branch": "rebalance_to_2000_shots",
+      "sizes": [
+        5,
+        7,
+        9,
+        13
+      ],
+      "additional_shots_per_size": 1000,
+      "expected_decodes": 4000,
+      "current_sizes": [
+        5,
+        7,
+        9,
+        11,
+        13
+      ],
+      "current_shots": [
+        1000,
+        1000,
+        1000,
+        2000,
+        1000
+      ]
+    },
+    {
+      "q": 0.35,
+      "p": 0.2,
+      "lean": "downward",
+      "directional_confidence": 0.7008056640625,
+      "posterior_probability_upward_trend": 0.2991943359375,
+      "posterior_probability_downward_trend": 0.7008056640625,
+      "neighbor_classifications": [
+        "unresolved",
+        "decodable",
+        "decodable",
+        "undecodable"
+      ],
+      "branch": "rebalance_to_2000_shots",
+      "sizes": [
+        5,
+        7,
+        9,
+        13
+      ],
+      "additional_shots_per_size": 1000,
+      "expected_decodes": 4000,
+      "current_sizes": [
+        5,
+        7,
+        9,
+        11,
+        13
+      ],
+      "current_shots": [
+        1000,
+        1000,
+        1000,
+        2000,
+        1000
+      ]
+    },
+    {
+      "q": 0.55,
+      "p": 0.24,
+      "lean": "upward",
+      "directional_confidence": 0.5866241455078125,
+      "posterior_probability_upward_trend": 0.5866241455078125,
+      "posterior_probability_downward_trend": 0.4133758544921875,
+      "neighbor_classifications": [
+        "undecodable",
+        "decodable",
+        "decodable",
+        "unresolved"
+      ],
+      "branch": "endpoint_extension_l5_l13",
+      "sizes": [
+        5,
+        13
+      ],
+      "additional_shots_per_size": 1000,
+      "expected_decodes": 2000,
+      "current_sizes": [
+        7,
+        9,
+        11
+      ],
+      "current_shots": [
+        3000,
+        3000,
+        3000
+      ]
+    },
+    {
+      "q": 0.6,
+      "p": 0.28,
+      "lean": "downward",
+      "directional_confidence": 0.75885009765625,
+      "posterior_probability_upward_trend": 0.24114990234375,
+      "posterior_probability_downward_trend": 0.75885009765625,
+      "neighbor_classifications": [
+        "unresolved",
+        "unresolved",
+        "decodable",
+        "undecodable"
+      ],
+      "branch": "rebalance_to_2000_shots",
+      "sizes": [
+        5,
+        7,
+        9,
+        13
+      ],
+      "additional_shots_per_size": 1000,
+      "expected_decodes": 4000,
+      "current_sizes": [
+        5,
+        7,
+        9,
+        11,
+        13
+      ],
+      "current_shots": [
+        1000,
+        1000,
+        1000,
+        2000,
+        1000
+      ]
+    }
+  ],
+  "candidate_count": 4,
+  "new_job_count": 4,
+  "expected_new_decodes": 14000,
+  "claim_boundary": "Registration only. No crossing statistic, p/q interpolation, new cell, square lattice, or distance outside L=5..13."
+}

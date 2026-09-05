@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "status": "verified",
+  "recorded_at": "2026-08-29T14:12:36Z",
+  "acceptance_item": "E2A action-bound post-flux adapter",
+  "scope": {
+    "lattice": "paper L=2",
+    "execution": "deterministic exact fixtures only",
+    "sampling": 0
+  },
+  "implementation": {
+    "entry_point": "typed_postflux_record_to_observation",
+    "module": "scripts/d4_projector_instrument.py",
+    "public_inputs": [
+      "PublicReportedRecordV1",
+      "D4SpatialCommitRequestV1",
+      "D4FluxActionV1",
+      "active_vertices",
+      "entanglement_pairs"
+    ],
+    "forbidden_inputs_absent": [
+      "hidden projector state",
+      "true labels",
+      "physical error",
+      "future record",
+      "logical outcome"
+    ]
+  },
+  "acceptance": {
+    "exact_action_digest_binding": "pass",
+    "charge_vacuum_only_label_gate": "pass",
+    "explicit_layout_and_sparse_binary_measurements": "pass",
+    "complete_public_observation_digest": "pass",
+    "perfect_E0_observation_and_charge_action": "pass"
+  },
+  "negative_controls": {
+    "wrong_bound_action_digest": "rejected",
+    "flux_label_in_post_action_report": "rejected",
+    "multi_label_post_action_report": "rejected",
+    "active_layout_report_mismatch": "rejected",
+    "report_predating_flux_action": "rejected"
+  },
+  "verification": {
+    "focused_projector_instrument_tests": "24/24 pass",
+    "new_E2A_tests": "4/4 pass",
+    "full_lab005_tests": "125/125 pass"
+  },
+  "hashes": {
+    "d4_projector_instrument.py": "96e0b9bb923a481013064e5b7d7333ecc8eaab1c7fffb9bd7cbeb3aca8a862e4",
+    "test_d4_projector_instrument.py": "02e4ce132ec4f6af9843165a24ee01ca44903c150a1f110c6445becc3f50a860"
+  },
+  "claim_boundary": "E2A verifies deterministic public translation and binding only. It does not verify all schedule branches, stochastic noise, logical performance, threshold, or fault tolerance.",
+  "next_gate": "Satisfied by the verified E2B/E2C matrix and consolidated E2 final analysis; see j2-e2-downstream-release-audit-2026-08-29.json for the released evidence set."
+}

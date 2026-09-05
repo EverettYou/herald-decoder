@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "status": "verified",
+  "recorded_at": "2026-08-29T14:26:09Z",
+  "acceptance_item": "E2B/E2C two-mode, four-schedule completion matrix and negative controls",
+  "history_digest": "fef6c825e47e90174de4f555a0d3885dab3e78cb2d36fc7852c94778a127304a",
+  "registration_correction": {
+    "diagnostic": "syndrome-only and heralded flux actions differ in all four branches",
+    "correction": "match pre-action history, measurement layout, and report rule; bind each post-action report to its own intervention",
+    "scope_or_budget_change": false
+  },
+  "cells": [
+    {"mode": "syndrome_only", "branch": "immediate", "decision_round": 1, "noncausal": false, "next_round": 2, "flux_correction_edges": 1, "blue_charge_correction_edges": 1, "green_charge_correction_edges": 0},
+    {"mode": "syndrome_only", "branch": "fixed_delay_1", "decision_round": 2, "noncausal": false, "next_round": 3, "flux_correction_edges": 1, "blue_charge_correction_edges": 1, "green_charge_correction_edges": 0},
+    {"mode": "syndrome_only", "branch": "jit_lyons_brown", "decision_round": 1, "noncausal": false, "next_round": 2, "flux_correction_edges": 1, "blue_charge_correction_edges": 1, "green_charge_correction_edges": 0},
+    {"mode": "syndrome_only", "branch": "offline_full_history", "decision_round": 3, "noncausal": true, "next_round": null, "flux_correction_edges": 1, "blue_charge_correction_edges": 1, "green_charge_correction_edges": 0},
+    {"mode": "heralded", "branch": "immediate", "decision_round": 1, "noncausal": false, "next_round": 2, "flux_correction_edges": 11, "blue_charge_correction_edges": 1, "green_charge_correction_edges": 0},
+    {"mode": "heralded", "branch": "fixed_delay_1", "decision_round": 2, "noncausal": false, "next_round": 3, "flux_correction_edges": 11, "blue_charge_correction_edges": 1, "green_charge_correction_edges": 0},
+    {"mode": "heralded", "branch": "jit_lyons_brown", "decision_round": 1, "noncausal": false, "next_round": 2, "flux_correction_edges": 11, "blue_charge_correction_edges": 1, "green_charge_correction_edges": 0},
+    {"mode": "heralded", "branch": "offline_full_history", "decision_round": 3, "noncausal": true, "next_round": null, "flux_correction_edges": 11, "blue_charge_correction_edges": 1, "green_charge_correction_edges": 0}
+  ],
+  "matched_design": {
+    "shared_pre_action_history": true,
+    "shared_measurement_layout": true,
+    "shared_report_rule_and_reported_labels": true,
+    "action_conditioned_report_digest": true,
+    "all_charge_actions_nonempty": true
+  },
+  "negative_controls": {
+    "post_action_before_stage_1": "rejected by existing temporal-order fixture",
+    "wrong_request_action_or_layout": "rejected by E2A fixtures",
+    "post_action_flux_or_multilabel_report": "rejected by E2A fixtures",
+    "parity_inconsistent_charge_support": "rejected",
+    "future_only_change": "all earlier causal completed transitions unchanged; offline changes and remains noncausal",
+    "private_truth_only_change": "all eight public cells unchanged",
+    "deterministic_replay": "bit identical"
+  },
+  "verification": {
+    "new_E2B_E2C_tests": "6/6 pass",
+    "focused_e1_e2_integration_tests": "20/20 pass",
+    "full_lab005_tests": "131/131 pass",
+    "sampling": 0
+  },
+  "hashes": {
+    "e1_schedule_integration.py": "7d4847111e3a30dba6773f3277c7bde3eb00f243e7080461c54b7e5a2531bb5f",
+    "test_e1_schedule_integration.py": "560509bd5c9ced017e16ae583221b94956f44db71518e96fd189e175aeb1b3e0",
+    "d4_projector_instrument.py": "96e0b9bb923a481013064e5b7d7333ecc8eaab1c7fffb9bd7cbeb3aca8a862e4"
+  },
+  "claim_boundary": "The matrix verifies deterministic two-stage causal completion, matched intervention semantics, and fail-closed controls at paper L=2. It does not estimate decoder or schedule performance, logical-error rate, threshold, hardware fidelity, or fault tolerance.",
+  "next_gate": "Satisfied by manifests/j2-e2-post-flux-causal-completion-2026-08-29.json and .md; see j2-e2-downstream-release-audit-2026-08-29.json for the released evidence set."
+}

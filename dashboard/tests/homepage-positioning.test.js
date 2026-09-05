@@ -1,0 +1,60 @@
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const test = require('node:test');
+
+const root = path.join(__dirname, '..', '..');
+const project = JSON.parse(fs.readFileSync(path.join(root, 'project.json'), 'utf8'));
+const app = fs.readFileSync(path.join(root, 'dashboard', 'frontend', 'js', 'app.js'), 'utf8');
+const css = fs.readFileSync(path.join(root, 'dashboard', 'frontend', 'css', 'interface.css'), 'utf8');
+const timeline = fs.readFileSync(path.join(root, 'dashboard', 'frontend', 'js', 'research-timeline.js'), 'utf8');
+
+test('homepage describes the research platform rather than a lab hypothesis', () => {
+  assert.match(project.homepage_intro, /agentic research platform/i);
+  assert.match(project.homepage_intro, /reference management/i);
+  assert.match(project.homepage_intro, /autonomous research/i);
+  assert.match(project.homepage_intro, /knowledge distillation/i);
+  assert.ok(!Object.hasOwn(project, 'thesis'), 'a bounded decoder question must not be homepage metadata');
+  assert.match(app, /Agentic research platform/);
+  assert.match(app, /markdown\(p\.homepage_intro\)/);
+  assert.match(app, /activeLabs=\[\.\.\.\(d\.active_labs\|\|\[\]\)\]/);
+  assert.match(app, /class="active-lab-item"/);
+  assert.match(app, /class="active-lab-title">\$\{badge\(lab\.stage\)\}<h3>\$\{escapeHtml\(lab\.title\)\}<\/h3>/);
+  assert.match(app, /card\('Current Lab',activeLabSummary,'wide'\)/);
+  assert.match(app, /const destinations=\{references:/);
+  assert.match(app, /class="stat-link"/);
+  assert.match(app, /class="stat-copy"/);
+  assert.match(app, /data-home-nav/);
+  assert.match(app, /fa-book-bookmark/);
+  assert.match(app, /fa-flask/);
+  assert.match(app, /fa-book-open/);
+  assert.match(app, /fa-comments/);
+  assert.doesNotMatch(app, /Browse Labs/);
+  assert.doesNotMatch(app, /Review decisions/);
+  assert.match(css, /\.stats \.stat-link\s*\{[^}]*display:\s*flex/);
+  assert.match(css, /\.stats \.stat-link\s*\{[^}]*align-items:\s*center/);
+  assert.match(css, /\.stats \.stat-copy > strong\s*\{[^}]*color:\s*var\(--ink\)/);
+  assert.doesNotMatch(app, /d\.current_lab/);
+  assert.doesNotMatch(app, /markdown\(p\.thesis\)/);
+  assert.doesNotMatch(app, /id="graph-search"/);
+  assert.match(app, /id="wiki-search"/);
+});
+
+test('homepage renders an interactive Lab evolution timeline from Lab metadata', () => {
+  assert.match(app, /api\('\/api\/labs'\)/);
+  assert.match(app, /Research timeline/);
+  assert.match(app, /Lab evolution/);
+  assert.match(app, /id="research-timeline"/);
+  assert.match(app, /HeraldResearchTimeline\?\.mount\(labData\.labs\)/);
+  assert.match(timeline, /lab\.parents/);
+  assert.match(timeline, /lab\.created/);
+  assert.match(timeline, /DATE_GROUP_GAP/);
+  assert.match(timeline, /separators/);
+  assert.match(timeline, /corridorY/);
+  assert.match(timeline, /timeline-node-halo/);
+  assert.match(timeline, /pointerdown/);
+  assert.match(timeline, /wheel/);
+  assert.match(timeline, /HeraldNavigate/);
+  assert.match(css, /\.research-timeline-panel\s*\{/);
+  assert.match(css, /\.timeline-link\s*\{/);
+});

@@ -1,0 +1,41 @@
+{
+  "id": "lab006-a6-llr-heralding-effect-remediation-2026-09-04",
+  "status": "complete",
+  "registered_before_implementation": true,
+  "supersedes": "The current public effect metric Delta r=P(error|m,R)-P(error|m) frozen in A3/A4.",
+  "scientific_correction": "Heralding evidence composes as an odds ratio, or additively as a difference of error log-odds; a raw probability difference is not the canonical evidence coordinate.",
+  "frozen_effect": {
+    "error_llr": "ell_a(s)=log[P(e_a=1|s)/P(e_a=0|s)]",
+    "shift": "Delta ell_a=ell_a(m,R)-ell_a(m)=w_a(m)-w_a(m,R), where w is the no-error/error matching LLR",
+    "odds_ratio": "exp(Delta ell_a)",
+    "visual_convention": "red for positive Delta ell_a, blue for negative Delta ell_a, width proportional to |Delta ell_a| relative to the current sample maximum"
+  },
+  "scope": [
+    "Global Wiki definition and visualization description",
+    "Lab 006 artifact payload, legend, edge layer, inspector, and summary statistic",
+    "Lab 006 concise report and plan wording",
+    "deterministic backend and exact rendered-surface tests"
+  ],
+  "acceptance_gates": [
+    "The backend computes Delta ell from the same clipped LLR weights consumed by matching.",
+    "The no-symmetry arm has identically zero Delta ell.",
+    "The artifact uses Delta ell, not Delta probability, for effect color, width, tooltip, inspector, and mean magnitude.",
+    "Positive Delta ell means R increases error odds and is red; negative Delta ell means R decreases error odds and is blue.",
+    "The Wiki derives Delta ell as a log Bayes factor and explains its odds-ratio interpretation.",
+    "The exact Lab Results page and Wiki page render the corrected convention without stale Delta-r labels.",
+    "Existing syndrome-fidelity, determinism, and BP tests continue to pass."
+  ],
+  "sampling": "No new scientific sampling; deterministic fixed-seed payload and rendered-surface remediation only.",
+  "stop_rule": "Fail closed if any current user-facing effect layer still presents a raw posterior-probability difference as the heralding effect.",
+  "verification": {
+    "backend_identity": "Delta ell equals m-only matching weight minus full-record matching weight exactly on the fixed-seed payload",
+    "focused_tests": "21 passed",
+    "report_lint": "passed",
+    "wiki_lint": "0 errors, 0 warnings",
+    "exact_result_page": "/lab-result?lab=lab-006-sun-bp-theory&result=fusion-belief-matching-workbench",
+    "rendered_effect_button": "3 · R log-odds effect",
+    "rendered_legend": ["R raises error odds", "R lowers error odds", "width = |Delta error LLR|"],
+    "rendered_tooltip_and_inspector": "passed",
+    "wiki_katex_errors": 0
+  }
+}

@@ -1,0 +1,312 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-28T11:40:08.849147+00:00",
+  "status": "complete",
+  "source_map": {
+    "path": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase-b4-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28.json",
+    "sha256": "7c8f187c523ff62b478839215708019591f3f3f0763e3229a8b27f9619863b3d"
+  },
+  "phase_b3_analysis": {
+    "path": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase-b3-honeycomb-frontier-reuse-analysis-2026-08-28.json",
+    "sha256": "90978f2cf5780ea773b6e67438d56b30633644f2b36edaac8f661a24bb68baa0"
+  },
+  "selection_rule": "Cover every persistent red/green-adjacent gray cell. Add L5 where B3 already supplied L13; add independent same-window shots where B3 supplied shots. Reuse all audited compatible evidence and do not expand the grid.",
+  "frontier_candidates": [
+    {
+      "q": 0.3,
+      "p": 0.2,
+      "lean": "upward",
+      "directional_confidence": 0.8421783447265625,
+      "posterior_probability_upward_trend": 0.8421783447265625,
+      "posterior_probability_downward_trend": 0.1578216552734375,
+      "neighbor_classifications": [
+        "unresolved",
+        "unresolved",
+        "decodable",
+        "undecodable"
+      ]
+    },
+    {
+      "q": 0.4,
+      "p": 0.2,
+      "lean": "downward",
+      "directional_confidence": 0.8011322021484375,
+      "posterior_probability_upward_trend": 0.1988677978515625,
+      "posterior_probability_downward_trend": 0.8011322021484375,
+      "neighbor_classifications": [
+        "unresolved",
+        "decodable",
+        "decodable",
+        "undecodable"
+      ]
+    },
+    {
+      "q": 0.55,
+      "p": 0.24,
+      "lean": "upward",
+      "directional_confidence": 0.760345458984375,
+      "posterior_probability_upward_trend": 0.760345458984375,
+      "posterior_probability_downward_trend": 0.239654541015625,
+      "neighbor_classifications": [
+        "undecodable",
+        "decodable",
+        "decodable",
+        "unresolved"
+      ]
+    },
+    {
+      "q": 0.6,
+      "p": 0.28,
+      "lean": "upward",
+      "directional_confidence": 0.671234130859375,
+      "posterior_probability_upward_trend": 0.671234130859375,
+      "posterior_probability_downward_trend": 0.328765869140625,
+      "neighbor_classifications": [
+        "unresolved",
+        "unresolved",
+        "decodable",
+        "undecodable"
+      ]
+    },
+    {
+      "q": 0.35,
+      "p": 0.2,
+      "lean": "downward",
+      "directional_confidence": 0.5448760986328125,
+      "posterior_probability_upward_trend": 0.4551239013671875,
+      "posterior_probability_downward_trend": 0.5448760986328125,
+      "neighbor_classifications": [
+        "unresolved",
+        "unresolved",
+        "decodable",
+        "undecodable"
+      ]
+    }
+  ],
+  "newly_exposed_cells": [],
+  "prior_adaptive_evidence": [
+    {
+      "q": 0.3,
+      "p": 0.2,
+      "base_path": "results/phase2-residual80-honeycomb-q030-discovery-1000-2026-08-28.json",
+      "base_sha256": "09a5224d65a9ee5da2dbac1f4b9d84bd51b179d38ced7ce87a4f56c3cade31be",
+      "adaptive_path": "results/phase-s1-honeycomb-distance-q030-p020-2026-08-28.json",
+      "adaptive_sha256": "01bbc8a85c84461e1f8c5c98b31ecf69d350162cc8e121e696ff0d8970ab488c",
+      "b3_pooling_kind": "distance_limited",
+      "b3_classification": "unresolved"
+    },
+    {
+      "q": 0.35,
+      "p": 0.2,
+      "base_path": "results/phase2-residual80-honeycomb-q035-discovery-1000-2026-08-28.json",
+      "base_sha256": "ee9d2028b249416d5baa6adcd67a43bc693638b224d98083b71428bbde00186c",
+      "adaptive_path": "results/phase-s1-honeycomb-distance-q035-p020-2026-08-28.json",
+      "adaptive_sha256": "bf855f559ab64c37e0161c1d9e110dc475d2c8d0c88e84ed2c955b435aa84b8b",
+      "b3_pooling_kind": "distance_limited",
+      "b3_classification": "unresolved"
+    },
+    {
+      "q": 0.4,
+      "p": 0.2,
+      "base_path": "results/phase2-residual80-honeycomb-q040-discovery-1000-2026-08-28.json",
+      "base_sha256": "4d8264c1b57d1dfb58262bffbf9698016a11c9ac75cfade6e6790690cd807ec1",
+      "adaptive_path": "results/phase-s1-honeycomb-distance-q040-p020-2026-08-28.json",
+      "adaptive_sha256": "38ffd79a444c116f5c19cd7b5f987218e938b0c39b71c021debf121dbb85739d",
+      "b3_pooling_kind": "distance_limited",
+      "b3_classification": "unresolved"
+    },
+    {
+      "q": 0.55,
+      "p": 0.24,
+      "base_path": "results/phase2-residual80-honeycomb-q055-discovery-1000-2026-08-28.json",
+      "base_sha256": "f8290e0fb35de1097aaa174468002409cdda64b9a04dc598300ac66a09768df0",
+      "adaptive_path": "results/phase-b3-honeycomb-l7-9-11-q055-p024-2026-08-28.json",
+      "adaptive_sha256": "39d87738509a8f94726654e74f0b088ce2d89a8d12ef1446d5544a78c15984f3",
+      "b3_pooling_kind": "new_independent_shots",
+      "b3_classification": "unresolved"
+    },
+    {
+      "q": 0.6,
+      "p": 0.28,
+      "base_path": "results/phase2-residual80-honeycomb-q060-discovery-1000-2026-08-28.json",
+      "base_sha256": "170aa1cc5d6873c3baa2d9dd2957c76e268838deb537940e0d91a4e3aa0b5984",
+      "adaptive_path": "results/phase-s1-honeycomb-distance-q060-p028-2026-08-28.json",
+      "adaptive_sha256": "acefbcde1d32ee02692a5ed2a071253bdb8cf91a3506e6e2e7239b942801aad5",
+      "b3_pooling_kind": "distance_limited",
+      "b3_classification": "unresolved"
+    }
+  ],
+  "source_compatibility_audit": {
+    "records": [
+      {
+        "path": "results/phase-b3-honeycomb-l7-9-11-q055-p024-2026-08-28.json",
+        "sha256": "39d87738509a8f94726654e74f0b088ce2d89a8d12ef1446d5544a78c15984f3",
+        "disposition": "already_consumed_in_phase_b5_pool"
+      },
+      {
+        "path": "results/phase-s1-honeycomb-distance-q030-p020-2026-08-28.json",
+        "sha256": "01bbc8a85c84461e1f8c5c98b31ecf69d350162cc8e121e696ff0d8970ab488c",
+        "disposition": "already_consumed_in_phase_b5_pool"
+      },
+      {
+        "path": "results/phase-s1-honeycomb-distance-q035-p020-2026-08-28.json",
+        "sha256": "bf855f559ab64c37e0161c1d9e110dc475d2c8d0c88e84ed2c955b435aa84b8b",
+        "disposition": "already_consumed_in_phase_b5_pool"
+      },
+      {
+        "path": "results/phase-s1-honeycomb-distance-q040-p020-2026-08-28.json",
+        "sha256": "38ffd79a444c116f5c19cd7b5f987218e938b0c39b71c021debf121dbb85739d",
+        "disposition": "already_consumed_in_phase_b5_pool"
+      },
+      {
+        "path": "results/phase-s1-honeycomb-distance-q060-p028-2026-08-28.json",
+        "sha256": "acefbcde1d32ee02692a5ed2a071253bdb8cf91a3506e6e2e7239b942801aad5",
+        "disposition": "already_consumed_in_phase_b5_pool"
+      },
+      {
+        "path": "results/phase2-honeycomb-q055-discovery-1000-2026-08-27.json",
+        "sha256": "96a4b256ba4e3ecafe0f59a867c3397f340dd1050f64e7236c6e81d451b20926",
+        "disposition": "excluded_incompatible_decoder_or_source"
+      },
+      {
+        "path": "results/phase2-honeycomb-q060-discovery-1000-2026-08-27.json",
+        "sha256": "c8d4a71ac563d85bf8d9dc181b05cbdd263a0e9083634e0a966d374c6ccde130",
+        "disposition": "excluded_incompatible_decoder_or_source"
+      },
+      {
+        "path": "results/phase2-residual80-honeycomb-q030-discovery-1000-2026-08-28.json",
+        "sha256": "09a5224d65a9ee5da2dbac1f4b9d84bd51b179d38ced7ce87a4f56c3cade31be",
+        "disposition": "already_consumed_in_phase_b5_pool"
+      },
+      {
+        "path": "results/phase2-residual80-honeycomb-q035-discovery-1000-2026-08-28.json",
+        "sha256": "ee9d2028b249416d5baa6adcd67a43bc693638b224d98083b71428bbde00186c",
+        "disposition": "already_consumed_in_phase_b5_pool"
+      },
+      {
+        "path": "results/phase2-residual80-honeycomb-q040-discovery-1000-2026-08-28.json",
+        "sha256": "4d8264c1b57d1dfb58262bffbf9698016a11c9ac75cfade6e6790690cd807ec1",
+        "disposition": "already_consumed_in_phase_b5_pool"
+      },
+      {
+        "path": "results/phase2-residual80-honeycomb-q055-discovery-1000-2026-08-28.json",
+        "sha256": "f8290e0fb35de1097aaa174468002409cdda64b9a04dc598300ac66a09768df0",
+        "disposition": "already_consumed_in_phase_b5_pool"
+      },
+      {
+        "path": "results/phase2-residual80-honeycomb-q060-discovery-1000-2026-08-28.json",
+        "sha256": "170aa1cc5d6873c3baa2d9dd2957c76e268838deb537940e0d91a4e3aa0b5984",
+        "disposition": "already_consumed_in_phase_b5_pool"
+      }
+    ],
+    "compatible_unused_count": 0
+  },
+  "new_jobs": [
+    {
+      "q": 0.3,
+      "p": 0.2,
+      "lean": "upward",
+      "directional_confidence": 0.8421783447265625,
+      "posterior_probability_upward_trend": 0.8421783447265625,
+      "posterior_probability_downward_trend": 0.1578216552734375,
+      "neighbor_classifications": [
+        "unresolved",
+        "unresolved",
+        "decodable",
+        "undecodable"
+      ],
+      "branch": "distance_extension_l5",
+      "sizes": [
+        5
+      ],
+      "additional_shots_per_size": 1000,
+      "expected_decodes": 1000
+    },
+    {
+      "q": 0.35,
+      "p": 0.2,
+      "lean": "downward",
+      "directional_confidence": 0.5448760986328125,
+      "posterior_probability_upward_trend": 0.4551239013671875,
+      "posterior_probability_downward_trend": 0.5448760986328125,
+      "neighbor_classifications": [
+        "unresolved",
+        "unresolved",
+        "decodable",
+        "undecodable"
+      ],
+      "branch": "distance_extension_l5",
+      "sizes": [
+        5
+      ],
+      "additional_shots_per_size": 1000,
+      "expected_decodes": 1000
+    },
+    {
+      "q": 0.4,
+      "p": 0.2,
+      "lean": "downward",
+      "directional_confidence": 0.8011322021484375,
+      "posterior_probability_upward_trend": 0.1988677978515625,
+      "posterior_probability_downward_trend": 0.8011322021484375,
+      "neighbor_classifications": [
+        "unresolved",
+        "decodable",
+        "decodable",
+        "undecodable"
+      ],
+      "branch": "distance_extension_l5",
+      "sizes": [
+        5
+      ],
+      "additional_shots_per_size": 1000,
+      "expected_decodes": 1000
+    },
+    {
+      "q": 0.55,
+      "p": 0.24,
+      "lean": "upward",
+      "directional_confidence": 0.760345458984375,
+      "posterior_probability_upward_trend": 0.760345458984375,
+      "posterior_probability_downward_trend": 0.239654541015625,
+      "neighbor_classifications": [
+        "undecodable",
+        "decodable",
+        "decodable",
+        "unresolved"
+      ],
+      "branch": "independent_shots",
+      "sizes": [
+        7,
+        9,
+        11
+      ],
+      "additional_shots_per_size": 1000,
+      "expected_decodes": 3000
+    },
+    {
+      "q": 0.6,
+      "p": 0.28,
+      "lean": "upward",
+      "directional_confidence": 0.671234130859375,
+      "posterior_probability_upward_trend": 0.671234130859375,
+      "posterior_probability_downward_trend": 0.328765869140625,
+      "neighbor_classifications": [
+        "unresolved",
+        "unresolved",
+        "decodable",
+        "undecodable"
+      ],
+      "branch": "distance_extension_l5",
+      "sizes": [
+        5
+      ],
+      "additional_shots_per_size": 1000,
+      "expected_decodes": 1000
+    }
+  ],
+  "candidate_count": 5,
+  "new_job_count": 5,
+  "expected_new_decodes": 7000,
+  "claim_boundary": "Selection and registration only. No crossing statistic, interpolation, p/q midpoint, square lattice, or unrestricted distance expansion."
+}

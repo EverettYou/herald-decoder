@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "status": "verified",
+  "recorded_at": "2026-08-29T13:32:53Z",
+  "acceptance_item": "I2/I3 public-mode, schedule, and deterministic boundary coverage",
+  "scope": {
+    "lattice": "paper periodic D4 L=2, 24 vertices",
+    "history": "one four-row deterministic public trace",
+    "modes": ["syndrome_only", "heralded"],
+    "schedules": ["immediate", "fixed_delay_1", "jit_lyons_brown", "offline_full_history"],
+    "policy_stage": "actual public D4 stage-1 flux policy",
+    "sampling": "none"
+  },
+  "shared_history_digest": "fef6c825e47e90174de4f555a0d3885dab3e78cb2d36fc7852c94778a127304a",
+  "matrix": [
+    {"mode": "syndrome_only", "branch": "immediate", "round": 1, "noncausal": false, "flux_vertices": [0, 1], "charge_measurement_count": 0, "correction_edge_count": 1, "syndrome_faithful": true},
+    {"mode": "syndrome_only", "branch": "fixed_delay_1", "round": 2, "noncausal": false, "flux_vertices": [0, 1], "charge_measurement_count": 0, "correction_edge_count": 1, "syndrome_faithful": true},
+    {"mode": "syndrome_only", "branch": "jit_lyons_brown", "round": 1, "noncausal": false, "flux_vertices": [0, 1], "charge_measurement_count": 0, "correction_edge_count": 1, "syndrome_faithful": true},
+    {"mode": "syndrome_only", "branch": "offline_full_history", "round": 3, "noncausal": true, "flux_vertices": [0, 1], "charge_measurement_count": 0, "correction_edge_count": 1, "syndrome_faithful": true},
+    {"mode": "heralded", "branch": "immediate", "round": 1, "noncausal": false, "flux_vertices": [0, 1], "charge_measurement_count": 24, "correction_edge_count": 11, "syndrome_faithful": true},
+    {"mode": "heralded", "branch": "fixed_delay_1", "round": 2, "noncausal": false, "flux_vertices": [0, 1], "charge_measurement_count": 24, "correction_edge_count": 11, "syndrome_faithful": true},
+    {"mode": "heralded", "branch": "jit_lyons_brown", "round": 1, "noncausal": false, "flux_vertices": [0, 1], "charge_measurement_count": 24, "correction_edge_count": 11, "syndrome_faithful": true},
+    {"mode": "heralded", "branch": "offline_full_history", "round": 3, "noncausal": true, "flux_vertices": [0, 1], "charge_measurement_count": 24, "correction_edge_count": 11, "syndrome_faithful": true}
+  ],
+  "i2_acceptance": {
+    "all_eight_cells_invoked_actual_public_policy": true,
+    "same_trace_timing_and_scheduler_configuration_across_modes": true,
+    "causal_requests_bind_only_invocation_prefix_and_round_local_report": true,
+    "syndrome_only_charge_measurements_empty": true,
+    "heralded_charge_measurements_present": true,
+    "all_actions_reproduce_their_flux_syndrome": true,
+    "deterministic_replay_bit_identical": true
+  },
+  "i3_controls": {
+    "future_only_mutation": "all earlier causal reports, policy requests, and actions identical; final offline request changes",
+    "private_truth_mutation": "all eight public requests and actions identical",
+    "multi_label": "site 0 retains simultaneous e_charge and m_flux and enters heralded policy without coercion",
+    "odd_flux_cardinality": "both modes fail closed at the existing even-cardinality invariant",
+    "offline": "both offline cells explicitly noncausal",
+    "replay": "complete matrix bit identical"
+  },
+  "verification": {
+    "focused": "14 passed in 0.92s",
+    "full_lab": "121 passed in 0.97s"
+  },
+  "source_hashes": {
+    "e1_schedule_integration.py": "9d9dda06d514263ab83631c1d1030ac67b1f0e8a0862815660dddfecd72145db",
+    "test_e1_schedule_integration.py": "3b3b99002460beb449babab10582a50dc50bf78390bfde461018ce98161a7343"
+  },
+  "claim_boundary": "This is deterministic stage-1 interface evidence. Correction size and objective values are fixture outputs, not evidence of decoder quality, schedule advantage, logical-error rate, threshold, complete two-stage recovery, or fault tolerance.",
+  "next_gate": "Consolidate R1, I1, and I2/I3 into the registered final machine-readable analysis and report, then audit downstream release; do not sample performance."
+}

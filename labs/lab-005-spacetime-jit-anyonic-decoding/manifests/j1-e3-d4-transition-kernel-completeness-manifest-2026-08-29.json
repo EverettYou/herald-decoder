@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "status": "active; K1-K4 incompleteness reported, physical-model decision awaiting researcher in thread-009; no sampling",
+  "registered_at": "2026-08-29T14:54:00Z",
+  "title": "J1 E3 repeated D4 transition-kernel completeness audit",
+  "rigor_tier": "exploratory physical-model audit; no performance study",
+  "program_alignment": {
+    "central_question": "Can a physically declared noisy repeated D4 record support causal just-in-time decoding without hidden-state or future leakage?",
+    "scientific_layer": "WP4 physical observation and fault-tolerance prerequisite",
+    "epistemic_role": "source/interface completeness audit and falsification",
+    "upstream_dependencies": [
+      "released deterministic E2 two-stage causal interface",
+      "verified E1 projector/report instrument",
+      "verified generic categorical noise schema",
+      "Lab 004 paper-normalized spatial D4 sampler and ground-state-relative logical scorer"
+    ],
+    "downstream_consumers": [
+      "stochastic repeated D4 history generation",
+      "matched immediate/fixed-delay/JIT/offline schedule comparison",
+      "logical-error and fault-tolerance analysis"
+    ],
+    "information_value": "A schedule pilot is uninterpretable unless data faults, hidden D4 state, public repeated reports, applied corrections, and private logical truth form one normalized causal transition law. This audit can falsify that prerequisite without Monte Carlo cost."
+  },
+  "question_and_knowledge_states": {
+    "question": "Do the current primary-source rules and verified project interfaces jointly specify every factor of a normalized action-conditioned repeated D4 transition kernel and its private logical scorer?",
+    "smallest_claim": "The audit can identify which kernel factors are source-supported, project-defined, or missing; it cannot establish noisy D4 performance.",
+    "established_external_knowledge": [
+      "Jing 2025 Supplemental Appendix D gives a localized time-like-herald example, likelihood ordering, and a 3D-decoder proposal, not a complete multisite repeated D4 channel.",
+      "Jing 2026 Section VII introduces spatial physical-error, temporal measurement-error, and fusion-channel variables and explicitly leaves numerical implementation and benchmarking for future work.",
+      "Lyons and Brown define a local noisy D(S3)/D(Z3) circuit and causal JIT schedule, but this does not supply a D4 transition kernel."
+    ],
+    "current_project_evidence": [
+      "Lab 004 supplies a normalized static D4 observation sampler conditional on one spatial physical error and a truth-side logical score.",
+      "Lab 005 G supplies a generic binary-data/binary-syndrome/categorical-report schema but no D4 state evolution.",
+      "Lab 005 E1 supplies source-bounded local projector state updates and classical reports but not a complete stochastic spatial trajectory.",
+      "Lab 005 E2 verifies action-bound two-stage causal composition only when the physical post-action report is externally supplied."
+    ],
+    "assumptions_and_constraints": [
+      "anyon-free ground-state-relative logical criterion from resolved thread-008",
+      "public schedules may see only causal reported records and action digests",
+      "truth, physical faults, fusion-state internals, future rows, and logical labels remain private",
+      "no independent-per-round fusion resampling may be assumed unless a state-update argument supports it"
+    ],
+    "competing_outcomes": [
+      "The existing static sampler, E1 instrument, E2 action binding, and private homology scorer compose into a complete normalized Markov kernel.",
+      "Classical readout and scoring are complete, but cross-round hidden D4 state evolution or action-conditioned post-flux generation is missing.",
+      "Only a circuit- or density-state-level model can close the kernel; a phenomenological schedule pilot remains scientifically underdetermined."
+    ],
+    "resolution_rule": "Evaluate every kernel factor separately. A complete factor must have an operational input/output law, normalization or deterministic identity, causal ownership, and a source or explicit project-extension label. One passing factor cannot mask another missing factor."
+  },
+  "research_basis": {
+    "wiki": [
+      "wiki/thesis.md",
+      "wiki/questions/program-level-scientific-roadmap.md",
+      "wiki/methods/fault-tolerant-anyonic-decoding.md"
+    ],
+    "primary_source_search": [
+      {
+        "source": "references/jing2025-intrinsic-heralding/paper.pdf",
+        "locations": ["Supplemental Appendix D, pp. 23-24"],
+        "effect": "licenses the localized projector/time-like-herald audit but not a general memoryless repeated channel"
+      },
+      {
+        "source": "references/jing2026-ilp-topological-decoder/paper.pdf",
+        "locations": ["Section VII and Fig. 4, pp. 10-13"],
+        "effect": "defines spacetime fusion/error variables and measured-syndrome dependence; records that numerical implementation remains future work"
+      },
+      {
+        "source": "references/lyons2026-anyonic-fault-tolerance/paper.pdf",
+        "locations": ["gauging/JIT construction, pp. 10-15"],
+        "effect": "supplies causal scheduling and local D(S3) circuit-fault structure, not a D4 noise transfer"
+      }
+    ],
+    "prior_lab_evidence": [
+      "labs/lab-004-d4-intrinsic-heralded-decoding/results/r1-versioned-sampler-audit.md",
+      "labs/lab-004-d4-intrinsic-heralded-decoding/results/r5a-paper-lattice-public-decoder-analysis.json",
+      "results/j1-generic-history-generator-preflight-2026-08-29.json",
+      "results/j1-e1-projector-instrument-matrix-2026-08-29.json",
+      "manifests/j2-e2-post-flux-causal-completion-2026-08-29.json"
+    ],
+    "remaining_gap": "No existing artifact proves that the static D4 sampler and local repeated-projector instrument define one joint cross-round action-conditioned probability law."
+  },
+  "scientific_model": {
+    "candidate_state": "private round-indexed D4 physical/error state X_t on the paper L=2 periodic lattice, including the residual physical chain and only the hidden projector information required for the next transition",
+    "candidate_transition": "P(X_{t+1}, O_{t+1} | X_t, F_t, A_t), where F_t is a declared data/readout fault increment, A_t is the applied public correction, and O_{t+1} is the causal public report",
+    "public_observation": "round-indexed typed syndrome/fusion reports, schedule-visible detector history, and exact action/report digests",
+    "private_sidecar": "fault increments, residual physical chain, hidden projector outcomes/state digest, seed or exact branch weight, and ground-state-relative logical class",
+    "required_invariants": [
+      "each probabilistic factor is normalized on exact tiny support",
+      "perfect/no-action limit reproduces released E2",
+      "readout-only faults change reports but not hidden physical state",
+      "data-only faults change physical state before projective readout",
+      "corrections update the residual physical state before the bound post-action measurement",
+      "causal serialization contains no truth or future rows",
+      "private logical scoring occurs only after a frozen completed transition"
+    ],
+    "resolution_limit": "Static inspection and exact tiny enumeration can establish completeness or localize a missing factor; they cannot validate hardware correlations or estimate any performance quantity."
+  },
+  "fork_classification": {
+    "K1_physical_state_evolution": "common prerequisite",
+    "K2_public_measurement_kernel": "audit after K1 ownership is explicit",
+    "K3_action_conditioned_postflux_kernel": "dependent on K1 and E2 binding",
+    "K4_private_logical_scorer": "independent interface audit; run in the same cheap matrix",
+    "stochastic_generator_implementation": "blocked until K1-K4 are complete",
+    "schedule_performance_sampling": "blocked"
+  },
+  "matrix": [
+    {
+      "id": "K1-physical-state-evolution",
+      "acceptance": [
+        "inventory the state variables needed to propagate one cumulative D4 error through a data-fault increment and a public correction",
+        "identify a deterministic or normalized source/project law for every update",
+        "reject independent per-round resampling if it discards state needed by the next projector distribution"
+      ]
+    },
+    {
+      "id": "K2-public-measurement-kernel",
+      "acceptance": [
+        "inventory syndrome, fusion-label, false-positive, false-negative, and multi-label report laws",
+        "verify exact normalization and perfect-limit identities where a law exists",
+        "separate localized quasi-stabilizer evidence from any claimed general channel"
+      ]
+    },
+    {
+      "id": "K3-action-conditioned-postflux-kernel",
+      "acceptance": [
+        "identify how the physical state changes under the stage-1 flux correction",
+        "identify the law of the subsequent charge/vacuum projector report conditioned on that changed state",
+        "preserve exact action/report binding and temporal order from E2"
+      ]
+    },
+    {
+      "id": "K4-private-logical-scorer",
+      "acceptance": [
+        "map a completed residual physical-plus-correction history to the thread-008 ground-state-relative logical criterion",
+        "keep the scorer private and unavailable before public completion",
+        "state whether the existing single-shot homology scorer is sufficient for accumulated spacetime corrections"
+      ]
+    }
+  ],
+  "registered_methods": {
+    "design": "source/interface ledger plus exact paper-L=2 limiting-case checks for every available kernel factor",
+    "inputs": "frozen primary PDFs and the released Lab 004/Lab 005 modules and evidence listed above",
+    "verification": "perfect, one-data-fault, one-readout-fault, one-action, winding, and replay cases only",
+    "analysis": "classify each K1-K4 factor as complete, project-assumption, localized-only, or missing and report the earliest missing dependency",
+    "budget": "under five CPU minutes and 1 GiB; deterministic inspection/exact enumeration only; zero Monte Carlo samples",
+    "stop": "do not implement a stochastic generator, choose a memoryless/stateful approximation, or run a schedule comparison if any required factor is missing",
+    "escalation": "consult the researcher only if the audit leaves multiple materially different physical transition laws that cannot be discriminated by the sources or bounded exact checks"
+  },
+  "implementation_contract": {
+    "planned_analysis_module": "scripts/audit_d4_transition_kernel.py",
+    "planned_test_module": "scripts/test_audit_d4_transition_kernel.py",
+    "planned_results": [
+      "manifests/j1-e3-d4-transition-kernel-completeness-2026-08-29.json",
+      "results/j1-e3-d4-transition-kernel-completeness-2026-08-29.md"
+    ],
+    "source_hashes": {
+      "lab004_d4_sampler.py": "6294b71a20a372526ae0d812b62d3f9aced2ced724709297b6900e54a72b26a1",
+      "lab004_d4_recovery.py": "15be6ed2806a09475f6cb785f59e2ce1862b7eb66746edc90772f938ba991a08",
+      "lab004_d4_pipeline.py": "0e517f922fcd21b3c347be5f59d39b0640d260d11ddd314f408d18035c42e485",
+      "d4_projector_instrument.py": "96e0b9bb923a481013064e5b7d7333ecc8eaab1c7fffb9bd7cbeb3aca8a862e4",
+      "e1_schedule_integration.py": "7d4847111e3a30dba6773f3277c7bde3eb00f243e7080461c54b7e5a2531bb5f",
+      "generic_history.py": "6b2509ed4619ff2a7e4610a2262874abb94fb961c384f7ca6d25407c8f05f8d4"
+    },
+    "execution_hashes": {
+      "audit_d4_transition_kernel.py": "cc8d920da55167be2ce01175f50bbcc6e8b640e9ff49191266707be402ca7107",
+      "test_audit_d4_transition_kernel.py": "3a77efd98b0abaf55e3fff5cfa0b69ce40dc51b502402143509d6262097b39c9"
+    }
+  },
+  "acceptance_items": [
+    {
+      "item": "research-workflow registration",
+      "status": "complete",
+      "evidence": "manifests/j1-e3-d4-transition-kernel-completeness-manifest-2026-08-29.json; results/j1-e3-d4-transition-kernel-registration-2026-08-29.md"
+    },
+    {
+      "item": "K1-K4 source/interface completeness matrix",
+      "status": "verified incomplete",
+      "evidence": "manifests/j1-e3-d4-transition-kernel-matrix-2026-08-29.json; 6/6 focused and 137/137 full-Lab tests pass"
+    },
+    {
+      "item": "machine-readable completeness analysis and bounded report",
+      "status": "analyzed and reported",
+      "evidence": "manifests/j1-e3-d4-transition-kernel-completeness-2026-08-29.json; results/j1-e3-d4-transition-kernel-completeness-2026-08-29.md"
+    },
+    {
+      "item": "next physical-model gate decision with sampling blocked",
+      "status": "awaiting researcher",
+      "evidence": "discussion/thread-009; evidence brief in results/j1-e3-d4-transition-kernel-completeness-2026-08-29.md"
+    }
+  ],
+  "claim_boundary": {
+    "allowed": "completeness or localized incompleteness of the current repeated D4 transition specification",
+    "prohibited": [
+      "a complete noisy D4 generator before K1-K4 pass",
+      "schedule or decoder advantage",
+      "logical-error rate",
+      "threshold",
+      "hardware fidelity",
+      "fault tolerance"
+    ]
+  },
+  "next_gate": "Apply and resolve the researcher decision in thread-009; only its dependent stochastic D4 branch is paused."
+}

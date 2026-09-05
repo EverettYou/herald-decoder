@@ -1,0 +1,127 @@
+.paper-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--line);
+}
+
+.paper-row {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 26px;
+  align-items: start;
+  padding: 25px 4px;
+  border-bottom: 1px solid var(--line);
+}
+
+.paper-row[hidden] {
+  display: none;
+}
+
+.paper-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+}
+
+/* Repository coordinates can be longer than the metadata column. Preserve the
+   complete identifier while allowing it to wrap at slashes or any safe point. */
+.paper-meta .paper-id {
+  display: block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  line-height: 1.35;
+}
+
+.paper-year {
+  font: 700 1.35rem Georgia, serif;
+}
+
+.paper-content .paper-kind {
+  margin: 0 0 5px;
+}
+
+.paper-content h2 {
+  max-width: 850px;
+  margin: 0 0 7px;
+  font-size: 1.35rem;
+}
+
+.paper-content h2 a,
+.lab-row-main h2 a,
+.wiki-link-card h3 a {
+  color: var(--ink);
+  text-decoration-color: #9db6b0;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.paper-content h2 a:hover,
+.lab-row-main h2 a:hover,
+.wiki-link-card h3 a:hover {
+  color: var(--green);
+  text-decoration-color: var(--green);
+}
+
+.paper-content .paper-summary {
+  max-width: 880px;
+  margin-bottom: 13px;
+}
+
+.keyword-line {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.keyword-line > b {
+  color: var(--muted);
+  font-size: .7rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.keyword-line .topic-row {
+  margin-top: 0;
+}
+
+.lab-row {
+  grid-template-columns: 190px minmax(0, 1fr);
+}
+
+.lab-row-main h2 {
+  margin-bottom: 8px;
+}
+
+.wiki-link-card {
+  border-top: 1px solid var(--line);
+  padding: 13px 0;
+}
+
+.wiki-link-card h3 {
+  margin: 0 0 4px;
+}
+
+.wiki-link-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .82rem;
+}
+
+@media (max-width: 800px) {
+  .paper-row,
+  .lab-row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .paper-meta {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-08-28T23:59:00Z",
+  "purpose": "finite-support MILP compilation and homology-sector validation against R3.0",
+  "formulation": {
+    "compatible_explanation_variables": 4,
+    "explicit_edge_variables": 12,
+    "one_hot_constraint": true,
+    "edge_linking_equalities": 12,
+    "relative_homology_sector_solves": 4,
+    "support_pre_enumerated": true
+  },
+  "comparisons": [
+    {
+      "error_rate": 0.1,
+      "milp_maximizer_masks": [73, 82, 268],
+      "exhaustive_maximizer_masks": [73, 82, 268],
+      "minimum_negative_log2_joint": 11.333812125667537,
+      "sector_optima": {
+        "trivial": {"masks": [73], "objective": 11.333812125667537},
+        "vertical": {"masks": [268], "objective": 11.333812125667537},
+        "diagonal": {"masks": [279], "objective": 17.673662128552163},
+        "horizontal": {"masks": [82], "objective": 11.333812125667537}
+      }
+    },
+    {
+      "error_rate": 0.6,
+      "milp_maximizer_masks": [279],
+      "exhaustive_maximizer_masks": [279],
+      "minimum_negative_log2_joint": 12.938324635042566,
+      "sector_optima": {
+        "trivial": {"masks": [73], "objective": 14.108249636484878},
+        "vertical": {"masks": [268], "objective": 14.108249636484878},
+        "diagonal": {"masks": [279], "objective": 12.938324635042566},
+        "horizontal": {"masks": [82], "objective": 14.108249636484878}
+      }
+    }
+  ],
+  "tests_passed": 78,
+  "claim_boundary": "The finite MILP exactly validates solver, objective, tie, explicit-edge, and sector plumbing on R3.0 support. Fusion compatibility is pre-enumerated, so this is not yet a scalable structural MILP and is not R4 posterior summation."
+}

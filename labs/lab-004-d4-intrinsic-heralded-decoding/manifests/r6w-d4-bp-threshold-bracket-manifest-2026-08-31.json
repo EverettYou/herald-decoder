@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "status": "registered_integrity_gate_pending",
+  "phase": "R6W",
+  "title": "D4-native BP-MWPM threshold bracket around p_X=0.35",
+  "backend_id": "r6d_dense_template_numba_v1",
+  "question": "Does finite-size flux failure for D4 BP posterior-LLR -> MWPM cross near p_X=0.35, or does the real D4 channel falsify that Lab-003-motivated conjecture?",
+  "scope": "X-only D4 channel, p_Z=0, first-stage flux Boolean-union loss conditional on nonterminal histories. This intentionally does not claim the paper's full two-stage D4 logical threshold.",
+  "implementation": "validated cached dense-Numba realization of the same public-record BP recurrence; generic Python BP outputs are retained only as frozen equivalence controls, not mixed into this allocation.",
+  "scan_design": {
+    "sizes": [5, 7, 9, 11, 13],
+    "p_X_grid": [0.28, 0.32, 0.36, 0.40],
+    "stage_1_attempted_histories_per_cell": 100,
+    "stage_1_total_attempted_histories": 2000,
+    "stage_2_increment_attempted_histories": 1000,
+    "stage_2_max_attempted_histories_per_cell": 5000,
+    "stage_2_selection_rule": "Select p_X values where adjacent-size BP conditional-risk estimates reverse sign or whose 90% difference interval includes zero, plus one neighboring grid point on each side. Add matched 1000-history increments only to selected cells.",
+    "inference_accounting": ["all finite BP final iterates (primary)", "40-vs-160 iteration matched sensitivity near the bracket (secondary)"],
+    "seed_salt": 68351,
+    "bp_defaults": {"old_message_weight": 0.25, "max_iterations": 40, "tolerance": 1e-8, "terminal_screened": false}
+  },
+  "comparators": ["BP posterior-LLR -> MWPM (primary)", "published O2 herald-weight MWPM (matched calibration)", "O0 unit-weight MWPM (retained because its runtime is negligible relative to BP)"],
+  "launch_guard": {
+    "required_integrity_report": "results/r6v-r6u-bp-integrity-audit-2026-08-30.json",
+    "required_field": "integrity_gate_passed",
+    "required_value": true
+  },
+  "claim_boundary": "Stage 1 is a bracket search, not a threshold fit. A claim near 0.35 requires a resolved multi-size crossing and iteration-budget stability on matched records."
+}

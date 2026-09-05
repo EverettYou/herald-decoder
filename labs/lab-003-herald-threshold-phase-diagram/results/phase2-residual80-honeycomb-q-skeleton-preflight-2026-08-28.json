@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-28T02:45:00Z",
+  "campaign": "phase2-residual80-q-skeleton-2026-08-28",
+  "status": "passed",
+  "scope": {
+    "lattice": "honeycomb",
+    "q_values": "0:0.05:1",
+    "sizes": [7, 9, 11],
+    "expected_shards": 21,
+    "expected_raw_records": 693000,
+    "square": "deferred"
+  },
+  "fluctuation_aware_inference": {
+    "confidence_level": 0.9,
+    "bootstrap_replicates": 20000,
+    "resampling": "Independent by size; complete nested-p seed trajectories remain intact.",
+    "reported_topology": ["no_crossing_fraction", "single_crossing_support", "multiple_crossing_fraction"],
+    "crossing_interval": "Conditional central 90% bootstrap interval when the replicate has the corresponding directed crossing.",
+    "cell_classification": "The central 90% interval for LER(smaller)-LER(larger) must exclude zero.",
+    "promotion_gate": "Both L7/L9 and L9/L11 require at least 0.90 single-crossing support, compatible conditional 90% intervals, and final width at most 0.01."
+  },
+  "verification": {
+    "tests_run": 17,
+    "tests_passed": 17,
+    "dispatcher_dry_run_jobs": 21,
+    "unique_artifact_stems": true,
+    "residual_priority_80_in_every_command": true,
+    "source_stability_required": true,
+    "syndrome_fidelity_required": true
+  },
+  "sha256": {
+    "runner": "14adf7579825e64fa4dd74a6ff374207c3f7b55349b5b533c1ff054bf6d66474",
+    "dispatcher": "47a69c67629270b6cc75c17372467ae4d42539eea68536e2e357cde99097ed4f",
+    "analyzer": "6bd75bbcbca2920ffc47d6a1affed4f427d04505f726a68fbb6b9198bd9cdb3d",
+    "manifest_before_ready_status_flip": "06a715599347b7131afddfef82d0312e93e89d1a0f99be58569813ca0e78650e"
+  },
+  "evidence_boundary": "This preflight authorizes data collection but is not scientific evidence about p_c(q)."
+}

@@ -1,0 +1,42 @@
+{
+  "id": "lab006-a5-two-dimensional-convergence-scan-2026-09-04",
+  "status": "aborted_before_result",
+  "registered_before_sampling": true,
+  "question": "Where does synchronous damped full-irrep BP fail to converge, or converge slowly, on the canonical two-dimensional Lab 002 geometries?",
+  "geometries": ["square", "honeycomb"],
+  "sizes": [5, 7],
+  "groups": ["SU2", "SU3"],
+  "physical_error_rates": [0.1, 0.2, 0.3, 0.4],
+  "observations_per_cell": 8,
+  "total_observations": 128,
+  "paired_arms": ["m-only", "full-(m,R)"],
+  "matched_inputs": "Each paired arm receives the same canonical graph, physical edge error, m record, prior, schedule, and sampled full irrep R; the m-only arm ignores only R.",
+  "bp_schedule": {
+    "kind": "synchronous",
+    "damping": 0.25,
+    "max_iterations": 80,
+    "tolerance": 1e-10
+  },
+  "outcomes": [
+    "convergence fraction",
+    "iteration distribution",
+    "final maximum message delta",
+    "mean absolute posterior shift from R"
+  ],
+  "claims_excluded": [
+    "threshold or finite-size scaling",
+    "logical-error performance",
+    "exactness of loopy BP",
+    "adaptive schedule or damping optimization"
+  ],
+  "acceptance_gates": [
+    "The scan uses the canonical Lab 002 square and honeycomb constructors with rough left/right and smooth transverse boundaries.",
+    "Exactly 128 independently seeded observations are evaluated with no adaptive extension.",
+    "The two arms are matched except for whether R enters the local likelihood.",
+    "Every cell reports convergence counts, iterations, residuals, and the R-induced posterior shift.",
+    "Any nonconvergence is reported as a diagnostic boundary rather than silently discarded or retuned."
+  ],
+  "stop_rule": "Stop after the frozen 128 observations. Do not tune damping, extend a difficult cell, or make a threshold/logical-performance claim in this transition.",
+  "result": null,
+  "censor_reason": "The registered grid arithmetic was inconsistent: 2 lattices x 2 sizes x 2 groups x 4 rates x 8 seeds equals 256, not the registered total of 128. The runner asserted before writing any result; its in-memory evaluations are discarded."
+}

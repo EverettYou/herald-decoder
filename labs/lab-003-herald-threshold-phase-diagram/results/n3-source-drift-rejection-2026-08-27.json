@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "detected_at": "2026-08-27T21:28:33Z",
+  "phase": "N3",
+  "status": "rejected_before_analysis",
+  "reason": "The registered N2 source cohort changed on disk while N3 was running. The artifact records end-of-run hashes that do not match the preflight/N2 hashes, so the loaded-code provenance cannot be reconstructed from the artifact even though its deterministic prefix matches N2.",
+  "registered_preflight_source_hashes": {
+    "runner": "4ff45caf01f897ae641c38b0b1f7dd8856d6001b7285a907be620ba2ac16e034",
+    "lattice_model": "e7f2cd19f3534cf26f7b1e577861955703a4256aad5cb50560f1c023e2a8dd6f",
+    "decoder": "6d2419839985210d47992ee6eab909fa82cf5ffb5bf343517064d7b8407762c3",
+    "damping_decoder": "c08bfab74ae17bb0ea9b8d3c1292e1b9c997258e07371fe16dbb7df65c3f900c",
+    "numba_kernels": "c2254c95600c4f5e3a8c2279d5686a99c8d3810a4bb0c814a4fd0cbf16c184cc"
+  },
+  "recorded_end_of_run_source_hashes": {
+    "runner": "aacc176704aa15eb4965ee1e4373395ad9f97b271d2a83a8d35b1143497ad482",
+    "lattice_model": "b87a5feba27675e26970360d730324b7d3740e4dc0492b4dc478e510f140c9e7",
+    "decoder": "990af03ac4c99684e9e9dac6e5a8bb64d773015879c1638906f5fb592cdc6a43",
+    "damping_decoder": "a08ddf0b58e63bb2627c35cafbe570fe6a0ee8dc21bd4eaca720d6dbcbc5e182",
+    "numba_kernels": "c2254c95600c4f5e3a8c2279d5686a99c8d3810a4bb0c814a4fd0cbf16c184cc"
+  },
+  "noninferential_checks": {
+    "raw_records": 7000,
+    "gzip_integrity": true,
+    "raw_sha256_matches_summary": true,
+    "syndrome_faithful_corrections": 7000,
+    "syndrome_fidelity_failures": 0,
+    "deterministic_prefix_matches_n2_after_excluding_decode_ms": true,
+    "deterministic_prefix_rows": 6000
+  },
+  "quarantine": {
+    "directory": "results/rejected-source-drift-n3-2026-08-27",
+    "summary": "q1-honeycomb-residual80-l11-l13-p049-refined-3500-2026-08-27.json",
+    "summary_sha256": "a519e03e86a5aeea0945ca8524855bf755a94c2af14c2ebab56d8646fbd47caa",
+    "raw": "q1-honeycomb-residual80-l11-l13-p049-refined-3500-2026-08-27-raw.jsonl.gz",
+    "raw_sha256": "8275b691ae26fc34793c01ba68d5d81083ed9ee619b35538da06a977f60d12a2"
+  },
+  "scientific_disposition": "Do not analyze, pool, or cite N3 for LER, convergence, crossing, ceiling, or threshold inference. N2 remains the latest accepted evidence.",
+  "required_before_retry": "Add start-and-end source-hash equality enforcement to the runner and test fail-closed behavior under simulated source drift."
+}

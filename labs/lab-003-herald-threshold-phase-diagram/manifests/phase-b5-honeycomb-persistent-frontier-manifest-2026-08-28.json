@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "status": "analyzed",
+  "campaign": "phase-b5-honeycomb-persistent-frontier-2026-08-28",
+  "purpose": "Cover all five persistent frontier cells with the smallest discriminating L5-or-shot matrix.",
+  "selection_evidence": {
+    "path": "manifests/phase-b5-honeycomb-persistent-frontier-selection-2026-08-28.json",
+    "sha256": "707e4cba571ce40e08c81c7f0c8191419c03dda80c815e8d596cfc43d97c5c82"
+  },
+  "lattice": "honeycomb",
+  "frontier_candidate_count": 5,
+  "new_seeds": [
+    875001,
+    875002,
+    875003,
+    875004,
+    875005
+  ],
+  "shots_per_seed": 200,
+  "jobs": [
+    {
+      "branch": "distance_extension_l5",
+      "q": 0.3,
+      "p": 0.2,
+      "sizes": [
+        5
+      ],
+      "expected_decodes": 1000
+    },
+    {
+      "branch": "distance_extension_l5",
+      "q": 0.35,
+      "p": 0.2,
+      "sizes": [
+        5
+      ],
+      "expected_decodes": 1000
+    },
+    {
+      "branch": "distance_extension_l5",
+      "q": 0.4,
+      "p": 0.2,
+      "sizes": [
+        5
+      ],
+      "expected_decodes": 1000
+    },
+    {
+      "branch": "independent_shots",
+      "q": 0.55,
+      "p": 0.24,
+      "sizes": [
+        7,
+        9,
+        11
+      ],
+      "expected_decodes": 3000
+    },
+    {
+      "branch": "distance_extension_l5",
+      "q": 0.6,
+      "p": 0.28,
+      "sizes": [
+        5
+      ],
+      "expected_decodes": 1000
+    }
+  ],
+  "job_count": 5,
+  "workers_cap": 4,
+  "expected_new_decodes": 7000,
+  "decoder": {
+    "name": "HeraldAwareBpMatchingDecoder",
+    "recurrence_mode": "damping",
+    "damping": 0.25,
+    "max_iterations": 80,
+    "update_schedule": "residual_priority",
+    "residual_priority_order": "stable_sort",
+    "residual_priority_buffer_reuse": false,
+    "residual_priority_cached_products": false,
+    "matching_projection": "posterior_llr",
+    "p_m": 0.0,
+    "p_h": 0.0,
+    "use_numba": true
+  },
+  "required_source_hashes": {
+    "runner": "14adf7579825e64fa4dd74a6ff374207c3f7b55349b5b533c1ff054bf6d66474",
+    "lattice_model": "b87a5feba27675e26970360d730324b7d3740e4dc0492b4dc478e510f140c9e7",
+    "decoder": "990af03ac4c99684e9e9dac6e5a8bb64d773015879c1638906f5fb592cdc6a43",
+    "damping_decoder": "a08ddf0b58e63bb2627c35cafbe570fe6a0ee8dc21bd4eaca720d6dbcbc5e182",
+    "numba_kernels": "c2254c95600c4f5e3a8c2279d5686a99c8d3810a4bb0c814a4fd0cbf16c184cc"
+  },
+  "required_execution_hashes": {
+    "single_size_wrapper": "555338c7741b5efed8c403b02f51dec1d397210288f9a060a5feb76e2aef3dbd"
+  },
+  "analysis": {
+    "primary": "Bayesian posterior OLS linear-projection slope against code distance",
+    "classification_threshold": 0.9,
+    "prior_sensitivity": "Jeffreys primary and uniform sensitivity",
+    "distance_extension_pooling": "For q=0.30,0.35,0.40,p=0.20 and q=0.60,p=0.28, pool Phase 2 L7/L9/L11 with the consumed Phase S1 L11/L13 shard and add fresh L5, yielding L5/L7/L9/L11/L13.",
+    "shot_pooling": "For q=0.55,p=0.24, pool Phase 2, Phase B3, and fresh independent L7/L9/L11 counts.",
+    "claim_boundary": "Update only these five payloads and only after prior-stability sensitivity."
+  },
+  "preflight_gate": "Unit preflight passed, but first production integration exposed the inherited Phase 2 CLI's two-size guard for four registered L5-only jobs. Those jobs exited before writing data; the independent L7/L9/L11 job completed. A source-hashed single-size adapter and audited resume path were then added, tested, and used only for the four missing jobs.",
+  "preflight_evidence": {
+    "path": "results/phase-b5-honeycomb-persistent-frontier-preflight-2026-08-28.json",
+    "sha256": "78aa695e147295804c7ca64b4ae9467eb58355098d98fe5e7c49e3550a8cb6dd",
+    "tests_passed": 86,
+    "production_launched": false
+  },
+  "execution_history": {
+    "initial_attempt": "Four L5-only jobs exited at CLI validation before output; the q=0.55,p=0.24 L7/L9/L11 job completed 3000 rows.",
+    "remediation": "Added a fail-closed, source-hashed Phase B5 single-size adapter around the unchanged run_shard kernel and an audited resume path; reused the verified 3000-row shard and ran only the four missing 1000-row jobs.",
+    "overwritten_outputs": 0
+  },
+  "completion_evidence": {
+    "path": "results/phase-b5-honeycomb-persistent-frontier-completion-audit-2026-08-28.json",
+    "sha256": "db4b08735fb4a741915c407672e3bd418a72d4d6d8495adc6e745811a9bf7a99",
+    "jobs_complete": 5,
+    "raw_rows_observed": 7000,
+    "syndrome_faithful_rows": 7000,
+    "scientific_analysis_performed": false
+  },
+  "analysis_evidence": {
+    "path": "results/phase-b5-honeycomb-persistent-frontier-analysis-2026-08-28.json",
+    "sha256": "a7df6cfa759046b3448d1c0ca561761d27e88f19218bebdcb6bceb9e4db424a5",
+    "cells_analyzed": 5,
+    "prior_stable_cells": 5,
+    "resolved_cells": 1,
+    "resolved_cell": {
+      "q": 0.4,
+      "p": 0.2,
+      "classification": "decodable",
+      "posterior_probability_downward_trend": 0.9552764892578125
+    }
+  },
+  "presentation_evidence": {
+    "data_path": "results/phase-b5-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28.json",
+    "data_sha256": "a1c2b5377697083f111be69cc3376635181ff8bce7d9b885ade0a6bdeb614813",
+    "figure_path": "figures/phase-b5-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28.png",
+    "figure_sha256": "e9d772efe4640c5508e605eb73d594c8a63cf470d7d59ebbd2144b30783326c8",
+    "payloads_updated": 5,
+    "payloads_deep_preserved": 226,
+    "counts": {
+      "decodable": 86,
+      "undecodable": 41,
+      "unresolved": 104
+    }
+  },
+  "stop_rule": "Stop after five jobs and 7000 decodes. Do not add another cell, p/q midpoint, square lattice, or distance beyond registered L5.",
+  "launch_gate": "closed_data_complete"
+}

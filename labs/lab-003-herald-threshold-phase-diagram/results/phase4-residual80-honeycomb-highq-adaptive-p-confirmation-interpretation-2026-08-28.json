@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-28T06:08:23Z",
+  "campaign": "phase4-residual80-honeycomb-highq-adaptive-p-confirmation-4000-2026-08-28",
+  "status": "analyzed_unresolved",
+  "analysis": "phase4-residual80-honeycomb-highq-adaptive-p-confirmation-4000-2026-08-28-analysis.json",
+  "comparison_cohort": "phase4-residual80-honeycomb-highq-l11-l13-scaling-4000-2026-08-28-analysis.json",
+  "registered_gate": "The 40-cluster confirmation must reproduce the previous fresh L11/L13 qualitative topology and satisfy central-90% topology/sign rules without pooling cohorts.",
+  "q_results": [
+    {
+      "q": 0.85,
+      "previous": {
+        "classification": "finite",
+        "point_crossings": [0.41363636363636364],
+        "no_crossing_fraction": 0.00075,
+        "multiple_crossing_fraction": 0.2529
+      },
+      "confirmation": {
+        "classification": "unresolved",
+        "point_crossings": [0.41909090909090907, 0.4458139534883721, 0.45473684210526316],
+        "no_crossing_fraction": 0.01585,
+        "multiple_crossing_fraction": 0.6839
+      },
+      "reproducibility_gate": "failed",
+      "interpretation": "The first crossing location is close to the previous estimate, but the denser independent cohort resolves three point crossings and 68.39% multiple-crossing topology. No single p_c is promoted."
+    },
+    {
+      "q": 0.9,
+      "previous": {
+        "classification": "finite",
+        "point_crossings": [0.4825],
+        "conditional_interval90": [0.3222614934892373, 0.4875],
+        "no_crossing_fraction": 0.2672,
+        "multiple_crossing_fraction": 0.16975
+      },
+      "confirmation": {
+        "classification": "finite",
+        "point_crossings": [0.4575],
+        "conditional_interval90": [0.3917857142857143, 0.475],
+        "no_crossing_fraction": 0.0248,
+        "multiple_crossing_fraction": 0.6437,
+        "single_crossing_fraction": 0.3315
+      },
+      "reproducibility_gate": "failed",
+      "interpretation": "The point estimate lies inside the previous broad interval, but only 33.15% of bootstrap trajectories have exactly one crossing. The analyzer's finite label is not a reproducible phase-boundary result."
+    },
+    {
+      "q": 0.95,
+      "previous": {
+        "classification": "unresolved",
+        "point_crossings": [],
+        "p049_delta": 0.0025,
+        "p049_interval90": [-0.0075, 0.01275]
+      },
+      "confirmation": {
+        "classification": "ceiling",
+        "point_crossings": [],
+        "decodable_cells": 11,
+        "p049_delta": 0.013249999999999998,
+        "p049_interval90": [0.00399999999999999, 0.0225]
+      },
+      "reproducibility_gate": "failed",
+      "interpretation": "The new cohort is ceiling-compatible at every sampled p, including a positive p=0.49 central-90% sign, but the preceding independent cohort was sign-unresolved. The discordant cohorts are not pooled and no ceiling phase is promoted."
+    }
+  ],
+  "convergence_context": {
+    "L13_q085_range": [0.03425, 0.129],
+    "L13_q090_range": [0.009, 0.02625],
+    "L13_q095_range": [0.0055, 0.01075],
+    "interpretation": "The fixed-point flag remains rare at q=0.90 and q=0.95. Prior matched cap diagnostics found no logical-outcome change through cap 320, so these data remain decoder-operational rather than convergence-qualified asymptotic evidence."
+  },
+  "promotion": {
+    "p_c_q": "not promoted",
+    "q_c": "not promoted",
+    "q_0_925": "remains gated",
+    "L15": "remains gated",
+    "square": "remains gated"
+  },
+  "evidence_boundary": "The independent confirmation was analyzed exactly as registered, but none of the three q values passes the cross-cohort reproducibility gate. Analyzer labels are cohort-local diagnostics, not phase claims.",
+  "next_transition": "Run a bounded, independent two-cohort heterogeneity analysis on the four common p values (0.40,0.45,0.47,0.49), preserving seed trajectories and reporting between-cohort L11/L13-delta differences before registering any additional simulation."
+}

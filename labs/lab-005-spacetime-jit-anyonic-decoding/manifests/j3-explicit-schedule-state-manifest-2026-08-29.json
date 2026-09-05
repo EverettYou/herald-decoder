@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "status": "implemented_and_verified",
+  "registered_at": "2026-08-29T10:24:00Z",
+  "title": "Explicit deferred-record and split-branch schedule-state preflight",
+  "scope": {
+    "jing_ilp": "Retain unresolved defects and apply the source Algorithm-1 bounding-cube age gate.",
+    "lyons_brown": "Reverse the latest decoder-side measurement to propagate deferred detector events; track abstract D(S3), D(Z3), and boundary states plus externally supplied neutrality.",
+    "not_in_scope": [
+      "microscopic gauging or ungauging circuits",
+      "inference of neutrality from physical measurements",
+      "absorber geometry construction",
+      "linked-cluster discovery",
+      "D4 or D(S3) noisy physical channel",
+      "schedule performance, threshold, or fault tolerance"
+    ]
+  },
+  "invariants": [
+    "schedule time is monotone and no cluster arrives from the future",
+    "Jing and Lyons-Brown branches have distinct event semantics",
+    "Jing deferral retains unresolved state without altering the measurement record",
+    "Lyons-Brown deferral reverses only current detector-bearing readouts",
+    "a deferred current detector reappears in the next round when the raw readout persists",
+    "D(S3) and boundary clusters ungauge before neutrality can be supplied",
+    "age in D(Z3) is measured relative to the ungauging boundary",
+    "neutral D(Z3) clusters correct and re-gauge; non-neutral clusters remain deferred",
+    "every transition is logged deterministically",
+    "no truth, future record, or physical noisy D4 adapter is consumed"
+  ],
+  "implementation": {
+    "module": "scripts/schedule_state.py",
+    "fixtures": "scripts/test_schedule_state.py",
+    "module_sha256": "319c61536645092df9e1a84bf4355969ba36dacba8e677ab5ca0d35a7f0d9ac1",
+    "fixtures_sha256": "e880317a91dcbc1370713d8678c97d736dfd253251a5cd53fbb7ac5465b2c8ea"
+  },
+  "verification": {
+    "focused_tests": "6/6 passed",
+    "full_lab_tests": "33/33 passed",
+    "verified_cases": [
+      "detector event moves from the current transition to the next after readout reversal",
+      "past and absent-event propagation is rejected",
+      "Jing branch retains then commits without record mutation",
+      "Lyons-Brown D(S3) branch defers, ungauges, waits relative to the boundary, then corrects/re-gauges on neutral outcome",
+      "boundary branch ungauges and non-neutral D(Z3) outcome remains deferred",
+      "future registration and missing current decoder record are rejected"
+    ]
+  },
+  "claim_boundary": "The implementation verifies abstract causal state transitions only. Absorber distances and neutrality are supplied inputs; no microscopic D(S3) operation, D4 noise channel, schedule performance, threshold, or fault tolerance is established.",
+  "next_gate": "Implement the smallest explicit absorber-geometry and neutrality-measurement interfaces on deterministic D(S3)-labelled fixtures, including linked-cluster restrictions, before any noisy D4 channel."
+}

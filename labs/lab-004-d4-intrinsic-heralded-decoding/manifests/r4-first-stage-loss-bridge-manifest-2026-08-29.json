@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "status": "registered_ready",
+  "phase": "R4.4",
+  "purpose": "Verify the bridge between the R4 XOR-relative logical-sector posterior and Appendix-A Boolean-union first-stage loss, then quantify matched excess Bayes risk of both public first-stage decoders on the complete primitive support.",
+  "epistemic_role": "Bounded exact observation/loss alignment and algorithmic-gap audit; not a full two-stage decoder benchmark, LER, threshold, or scalable result.",
+  "source_freeze": {
+    "results/r4-nonwinding-information-hierarchy-audit.json": "b6230dff246549e1b93068c492f11a06f927e794776c658d296ef73775074c86",
+    "scripts/run_r4_nonwinding_information_hierarchy.py": "bc570da7e95b12e0e5671596400a94013bffbcc4c78a0f7235f62f59559e66b2",
+    "scripts/run_r4_distinct_observation_matrix.py": "bd99d351f6148a3c4fd02d7f02bf6c817ccd13fefa1565529aa2b3dcb95ba6f3",
+    "scripts/d4_matching.py": "1ad1c96af3bf98353c89820b68eb07183a49c954650c51218ca5c1b5c211739e",
+    "scripts/d4_honeycomb.py": "0895892c00f1f629ec469d4f7b4e42fb8e83bc07666edbc3b8fc26a1f30eb869",
+    "results/r2-end-to-end-pipeline-truth-audit.json": "3d18791d2b69e30d86bd388bd96ca724f512bf05aaba76c7c4bad4379be5cad2"
+  },
+  "scientific_question": {
+    "primary": "Under the exact Appendix-A first-stage Boolean-union failure rule, how far are the unit-weight O0 and published herald-weight O2 matching decisions from their Bayes-optimal decisions on the same observation layers?",
+    "prerequisite": "Is the XOR-relative sector posterior used by R4 sufficient for Boolean-union decision loss, or must the exact comparator minimize posterior expected union loss directly over corrections?",
+    "possible_outcomes": [
+      "XOR-relative sectors are loss-sufficient, so the R4 sector Bayes risk is also the exact first-stage decision limit.",
+      "XOR-relative sectors are not loss-sufficient, so R4 remains an intrinsic sector-information result and the practical-stage comparator must use direct posterior expected Boolean-union loss.",
+      "Either practical first-stage rule attains the matched exact decision limit on the primitive support.",
+      "One or both practical rules have positive excess risk, quantifying algorithmic rather than information loss."
+    ]
+  },
+  "matched_design": {
+    "lattice": "periodic_honeycomb(2), 12 edges",
+    "physical_ensemble": "The R4.2 nonwinding physical-error ensemble at p={0.1,0.3,0.5,0.6}.",
+    "o0": "Flux only; compare unit-weight syndrome-only MWPM with the exact O0 Boolean-union decision limit.",
+    "o2": "Flux plus the physically allowed first fusion-charge record; compare published 1-n_e K heralded MWPM with the exact O2 Boolean-union decision limit.",
+    "action_space": "For each flux syndrome, exhaust every binary correction with that boundary. The connected 12-edge fixture is expected to have 2^(E-V+1)=32 actions per syndrome.",
+    "loss": "Loss is one iff any component of the Boolean union of physical error and correction has nontrivial winding, matching the validated Appendix-A first-stage gate.",
+    "truth_boundary": "Physical errors enter only posterior integration and scoring; neither public decoder receives physical-error truth.",
+    "terminal_winding_rule": "Keep physical terminal winding mass outside the conditioned first-stage comparison exactly as in R4.2-R4.3."
+  },
+  "analysis": {
+    "prior_matrix": [0.1, 0.3, 0.5, 0.6],
+    "estimands": [
+      "exact O0 minimum posterior expected Boolean-union loss",
+      "unit-weight O0 MWPM posterior expected Boolean-union loss and excess risk",
+      "exact O2 minimum posterior expected Boolean-union loss",
+      "published herald-weight O2 MWPM posterior expected Boolean-union loss and excess risk",
+      "exact information gain R*_O0-R*_O2 under the common Boolean-union loss",
+      "fraction and probability mass of observations where XOR-relative sectors are or are not sufficient for the complete correction-action loss vector"
+    ],
+    "r4_bridge_rule": "Within each observation, candidates in one XOR-relative sector are loss-sufficient only if their Boolean-union loss is identical for every syndrome-faithful correction. Equality of aggregate R4 sector risk and direct union-loss Bayes risk is reported, not assumed.",
+    "reporting": "Report structural counts and observation-probability-weighted risks at each prior. Separate information gain, O0 algorithmic excess, and O2 algorithmic excess."
+  },
+  "validation": {
+    "absolute_tolerance": 1e-12,
+    "required": [
+      "source hashes match the registration freeze",
+      "each generated correction has the observed boundary and the affine action set is complete and duplicate-free",
+      "both production first-stage corrections belong to the registered action set",
+      "production corrections are functions only of their declared O0 or O2 observations",
+      "O0 evidence equals the exact marginal over O2 charge refinements",
+      "posterior observation evidence and conditional probabilities normalize at both layers",
+      "exact Boolean-union Bayes risk never exceeds the matched production risk",
+      "XOR-sector loss sufficiency and direct-versus-sector Bayes-risk equality are tested rather than imposed",
+      "no post-flux second measurement, physical-truth decoder input, stochastic sample, or larger lattice is introduced"
+    ]
+  },
+  "outputs": {
+    "machine_result": "results/r4-first-stage-loss-bridge-audit.json",
+    "report": "results/r4-first-stage-loss-bridge-audit.md"
+  },
+  "compute_budget": {
+    "new_stochastic_samples": 0,
+    "new_lattice_sizes": 0,
+    "maximum_o2_observations": 16230,
+    "expected_actions_per_syndrome": 32,
+    "maximum_candidate_action_evaluations": 2000000,
+    "stop_rule": "Stop after one complete primitive O0/O2 first-stage loss matrix, exact validations, machine-readable audit, and report update; do not simulate the adaptive second charge round or launch R5."
+  }
+}

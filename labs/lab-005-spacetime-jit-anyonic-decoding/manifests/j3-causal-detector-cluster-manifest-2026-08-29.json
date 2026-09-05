@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "status": "implemented_and_verified",
+  "registered_at": "2026-08-29T10:49:00Z",
+  "title": "Causal detector-cluster construction preflight",
+  "scope": {
+    "events": "Construct detector events only from a supplied causal record prefix and declared check coordinates.",
+    "clusters": "Form deterministic snapshot connected components under a registered spacetime L-infinity adjacency radius.",
+    "summaries": "Report age, inclusive extent, nearest-cluster separation, nearest active absorber, and geometric absorber-link candidates.",
+    "schedule_handoff": "Convert only clusters touching the current detector frontier into abstract Lyons-Brown schedule inputs.",
+    "not_in_scope": [
+      "persistent cluster identity under arbitrary future merges",
+      "decoder-optimal or source-unique clustering radius",
+      "ILP inference of correction strings or fusion channels",
+      "microscopic D(S3) operations",
+      "noisy D4 translation",
+      "schedule performance, threshold, or fault tolerance"
+    ]
+  },
+  "registered_parameters": {
+    "connectivity_metric": "L-infinity on integer spacetime coordinates",
+    "connectivity_radius": 1,
+    "candidate_link_rule": "active external absorber distance <= 2 * inclusive cluster extent",
+    "event_time": "detector row r represents the transition ending at readout round r+1"
+  },
+  "invariants": [
+    "only detector rows present in the causal prefix are visible",
+    "check coordinates match the detector width and share one dimension",
+    "each detector event belongs to exactly one deterministic component",
+    "cluster age and extent are computed from explicit spacetime coordinates",
+    "nearest-cluster separation is symmetric and excludes self",
+    "only active external absorbers contribute distance and link candidates",
+    "schedule handoff requires at least one current-frontier event",
+    "schedule detector vertices are current, sorted, unique, and record-visible"
+  ],
+  "implementation": {
+    "module": "scripts/detector_clusters.py",
+    "fixtures": "scripts/test_detector_clusters.py",
+    "module_sha256": "73cbc7b0193242e62573f68b1325eb882ceafcd5ef1cf02bb26d92f9a579a5b8",
+    "fixtures_sha256": "75cf666b9987e3f407e8f7c5b84df08abf80f2190421fcf7911362a8660b7e46"
+  },
+  "verification": {
+    "status": "passed",
+    "focused_tests": "7/7 passed",
+    "full_lab_tests": "53/53 passed",
+    "verified_cases": [
+      "causal detector events form deterministic spacetime connected components",
+      "age, inclusive extent, and symmetric nearest-cluster separation are explicit",
+      "active absorbers supply nearest distance and registered geometric link candidates",
+      "terminated and cluster-owned absorbers are excluded",
+      "only current-frontier clusters can become abstract schedule inputs",
+      "a constructed cluster drives the public Lyons-Brown defer path and record reversal",
+      "malformed prefix horizons and coordinate contracts are rejected"
+    ]
+  },
+  "claim_boundary": "This contract verifies a bounded causal snapshot constructor and its schedule handoff. It does not establish that the registered adjacency/link rules are physically optimal, reproduce persistent Lyons-Brown cluster tracking, or imply any noisy-channel or threshold result.",
+  "next_gate": "After snapshot construction passes, test persistent cluster identity and merge/link updates across successive causal prefixes before a noisy-measurement pilot."
+}

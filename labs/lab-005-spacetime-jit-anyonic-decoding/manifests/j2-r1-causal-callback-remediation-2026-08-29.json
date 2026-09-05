@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "status": "verified",
+  "recorded_at": "2026-08-29T13:12:38Z",
+  "acceptance_item": "R1 causal callback remediation",
+  "change": "Removed the full visible-history digest from InnerDecoderRequest and its request digest while retaining it in PolicyEvent, BranchRun, and BaselineRun provenance.",
+  "counterfactual": {
+    "fixed_public_prefix": "four readout rows with identical syndrome and herald rows through round 2",
+    "future_only_change": "round-3 herald_readout changes from 0 to 1",
+    "history_digests_differ": true,
+    "causal_results": {
+      "immediate": {"invocation_round": 1, "prefix_equal": true, "request_equal": true, "response_equal": true},
+      "fixed_delay_1": {"invocation_round": 2, "prefix_equal": true, "request_equal": true, "response_equal": true},
+      "jit_lyons_brown": {"invocation_round": 2, "prefix_equal": true, "request_equal": true, "response_equal": true}
+    },
+    "offline_result": {"invocation_round": 3, "noncausal": true, "prefix_equal": false, "request_equal": false, "response_equal": false}
+  },
+  "outer_provenance": {
+    "baseline_history_digest_retained": true,
+    "branch_history_digest_retained": true,
+    "policy_event_history_digest_retained": true,
+    "all_branches_bind_to_their_run_history": true
+  },
+  "verification": {
+    "focused": "8 passed in 0.18s",
+    "full_lab": "107 passed in 0.92s",
+    "sampling": "none"
+  },
+  "source_hashes": {
+    "baseline_harness.py": "ee94606fa604d87694c9ca4408e291fe50c6e49b15e61382ee6c90983b2ec836",
+    "test_baseline_harness.py": "7808c8d6284e3c264c810f5f8cc5152e587bfde115f3c637aaf19f7b2e22ba85",
+    "test_generic_history.py": "b0a3d47ae74f9ce030b9b5600a8c38f1c422e242572f3dd5c0b4277c0e116a9e"
+  },
+  "claim_boundary": "This verifies callback causality and explicit offline noncausality only. It does not integrate E1, compare schedules, sample logical failures, or establish fault tolerance.",
+  "next_gate": "Implement and verify I1 round-local E1 record derivation from the supplied causal prefix before I2 or I3."
+}

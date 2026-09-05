@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "phase": "R6Z",
+  "title": "Unified D4 BP-MWPM flux-curve analysis",
+  "purpose": "Combine every valid current D4 X-only flux-recovery run into one provenance-preserving finite-size data product and threshold analysis after R6Y completes.",
+  "included_sources": [
+    {"id": "R6V-low", "path": "results/r6v-x-only-flux-threshold-scan-2026-08-30.checkpoint.json", "role": "lower-p_X context; generic recurrence; include in pooled primary cells only after output-equivalence audit"},
+    {"id": "R6W-dense", "path": "results/r6w-d4-bp-threshold-bracket-dense-2026-08-31.json", "role": "coarse full-range dense screen"},
+    {"id": "R6X-dense", "path": "results/r6x-d4-bp-threshold-refinement-2026-08-31.json", "role": "upper-side 1000-shot refinement"},
+    {"id": "R6Y-dense", "path": "results/r6y-d4-bp-threshold-lowerside-2026-08-31.json", "role": "lower-side 1000-shot refinement"}
+  ],
+  "exclusions": ["pre-remediation/stale datasets", "Lab 003 phenomenological q=3/4 data", "charge-recovery or full-two-stage scores", "terminal histories in the conditional flux denominator"],
+  "pooling_rule": "Pool independent histories only by identical (L, p_X, policy, p_Z=0, X-only D4 channel, first-stage Boolean-union flux score, BP schedule). Preserve per-source counts and raw rows. Never replace a point with a later run; sum failure and eligible-history counts after compatibility checks.",
+  "paper-model-audit": {"matched": ["Appendix-C paper-normalized periodic honeycomb: 6L^2 blue/green vertices and 9L^2 red-qubit edges", "red-X [2]-pair Bernoulli edge-error channel", "D4 intermediate Abelian fusion-record support/parity likelihood", "first-stage public flux and fusion record", "Appendix-A Boolean physical/correction-union flux failure"], "not_matched": ["paper's full sequential post-flux charge-recovery stage", "any nonzero p_Z or arbitrary-Pauli noise", "paper's even-L=10..28 and ~10^6-shot production budget"], "interpretation": "The pooled result is a same-code/same-first-stage-channel BP-MWPM flux-threshold estimate, not a direct replacement for the published full end-to-end p_c=0.20842(2)."},
+  "outputs": ["machine-readable combined catalog", "per-source and pooled LER tables with Wilson intervals", "multi-L BP/O2/O0 curve visualization", "adjacent-size contrasts", "finite-size crossing estimate with stated method and uncertainty", "40-vs-160 BP stability analysis at the selected crossing neighborhood"],
+  "claim_boundary": "The unified product estimates the D4 X-only first-stage flux threshold for the registered finite-iterate BP->MWPM decoder only; it is not a Lab 003 equivalence claim or the paper's full two-stage threshold."
+}

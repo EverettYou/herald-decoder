@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "status": "verified, analyzed, and reported",
+  "registered_at": "2026-08-29T17:46:00Z",
+  "title": "R6I mini-bucket bounded-approximation gate",
+  "rigor_tier": "exploratory bounded approximation with exact primitive validation",
+  "program_alignment": {
+    "central_question": "Can a user-controlled cluster cap yield a useful D4 posterior approximation before exact paper-L2 inference becomes structurally prohibitive?",
+    "scientific_layer": "WP3 scalable decoding",
+    "epistemic_role": "lowest-cost approximation prerequisite after R6H mapped the exact cutset time-space frontier",
+    "upstream_dependencies": ["exact R6D factor graph", "verified R6G bucket engine", "R6H cluster/work frontier"],
+    "downstream_gate": "GBP or tensor implementations are justified only if this explicit i-bound baseline leaves a measurable accuracy/cost gap"
+  },
+  "research_basis": [
+    {
+      "source": "Dechter and Rish, Mini-buckets: A general scheme for bounded inference, JACM 50 (2003), DOI 10.1145/636865.636866",
+      "role": "mini-bucket partitions bound created dependency dimension, giving a parameterized accuracy/complexity trade and probability-of-evidence bounds"
+    },
+    {
+      "source": "Rollon and Dechter, New Mini-Bucket Partitioning Heuristics for Bounding the Probability of Evidence, AAAI 2010",
+      "role": "partition heuristic materially affects bound quality, so representation and order sensitivity must be reported rather than hidden"
+    }
+  ],
+  "question": {
+    "smallest_claim": "Primitive posterior pseudo-marginal error and evidence-bound tightness as functions of a registered maximum mini-bucket scope, plus paper-L2 structural and cross-representation diagnostics.",
+    "H1": "increasing i-bound reduces primitive evidence-bound looseness and physical pseudo-marginal error",
+    "H2": "when i-bound reaches the exact registered maximum cluster, mini-bucket reproduces exact bucket evidence and marginals within 1e-10",
+    "H3": "paper-L2 bounds remain representation/order sensitive at i<=20, demonstrating that a bounded result is not yet a representation-invariant posterior approximation",
+    "falsification": "failure of analytic controls, violation of the nonnegative evidence upper bound beyond 1e-10, or failure of the exact-ceiling control rejects implementation"
+  },
+  "model": {
+    "algorithm": "sum-product bucket elimination with each bucket greedily partitioned into mini-buckets whose union scope has at most i variables; factors sorted by decreasing scope and placed by minimum resulting union, then stable index",
+    "evidence": "product-of-sums mini-bucket result, an upper bound for the nonnegative factor graph",
+    "pseudo_marginal": "normalize separate clamped mini-bucket evidence bounds for X_e=0 and X_e=1; explicitly not a posterior bound",
+    "exact_invariant": "both exact-preserving R6D representations have the same auxiliary-prior-adjusted exact evidence"
+  },
+  "matrix": {
+    "representations": ["r6d_unclustered", "r6f_bounded_superfactor"],
+    "orders": ["global_min_fill", "auxiliary_first_min_fill"],
+    "i_bounds": [10, 14, 18, 20],
+    "geometries": ["primitive maximum-candidate observation at p=0.10", "paper_L2 vacuum observation at p=0.10"],
+    "primitive_metrics": ["adjusted evidence upper-bound ratio", "maximum and mean absolute physical pseudo-marginal error", "split buckets", "peak scope"],
+    "paper_metrics": ["adjusted log evidence upper bound", "split buckets", "peak scope", "cross-representation/order spread"],
+    "independent_unit": "deterministic graph/order/i-bound row; no Monte Carlo samples",
+    "budget": "under ten CPU minutes and 2 GiB; no correction, LER, threshold, runtime-scaling, or fault-tolerance samples"
+  },
+  "analysis": {
+    "sensitivity": "report every representation/order branch; do not select one post hoc",
+    "stop_rule": "if exact-ceiling controls pass, report the complete finite matrix; if low-i errors or paper branch disagreement remain material, route the next gate to a richer approximation rather than expanding LER sampling",
+    "claim_boundary": "No guarantee that normalized clamped upper bounds bound true marginals; no paper-L2 accuracy claim without an exact reference; no scalable decoder or logical-performance claim."
+  },
+  "acceptance_items": [
+    {"item": "literature-grounded prospective contract", "status": "registered", "evidence": "this manifest"},
+    {"item": "mini-bucket implementation and exact/synthetic controls", "status": "verified", "evidence": "scripts/d4_elimination_width.py and scripts/test_d4_elimination_width.py; 4 focused tests pass"},
+    {"item": "complete primitive and paper-L2 matrix", "status": "analyzed", "evidence": "results/r6i-mini-bucket-approximation-gate.json; 16 primitive and 16 paper-L2 rows complete"},
+    {"item": "analysis, report, roadmap, metadata, and durable state", "status": "reported", "evidence": "results/r6i-mini-bucket-approximation-gate.md and updated Lab/Wiki/state artifacts"}
+  ],
+  "hypothesis_outcomes": {
+    "H1": "mixed: evidence bounds tighten monotonically in all four branches, but maximum marginal error is nonmonotone for superfactor/global (0.090 at i=10 to 0.126 at i=14)",
+    "H2": "supported on all seven exact-ceiling rows; maximum evidence-ratio error 1.998e-15 and maximum marginal error 1.110e-16",
+    "H3": "supported: paper-L2 cross-branch log10 spread remains 6.623 decades at i=20"
+  }
+}

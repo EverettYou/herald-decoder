@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-08-28T23:40:34.871421+00:00",
+  "purpose": "independent bounded charge-stage objective and tie-homology oracle",
+  "protocol": {
+    "size": 2,
+    "charge_vertices_per_color": 12,
+    "charge_edges_per_color": 36,
+    "error_rates": [
+      0.0,
+      0.05,
+      0.1
+    ],
+    "seeds_per_rate": 32,
+    "modes": [
+      "syndrome_only",
+      "heralded"
+    ],
+    "oracle": "all defect pairings times all shortest paths; positive unit weights",
+    "candidate_limit_per_case": 1000000
+  },
+  "decoded_records": 189,
+  "audited_color_records": 378,
+  "counts": {
+    "blue": {
+      "defects_0": 174,
+      "defects_2": 15,
+      "logical_unambiguous": 189,
+      "objective_exact": 189,
+      "unique_optimum": 189
+    },
+    "green": {
+      "defects_0": 172,
+      "defects_2": 17,
+      "logical_unambiguous": 189,
+      "objective_exact": 189,
+      "unique_optimum": 189
+    }
+  },
+  "tie_examples": [],
+  "claim_boundary": "This certifies the second-stage unit-weight MWPM objective on the registered paper-L=2 cohort and exposes logical ambiguity across tied optima. It is not the R3 fusion-constrained oracle and not a Bayes-optimal posterior decoder."
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "registered_at": "2026-08-27T21:04:00Z",
+  "phase": "N1",
+  "experiment": "Honeycomb q=1 residual-priority-80 isolated-crossing refinement",
+  "scientific_role": "bounded finite-size crossing and convergence diagnostic",
+  "lattice": "honeycomb",
+  "q": 1.0,
+  "sizes": [9, 11],
+  "p_grid": [0.36, 0.37, 0.38, 0.39, 0.4],
+  "seeds": [531001, 531002, 531003, 531004, 531005],
+  "shots_per_seed": 600,
+  "shots_per_cell": 3000,
+  "total_decodes": 30000,
+  "decoder": {
+    "name": "HeraldAwareBpMatchingDecoder",
+    "recurrence_mode": "damping",
+    "damping": 0.25,
+    "max_iterations": 80,
+    "update_schedule": "residual_priority",
+    "residual_priority_order": "stable_sort",
+    "residual_priority_buffer_reuse": false,
+    "residual_priority_cached_products": false,
+    "matching_projection": "posterior_llr",
+    "p_m": 0.0,
+    "p_h": 0.0,
+    "use_numba": true
+  },
+  "provenance_policy": "standalone new-source cohort; do not pool with the 1000-shot first wave",
+  "acceptance_gates": {
+    "raw_records": 30000,
+    "gzip_integrity": true,
+    "raw_sha256_matches_summary": true,
+    "syndrome_fidelity_failures": 0,
+    "syndrome_fidelity_rate_every_cell": 1.0,
+    "source_hashes_recorded": [
+      "runner",
+      "lattice_model",
+      "decoder",
+      "damping_decoder",
+      "numba_kernels"
+    ]
+  },
+  "planned_outputs": {
+    "summary": "results/q1-honeycomb-residual80-l9-l11-crossing-refined-3000-2026-08-27.json",
+    "raw": "results/q1-honeycomb-residual80-l9-l11-crossing-refined-3000-2026-08-27-raw.jsonl.gz",
+    "analysis": "results/q1-honeycomb-residual80-l9-l11-crossing-refined-3000-2026-08-27-analysis.json",
+    "figure": "figures/q1-honeycomb-residual80-l9-l11-crossing-refined-3000-2026-08-27.png"
+  },
+  "stopping_rule": "Run exactly this balanced wave. Inspect the point curve, seed-cluster uncertainty, convergence, and fidelity before registering any further p point, size, seed, or shot wave.",
+  "evidence_boundary": "The result may refine or reject the isolated L=9/11 finite-size point crossing. It cannot establish an asymptotic threshold or ceiling-compatible phase."
+}

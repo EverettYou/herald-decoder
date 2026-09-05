@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "title": "Lab 003 final selected q=0/q=0.75/q=1 LER curves",
+  "figure": "results/final-selected-ler-curves-q0-q075-q1-square-honeycomb-2026-08-28.png",
+  "layout": "3 rows (q=0, 0.75, 1) by 2 columns (square, honeycomb)",
+  "panels": [
+    {
+      "lattice": "square",
+      "q": 0.0,
+      "title": "Square lattice, q=0",
+      "subtitle": "static-prior MWPM; 5000 shots/cell",
+      "sources": [
+        "q0-square-refined-5000-2026-08-27.json"
+      ],
+      "sizes": [
+        5,
+        7,
+        9,
+        11
+      ],
+      "p_range": [
+        0.09,
+        0.15
+      ],
+      "source_config_sha256": [
+        null
+      ]
+    },
+    {
+      "lattice": "honeycomb",
+      "q": 0.0,
+      "title": "Honeycomb lattice, q=0",
+      "subtitle": "40-step damping BP; 1000 shots/cell",
+      "sources": [
+        "phase2-honeycomb-q000-discovery-1000-2026-08-27.json"
+      ],
+      "sizes": [
+        5,
+        7,
+        9,
+        11
+      ],
+      "p_range": [
+        0.08,
+        0.49
+      ],
+      "source_config_sha256": [
+        "1fc465f37db79af1c805383902da6921ab164e72b141816f4af82808ba37c57c"
+      ]
+    },
+    {
+      "lattice": "square",
+      "q": 0.75,
+      "title": "Square lattice, q=0.75",
+      "subtitle": "40-step damping BP; 5000 shots/cell",
+      "sources": [
+        "q075-square-l11-l13-refined-low-5000-2026-08-27.json",
+        "q075-square-l11-l13-refined-5000-2026-08-27.json"
+      ],
+      "sizes": [
+        11,
+        13
+      ],
+      "p_range": [
+        0.12,
+        0.32
+      ],
+      "source_config_sha256": [
+        "68ce30bfd94954c454c496460e23ab3df520e649a09b3487c95d220cbfe7d7c6",
+        "9bce4c9f77afe72d6af882fc8ae69a683bf94a3fb67fcb9d8c09b40526069a3d"
+      ]
+    },
+    {
+      "lattice": "honeycomb",
+      "q": 0.75,
+      "title": "Honeycomb lattice, q=0.75",
+      "subtitle": "residual-priority-80 BP; 5000 shots/cell",
+      "sources": [
+        "q075-honeycomb-residual80-confirmation-5000-2026-08-27.json"
+      ],
+      "sizes": [
+        5,
+        7,
+        9,
+        11
+      ],
+      "p_range": [
+        0.08,
+        0.49
+      ],
+      "source_config_sha256": [
+        "85ab57c9d97c3e378e8de90dfd3d21967739b0cacaff1c3a159c30b50150f651"
+      ]
+    },
+    {
+      "lattice": "square",
+      "q": 1.0,
+      "title": "Square lattice, q=1",
+      "subtitle": "40-step damping BP; 10000 shots/cell",
+      "sources": [
+        "q1-square-l5-l13-crossing-refined-10000-2026-08-27.json"
+      ],
+      "sizes": [
+        5,
+        7,
+        9,
+        11,
+        13
+      ],
+      "p_range": [
+        0.28,
+        0.42
+      ],
+      "source_config_sha256": [
+        "0985af2d304f9585aff1d60ce27fbf88afdde3d8348acd746e727af0715e92cc"
+      ]
+    },
+    {
+      "lattice": "honeycomb",
+      "q": 1.0,
+      "title": "Honeycomb lattice, q=1",
+      "subtitle": "residual-priority-80 BP; 1000 shots/cell",
+      "sources": [
+        "q1-honeycomb-full-p-residual80-discovery-1000-2026-08-27.json"
+      ],
+      "endpoints": "q1-honeycomb-full-p-endpoints-1000-2026-08-27.json",
+      "sizes": [
+        5,
+        7,
+        9,
+        11
+      ],
+      "p_range": [
+        0.0,
+        1.0
+      ],
+      "source_config_sha256": [
+        "bb70590797798feb117a48fc7a900bb2fe7a0c42da9a47316a59a08f3547d0bf"
+      ]
+    }
+  ],
+  "evidence_boundary": "Each panel uses its selected immutable cohort and possibly its own p range, sizes, shots, and decoder schedule. The raster is a six-panel finite-window evidence summary, not a pooled threshold fit or a cross-geometry performance comparison."
+}

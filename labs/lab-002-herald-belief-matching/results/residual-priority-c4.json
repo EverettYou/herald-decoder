@@ -1,0 +1,2579 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-27T17:30:17.615554+00:00",
+  "transition": "Lab 002 Phase C4 independent compiled residual-priority multi-geometry replication",
+  "timing_protocol": "Two untimed warm-ups per arm, followed by alternating arm order on each matched observation.",
+  "geometries": [
+    {
+      "lattice": "square",
+      "L": 9,
+      "p": 0.2,
+      "q": 1.0,
+      "seeds": [
+        10401,
+        10402,
+        10403,
+        10404,
+        10405,
+        10406,
+        10407,
+        10408,
+        10409,
+        10410,
+        10411,
+        10412,
+        10413,
+        10414,
+        10415,
+        10416,
+        10417,
+        10418,
+        10419,
+        10420,
+        10421,
+        10422,
+        10423,
+        10424,
+        10425,
+        10426,
+        10427,
+        10428,
+        10429,
+        10430,
+        10431,
+        10432,
+        10433,
+        10434,
+        10435,
+        10436,
+        10437,
+        10438,
+        10439,
+        10440,
+        10441,
+        10442,
+        10443,
+        10444,
+        10445,
+        10446,
+        10447,
+        10448,
+        10449,
+        10450,
+        10451,
+        10452,
+        10453,
+        10454,
+        10455,
+        10456,
+        10457,
+        10458,
+        10459,
+        10460,
+        10461,
+        10462,
+        10463,
+        10464
+      ],
+      "summaries": {
+        "synchronous": {
+          "convergence_rate": 0.078125,
+          "mean_iterations": 78.734375,
+          "mean_log_loss": 0.1245832726272918,
+          "mean_brier": 0.042263354633465006,
+          "mean_runtime_ms": 3.1125233440434386,
+          "all_syndrome_faithful": true
+        },
+        "residual_priority": {
+          "convergence_rate": 0.234375,
+          "mean_iterations": 75.90625,
+          "mean_log_loss": 0.12437966620768173,
+          "mean_brier": 0.04223877336719388,
+          "mean_runtime_ms": 5.188369125335157,
+          "all_syndrome_faithful": true
+        }
+      },
+      "paired": {
+        "converged": {
+          "mean_delta": 0.15625,
+          "bootstrap_ci95": [
+            0.078125,
+            0.25
+          ]
+        },
+        "iterations": {
+          "mean_delta": -2.828125,
+          "bootstrap_ci95": [
+            -4.5,
+            -1.3902343750000057
+          ]
+        },
+        "edge_log_loss": {
+          "mean_delta": -0.00020360641961007314,
+          "bootstrap_ci95": [
+            -0.0005701453547318768,
+            0.00017130618095781208
+          ]
+        },
+        "edge_brier": {
+          "mean_delta": -2.4581266271127083e-05,
+          "bootstrap_ci95": [
+            -0.00019022402879984496,
+            0.00015806647154649274
+          ]
+        },
+        "runtime_ms": {
+          "mean_delta": 2.0758457812917186,
+          "bootstrap_ci95": [
+            1.649588578050043,
+            2.4929193867137656
+          ]
+        }
+      },
+      "per_observation": {
+        "synchronous": [
+          {
+            "seed": 10401,
+            "runtime_ms": 13.918833021307364,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.11865928717910514,
+            "edge_brier": 0.036310670590404395,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10402,
+            "runtime_ms": 2.5068329996429384,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.1743971301460479,
+            "edge_brier": 0.06070869853507107,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10403,
+            "runtime_ms": 3.314875008072704,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.23283888445298026,
+            "edge_brier": 0.07844077943796036,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10404,
+            "runtime_ms": 3.566500003216788,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.03341640916956633,
+            "edge_brier": 0.009987131474134579,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10405,
+            "runtime_ms": 2.6719580055214465,
+            "converged": true,
+            "iterations": 75,
+            "edge_log_loss": 0.126748299011043,
+            "edge_brier": 0.045980586808325216,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10406,
+            "runtime_ms": 3.7473329866770655,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.07799580030921077,
+            "edge_brier": 0.0264135183109334,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10407,
+            "runtime_ms": 2.4198750033974648,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.24645661742995634,
+            "edge_brier": 0.08850602052065175,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10408,
+            "runtime_ms": 2.798750007059425,
+            "converged": true,
+            "iterations": 57,
+            "edge_log_loss": 0.006662162914815557,
+            "edge_brier": 0.0012046485260772078,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10409,
+            "runtime_ms": 2.341790997888893,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.14194236816629527,
+            "edge_brier": 0.048246934829343155,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10410,
+            "runtime_ms": 3.057374997297302,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.11830304866902563,
+            "edge_brier": 0.042145079246240266,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10411,
+            "runtime_ms": 2.294082980370149,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.11246125737283966,
+            "edge_brier": 0.03876572398338318,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10412,
+            "runtime_ms": 3.785833017900586,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.03891672308733614,
+            "edge_brier": 0.013944565935815027,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10413,
+            "runtime_ms": 2.4784999841358513,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.19412501458651432,
+            "edge_brier": 0.06651820854485456,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10414,
+            "runtime_ms": 2.75891600176692,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.15090800181110528,
+            "edge_brier": 0.05316037585564127,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10415,
+            "runtime_ms": 2.4240839993581176,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.03792406696680364,
+            "edge_brier": 0.01104427136581244,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10416,
+            "runtime_ms": 3.345000004628673,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.03384113684414687,
+            "edge_brier": 0.009756028902098729,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10417,
+            "runtime_ms": 2.633416006574407,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.19393138892647327,
+            "edge_brier": 0.0613543946961435,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10418,
+            "runtime_ms": 2.5355830148328096,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.13169020995283248,
+            "edge_brier": 0.04434540697630707,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10419,
+            "runtime_ms": 2.349124988541007,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.09117069294048397,
+            "edge_brier": 0.029569279572922727,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10420,
+            "runtime_ms": 2.6091670151799917,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.053324712054561546,
+            "edge_brier": 0.018999313540482114,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10421,
+            "runtime_ms": 4.7923329984769225,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.16838310681752428,
+            "edge_brier": 0.06047913894492704,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10422,
+            "runtime_ms": 2.221625007223338,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.18019462871289055,
+            "edge_brier": 0.05927516280022327,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10423,
+            "runtime_ms": 3.1907910015434027,
+            "converged": true,
+            "iterations": 48,
+            "edge_log_loss": 0.07099019812786353,
+            "edge_brier": 0.02309806856673441,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10424,
+            "runtime_ms": 2.3517910158261657,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.14908343419154393,
+            "edge_brier": 0.04690967464214768,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10425,
+            "runtime_ms": 2.3016660124994814,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.0691031551595794,
+            "edge_brier": 0.02343636813343817,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10426,
+            "runtime_ms": 2.3291659890674055,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.15884634268629136,
+            "edge_brier": 0.05983741484843185,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10427,
+            "runtime_ms": 2.565458999015391,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.1341773273115013,
+            "edge_brier": 0.04838279607307797,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10428,
+            "runtime_ms": 2.570000011473894,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.1617434504568787,
+            "edge_brier": 0.05130428275331568,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10429,
+            "runtime_ms": 2.685584011487663,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.10186334218317177,
+            "edge_brier": 0.0366723524172822,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10430,
+            "runtime_ms": 2.000249980483204,
+            "converged": true,
+            "iterations": 71,
+            "edge_log_loss": 0.07844658077900034,
+            "edge_brier": 0.026629097915733174,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10431,
+            "runtime_ms": 3.7998750049155205,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.04613253617343785,
+            "edge_brier": 0.016658314883493085,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10432,
+            "runtime_ms": 3.4694579953793436,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.171509676315624,
+            "edge_brier": 0.055617310943408736,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10433,
+            "runtime_ms": 2.523000002838671,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.052734043538713776,
+            "edge_brier": 0.017285794702660548,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10434,
+            "runtime_ms": 3.807792003499344,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.10805872739755387,
+            "edge_brier": 0.03287654181026631,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10435,
+            "runtime_ms": 2.493667008820921,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.17986374757461446,
+            "edge_brier": 0.05893015030089109,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10436,
+            "runtime_ms": 1.985749986488372,
+            "converged": true,
+            "iterations": 68,
+            "edge_log_loss": 0.12334973535211255,
+            "edge_brier": 0.04063574530110364,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10437,
+            "runtime_ms": 3.5987089795526117,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.09060828464609601,
+            "edge_brier": 0.03209067966774857,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10438,
+            "runtime_ms": 2.2755839745514095,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.16119662106669952,
+            "edge_brier": 0.05747614604712124,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10439,
+            "runtime_ms": 3.759417013498023,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.16381433284562785,
+            "edge_brier": 0.05403262237150035,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10440,
+            "runtime_ms": 5.879207979887724,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.0789292912623849,
+            "edge_brier": 0.02589904524506763,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10441,
+            "runtime_ms": 2.5101249921135604,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.28771008204447657,
+            "edge_brier": 0.09867688498201063,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10442,
+            "runtime_ms": 2.517249988159165,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.15278833190361157,
+            "edge_brier": 0.05259759138545651,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10443,
+            "runtime_ms": 3.768750000745058,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.09764351570857244,
+            "edge_brier": 0.03604280034087941,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10444,
+            "runtime_ms": 2.575374994194135,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.14259120933362784,
+            "edge_brier": 0.04845003095191902,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10445,
+            "runtime_ms": 3.7131249846424907,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.1591397019550945,
+            "edge_brier": 0.05818867587899504,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10446,
+            "runtime_ms": 3.2305830100085586,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.16222913742272285,
+            "edge_brier": 0.056632510477029316,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10447,
+            "runtime_ms": 2.337916987016797,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.053896808801349394,
+            "edge_brier": 0.018382354822814334,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10448,
+            "runtime_ms": 2.40658299298957,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.22402013577034355,
+            "edge_brier": 0.07813857608305377,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10449,
+            "runtime_ms": 3.650041006039828,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.06585418242032248,
+            "edge_brier": 0.02271548503748715,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10450,
+            "runtime_ms": 3.784417000133544,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.13945654869332966,
+            "edge_brier": 0.04670813110143007,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10451,
+            "runtime_ms": 2.749000006588176,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.22564009977957927,
+            "edge_brier": 0.07441829271595903,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10452,
+            "runtime_ms": 2.900416002376005,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.05452425072314519,
+            "edge_brier": 0.017158583903717762,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10453,
+            "runtime_ms": 2.2410000092349946,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.21676002142750156,
+            "edge_brier": 0.074348879458626,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10454,
+            "runtime_ms": 3.280375007307157,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.18536305180737492,
+            "edge_brier": 0.06404712164491498,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10455,
+            "runtime_ms": 2.967958018416539,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.1703973459316677,
+            "edge_brier": 0.05824520561734093,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10456,
+            "runtime_ms": 3.3066659816540778,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.09925460879217056,
+            "edge_brier": 0.032298360662032746,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10457,
+            "runtime_ms": 2.5147910055238754,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.033541595712618735,
+            "edge_brier": 0.009171368214261951,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10458,
+            "runtime_ms": 2.9968330054543912,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.1603465456056854,
+            "edge_brier": 0.052258700056093566,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10459,
+            "runtime_ms": 2.3212499800138175,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.07651686711208969,
+            "edge_brier": 0.026446415768869216,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10460,
+            "runtime_ms": 2.452250017086044,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.07535178946432032,
+            "edge_brier": 0.024286659941074706,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10461,
+            "runtime_ms": 4.118165990803391,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.07835144220870416,
+            "edge_brier": 0.026970346416030088,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10462,
+            "runtime_ms": 2.5070840201806277,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.17654075393155144,
+            "edge_brier": 0.060785024307173106,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10463,
+            "runtime_ms": 3.750834002858028,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.03320578971391844,
+            "edge_brier": 0.009674129897777817,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10464,
+            "runtime_ms": 2.4417499953415245,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.1374638572926437,
+            "edge_brier": 0.045284220855638574,
+            "syndrome_faithful": true
+          }
+        ],
+        "residual_priority": [
+          {
+            "seed": 10401,
+            "runtime_ms": 9.883624996291474,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.11854628831506722,
+            "edge_brier": 0.03630035130270457,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10402,
+            "runtime_ms": 5.890375003218651,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.17439713456092926,
+            "edge_brier": 0.060708650964754085,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10403,
+            "runtime_ms": 6.671417009783909,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.2328261989355065,
+            "edge_brier": 0.07843567072500376,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10404,
+            "runtime_ms": 4.824250005185604,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.0325568629066025,
+            "edge_brier": 0.009656223620003504,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10405,
+            "runtime_ms": 5.386625009123236,
+            "converged": true,
+            "iterations": 55,
+            "edge_log_loss": 0.12719964421634194,
+            "edge_brier": 0.046206050674547916,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10406,
+            "runtime_ms": 3.874832997098565,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.07759613902208323,
+            "edge_brier": 0.02637979948370736,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10407,
+            "runtime_ms": 5.461540975375101,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.24651871449131416,
+            "edge_brier": 0.0885382815335744,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10408,
+            "runtime_ms": 2.4939579889178276,
+            "converged": true,
+            "iterations": 44,
+            "edge_log_loss": 0.006662162914908395,
+            "edge_brier": 0.0012046485261089691,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10409,
+            "runtime_ms": 5.693250015610829,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.14193989612324928,
+            "edge_brier": 0.04824500814912716,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10410,
+            "runtime_ms": 4.736250004498288,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.11829124493677304,
+            "edge_brier": 0.042139923577820815,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10411,
+            "runtime_ms": 5.497167003341019,
+            "converged": true,
+            "iterations": 66,
+            "edge_log_loss": 0.11246127000771497,
+            "edge_brier": 0.03876572691832277,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10412,
+            "runtime_ms": 4.2628330120351166,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.038740641117346354,
+            "edge_brier": 0.013922518943942058,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10413,
+            "runtime_ms": 5.504375003511086,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.1941197121071922,
+            "edge_brier": 0.06651709761566994,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10414,
+            "runtime_ms": 4.764541983604431,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.15047920553539076,
+            "edge_brier": 0.05307405564784287,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10415,
+            "runtime_ms": 4.602542001521215,
+            "converged": true,
+            "iterations": 70,
+            "edge_log_loss": 0.03792405308355201,
+            "edge_brier": 0.011044267422731301,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10416,
+            "runtime_ms": 4.3851250084117055,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.03347238086635859,
+            "edge_brier": 0.009695471166689546,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10417,
+            "runtime_ms": 6.482249998953193,
+            "converged": true,
+            "iterations": 77,
+            "edge_log_loss": 0.1939313346922955,
+            "edge_brier": 0.06135437860955951,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10418,
+            "runtime_ms": 4.931374976877123,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.131859889284285,
+            "edge_brier": 0.044512923225304396,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10419,
+            "runtime_ms": 5.770374991698191,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.09028545836367721,
+            "edge_brier": 0.0293757565601215,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10420,
+            "runtime_ms": 5.933665990596637,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.05298910361692101,
+            "edge_brier": 0.018949126773009597,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10421,
+            "runtime_ms": 4.029167001135647,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.16837995501060185,
+            "edge_brier": 0.06055916961021052,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10422,
+            "runtime_ms": 5.5176669848151505,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.1800159606620827,
+            "edge_brier": 0.05924643111790705,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10423,
+            "runtime_ms": 3.094791987678036,
+            "converged": true,
+            "iterations": 41,
+            "edge_log_loss": 0.07099019737037512,
+            "edge_brier": 0.023098068254358072,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10424,
+            "runtime_ms": 4.930166993290186,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.14908346978733733,
+            "edge_brier": 0.046909724682460574,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10425,
+            "runtime_ms": 5.066457990324125,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.06844190260231826,
+            "edge_brier": 0.02341995004848195,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10426,
+            "runtime_ms": 4.774375003762543,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.15727122557895654,
+            "edge_brier": 0.05912050700224721,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10427,
+            "runtime_ms": 4.0912080148700625,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.13276053918841896,
+            "edge_brier": 0.04801011104670742,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10428,
+            "runtime_ms": 5.5847920011729,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.16174510289471283,
+            "edge_brier": 0.05130503169593072,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10429,
+            "runtime_ms": 5.357458023354411,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.10186271453016157,
+            "edge_brier": 0.036672157094673946,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10430,
+            "runtime_ms": 2.7485409809742123,
+            "converged": true,
+            "iterations": 49,
+            "edge_log_loss": 0.07844658050417516,
+            "edge_brier": 0.026629097745993046,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10431,
+            "runtime_ms": 7.354125002166256,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.044713409951373934,
+            "edge_brier": 0.01607858161273114,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10432,
+            "runtime_ms": 4.319833999034017,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.17151015167469785,
+            "edge_brier": 0.05561751485092911,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10433,
+            "runtime_ms": 4.5762079826090485,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.05100917653749382,
+            "edge_brier": 0.016964723193230058,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10434,
+            "runtime_ms": 4.412166977999732,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.10841086304250126,
+            "edge_brier": 0.033013574646184936,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10435,
+            "runtime_ms": 5.366625002352521,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.17984218579531858,
+            "edge_brier": 0.058922123503773495,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10436,
+            "runtime_ms": 2.785750024486333,
+            "converged": true,
+            "iterations": 49,
+            "edge_log_loss": 0.1233497354657456,
+            "edge_brier": 0.040635745284849985,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10437,
+            "runtime_ms": 4.004290996817872,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.09060775812775371,
+            "edge_brier": 0.03209052450059292,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10438,
+            "runtime_ms": 5.080250004539266,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.16933713521106625,
+            "edge_brier": 0.06175226736462447,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10439,
+            "runtime_ms": 5.676834000041708,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.16327986749837053,
+            "edge_brier": 0.05398700103397506,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10440,
+            "runtime_ms": 4.706333013018593,
+            "converged": true,
+            "iterations": 62,
+            "edge_log_loss": 0.07892929122668564,
+            "edge_brier": 0.025899045227219232,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10441,
+            "runtime_ms": 8.447375003015622,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.2877081292164299,
+            "edge_brier": 0.09867611395276053,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10442,
+            "runtime_ms": 5.554542003665119,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.15253778394878328,
+            "edge_brier": 0.05258217635119893,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10443,
+            "runtime_ms": 3.688917000545189,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.0974801744237646,
+            "edge_brier": 0.03609690097162292,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10444,
+            "runtime_ms": 5.440708016976714,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.14251244125346274,
+            "edge_brier": 0.0484690027787487,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10445,
+            "runtime_ms": 4.03525002184324,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.15916380169524924,
+            "edge_brier": 0.058244374509001606,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10446,
+            "runtime_ms": 4.611792013747618,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.16225436770549062,
+            "edge_brier": 0.05672353636604074,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10447,
+            "runtime_ms": 3.2197080145124346,
+            "converged": true,
+            "iterations": 61,
+            "edge_log_loss": 0.05389680458622553,
+            "edge_brier": 0.01838235281607779,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10448,
+            "runtime_ms": 6.40199999907054,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.22401966164157716,
+            "edge_brier": 0.07813835440984337,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10449,
+            "runtime_ms": 5.332000000635162,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.06543098750308723,
+            "edge_brier": 0.022573664290618058,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10450,
+            "runtime_ms": 4.564583010505885,
+            "converged": true,
+            "iterations": 80,
+            "edge_log_loss": 0.13945728602556762,
+            "edge_brier": 0.04670839693051882,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10451,
+            "runtime_ms": 6.082874984713271,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.22564514287674536,
+            "edge_brier": 0.07442057418799206,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10452,
+            "runtime_ms": 6.138875003671274,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.054533960021510765,
+            "edge_brier": 0.017166054708242055,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10453,
+            "runtime_ms": 5.734707985538989,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.21675877774215094,
+            "edge_brier": 0.07434810612278511,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10454,
+            "runtime_ms": 10.318208980606869,
+            "converged": true,
+            "iterations": 66,
+            "edge_log_loss": 0.18536305934590555,
+            "edge_brier": 0.064047125987823,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10455,
+            "runtime_ms": 5.156832979992032,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.17039681477687396,
+            "edge_brier": 0.058245063466330224,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10456,
+            "runtime_ms": 4.2309169948566705,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.09155551277828908,
+            "edge_brier": 0.028993354112349247,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10457,
+            "runtime_ms": 5.646292003802955,
+            "converged": true,
+            "iterations": 62,
+            "edge_log_loss": 0.03354159298215981,
+            "edge_brier": 0.009171366922142207,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10458,
+            "runtime_ms": 4.457208007806912,
+            "converged": true,
+            "iterations": 79,
+            "edge_log_loss": 0.16034611305408047,
+            "edge_brier": 0.05225852594087879,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10459,
+            "runtime_ms": 7.147875003283843,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.07600003246151696,
+            "edge_brier": 0.02632999053462666,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10460,
+            "runtime_ms": 5.809583002701402,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.0749589966619609,
+            "edge_brier": 0.024180394515845194,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10461,
+            "runtime_ms": 5.0087910203728825,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.0771158730977767,
+            "edge_brier": 0.02683340703204289,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10462,
+            "runtime_ms": 5.375334003474563,
+            "converged": true,
+            "iterations": 77,
+            "edge_log_loss": 0.1765407386720073,
+            "edge_brier": 0.060785034212162026,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10463,
+            "runtime_ms": 3.712999983690679,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.03283472368086617,
+            "edge_brier": 0.009665919083656504,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10464,
+            "runtime_ms": 5.410833022324368,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.13746130338249204,
+            "edge_brier": 0.04528442433947387,
+            "syndrome_faithful": true
+          }
+        ]
+      }
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 5,
+      "p": 0.2,
+      "q": 1.0,
+      "seeds": [
+        10501,
+        10502,
+        10503,
+        10504,
+        10505,
+        10506,
+        10507,
+        10508,
+        10509,
+        10510,
+        10511,
+        10512,
+        10513,
+        10514,
+        10515,
+        10516,
+        10517,
+        10518,
+        10519,
+        10520,
+        10521,
+        10522,
+        10523,
+        10524,
+        10525,
+        10526,
+        10527,
+        10528,
+        10529,
+        10530,
+        10531,
+        10532,
+        10533,
+        10534,
+        10535,
+        10536,
+        10537,
+        10538,
+        10539,
+        10540,
+        10541,
+        10542,
+        10543,
+        10544,
+        10545,
+        10546,
+        10547,
+        10548,
+        10549,
+        10550,
+        10551,
+        10552,
+        10553,
+        10554,
+        10555,
+        10556,
+        10557,
+        10558,
+        10559,
+        10560,
+        10561,
+        10562,
+        10563,
+        10564
+      ],
+      "summaries": {
+        "synchronous": {
+          "convergence_rate": 0.953125,
+          "mean_iterations": 32.46875,
+          "mean_log_loss": 0.03445720284178487,
+          "mean_brier": 0.012042090341347638,
+          "mean_runtime_ms": 1.1077779522565834,
+          "all_syndrome_faithful": true
+        },
+        "residual_priority": {
+          "convergence_rate": 0.953125,
+          "mean_iterations": 29.75,
+          "mean_log_loss": 0.034435650844482385,
+          "mean_brier": 0.01203921099811143,
+          "mean_runtime_ms": 1.2603893915184017,
+          "all_syndrome_faithful": true
+        }
+      },
+      "paired": {
+        "converged": {
+          "mean_delta": 0.0,
+          "bootstrap_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "iterations": {
+          "mean_delta": -2.71875,
+          "bootstrap_ci95": [
+            -3.5625,
+            -2.046875
+          ]
+        },
+        "edge_log_loss": {
+          "mean_delta": -2.1551997302487644e-05,
+          "bootstrap_ci95": [
+            -5.10284662940942e-05,
+            -5.760305559263478e-12
+          ]
+        },
+        "edge_brier": {
+          "mean_delta": -2.8793432362076538e-06,
+          "bootstrap_ci95": [
+            -7.99670312136433e-06,
+            2.980871339178774e-08
+          ]
+        },
+        "runtime_ms": {
+          "mean_delta": 0.1526114392618183,
+          "bootstrap_ci95": [
+            -0.03566754950270479,
+            0.3237584046132724
+          ]
+        }
+      },
+      "per_observation": {
+        "synchronous": [
+          {
+            "seed": 10501,
+            "runtime_ms": 0.7000420009717345,
+            "converged": true,
+            "iterations": 25,
+            "edge_log_loss": 8.16651851419147e-12,
+            "edge_brier": 3.418252810638993e-21,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10502,
+            "runtime_ms": 0.7511670119129121,
+            "converged": true,
+            "iterations": 33,
+            "edge_log_loss": 0.10392278406511352,
+            "edge_brier": 0.0375375375380687,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10503,
+            "runtime_ms": 0.6945409986656159,
+            "converged": true,
+            "iterations": 25,
+            "edge_log_loss": 1.419208594495205e-12,
+            "edge_brier": 1.435005388333778e-23,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10504,
+            "runtime_ms": 0.9166249947156757,
+            "converged": true,
+            "iterations": 28,
+            "edge_log_loss": 1.756051611277562e-11,
+            "edge_brier": 1.6940284723186485e-20,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10505,
+            "runtime_ms": 0.7952080050017685,
+            "converged": true,
+            "iterations": 28,
+            "edge_log_loss": 0.06645536900736677,
+            "edge_brier": 0.024024024072286397,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10506,
+            "runtime_ms": 0.6810839986428618,
+            "converged": true,
+            "iterations": 24,
+            "edge_log_loss": 1.3429047668708192e-11,
+            "edge_brier": 1.0072298593311214e-20,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10507,
+            "runtime_ms": 0.7158340013120323,
+            "converged": true,
+            "iterations": 28,
+            "edge_log_loss": 0.03746741516640127,
+            "edge_brier": 0.01351351351348739,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10508,
+            "runtime_ms": 0.7259999983943999,
+            "converged": true,
+            "iterations": 32,
+            "edge_log_loss": 0.0374674151666008,
+            "edge_brier": 0.013513513513513528,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10509,
+            "runtime_ms": 2.3243750038091093,
+            "converged": true,
+            "iterations": 27,
+            "edge_log_loss": 3.2090051338203346e-12,
+            "edge_brier": 2.571011269724022e-22,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10510,
+            "runtime_ms": 0.8084590081125498,
+            "converged": true,
+            "iterations": 32,
+            "edge_log_loss": 1.1258111560126596e-12,
+            "edge_brier": 2.423376710461675e-24,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10511,
+            "runtime_ms": 0.9045829938258976,
+            "converged": true,
+            "iterations": 34,
+            "edge_log_loss": 0.18221662798674448,
+            "edge_brier": 0.06839492548745295,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10512,
+            "runtime_ms": 1.5632910071872175,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.05751206427189973,
+            "edge_brier": 0.020054802306360038,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10513,
+            "runtime_ms": 0.8764579833950847,
+            "converged": true,
+            "iterations": 29,
+            "edge_log_loss": 0.07493483044751102,
+            "edge_brier": 0.02702702702702703,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10514,
+            "runtime_ms": 0.669250002829358,
+            "converged": true,
+            "iterations": 24,
+            "edge_log_loss": 1.0215627143010651e-12,
+            "edge_brier": 1.069679119011785e-24,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10515,
+            "runtime_ms": 2.314417011803016,
+            "converged": true,
+            "iterations": 24,
+            "edge_log_loss": 1.3488125036438237e-11,
+            "edge_brier": 1.0287340108823761e-20,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10516,
+            "runtime_ms": 1.1349580017849803,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.05826964740273209,
+            "edge_brier": 0.021034453341422173,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10517,
+            "runtime_ms": 0.6857920088805258,
+            "converged": true,
+            "iterations": 27,
+            "edge_log_loss": 0.07493483031630668,
+            "edge_brier": 0.027027027019331976,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10518,
+            "runtime_ms": 0.7380830065812916,
+            "converged": true,
+            "iterations": 28,
+            "edge_log_loss": 9.999778782803787e-13,
+            "edge_brier": 9.999970106114277e-25,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10519,
+            "runtime_ms": 0.7075419998727739,
+            "converged": true,
+            "iterations": 24,
+            "edge_log_loss": 1.4889823613418205e-11,
+            "edge_brier": 1.019122874214689e-20,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10520,
+            "runtime_ms": 1.9687919993884861,
+            "converged": true,
+            "iterations": 42,
+            "edge_log_loss": 0.11159296630844874,
+            "edge_brier": 0.03657258366251956,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10521,
+            "runtime_ms": 0.8602909801993519,
+            "converged": true,
+            "iterations": 24,
+            "edge_log_loss": 7.555757822635781e-12,
+            "edge_brier": 2.8493219936405672e-21,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10522,
+            "runtime_ms": 0.7314160175155848,
+            "converged": true,
+            "iterations": 32,
+            "edge_log_loss": 1.7872316248051188e-11,
+            "edge_brier": 1.6970558194976918e-20,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10523,
+            "runtime_ms": 0.989624997600913,
+            "converged": true,
+            "iterations": 29,
+            "edge_log_loss": 0.06468058423001155,
+            "edge_brier": 0.02027027028830496,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10524,
+            "runtime_ms": 1.0075829923152924,
+            "converged": true,
+            "iterations": 29,
+            "edge_log_loss": 9.999778782803787e-13,
+            "edge_brier": 9.999934233451406e-25,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10525,
+            "runtime_ms": 0.9027499763760716,
+            "converged": true,
+            "iterations": 28,
+            "edge_log_loss": 0.037467415166368985,
+            "edge_brier": 0.013513513513487254,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10526,
+            "runtime_ms": 2.729291998548433,
+            "converged": true,
+            "iterations": 40,
+            "edge_log_loss": 0.09366853791448917,
+            "edge_brier": 0.03378378378384286,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10527,
+            "runtime_ms": 0.9683329844847322,
+            "converged": true,
+            "iterations": 43,
+            "edge_log_loss": 1.4480502387785818e-11,
+            "edge_brier": 1.005180626860609e-20,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10528,
+            "runtime_ms": 0.7543329847976565,
+            "converged": true,
+            "iterations": 28,
+            "edge_log_loss": 9.566917830834059e-12,
+            "edge_brier": 4.6455517539153354e-21,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10529,
+            "runtime_ms": 0.7585000130347908,
+            "converged": true,
+            "iterations": 26,
+            "edge_log_loss": 6.703740279319628e-11,
+            "edge_brier": 2.7431520611103803e-19,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10530,
+            "runtime_ms": 0.7367499929387122,
+            "converged": true,
+            "iterations": 25,
+            "edge_log_loss": 0.037467415166348376,
+            "edge_brier": 0.013513513513513514,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10531,
+            "runtime_ms": 0.9028339991346002,
+            "converged": true,
+            "iterations": 31,
+            "edge_log_loss": 0.03746741512806607,
+            "edge_brier": 0.013513513494365997,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10532,
+            "runtime_ms": 2.61033300193958,
+            "converged": true,
+            "iterations": 25,
+            "edge_log_loss": 1.4129283328990718e-12,
+            "edge_brier": 1.4193877473034778e-23,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10533,
+            "runtime_ms": 0.8923329878598452,
+            "converged": true,
+            "iterations": 32,
+            "edge_log_loss": 7.923339163462292e-12,
+            "edge_brier": 3.020488879009773e-21,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10534,
+            "runtime_ms": 0.7765409827698022,
+            "converged": true,
+            "iterations": 25,
+            "edge_log_loss": 1.410625370273596e-12,
+            "edge_brier": 1.4052203026381093e-23,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10535,
+            "runtime_ms": 1.2938340078108013,
+            "converged": true,
+            "iterations": 56,
+            "edge_log_loss": 0.1495673865529267,
+            "edge_brier": 0.049142001196049105,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10536,
+            "runtime_ms": 0.7697500113863498,
+            "converged": true,
+            "iterations": 28,
+            "edge_log_loss": 1.0317812670318047e-12,
+            "edge_brier": 1.1384454688813313e-24,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10537,
+            "runtime_ms": 0.7518749916926026,
+            "converged": true,
+            "iterations": 29,
+            "edge_log_loss": 0.03746741528095202,
+            "edge_brier": 0.013513513513295865,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10538,
+            "runtime_ms": 1.7310830007772893,
+            "converged": true,
+            "iterations": 24,
+            "edge_log_loss": 0.037467415180599664,
+            "edge_brier": 0.013513513513513516,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10539,
+            "runtime_ms": 0.8425830164924264,
+            "converged": true,
+            "iterations": 26,
+            "edge_log_loss": 0.06645536899688077,
+            "edge_brier": 0.024024024053697787,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10540,
+            "runtime_ms": 0.8834580075927079,
+            "converged": true,
+            "iterations": 24,
+            "edge_log_loss": 1.3560014977931458e-11,
+            "edge_brier": 1.0379285340945581e-20,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10541,
+            "runtime_ms": 1.628041994990781,
+            "converged": true,
+            "iterations": 36,
+            "edge_log_loss": 0.04772166124423106,
+            "edge_brier": 0.015015014983114161,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10542,
+            "runtime_ms": 0.7572079775854945,
+            "converged": true,
+            "iterations": 30,
+            "edge_log_loss": 0.03746741516567653,
+            "edge_brier": 0.013513513513177594,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10543,
+            "runtime_ms": 0.7368750229943544,
+            "converged": true,
+            "iterations": 28,
+            "edge_log_loss": 0.03746741516498183,
+            "edge_brier": 0.013513513512793195,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10544,
+            "runtime_ms": 0.8467909938190132,
+            "converged": true,
+            "iterations": 24,
+            "edge_log_loss": 7.536624479065526e-12,
+            "edge_brier": 2.8251483835497948e-21,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10545,
+            "runtime_ms": 0.8117079851217568,
+            "converged": true,
+            "iterations": 33,
+            "edge_log_loss": 9.252885246879187e-12,
+            "edge_brier": 4.177337104614191e-21,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10546,
+            "runtime_ms": 0.7471669814549387,
+            "converged": true,
+            "iterations": 28,
+            "edge_log_loss": 0.03746741516641231,
+            "edge_brier": 0.013513513513513514,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10547,
+            "runtime_ms": 1.250208995770663,
+            "converged": true,
+            "iterations": 33,
+            "edge_log_loss": 0.08641221262910942,
+            "edge_brier": 0.028361695031345856,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10548,
+            "runtime_ms": 1.0065830138046294,
+            "converged": true,
+            "iterations": 52,
+            "edge_log_loss": 0.03746741516634815,
+            "edge_brier": 0.013513513513513398,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10549,
+            "runtime_ms": 0.9755830105859786,
+            "converged": true,
+            "iterations": 60,
+            "edge_log_loss": 0.11397124020785437,
+            "edge_brier": 0.03532861402222672,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10550,
+            "runtime_ms": 0.8160829893313348,
+            "converged": true,
+            "iterations": 24,
+            "edge_log_loss": 0.037467415166420416,
+            "edge_brier": 0.013513513513513513,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10551,
+            "runtime_ms": 3.5417909966781735,
+            "converged": true,
+            "iterations": 24,
+            "edge_log_loss": 1.056113154887737e-12,
+            "edge_brier": 1.1899822000638449e-24,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10552,
+            "runtime_ms": 1.260291988728568,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.11207602754864648,
+            "edge_brier": 0.035828730794109316,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10553,
+            "runtime_ms": 0.756458000978455,
+            "converged": true,
+            "iterations": 25,
+            "edge_log_loss": 0.037467415166137726,
+            "edge_brier": 0.013513513513408189,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10554,
+            "runtime_ms": 2.0538340031635016,
+            "converged": true,
+            "iterations": 29,
+            "edge_log_loss": 1.3104331483428476e-10,
+            "edge_brier": 9.927428205527664e-19,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10555,
+            "runtime_ms": 0.8395419863518327,
+            "converged": true,
+            "iterations": 27,
+            "edge_log_loss": 1.0514637208968275e-12,
+            "edge_brier": 1.2991202421648745e-24,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10556,
+            "runtime_ms": 0.7816250144969672,
+            "converged": true,
+            "iterations": 29,
+            "edge_log_loss": 0.03746741516969918,
+            "edge_brier": 0.01351351351372931,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10557,
+            "runtime_ms": 0.7973330211825669,
+            "converged": true,
+            "iterations": 28,
+            "edge_log_loss": 6.5398782495356496e-12,
+            "edge_brier": 1.960169060842715e-21,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10558,
+            "runtime_ms": 0.7730840006843209,
+            "converged": true,
+            "iterations": 24,
+            "edge_log_loss": 2.156459396102974e-11,
+            "edge_brier": 1.3319249552754228e-20,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10559,
+            "runtime_ms": 0.8601669978816062,
+            "converged": true,
+            "iterations": 29,
+            "edge_log_loss": 9.999778782803787e-13,
+            "edge_brier": 9.99992825467426e-25,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10560,
+            "runtime_ms": 0.7091659936122596,
+            "converged": true,
+            "iterations": 28,
+            "edge_log_loss": 0.0374674151663289,
+            "edge_brier": 0.013513513513499182,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10561,
+            "runtime_ms": 3.038333001313731,
+            "converged": true,
+            "iterations": 33,
+            "edge_log_loss": 3.64933097693764e-10,
+            "edge_brier": 3.879005027200634e-18,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10562,
+            "runtime_ms": 0.74637500802055,
+            "converged": true,
+            "iterations": 27,
+            "edge_log_loss": 1.0394448065044867e-12,
+            "edge_brier": 1.1365539701638737e-24,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10563,
+            "runtime_ms": 1.8149589886888862,
+            "converged": true,
+            "iterations": 33,
+            "edge_log_loss": 0.14139019921184837,
+            "edge_brier": 0.051051051043250945,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10564,
+            "runtime_ms": 0.778582994826138,
+            "converged": true,
+            "iterations": 36,
+            "edge_log_loss": 0.037467415181589886,
+            "edge_brier": 0.013513513513513337,
+            "syndrome_faithful": true
+          }
+        ],
+        "residual_priority": [
+          {
+            "seed": 10501,
+            "runtime_ms": 0.9290000016335398,
+            "converged": true,
+            "iterations": 24,
+            "edge_log_loss": 9.987080234481795e-12,
+            "edge_brier": 5.2050081656610245e-21,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10502,
+            "runtime_ms": 1.0323340247850865,
+            "converged": true,
+            "iterations": 29,
+            "edge_log_loss": 0.10392278406878445,
+            "edge_brier": 0.0375375375399017,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10503,
+            "runtime_ms": 1.9908749964088202,
+            "converged": true,
+            "iterations": 24,
+            "edge_log_loss": 1.3799607102711876e-12,
+            "edge_brier": 1.0082234396269463e-23,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10504,
+            "runtime_ms": 1.0978750069625676,
+            "converged": true,
+            "iterations": 26,
+            "edge_log_loss": 1.1934929024489322e-11,
+            "edge_brier": 6.879612889387927e-21,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10505,
+            "runtime_ms": 0.9919590083882213,
+            "converged": true,
+            "iterations": 25,
+            "edge_log_loss": 0.06645536905974604,
+            "edge_brier": 0.02402402409491718,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10506,
+            "runtime_ms": 1.5452500083483756,
+            "converged": true,
+            "iterations": 23,
+            "edge_log_loss": 1.0126216684580276e-11,
+            "edge_brier": 5.183830965863794e-21,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10507,
+            "runtime_ms": 0.9696670167613775,
+            "converged": true,
+            "iterations": 25,
+            "edge_log_loss": 0.03746741516651152,
+            "edge_brier": 0.013513513512934146,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10508,
+            "runtime_ms": 1.0213330097030848,
+            "converged": true,
+            "iterations": 29,
+            "edge_log_loss": 0.03746741516706559,
+            "edge_brier": 0.013513513513513922,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10509,
+            "runtime_ms": 1.8392499769106507,
+            "converged": true,
+            "iterations": 25,
+            "edge_log_loss": 3.2969783060953124e-12,
+            "edge_brier": 2.2612395551254356e-22,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10510,
+            "runtime_ms": 1.1081660049967468,
+            "converged": true,
+            "iterations": 29,
+            "edge_log_loss": 1.3678397753852735e-12,
+            "edge_brier": 1.1083519305708603e-23,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10511,
+            "runtime_ms": 1.0835840075742453,
+            "converged": true,
+            "iterations": 32,
+            "edge_log_loss": 0.1822166279231819,
+            "edge_brier": 0.06839492546562709,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10512,
+            "runtime_ms": 2.566375012975186,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.056934165440774176,
+            "edge_brier": 0.020055756224748388,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10513,
+            "runtime_ms": 0.9948749793693423,
+            "converged": true,
+            "iterations": 26,
+            "edge_log_loss": 0.07493483045314378,
+            "edge_brier": 0.027027027027003034,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10514,
+            "runtime_ms": 0.8558339904993773,
+            "converged": true,
+            "iterations": 22,
+            "edge_log_loss": 1.3681323341533758e-12,
+            "edge_brier": 7.282371813260167e-24,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10515,
+            "runtime_ms": 1.0773749963846058,
+            "converged": true,
+            "iterations": 23,
+            "edge_log_loss": 4.672769679152409e-12,
+            "edge_brier": 9.037902258867296e-22,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10516,
+            "runtime_ms": 2.134375012246892,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.058010751490971964,
+            "edge_brier": 0.02099054669959045,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10517,
+            "runtime_ms": 1.9946249958593398,
+            "converged": true,
+            "iterations": 24,
+            "edge_log_loss": 0.07493483019776229,
+            "edge_brier": 0.02702702696002428,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10518,
+            "runtime_ms": 1.071458013029769,
+            "converged": true,
+            "iterations": 27,
+            "edge_log_loss": 9.999778782803787e-13,
+            "edge_brier": 9.999970106114277e-25,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10519,
+            "runtime_ms": 0.949042005231604,
+            "converged": true,
+            "iterations": 23,
+            "edge_log_loss": 7.77613559237737e-12,
+            "edge_brier": 2.1590800397970875e-21,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10520,
+            "runtime_ms": 1.5327500004786998,
+            "converged": true,
+            "iterations": 36,
+            "edge_log_loss": 0.11159296638412812,
+            "edge_brier": 0.036572583681927666,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10521,
+            "runtime_ms": 1.0782500030472875,
+            "converged": true,
+            "iterations": 23,
+            "edge_log_loss": 3.064098524591894e-12,
+            "edge_brier": 2.6892540969644502e-22,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10522,
+            "runtime_ms": 1.0412500123493373,
+            "converged": true,
+            "iterations": 29,
+            "edge_log_loss": 1.1110339378040884e-11,
+            "edge_brier": 5.610795932096477e-21,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10523,
+            "runtime_ms": 1.2327499862294644,
+            "converged": true,
+            "iterations": 27,
+            "edge_log_loss": 0.06468058417851827,
+            "edge_brier": 0.020270270268983114,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10524,
+            "runtime_ms": 1.413374993717298,
+            "converged": true,
+            "iterations": 28,
+            "edge_log_loss": 9.999778782803787e-13,
+            "edge_brier": 9.999934233451406e-25,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10525,
+            "runtime_ms": 1.0967080015689135,
+            "converged": true,
+            "iterations": 27,
+            "edge_log_loss": 0.03746741516638223,
+            "edge_brier": 0.01351351351350281,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10526,
+            "runtime_ms": 1.1136249813716859,
+            "converged": true,
+            "iterations": 33,
+            "edge_log_loss": 0.09366853796938673,
+            "edge_brier": 0.03378378381129165,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10527,
+            "runtime_ms": 1.1585419997572899,
+            "converged": true,
+            "iterations": 37,
+            "edge_log_loss": 9.139717513139055e-12,
+            "edge_brier": 3.582135994442984e-21,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10528,
+            "runtime_ms": 0.9842499857768416,
+            "converged": true,
+            "iterations": 27,
+            "edge_log_loss": 1.7895834964281977e-12,
+            "edge_brier": 4.2123280164567785e-23,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10529,
+            "runtime_ms": 1.3568750000558794,
+            "converged": true,
+            "iterations": 24,
+            "edge_log_loss": 6.351128642682e-11,
+            "edge_brier": 2.1327026513857149e-19,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10530,
+            "runtime_ms": 0.9659589850343764,
+            "converged": true,
+            "iterations": 23,
+            "edge_log_loss": 0.03746741516610861,
+            "edge_brier": 0.013513513513392066,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10531,
+            "runtime_ms": 1.073207997251302,
+            "converged": true,
+            "iterations": 29,
+            "edge_log_loss": 0.03746741514164147,
+            "edge_brier": 0.013513513501150869,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10532,
+            "runtime_ms": 0.9370420011691749,
+            "converged": true,
+            "iterations": 24,
+            "edge_log_loss": 1.583286054828188e-12,
+            "edge_brier": 2.6042822774383316e-23,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10533,
+            "runtime_ms": 1.2369170144665986,
+            "converged": true,
+            "iterations": 29,
+            "edge_log_loss": 7.976308803721639e-12,
+            "edge_brier": 2.1677900374275827e-21,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10534,
+            "runtime_ms": 0.9788750030566007,
+            "converged": true,
+            "iterations": 24,
+            "edge_log_loss": 1.4276747952089108e-12,
+            "edge_brier": 1.4842861259134054e-23,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10535,
+            "runtime_ms": 1.705917005892843,
+            "converged": true,
+            "iterations": 41,
+            "edge_log_loss": 0.14956738635274003,
+            "edge_brier": 0.04914200110237249,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10536,
+            "runtime_ms": 1.1784999805968255,
+            "converged": true,
+            "iterations": 26,
+            "edge_log_loss": 1.0332950711289002e-12,
+            "edge_brier": 1.1487683534189791e-24,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10537,
+            "runtime_ms": 0.9487499773968011,
+            "converged": true,
+            "iterations": 26,
+            "edge_log_loss": 0.037467415235243696,
+            "edge_brier": 0.013513513512264541,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10538,
+            "runtime_ms": 0.8931669872254133,
+            "converged": true,
+            "iterations": 23,
+            "edge_log_loss": 0.03746741518215904,
+            "edge_brier": 0.013513513512352152,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10539,
+            "runtime_ms": 1.8628340039867908,
+            "converged": true,
+            "iterations": 24,
+            "edge_log_loss": 0.0664553689905946,
+            "edge_brier": 0.024024024053921754,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10540,
+            "runtime_ms": 1.1707090015988797,
+            "converged": true,
+            "iterations": 23,
+            "edge_log_loss": 7.494884594231319e-12,
+            "edge_brier": 2.800232480673034e-21,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10541,
+            "runtime_ms": 1.203166990308091,
+            "converged": true,
+            "iterations": 33,
+            "edge_log_loss": 0.04772166128371642,
+            "edge_brier": 0.015015015000666073,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10542,
+            "runtime_ms": 1.0546660050749779,
+            "converged": true,
+            "iterations": 27,
+            "edge_log_loss": 0.037467415165249845,
+            "edge_brier": 0.013513513512839517,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10543,
+            "runtime_ms": 1.131875003920868,
+            "converged": true,
+            "iterations": 26,
+            "edge_log_loss": 0.037467415163430884,
+            "edge_brier": 0.013513513512013374,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10544,
+            "runtime_ms": 2.2997089836280793,
+            "converged": true,
+            "iterations": 23,
+            "edge_log_loss": 3.1351167909471995e-12,
+            "edge_brier": 2.939805968294208e-22,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10545,
+            "runtime_ms": 1.069167017703876,
+            "converged": true,
+            "iterations": 30,
+            "edge_log_loss": 1.4106345225937806e-11,
+            "edge_brier": 9.775296522067186e-21,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10546,
+            "runtime_ms": 0.9990000107791275,
+            "converged": true,
+            "iterations": 28,
+            "edge_log_loss": 0.03746741516634869,
+            "edge_brier": 0.01351351351351367,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10547,
+            "runtime_ms": 1.3025419902987778,
+            "converged": true,
+            "iterations": 29,
+            "edge_log_loss": 0.08641221264170756,
+            "edge_brier": 0.028361695035860952,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10548,
+            "runtime_ms": 1.3045420055277646,
+            "converged": true,
+            "iterations": 43,
+            "edge_log_loss": 0.03746741516634421,
+            "edge_brier": 0.013513513513511433,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10549,
+            "runtime_ms": 1.396040985127911,
+            "converged": true,
+            "iterations": 41,
+            "edge_log_loss": 0.11397124023883394,
+            "edge_brier": 0.03532861405576856,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10550,
+            "runtime_ms": 2.3727910011075437,
+            "converged": true,
+            "iterations": 22,
+            "edge_log_loss": 0.03746741517318856,
+            "edge_brier": 0.013513513516610117,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10551,
+            "runtime_ms": 1.1044590210076421,
+            "converged": true,
+            "iterations": 23,
+            "edge_log_loss": 1.2855662480512614e-12,
+            "edge_brier": 3.5837923097545784e-24,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10552,
+            "runtime_ms": 2.073458017548546,
+            "converged": false,
+            "iterations": 80,
+            "edge_log_loss": 0.11153349480704941,
+            "edge_brier": 0.035687405615531353,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10553,
+            "runtime_ms": 0.905249995412305,
+            "converged": true,
+            "iterations": 24,
+            "edge_log_loss": 0.037467415165961256,
+            "edge_brier": 0.013513513513304735,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10554,
+            "runtime_ms": 0.9093750268220901,
+            "converged": true,
+            "iterations": 26,
+            "edge_log_loss": 1.087170176054104e-10,
+            "edge_brier": 4.696860655153779e-19,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10555,
+            "runtime_ms": 1.2828749895561486,
+            "converged": true,
+            "iterations": 24,
+            "edge_log_loss": 2.4535598778635727e-12,
+            "edge_brier": 1.4487606444304491e-22,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10556,
+            "runtime_ms": 1.039916998706758,
+            "converged": true,
+            "iterations": 28,
+            "edge_log_loss": 0.037467415167332645,
+            "edge_brier": 0.013513513513634789,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10557,
+            "runtime_ms": 1.4932080230209976,
+            "converged": true,
+            "iterations": 26,
+            "edge_log_loss": 5.685893198370227e-12,
+            "edge_brier": 1.3154347322684465e-21,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10558,
+            "runtime_ms": 1.0560830123722553,
+            "converged": true,
+            "iterations": 23,
+            "edge_log_loss": 1.7203685928328746e-11,
+            "edge_brier": 1.0083875965651354e-20,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10559,
+            "runtime_ms": 1.0122499952558428,
+            "converged": true,
+            "iterations": 27,
+            "edge_log_loss": 9.999778782803787e-13,
+            "edge_brier": 9.99992825467426e-25,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10560,
+            "runtime_ms": 1.033459004247561,
+            "converged": true,
+            "iterations": 27,
+            "edge_log_loss": 0.037467415166288605,
+            "edge_brier": 0.013513513513479885,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10561,
+            "runtime_ms": 1.1644999904092401,
+            "converged": true,
+            "iterations": 29,
+            "edge_log_loss": 3.095412705192243e-10,
+            "edge_brier": 2.0517912912679045e-18,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10562,
+            "runtime_ms": 0.9880829893518239,
+            "converged": true,
+            "iterations": 24,
+            "edge_log_loss": 2.116101588274106e-12,
+            "edge_brier": 4.6654073538263506e-23,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10563,
+            "runtime_ms": 1.1395410110708326,
+            "converged": true,
+            "iterations": 30,
+            "edge_log_loss": 0.1413901992033309,
+            "edge_brier": 0.051051051039466756,
+            "syndrome_faithful": true
+          },
+          {
+            "seed": 10564,
+            "runtime_ms": 1.1154579988215119,
+            "converged": true,
+            "iterations": 32,
+            "edge_log_loss": 0.03746741517595995,
+            "edge_brier": 0.013513513513511034,
+            "syndrome_faithful": true
+          }
+        ]
+      }
+    }
+  ],
+  "evidence_boundary": "Independent convergence, posterior-score, syndrome-faithfulness, and timing replication; geometry-specific results are not pooled into a threshold or cross-geometry LER claim."
+}

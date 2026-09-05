@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "status": "rendered",
+  "campaign": "phase-b12-honeycomb-three-layer-map-2026-08-28",
+  "purpose": "Replace the active legacy slope-only honeycomb phase-map presentation with an explicit decodable side, undecodable side, discrete lower-boundary uncertainty band, and no-two-sided-bracket region.",
+  "source_analysis": {
+    "path": "results/phase-b11-honeycomb-three-layer-reanalysis-2026-08-28.json",
+    "sha256": "a169f3bbd77ab63e4995ecd91f9f385b24edd432b0342d2b56795ddd5524a843"
+  },
+  "renderer": {
+    "path": "scripts/render_phase_b12_three_layer_map.py",
+    "sha256": "e10a174b1bb3eade60dade5e3306a2699e2d4a44be8db581c0c38a13080cf1bb"
+  },
+  "new_decoder_runs": 0,
+  "new_decodes": 0,
+  "sample_selection": null,
+  "display_semantics": {
+    "axes": {
+      "x": "edge error p",
+      "y": "herald probability q"
+    },
+    "decodable": "green cells at or below the lower decodable endpoint of a valid row bracket; where no bracket exists, only posterior-stable absolute floor anchors are green",
+    "undecodable": "red cells at or above the upper undecodable endpoint of a valid row bracket; where no bracket exists, only posterior-stable absolute saturation anchors are red",
+    "boundary": "amber cells strictly between the two observed endpoints of a valid discrete lower-boundary bracket",
+    "unclassified": "neutral cells on rows without a valid two-sided bracket and without an absolute-LER anchor",
+    "absolute_anchor_outline": "dark cell outline denotes a Jeffreys/uniform-prior-stable absolute floor or saturation anchor",
+    "crossing_markers": false,
+    "continuous_interpolation": false
+  },
+  "presentation_replacement": {
+    "report_embed_to_replace": "figures/phase-b9-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28.png",
+    "legacy_page_figure_ids_to_demote": [
+      "phase-b5-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28",
+      "phase-b6-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28",
+      "phase-b7-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28",
+      "phase-b8-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28",
+      "phase-b9-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28"
+    ],
+    "delete_historical_evidence_files": false,
+    "reason": "Historical slope-only outputs remain provenance downloads, but they must no longer appear as active report or Lab-page phase diagrams."
+  },
+  "preflight_output": "results/phase-b12-honeycomb-three-layer-map-preflight-2026-08-28.json",
+  "render_output": "figures/phase-b12-honeycomb-three-layer-phase-map-2026-08-28.png",
+  "render_sha256": "c1c7d1d5cf8efa855690a7e70dde9559bb306b3f6af23f7c487f28f73e14374f",
+  "report_promoted": false,
+  "legacy_page_figures_demoted": true,
+  "interpretation_status": "withdrawn_by_researcher; provenance_only",
+  "render_audit_output": "results/phase-b12-honeycomb-three-layer-map-render-audit-2026-08-28.json",
+  "acceptance": [
+    "The preflight recomputes an exhaustive 231-cell display classification from the hash-frozen Phase B11 result without rendering.",
+    "The rendered primary panel contains no crosses, point-crossing counts, or continuous p_c interpolation.",
+    "Green, amber, red, and neutral layers have direct physical labels; dark outlines are cell-level absolute-LER anchors rather than point annotations.",
+    "Visual inspection confirms legible axes, legend, boundary uncertainty, and finite-window claim boundary.",
+    "REPORT.md embeds the new figure and removes the active legacy Phase B9 embed; Lab-page legacy B5-B9 phase figures are demoted from page presentation.",
+    "Dashboard end-to-end tests verify that the new figure is visible from the Lab 003 result page."
+  ],
+  "stop_rule": "This transition stops after registration, implementation, tests, and preflight. Do not render, edit report presentation, demote legacy figures, or select samples in the same tick.",
+  "claim_boundary": "Operational finite-window, finite-grid phase-side and discrete lower-boundary-bracket presentation only; no continuous p_c interpolation, asymptotic threshold, or thermodynamic phase claim."
+}

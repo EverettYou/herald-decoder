@@ -1,0 +1,405 @@
+{
+  "schema_version": 1,
+  "pipeline_schema_version": 1,
+  "created_utc": "2026-08-28T23:18:59.123665+00:00",
+  "purpose": "bounded end-to-end truth audit; not an LER estimate",
+  "protocol": {
+    "lattice": "paper-normalized periodic honeycomb",
+    "size": 2,
+    "edge_count": 36,
+    "error_rates": [
+      0.0,
+      0.05,
+      0.1
+    ],
+    "seeds_per_rate": 32,
+    "modes": [
+      "syndrome_only",
+      "heralded"
+    ],
+    "matched_observation_seed": "20000 + seed",
+    "physical_seed": "SeedSequence([seed, int(1000*p)])"
+  },
+  "total_records": 192,
+  "status_counts": {
+    "syndrome_only": {
+      "decoded": 93,
+      "flux_union_logical_failure": 3
+    },
+    "heralded": {
+      "decoded": 96
+    }
+  },
+  "logical_counts": {
+    "syndrome_only": 3,
+    "heralded": 0
+  },
+  "invariant_checks": {
+    "closed_charge_residual": 378,
+    "closed_flux_xor_and_union_decision": 192,
+    "early_failure_consistency": 3,
+    "final_decision_consistency": 189,
+    "matched_mode_input_and_observation": 96,
+    "postflux_constraint_support": 189
+  },
+  "examples": {
+    "syndrome_only:decoded": {
+      "schema_version": 1,
+      "mode": "syndrome_only",
+      "size": 2,
+      "seed": 20000,
+      "status": "decoded",
+      "logical_error": false,
+      "physical_error_edges": [],
+      "observation": {
+        "schema_version": 3,
+        "lattice": "periodic_coloured_honeycomb",
+        "size": 2,
+        "error_rate": null,
+        "seed": 2080521142,
+        "status": "sampled",
+        "logical_error": false,
+        "logical_sector_required": false,
+        "logical_sector_label": null,
+        "error_edges": [],
+        "flux_vertices": [],
+        "charge_outcomes": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "constraint_labels": [],
+        "log2_conditional_probability": 0,
+        "winding_components": []
+      },
+      "flux_recovery": {
+        "syndrome_vertices": [],
+        "correction_edges": [],
+        "xor_residual_edges": [],
+        "union_edges": [],
+        "xor_residual_windings": [],
+        "union_windings": [],
+        "objective_weight": 0.0,
+        "logical_error": false
+      },
+      "postflux_relations": {
+        "active_vertices": [],
+        "entanglement_pairs": []
+      },
+      "postflux_charge_outcomes": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "charge_recovery": {
+        "logical_error": false,
+        "colors": {
+          "0": {
+            "syndrome_vertices": [],
+            "effective_error_edges": [],
+            "correction_edges": [],
+            "residual_edges": [],
+            "component_windings": [],
+            "objective_weight": 0.0,
+            "logical_error": false
+          },
+          "1": {
+            "syndrome_vertices": [],
+            "effective_error_edges": [],
+            "correction_edges": [],
+            "residual_edges": [],
+            "component_windings": [],
+            "objective_weight": 0.0,
+            "logical_error": false
+          }
+        }
+      }
+    },
+    "heralded:decoded": {
+      "schema_version": 1,
+      "mode": "heralded",
+      "size": 2,
+      "seed": 20000,
+      "status": "decoded",
+      "logical_error": false,
+      "physical_error_edges": [],
+      "observation": {
+        "schema_version": 3,
+        "lattice": "periodic_coloured_honeycomb",
+        "size": 2,
+        "error_rate": null,
+        "seed": 2080521142,
+        "status": "sampled",
+        "logical_error": false,
+        "logical_sector_required": false,
+        "logical_sector_label": null,
+        "error_edges": [],
+        "flux_vertices": [],
+        "charge_outcomes": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "constraint_labels": [],
+        "log2_conditional_probability": 0,
+        "winding_components": []
+      },
+      "flux_recovery": {
+        "syndrome_vertices": [],
+        "correction_edges": [],
+        "xor_residual_edges": [],
+        "union_edges": [],
+        "xor_residual_windings": [],
+        "union_windings": [],
+        "objective_weight": 0.0,
+        "logical_error": false
+      },
+      "postflux_relations": {
+        "active_vertices": [],
+        "entanglement_pairs": []
+      },
+      "postflux_charge_outcomes": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "charge_recovery": {
+        "logical_error": false,
+        "colors": {
+          "0": {
+            "syndrome_vertices": [],
+            "effective_error_edges": [],
+            "correction_edges": [],
+            "residual_edges": [],
+            "component_windings": [],
+            "objective_weight": 0.0,
+            "logical_error": false
+          },
+          "1": {
+            "syndrome_vertices": [],
+            "effective_error_edges": [],
+            "correction_edges": [],
+            "residual_edges": [],
+            "component_windings": [],
+            "objective_weight": 0.0,
+            "logical_error": false
+          }
+        }
+      }
+    },
+    "syndrome_only:flux_union_logical_failure": {
+      "schema_version": 1,
+      "mode": "syndrome_only",
+      "size": 2,
+      "seed": 20017,
+      "status": "flux_union_logical_failure",
+      "logical_error": true,
+      "physical_error_edges": [
+        18,
+        21,
+        22,
+        32
+      ],
+      "observation": {
+        "schema_version": 3,
+        "lattice": "periodic_coloured_honeycomb",
+        "size": 2,
+        "error_rate": null,
+        "seed": 1869465482,
+        "status": "sampled",
+        "logical_error": false,
+        "logical_sector_required": false,
+        "logical_sector_label": null,
+        "error_edges": [
+          18,
+          21,
+          22,
+          32
+        ],
+        "flux_vertices": [
+          12,
+          15,
+          17,
+          20
+        ],
+        "charge_outcomes": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          0,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "constraint_labels": [],
+        "log2_conditional_probability": -2,
+        "winding_components": []
+      },
+      "flux_recovery": {
+        "syndrome_vertices": [
+          12,
+          15,
+          17,
+          20
+        ],
+        "correction_edges": [
+          20,
+          24,
+          25,
+          30
+        ],
+        "xor_residual_edges": [
+          18,
+          20,
+          21,
+          22,
+          24,
+          25,
+          30,
+          32
+        ],
+        "union_edges": [
+          18,
+          20,
+          21,
+          22,
+          24,
+          25,
+          30,
+          32
+        ],
+        "xor_residual_windings": [
+          [
+            [
+              1,
+              0
+            ]
+          ]
+        ],
+        "union_windings": [
+          [
+            [
+              1,
+              0
+            ]
+          ]
+        ],
+        "objective_weight": 4.0,
+        "logical_error": true
+      },
+      "postflux_relations": null,
+      "postflux_charge_outcomes": null,
+      "charge_recovery": null
+    }
+  },
+  "source_sha256": {
+    "run_d4_pipeline_truth_audit.py": "afa15317f69557df54cf58a02d2ce05658c4ebcf0bd28b6084349554ac6cc83a",
+    "d4_pipeline.py": "0e517f922fcd21b3c347be5f59d39b0640d260d11ddd314f408d18035c42e485",
+    "d4_recovery.py": "15be6ed2806a09475f6cb785f59e2ce1862b7eb66746edc90772f938ba991a08",
+    "d4_matching.py": "1ad1c96af3bf98353c89820b68eb07183a49c954650c51218ca5c1b5c211739e",
+    "d4_postflux.py": "5435f1fcea89c9eccf369f8bfef44b23deea1ebe954b5e0f1dea5fce0cf12658",
+    "d4_charge.py": "c7b528d343abedb052e6bea7f5c29f65de2bab5dae96befa339763198bb17e9a"
+  },
+  "claim_boundary": "This audit verifies record continuity and truth invariants for both public modes. It does not estimate logical error rates or a threshold."
+}

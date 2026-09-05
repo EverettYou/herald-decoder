@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-28T05:33:18.125Z",
+  "campaign": "phase4-residual80-honeycomb-highq-adaptive-p-confirmation-4000-2026-08-28",
+  "status": "passed",
+  "scope": {
+    "lattice": "honeycomb",
+    "q_values": [0.85, 0.9, 0.95],
+    "sizes": [11, 13],
+    "p_values": [0.39, 0.4, 0.41, 0.42, 0.43, 0.44, 0.45, 0.46, 0.47, 0.48, 0.49],
+    "fresh_seed_clusters": 40,
+    "shots_per_seed": 100,
+    "shots_per_cell": 4000,
+    "planned_shards": 3,
+    "planned_raw_records": 264000,
+    "workers": 3
+  },
+  "selection": {
+    "basis": "The completed L13 cap diagnostic shows no matched logical effect from caps 80 to 320, so the next unresolved quantity is sampling/topology uncertainty under the frozen primary decoder rather than iteration-cap choice.",
+    "why_forty_clusters": "Forty fresh 100-shot trajectories preserve 4000 shots/cell while doubling the number of independently resampled trajectories relative to the previous 20-cluster wave. This is more fluctuation-efficient than increasing shots inside the same number of clusters.",
+    "why_common_dense_grid": "p=0.39:0.01:0.49 brackets the q=0.85 crossing near 0.414, gives five high-p points around the q=0.90 crossing near 0.483, and repeats the q=0.95 high-p sign test. A common grid preserves complete nested trajectories and prevents q-specific post-selection.",
+    "claim_boundary": "This is an independent confirmation cohort. It is not pooled with earlier waves, and q=0.925, L15, square, p_c(q), and q_c remain gated until reproducibility plus central-90% topology/sign rules pass."
+  },
+  "verification": {
+    "unit_tests": "29/29 passed",
+    "new_adaptive_manifest_tests": "2/2 passed",
+    "dry_run": "3/3 unique jobs",
+    "explicit_q_manifest": "passed",
+    "forty_cluster_sampling": "passed",
+    "4000_shots_per_cell_manifest": "passed",
+    "posterior_llr_residual_priority_80_commands": "passed",
+    "syndrome_fidelity_and_source_stability": "fail-closed in the shard runner and analyzer"
+  },
+  "hashes_before_ready_status_flip": {
+    "manifest": "0ad6d5cad86fcec68d7a45b822e88bb069779cbfc96cff7603c318d604ff76b9",
+    "adaptive_manifest_test": "60c4d5b5342011936627b927e3d23c9c53f33464a40bc135144d543ef3a84e2b",
+    "analyzer": "6e287fdbae168e2d03152725969c81c14e66a8b1f77a6e98c816da62ed1f3dc6",
+    "dispatcher": "47a69c67629270b6cc75c17372467ae4d42539eea68536e2e357cde99097ed4f",
+    "runner": "14adf7579825e64fa4dd74a6ff374207c3f7b55349b5b533c1ff054bf6d66474",
+    "lattice_model": "b87a5feba27675e26970360d730324b7d3740e4dc0492b4dc478e510f140c9e7",
+    "decoder": "990af03ac4c99684e9e9dac6e5a8bb64d773015879c1638906f5fb592cdc6a43",
+    "damping_decoder": "a08ddf0b58e63bb2627c35cafbe570fe6a0ee8dc21bd4eaca720d6dbcbc5e182",
+    "numba_kernels": "c2254c95600c4f5e3a8c2279d5686a99c8d3810a4bb0c814a4fd0cbf16c184cc"
+  },
+  "next_transition": "Launch the three bounded q shards with three workers; validate all 264000 raw records before running the independent confirmation analysis."
+}

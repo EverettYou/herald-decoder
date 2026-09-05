@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "status": "verified incomplete",
+  "recorded_at": "2026-08-29T15:04:00Z",
+  "acceptance_item": "K1-K4 source/interface completeness matrix",
+  "question": "Do current components define a normalized causal repeated D4 transition kernel and private logical scorer?",
+  "answer": "No. Classical report kernels and single-cycle scoring are available, but cross-round hidden-state evolution and action-conditioned physical post-flux generation are not specified.",
+  "factors": [
+    {
+      "factor": "K1-physical-state-evolution",
+      "status": "missing",
+      "supported_parts": [
+        "generic binary edge-fault increments and cumulative syndrome identity",
+        "static D4 fusion record conditional on one supplied physical edge chain",
+        "deterministic hidden projector digest chaining for externally supplied true labels"
+      ],
+      "missing_parts": [
+        "normalized next-projector-state law conditional on previous state and data-fault increment",
+        "physical residual-state update after a public correction",
+        "proof that previous fusion/projector information can be discarded between rounds"
+      ],
+      "exact_checks": [
+        "observation_from_error_edges has no previous-state or public-action input",
+        "project_hidden_state requires externally supplied true_labels and defines no probability law"
+      ]
+    },
+    {
+      "factor": "K2-public-measurement-kernel",
+      "status": "localized_only",
+      "supported_parts": [
+        "normalized local E1 false-positive/false-negative report law",
+        "normalized generic none/blue/green confusion matrix",
+        "typed multi-label reports and perfect-report limit",
+        "localized Jing-2025 five-star time-like-herald fixture"
+      ],
+      "missing_parts": [
+        "joint multisite repeated D4 true-outcome distribution",
+        "cross-round noncommuting/quasi-stabilizer correlations",
+        "derived identification between the generic G channel and D4 species reports"
+      ],
+      "normalization": {
+        "e1_local_report_row_sums": {
+          "vacuum": 1.0,
+          "m_flux": 1.0,
+          "e_charge": 1.0
+        },
+        "generic_categorical_row_sums": [1.0, 1.0, 1.0]
+      }
+    },
+    {
+      "factor": "K3-action-conditioned-postflux-kernel",
+      "status": "missing",
+      "supported_parts": [
+        "E2 exact action/report binding and temporal order",
+        "single-shot private-truth post-flux relations and parity-supported charge sampler",
+        "deterministic projector update for externally supplied post-action charge labels"
+      ],
+      "missing_parts": [
+        "repeated-state update under the stage-1 flux action",
+        "normalized public charge/vacuum report law derived from the updated state"
+      ],
+      "exact_checks": [
+        "run_e2_completion_matrix requires external postflux_provider",
+        "project_post_action_charge_state requires external charge_labels"
+      ]
+    },
+    {
+      "factor": "K4-private-logical-scorer",
+      "status": "partial",
+      "supported_parts": [
+        "ground-state-relative homology score for one spatial physical chain and correction",
+        "truth exclusion from public decoding",
+        "private score attachment only after frozen E2 completion"
+      ],
+      "missing_parts": [
+        "canonical accumulated spacetime residual across repeated faults and two-stage corrections",
+        "derivation that the single-shot union/homology criterion is sufficient for that accumulated state"
+      ],
+      "exact_checks": [
+        "decode_and_score_flux_recovery consumes one physical_error chain",
+        "score_frozen_transition consumes externally supplied logical_failure_truth"
+      ]
+    }
+  ],
+  "earliest_missing_dependency": "K1-physical-state-evolution",
+  "dependent_missing_dependency": "K3-action-conditioned-postflux-kernel",
+  "unresolved_physical_models": [
+    "explicit phenomenological Markov transition on a declared hidden D4 state",
+    "stateful projector or density-operator evolution",
+    "ancilla/circuit-derived repeated extraction channel"
+  ],
+  "bounded_checks_can_discriminate_models": false,
+  "prohibited_next_steps": [
+    "independent per-round fusion resampling",
+    "stochastic schedule pilot",
+    "logical-error-rate or threshold estimation"
+  ],
+  "verification": {
+    "new_matrix_tests": "6/6 pass",
+    "full_lab005_suite": "137/137 pass",
+    "sampling": 0
+  },
+  "execution_hashes": {
+    "audit_d4_transition_kernel.py": "cc8d920da55167be2ce01175f50bbcc6e8b640e9ff49191266707be402ca7107",
+    "test_audit_d4_transition_kernel.py": "3a77efd98b0abaf55e3fff5cfa0b69ce40dc51b502402143509d6262097b39c9"
+  },
+  "next_gate": "Analyze and report the localized incompleteness, then decide whether a consequential physical-model choice requires researcher consultation; keep sampling blocked."
+}

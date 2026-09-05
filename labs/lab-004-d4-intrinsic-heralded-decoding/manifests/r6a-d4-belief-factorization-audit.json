@@ -1,0 +1,69 @@
+{
+  "branches": {
+    "F0-exact-oracle": {
+      "frozen_digest": "9efd4f74e3eb0986f9cfb99fc72656431d21bcf7a827cadbace92f9ae803be62",
+      "replayed_digest": "9efd4f74e3eb0986f9cfb99fc72656431d21bcf7a827cadbace92f9ae803be62",
+      "status": "pass"
+    },
+    "F1-local-support": {
+      "maximum_absolute_likelihood_error": 0.046875,
+      "status": "support-exact-weight-inexact",
+      "support_exact_on_supported_public_catalog": true,
+      "weight_mismatch_count": 64,
+      "weight_mismatch_histogram": {
+        "ratio-0.25": 64
+      }
+    },
+    "F2-candidate-dependent-ledger": {
+      "candidate_likelihood_mismatch_count": 0,
+      "decoder_visible": false,
+      "maximum_absolute_likelihood_error": 0.0,
+      "status": "exact-diagnostic-only",
+      "status_histogram": {
+        "allowed": 49855
+      }
+    },
+    "F2-fixed-direct-charge-scopes": {
+      "claim": "This tests one fixed list of direct observed-charge parity scopes. It does not reject richer fixed graphs with latent connectivity auxiliaries.",
+      "examples": [],
+      "maximum_scope_signatures_per_observation": 1,
+      "observations_with_any_parity_scope": 64,
+      "observations_with_candidate_dependent_exact_weight": 0,
+      "observations_with_multiple_candidate_scope_signatures": 0,
+      "status": "pass"
+    },
+    "F2-global-public-table-control": {
+      "claim": "A public-observation keyed factor over all twelve primitive-fixture edge bits is exact by construction and is not a scalable local factorization.",
+      "dense_table_cells": 66478080,
+      "nonzero_table_entries": 49855,
+      "status": "exact-but-global-exponential"
+    }
+  },
+  "claim_boundary": "Complete deterministic primitive-size-2 (8-vertex, 12-edge) likelihood matrix only; this is not the 24-vertex, 36-edge paper-normalized L=2 supercell. Exact candidate ledgers are not a decoder-visible scalable BP graph.",
+  "enumeration": {
+    "dense_global_table_cell_count": 66478080,
+    "distinct_supported_public_observation_count": 16230,
+    "edge_count": 12,
+    "exact_candidate_observation_pair_count": 49855,
+    "local_support_candidate_observation_pair_count": 49855,
+    "nonwinding_mask_count": 3973,
+    "paper_normalized": false,
+    "physical_mask_count": 4096,
+    "terminal_winding_mask_count": 123,
+    "topology": "primitive periodic honeycomb size=2",
+    "vertex_count": 8
+  },
+  "frozen_r4": {
+    "path": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-004-d4-intrinsic-heralded-decoding/results/r4-distinct-observation-matrix-audit.json",
+    "sha256": "f8087db5044474ea6d7768c4a059a065508752c31a0d7e1b2ec49b51c42a9824"
+  },
+  "generated_at": "2026-08-29T16:07:39.678042+00:00",
+  "manifest": {
+    "path": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-004-d4-intrinsic-heralded-decoding/manifests/r6a-d4-belief-factorization-manifest-2026-08-29.json",
+    "sha256": "de58a89a3e9b5626975fd07d3e0a33eba4e8c8466daf437b38ac3857171c0964"
+  },
+  "matrix_digest_sha256": "dfb0c4b1f23551f2dd54bee0a862f33a1a9c61e7bfbd5455d3abf8f2cc5bd34b",
+  "new_stochastic_samples": 0,
+  "schema_version": 1,
+  "status": "complete_f0_f2_exact_enumeration_matrix_verified"
+}

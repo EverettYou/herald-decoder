@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "status": "completed with tensor zero-safety failure",
+  "registered_at": "2026-08-29T18:38:00Z",
+  "title": "R6M region/join-graph and compressed-tensor construction preflight",
+  "rigor_tier": "bounded deterministic prerequisite",
+  "program_alignment": {
+    "central_question": "Can two genuinely different bounded-inference families consume the exact D4 factor graph under one matched target and resource contract?",
+    "scientific_layer": "WP3 scalable decoding",
+    "epistemic_role": "construction and exact-ceiling prerequisite before approximation-accuracy comparison",
+    "upstream_dependencies": ["R6D exact nonnegative local factor graph", "R6L closure of mini-bucket packing optimization"],
+    "downstream_gate": "release a matched physical-marginal accuracy matrix only if both families have valid executable constructions"
+  },
+  "research_basis": {
+    "local_scope": "Project thesis, WP3 roadmap, Lab 004 R6D-R6L, local Bravyi-Suchara-Vargo tensor-decoder reference, and installed research runtime inspected on 2026-08-29",
+    "literature_search": "targeted primary-source search on 2026-08-29 for iterative join-graph propagation, region graphs, surface-code MPS decoding, and arbitrary-geometry compressed contraction",
+    "sources": [
+      {"citation": "Mateescu, Kask, Gogate, and Dechter, Join-Graph Propagation Algorithms, JAIR 37 (2010)", "doi": "10.1613/jair.2842", "design_change": "IJGP requires a bounded join-graph decomposition; cluster size controls complexity and ordinary BP is its smallest-i limit."},
+      {"citation": "Yedidia, Freeman, and Weiss, Constructing Free Energy Approximations and Generalized Belief Propagation Algorithms", "design_change": "region choices and counting/running-intersection validity must be explicit rather than inferred from convergence."},
+      {"citation": "Bravyi, Suchara, and Vargo, Efficient Algorithms for Maximum Likelihood Decoding in the Surface Code, PRA 90, 032326 (2014)", "doi": "10.1103/PhysRevA.90.032326", "design_change": "bond dimension is an explicit approximation-control parameter and must be validated against exact small systems."},
+      {"citation": "Gray and Chan, Hyperoptimized Approximate Contraction of Tensor Networks with Arbitrary Geometry, PRX 14, 011009 (2024)", "doi": "10.1103/PhysRevX.14.011009", "design_change": "use compressed contraction on the irregular D4 tensor network, but separate contraction-path quality from approximation accuracy."}
+    ]
+  },
+  "model": {
+    "common_target": "the unadjusted nonnegative R6D/R6F factor-graph partition function on primitive D4 observations",
+    "region_branch": "construct an arc-labeled mini-cluster join graph from each registered elimination order; original factors are assigned once, clusters obey i, and variable-bearing arcs satisfy running intersection",
+    "tensor_branch": "replace each variable hyperedge by an explicit binary COPY tensor, then compare exact contraction with compressed contraction at fixed max_bond",
+    "fixed_information": "same public observation and same exact factor tables; no truth, correction, terminal-sector decision, or new decoder samples"
+  },
+  "matrix": {
+    "region_rows": "2 representations x 2 orders x i={10,14} on the registered maximum primitive observation at p=0.10",
+    "tensor_rows": "2 representations x max_bond={2,4,8,exact} on the same graph target",
+    "runtime": "project ./run_research_python.sh only; verified NumPy 1.26.4, Quimb 1.13.0, Cotengra 0.7.5, opt_einsum 3.4.0",
+    "budget": "under ten CPU minutes and 2 GiB"
+  },
+  "question": {
+    "H1": "all eight join-graph decompositions pass factor-assignment, scope-cap, arc-label, and running-intersection checks",
+    "H2": "both COPY-tensor representations contract exactly to the independent graph partition function, and every compressed row is finite and deterministic",
+    "H3": "both families pass within budget and therefore release a later matched marginal-accuracy matrix",
+    "falsification": "a missing/duplicate factor, invalid separator, disconnected variable subgraph, scope overflow, exact tensor mismatch, nondeterministic compressed replay, nonfinite result, or runtime violation rejects the affected construction"
+  },
+  "analysis": {
+    "comparison": "This preflight compares construction validity and bounded executability, not accuracy superiority; no family may be selected from scalar evidence error alone.",
+    "stop_rule": "If both pass, register a matched exact-reference marginal matrix covering both families. If one fails, remediate its earliest construction/runtime gate or record it as unavailable; do not silently select the survivor.",
+    "claim_boundary": "Construction feasibility on one primitive target only; no posterior-accuracy, decoder, correction, paper-L2, LER, threshold, scaling, or fault-tolerance claim."
+  },
+  "acceptance_items": [
+    {"item": "prospective literature-grounded two-branch contract", "status": "registered", "evidence": "this manifest"},
+    {"item": "bounded join-graph construction and invariant audit", "status": "complete", "evidence": "8/8 registered decompositions pass all four invariants"},
+    {"item": "COPY-tensor exact ceiling and compressed deterministic smoke", "status": "complete with rejected H2", "evidence": "both exact ceilings pass below 1e-15 relative error; unclustered max_bond 4 and 8 reproducibly fail zero-safe QR normalization"},
+    {"item": "machine-readable result, report, Lab/Wiki synthesis, and durable state", "status": "complete", "evidence": "results/r6m-approximation-family-construction-preflight.{json,md} plus Lab/Wiki/state updates"}
+  ]
+}

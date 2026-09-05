@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "registered_integrity_gate_pending",
+  "phase": "R6Y",
+  "title": "D4 BP-MWPM lower-side threshold refinement",
+  "question": "Does the D4-native BP-MWPM flux curve remain decreasing with size at p_X=0.26, 0.28, and 0.30, thereby locating the crossing relative to the R6X 0.32--0.36 upper-side data?",
+  "scope": "X-only D4 channel, p_Z=0, first-stage flux Boolean-union loss conditional on nonterminal histories; no charge-recovery or full two-stage threshold claim.",
+  "predecessor": "R6X completes the 1000-shot upper-side refinement at p_X=0.32,0.34,0.36. R6Y supplies the missing lower-side 1000-shot anchors; combined analysis uses the same physical channel, score, dense BP recurrence, and odd sizes.",
+  "implementation": "cached dense-Numba realization of the validated public-record BP recurrence, followed by the same MWPM scorer; no generic-Python BP records are mixed into this allocation.",
+  "scan_design": {
+    "sizes": [7, 9, 11, 13],
+    "p_X_grid": [0.26, 0.28, 0.30],
+    "stage_1_attempted_histories_per_cell": 1000,
+    "stage_1_total_attempted_histories": 12000,
+    "stage_2_increment_attempted_histories": 1000,
+    "stage_2_max_attempted_histories_per_cell": 5000,
+    "stage_2_selection_rule": "Combine R6Y with R6X and allocate matched increments only at p_X values whose adjacent-size BP 90% risk-difference interval contains zero, and their immediate p_X neighbors, until signs resolve or the cap is reached.",
+    "inference_accounting": ["all finite BP final iterates (primary)", "matched 40-vs-160 iteration sensitivity at the selected crossing neighborhood"],
+    "seed_salt": 68391,
+    "bp_defaults": {"old_message_weight": 0.25, "max_iterations": 40, "tolerance": 1e-8, "terminal_screened": false}
+  },
+  "comparators": ["BP posterior-LLR -> MWPM (primary)", "published O2 herald-weight MWPM (matched calibration)", "O0 unit-weight MWPM (negligible incremental runtime)"],
+  "launch_guard": {"required_integrity_report": "results/r6v-r6u-bp-integrity-audit-2026-08-30.json", "required_field": "integrity_gate_passed", "required_value": true},
+  "claim_boundary": "R6Y plus R6X can support a finite-size flux-crossing estimate only after their combined multi-size curve and 40-vs-160 matched stability test are analyzed. It is not the paper's full two-stage D4 threshold."
+}

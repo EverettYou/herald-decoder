@@ -1,0 +1,236 @@
+{
+  "claim_boundary": "This is a deterministic provenance verdict. It performs no R5a/R6AF numerical risk comparison and does not register or imply a rerun, crossing, threshold, scaling, noisy-measurement, or fault-tolerance claim.",
+  "claim_usability": {
+    "replacement_evidence": "R6AF supplies the current public-interface implementation pilot at its own registered four-cell scope.",
+    "retain_as_provenance": [
+      "frozen physical-error draws",
+      "lattice/topology provenance",
+      "historical implementation trace"
+    ],
+    "withdraw_for_remediated_complete_pipeline": [
+      "all R5a O0/O2 final-loss risks and paired differences",
+      "R5a O2 first-stage mechanism claim",
+      "R5a size directions",
+      "R5a promotion as a validated Lab 005 complete-pipeline baseline"
+    ]
+  },
+  "dimension_matrix": [
+    {
+      "dimension": "artifact identity and status",
+      "evidence": [
+        "manifest:frozen_evidence",
+        "r5a_contract:production_result",
+        "r5a_preflight:gates",
+        "r6af_contract:pilot_outcome"
+      ],
+      "verdict": "compatible",
+      "witness": "All 10 frozen file hashes and all five status gates pass; the R5a gzip contains exactly 40000 records."
+    },
+    {
+      "dimension": "physical channel and geometry",
+      "evidence": [
+        "r5a_contract:design",
+        "r6af_contract:frozen_model.physical_channel",
+        "r6af_contract:pilot_registration.grid"
+      ],
+      "verdict": "compatible_scope_difference",
+      "witness": "Both use the paper-normalized periodic honeycomb IID red-X channel, but R5a uses L=2,3 and p=0.14..0.22 whereas R6AF uses L=3,5 and p_X=0.19,0.21; no numerical comparison is allowed."
+    },
+    {
+      "dimension": "first observation and timing",
+      "evidence": [
+        "r5a_raw_cohort:pipeline_record.observation.charge_outcomes",
+        "r6af_contract:frozen_model.decoder_visible_information.first_stage"
+      ],
+      "verdict": "incompatible",
+      "witness": "The legacy first-record domain is [-1, 0, 1] and 40000 records expose inactive -1 support; R6AF requires a full binary signal-only field where zero is ambiguous."
+    },
+    {
+      "dimension": "matched randomness",
+      "evidence": [
+        "r5a_contract:design.matching",
+        "r5a_raw_cohort:paired seeds and records",
+        "r6af_contract:pilot_registration.seed_contract"
+      ],
+      "verdict": "compatible_with_limited_provenance",
+      "witness": "All 20000 legacy pairs match physical errors, first records, and decoder seeds, with 3323 pairs recording distinct post-action second outcomes; R5a does not expose R6AF's three keys separately."
+    },
+    {
+      "dimension": "second public record",
+      "evidence": [
+        "r5a_raw_cohort:pipeline_record.postflux_charge_outcomes",
+        "r6af_contract:preflight_outcome.remediation_history"
+      ],
+      "verdict": "incompatible",
+      "witness": "All 28253 stored legacy second records use domain [-1, 0, 1]; 28253 contain -1 and zero are full binary. R6AF requires one binary value on every star."
+    },
+    {
+      "dimension": "charge action information budget",
+      "evidence": [
+        "r5a_raw_cohort:pipeline_record.postflux_relations",
+        "r5a_raw_cohort:pipeline_record.charge_recovery.colors.*.effective_error_edges",
+        "r6af_contract:preflight_outcome.remediation_history"
+      ],
+      "verdict": "incompatible",
+      "witness": "The legacy record couples 28253 relation-bearing records and 28253 effective-error scoring records at the old combined boundary; R6AF records that this boundary accepted hidden relations and replaced it with a relation-free public action plus private scorer."
+    },
+    {
+      "dimension": "action-conditioned support",
+      "evidence": [
+        "r5a_contract:preflight.required_gates",
+        "r5a_raw_cohort:paired post-action records",
+        "r6af_contract:preflight_fixture_matrix"
+      ],
+      "verdict": "incomplete_gate",
+      "witness": "R5a records policy-dependent post-action supports and passed own-support proxies, but it has no wrong-action rejection or action-binding fixture equivalent to R6AF."
+    },
+    {
+      "dimension": "logical scorer and denominator",
+      "evidence": [
+        "r5a_contract:recorded_outcomes",
+        "r5a_raw_cohort:stored loss composition",
+        "r6af_contract:frozen_model.logical_scorer"
+      ],
+      "verdict": "compatible_with_unexercised_branch",
+      "witness": "Stored R5a final-loss flags equal the OR of available physical/flux/charge loss fields in all records (0 mismatches), but its cohort contains no physical-winding histories and cannot exercise that denominator branch."
+    },
+    {
+      "dimension": "anti-leak and replay gates",
+      "evidence": [
+        "r5a_raw_cohort:pipeline_record schema",
+        "r5a_preflight:gates",
+        "r6af_contract:pilot_registration.verification_and_acceptance"
+      ],
+      "verdict": "incomplete_gate",
+      "witness": "R5a stores zero explicit public transcripts and lacks relation-perturbation invariance, wrong-action binding, and first/middle/final deterministic replay gates required by R6AF."
+    },
+    {
+      "dimension": "claim usability",
+      "evidence": [
+        "r5a_analysis",
+        "dimensions:first observation and timing",
+        "dimensions:second public record",
+        "dimensions:charge action information budget"
+      ],
+      "verdict": "provenance_only",
+      "witness": "R5a physical/lattice records remain provenance, but its O2 policy differences, final-loss risks, stage mechanism, size directions, and Lab 005 baseline promotion are withdrawn as evidence for the remediated complete public pipeline."
+    }
+  ],
+  "generated_at": "2026-09-01T16:46:52.657863+00:00",
+  "hash_checks": {
+    "r5a_analysis": {
+      "actual": "9a4cb2e3a19c18794759c94ab5f2dc24602a1cd999be806ed741b5a4b116e22c",
+      "expected": "9a4cb2e3a19c18794759c94ab5f2dc24602a1cd999be806ed741b5a4b116e22c",
+      "passed": true,
+      "path": "results/r5a-paper-lattice-public-decoder-analysis.json"
+    },
+    "r5a_contract": {
+      "actual": "0d8ba3d736640dd3d680498adc7a233d188dc52760a0f0153275797d96212ce1",
+      "expected": "0d8ba3d736640dd3d680498adc7a233d188dc52760a0f0153275797d96212ce1",
+      "passed": true,
+      "path": "manifests/r5a-paper-lattice-public-decoder-pilot-manifest-2026-08-29.json"
+    },
+    "r5a_preflight": {
+      "actual": "c7c6003a9e2eba911b4172e7be3d9a60f49fec353b3e5dcc045c429044d9f900",
+      "expected": "c7c6003a9e2eba911b4172e7be3d9a60f49fec353b3e5dcc045c429044d9f900",
+      "passed": true,
+      "path": "results/r5a-paper-lattice-public-decoder-preflight.json"
+    },
+    "r5a_preflight_runner": {
+      "actual": "0d7d104f69460fc1b3c9c3dfe046f7e49a936b89e528037ce9be491130ad5072",
+      "expected": "0d7d104f69460fc1b3c9c3dfe046f7e49a936b89e528037ce9be491130ad5072",
+      "passed": true,
+      "path": "scripts/run_r5a_public_decoder_preflight.py"
+    },
+    "r5a_raw_cohort": {
+      "actual": "8993f8126f3184266dca1d14d7816ae3d42638df4c9bf0f9093f7c91a39901a5",
+      "expected": "8993f8126f3184266dca1d14d7816ae3d42638df4c9bf0f9093f7c91a39901a5",
+      "passed": true,
+      "path": "results/r5a-paper-lattice-public-decoder-pilot.jsonl.gz"
+    },
+    "r5a_runner": {
+      "actual": "7f8e91a56cdb20ed683ff38ef272732bec40398d7db005fd16758f4507113bb7",
+      "expected": "7f8e91a56cdb20ed683ff38ef272732bec40398d7db005fd16758f4507113bb7",
+      "passed": true,
+      "path": "scripts/run_r5a_public_decoder_pilot.py"
+    },
+    "r6af_contract": {
+      "actual": "22059c375008bd6a1e90417cddc802a20ee0649f361a20a0a268f21c48ef9ca7",
+      "expected": "22059c375008bd6a1e90417cddc802a20ee0649f361a20a0a268f21c48ef9ca7",
+      "passed": true,
+      "path": "manifests/r6af-two-stage-public-charge-reproduction-manifest-2026-09-01.json"
+    },
+    "r6af_preflight": {
+      "actual": "cd8d12cd3d920b6f933a7d78f1512d68904abb911d4cf0d0f8d72ca944367c81",
+      "expected": "cd8d12cd3d920b6f933a7d78f1512d68904abb911d4cf0d0f8d72ca944367c81",
+      "passed": true,
+      "path": "results/r6af-two-stage-public-charge-preflight-2026-09-01.json"
+    },
+    "remediated_charge": {
+      "actual": "2ba3dd13feda42e4441ae0089be2403b5c75b626ae0a0542d4aa9089807472fd",
+      "expected": "2ba3dd13feda42e4441ae0089be2403b5c75b626ae0a0542d4aa9089807472fd",
+      "passed": true,
+      "path": "scripts/d4_charge.py"
+    },
+    "remediated_pipeline": {
+      "actual": "5f5b1bcb2fd71ffc3bbbfe6ef21ac98f63eb48d15c036db76714587c82ed03e0",
+      "expected": "5f5b1bcb2fd71ffc3bbbfe6ef21ac98f63eb48d15c036db76714587c82ed03e0",
+      "passed": true,
+      "path": "scripts/d4_pipeline.py"
+    }
+  },
+  "incompatible_dimensions": [
+    "first observation and timing",
+    "second public record",
+    "charge action information budget"
+  ],
+  "manifest": "r6ah-r5a-r6af-public-interface-provenance-audit-manifest-2026-09-01.json",
+  "new_computation": {
+    "arm_evaluations": 0,
+    "bootstrap_replicates": 0,
+    "histories": 0
+  },
+  "overall_verdict": "incompatible",
+  "raw_schema_audit": {
+    "action_dependent_second_record_pair_count": 3323,
+    "decoder_seed_pair_mismatch_count": 0,
+    "first_record_pair_mismatch_count": 0,
+    "first_record_value_domain": [
+      -1,
+      0,
+      1
+    ],
+    "first_records_full_binary": 0,
+    "first_records_with_inactive_sentinel": 40000,
+    "incomplete_pair_count": 0,
+    "mode_counts": {
+      "heralded": 20000,
+      "syndrome_only": 20000
+    },
+    "paired_history_count": 20000,
+    "physical_pair_mismatch_count": 0,
+    "record_count": 40000,
+    "records_with_effective_error_truth": 28253,
+    "records_with_explicit_public_transcript": 0,
+    "records_with_private_relation_metadata": 28253,
+    "second_record_value_domain": [
+      -1,
+      0,
+      1
+    ],
+    "second_records_full_binary": 0,
+    "second_records_present": 28253,
+    "second_records_with_inactive_sentinel": 28253,
+    "stored_loss_composition_mismatch_count": 0
+  },
+  "schema_version": 1,
+  "status": "completed",
+  "status_gates": {
+    "r5a_analysis_present": true,
+    "r5a_contract_complete": true,
+    "r5a_preflight_passed": true,
+    "r6af_contract_complete": true,
+    "r6af_preflight_passed": true
+  },
+  "unclassified_dimension_count": 0
+}

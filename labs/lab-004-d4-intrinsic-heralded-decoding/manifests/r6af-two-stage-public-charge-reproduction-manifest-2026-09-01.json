@@ -1,0 +1,218 @@
+{
+  "schema_version": 1,
+  "status": "pilot_completed_analyzed_no_refinement",
+  "phase": "R6AF",
+  "registered_at": "2026-09-01T13:06:37Z",
+  "purpose": "Source-audited reproduction gate for the published two-stage D4 decoder, joining the corrected signal-only flux observation to an action-conditioned second charge measurement and a decoder-visible charge recovery.",
+  "epistemic_role": "Structural preflight and fixture audit only; not a logical-error-rate, crossing, threshold, noisy-measurement, or fault-tolerance result.",
+  "source_basis": {
+    "primary": "Jing et al. (2025), Appendix A and Appendix C: first fusion-charge observation conditions the flux correction; after a homologically trivial physical/correction Boolean union, a second simultaneous charge record is generated and decoded by the common charge stage.",
+    "local_source_audit": "wiki/records/jing2025-decoder-method-audit.md",
+    "validated_primitive_reference": "results/r4-corrected-sequential-policy-audit.json",
+    "existing_pipeline_truth_audit": "results/r2-end-to-end-pipeline-truth-audit.json",
+    "corrected_first_record_gate": "manifests/r6ac-d4-sublattice-herald-model-audit-2026-08-31.json"
+  },
+  "scientific_question": "Does the current executable pipeline preserve the published causal and public-information boundary from corrected signal-only flux decoding through action-conditioned charge recovery before any finite-size sampling is released?",
+  "frozen_model": {
+    "physical_channel": "Paper-normalized periodic coloured honeycomb; IID red-X edge errors with p_Z=0. Physical winding is retained as an unconditional terminal logical loss.",
+    "observation_timing": [
+      "Sample the first public flux syndrome and binary colour-resolved e_B/e_G signal from the physical error.",
+      "Choose a public flux correction from that first record.",
+      "Form the hidden Boolean physical/correction union and terminate if it winds.",
+      "Generate the second full binary charge record conditional on the actual first action.",
+      "Choose the common blue/green charge correction from the public second record and score it against hidden truth."
+    ],
+    "decoder_visible_information": {
+      "first_stage": "Flux syndrome plus full binary signal-only e_B/e_G field; zero does not reveal whether degree-two fusion occurred.",
+      "second_stage": "Known first correction plus one full binary charge value on every star. Hidden active support, relation partition, physical error, effective error representative, and winding truth are forbidden decoder inputs.",
+      "private_simulator_truth": "Physical error, Boolean union, action-conditioned relation graph, active support, effective charge chain, and homology labels may be used only to generate records and score actions."
+    },
+    "flux_policies": {
+      "O0": "Unit-weight MWPM from flux syndrome only.",
+      "O2": "Published herald-weight MWPM with w_e=1-n_e K and K=27 L^2 from the corrected signal-only first record.",
+      "scope": "O0 and O2 are the primary source-reproduction arms. Corrected signal-only BP is deferred until this public two-stage interface passes."
+    },
+    "common_charge_stage": "The same deterministic unit-weight blue/green charge decoder and tie convention are used in both O0 and O2 arms. Its action may depend only on the full public second charge record and known first correction.",
+    "logical_scorer": "One unconditional attempted-history loss: physical winding OR first-stage Boolean physical/correction-union winding OR blue charge residual winding OR green charge residual winding.",
+    "matched_randomness": "Each paired trajectory shares the physical-error draw, first-observation exogenous key, and second-measurement exogenous key. The second record is generated separately under each arm's first action; it is not forced to be numerically identical across arms.",
+    "uncertainty": "No uncertainty interval is computed in preflight. A released pilot must report paired risk differences with a paired bootstrap or paired-binomial interval and Wilson intervals for each unconditional arm risk.",
+    "interpretation": "No crossing or threshold fit is permitted in this gate or its first finite-size pilot."
+  },
+  "preflight_fixture_matrix": [
+    "zero physical error in both O0 and O2",
+    "a frozen L=2 nonwinding physical error with identical first record but different O0/O2 first corrections",
+    "corrected first record contains only public binary signals and demonstrates an ambiguous zero",
+    "same second-round exogenous key is bound separately to each action-conditioned relation support",
+    "each generated second record satisfies its own hidden parity support",
+    "public second record is full binary with no inactive sentinel",
+    "charge-decoder action is unchanged when hidden relation metadata varies at fixed public record and known first action",
+    "Boolean-union terminal scoring and final Boolean-union loss are explicit"
+  ],
+  "acceptance_gates": {
+    "all_prerequisite_evidence_present": true,
+    "first_record_signal_only": true,
+    "matched_first_history": true,
+    "action_conditioned_second_channel": true,
+    "full_binary_public_second_record": true,
+    "no_hidden_relation_input_to_charge_action": true,
+    "common_charge_policy": true,
+    "boolean_union_scorer": true,
+    "fixture_matrix_passes": true
+  },
+  "compute_budget": {
+    "production_authorized": false,
+    "new_stochastic_samples": 0,
+    "lattice_sizes": [2],
+    "maximum_fixture_trajectories": 8,
+    "maximum_wall_time_minutes": 2,
+    "release_rule": "Allocate no finite-size histories until every structural and public-information gate passes and the manifest is amended with a bounded paired pilot grid.",
+    "stop_rule": "On the first public-information, causal-order, support, scorer, or prerequisite failure, preserve the witness, mark preflight failed, and register the smallest interface correction."
+  },
+  "prohibited": [
+    "restart or extend R6AE",
+    "compare Lab 003 q=3/4 numerically with D4",
+    "reuse withdrawn support-revealing BP evidence",
+    "condition the charge action on hidden active support or relation components",
+    "force identical second observations after different first actions",
+    "estimate or promote a threshold"
+  ],
+  "outputs": {
+    "machine_preflight": "results/r6af-two-stage-public-charge-preflight-2026-09-01.json",
+    "report": "results/r6af-two-stage-public-charge-preflight-2026-09-01.md"
+  },
+  "preflight_outcome": {
+    "executed_at": "2026-09-01T13:39:00Z",
+    "status": "passed_after_public_interface_remediation",
+    "passing_boundary": "Corrected signal-only first record, ambiguous-zero fixture, matched first history, action-dependent second support under a shared exogenous key, own-support validity, zero-error fixture, full-binary public second record, relation-free charge action, wrong-action support rejection, explicit public transcript, and Boolean-union scoring all pass.",
+    "remediation_history": [
+      "The initial preflight failed before sampling because the integrated record used inactive -1 sentinels and the charge action accepted hidden relations.",
+      "The pipeline now projects simulator sentinels to a full binary public record, computes both charge corrections through decode_public_postflux_charges(honeycomb, public_charge_outcomes), and passes hidden relations only to the private support validator and scorer."
+    ],
+    "failed_gates": [],
+    "production_trajectories": 0,
+    "evidence": "results/r6af-two-stage-public-charge-preflight-2026-09-01.json"
+  },
+  "pilot_registration": {
+    "registered_at": "2026-09-01T14:02:07Z",
+    "epistemic_role": "Small paired implementation-and-direction pilot for the complete two-stage public decoder; not a threshold, crossing, scaling, fault-tolerance, or publication-precision study.",
+    "research_question": "On the smallest two-size, two-rate paper-channel grid, does the complete public O2 policy lower unconditional final logical loss relative to O0 when both arms use matched histories and the same public charge decoder?",
+    "knowledge_states": {
+      "improvement": "O2-minus-O0 paired loss difference is negative; call it resolved in one cell only when the upper 90% paired interval is below zero.",
+      "no_resolved_difference": "The paired interval contains zero; retain the information-advantage hypothesis as unresolved at pilot precision.",
+      "regression": "The lower 90% paired interval is above zero; report a localized complete-pipeline O2 regression without changing the channel or scorer.",
+      "censored": "Any replay, public-information, support, scorer, or completeness gate fails; preserve the witness and release no decoder comparison."
+    },
+    "grid": {
+      "lattice": "paper_periodic_honeycomb",
+      "sizes": [3, 5],
+      "p_X": [0.19, 0.21],
+      "p_Z": 0.0,
+      "matched_attempted_histories_per_cell": 512,
+      "cell_count": 4,
+      "total_independent_histories": 2048,
+      "total_arm_evaluations": 4096,
+      "rationale": "L=3 is the smallest nontrivial post-flux charge topology and L=5 is the smallest R6AE production size; p_X=0.19 and 0.21 reuse the validated paper-region channel on opposite sides of the quoted neighborhood without estimating a crossing."
+    },
+    "independent_sampling_unit": "One physical red-X history at fixed (L,p_X), paired across O0 and O2. Arms within a history are dependent and must never be treated as independent rows.",
+    "seed_contract": {
+      "master_salt": 68615,
+      "physical_key": "SeedSequence([68615, L, round(10^6 p_X), trajectory_index, 0xD400])",
+      "first_observation_key": "SeedSequence([68615, L, round(10^6 p_X), trajectory_index, 0xD401])",
+      "second_exogenous_key": "SeedSequence([68615, L, round(10^6 p_X), trajectory_index, 0xD402])",
+      "matching_rule": "Both arms consume the identical physical history and first public record. Both receive the identical second exogenous key, but each second record is generated against its own first-action-conditioned hidden support and therefore need not be numerically equal."
+    },
+    "policies": {
+      "O0": "Unit-weight flux MWPM followed, when nonterminal, by the common relation-free public blue/green unit-weight charge MWPM.",
+      "O2": "Published signal-only herald-weight flux MWPM with K=27L^2 followed, when nonterminal, by the identical public blue/green charge MWPM.",
+      "one_changed_mechanism": "Only the first-stage flux weights differ between arms. Physical channel, observation timing, random keys, second-stage implementation, and scorer are fixed."
+    },
+    "observable": {
+      "primary": "Per-cell paired difference Delta=R_O2-R_O0 in unconditional final Boolean-union logical loss.",
+      "arm_risks": "Per-cell unconditional attempted-history logical-loss risk for O0 and O2.",
+      "stage_decomposition": "Matched counts of physical-winding terminal loss, first-union terminal loss, charge-stage loss, and decoded success; decomposition is diagnostic and does not change the primary score.",
+      "denominator": "Every attempted physical history, including terminal physical winding and first-union winding."
+    },
+    "uncertainty_and_analysis": {
+      "arm_intervals": "Pointwise two-sided 90% Wilson intervals per arm and cell.",
+      "paired_interval": "Pointwise two-sided 90% percentile bootstrap interval for Delta, resampling the 512 paired histories within each cell with 10000 deterministic replicates and bootstrap salt 68616.",
+      "discordance_diagnostic": "Report O0-only and O2-only logical losses and a two-sided exact McNemar/binomial p-value on discordant pairs; do not use it as a multiple-cell discovery claim.",
+      "multiplicity": "All four cells are pilot diagnostics; no family-wise scientific claim is registered. Any across-grid pattern is descriptive only.",
+      "finite_size_rule": "Do not interpolate, fit, bracket, or estimate a crossing or threshold. Do not compare risks numerically with Lab 003."
+    },
+    "verification_and_acceptance": [
+      "Runner refuses execution unless the R6AF preflight result is passed with no failed gates and pilot_registration_authorized=true.",
+      "All 2048 independent histories and 4096 arm evaluations complete or the checkpoint records the exact failed cell and trajectory.",
+      "Every paired arm has identical physical error, first flux syndrome, first binary signal record, and registered physical/first/second exogenous keys.",
+      "Every nonterminal second record is full binary, satisfies its own action-conditioned hidden support, and is decoded through decode_public_postflux_charges without hidden relation inputs.",
+      "Replaying a frozen first, middle, and final trajectory in every cell reproduces both public transcripts, actions, stage status, and final loss exactly.",
+      "Each final loss equals physical winding OR first Boolean-union winding OR blue charge winding OR green charge winding, with every attempted history retained in the denominator.",
+      "Report point estimates, registered uncertainty, discordances, stage counts, timing, and any censored records before interpreting direction."
+    ],
+    "compute_budget": {
+      "pilot_execution_authorized": true,
+      "registration_tick_new_histories": 0,
+      "maximum_independent_histories": 2048,
+      "maximum_arm_evaluations": 4096,
+      "maximum_wall_time_minutes": 15,
+      "checkpoint_every_histories": 64,
+      "maximum_resident_memory_gib": 4,
+      "no_adaptive_extension": "Stop at 512 histories/cell even if every paired interval is unresolved. Any extension, new size, or new p_X requires a new registered transition."
+    },
+    "stop_rules": [
+      "Stop before sampling if source/preflight hashes or public-interface tests fail.",
+      "Stop and preserve the checkpoint on any paired-input mismatch, nonbinary public record, wrong-support acceptance, private-field transcript leak, support violation, scorer mismatch, nonfinite weight, or replay failure.",
+      "Stop after the complete four-cell pilot, analysis, report, and metadata update; do not launch refinement or threshold sampling in the same transition."
+    ],
+    "outputs": {
+      "checkpoint": "results/r6af-two-stage-public-charge-pilot-2026-09-01.checkpoint.json",
+      "raw_result_removed_after_validated_compaction": "results/r6af-two-stage-public-charge-pilot-2026-09-01.json",
+      "sufficient_statistics": "results/r6af-two-stage-public-charge-pilot-sufficient-statistics-2026-09-05.json",
+      "analysis": "results/r6af-two-stage-public-charge-pilot-analysis-2026-09-01.json",
+      "report": "results/r6af-two-stage-public-charge-pilot-2026-09-01.md"
+    },
+    "claims_prohibited": [
+      "threshold or crossing estimate",
+      "asymptotic scaling",
+      "fault tolerance or measurement-error performance",
+      "comparison with Lab 003 q=3/4",
+      "use of withdrawn support-revealing BP",
+      "claim that unresolved pilot intervals prove equality",
+      "adaptive sample enlargement without a new manifest amendment"
+    ]
+  },
+  "pilot_source_freeze": {
+    "scripts/d4_pipeline.py": "5f5b1bcb2fd71ffc3bbbfe6ef21ac98f63eb48d15c036db76714587c82ed03e0",
+    "scripts/d4_charge.py": "2ba3dd13feda42e4441ae0089be2403b5c75b626ae0a0542d4aa9089807472fd",
+    "scripts/run_r6af_two_stage_public_charge_pilot.py": "2d8124ae1856f4933fb15864dd10bda433d94aba44dc71ec9e82adc4a4d1470b",
+    "scripts/preflight_r6af_two_stage_public_charge.py": "7aef8baf432cee24c158e4baa175d18a6f210283b4dd44c61ec2f9170b9369cc",
+    "results/r6af-two-stage-public-charge-preflight-2026-09-01.json": "cd8d12cd3d920b6f933a7d78f1512d68904abb911d4cf0d0f8d72ca944367c81"
+  },
+  "pilot_outcome": {
+    "completed_at": "2026-09-01T14:27:00Z",
+    "status": "completed_and_analyzed_at_registered_cap",
+    "completed_independent_histories": 2048,
+    "completed_arm_evaluations": 4096,
+    "wall_seconds": 41.90951041597873,
+    "structural_gates_passed": true,
+    "deterministic_replays_passed": 12,
+    "resolved_improvement_cells": 4,
+    "resolved_regression_cells": 0,
+    "unresolved_cells": 0,
+    "paired_delta_O2_minus_O0": {
+      "L3_p0.19": [-0.23046875, [-0.267578125, -0.193359375]],
+      "L3_p0.21": [-0.26171875, [-0.302734375, -0.22265625]],
+      "L5_p0.19": [-0.38671875, [-0.42578125, -0.34765625]],
+      "L5_p0.21": [-0.375, [-0.416015625, -0.333984375]]
+    },
+    "mechanism_boundary": "The pilot advantage is dominated by fewer first-stage Boolean-union failures under O2; both arms use the identical relation-free public charge decoder. Stage decomposition is diagnostic, not a separately randomized causal estimand.",
+    "claim_boundary": "Pointwise complete-pipeline pilot evidence only; no threshold, crossing, scaling, fault-tolerance, BP, Lab 003 comparison, or multiplicity-adjusted discovery claim.",
+    "outputs": {
+      "checkpoint": "results/r6af-two-stage-public-charge-pilot-2026-09-01.checkpoint.json",
+      "raw_result_removed_after_validated_compaction": "results/r6af-two-stage-public-charge-pilot-2026-09-01.json",
+      "sufficient_statistics": "results/r6af-two-stage-public-charge-pilot-sufficient-statistics-2026-09-05.json",
+      "analysis": "results/r6af-two-stage-public-charge-pilot-analysis-2026-09-01.json",
+      "report": "results/r6af-two-stage-public-charge-pilot-2026-09-01.md"
+    }
+  },
+  "next_action": "Register a bounded source-consistency synthesis comparing this complete-pipeline pilot's direction and stage decomposition with the exact primitive R4.5c policy audit before deciding whether a larger public-decoder validation is warranted; do not extend this pilot."
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "status": "verified, analyzed, and reported",
+  "registered_at": "2026-08-29T17:34:00Z",
+  "title": "R6H cutset-conditioning exact time-space gate",
+  "rigor_tier": "bounded exact structural and primitive numeric audit",
+  "literature_basis": [
+    {
+      "source": "Dechter, Bucket elimination: A unifying framework for reasoning, Artificial Intelligence 113 (1999), DOI 10.1016/S0004-3702(99)00059-4",
+      "role": "conditioning a cutset and eliminating the residual network is an exact, explicit space-for-time trade; elimination cost is exponential in residual induced width"
+    },
+    {
+      "source": "Dechter and El Fattah, Topological parameters for time-space tradeoff, Artificial Intelligence 125 (2001), arXiv:1302.3573",
+      "role": "hybrid conditioning and tree clustering should be selected against a specified time-space budget from problem structure"
+    }
+  ],
+  "program_alignment": {
+    "central_question": "Can the paper-L2 exact likelihood graph cross the 20-variable dense-memory cap by conditioning a small structural cutset, and at what branch-work cost?",
+    "scientific_layer": "WP3 scalable decoding",
+    "epistemic_role": "resource prerequisite after R6G found a minimum registered paper-L2 cluster of 36 variables",
+    "downstream_gate": "do not implement GBP, tensor contraction, correction, or LER sampling until the exact cutset frontier is known"
+  },
+  "question": {
+    "H1": "an unrestricted cutset reaches residual cluster <=20 with fewer conditioned variables than either class-restricted cutset",
+    "H2": "the relative physical-only and auxiliary-only frontiers identify which variable class carries the induced-width core",
+    "H3": "conditioning lowers the memory exponent but does not necessarily lower the coarse total-work exponent k plus residual cluster size",
+    "falsification": "any primitive conditioned evidence reconstruction differing from the independent 4096-mask evidence by more than 1e-10 rejects the implementation"
+  },
+  "matrix": {
+    "representations": ["r6d_unclustered", "r6f_bounded_superfactor"],
+    "geometries": ["primitive", "paper_L2"],
+    "cutset_policies": ["physical_only_core", "auxiliary_only_core", "unrestricted_core"],
+    "structural_k_grid": {"primitive": "0 through 8", "paper_L2": "0 through 24"},
+    "selection_rule": "prospective and deterministic: recompute global min-fill on the residual graph; choose an eligible variable from its peak cluster, preferring highest original residual degree, latest elimination rank, then lowest id; fall back to the latest eligible eliminated variable",
+    "metrics": ["conditioned variables k", "residual maximum cluster variables", "branch exponent k", "coarse work exponent k+cluster", "memory-cap crossing"],
+    "numeric_gate": "for primitive k in {0,2,4}, enumerate every binary cutset assignment, run exact residual bucket elimination with cap 20, sum branch evidence, and compare to the independent exact evidence",
+    "budget": "under ten CPU minutes and 2 GiB; zero correction, GBP, tensor, LER, threshold, or performance samples"
+  },
+  "analysis": {
+    "branch_logic": "run all reversible policies rather than ask a human to rank them; k=0 is a shared control",
+    "interpretation": "k+cluster is only a conservative binary-exponent proxy, not measured runtime; widths remain registered-order upper bounds, not optimal treewidth proofs",
+    "stop_rule": "report the full exact time-space frontier and route the next method from the observed cap crossing; do not silently broaden into an approximate decoder"
+  },
+  "acceptance_items": [
+    {"item": "prospective R6H contract and literature basis", "status": "registered", "evidence": "this manifest"},
+    {"item": "deterministic cutset frontier and analytic controls", "status": "verified", "evidence": "scripts/run_r6h_cutset_conditioning_gate.py, scripts/d4_elimination_width.py, and 3 focused tests"},
+    {"item": "primitive exact conditioned-evidence reconstruction", "status": "verified", "evidence": "18/18 rows recover independent evidence with maximum relative error 1.780e-15"},
+    {"item": "paper-L2 frontier, report, roadmap, and durable state", "status": "reported", "evidence": "results/r6h-cutset-conditioning-gate.json and .md; Lab and program artifacts updated"}
+  ],
+  "hypothesis_outcomes": {
+    "H1": "rejected for the registered heuristic: auxiliary-only reaches the cap at k=12 on unclustered versus unrestricted k=18, and ties unrestricted k=13 on the superfactor graph",
+    "H2": "supported as a structural diagnostic: auxiliary conditioning is consistently more efficient than physical-only conditioning at lowering the paper-L2 residual cluster",
+    "H3": "supported: the memory cap can be crossed, but the crossing k+cluster proxy remains 32 to 44 and the best registered proxy is 30 at k=4, cluster=26"
+  },
+  "claim_boundary": "R6H is an exact resource audit. It does not claim optimal cutsets, optimal treewidth, approximate-inference accuracy, correction quality, logical performance, thresholds, or fault tolerance."
+}

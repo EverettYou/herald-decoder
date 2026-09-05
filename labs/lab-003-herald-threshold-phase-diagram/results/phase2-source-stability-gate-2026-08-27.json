@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-27T21:36:10Z",
+  "gate": "phase2_start_end_source_hash_equality",
+  "status": "implemented_and_tested",
+  "semantics": {
+    "start": "Capture all five source hashes before the first decode.",
+    "end": "Recompute the same hashes after the temporary gzip stream closes and before atomic raw-file publication.",
+    "mismatch": "Delete the temporary raw shard and raise RuntimeError; do not publish raw or summary artifacts.",
+    "published_provenance": "Use the captured start hashes in the summary artifact."
+  },
+  "checked_source_keys": [
+    "damping_decoder",
+    "decoder",
+    "lattice_model",
+    "numba_kernels",
+    "runner"
+  ],
+  "source_sha256": {
+    "runner": "14adf7579825e64fa4dd74a6ff374207c3f7b55349b5b533c1ff054bf6d66474",
+    "runner_test": "bb715c686311ffd0cb50c3b6d57a18353307d858dde3760c7af117a5b21cf4ca",
+    "lattice_model": "b87a5feba27675e26970360d730324b7d3740e4dc0492b4dc478e510f140c9e7",
+    "decoder": "990af03ac4c99684e9e9dac6e5a8bb64d773015879c1638906f5fb592cdc6a43",
+    "damping_decoder": "a08ddf0b58e63bb2627c35cafbe570fe6a0ee8dc21bd4eaca720d6dbcbc5e182",
+    "numba_kernels": "c2254c95600c4f5e3a8c2279d5686a99c8d3810a4bb0c814a4fd0cbf16c184cc"
+  },
+  "verification": {
+    "command": "./run_research_python.sh -m unittest labs/lab-003-herald-threshold-phase-diagram/scripts/test_run_phase2_scout.py labs/lab-003-herald-threshold-phase-diagram/scripts/test_analyze_single_phase2_shard.py labs/lab-003-herald-threshold-phase-diagram/scripts/test_analyze_phase2_scout.py",
+    "tests_run": 14,
+    "tests_passed": 14,
+    "simulated_drift": {
+      "raised_before_publish": true,
+      "final_raw_absent": true,
+      "temporary_raw_removed": true
+    },
+    "stable_smoke_shard": {
+      "published": true,
+      "start_equals_end_recorded": true
+    }
+  },
+  "evidence_boundary": "This is a prospective provenance-integrity gate. It does not rehabilitate the quarantined N3 artifact, alter prior scientific estimates, or itself justify additional sampling."
+}

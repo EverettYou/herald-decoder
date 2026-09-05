@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "status": "registered_preflight_required",
+  "campaign": "phase-b14-honeycomb-two-branch-acquisition-2026-08-28",
+  "purpose": "Empirically discriminate distance leverage from same-window precision without imposing a cross-size predictive model.",
+  "sources": [
+    {
+      "path": "results/phase-b9-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28.json",
+      "sha256": "8692b610ee6e19bb45452494b04c8c45b4d1fb31f240a8c10dd2f81c24c254bf",
+      "hash_kind": "full_file_sha256"
+    },
+    {
+      "path": "results/phase-b13-honeycomb-continuous-log-odds-map-2026-08-28.json",
+      "sha256": "51084739a016db8ff8f2eb2c27c68119491ad0edd30b183264a4058561583d7c",
+      "hash_kind": "canonical_json_excluding_generated_at"
+    }
+  ],
+  "selection_evidence": {
+    "path": "results/phase-b14-honeycomb-two-branch-selection-2026-08-28.json",
+    "sha256": "3b0a576820a39a5bfd46d9d15e19fae1f018058b8a3ef226d7c65a900b7b51d3"
+  },
+  "designer": {
+    "path": "scripts/design_phase_b14_branch_matrix.py",
+    "sha256": "3c407326fab291bc49fc4484aad4368e6c110075f80588566daed690ef058ed1"
+  },
+  "lattice": "honeycomb",
+  "jobs": [
+    {
+      "branch": "distance_leverage_L5_L13",
+      "q": 0.2,
+      "p": 0.16,
+      "sizes": [
+        5,
+        13
+      ],
+      "seeds": [
+        891001,
+        891002,
+        891003,
+        891004,
+        891005
+      ],
+      "shots_per_seed": 100,
+      "expected_decodes": 1000
+    },
+    {
+      "branch": "same_window_precision_L7_L9_L11",
+      "q": 0.2,
+      "p": 0.16,
+      "sizes": [
+        7,
+        9,
+        11
+      ],
+      "seeds": [
+        892001,
+        892002,
+        892003,
+        892004,
+        892005
+      ],
+      "shots_per_seed": 100,
+      "expected_decodes": 1500
+    },
+    {
+      "branch": "distance_leverage_L5_L13",
+      "q": 0.2,
+      "p": 0.2,
+      "sizes": [
+        5,
+        13
+      ],
+      "seeds": [
+        891001,
+        891002,
+        891003,
+        891004,
+        891005
+      ],
+      "shots_per_seed": 100,
+      "expected_decodes": 1000
+    },
+    {
+      "branch": "same_window_precision_L7_L9_L11",
+      "q": 0.2,
+      "p": 0.2,
+      "sizes": [
+        7,
+        9,
+        11
+      ],
+      "seeds": [
+        892001,
+        892002,
+        892003,
+        892004,
+        892005
+      ],
+      "shots_per_seed": 100,
+      "expected_decodes": 1500
+    },
+    {
+      "branch": "distance_leverage_L5_L13",
+      "q": 0.7,
+      "p": 0.28,
+      "sizes": [
+        5,
+        13
+      ],
+      "seeds": [
+        891001,
+        891002,
+        891003,
+        891004,
+        891005
+      ],
+      "shots_per_seed": 100,
+      "expected_decodes": 1000
+    },
+    {
+      "branch": "same_window_precision_L7_L9_L11",
+      "q": 0.7,
+      "p": 0.28,
+      "sizes": [
+        7,
+        9,
+        11
+      ],
+      "seeds": [
+        892001,
+        892002,
+        892003,
+        892004,
+        892005
+      ],
+      "shots_per_seed": 100,
+      "expected_decodes": 1500
+    },
+    {
+      "branch": "distance_leverage_L5_L13",
+      "q": 0.7,
+      "p": 0.32,
+      "sizes": [
+        5,
+        13
+      ],
+      "seeds": [
+        891001,
+        891002,
+        891003,
+        891004,
+        891005
+      ],
+      "shots_per_seed": 100,
+      "expected_decodes": 1000
+    },
+    {
+      "branch": "same_window_precision_L7_L9_L11",
+      "q": 0.7,
+      "p": 0.32,
+      "sizes": [
+        7,
+        9,
+        11
+      ],
+      "seeds": [
+        892001,
+        892002,
+        892003,
+        892004,
+        892005
+      ],
+      "shots_per_seed": 100,
+      "expected_decodes": 1500
+    }
+  ],
+  "job_count": 8,
+  "workers_cap": 4,
+  "expected_new_decodes": 10000,
+  "decoder": {
+    "name": "HeraldAwareBpMatchingDecoder",
+    "recurrence_mode": "damping",
+    "damping": 0.25,
+    "max_iterations": 80,
+    "update_schedule": "residual_priority",
+    "residual_priority_order": "stable_sort",
+    "residual_priority_buffer_reuse": false,
+    "residual_priority_cached_products": false,
+    "matching_projection": "posterior_llr",
+    "p_m": 0.0,
+    "p_h": 0.0,
+    "use_numba": true
+  },
+  "required_source_hashes": {
+    "runner": "14adf7579825e64fa4dd74a6ff374207c3f7b55349b5b533c1ff054bf6d66474",
+    "lattice_model": "b87a5feba27675e26970360d730324b7d3740e4dc0492b4dc478e510f140c9e7",
+    "decoder": "990af03ac4c99684e9e9dac6e5a8bb64d773015879c1638906f5fb592cdc6a43",
+    "damping_decoder": "a08ddf0b58e63bb2627c35cafbe570fe6a0ee8dc21bd4eaca720d6dbcbc5e182",
+    "numba_kernels": "c2254c95600c4f5e3a8c2279d5686a99c8d3810a4bb0c814a4fd0cbf16c184cc"
+  },
+  "analysis_contract": {
+    "primary": "posterior trend-sign entropy reduction in nats per 1000 new decodes",
+    "secondary": "change in continuous log posterior odds and 90% slope interval",
+    "branch_comparisons": [
+      "distance_leverage_vs_base",
+      "same_window_precision_vs_base",
+      "combined_vs_base"
+    ],
+    "cell_or_phase_classification": false,
+    "boundary_inference": false
+  },
+  "presentation_contract": {
+    "when_to_render": "Only after a valid completion audit and branch-separated analysis produce source-compatible updated evidence.",
+    "required_action": "Regenerate the active continuous evidence map and companion JSON from the latest compatible B12-B14 data; hash-freeze inputs and deep-compare unchanged cells.",
+    "retired_output_policy": "Superseded figures remain provenance downloads and must not remain active report or dashboard images.",
+    "forbidden": [
+      "silent pooling of incompatible decoder, lattice, or sampling cohorts",
+      "cell classification",
+      "boundary inference",
+      "crossing markers",
+      "continuous interpolation"
+    ]
+  },
+  "preflight_evidence_path": "results/phase-b14-honeycomb-two-branch-preflight-2026-08-28.json",
+  "completion_evidence_path": "results/phase-b14-honeycomb-two-branch-completion-audit-2026-08-28.json",
+  "analysis_evidence_path": "results/phase-b14-honeycomb-two-branch-analysis-2026-08-28.json",
+  "stop_rule": "Stop after exactly eight jobs and 10000 decodes; no adaptive cell, p, q, size, branch, seed, or shot change.",
+  "launch_gate": "requires_valid_preflight_artifact"
+}

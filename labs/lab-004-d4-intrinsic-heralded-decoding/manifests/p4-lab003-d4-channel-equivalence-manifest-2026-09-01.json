@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "status": "complete_non_equivalence_audit",
+  "phase": "P4",
+  "title": "Lab 003 q=3/4 versus corrected signal-only D4 channel-equivalence audit",
+  "question": "Do the two studies share a physical channel, decoder-visible record, decoder, and logical-loss convention sufficient for direct numerical comparison?",
+  "acceptance_items": [
+    "Compare latent physical events and the meaning of p versus p_X.",
+    "Compare local herald conditioning and joint correlation structure.",
+    "Compare geometry, boundary conditions, and size labels.",
+    "Compare decoder-visible records and decoder configurations.",
+    "Compare logical-loss observables and denominators.",
+    "Classify the relation as exact equivalence, controlled reduction, or non-equivalence and enforce the resulting comparison boundary."
+  ],
+  "required_evidence": [
+    "labs/lab-003-herald-threshold-phase-diagram/manifests/phase-b14-honeycomb-two-branch-acquisition-manifest-2026-08-28.json",
+    "labs/lab-004-d4-intrinsic-heralded-decoding/manifests/r6ac-d4-sublattice-herald-model-audit-2026-08-31.json",
+    "labs/lab-004-d4-intrinsic-heralded-decoding/manifests/r6ae-signal-only-bp-threshold-manifest-2026-09-01.json"
+  ],
+  "forbidden_inputs": [
+    "withdrawn support-revealing BP performance evidence",
+    "unstable finite-size crossings treated as threshold estimates"
+  ],
+  "output": "results/p4-lab003-d4-channel-equivalence-audit-2026-09-01.json",
+  "report": "results/p4-lab003-d4-channel-equivalence-audit-2026-09-01.md",
+  "execution_evidence": {
+    "matrix": "results/p4-lab003-d4-channel-equivalence-audit-2026-09-01.json",
+    "focused_tests": "2 passed",
+    "verdict": "non_equivalent_cross_lab_numerical_comparison_prohibited",
+    "comparison_allowed": false
+  },
+  "claim_boundary": "No direct LER or threshold comparison is permitted unless every channel, record, decoder, and loss gate is exact or a fully specified controlled reduction is derived."
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "status": "registered_ready",
+  "purpose": "Correct the active B17 presentation so the finite-window boundary guide obeys the researcher-supplied p<->1-p symmetry at p=0.5 and the plot shows the full fundamental p domain without inventing unsampled cells.",
+  "epistemic_role": "Existing-data presentation correction; the dashed line remains a visual guide and the finite-grid region remains non-joint directional evidence.",
+  "sources": {
+    "current_evidence": {
+      "path": "results/phase-b14-honeycomb-continuous-log-odds-map-2026-08-28.json",
+      "sha256": "e41be160b471cc5820a8a19b90cd3fad6ed8ed581c2c4c0587652f5e7e918fdf"
+    },
+    "b17_analysis": {
+      "path": "manifests/phase-b17-resolution-aware-guide-2026-08-28.json",
+      "sha256": "32b754b5b3c77bda64b198915f4a62b423675fe711d59950d7b5f67b40338a02"
+    }
+  },
+  "symmetry_contract": {
+    "statement": "q_c(p)=q_c(1-p) after the deterministic syndrome/logical relabeling associated with complementing the physical-error configuration.",
+    "endpoint_obligation": "On the plotted fundamental domain 0<=p<=0.5, the guide must satisfy dq_c/dp=0 at p=0.5.",
+    "implementation": "Use a single parametric cubic Bezier with q_2=q_3=q_c and p_2<p_3=0.5, making the endpoint derivative exactly zero rather than numerically penalized.",
+    "claim_boundary": "This is a project physical-model constraint supplied by the researcher; B18 does not use it to fabricate new cellwise evidence or a confidence interval."
+  },
+  "guide": {
+    "model": "single parametric cubic Bezier (p(u),q(u))",
+    "endpoints": "Retain the B17 data-derived q=0 intercept and p=0.49-derived high-q intercept rendered at p=0.5.",
+    "q_controls": "[0, q_c/3, q_c, q_c]",
+    "p_control_constraint": "p_start<=p_1<=p_2<0.5=p_3",
+    "objective": "Least-squares p displacement from the same B17 finite-grid bracket midpoints, evaluated by monotone inversion of q(u).",
+    "inferential_interval": false
+  },
+  "display": {
+    "x_domain": [0.0, 0.5],
+    "y_domain": [0.0, 1.0],
+    "measured_p_centers": [0.08, 0.12, 0.16, 0.2, 0.24, 0.28, 0.32, 0.36, 0.4, 0.45, 0.49],
+    "unsampled_display_rule": "Leave the portion outside the measured p-cell edges blank; do not extrapolate the p=0.08 evidence to p=0 or claim a p=0.5 measurement.",
+    "curve_legend": false,
+    "method_footer": false
+  },
+  "validation": {
+    "required": [
+      "analytic and sampled endpoint dq/dp equal zero at p=0.5",
+      "guide remains nondecreasing in both p and q and has no low-q reversal",
+      "B17 transition region and its nineteen brackets are unchanged",
+      "axis limits are exactly p in [0,0.5] and q in [0,1]",
+      "no unmeasured evidence cell is added",
+      "figure contains no curve legend or fitting-method footer",
+      "zero new decoder runs and zero new decodes"
+    ]
+  },
+  "analysis_output": "manifests/phase-b18-symmetry-constrained-guide-2026-08-28.json",
+  "figure_output": "results/phase-b18-symmetry-constrained-guide-2026-08-28.png",
+  "render_audit_output": "results/phase-b18-symmetry-constrained-guide-render-audit-2026-08-28.json",
+  "new_decoder_runs": 0,
+  "new_decodes": 0,
+  "stop_rule": "Stop after one existing-data symmetry correction, report promotion, regression run, and visual audit."
+}

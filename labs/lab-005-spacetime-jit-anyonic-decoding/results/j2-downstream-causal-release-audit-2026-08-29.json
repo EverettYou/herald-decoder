@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "status": "passed; corrected artifacts released",
+  "recorded_at": "2026-08-29T13:51:01Z",
+  "acceptance_item": "downstream causal integration release",
+  "audit_scope": ["labs", "src", "wiki", "dashboard"],
+  "findings": {
+    "executable_consumers_outside_lab005": 0,
+    "stale_machine_readable_next_gates": 4,
+    "stale_next_gates_corrected": 4,
+    "historical_provenance_references_retained": true,
+    "old_preflight_promoted_as_current_evidence": false,
+    "active_lab_and_wiki_surfaces_point_to_corrected_evidence": true
+  },
+  "corrected_pointers": [
+    "j1-e1-typed-policy-translation-manifest-2026-08-29.json",
+    "j1-e1-projector-instrument-matrix-manifest-2026-08-29.json",
+    "results/j1-e1-typed-policy-translation-2026-08-29.json",
+    "results/j1-e1-projector-instrument-matrix-2026-08-29.json"
+  ],
+  "release_set": [
+    "results/j2-e1-causal-integration-remediation-2026-08-29.json",
+    "results/j2-e1-causal-integration-remediation-2026-08-29.md",
+    "scripts/baseline_harness.py",
+    "scripts/e1_schedule_integration.py"
+  ],
+  "historical_only": [
+    "j2-shared-history-baseline-manifest-2026-08-29.json",
+    "results/j2-shared-history-baseline-preflight-2026-08-29.md",
+    "results/j2-causal-request-future-digest-audit-2026-08-29.json"
+  ],
+  "release_claim": "Corrected deterministic causal information flow and stage-1 flux-syndrome fidelity are safe for downstream interface work at paper L=2.",
+  "still_blocked": ["performance sampling", "schedule advantage", "logical-error rate", "threshold", "post-action recovery", "fault tolerance"],
+  "released_hashes": {
+    "final_analysis_json": "5887cc00e66f793acad4715dff6b31e5a5f4324d46e4e487e9c25ec1e66a07ab",
+    "final_report_md": "cbd986dc11323d2a9859c06ad1a58eaf84c113d47a76b3c81e58c6581c56cbd8",
+    "baseline_harness.py": "ee94606fa604d87694c9ca4408e291fe50c6e49b15e61382ee6c90983b2ec836",
+    "e1_schedule_integration.py": "9d9dda06d514263ab83631c1d1030ac67b1f0e8a0862815660dddfecd72145db"
+  },
+  "next_gate": "Invoke the research workflow to reassess Lab 005 from its earliest unsupported post-stage-1 dependency before registering any new experiment."
+}

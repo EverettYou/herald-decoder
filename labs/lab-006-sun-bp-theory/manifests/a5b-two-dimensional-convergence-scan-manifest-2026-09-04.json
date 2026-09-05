@@ -1,0 +1,52 @@
+{
+  "id": "lab006-a5b-two-dimensional-convergence-scan-2026-09-04",
+  "status": "complete",
+  "registered_before_sampling": true,
+  "supersedes": "A5, which aborted before result creation because its grid product did not equal its registered total",
+  "question": "Where does synchronous damped full-irrep BP fail to converge, or converge slowly, on the canonical two-dimensional Lab 002 geometries?",
+  "geometries": ["square", "honeycomb"],
+  "sizes": [5, 7],
+  "groups": ["SU2", "SU3"],
+  "physical_error_rates": [0.1, 0.2, 0.3, 0.4],
+  "observations_per_cell": 4,
+  "cell_count": 32,
+  "total_observations": 128,
+  "paired_arms": ["m-only", "full-(m,R)"],
+  "matched_inputs": "Each paired arm receives the same canonical graph, physical edge error, m record, prior, schedule, and sampled full irrep R; the m-only arm ignores only R.",
+  "bp_schedule": {
+    "kind": "synchronous",
+    "damping": 0.25,
+    "max_iterations": 80,
+    "tolerance": 1e-10
+  },
+  "outcomes": [
+    "convergence fraction",
+    "iteration distribution",
+    "final maximum message delta",
+    "mean absolute posterior shift from R"
+  ],
+  "claims_excluded": [
+    "threshold or finite-size scaling",
+    "logical-error performance",
+    "exactness of loopy BP",
+    "adaptive schedule or damping optimization"
+  ],
+  "acceptance_gates": [
+    "The scan uses the canonical Lab 002 square and honeycomb constructors with rough left/right and smooth transverse boundaries.",
+    "Exactly 32 cells times 4 independently seeded observations equals 128 observations, with no adaptive extension.",
+    "The two arms are matched except for whether R enters the local likelihood.",
+    "Every cell reports convergence counts, iterations, residuals, and the R-induced posterior shift.",
+    "Any nonconvergence is reported as a diagnostic boundary rather than silently discarded or retuned."
+  ],
+  "stop_rule": "Stop after the frozen 128 observations. Do not tune damping, extend a difficult cell, or make a threshold/logical-performance claim in this transition.",
+  "result": "results/a5b-two-dimensional-convergence-scan.json",
+  "verification": {
+    "executed_observations": 128,
+    "full_converged": 106,
+    "m_only_converged": 102,
+    "full_nonconverged": 22,
+    "m_only_nonconverged": 26,
+    "strongest_registered_failure_cell": "honeycomb, L=7, SU2, p=0.2: both arms 0/4; full-(m,R) maximum residual 8.431109248943081e-4",
+    "interpretation": "The frozen synchronous damped schedule has geometry-, size-, and group-dependent convergence failures. No threshold, exactness, logical-error, or optimized-schedule claim is made."
+  }
+}

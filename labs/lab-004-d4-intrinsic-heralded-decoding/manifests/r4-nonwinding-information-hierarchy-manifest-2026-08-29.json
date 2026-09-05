@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "status": "registered_ready",
+  "phase": "R4.3",
+  "purpose": "Compare exact logical-sector information in flux-only O0 and full fusion-record O2 observations on one matched primitive nonwinding D4 channel.",
+  "epistemic_role": "Bounded exact data-processing audit; not a full physical-channel comparison, finite-size LER estimate, threshold, or scalable-decoder result.",
+  "source_freeze": {
+    "results/r4-distinct-observation-matrix-audit.json": "f8087db5044474ea6d7768c4a059a065508752c31a0d7e1b2ec49b51c42a9824",
+    "scripts/run_r4_distinct_observation_matrix.py": "bd99d351f6148a3c4fd02d7f02bf6c817ccd13fefa1565529aa2b3dcb95ba6f3",
+    "scripts/d4_r4.py": "18b2bc62477b0e0d66391af3d52b77051f9456d7cdc24fdc483061b46872a94e",
+    "scripts/d4_honeycomb.py": "0895892c00f1f629ec469d4f7b4e42fb8e83bc07666edbc3b8fc26a1f30eb869"
+  },
+  "matched_channel": {
+    "lattice": "periodic_honeycomb(2), 12 edges",
+    "physical_ensemble": "The same Bernoulli edge-error prior and the same nonwinding-conditioned mask ensemble used by R4.2.",
+    "o2_observation": "The complete R4.2 (flux vector, allowed charge record) observation.",
+    "o0_observation": "The flux vector alone, obtained by deterministic deletion of the O2 charge record.",
+    "coarse_graining": "Group every supported O2 observation by identical flux vector and sum its sector evidence over all charge refinements.",
+    "terminal_winding_rule": "Keep the R4.2 terminal winding prior mass outside both conditioned posteriors and report it separately. Do not expose terminal truth as an observation and do not invent an O2 winding-charge likelihood."
+  },
+  "prior_matrix": [0.1, 0.3, 0.5, 0.6],
+  "analysis": {
+    "primary_estimands": [
+      "Bayes logical failure probability conditioned on the nonwinding channel",
+      "conditional logical-sector entropy H(L|O, nonwinding)",
+      "Bayes-risk reduction R_Bayes(O0)-R_Bayes(O2)",
+      "fusion-information gain H(L|O0, nonwinding)-H(L|O2, nonwinding)",
+      "terminal winding prior mass reported outside the matched comparison"
+    ],
+    "registered_inequalities": [
+      "R_Bayes(O2) <= R_Bayes(O0) at every registered prior",
+      "H(L|O2, nonwinding) <= H(L|O0, nonwinding) at every registered prior"
+    ],
+    "interpretation": "The entropy difference is the conditional mutual information supplied by the charge record given flux on this bounded nonwinding channel. The result does not compare complete physical O0 and O2 channels until a winding-sector O2 likelihood is derived."
+  },
+  "validation": {
+    "required": [
+      "every supported O2 observation maps to exactly one O0 flux observation",
+      "O0 evidence for each flux equals the sum of all mapped O2 evidence sector by sector",
+      "total nonwinding evidence is preserved at every registered prior",
+      "all O0 and O2 logical-sector posteriors normalize",
+      "Bayes-risk and conditional-entropy data-processing inequalities hold at every registered prior within numerical tolerance",
+      "the O2 aggregate reproduces the R4.2 nonterminal Bayes-risk and entropy summaries",
+      "the R4.2 source hashes match the registered freeze",
+      "no terminal-truth symbol, winding charge likelihood, stochastic sample, or larger lattice is introduced"
+    ],
+    "absolute_tolerance": 1e-12
+  },
+  "outputs": {
+    "machine_result": "results/r4-nonwinding-information-hierarchy-audit.json",
+    "report": "results/r4-nonwinding-information-hierarchy-audit.md"
+  },
+  "compute_budget": {
+    "new_stochastic_samples": 0,
+    "new_lattice_sizes": 0,
+    "input_observations": 16230,
+    "stop_rule": "Stop after one deterministic O2-to-O0 aggregation, exact validation, machine-readable audit, and report update; do not launch R5 sampling."
+  }
+}

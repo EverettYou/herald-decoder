@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "status": "verified, replayed, analyzed, and reported",
+  "registered_at": "2026-08-29T18:20:00Z",
+  "title": "R6L factor-content-aware mini-bucket partition gate",
+  "rigor_tier": "bounded deterministic method falsification",
+  "program_alignment": {
+    "central_question": "Can factor-content-aware bounded coupling reduce the D4 scalable-decoder gap that survives scope-only packing and monotone bound selection?",
+    "scientific_layer": "WP3 scalable decoding",
+    "epistemic_role": "matched falsification of the smallest richer partition construction",
+    "upstream_dependencies": ["R6J exact-reference cohort", "R6K monotone-envelope negative result"],
+    "downstream_gate": "choose whether richer region/GBP or tensor methods earn implementation cost"
+  },
+  "research_basis": {
+    "local_search": "Wiki roadmap, Lab 004 R6I-R6K, and current scope-first-fit implementation inspected on 2026-08-29",
+    "primary_source": "Rollon and Dechter, New Mini-Bucket Partitioning Heuristics for Bounding the Probability of Evidence, AAAI 2010, doi:10.1609/aaai.v24i1.7761",
+    "source_change": "Compare factor-content-aware greedy partition traversal with the scope-only baseline at fixed i; do not infer marginal quality from evidence-bound quality.",
+    "project_adaptation": "Because D4 factors contain exact zeros, use normalized local absolute sum-product tightening rather than logarithmic relative error; label this a zero-safe project adaptation."
+  },
+  "model": {
+    "baseline": "R6J scope-first-fit mini-bucket rows",
+    "candidate": "start each bucket with singleton factors and greedily merge the legal pair maximizing the normalized decrease between separately eliminated and jointly eliminated nonnegative factor products",
+    "fixed_controls": "same observations, priors, exact factorizations, elimination orders, i bounds, exact posterior targets, and 0.01 useful-accuracy gate",
+    "invariant": "every total and clamped result remains a valid mini-bucket evidence upper bound; i at or above exact cluster reproduces exact evidence and marginals"
+  },
+  "matrix": {
+    "conditions": "4 observations x 2 p x 2 representations x 2 orders x i={10,14,18,20}",
+    "candidate_row_count": 128,
+    "matched_baseline_row_count": 128,
+    "primary_metrics": ["paired maximum-marginal-error change", "useful low-i coverage", "uniform useful low-i branch count", "evidence-bound tightening", "runtime"],
+    "budget": "under ten CPU minutes and 2 GiB; no correction, LER, threshold, scaling, or fault-tolerance samples"
+  },
+  "question": {
+    "H1": "content-aware traversal selects consequentially different partitions or bounds on the exact cohort",
+    "H2": "at i<=14 it improves more matched marginal rows than it worsens and increases useful-accuracy coverage",
+    "H3": "at least one representation/order branch becomes uniformly useful over all eight conditions at i<=14",
+    "falsification": "any invalid upper bound, exact-ceiling mismatch, nondeterministic rerun, or scope-cap violation rejects the implementation"
+  },
+  "analysis": {
+    "comparison": "all prospective matched rows retained; report improvements, ties, regressions, aggregate useful coverage, and exact controls",
+    "stop_rule": "if H1 holds but H2/H3 fail, stop optimizing mini-bucket packing and register a region/join-graph versus tensor prerequisite; if H3 passes, validate the selected branch on paper-L2 before decoder sampling",
+    "claim_boundary": "Primitive exact-reference method comparison only; no paper-L2 accuracy, scalable decoder, correction, LER, threshold, runtime scaling, or fault-tolerance claim."
+  },
+  "acceptance_items": [
+    {"item": "prospective question, literature basis, matrix, and stop rule", "status": "registered", "evidence": "this manifest"},
+    {"item": "zero-safe content partition implementation and exact controls", "status": "passed", "evidence": "56 exact-ceiling rows pass; maximum evidence-ratio error 1.998e-15 and marginal error 2.776e-16"},
+    {"item": "256-row matched analysis and report", "status": "passed", "evidence": "results/r6l-content-aware-mini-bucket-gate.json and .md; independent numerical replay passes"},
+    {"item": "Lab, Wiki, metadata, and durable-state synthesis", "status": "passed", "evidence": "PLAN.md, REPORT.md, lab.json, labs/labs.json, Wiki roadmap/log, and .auto-research/state.json"}
+  ],
+  "outcome": {
+    "H1": "supported",
+    "H2": "rejected or mixed",
+    "H3": "rejected",
+    "decision": "Stop optimizing mini-bucket packing. Next compare an explicit bounded region/join-graph family and a bounded tensor contraction as approximation-family alternatives on the same exact cohort."
+  }
+}

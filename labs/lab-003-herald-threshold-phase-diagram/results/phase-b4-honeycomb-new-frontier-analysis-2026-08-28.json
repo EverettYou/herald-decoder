@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-28T11:28:44.938277+00:00",
+  "status": "complete",
+  "manifest": {
+    "path": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-b4-honeycomb-new-frontier-manifest-2026-08-28.json",
+    "sha256": "afae747a1f4c38eda84b6c46760c7b388d7956544033d326775913a929fa5c3a"
+  },
+  "new_output_audit": {
+    "path": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase-b4-honeycomb-new-frontier-completion-audit-2026-08-28.json",
+    "sha256": "b3c8c4135707de87b193215c51a5783173aa59d1d87819be995bc98c5eb2fe64"
+  },
+  "analyses": [
+    {
+      "q": 0.05,
+      "p": 0.2,
+      "pooling_kind": "new_independent_shots",
+      "sizes": [
+        7,
+        9,
+        11
+      ],
+      "logical_errors": [
+        698,
+        720,
+        738
+      ],
+      "shots": [
+        2000,
+        2000,
+        2000
+      ],
+      "posterior_probability_upward_trend": 0.9063873291015625,
+      "posterior_probability_downward_trend": 0.0936126708984375,
+      "posterior_mean_slope_ler_per_distance": 0.0049975172798583725,
+      "posterior_slope_interval90": [
+        -0.0012432607738944688,
+        0.011226745193354048
+      ],
+      "posterior_log_odds_upward_vs_downward": 2.270300983080852,
+      "posterior_log_odds_censoring": {
+        "relation": "equal",
+        "bound": 2.270300983080852
+      },
+      "qmc_standard_error_upward_probability": 0.00012302029034879378,
+      "qmc_standard_error_downward_probability": 0.00012302029034879378,
+      "qmc_probability_resolution": 1.52587890625e-05,
+      "classification": "undecodable",
+      "classification_threshold": 0.9,
+      "sensitivity": {
+        "posterior_probability_endpoint_upward": 0.9063873291015625,
+        "posterior_probability_endpoint_downward": 0.0936126708984375,
+        "posterior_probability_positive_kendall_tau": 0.9063873291015625,
+        "posterior_probability_negative_kendall_tau": 0.0936126708984375,
+        "posterior_probability_zero_kendall_tau": 0.0,
+        "posterior_mean_kendall_tau": 0.597076416015625,
+        "posterior_probability_midpoint_above_endpoint_chord": 0.529541015625,
+        "posterior_probability_midpoint_below_endpoint_chord": 0.470458984375,
+        "posterior_mean_midpoint_chord_residual": 0.0009994690843076394,
+        "posterior_midpoint_chord_residual_interval90": [
+          -0.020571783326923637,
+          0.022634009704985303
+        ]
+      },
+      "qmc_scramble_replicates": 8,
+      "qmc_draws_per_replicate": 8192,
+      "jeffreys_classification": "undecodable",
+      "uniform_prior_sensitivity": {
+        "posterior_probability_upward_trend": 0.906158447265625,
+        "posterior_probability_downward_trend": 0.093841552734375,
+        "posterior_mean_slope_ler_per_distance": 0.004995052080217045,
+        "posterior_slope_interval90": [
+          -0.0012350466521225886,
+          0.01123350811787235
+        ],
+        "posterior_log_odds_upward_vs_downward": 2.267606426535174,
+        "posterior_log_odds_censoring": {
+          "relation": "equal",
+          "bound": 2.267606426535174
+        },
+        "qmc_standard_error_upward_probability": 6.823937919616058e-05,
+        "qmc_standard_error_downward_probability": 6.823937919616058e-05,
+        "qmc_probability_resolution": 1.52587890625e-05,
+        "classification": "undecodable",
+        "classification_threshold": 0.9,
+        "sensitivity": {
+          "posterior_probability_endpoint_upward": 0.906158447265625,
+          "posterior_probability_endpoint_downward": 0.093841552734375,
+          "posterior_probability_positive_kendall_tau": 0.906158447265625,
+          "posterior_probability_negative_kendall_tau": 0.093841552734375,
+          "posterior_probability_zero_kendall_tau": 0.0,
+          "posterior_mean_kendall_tau": 0.596710205078125,
+          "posterior_probability_midpoint_above_endpoint_chord": 0.5291290283203125,
+          "posterior_probability_midpoint_below_endpoint_chord": 0.4708709716796875,
+          "posterior_mean_midpoint_chord_residual": 0.0009989131437391785,
+          "posterior_midpoint_chord_residual_interval90": [
+            -0.02057926000117219,
+            0.02263503228452564
+          ]
+        },
+        "qmc_scramble_replicates": 8,
+        "qmc_draws_per_replicate": 8192
+      },
+      "prior_sensitivity_status": "stable"
+    }
+  ],
+  "cells_updated": 1,
+  "new_decodes": 3000,
+  "crossing_statistic_used": false,
+  "grid_expanded": false,
+  "evidence_boundary": "Exactly the newly exposed q=0.05,p=0.20 cell; no interpolation or asymptotic boundary claim."
+}

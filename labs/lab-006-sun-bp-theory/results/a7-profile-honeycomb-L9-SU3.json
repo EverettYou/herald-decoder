@@ -1,0 +1,44 @@
+{
+  "protocol": "lab006-a7-end-to-end-profile",
+  "status": "complete",
+  "scope": {
+    "lattice": "honeycomb",
+    "L": 9,
+    "group": "SU3",
+    "p": 0.18,
+    "arm": "representation_herald",
+    "batch_size": 32,
+    "repetitions": 3
+  },
+  "topology": {
+    "vertices": 180,
+    "edges": 242,
+    "detectors": 160
+  },
+  "one_time_setup_ms": {
+    "context": 7.121208,
+    "cached_decoder_lookup_or_create": 4780.071333
+  },
+  "per_shot_ms_median": {
+    "random_arrays": 0.00504034375,
+    "record_generation": 26.5632265625,
+    "bp_batch": 7.1801354375,
+    "posterior_weights": 0.00775259375,
+    "matching_construction": 1.70399878125,
+    "matching_decode": 3.26426428125,
+    "residual_and_logical": 0.1171731875
+  },
+  "per_shot_share_percent": {
+    "random_arrays": 0.01297666649563544,
+    "record_generation": 68.38861578628782,
+    "bp_batch": 18.485688196550278,
+    "posterior_weights": 0.019959516366298967,
+    "matching_construction": 4.387046794824361,
+    "matching_decode": 8.404043659005673,
+    "residual_and_logical": 0.301669380469945
+  },
+  "end_to_end_per_shot_ms_median": 38.8415911875,
+  "nonconverged_shots": 2,
+  "total_profiled_shots": 96,
+  "note": "BP time is amortized over the stated diagnostic batch size; matching construction and matching decode are measured separately for every shot because posterior weights differ by shot."
+}

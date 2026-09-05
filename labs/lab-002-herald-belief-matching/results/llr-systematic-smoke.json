@@ -1,0 +1,401 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-27T15:51:02.423274+00:00",
+  "mode": "final",
+  "L": 5,
+  "q": 0.75,
+  "p_m": 0.0,
+  "p_h": 0.0,
+  "seeds": [
+    490001
+  ],
+  "shots_per_seed": 1,
+  "workers": 1,
+  "parallel_wall_seconds": 4.179182625026442,
+  "matching_projection": "posterior_llr",
+  "observation_cache": "exact (syndrome bytes, herald bytes), per lattice-p cell",
+  "runtime": {
+    "python": "3.13.2",
+    "numpy": "1.26.4",
+    "pymatching": "2.4.0"
+  },
+  "cases": [
+    {
+      "lattice": "square",
+      "L": 5,
+      "edges": 32,
+      "detectors": 15,
+      "p": 0.08,
+      "q": 0.75,
+      "p_m": 0.0,
+      "p_h": 0.0,
+      "shots": 1,
+      "per_seed": [
+        {
+          "seed": 490001,
+          "arms": {
+            "legacy_damped": {
+              "shots": 1,
+              "logical_errors": 0,
+              "logical_error_rate": 0.0,
+              "logical_error_ci95": [
+                0.0,
+                0.7934506856227626
+              ],
+              "mean_edge_log_loss": 0.3393903758141267,
+              "mean_edge_brier": 0.12048615539682381,
+              "selected_candidate_convergence_rate": 0.0,
+              "mean_bp_iterations": 40.0,
+              "mean_max_message_delta": 1.1084278206396903e-07,
+              "cache_hit_rate": 0.0,
+              "unique_observations_decoded": 1,
+              "mean_uncached_decode_ms": 3886.3979580055457,
+              "amortized_decode_compute_ms": 3886.3979580055457,
+              "selected_candidate_counts_zero_based": null,
+              "mean_candidate_score": null
+            },
+            "memory_assisted": {
+              "shots": 1,
+              "logical_errors": 0,
+              "logical_error_rate": 0.0,
+              "logical_error_ci95": [
+                0.0,
+                0.7934506856227626
+              ],
+              "mean_edge_log_loss": 0.34724699835190653,
+              "mean_edge_brier": 0.12110667087726898,
+              "selected_candidate_convergence_rate": 0.0,
+              "mean_bp_iterations": 40.0,
+              "mean_max_message_delta": 3.574436599285136e-05,
+              "cache_hit_rate": 0.0,
+              "unique_observations_decoded": 1,
+              "mean_uncached_decode_ms": 120.84345798939466,
+              "amortized_decode_compute_ms": 120.84345798939466,
+              "selected_candidate_counts_zero_based": {
+                "0": 1
+              },
+              "mean_candidate_score": 11.022199128486884
+            }
+          },
+          "paired": {
+            "rescued_failures": 0,
+            "introduced_failures": 0,
+            "discordant_shots": 0,
+            "logical_error_rate_delta": 0.0,
+            "mcnemar_exact_p_value": 1.0,
+            "mean_edge_log_loss_delta": 0.007856622537779856,
+            "edge_log_loss_delta_bootstrap_ci95": [
+              0.007856622537779856,
+              0.007856622537779856
+            ],
+            "mean_edge_brier_delta": 0.0006205154804451718,
+            "edge_brier_delta_bootstrap_ci95": [
+              0.0006205154804451718,
+              0.0006205154804451718
+            ]
+          }
+        }
+      ],
+      "pooled": {
+        "arms": {
+          "legacy_damped": {
+            "shots": 1,
+            "logical_errors": 0,
+            "logical_error_rate": 0.0,
+            "logical_error_ci95": [
+              0.0,
+              0.7934506856227626
+            ],
+            "mean_edge_log_loss": 0.3393903758141267,
+            "mean_edge_brier": 0.12048615539682381,
+            "selected_candidate_convergence_rate": 0.0,
+            "mean_bp_iterations": 40.0,
+            "mean_max_message_delta": 1.1084278206396903e-07,
+            "cache_hit_rate": 0.0,
+            "unique_observations_decoded": 1,
+            "mean_uncached_decode_ms": 3886.3979580055457,
+            "amortized_decode_compute_ms": 3886.3979580055457,
+            "selected_candidate_counts_zero_based": null,
+            "mean_candidate_score": null
+          },
+          "memory_assisted": {
+            "shots": 1,
+            "logical_errors": 0,
+            "logical_error_rate": 0.0,
+            "logical_error_ci95": [
+              0.0,
+              0.7934506856227626
+            ],
+            "mean_edge_log_loss": 0.34724699835190653,
+            "mean_edge_brier": 0.12110667087726898,
+            "selected_candidate_convergence_rate": 0.0,
+            "mean_bp_iterations": 40.0,
+            "mean_max_message_delta": 3.574436599285136e-05,
+            "cache_hit_rate": 0.0,
+            "unique_observations_decoded": 1,
+            "mean_uncached_decode_ms": 120.84345798939466,
+            "amortized_decode_compute_ms": 120.84345798939466,
+            "selected_candidate_counts_zero_based": {
+              "0": 1
+            },
+            "mean_candidate_score": 11.022199128486884
+          }
+        },
+        "paired": {
+          "rescued_failures": 0,
+          "introduced_failures": 0,
+          "discordant_shots": 0,
+          "logical_error_rate_delta": 0.0,
+          "mcnemar_exact_p_value": 1.0,
+          "mean_edge_log_loss_delta": 0.007856622537779856,
+          "edge_log_loss_delta_bootstrap_ci95": [
+            0.007856622537779856,
+            0.007856622537779856
+          ],
+          "mean_edge_brier_delta": 0.0006205154804451718,
+          "edge_brier_delta_bootstrap_ci95": [
+            0.0006205154804451718,
+            0.0006205154804451718
+          ]
+        }
+      },
+      "cell_wall_seconds": 4.033403959008865
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 5,
+      "edges": 74,
+      "detectors": 48,
+      "p": 0.16,
+      "q": 0.75,
+      "p_m": 0.0,
+      "p_h": 0.0,
+      "shots": 1,
+      "per_seed": [
+        {
+          "seed": 490001,
+          "arms": {
+            "legacy_damped": {
+              "shots": 1,
+              "logical_errors": 0,
+              "logical_error_rate": 0.0,
+              "logical_error_ci95": [
+                0.0,
+                0.7934506856227626
+              ],
+              "mean_edge_log_loss": 0.27399715869991076,
+              "mean_edge_brier": 0.06621068164416168,
+              "selected_candidate_convergence_rate": 0.0,
+              "mean_bp_iterations": 40.0,
+              "mean_max_message_delta": 9.352191854272718e-08,
+              "cache_hit_rate": 0.0,
+              "unique_observations_decoded": 1,
+              "mean_uncached_decode_ms": 18.515000003390014,
+              "amortized_decode_compute_ms": 18.515000003390014,
+              "selected_candidate_counts_zero_based": null,
+              "mean_candidate_score": null
+            },
+            "memory_assisted": {
+              "shots": 1,
+              "logical_errors": 0,
+              "logical_error_rate": 0.0,
+              "logical_error_ci95": [
+                0.0,
+                0.7934506856227626
+              ],
+              "mean_edge_log_loss": 0.5902358755454178,
+              "mean_edge_brier": 0.06756450437513901,
+              "selected_candidate_convergence_rate": 0.0,
+              "mean_bp_iterations": 40.0,
+              "mean_max_message_delta": 1.660028568952615e-05,
+              "cache_hit_rate": 0.0,
+              "unique_observations_decoded": 1,
+              "mean_uncached_decode_ms": 84.48558300733566,
+              "amortized_decode_compute_ms": 84.48558300733566,
+              "selected_candidate_counts_zero_based": {
+                "0": 1
+              },
+              "mean_candidate_score": 19.779096396365738
+            }
+          },
+          "paired": {
+            "rescued_failures": 0,
+            "introduced_failures": 0,
+            "discordant_shots": 0,
+            "logical_error_rate_delta": 0.0,
+            "mcnemar_exact_p_value": 1.0,
+            "mean_edge_log_loss_delta": 0.31623871684550703,
+            "edge_log_loss_delta_bootstrap_ci95": [
+              0.31623871684550703,
+              0.31623871684550703
+            ],
+            "mean_edge_brier_delta": 0.0013538227309773387,
+            "edge_brier_delta_bootstrap_ci95": [
+              0.0013538227309773387,
+              0.0013538227309773387
+            ]
+          }
+        }
+      ],
+      "pooled": {
+        "arms": {
+          "legacy_damped": {
+            "shots": 1,
+            "logical_errors": 0,
+            "logical_error_rate": 0.0,
+            "logical_error_ci95": [
+              0.0,
+              0.7934506856227626
+            ],
+            "mean_edge_log_loss": 0.27399715869991076,
+            "mean_edge_brier": 0.06621068164416168,
+            "selected_candidate_convergence_rate": 0.0,
+            "mean_bp_iterations": 40.0,
+            "mean_max_message_delta": 9.352191854272718e-08,
+            "cache_hit_rate": 0.0,
+            "unique_observations_decoded": 1,
+            "mean_uncached_decode_ms": 18.515000003390014,
+            "amortized_decode_compute_ms": 18.515000003390014,
+            "selected_candidate_counts_zero_based": null,
+            "mean_candidate_score": null
+          },
+          "memory_assisted": {
+            "shots": 1,
+            "logical_errors": 0,
+            "logical_error_rate": 0.0,
+            "logical_error_ci95": [
+              0.0,
+              0.7934506856227626
+            ],
+            "mean_edge_log_loss": 0.5902358755454178,
+            "mean_edge_brier": 0.06756450437513901,
+            "selected_candidate_convergence_rate": 0.0,
+            "mean_bp_iterations": 40.0,
+            "mean_max_message_delta": 1.660028568952615e-05,
+            "cache_hit_rate": 0.0,
+            "unique_observations_decoded": 1,
+            "mean_uncached_decode_ms": 84.48558300733566,
+            "amortized_decode_compute_ms": 84.48558300733566,
+            "selected_candidate_counts_zero_based": {
+              "0": 1
+            },
+            "mean_candidate_score": 19.779096396365738
+          }
+        },
+        "paired": {
+          "rescued_failures": 0,
+          "introduced_failures": 0,
+          "discordant_shots": 0,
+          "logical_error_rate_delta": 0.0,
+          "mcnemar_exact_p_value": 1.0,
+          "mean_edge_log_loss_delta": 0.31623871684550703,
+          "edge_log_loss_delta_bootstrap_ci95": [
+            0.31623871684550703,
+            0.31623871684550703
+          ],
+          "mean_edge_brier_delta": 0.0013538227309773387,
+          "edge_brier_delta_bootstrap_ci95": [
+            0.0013538227309773387,
+            0.0013538227309773387
+          ]
+        }
+      },
+      "cell_wall_seconds": 0.11826241700327955
+    }
+  ],
+  "pooled_by_lattice": {
+    "square": {
+      "cells": 1,
+      "arms": {
+        "legacy_damped": {
+          "shots": 1,
+          "logical_errors": 0,
+          "logical_error_rate": 0.0,
+          "logical_error_ci95": [
+            0.0,
+            0.7934506856227626
+          ]
+        },
+        "memory_assisted": {
+          "shots": 1,
+          "logical_errors": 0,
+          "logical_error_rate": 0.0,
+          "logical_error_ci95": [
+            0.0,
+            0.7934506856227626
+          ]
+        }
+      },
+      "paired": {
+        "rescued_failures": 0,
+        "introduced_failures": 0,
+        "discordant_shots": 0,
+        "logical_error_rate_delta": 0.0,
+        "mcnemar_exact_p_value": 1.0
+      },
+      "scope_note": "Descriptive pooling across distinct physical-error rates; cell-level estimates are primary."
+    },
+    "honeycomb": {
+      "cells": 1,
+      "arms": {
+        "legacy_damped": {
+          "shots": 1,
+          "logical_errors": 0,
+          "logical_error_rate": 0.0,
+          "logical_error_ci95": [
+            0.0,
+            0.7934506856227626
+          ]
+        },
+        "memory_assisted": {
+          "shots": 1,
+          "logical_errors": 0,
+          "logical_error_rate": 0.0,
+          "logical_error_ci95": [
+            0.0,
+            0.7934506856227626
+          ]
+        }
+      },
+      "paired": {
+        "rescued_failures": 0,
+        "introduced_failures": 0,
+        "discordant_shots": 0,
+        "logical_error_rate_delta": 0.0,
+        "mcnemar_exact_p_value": 1.0
+      },
+      "scope_note": "Descriptive pooling across distinct physical-error rates; cell-level estimates are primary."
+    }
+  },
+  "pooled_all_cells": {
+    "cells": 2,
+    "arms": {
+      "legacy_damped": {
+        "shots": 2,
+        "logical_errors": 0,
+        "logical_error_rate": 0.0,
+        "logical_error_ci95": [
+          0.0,
+          0.6576197724933469
+        ]
+      },
+      "memory_assisted": {
+        "shots": 2,
+        "logical_errors": 0,
+        "logical_error_rate": 0.0,
+        "logical_error_ci95": [
+          0.0,
+          0.6576197724933469
+        ]
+      }
+    },
+    "paired": {
+      "rescued_failures": 0,
+      "introduced_failures": 0,
+      "discordant_shots": 0,
+      "logical_error_rate_delta": 0.0,
+      "mcnemar_exact_p_value": 1.0
+    },
+    "scope_note": "Descriptive pooling across distinct physical-error rates; cell-level estimates are primary."
+  }
+}

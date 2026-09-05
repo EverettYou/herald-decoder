@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "status": "implemented_and_verified",
+  "registered_at": "2026-08-29T09:58:00Z",
+  "title": "Lab 004 public D4 spatial-policy interface for Lab 005",
+  "purpose": "Define the observation-only, causal boundary through which a Lab 005 schedule may invoke the validated Lab 004 public D4 policy after a commit decision.",
+  "scope": {
+    "model": "paper-normalized periodic D4 coloured honeycomb",
+    "sizes_validated_by_lab_004": [2, 3],
+    "modes": ["syndrome_only", "heralded"],
+    "policy": "published public two-stage MWPM baseline",
+    "measurement_assumption": "ideal spatial observations supplied by a physical adapter",
+    "not_in_scope": [
+      "D4 syndrome or charge readout-noise model",
+      "JIT commit/defer scheduling",
+      "cluster-to-periodic-lattice boundary translation",
+      "offline access to future rounds",
+      "truth-labelled scoring inside the policy",
+      "threshold or fault-tolerance claims"
+    ]
+  },
+  "causal_ownership": {
+    "schedule": "Lab 005 owns causal detector history, cluster state, and commit/defer decisions. It may invoke the spatial policy only after commitment and only with the committed causal prefix.",
+    "physical_adapter": "A future D4 spacetime adapter owns the measurement protocol. It must generate the post-action measurement layout and outcomes without revealing hidden physical-error strings or logical labels.",
+    "spatial_policy": "Lab 004 chooses correction actions from the supplied spatial observations. It does not decide when to act and may not inspect future records or truth sidecars.",
+    "scorer": "Simulation truth and logical-sector scoring remain in a separate verification sidecar unavailable to both schedule and policy decisions."
+  },
+  "request": {
+    "type": "D4SpatialCommitRequestV1",
+    "required_fields": {
+      "schema_version": "integer equal to 1",
+      "request_id": "stable opaque string",
+      "model_id": "paper_periodic_coloured_honeycomb_d4",
+      "size": "integer in the adapter-supported set",
+      "mode": "syndrome_only or heralded",
+      "decision_round": "nonnegative integer",
+      "committed_through_round": "integer equal to decision_round",
+      "flux_syndrome_vertices": "sorted unique vertex indices with even cardinality",
+      "initial_charge_measurements": "sorted sparse records {vertex,outcome}, where outcome is 0 or 1; empty in syndrome_only mode",
+      "causal_prefix_digest": "SHA-256 of the decoder-visible Lab 005 prefix"
+    },
+    "forbidden_fields": [
+      "physical_error_edges",
+      "error_rate",
+      "random_seed used to generate truth",
+      "future syndrome or herald rounds",
+      "final logical label",
+      "truth-derived effective strings",
+      "simulator -1 sentinels",
+      "absolute hidden logical-sector labels"
+    ]
+  },
+  "stage_1_response": {
+    "type": "D4FluxActionV1",
+    "fields": {
+      "request_id": "echoed request identifier",
+      "status": "action; invalid observations are rejected before a response",
+      "correction_edges": "sorted unique paper-lattice edge indices",
+      "objective_weight": "finite matching objective value",
+      "policy_source_digest": "SHA-256 over the frozen policy sources",
+      "action_digest": "SHA-256 over the canonical response"
+    },
+    "semantics": "Use unit edge weights in syndrome_only mode and the published K=3E charge-informed objective in heralded mode. The correction boundary must equal the supplied flux syndrome."
+  },
+  "post_action_request": {
+    "type": "D4PostFluxObservationV1",
+    "required_fields": {
+      "request_id": "matching stage-1 request identifier",
+      "action_digest": "matching stage-1 action digest",
+      "observation_round": "round at which the physical post-action record became available",
+      "measurement_layout": "sparse measured vertices and declared physical entanglement-pair relations produced by the adapter",
+      "charge_measurements": "one binary outcome for every measured vertex, with no sentinel values",
+      "observation_digest": "SHA-256 over the canonical decoder-visible record"
+    },
+    "boundary": "This record may be supplied only after the stage-1 action is committed and physically applied. The adapter must not construct the layout from the simulator's hidden physical-error chain."
+  },
+  "stage_2_response": {
+    "type": "D4ChargeActionV1",
+    "fields": {
+      "request_id": "echoed request identifier",
+      "status": "action; invalid observations are rejected before a response",
+      "blue_correction_edges": "sorted unique charge-lattice edge indices",
+      "green_correction_edges": "sorted unique charge-lattice edge indices",
+      "blue_objective_weight": "finite matching objective value",
+      "green_objective_weight": "finite matching objective value",
+      "action_digest": "SHA-256 over the canonical response"
+    },
+    "semantics": "The public second stage performs the registered blue and green unit-weight charge recoveries on the supplied physical measurement layout. A nontrivial first-stage Boolean-union winding is terminal in the Lab 004 simulator, but that label belongs to the private truth scorer and is deliberately absent from the online action interface."
+  },
+  "invariant_gates": [
+    "source hashes match before adapter construction",
+    "request model, lattice counts, edge indices, and mode are valid",
+    "decision_round equals committed_through_round and no input time exceeds it at stage 1",
+    "stage-1 flux syndrome is binary/even and the returned correction reproduces it",
+    "heralded initial charge records contain only explicit measured 0/1 values on valid vertices",
+    "syndrome_only mode is invariant to any withheld initial charge record",
+    "post-action request matches request_id and action_digest and is unavailable before physical application",
+    "post-action layout and outcomes satisfy the declared physical support and parity constraints",
+    "both charge corrections reproduce their derived syndromes and leave closed residuals in verification",
+    "deterministic replay gives identical actions and digests",
+    "policy input serialization contains none of the forbidden truth or future fields",
+    "truth scoring is performed only after actions are frozen"
+  ],
+  "compatibility_status": {
+    "lab_004_policy": "Validated on ideal matched simulations and finite-size paper L=2,3 cohorts.",
+    "lab_005_generic_record": "Causal-prefix behavior validated for the model-agnostic binary preflight.",
+    "stage_1_adapter": "Implemented and verified for syndrome_only and heralded modes at paper L=2,3.",
+    "post_action_adapter": "Implemented and verified for sparse physically supplied layouts/outcomes, including digest binding and support rejection. It never derives the layout from a hidden physical chain.",
+    "jit_schedule": "Not yet connected. Source-matched D(S3) schedule reproduction remains an independent branch."
+  },
+  "source_freeze": {
+    "lab-004/scripts/d4_honeycomb.py": "0895892c00f1f629ec469d4f7b4e42fb8e83bc07666edbc3b8fc26a1f30eb869",
+    "lab-004/scripts/d4_matching.py": "1ad1c96af3bf98353c89820b68eb07183a49c954650c51218ca5c1b5c211739e",
+    "lab-004/scripts/d4_charge.py": "c7b528d343abedb052e6bea7f5c29f65de2bab5dae96befa339763198bb17e9a",
+    "lab-004/scripts/d4_charge_multigraph.py": "1ea88742efa186973e68ea50086d951e8ad165f466ec07bfdbb8cc66ebb79718",
+    "lab-004/scripts/d4_postflux.py": "5435f1fcea89c9eccf369f8bfef44b23deea1ebe954b5e0f1dea5fce0cf12658",
+    "lab-004/scripts/d4_pipeline.py": "0e517f922fcd21b3c347be5f59d39b0640d260d11ddd314f408d18035c42e485",
+    "lab-005/scripts/spacetime_record.py": "0d8204a7734295fe7defd8822f982d84a5a5a604108bb6c9f6145b7ea7454722",
+    "lab-005/scripts/d4_spatial_policy.py": "ad271b7836043dfac696afaa4ea6090e2ec94180e19ff864f7dbd1f54a8654f4",
+    "lab-005/scripts/test_d4_spatial_policy.py": "a352139fceba3219f56a39dfc25cfb4e9c7fa6d848f81515ef180b152599f4b6",
+    "lab-004/results/r5a-paper-lattice-public-decoder-analysis.json": "9a4cb2e3a19c18794759c94ab5f2dc24602a1cd999be806ed741b5a4b116e22c"
+  },
+  "implementation_result": {
+    "completed_at": "2026-08-29T10:07:00Z",
+    "adapter": "scripts/d4_spatial_policy.py",
+    "fixture": "scripts/test_d4_spatial_policy.py",
+    "adapter_sha256": "ad271b7836043dfac696afaa4ea6090e2ec94180e19ff864f7dbd1f54a8654f4",
+    "fixture_sha256": "a352139fceba3219f56a39dfc25cfb4e9c7fa6d848f81515ef180b152599f4b6",
+    "focused_tests": "8/8 passed",
+    "full_lab_tests": "24/24 passed",
+    "verified_gates": [
+      "forbidden-field rejection",
+      "causal-prefix truncation",
+      "stage-1 syndrome fidelity",
+      "action serialization and source binding",
+      "action/observation digest binding",
+      "post-action support rejection",
+      "nonempty stage-2 syndrome fidelity",
+      "deterministic replay",
+      "truth-sidecar separation"
+    ],
+    "claim_boundary": "This establishes interface fidelity only; no noisy D4 measurements, JIT schedule, threshold, or fault-tolerance result was introduced."
+  },
+  "next_gate": {
+    "action": "Build a physical D4 spacetime measurement adapter that supplies these records from a registered repeated-measurement model, or independently continue the source-matched D(S3) cluster/absorber JIT branch.",
+    "boundary": "Do not connect noisy observations until their physical channel and causal schedule are separately registered and verified."
+  }
+}

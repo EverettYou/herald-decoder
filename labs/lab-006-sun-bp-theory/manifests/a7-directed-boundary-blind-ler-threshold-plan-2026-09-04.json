@@ -1,0 +1,96 @@
+{
+  "id": "lab006-a7-directed-boundary-blind-ler-threshold-plan-2026-09-04",
+  "status": "planned",
+  "registered_before_sampling": true,
+  "program_layer": "scalable decoding with finite-size transition evidence",
+  "question": "Under a matched directed pair-error channel with no rough-boundary syndrome or representation readout, does full interior fusion information reduce finite-size LER relative to interior-syndrome-only BP and ordinary syndrome-only matching, and do the resulting curves support a schedule-specific crossing estimate?",
+  "best_existing_decoder": {
+    "name": "directed full-record sum-product belief matching",
+    "pipeline": ["cached fusion likelihood", "preallocated batched Numba BP", "posterior error LLR", "PyMatching correction constrained by m"],
+    "evidence": "results/a1-numba-belief-matching.json",
+    "scope_limit": "BP is exact on a factor tree only; loopy beliefs plus matching are not global MAP."
+  },
+  "observation_arms": [
+    {"id": "no_herald", "record": "hard interior detector m only for recovery; prior weights", "bp": false},
+    {"id": "syndrome_only", "record": "interior detector m", "bp": true, "use_irrep": false},
+    {"id": "representation_herald", "record": "interior (m,R)", "bp": true, "use_irrep": true}
+  ],
+  "groups": ["None", "U1", "SU2", "SU3"],
+  "physical_channel": {
+    "orientation": "directed",
+    "active_edge": "stored arrow deposits antifundamental at tail and fundamental at head",
+    "rough_boundary_observation": "neither m nor R is measured; both are marginalized in BP",
+    "interior_detector_syndrome": "perfect and identical across all arms; it is the matching constraint"
+  },
+  "frozen_artifact_decoder": {
+    "backend": "cached-preallocated-numba-bp+posterior-llr-pymatching",
+    "orientation": "directed",
+    "algorithm": "sum_product",
+    "damping": 0.5,
+    "max_iterations": 300,
+    "tolerance": 1e-10,
+    "measure_boundary_representation": false,
+    "source": "scripts/artifact_backend.py"
+  },
+  "matching": "All groups share graph, physical error, m, p, seed, and fusion-sampling uniform variates. Within a group, all three arms share the resulting interior R record; group changes the actual local likelihood and therefore the label distribution.",
+  "a7a_artifact_compatibility_gate": {
+    "scope": {"lattices": ["square", "honeycomb"], "groups": ["None", "U1", "SU2", "SU3"], "observation_arms": ["no_herald", "syndrome_only", "representation_herald"], "orientation": "directed"},
+    "batch_size": 256,
+    "scalar_artifact_equivalence": "Posterior, convergence, iteration, matching weights, correction, residual, and logical parity reproduce the artifact backend on fixed-seed fixtures.",
+    "batch_equivalence": "Batch and scalar Numba posterior entries agree within 1e-12; convergence and iteration fields agree exactly.",
+    "throughput_scope": "Batching may replace BP inference only. PyMatching remains per shot unless separately validated.",
+    "failure_rule": "Any mismatch blocks LER sampling pending runner remediation; artifact defaults may not be retuned."
+  },
+  "a7a_result": {
+    "status": "passed",
+    "result": "results/a7-artifact-default-calibration.json",
+    "scope": "16 cells: None/U1/SU2/SU3 x square/honeycomb x L=5,9; eight fixed-seed scalar records per arm and 256 repeated records per batch.",
+    "scalar_artifact_max_abs_difference": 0.0,
+    "batch_scalar_max_abs_difference": 0.0,
+    "batch_convergence_and_iteration_match": true,
+    "batch_bp_speedup_over_scalar_bp": "instance-dependent, 0.31x to 1.73x; median 1.00x",
+    "interpretation": "The production runner is calibrated to the accepted artifact decoder. This is not an LER or threshold result."
+  },
+  "exploratory_preliminary": {
+    "status": "complete",
+    "post_registration": true,
+    "reason": "Researcher requested an immediate visible curve before the full registered acquisition.",
+    "scope": {"shots_per_cell": 32, "lattices": ["square", "honeycomb"], "L": [5, 9], "p": [0.02, 0.06, 0.1, 0.14, 0.18, 0.22, 0.26, 0.3]},
+    "result": "results/a7-ler-preliminary32.json",
+    "figure": "results/a7-ler-preliminary32.png",
+    "claim_boundary": "Operational diagnostic only; it is excluded from A7b estimation, comparison, refinement selection, and threshold inference."
+  },
+  "exploratory_512": {
+    "status": "complete",
+    "post_registration": true,
+    "scope": {"shots_per_cell": 512, "lattices": ["square", "honeycomb"], "L": [5, 9], "p": [0.02, 0.04, 0.06, 0.08, 0.1, 0.12, 0.14, 0.16, 0.18, 0.2, 0.22, 0.24, 0.26, 0.28, 0.3]},
+    "result": "results/a7-ler-exploratory512.json",
+    "figure": "results/a7-ler-exploratory512.png",
+    "convergence_figure": "results/a7-bp-nonconvergence-exploratory512.png",
+    "claim_boundary": "Exploratory curve only; excluded from A7b estimation, comparison, refinement selection, and threshold inference."
+  },
+  "a7b_ler_scan": {
+    "runs_only_if": "A7a reproduces the frozen artifact decoder and establishes scalar/batch equivalence.",
+    "lattices": ["square", "honeycomb"],
+    "L": [5, 7, 9, 11],
+    "p": [0.02, 0.04, 0.06, 0.08, 0.1, 0.12, 0.14, 0.16, 0.18, 0.2, 0.22, 0.24, 0.26, 0.28, 0.3],
+    "shots_per_cell": 20000,
+    "batch_size": 256,
+    "primary_estimator": "Final-correction failure: nonzero detector residual or nontrivial logical parity of error XOR correction.",
+    "secondary_diagnostic": "BP convergence and terminal message delta; neither gates LER because PyMatching consumes the final available beliefs.",
+    "uncertainty": "Wilson 95% LER intervals and paired bootstrap for arm differences and crossing stability.",
+    "refinement_trigger": "Only an adjacent p bracket with L=7/L=11 Wilson overlap or signed LER-difference change permits a separately registered five-point, 40000-shot refinement.",
+    "claim_boundary": "At most a phenomenological finite-size, decoder/channel/schedule-specific crossing or bracket."
+  },
+  "verification": [
+    "Batch and scalar Numba posterior outputs agree to 1e-12 on every group/arm fixture.",
+    "None full-record equals None syndrome-only exactly.",
+    "Every correction reproduces detector m.",
+    "Matched-arm truth and seed hashes are identical.",
+    "No boundary R appears in generated records, decoder inputs, or figures.",
+    "Raw output retains convergence, residual, and logical-parity outcomes; no failed BP run is removed.",
+    "Rendered LER result exposes the same raw data, intervals, group, arm, orientation, and boundary-observation scope."
+  ],
+  "prohibited_claims": ["global-MAP or optimal decoding", "thermodynamic threshold", "fault-tolerance threshold", "undirected-channel conclusion", "benefit from any rough-boundary syndrome or representation measurement"],
+  "next_action": "A7a is passed. Do not launch A7b LER sampling without a renewed researcher instruction; when authorized, use the frozen artifact decoder unchanged."
+}

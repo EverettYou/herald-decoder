@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-27T22:45:53.966662+00:00",
+  "source_artifacts": [
+    "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/q075-square-l11-l13-refined-low-5000-2026-08-27.json",
+    "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/q075-square-l11-l13-refined-5000-2026-08-27.json"
+  ],
+  "lattice": "square",
+  "q": 0.75,
+  "decoder": {
+    "name": "HeraldAwareBpMatchingDecoder",
+    "recurrence_mode": "damping",
+    "damping": 0.25,
+    "max_iterations": 40,
+    "update_schedule": "synchronous",
+    "residual_priority_order": "scan",
+    "residual_priority_buffer_reuse": false,
+    "residual_priority_cached_products": false,
+    "matching_projection": "posterior_llr",
+    "p_m": 0.0,
+    "p_h": 0.0,
+    "use_numba": true
+  },
+  "sizes": [
+    11,
+    13
+  ],
+  "p_grid": [
+    0.12,
+    0.13,
+    0.14,
+    0.15,
+    0.16,
+    0.17,
+    0.18,
+    0.19,
+    0.2,
+    0.21,
+    0.22,
+    0.23,
+    0.24,
+    0.25,
+    0.26,
+    0.27,
+    0.28,
+    0.29,
+    0.3,
+    0.31,
+    0.32
+  ],
+  "shots_per_cell": 5000,
+  "total_decoder_observations": 210000,
+  "adjacent_crossings": {
+    "L11_L13": {
+      "sizes": [
+        11,
+        13
+      ],
+      "point_directed_crossings": [
+        0.1725
+      ],
+      "point_status": "single",
+      "bootstrap": {
+        "replicates": 20000,
+        "seed": 750001,
+        "single_crossing_replicates": 13985,
+        "no_crossing_replicates": 0,
+        "multiple_crossing_replicates": 6015,
+        "single_crossing_fraction": 0.69925,
+        "conditional_quantiles": {
+          "q025": 0.1514285714285714,
+          "median": 0.17278688524590163,
+          "q975": 0.21199999999999997
+        }
+      }
+    }
+  },
+  "convergence": {
+    "L11": {
+      "minimum_rate": 0.0,
+      "maximum_rate": 0.0044
+    },
+    "L13": {
+      "minimum_rate": 0.0,
+      "maximum_rate": 0.0002
+    }
+  },
+  "evidence_boundary": "Finite-size q=0.75 operational crossing diagnostic for the fixed 40-iteration posterior-LLR damping decoder; bootstrap uncertainty does not establish an asymptotic threshold."
+}

@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "status": "analyzed and reported; downstream release audit pending",
+  "recorded_at": "2026-08-29T14:34:00Z",
+  "title": "J2 E2 causal post-flux completion",
+  "question": "Can the corrected causal stage-1 D4 action be completed by an action-bound physical post-flux record, public charge recovery, and next-round advance in both public modes and all registered schedule branches without truth or future leakage?",
+  "answer": "Yes for the bounded deterministic paper-L=2 interface. This is not a decoder-performance, threshold, hardware-fidelity, or fault-tolerance result.",
+  "evidence": [
+    {
+      "gate": "E2A",
+      "artifact": "manifests/j2-e2a-post-flux-adapter-2026-08-29.json",
+      "status": "verified"
+    },
+    {
+      "gate": "E2B/E2C",
+      "artifact": "manifests/j2-e2b-e2c-completion-matrix-2026-08-29.json",
+      "status": "verified"
+    }
+  ],
+  "registration_correction": {
+    "invalid_wording": "the same physical post-action record is supplied to both public modes",
+    "observed_counterexample": "syndrome-only and heralded choose different flux actions in all four registered schedule branches",
+    "corrected_matched_design": "hold the pre-action physical history, measurement layout, and report rule fixed, while conditioning and binding each post-action report to its own physical intervention",
+    "scientific_effect": "restores causal intervention semantics without changing the central question, matrix, budget, or endpoint"
+  },
+  "analysis": {
+    "public_translation": "E2A maps a typed charge/vacuum report and explicitly supplied physical layout into the existing post-flux observation only when the report is bound to the exact stage-1 flux action.",
+    "branch_coverage": "E2B executes syndrome_only and heralded under immediate, fixed_delay_1, jit_lyons_brown, and offline_full_history: all 8/8 cells complete through the public two-stage interface.",
+    "scientific_output_check": "Every cell returns a nonempty blue charge correction; green correction is empty on this registered fixture. Correction size is a correctness witness here, not a performance metric.",
+    "temporal_ordering": "Immediate, fixed-delay, and JIT attach the next available causal prefix only after charge completion. Offline consumes full history, remains explicitly noncausal, and has no next-prefix claim.",
+    "matched_design": "Both modes share one pre-action history digest, measurement layout, and report rule. Their post-action report digests differ only as required by their different stage-1 interventions.",
+    "boundary_controls": "Wrong action/request/layout, temporal inversion, illegal or multi-label post-action records, parity-inconsistent support, future-only causal leakage, private-truth leakage, and replay nondeterminism are rejected or absent as registered.",
+    "uncertainty": "Not applicable to exact deterministic interface checks; no stochastic estimator, confidence interval, or logical score was produced."
+  },
+  "matrix_summary": {
+    "history_digest": "fef6c825e47e90174de4f555a0d3885dab3e78cb2d36fc7852c94778a127304a",
+    "cells_passed": 8,
+    "cells_total": 8,
+    "causal_cells": 6,
+    "explicitly_noncausal_cells": 2,
+    "nonempty_charge_actions": 8,
+    "future_only_counterfactual": "six causal cells unchanged; two offline cells change",
+    "private_truth_counterfactual": "all eight public cells unchanged",
+    "replay": "bit identical"
+  },
+  "verified_claims": [
+    "the existing public schemas compose into a deterministic two-stage paper-L=2 transition",
+    "all eight registered mode/schedule branches complete through the public interface",
+    "post-action reports are exactly action-bound and contain only permitted public charge/vacuum information",
+    "causal branches do not depend on future-only changes and advance only after charge completion",
+    "private truth does not affect public transitions and deterministic replay is exact"
+  ],
+  "prohibited_inferences": [
+    "heralded decoding is better than syndrome-only decoding",
+    "one schedule is better than another",
+    "logical-error-rate improvement",
+    "threshold",
+    "hardware extraction fidelity",
+    "runtime scalability",
+    "fault tolerance"
+  ],
+  "verification": {
+    "new_E2B_E2C_tests": "6/6 pass",
+    "focused_E2_integration_tests": "20/20 pass",
+    "full_lab005_suite": "131/131 pass",
+    "wiki_lint": "0 errors, 0 warnings",
+    "knowledge_graph_suite": "12/12 pass",
+    "document_link_validation": "pass",
+    "sampling": "none"
+  },
+  "provenance_hashes": {
+    "e2a_evidence": "ad32c790f490f702ae3dff2022bb5b43b645b31ac75372002a603f8a0632e8a0",
+    "e2b_e2c_evidence": "900c2207459887647b35868350445a67aeed0e584968ada3cec27e0545707034",
+    "d4_projector_instrument.py": "96e0b9bb923a481013064e5b7d7333ecc8eaab1c7fffb9bd7cbeb3aca8a862e4",
+    "e1_schedule_integration.py": "7d4847111e3a30dba6773f3277c7bde3eb00f243e7080461c54b7e5a2531bb5f",
+    "test_d4_projector_instrument.py": "02e4ce132ec4f6af9843165a24ee01ca44903c150a1f110c6445becc3f50a860",
+    "test_e1_schedule_integration.py": "560509bd5c9ced017e16ae583221b94956f44db71518e96fd189e175aeb1b3e0"
+  },
+  "next_gate": "Audit downstream consumers and release only the corrected deterministic E2 evidence; keep stochastic and performance sampling blocked."
+}

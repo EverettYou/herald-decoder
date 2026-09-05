@@ -1,0 +1,1919 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "method": "leave-one-distance-out beta sign stability on the crossing-free slope-flow map",
+  "class_stability": {
+    "decodable": {
+      "total": 81,
+      "leave_one_distance_out_stable": 65,
+      "leave_one_distance_out_unstable": 16
+    },
+    "undecodable": {
+      "total": 36,
+      "leave_one_distance_out_stable": 25,
+      "leave_one_distance_out_unstable": 11
+    },
+    "unresolved": {
+      "total": 114,
+      "leave_one_distance_out_stable": 36,
+      "leave_one_distance_out_unstable": 78
+    }
+  },
+  "unresolved_evidence_need": {
+    "seed_limited": 36,
+    "distance_limited": 78
+  },
+  "unresolved_frontier": {
+    "between_both_resolved_phases": 10,
+    "adjacent_to_one_resolved_phase": 66,
+    "unresolved_interior": 38
+  },
+  "stable_observed_boundary_edges": 0,
+  "target_ordering": [
+    "measured gray cells neighboring both resolved phase colors",
+    "measured gray cells neighboring one resolved phase color",
+    "remaining unresolved interior cells",
+    "within a tier, size-window-stable cells closest to the 0.95 sign-confidence gate first"
+  ],
+  "targets": [
+    {
+      "q": 0.75,
+      "p": 0.36,
+      "beta": 0.24829338664935055,
+      "beta_interval90": [
+        -0.07121852967198962,
+        0.5703289634184757
+      ],
+      "dominant_sign_probability": 0.8956,
+      "leave_one_distance_out_sign_stable": true,
+      "resolved_neighbor_classes": [
+        "decodable",
+        "undecodable"
+      ],
+      "priority_tier": 1,
+      "priority_reason": "between both resolved phases",
+      "evidence_need": "additional independent seed trajectories"
+    },
+    {
+      "q": 0.1,
+      "p": 0.2,
+      "beta": 0.1346189261765665,
+      "beta_interval90": [
+        -0.06415866282268655,
+        0.3381307141132032
+      ],
+      "dominant_sign_probability": 0.85875,
+      "leave_one_distance_out_sign_stable": true,
+      "resolved_neighbor_classes": [
+        "decodable",
+        "undecodable"
+      ],
+      "priority_tier": 1,
+      "priority_reason": "between both resolved phases",
+      "evidence_need": "additional independent seed trajectories"
+    },
+    {
+      "q": 0.25,
+      "p": 0.2,
+      "beta": 0.2000591427545319,
+      "beta_interval90": [
+        -0.16629246423145966,
+        0.593215905000239
+      ],
+      "dominant_sign_probability": 0.8062,
+      "leave_one_distance_out_sign_stable": true,
+      "resolved_neighbor_classes": [
+        "decodable",
+        "undecodable"
+      ],
+      "priority_tier": 1,
+      "priority_reason": "between both resolved phases",
+      "evidence_need": "additional independent seed trajectories"
+    },
+    {
+      "q": 0.7,
+      "p": 0.32,
+      "beta": 0.16369067032646603,
+      "beta_interval90": [
+        -0.18586917326272326,
+        0.5567021176632052
+      ],
+      "dominant_sign_probability": 0.75275,
+      "leave_one_distance_out_sign_stable": true,
+      "resolved_neighbor_classes": [
+        "decodable",
+        "undecodable"
+      ],
+      "priority_tier": 1,
+      "priority_reason": "between both resolved phases",
+      "evidence_need": "additional independent seed trajectories"
+    },
+    {
+      "q": 0.3,
+      "p": 0.2,
+      "beta": 0.2451388916271799,
+      "beta_interval90": [
+        -0.11166740091547277,
+        0.6300725415760043
+      ],
+      "dominant_sign_probability": 0.8635,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "decodable",
+        "undecodable"
+      ],
+      "priority_tier": 1,
+      "priority_reason": "between both resolved phases",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.8,
+      "p": 0.45,
+      "beta": -0.06695180541103796,
+      "beta_interval90": [
+        -0.2680567749949207,
+        0.1400196902244924
+      ],
+      "dominant_sign_probability": 0.7084,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "decodable",
+        "undecodable"
+      ],
+      "priority_tier": 1,
+      "priority_reason": "between both resolved phases",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.4,
+      "p": 0.2,
+      "beta": -0.1953722524587536,
+      "beta_interval90": [
+        -0.8119333283999332,
+        0.39795760854444906
+      ],
+      "dominant_sign_probability": 0.69055,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "decodable",
+        "undecodable"
+      ],
+      "priority_tier": 1,
+      "priority_reason": "between both resolved phases",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.6,
+      "p": 0.28,
+      "beta": 0.08090117410385769,
+      "beta_interval90": [
+        -0.23399135365267054,
+        0.37653426024578074
+      ],
+      "dominant_sign_probability": 0.66965,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "decodable",
+        "undecodable"
+      ],
+      "priority_tier": 1,
+      "priority_reason": "between both resolved phases",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.45,
+      "p": 0.2,
+      "beta": -0.1420448824701182,
+      "beta_interval90": [
+        -0.7470740757825849,
+        0.4560379715586803
+      ],
+      "dominant_sign_probability": 0.6258,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "decodable",
+        "undecodable"
+      ],
+      "priority_tier": 1,
+      "priority_reason": "between both resolved phases",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.35,
+      "p": 0.2,
+      "beta": -0.009005727301901233,
+      "beta_interval90": [
+        -0.5560212508911362,
+        0.5013005914857648
+      ],
+      "dominant_sign_probability": 0.51175,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "decodable",
+        "undecodable"
+      ],
+      "priority_tier": 1,
+      "priority_reason": "between both resolved phases",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.5,
+      "p": 0.32,
+      "beta": 0.3130945469108065,
+      "beta_interval90": [
+        -0.006211748457914063,
+        0.5940648864869993
+      ],
+      "dominant_sign_probability": 0.9466,
+      "leave_one_distance_out_sign_stable": true,
+      "resolved_neighbor_classes": [
+        "undecodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "additional independent seed trajectories"
+    },
+    {
+      "q": 0.4,
+      "p": 0.32,
+      "beta": 0.29805326712921615,
+      "beta_interval90": [
+        -0.007278197835873399,
+        0.5898147640201772
+      ],
+      "dominant_sign_probability": 0.9453,
+      "leave_one_distance_out_sign_stable": true,
+      "resolved_neighbor_classes": [
+        "undecodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "additional independent seed trajectories"
+    },
+    {
+      "q": 0.0,
+      "p": 0.08,
+      "beta": -2.1552115167537664,
+      "beta_interval90": [
+        -4.532362222766163,
+        0.03423083800708498
+      ],
+      "dominant_sign_probability": 0.94425,
+      "leave_one_distance_out_sign_stable": true,
+      "resolved_neighbor_classes": [
+        "decodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "additional independent seed trajectories"
+    },
+    {
+      "q": 0.0,
+      "p": 0.2,
+      "beta": 0.21125780000359523,
+      "beta_interval90": [
+        -0.0075957826794799885,
+        0.4384278556855708
+      ],
+      "dominant_sign_probability": 0.9429,
+      "leave_one_distance_out_sign_stable": true,
+      "resolved_neighbor_classes": [
+        "undecodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "additional independent seed trajectories"
+    },
+    {
+      "q": 0.15,
+      "p": 0.28,
+      "beta": 0.23639942076029552,
+      "beta_interval90": [
+        -0.00975381072495213,
+        0.4860332035229373
+      ],
+      "dominant_sign_probability": 0.9429,
+      "leave_one_distance_out_sign_stable": true,
+      "resolved_neighbor_classes": [
+        "undecodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "additional independent seed trajectories"
+    },
+    {
+      "q": 0.5,
+      "p": 0.24,
+      "beta": 0.3965084580364368,
+      "beta_interval90": [
+        -0.02404738243430583,
+        0.7868938845977864
+      ],
+      "dominant_sign_probability": 0.94065,
+      "leave_one_distance_out_sign_stable": true,
+      "resolved_neighbor_classes": [
+        "undecodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "additional independent seed trajectories"
+    },
+    {
+      "q": 0.3,
+      "p": 0.28,
+      "beta": 0.3676860008122498,
+      "beta_interval90": [
+        -0.018437046312091386,
+        0.812345277404774
+      ],
+      "dominant_sign_probability": 0.9397,
+      "leave_one_distance_out_sign_stable": true,
+      "resolved_neighbor_classes": [
+        "undecodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "additional independent seed trajectories"
+    },
+    {
+      "q": 0.0,
+      "p": 0.32,
+      "beta": -0.20418028357559972,
+      "beta_interval90": [
+        -0.3941518405307311,
+        0.019664902407365164
+      ],
+      "dominant_sign_probability": 0.93525,
+      "leave_one_distance_out_sign_stable": true,
+      "resolved_neighbor_classes": [
+        "undecodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "additional independent seed trajectories"
+    },
+    {
+      "q": 0.05,
+      "p": 0.24,
+      "beta": 0.2274398171685704,
+      "beta_interval90": [
+        -0.019143277444273618,
+        0.4922503019813173
+      ],
+      "dominant_sign_probability": 0.9321,
+      "leave_one_distance_out_sign_stable": true,
+      "resolved_neighbor_classes": [
+        "undecodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "additional independent seed trajectories"
+    },
+    {
+      "q": 0.8,
+      "p": 0.12,
+      "beta": -2.3613562860092534,
+      "beta_interval90": [
+        -5.369436523750723,
+        0.2836669096435201
+      ],
+      "dominant_sign_probability": 0.92235,
+      "leave_one_distance_out_sign_stable": true,
+      "resolved_neighbor_classes": [
+        "decodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "additional independent seed trajectories"
+    },
+    {
+      "q": 0.85,
+      "p": 0.12,
+      "beta": -3.0674713322666776,
+      "beta_interval90": [
+        -5.369436523750723,
+        0.1982183608176883
+      ],
+      "dominant_sign_probability": 0.92195,
+      "leave_one_distance_out_sign_stable": true,
+      "resolved_neighbor_classes": [
+        "decodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "additional independent seed trajectories"
+    },
+    {
+      "q": 0.9,
+      "p": 0.12,
+      "beta": -3.0674713322666776,
+      "beta_interval90": [
+        -5.369436523750723,
+        0.19821836081768834
+      ],
+      "dominant_sign_probability": 0.92,
+      "leave_one_distance_out_sign_stable": true,
+      "resolved_neighbor_classes": [
+        "decodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "additional independent seed trajectories"
+    },
+    {
+      "q": 0.5,
+      "p": 0.28,
+      "beta": 0.20727087933277144,
+      "beta_interval90": [
+        -0.04316033809629631,
+        0.4366074742346358
+      ],
+      "dominant_sign_probability": 0.9165,
+      "leave_one_distance_out_sign_stable": true,
+      "resolved_neighbor_classes": [
+        "undecodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "additional independent seed trajectories"
+    },
+    {
+      "q": 0.8,
+      "p": 0.36,
+      "beta": -0.25905378850350697,
+      "beta_interval90": [
+        -0.58718459447921,
+        0.052532328709474475
+      ],
+      "dominant_sign_probability": 0.9104,
+      "leave_one_distance_out_sign_stable": true,
+      "resolved_neighbor_classes": [
+        "decodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "additional independent seed trajectories"
+    },
+    {
+      "q": 0.15,
+      "p": 0.24,
+      "beta": 0.16565381548888075,
+      "beta_interval90": [
+        -0.06022720718277266,
+        0.39208790423827505
+      ],
+      "dominant_sign_probability": 0.88475,
+      "leave_one_distance_out_sign_stable": true,
+      "resolved_neighbor_classes": [
+        "undecodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "additional independent seed trajectories"
+    },
+    {
+      "q": 0.05,
+      "p": 0.2,
+      "beta": 0.08492155469307841,
+      "beta_interval90": [
+        -0.03961176452412868,
+        0.21160126160103682
+      ],
+      "dominant_sign_probability": 0.86345,
+      "leave_one_distance_out_sign_stable": true,
+      "resolved_neighbor_classes": [
+        "decodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "additional independent seed trajectories"
+    },
+    {
+      "q": 0.55,
+      "p": 0.45,
+      "beta": -0.1827551298932584,
+      "beta_interval90": [
+        -0.5196116400788013,
+        0.153342336728326
+      ],
+      "dominant_sign_probability": 0.8094,
+      "leave_one_distance_out_sign_stable": true,
+      "resolved_neighbor_classes": [
+        "undecodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "additional independent seed trajectories"
+    },
+    {
+      "q": 0.25,
+      "p": 0.32,
+      "beta": 0.16115639819913108,
+      "beta_interval90": [
+        -0.18530313642319327,
+        0.49707281801936726
+      ],
+      "dominant_sign_probability": 0.7853,
+      "leave_one_distance_out_sign_stable": true,
+      "resolved_neighbor_classes": [
+        "undecodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "additional independent seed trajectories"
+    },
+    {
+      "q": 0.7,
+      "p": 0.49,
+      "beta": 0.22725901705197793,
+      "beta_interval90": [
+        -0.26996185850879356,
+        0.6807569189915129
+      ],
+      "dominant_sign_probability": 0.78525,
+      "leave_one_distance_out_sign_stable": true,
+      "resolved_neighbor_classes": [
+        "undecodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "additional independent seed trajectories"
+    },
+    {
+      "q": 0.3,
+      "p": 0.45,
+      "beta": 0.17094363541639154,
+      "beta_interval90": [
+        -0.1983098563713339,
+        0.5492324723034684
+      ],
+      "dominant_sign_probability": 0.76955,
+      "leave_one_distance_out_sign_stable": true,
+      "resolved_neighbor_classes": [
+        "decodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "additional independent seed trajectories"
+    },
+    {
+      "q": 0.45,
+      "p": 0.45,
+      "beta": -0.11819843226159749,
+      "beta_interval90": [
+        -0.45210791281769597,
+        0.2256961757045942
+      ],
+      "dominant_sign_probability": 0.71855,
+      "leave_one_distance_out_sign_stable": true,
+      "resolved_neighbor_classes": [
+        "undecodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "additional independent seed trajectories"
+    },
+    {
+      "q": 0.1,
+      "p": 0.32,
+      "beta": 0.14995352354817976,
+      "beta_interval90": [
+        -0.02878895394773717,
+        0.3028557439852172
+      ],
+      "dominant_sign_probability": 0.92185,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "undecodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.35,
+      "p": 0.12,
+      "beta": -1.305916592759826,
+      "beta_interval90": [
+        -2.6659863147410747,
+        0.2092799404516099
+      ],
+      "dominant_sign_probability": 0.921,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "decodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.65,
+      "p": 0.28,
+      "beta": -0.22962796824586723,
+      "beta_interval90": [
+        -0.5437088502600814,
+        0.048691064127195934
+      ],
+      "dominant_sign_probability": 0.9062,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "decodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.1,
+      "p": 0.08,
+      "beta": -1.9840983993833015,
+      "beta_interval90": [
+        -4.597542848227665,
+        0.7340421765023922
+      ],
+      "dominant_sign_probability": 0.902,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "decodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.2,
+      "p": 0.2,
+      "beta": 0.15528285117556223,
+      "beta_interval90": [
+        -0.047462774398293314,
+        0.3596118111250871
+      ],
+      "dominant_sign_probability": 0.89485,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "undecodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.15,
+      "p": 0.08,
+      "beta": -1.681989651680026,
+      "beta_interval90": [
+        -4.673509456521263,
+        1.1904086227470168
+      ],
+      "dominant_sign_probability": 0.8735,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "decodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.0,
+      "p": 0.16,
+      "beta": -0.1562845058673198,
+      "beta_interval90": [
+        -0.386364577185913,
+        0.10091626490145283
+      ],
+      "dominant_sign_probability": 0.85295,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "decodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.55,
+      "p": 0.28,
+      "beta": 0.22752826569737475,
+      "beta_interval90": [
+        -0.1507173169968776,
+        0.5983577020494368
+      ],
+      "dominant_sign_probability": 0.8417,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "undecodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.15,
+      "p": 0.4,
+      "beta": 0.1438898287158956,
+      "beta_interval90": [
+        -0.11629291335982968,
+        0.37124709819397456
+      ],
+      "dominant_sign_probability": 0.83485,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "undecodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.4,
+      "p": 0.08,
+      "beta": -1.640476336977046,
+      "beta_interval90": [
+        -5.369436523750723,
+        2.8050099130241097
+      ],
+      "dominant_sign_probability": 0.83405,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "decodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.2,
+      "p": 0.08,
+      "beta": -1.2064113028835401,
+      "beta_interval90": [
+        -5.369436523750723,
+        1.637024298577824
+      ],
+      "dominant_sign_probability": 0.83345,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "decodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.45,
+      "p": 0.36,
+      "beta": 0.14852879085838774,
+      "beta_interval90": [
+        -0.09313294961246892,
+        0.40272517208381425
+      ],
+      "dominant_sign_probability": 0.83185,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "undecodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.3,
+      "p": 0.08,
+      "beta": -1.640476336977046,
+      "beta_interval90": [
+        -5.369436523750723,
+        2.8050099130241097
+      ],
+      "dominant_sign_probability": 0.8308,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "decodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.75,
+      "p": 0.49,
+      "beta": 0.2358550744683547,
+      "beta_interval90": [
+        -0.17149960302393563,
+        0.6458034875207812
+      ],
+      "dominant_sign_probability": 0.8306,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "undecodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.25,
+      "p": 0.08,
+      "beta": -1.640476336977046,
+      "beta_interval90": [
+        -5.369436523750723,
+        2.8050099130241097
+      ],
+      "dominant_sign_probability": 0.82925,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "decodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.1,
+      "p": 0.28,
+      "beta": 0.104315616616168,
+      "beta_interval90": [
+        -0.08425366537441842,
+        0.29485248736691044
+      ],
+      "dominant_sign_probability": 0.8138,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "undecodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.05,
+      "p": 0.28,
+      "beta": 0.1310073402979371,
+      "beta_interval90": [
+        -0.11766020351959369,
+        0.3567379074960977
+      ],
+      "dominant_sign_probability": 0.81265,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "undecodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.35,
+      "p": 0.32,
+      "beta": 0.1306481723640339,
+      "beta_interval90": [
+        -0.12206138005518201,
+        0.39887809777273336
+      ],
+      "dominant_sign_probability": 0.7883,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "undecodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.05,
+      "p": 0.36,
+      "beta": 0.18016787830625355,
+      "beta_interval90": [
+        -0.211129994635148,
+        0.5519137705469066
+      ],
+      "dominant_sign_probability": 0.78225,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "undecodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.1,
+      "p": 0.4,
+      "beta": 0.14796654960183633,
+      "beta_interval90": [
+        -0.16253979913679173,
+        0.4504788729956222
+      ],
+      "dominant_sign_probability": 0.7795,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "undecodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.55,
+      "p": 0.24,
+      "beta": 0.18036636594886923,
+      "beta_interval90": [
+        -0.2262507510937699,
+        0.5842828131263064
+      ],
+      "dominant_sign_probability": 0.7725,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "decodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.5,
+      "p": 0.2,
+      "beta": -0.2829941309909301,
+      "beta_interval90": [
+        -0.8758262059081589,
+        0.26716339311659965
+      ],
+      "dominant_sign_probability": 0.77015,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "decodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.65,
+      "p": 0.32,
+      "beta": 0.12904987942675808,
+      "beta_interval90": [
+        -0.1504105235248063,
+        0.4134645363524352
+      ],
+      "dominant_sign_probability": 0.7664,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "undecodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 1.0,
+      "p": 0.45,
+      "beta": 0.782225297874815,
+      "beta_interval90": [
+        -9.808792388872343,
+        1.6468967502144132
+      ],
+      "dominant_sign_probability": 0.7558,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "decodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.15,
+      "p": 0.32,
+      "beta": 0.11891287564523476,
+      "beta_interval90": [
+        -0.159177058070964,
+        0.4043111703757782
+      ],
+      "dominant_sign_probability": 0.749,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "undecodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.2,
+      "p": 0.16,
+      "beta": -0.1493202694294189,
+      "beta_interval90": [
+        -0.5195496416518217,
+        0.2388613906645832
+      ],
+      "dominant_sign_probability": 0.7411,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "decodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.35,
+      "p": 0.49,
+      "beta": 0.10776090387084825,
+      "beta_interval90": [
+        -0.18159785646453994,
+        0.3892165173484784
+      ],
+      "dominant_sign_probability": 0.72715,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "decodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.7,
+      "p": 0.28,
+      "beta": -0.1396444875003525,
+      "beta_interval90": [
+        -0.523659242144567,
+        0.2293374133689008
+      ],
+      "dominant_sign_probability": 0.7217,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "decodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.15,
+      "p": 0.16,
+      "beta": -0.15353733419551394,
+      "beta_interval90": [
+        -0.6163614626738763,
+        0.28458080564112515
+      ],
+      "dominant_sign_probability": 0.70735,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "decodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.45,
+      "p": 0.08,
+      "beta": -1.8313294694320639,
+      "beta_interval90": [
+        -4.334966368238915,
+        0.2836669096435216
+      ],
+      "dominant_sign_probability": 0.67805,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "decodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 1.0,
+      "p": 0.12,
+      "beta": -2.838347724234149,
+      "beta_interval90": [
+        -5.369436523750723,
+        5.016567760303251e-16
+      ],
+      "dominant_sign_probability": 0.6762,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "decodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.7,
+      "p": 0.08,
+      "beta": -2.838347724234149,
+      "beta_interval90": [
+        -5.369436523750723,
+        5.016567760303251e-16
+      ],
+      "dominant_sign_probability": 0.6738,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "decodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.55,
+      "p": 0.08,
+      "beta": -2.838347724234149,
+      "beta_interval90": [
+        -5.369436523750723,
+        5.016567760303251e-16
+      ],
+      "dominant_sign_probability": 0.67275,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "decodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.95,
+      "p": 0.12,
+      "beta": -1.8313294694320637,
+      "beta_interval90": [
+        -4.334966368238915,
+        0.2836669096435216
+      ],
+      "dominant_sign_probability": 0.6712,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "decodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.6,
+      "p": 0.08,
+      "beta": -2.838347724234149,
+      "beta_interval90": [
+        -5.369436523750723,
+        5.016567760303251e-16
+      ],
+      "dominant_sign_probability": 0.67115,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "decodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.65,
+      "p": 0.08,
+      "beta": -2.838347724234149,
+      "beta_interval90": [
+        -5.369436523750723,
+        5.016567760303251e-16
+      ],
+      "dominant_sign_probability": 0.6686,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "decodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.5,
+      "p": 0.08,
+      "beta": -1.8313294694320637,
+      "beta_interval90": [
+        -4.334966368238915,
+        0.2836669096435216
+      ],
+      "dominant_sign_probability": 0.6679,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "decodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.6,
+      "p": 0.49,
+      "beta": 0.06788981339838414,
+      "beta_interval90": [
+        -0.2699362865812602,
+        0.3864737650862917
+      ],
+      "dominant_sign_probability": 0.64005,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "undecodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.85,
+      "p": 0.49,
+      "beta": 0.03959343346574686,
+      "beta_interval90": [
+        -0.14441704302937391,
+        0.22676288275313133
+      ],
+      "dominant_sign_probability": 0.6316,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "decodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.6,
+      "p": 0.45,
+      "beta": -0.0640880629464376,
+      "beta_interval90": [
+        -0.36759347455167457,
+        0.22178542804485185
+      ],
+      "dominant_sign_probability": 0.63005,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "undecodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.2,
+      "p": 0.36,
+      "beta": -0.06247025003531076,
+      "beta_interval90": [
+        -0.42321634171172,
+        0.28378379778719687
+      ],
+      "dominant_sign_probability": 0.613,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "undecodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.4,
+      "p": 0.4,
+      "beta": -0.0404043361022608,
+      "beta_interval90": [
+        -0.3146122705967396,
+        0.21096542894277603
+      ],
+      "dominant_sign_probability": 0.57305,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "undecodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.25,
+      "p": 0.49,
+      "beta": 0.027912041549549172,
+      "beta_interval90": [
+        -0.2578617180966118,
+        0.33548688076310973
+      ],
+      "dominant_sign_probability": 0.5572,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "decodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.5,
+      "p": 0.45,
+      "beta": 0.014923661299725981,
+      "beta_interval90": [
+        -0.17060774919080904,
+        0.19578997488455988
+      ],
+      "dominant_sign_probability": 0.55245,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "undecodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.75,
+      "p": 0.08,
+      "beta": 5.016567760303251e-16,
+      "beta_interval90": [
+        5.016567760303251e-16,
+        5.016567760303251e-16
+      ],
+      "dominant_sign_probability": 0.0,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [
+        "decodable"
+      ],
+      "priority_tier": 2,
+      "priority_reason": "adjacent to one resolved phase",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.55,
+      "p": 0.49,
+      "beta": 0.18780263933734237,
+      "beta_interval90": [
+        -0.018273391313827915,
+        0.3980312107141132
+      ],
+      "dominant_sign_probability": 0.93235,
+      "leave_one_distance_out_sign_stable": true,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "additional independent seed trajectories"
+    },
+    {
+      "q": 0.0,
+      "p": 0.4,
+      "beta": -0.21738078645012865,
+      "beta_interval90": [
+        -0.48968252238070964,
+        0.07977416475136541
+      ],
+      "dominant_sign_probability": 0.8901,
+      "leave_one_distance_out_sign_stable": true,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "additional independent seed trajectories"
+    },
+    {
+      "q": 0.15,
+      "p": 0.2,
+      "beta": 0.18791297380308403,
+      "beta_interval90": [
+        -0.06613831062889573,
+        0.4551715072129994
+      ],
+      "dominant_sign_probability": 0.88165,
+      "leave_one_distance_out_sign_stable": true,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "additional independent seed trajectories"
+    },
+    {
+      "q": 0.25,
+      "p": 0.36,
+      "beta": 0.14552090605203724,
+      "beta_interval90": [
+        -0.10329378451025974,
+        0.3916915714425773
+      ],
+      "dominant_sign_probability": 0.83205,
+      "leave_one_distance_out_sign_stable": true,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "additional independent seed trajectories"
+    },
+    {
+      "q": 0.3,
+      "p": 0.36,
+      "beta": -0.1148022571914606,
+      "beta_interval90": [
+        -0.33426005626603694,
+        0.12405876457631189
+      ],
+      "dominant_sign_probability": 0.7924,
+      "leave_one_distance_out_sign_stable": true,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "additional independent seed trajectories"
+    },
+    {
+      "q": 0.1,
+      "p": 0.49,
+      "beta": 0.11417694048380085,
+      "beta_interval90": [
+        -0.1064624664551892,
+        0.34383385097188973
+      ],
+      "dominant_sign_probability": 0.79175,
+      "leave_one_distance_out_sign_stable": true,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "additional independent seed trajectories"
+    },
+    {
+      "q": 0.2,
+      "p": 0.4,
+      "beta": 0.1506730530330075,
+      "beta_interval90": [
+        -0.2076248240251456,
+        0.514533839724434
+      ],
+      "dominant_sign_probability": 0.75655,
+      "leave_one_distance_out_sign_stable": true,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "additional independent seed trajectories"
+    },
+    {
+      "q": 0.8,
+      "p": 0.49,
+      "beta": 0.07622407357770622,
+      "beta_interval90": [
+        -0.09665384343036107,
+        0.26214995945914704
+      ],
+      "dominant_sign_probability": 0.75225,
+      "leave_one_distance_out_sign_stable": true,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "additional independent seed trajectories"
+    },
+    {
+      "q": 0.35,
+      "p": 0.4,
+      "beta": -0.15593330979747894,
+      "beta_interval90": [
+        -0.5793804908422671,
+        0.25433818207530023
+      ],
+      "dominant_sign_probability": 0.7242,
+      "leave_one_distance_out_sign_stable": true,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "additional independent seed trajectories"
+    },
+    {
+      "q": 0.15,
+      "p": 0.45,
+      "beta": -0.054180361085142355,
+      "beta_interval90": [
+        -0.28600186713357345,
+        0.20149526463964154
+      ],
+      "dominant_sign_probability": 0.65585,
+      "leave_one_distance_out_sign_stable": true,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "additional independent seed trajectories"
+    },
+    {
+      "q": 0.2,
+      "p": 0.49,
+      "beta": 0.07045380150884323,
+      "beta_interval90": [
+        -0.24248533794366592,
+        0.3903056563916293
+      ],
+      "dominant_sign_probability": 0.64155,
+      "leave_one_distance_out_sign_stable": true,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "additional independent seed trajectories"
+    },
+    {
+      "q": 0.05,
+      "p": 0.45,
+      "beta": 0.3009827018646672,
+      "beta_interval90": [
+        -0.007920276131474824,
+        0.5945382731400781
+      ],
+      "dominant_sign_probability": 0.9444,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.4,
+      "p": 0.49,
+      "beta": -0.2731958721964454,
+      "beta_interval90": [
+        -0.5761501676594057,
+        0.04246664255031636
+      ],
+      "dominant_sign_probability": 0.92185,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.3,
+      "p": 0.4,
+      "beta": -0.19450781671237455,
+      "beta_interval90": [
+        -0.452495359985603,
+        0.022795461597506034
+      ],
+      "dominant_sign_probability": 0.9186,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.35,
+      "p": 0.45,
+      "beta": -0.1489158621769324,
+      "beta_interval90": [
+        -0.3215458374656595,
+        0.04552991042766799
+      ],
+      "dominant_sign_probability": 0.90295,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.4,
+      "p": 0.36,
+      "beta": 0.22148766500074585,
+      "beta_interval90": [
+        -0.06933821420597439,
+        0.4683812530057391
+      ],
+      "dominant_sign_probability": 0.8979,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.0,
+      "p": 0.36,
+      "beta": 0.14213286912780426,
+      "beta_interval90": [
+        -0.07372337596060617,
+        0.3692148207410794
+      ],
+      "dominant_sign_probability": 0.84845,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.35,
+      "p": 0.08,
+      "beta": -1.640476336977046,
+      "beta_interval90": [
+        -5.369436523750723,
+        2.8050099130241097
+      ],
+      "dominant_sign_probability": 0.82735,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.25,
+      "p": 0.45,
+      "beta": 0.11942720272876949,
+      "beta_interval90": [
+        -0.10096705753467371,
+        0.3385202333275857
+      ],
+      "dominant_sign_probability": 0.81065,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.05,
+      "p": 0.49,
+      "beta": -0.09133383137554481,
+      "beta_interval90": [
+        -0.31975698192535007,
+        0.13773133502416463
+      ],
+      "dominant_sign_probability": 0.74145,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.35,
+      "p": 0.36,
+      "beta": -0.05919963177270418,
+      "beta_interval90": [
+        -0.24467751901199508,
+        0.14694948281545794
+      ],
+      "dominant_sign_probability": 0.69565,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.05,
+      "p": 0.4,
+      "beta": -0.059346806336640925,
+      "beta_interval90": [
+        -0.2494208400652929,
+        0.12744351148416863
+      ],
+      "dominant_sign_probability": 0.6951,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.4,
+      "p": 0.45,
+      "beta": -0.045668559213971754,
+      "beta_interval90": [
+        -0.19838955254964855,
+        0.09711457173479453
+      ],
+      "dominant_sign_probability": 0.67905,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.15,
+      "p": 0.49,
+      "beta": 0.08622152851127009,
+      "beta_interval90": [
+        -0.2738557021537672,
+        0.40938573751251234
+      ],
+      "dominant_sign_probability": 0.6702,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.1,
+      "p": 0.45,
+      "beta": 0.05432324824266133,
+      "beta_interval90": [
+        -0.20321802080432588,
+        0.2969722737606158
+      ],
+      "dominant_sign_probability": 0.6443,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.0,
+      "p": 0.45,
+      "beta": 0.10551447257179573,
+      "beta_interval90": [
+        -0.29449306428118677,
+        0.5421915823929011
+      ],
+      "dominant_sign_probability": 0.64405,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.0,
+      "p": 0.49,
+      "beta": -0.05428939406698537,
+      "beta_interval90": [
+        -0.30472745260802103,
+        0.18509535894415
+      ],
+      "dominant_sign_probability": 0.6403,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.2,
+      "p": 0.45,
+      "beta": 0.05553126444960406,
+      "beta_interval90": [
+        -0.26863765012479335,
+        0.3649266941079518
+      ],
+      "dominant_sign_probability": 0.6213,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.45,
+      "p": 0.49,
+      "beta": 0.027571911330323596,
+      "beta_interval90": [
+        -0.16782018241257304,
+        0.2302833924338585
+      ],
+      "dominant_sign_probability": 0.58235,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.05,
+      "p": 0.32,
+      "beta": 0.019440620868851552,
+      "beta_interval90": [
+        -0.15751396793631653,
+        0.19804829093971535
+      ],
+      "dominant_sign_probability": 0.57445,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.3,
+      "p": 0.32,
+      "beta": -0.022227571052531675,
+      "beta_interval90": [
+        -0.22658451670199048,
+        0.1652208695606655
+      ],
+      "dominant_sign_probability": 0.55985,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.5,
+      "p": 0.49,
+      "beta": -0.027325350009006523,
+      "beta_interval90": [
+        -0.28524517292151585,
+        0.22121551315316798
+      ],
+      "dominant_sign_probability": 0.558,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.25,
+      "p": 0.4,
+      "beta": 0.009717095966181739,
+      "beta_interval90": [
+        -0.15607409100404163,
+        0.17075391046078492
+      ],
+      "dominant_sign_probability": 0.5411,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.8,
+      "p": 0.08,
+      "beta": 5.016567760303251e-16,
+      "beta_interval90": [
+        5.016567760303251e-16,
+        5.016567760303251e-16
+      ],
+      "dominant_sign_probability": 0.0,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.85,
+      "p": 0.08,
+      "beta": 5.016567760303251e-16,
+      "beta_interval90": [
+        5.016567760303251e-16,
+        5.016567760303251e-16
+      ],
+      "dominant_sign_probability": 0.0,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.9,
+      "p": 0.08,
+      "beta": 5.016567760303251e-16,
+      "beta_interval90": [
+        5.016567760303251e-16,
+        5.016567760303251e-16
+      ],
+      "dominant_sign_probability": 0.0,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 0.95,
+      "p": 0.08,
+      "beta": 5.016567760303251e-16,
+      "beta_interval90": [
+        5.016567760303251e-16,
+        5.016567760303251e-16
+      ],
+      "dominant_sign_probability": 0.0,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    },
+    {
+      "q": 1.0,
+      "p": 0.08,
+      "beta": 5.016567760303251e-16,
+      "beta_interval90": [
+        5.016567760303251e-16,
+        5.016567760303251e-16
+      ],
+      "dominant_sign_probability": 0.0,
+      "leave_one_distance_out_sign_stable": false,
+      "resolved_neighbor_classes": [],
+      "priority_tier": 3,
+      "priority_reason": "unresolved interior",
+      "evidence_need": "an additional code distance before more same-distance shots"
+    }
+  ],
+  "interpretation": "Same-distance shot extension is appropriate only for gray cells whose beta sign is stable under every leave-one-distance-out refit. Cells with a sign reversal need an additional distance to test scaling curvature before more shots can support phase promotion.",
+  "crossing_statistic_used": false,
+  "generated_at": "2026-08-28T06:54:58.044718+00:00",
+  "source": {
+    "path": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase2-residual80-honeycomb-slope-flow-2026-08-28.json",
+    "sha256": "6f8d1d4d54142fd41f7e1313d57d938bb98c6251c5ad1b31bfd1f8a563298a85"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-28T03:20:00Z",
+  "campaign": "phase2-residual80-q-skeleton-2026-08-28",
+  "status": "discovery_complete",
+  "scope": {
+    "lattice": "honeycomb",
+    "q_grid": "0.00:0.05:1.00",
+    "sizes": [7, 9, 11],
+    "p_grid": [0.08, 0.12, 0.16, 0.2, 0.24, 0.28, 0.32, 0.36, 0.4, 0.45, 0.49],
+    "seed_clusters_per_cell": 5,
+    "shots_per_seed": 200,
+    "shots_per_cell": 1000,
+    "validated_shards": 21,
+    "validated_raw_records": 693000
+  },
+  "decoder": {
+    "recurrence": "probability_damping",
+    "damping": 0.25,
+    "update_schedule": "residual_priority",
+    "residual_priority_order": "stable_sort",
+    "max_iterations": 80,
+    "matching_projection": "posterior_llr",
+    "compiled": true
+  },
+  "validation": {
+    "syndrome_fidelity": "passed for every raw record",
+    "raw_gzip_sha256_and_count": "passed for every shard",
+    "configuration_and_runtime": "passed for every shard",
+    "source_stability_start_equals_end": "passed for every shard",
+    "storage_recovery": {
+      "recovered_exact_hash_atomic_files": 11,
+      "already_formal_files": 10,
+      "audit": "phase2-residual80-q-skeleton-2026-08-28-atomic-raw-recovery.json"
+    },
+    "test_suite": "19/19 passed"
+  },
+  "inference": {
+    "confidence_level": 0.9,
+    "bootstrap_replicates": 20000,
+    "resampling_unit": "complete nested-p seed trajectory, independently within each lattice size",
+    "topology_policy": "retain no-crossing and multiple-crossing outcomes; conditional intervals are not promoted when topology gates fail",
+    "classifications": {
+      "unresolved_q": [0.0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9],
+      "ceiling_compatible_q": [0.95, 1.0],
+      "finite_q": [],
+      "below_range_q": []
+    }
+  },
+  "interpretation": {
+    "result": "The discovery resolves neither p_c(q) nor q_c. Multiple directed crossings dominate q<=0.85; q=0.90 has no point crossing but does not pass the ceiling sign-stability gate.",
+    "candidate_transition_band": [0.9, 0.95],
+    "candidate_band_status": "adaptive target only, not a q_c estimate or confidence interval",
+    "next_transition": "Register a bounded high-q refinement that increases independent seed clusters near q=0.90-0.95 before adding q midpoints. Preserve topology-aware 90% inference and leave square deferred."
+  },
+  "evidence": {
+    "analysis": "phase2-residual80-q-skeleton-2026-08-28-analysis.json",
+    "analysis_sha256": "11e99b1787530456c3537ab2c117186cd8eeaa29d8e9015715c22268f7f4944a",
+    "figure": "../figures/phase2-residual80-q-skeleton-2026-08-28-honeycomb-phase-map.png",
+    "recovery_audit": "phase2-residual80-q-skeleton-2026-08-28-atomic-raw-recovery.json",
+    "recovery_audit_sha256": "8354b9abcb88fa6cd2941000f5d659242e99a1338e38aec9d8b3a5d4e56a0fbf"
+  }
+}

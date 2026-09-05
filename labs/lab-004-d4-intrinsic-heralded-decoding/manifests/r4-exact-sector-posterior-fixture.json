@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-08-29T00:50:00Z",
+  "purpose": "exact conditioned logical-sector posterior on the registered nonwinding fixture",
+  "protocol": {
+    "primitive_size": 2,
+    "edge_count": 12,
+    "reference_error_mask": 73,
+    "compatible_candidates": 4,
+    "relative_sectors": 4,
+    "operation": "sum P(s|E)P(E) within each relative homology sector"
+  },
+  "results": [
+    {
+      "error_rate": 0.1,
+      "sector_probabilities_sorted": [0.004098360655737699, 0.3319672131147539, 0.3319672131147539, 0.3319672131147539],
+      "bayes_logical_failure_probability": 0.668032786885246,
+      "conditional_entropy_bits": 1.6168703264933626,
+      "top_two_log2_evidence_gap": 0.0,
+      "log2_total_evidence": -9.742924790989274
+    },
+    {
+      "error_rate": 0.6,
+      "sector_probabilities_sorted": [0.19047619047619055, 0.19047619047619055, 0.19047619047619055, 0.42857142857142866],
+      "bayes_logical_failure_probability": 0.5714285714285714,
+      "conditional_entropy_bits": 1.890920993589198,
+      "top_two_log2_evidence_gap": 1.1699250014423122,
+      "log2_total_evidence": -11.715932213706118
+    }
+  ],
+  "claim_boundary": "This is exact R4 sector summation for one primitive nonwinding observation. It is not an LER, threshold, or paper-L performance result."
+}

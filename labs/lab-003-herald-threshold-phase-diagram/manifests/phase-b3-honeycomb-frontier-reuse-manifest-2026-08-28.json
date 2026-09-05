@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "status": "analyzed",
+  "campaign": "phase-b3-honeycomb-frontier-reuse-2026-08-28",
+  "purpose": "Cover every remaining red/green-adjacent gray cell while reusing five audited Phase S1 measurement shards and adding fresh shots at only the one uncovered cell.",
+  "selection_evidence": {
+    "path": "manifests/phase-b3-honeycomb-frontier-reuse-selection-2026-08-28.json",
+    "sha256": "4c99b427d109408266c3be492b82e734d469c91f5fb245a611cd9be011caa11f",
+    "phase_b2_map": "results/phase-b2-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28.json",
+    "phase_b2_map_sha256": "ede9d4e87211fc60bddbca0e6236373d2bbcb4ee7657c1e7e6c0f0987ceb4fde",
+    "phase_s1_completion_audit": "results/phase-s1-honeycomb-slope-flow-gray-frontier-completion-audit-2026-08-28.json",
+    "phase_s1_completion_audit_sha256": "5bb4280b0bbce0a90dcb141dd29157162dbeadf6d0bcf70bf200d4bbc1a066d8"
+  },
+  "lattice": "honeycomb",
+  "frontier_candidate_count": 6,
+  "reused_candidate_count": 5,
+  "reused_evidence_source": "manifests/phase-b3-honeycomb-frontier-reuse-selection-2026-08-28.json",
+  "new_seeds": [873001, 873002, 873003, 873004, 873005],
+  "shots_per_seed": 200,
+  "jobs": [
+    {
+      "branch": "independent_shots",
+      "q": 0.55,
+      "p": 0.24,
+      "sizes": [7, 9, 11],
+      "expected_decodes": 3000
+    }
+  ],
+  "job_count": 1,
+  "workers_cap": 1,
+  "expected_new_decodes": 3000,
+  "decoder": {
+    "name": "HeraldAwareBpMatchingDecoder",
+    "recurrence_mode": "damping",
+    "damping": 0.25,
+    "max_iterations": 80,
+    "update_schedule": "residual_priority",
+    "residual_priority_order": "stable_sort",
+    "residual_priority_buffer_reuse": false,
+    "residual_priority_cached_products": false,
+    "matching_projection": "posterior_llr",
+    "p_m": 0.0,
+    "p_h": 0.0,
+    "use_numba": true
+  },
+  "required_source_hashes": {
+    "runner": "14adf7579825e64fa4dd74a6ff374207c3f7b55349b5b533c1ff054bf6d66474",
+    "lattice_model": "b87a5feba27675e26970360d730324b7d3740e4dc0492b4dc478e510f140c9e7",
+    "decoder": "990af03ac4c99684e9e9dac6e5a8bb64d773015879c1638906f5fb592cdc6a43",
+    "damping_decoder": "a08ddf0b58e63bb2627c35cafbe570fe6a0ee8dc21bd4eaca720d6dbcbc5e182",
+    "numba_kernels": "c2254c95600c4f5e3a8c2279d5686a99c8d3810a4bb0c814a4fd0cbf16c184cc"
+  },
+  "analysis": {
+    "primary": "Bayesian posterior OLS linear-projection slope against code distance",
+    "classification_threshold": 0.9,
+    "prior_sensitivity": "Jeffreys Beta(1/2,1/2) primary and uniform Beta(1,1) sensitivity",
+    "seed_reuse_pooling": "Pool audited Phase S1 independent L7/L9/L11 counts with the Phase 2 base counts.",
+    "distance_reuse_pooling": "Use Phase 2 L7/L9/L11, pool the independent Phase S1 L11 anchor into L11, and add its L13 counts, yielding L7/L9/L11/L13.",
+    "new_job_pooling": "Pool the new independent L7/L9/L11 counts at q=0.55,p=0.24 with the Phase 2 base counts.",
+    "claim_boundary": "Update only the six current red/green-adjacent gray cells; no other gray cell, interpolation, or asymptotic boundary claim."
+  },
+  "preflight_gate": "Implement and test a one-job non-overwriting dispatcher, reuse-hash/source audit, new-output completion audit, and heterogeneous pooled analyzer before launch.",
+  "stop_rule": "Stop after one new job and 3000 decodes. Do not rerun the five Phase S1 cells, add another gray cell, add p/q midpoints, or expand to square.",
+  "launch_gate": "closed_data_complete"
+}

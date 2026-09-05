@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-27T18:06:20.371271+00:00",
+  "source": "results/q1-square-l3-l9-highp-refined-5000-2026-08-27.json",
+  "design": {
+    "lattice": "square",
+    "q": 1.0,
+    "sizes": [
+      3,
+      5,
+      7,
+      9
+    ],
+    "p_grid": [
+      0.3,
+      0.31,
+      0.32,
+      0.33,
+      0.34,
+      0.35,
+      0.36,
+      0.37,
+      0.38,
+      0.39,
+      0.4,
+      0.41,
+      0.42,
+      0.43,
+      0.44,
+      0.45,
+      0.46,
+      0.47,
+      0.48,
+      0.49
+    ],
+    "shots_per_cell": 5000
+  },
+  "adjacent_size_crossings": {
+    "L3_L5": {
+      "sizes": [
+        3,
+        5
+      ],
+      "point_directed_crossings": [],
+      "point_status": "not_bracketed",
+      "bootstrap": {
+        "method": "seed-cluster bootstrap preserving the nested p trajectory",
+        "seed": 620001,
+        "replicates": 20000,
+        "single_crossing_replicates": 0,
+        "no_crossing_replicates": 20000,
+        "multiple_crossing_replicates": 0,
+        "single_crossing_fraction": 0.0,
+        "conditional_quantiles": {
+          "q025": null,
+          "median": null,
+          "q975": null
+        }
+      }
+    },
+    "L5_L7": {
+      "sizes": [
+        5,
+        7
+      ],
+      "point_directed_crossings": [
+        0.38521739130434784,
+        0.4043333333333334
+      ],
+      "point_status": "multiple",
+      "bootstrap": {
+        "method": "seed-cluster bootstrap preserving the nested p trajectory",
+        "seed": 620001,
+        "replicates": 20000,
+        "single_crossing_replicates": 7248,
+        "no_crossing_replicates": 0,
+        "multiple_crossing_replicates": 12752,
+        "single_crossing_fraction": 0.3624,
+        "conditional_quantiles": {
+          "q025": 0.37052631578947365,
+          "median": 0.405,
+          "q975": 0.43119999999999997
+        }
+      }
+    },
+    "L7_L9": {
+      "sizes": [
+        7,
+        9
+      ],
+      "point_directed_crossings": [
+        0.36610169491525424,
+        0.4238181818181818,
+        0.44386363636363635,
+        0.4819718309859155
+      ],
+      "point_status": "multiple",
+      "bootstrap": {
+        "method": "seed-cluster bootstrap preserving the nested p trajectory",
+        "seed": 620001,
+        "replicates": 20000,
+        "single_crossing_replicates": 3996,
+        "no_crossing_replicates": 210,
+        "multiple_crossing_replicates": 15794,
+        "single_crossing_fraction": 0.1998,
+        "conditional_quantiles": {
+          "q025": 0.3601428571428571,
+          "median": 0.36864864864864866,
+          "q975": 0.4498913043478261
+        }
+      }
+    }
+  },
+  "convergence": {
+    "L3": {
+      "minimum_rate": 1.0,
+      "maximum_rate": 1.0
+    },
+    "L5": {
+      "minimum_rate": 0.4312,
+      "maximum_rate": 0.7166
+    },
+    "L7": {
+      "minimum_rate": 0.0244,
+      "maximum_rate": 0.1594
+    },
+    "L9": {
+      "minimum_rate": 0.0,
+      "maximum_rate": 0.016
+    }
+  },
+  "evidence_boundary": "Finite-size high-p operational crossings of the fixed 40-iteration decoder; not an asymptotic or converged-BP threshold."
+}

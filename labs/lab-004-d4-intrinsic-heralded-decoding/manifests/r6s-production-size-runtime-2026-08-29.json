@@ -1,0 +1,36 @@
+{
+  "claim_boundary": "This is a controlled CPU scaling baseline, not a decoder-accuracy study, GPU benchmark, or a claim about typical observation-distribution latency. It establishes the target sizes and the removable topology-construction cost before caching.",
+  "generated_at": "2026-08-30T06:47:10.650059+00:00",
+  "manifest": "manifests/r6s-production-size-runtime-manifest-2026-08-29.json",
+  "rows": [
+    {
+      "binary_variables": 6075,
+      "cached_end_to_end_speedup": 5.06823649531885,
+      "cached_refresh_and_recurrence_seconds": 0.3271489833947271,
+      "dense_pack_seconds": 0.13095566700212657,
+      "directed_messages": 28350,
+      "factors": 8100,
+      "graph_build_seconds": 1.2053517500171438,
+      "maximum_factor_arity": 6,
+      "one_time_template_build_seconds": 1.3971640419913456,
+      "physical_edges": 2025,
+      "prepacked_microseconds_per_iteration": 32176.100002834573,
+      "prepacked_recurrence_seconds": 0.32176100002834573,
+      "size": 15
+    }
+  ],
+  "schema_version": 1,
+  "scope": {
+    "error_rate": 0.2,
+    "forced_full_cap_tolerance": 1e-300,
+    "forced_iterations": 10,
+    "new_physical_samples": 0,
+    "observation": "deterministic all-zero flux syndrome with all charge outcomes unmeasured; computational microbenchmark only",
+    "old_message_weight": 0.25,
+    "sizes": [
+      15
+    ],
+    "timing_repetitions_per_size": 5
+  },
+  "status": "completed_production_size_cpu_baseline"
+}

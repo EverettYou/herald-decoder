@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "status": "bounded_preflights_verified_with_scope_corrections",
+  "completed_at": "2026-08-29T10:18:00Z",
+  "question": "Which parts of the existing Lab 005 spacetime ILP and JIT age gate reproduce published source structure, and which parts remain generic scaffolding rather than a D4 or D(S3) fault-tolerant decoder?",
+  "sources": {
+    "jing2026": {
+      "path": "references/jing2026-ilp-topological-decoder/paper.pdf",
+      "sha256": "6e34ddfcff24d1b5aaed7921aead860889156865d6b9d2f01420da5a13f06219",
+      "audited_sections": ["VII.A-B, Eqs. (18)-(21)", "VII.C, Algorithm 1"]
+    },
+    "lyons2026": {
+      "path": "references/lyons2026-anyonic-fault-tolerance/paper.pdf",
+      "sha256": "9d7473adeaffbb4065e1f279d5dff8a5911483f5773101bba506b66ba532d6ea",
+      "audited_sections": ["Methods: ungauging and absorbers", "Methods: just-in-time decoding", "threshold proof boundary"]
+    }
+  },
+  "source_match_matrix": [
+    {
+      "component": "spacetime_ilp variable blocks",
+      "status": "structurally_source_matched_to_jing2026",
+      "evidence": "Binary physical-event, measurement-error, and one-hot local fusion-channel variables implement the blocks of Eq. (18)."
+    },
+    {
+      "component": "spatial/incoming/outgoing multiplicity constraints",
+      "status": "structurally_source_matched_to_jing2026",
+      "evidence": "Per-site, per-species equalities implement the three Eq. (19) incidences and temporal continuation through previous_site."
+    },
+    {
+      "component": "unique fusion channel",
+      "status": "structurally_source_matched_to_jing2026",
+      "evidence": "Exactly one caller-supplied syndrome-compatible channel is selected at every site, matching Eq. (20)."
+    },
+    {
+      "component": "linear objective",
+      "status": "equivalent_only_after_explicit_sign_conversion",
+      "evidence": "Jing maximizes log weights in Eq. (21); SciPy minimizes. The adapter now states that callers must supply negative log weights or equivalent additive costs."
+    },
+    {
+      "component": "measured syndrome and defect dependence",
+      "status": "caller_supplied_generic_contract",
+      "evidence": "The compiler does not construct F_(a,Delta); the caller must supply the allowed channels. A two-species Fig. 4(c/d)-type fixture verifies that changing measured syndrome changes the allowed temporal explanation."
+    },
+    {
+      "component": "JIT bounding-cube age predicate",
+      "status": "source_matched_to_jing2026_algorithm_1_step_3_1",
+      "evidence": "Q is the side length of the smallest axis-aligned spacetime cube; a cluster defers exactly when a defect or inferred correction element is younger than Q, i.e. after t-Q."
+    },
+    {
+      "component": "JIT cluster correction and defect removal",
+      "status": "bookkeeping_only",
+      "evidence": "Committed defects are removed, but no correction circuit, physical fusion, or measurement-record reversal is performed."
+    },
+    {
+      "component": "Lyons-Brown absorber-distance scheduling",
+      "status": "not_implemented",
+      "evidence": "No nearest-absorber metric, absorbing-region state, or age reset relative to an ungauging boundary exists."
+    },
+    {
+      "component": "Lyons-Brown D(S3)/D(Z3) protocol",
+      "status": "not_implemented",
+      "evidence": "No phase/boundary branch, ungauging, neutrality test, non-neutral deferral, re-gauging, or linked-cluster semantics exists."
+    },
+    {
+      "component": "physical model",
+      "status": "not_implemented",
+      "evidence": "The compiler has no complete D4 fusion-channel table, D(S3) circuit adapter, noisy repeated herald channel, or lattice-scale decoder."
+    }
+  ],
+  "audit_corrections": [
+    "Made the JIT clock monotone and transactional: rejected calls no longer advance time or partially commit earlier clusters.",
+    "Required each supplied cluster set to partition every unresolved defect exactly once, with unique cluster and defect identifiers.",
+    "Rejected negative/future defect and correction times.",
+    "Required unique ILP site, physical-event, and within-site channel labels so selected outputs remain unambiguous.",
+    "Rejected non-finite fusion-channel costs.",
+    "Documented the required sign conversion between the paper's maximum-log-weight objective and SciPy's minimization convention."
+  ],
+  "verification": {
+    "jit_tests": 7,
+    "ilp_tests": 6,
+    "focused_tests": 13,
+    "focused_status": "passed",
+    "full_lab_tests": 27,
+    "full_lab_status": "passed",
+    "jit_invariants": [
+      "single-defect boundary-age equality",
+      "spatial extent determines Q",
+      "young correction element delays commit",
+      "future information rejected",
+      "overlapping clusters rejected",
+      "time reversal and incomplete partitions rejected",
+      "duplicate new defect identifiers rejected transactionally"
+    ],
+    "ilp_invariants": [
+      "lower-cost physical explanation selected",
+      "lower-cost measurement explanation selected",
+      "temporal string continues into the next site",
+      "measured syndrome changes an allowed non-Abelian channel",
+      "inconsistent incoming temporal channel is infeasible",
+      "ambiguous labels and non-finite channel costs rejected"
+    ]
+  },
+  "source_freeze": {
+    "scripts/jit_schedule.py": "feb093a272825927bebfe8a8b2a00ca9161342ed4ffc3a2071d031ce826ab3a6",
+    "scripts/spacetime_ilp.py": "c9ead9c415766c10f6adb68d96c795c57453a0bd8969e4952bd8eb96e40c4cb0",
+    "scripts/test_jit_schedule.py": "ec8f989d4898a6199c11538f6656a2e7c82228837e6bc02beb6754ebfc23d4f2",
+    "scripts/test_spacetime_ilp.py": "dd1d1cc5694da6928e0bc9fdbc054645df1079553529ff271803426b449c3a86"
+  },
+  "claim_boundary": "The ILP algebra and Jing Algorithm-1 age predicate are bounded structural preflights. They are not a complete Jing just-in-time decoder, a Lyons-Brown D(S3) reproduction, a D4 noisy-measurement decoder, a schedule comparison, a threshold, or fault tolerance.",
+  "next_gate": "Register and implement the missing deferred-record propagation plus an explicit schedule-state layer that distinguishes the Jing ILP baseline from the Lyons-Brown absorber/ungauging branch; do not attach either to noisy D4 data until the physical channel is registered."
+}

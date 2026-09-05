@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "status": "completed_replay_consistent_mechanism_audit",
+  "phase": "R6O",
+  "title": "Paired mechanism audit for the R6N D4 flux-policy divergence",
+  "question": "Which public-observation, BP-state, and correction-topology features distinguish the 25 R6D-BP-over-O2 improvements from the one regression in the frozen default-cell cohort?",
+  "input": "results/r6n-default-flux-policy-comparison-2026-08-29.json",
+  "scope": {
+    "records": "all 100 frozen R6N trajectories",
+    "policies": ["O2_published_herald_weight_MWPM", "R6D_local_BP_posterior_LLR_MWPM"],
+    "recomputed_fields": ["R6D BP marginals", "posterior-LLR weights", "correction replay", "herald incidence", "Boolean-union topology"],
+    "new_physical_samples": 0
+  },
+  "comparison_groups": ["BP_improves_O2", "BP_regresses_O2", "same_first_stage_outcome"],
+  "acceptance": [
+    "every reconstructed public observation, O2 correction, and BP correction equals its frozen R6N record",
+    "all group counts sum to the 100-record nonterminal cohort",
+    "physical truth is used only for post-decode Boolean-union classification"
+  ],
+  "claim_boundary": "Descriptive mechanism audit only. Feature associations do not establish a causal explanation or promote the local BP posterior to an exact D4 posterior.",
+  "outputs": {
+    "result": "results/r6o-paired-flux-mechanism-audit-2026-08-29.json",
+    "report": "results/r6o-paired-flux-mechanism-audit-2026-08-29.md"
+  },
+  "execution": {
+    "replayed_nonterminal_records": 100,
+    "replay_failure_count": 0,
+    "BP_improves_O2": 25,
+    "BP_regresses_O2": 1,
+    "mechanism_signal": "All 25 BP improvements reproduce the physical correction while O2 does not; the one BP regression has the reverse property and is converged, so it is not explained by nonconvergence."
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "executed_at": "2026-08-29T12:51:29Z",
+  "contract": "../manifests/j1-e1-typed-policy-translation-manifest-2026-08-29.json",
+  "scope": "deterministic interface validation; no performance sampling",
+  "implementation": {
+    "module": {
+      "path": "../scripts/d4_projector_instrument.py",
+      "sha256": "83b7d65d99542dde08638d45393f2f81528f036729aa95d1ad83ad6781561ee1"
+    },
+    "tests": {
+      "path": "../scripts/test_d4_projector_instrument.py",
+      "sha256": "30a337e33846d758e51bd380211f48f7bcd33376bdd230553a27362a7635d245"
+    }
+  },
+  "budget_observed": {
+    "lattice": "paper L=2 fixtures",
+    "rounds": 1,
+    "sampling": "none",
+    "focused_runtime_seconds": 1.05,
+    "full_lab_runtime_seconds": 0.90
+  },
+  "verification": {
+    "translation_cases": 6,
+    "focused_file": "20 passed",
+    "full_lab": "106 passed"
+  },
+  "branches": [
+    {
+      "id": "T1A-syndrome-only-projection",
+      "status": "pass",
+      "evidence": [
+        "flux membership maps exactly to the even committed syndrome",
+        "no charge measurement enters the syndrome_only request",
+        "charge-only public-record changes alter provenance but not mode-visible decoded fields or action",
+        "perfect-limit actions equal the restricted adapter action",
+        "translated serialization excludes private truth"
+      ]
+    },
+    {
+      "id": "T1B-heralded-lossless-factorization",
+      "status": "pass",
+      "evidence": [
+        "flux membership maps to flux_syndrome_vertices",
+        "charge membership maps to an explicit measured 0/1 outcome on every projected site",
+        "a multi-label site occupies both fields without conflict",
+        "the translated request and action equal a manually constructed request and action",
+        "perfect-limit actions equal the restricted adapter action"
+      ]
+    },
+    {
+      "id": "T1C-provenance-and-negative-control",
+      "status": "pass",
+      "evidence": [
+        "identical public inputs replay exactly",
+        "changing the scheduler prefix or E1 report changes the combined causal digest",
+        "the callable and serialized request expose no hidden E1 state",
+        "the old adapter rejects a multi-label record that the current public schema and new adapter accept"
+      ]
+    }
+  ],
+  "decision": {
+    "schema_extension_required": false,
+    "localized_gap_classification": "old adapter implementation restriction",
+    "reason": "The existing request already has separate flux-syndrome and charge-measurement fields, which represent both E1 report-membership bits in heralded mode. Syndrome-only intentionally projects away the charge bit under its declared information budget."
+  },
+  "claim_boundary": "This verifies representability, provenance, and mode-specific information flow only. It does not show optimality, calibration, schedule advantage, logical-error performance, a threshold, or fault tolerance.",
+  "next_gate": "Satisfied by the corrected J2 R1-I3 deterministic integration; see manifests/j2-e1-causal-integration-remediation-2026-08-29.json. New sampling remains unregistered."
+}

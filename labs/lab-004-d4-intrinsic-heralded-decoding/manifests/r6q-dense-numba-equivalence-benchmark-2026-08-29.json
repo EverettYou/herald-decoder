@@ -1,0 +1,30 @@
+{
+  "claim_boundary": "A successful benchmark validates one CPU Numba implementation of the fixed default recurrence. It does not measure GPU performance, alter the approximation, validate exact D4 posteriors, or establish asymptotic runtime scaling.",
+  "generated_at": "2026-08-30T04:09:12.042580+00:00",
+  "manifest": "manifests/r6q-dense-numba-equivalence-benchmark-manifest-2026-08-29.json",
+  "maximum_marginal_error": 0.0,
+  "mismatch_count": 0,
+  "records": 100,
+  "schema_version": 1,
+  "source": "r6n-default-flux-policy-comparison-2026-08-29.json",
+  "status": "completed_exact_recurrence_equivalence_benchmark",
+  "timing": {
+    "dense_numba_recurrence_and_packing": {
+      "count": 100,
+      "maximum_seconds": 0.01601358299376443,
+      "mean_seconds": 0.004223684528842569,
+      "median_seconds": 0.0038628125039394945,
+      "minimum_seconds": 0.0025180410011671484
+    },
+    "mean_speedup": 124.65191157938564,
+    "median_speedup": 123.12325850457954,
+    "numba_first_call_compilation_seconds": 0.5672620830009691,
+    "python_recurrence": {
+      "count": 100,
+      "maximum_seconds": 1.2482056659646332,
+      "mean_seconds": 0.526490350428503,
+      "median_seconds": 0.47560206247726455,
+      "minimum_seconds": 0.30207795900059864
+    }
+  }
+}

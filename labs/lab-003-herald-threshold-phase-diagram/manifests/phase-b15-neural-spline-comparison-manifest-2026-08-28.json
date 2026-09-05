@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "status": "registered_ready",
+  "purpose": "Compare two regularized finite-window LLR=0 summaries for collaborator-facing visualization without preselecting a model or claiming a thermodynamic phase boundary.",
+  "sources": {
+    "current_evidence": {
+      "path": "results/phase-b14-honeycomb-continuous-log-odds-map-2026-08-28.json",
+      "sha256": "e41be160b471cc5820a8a19b90cd3fad6ed8ed581c2c4c0587652f5e7e918fdf"
+    },
+    "brackets": {
+      "path": "results/phase-b11-honeycomb-three-layer-reanalysis-2026-08-28.json",
+      "sha256": "a169f3bbd77ab63e4995ecd91f9f385b24edd432b0342d2b56795ddd5524a843"
+    },
+    "method_note": {
+      "path": "results/phase-b15-neural-boundary-method-note-2026-08-28.md",
+      "sha256": "0c4d84161590603e3e0b5d97b97dc2ad279ef67258b16d8787a96557b0c5c9cd"
+    }
+  },
+  "branches": [
+    "interval_constrained_spline",
+    "width3_constrained_neural"
+  ],
+  "eligible_q_rows": "All sixteen B11 rows with two-sided lower brackets; no extrapolation above q=0.75.",
+  "transition_margin_p": 0.04,
+  "shared_likelihood": "Weighted Bernoulli cross-entropy against the continuous posterior upward-trend probability; model logit=(p-p_boundary(q))/0.025.",
+  "shared_constraints": "Both curves are single-valued p(q) and remain inside the linearly interpolated audited lower/upper bracket envelope.",
+  "spline": {
+    "kind": "PCHIP interpolation of optimized bounded knot fractions",
+    "second_difference_penalty": 1200.0,
+    "first_difference_penalty": 2.0
+  },
+  "neural": {
+    "kind": "one-hidden-layer tanh network",
+    "hidden_width": 3,
+    "full_fit_initializations": 16,
+    "full_fit_steps": 1200,
+    "posterior_fit_steps": 350,
+    "second_difference_penalty": 1200.0,
+    "first_difference_penalty": 2.0,
+    "weight_decay": 0.0001
+  },
+  "validation": {
+    "leave_one_q_row_out": true,
+    "primary_metric": "weighted Bernoulli log loss",
+    "report_standard_error": true,
+    "automatic_winner": false
+  },
+  "posterior_propagation": {
+    "kind": "independent Jeffreys-Beta latent-LER draws projected to per-cell slope signs, followed by refitting both models",
+    "replicates": 48,
+    "seed": 915128,
+    "interval": 0.9,
+    "limitation": "Not a seed-cluster bootstrap or thermodynamic-boundary confidence interval."
+  },
+  "analyzer": {
+    "path": "scripts/analyze_phase_b15_boundary_comparison.py",
+    "sha256": "913cbfabf8748d410e9b9b87b35f45bc56086ce943d86116f30a74858ee688ea"
+  },
+  "renderer": {
+    "path": "scripts/render_phase_b15_boundary_comparison.py",
+    "sha256": "68c2ba2c4dd99deffa32c0cfa98a5c9d915a1aeb8db0a1b136cc1707edc95ec5"
+  },
+  "analysis_output": "results/phase-b15-neural-spline-comparison-2026-08-28.json",
+  "figure_output": "figures/phase-b15-neural-spline-boundary-comparison-2026-08-28.png",
+  "new_decoder_runs": 0,
+  "new_decodes": 0,
+  "phase_classification": false,
+  "thermodynamic_boundary_claim": false,
+  "stop_rule": "Stop after both branches, sixteen held-out-row fits per branch, and 48 shared posterior-propagation refits; do not add models, data, q rows, or extrapolation."
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-27T18:45:53Z",
+  "transition": "Lab 003 corrected-LLR remediation contract and provenance audit",
+  "findings": {
+    "active_phase2_shards": {
+      "files": 32,
+      "posterior_llr_files": 32,
+      "distinct_numba_source_hashes": 1,
+      "numba_source_hash": "8f903ad82c2e6c96022b09af99845b98ffb185c7b00a5dafb2edaae9a6c5a830",
+      "generated_at_range": [
+        "2026-08-27T17:04:52.774028+00:00",
+        "2026-08-27T17:54:24.779623+00:00"
+      ]
+    },
+    "primary_q1_high_p_shards": {
+      "files": 2,
+      "posterior_llr_files": 2,
+      "shared_numba_source_hash": "6a523628c9f2c5d42ad8744aa129a9c0a4f2dc76bfc43acf695ab4d6cfa49fa3",
+      "shared_decoder_source_hash": "09899e2622c54019a67521f2524b8d7ab735d978940314a00eb175e4ab079ec0"
+    },
+    "refined_q1_l11_l13": {
+      "matching_projection": "posterior_llr",
+      "decoder_source_hash_matches_current": true,
+      "lattice_source_hash_matches_current": true,
+      "provenance_limitation": "The historical artifact did not record the damping-decoder or Numba-kernel hash. Future runners now record both."
+    },
+    "q0_square_refined": {
+      "decoder": "static-prior syndrome-only PyMatching",
+      "edge_weight": "log((1-p)/p)",
+      "affected_by_bp_projection_bug": false
+    },
+    "legacy_negative_log_files": [
+      "q0-calibration.json",
+      "q1-herald-scan.json"
+    ]
+  },
+  "conclusion": "The current Lab 003 primary and Phase 2 artifacts were regenerated with posterior LLR and do not require another rerun solely because of the historical negative-log bug. The two explicitly listed negative-log smoke files remain invalid for logical inference. The unresolved blocker is fixed-40-iteration BP non-convergence, not the posterior-to-MWPM projection.",
+  "next_registered_step": "Run a bounded q=1 square convergence-cap diagnostic at L=7,9,11,13 and p=0.30,0.40,0.49, comparing synchronous-40, synchronous-80, and stable-sort residual-priority-80 on 64 matched observations per cell."
+}

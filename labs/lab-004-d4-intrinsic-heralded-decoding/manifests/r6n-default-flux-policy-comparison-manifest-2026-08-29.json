@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "status": "completed_default_cell_flux_only_pilot",
+  "phase": "R6N",
+  "title": "Default-cell matched D4 flux-policy comparison",
+  "question": "On one fixed paper-normalized D4 default cell, how do unit-weight MWPM, the published herald-weight MWPM, and posterior-LLR MWPM driven by the R6D local D4 factor graph differ at flux recovery?",
+  "scope": {
+    "lattice": "paper-normalized periodic coloured honeycomb",
+    "size": 2,
+    "physical_error_rate": 0.2,
+    "histories": 100,
+    "seed_salt": 26082906,
+    "flux_policies": [
+      "O0_unit_weight_MWPM",
+      "O2_published_herald_weight_MWPM",
+      "R6D_local_BP_posterior_LLR_MWPM"
+    ],
+    "bp_defaults": {
+      "old_message_weight": 0.25,
+      "max_iterations": 40,
+      "tolerance": 1e-08,
+      "terminal_screened": false
+    }
+  },
+  "matched_design": "Every nonterminal trajectory uses the same physical edge error, flux syndrome, and initial D4 fusion-charge observation for all three first-stage policies. Physical truth is used only after decoding to score Boolean-union winding.",
+  "primary_estimands": [
+    "decoder-contingent first-stage Boolean-union logical-failure probability conditional on a nonterminal physical record",
+    "paired flux-stage improvement and regression counts for O2 versus O0 and R6D-BP versus O0",
+    "R6D-BP availability and convergence at the Lab 002 default damping/iteration settings"
+  ],
+  "method_boundary": "The third policy uses the D4 R6D likelihood graph, not the Lab 002 phenomenological binary-herald likelihood. It tests the Lab 002 posterior-LLR matching principle on D4. A nonconverged but finite 40-iteration BP iterate is decoded exactly as the Lab 002 default policy would; convergence is reported rather than silently repaired. The unscreened local graph is not an exact D4 posterior or a scalable-BP validation.",
+  "excluded": [
+    "second-stage charge recovery",
+    "final LER",
+    "threshold fitting",
+    "claiming Lab 002 likelihood is a D4 likelihood",
+    "using physical truth in any policy input",
+    "adaptive sampling"
+  ],
+  "outputs": {
+    "result": "results/r6n-default-flux-policy-comparison-2026-08-29.json",
+    "report": "results/r6n-default-flux-policy-comparison-2026-08-29.md"
+  },
+  "execution": {
+    "completed_at": "2026-08-29",
+    "nonterminal_records": 100,
+    "terminal_physical_winding_records": 0,
+    "O0_conditional_flux_failure_rate": 0.5,
+    "O2_conditional_flux_failure_rate": 0.27,
+    "R6D_BP_LLR_conditional_flux_failure_rate": 0.03,
+    "R6D_BP_converged_records": 97,
+    "R6D_BP_nonconverged_records": 3,
+    "validation": "All 11 selected D4 matching/local-BP/R5a runner tests pass; every recorded policy correction is syndrome-faithful through the shared recovery scorer."
+  }
+}

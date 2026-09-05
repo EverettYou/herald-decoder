@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "status": "analyzed",
+  "campaign": "phase-b11-honeycomb-three-layer-reanalysis-2026-08-28",
+  "purpose": "Reclassify existing honeycomb evidence into floor anchors, saturation anchors, and lower-transition bands without collecting new data or rendering the legacy slope-only map.",
+  "source_map": {
+    "path": "results/phase-b9-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28.json",
+    "sha256": "8692b610ee6e19bb45452494b04c8c45b4d1fb31f240a8c10dd2f81c24c254bf"
+  },
+  "phase_b10_update": {
+    "path": "results/phase-b10-honeycomb-measured-endpoints-analysis-2026-08-28.json",
+    "sha256": "de7ee1d65a83228aac5f35b2d01213a6486a8169dc4d82f653fc6c0422a10cd2"
+  },
+  "methodology": {
+    "path": "METHODOLOGY.md",
+    "sha256": "f0585fdc362bba4f908e3b5ec33623d9a9cf5913ba413bf00f62a911058c7c49"
+  },
+  "new_decoder_runs": 0,
+  "new_decodes": 0,
+  "posterior": {
+    "likelihood": "independent binomial logical-error counts at each measured distance",
+    "primary_prior": "independent Beta(0.5,0.5)",
+    "sensitivity_prior": "independent Beta(1,1)",
+    "direction_gate": 0.9
+  },
+  "anchor_calibration": {
+    "floor_event": "all measured latent LERs are below epsilon",
+    "floor_tolerances": [0.01, 0.02, 0.03, 0.05],
+    "floor_validation_cells": [[0.95, 0.08], [0.95, 0.12], [1.0, 0.08], [1.0, 0.12]],
+    "saturation_event": "all measured latent LERs lie within delta of the binary-logical random limit 0.5",
+    "saturation_tolerances": [0.03, 0.05, 0.075, 0.1],
+    "saturation_validation_cells": [[0.0, 0.32], [0.0, 0.36], [0.0, 0.4], [0.1, 0.32], [0.1, 0.4]],
+    "posterior_gates": [0.8, 0.9, 0.95],
+    "transition_exclusion_cells": [[0.3, 0.2], [0.35, 0.2], [0.55, 0.24], [0.65, 0.32]],
+    "selection_rule": "For floor and saturation separately, retain candidate tolerance/gate pairs that classify every validation anchor and no transition-exclusion cell; choose highest gate, then smallest tolerance. Fail closed if none qualify.",
+    "prior_stability_gate": "Promote only anchors classified by the selected rule under both primary and sensitivity priors."
+  },
+  "transition_band": {
+    "scope": "first lower decodable-to-undecodable transition as p increases at fixed q",
+    "decodable_anchor": "prior-stable floor anchor or prior-stable downward direction at the fixed 0.90 gate",
+    "undecodable_anchor": "prior-stable saturation anchor or prior-stable upward direction at the fixed 0.90 gate",
+    "row_bracket": "largest decodable-anchor p below the first higher undecodable-anchor p, paired with that undecodable p",
+    "direction_applicability": "direction evidence is presented only inside a valid row bracket",
+    "boundary_uncertainty": "report the discrete row bracket and width; later sampling value must target expected reduction of this width or boundary entropy, not gray-cell count"
+  },
+  "preflight_output": "results/phase-b11-honeycomb-three-layer-reanalysis-preflight-2026-08-28.json",
+  "analyzer": {
+    "path": "scripts/analyze_phase_b11_three_layer.py",
+    "sha256": "6829829d747f8aa1a5c74ddffd11b0dc4c464b6a701e1300474917fae4ac9f69"
+  },
+  "analysis_output": "results/phase-b11-honeycomb-three-layer-reanalysis-2026-08-28.json",
+  "analysis_sha256": "a169f3bbd77ab63e4995ecd91f9f385b24edd432b0342d2b56795ddd5524a843",
+  "render_output": null,
+  "stop_rule": "Stop after the no-new-data calibration and row-bracket analysis. Do not render a phase map, launch decoder jobs, or select new samples in the same transition.",
+  "claim_boundary": "Operational finite-window anchor and lower-boundary-bracket analysis only; no continuous p_c interpolation, asymptotic threshold, or thermodynamic phase claim."
+}

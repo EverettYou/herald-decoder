@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "status": "registered",
+  "phase": "R4.5a",
+  "purpose": "Repair the primitive D4 charge topology without changing the physical ensemble by retaining each periodic triangular branch and its provenance before any sequential-policy risk is recomputed.",
+  "epistemic_role": "Topology and model-remediation audit only. It produces no sequential risk, LER, threshold, scalable-decoder, or fault-tolerance claim.",
+  "source_freeze": {
+    "results/r4-sequential-postflux-policy-preflight.json": "650182379eef7a907b822b9e92246d1737804030983d205165ba9d94f3cf6bb6",
+    "scripts/d4_honeycomb.py": "0895892c00f1f629ec469d4f7b4e42fb8e83bc07666edbc3b8fc26a1f30eb869",
+    "scripts/d4_postflux.py": "5435f1fcea89c9eccf369f8bfef44b23deea1ebe954b5e0f1dea5fce0cf12658",
+    "scripts/d4_charge.py": "c7b528d343abedb052e6bea7f5c29f65de2bab5dae96befa339763198bb17e9a",
+    "scripts/d4_sequential.py": "a2537ee7d42564d89ea79c78b8b436f41a398418104545d12a406b2ddc459fc3",
+    "scripts/run_r4_sequential_postflux_preflight.py": "641d538531c3b95ef15b31028f800a14b7a53e518066687253570154177220f1"
+  },
+  "scientific_question": {
+    "primary": "Can every same-colour triangular edge of periodic_honeycomb(2) be represented as a distinct physical branch, and can every post-flux parity relation be mapped to that branch from the actual two-step union path rather than guessed from endpoints?",
+    "mechanism": "Parallel triangular branches share endpoint incidence but pass through different opposite-colour centres and carry different primitive displacements, so endpoint-only relations preserve charge boundary while erasing torus winding.",
+    "competing_hypotheses": {
+      "h1": "A branch-labelled multigraph with stable edge id, endpoints, opposite-colour centre, and primitive displacement resolves the ambiguity and yields exactly four charge homology classes per colour.",
+      "h2": "Endpoint-only post-flux data are insufficient, but deriving provenance from the actual two-step union paths uniquely identifies every physical branch.",
+      "h3": "The current union invariant loses enough local path information that some relations still have zero or multiple compatible branches; primitive sequential risk must then remain censored pending a new exact model or method."
+    }
+  },
+  "registered_representation": {
+    "lattice": "periodic_honeycomb(2), unchanged from R4.4/R4.5",
+    "branch_key": ["charge_colour", "stable_edge_id", "sorted_charge_endpoints", "opposite_colour_centre", "primitive_displacement"],
+    "relation_provenance": "Infer a relation branch from the actual pair of red-union edges incident on its opposite-colour centre; endpoints alone are a lossy projection and may not choose a branch.",
+    "forgetful_projection": "After discarding branch labels, the enriched relation object must reproduce the existing endpoint connectivity and parity partition exactly.",
+    "homology": "Compute winding from branch displacements modulo the period matrix and validate it against lifted paths in the universal cover."
+  },
+  "smallest_discriminating_matrix": [
+    {"name": "branch_catalog", "scope": "both blue and green charge colours", "test": "Enumerate twelve stable physical edge ids per colour; allow duplicate incidence columns, but require unique centre/displacement-labelled branches."},
+    {"name": "relation_provenance", "scope": "all 127136 primitive hidden (E,A) pairs", "test": "Infer branch-labelled relations from actual two-step union paths, compare the endpoint-forgotten DSU partition with the current relation object, and count zero, one, or multiple compatible branches without guessing."},
+    {"name": "parallel_boundary_winding_fixtures", "scope": "every parallel endpoint pair in both colours", "test": "Verify equal charge boundary, distinct branch displacement, branch-pair closure, and the expected relative torus winding."},
+    {"name": "charge_action_quotient", "scope": "every supported syndrome after provenance passes", "test": "Exhaustively quotient affine charge chains and require exactly four homology classes per colour with loss constant within each class."},
+    {"name": "public_decoder_branch_fidelity", "scope": "duplicate-column charge checks", "test": "Determine whether PyMatching preserves distinct branch fault ids and weights; if not, fail the public-decoder gate and register an expanded-graph adapter separately."}
+  ],
+  "validation": {
+    "absolute_tolerance": 1e-12,
+    "required": [
+      "all source hashes match the registration freeze",
+      "each colour has exactly twelve unique stable branch ids and six endpoint pairs of multiplicity two",
+      "parallel branches have equal binary boundary and distinct centre/displacement labels",
+      "each enriched relation records the actual opposite-colour centre and a physical branch id",
+      "forgetting branch labels recovers the current endpoint-only DSU connectivity and parity partition exactly",
+      "no enriched relation has zero or multiple physical-branch provenance",
+      "branch homology is invariant under representative and lifted-path choices",
+      "every parallel-pair XOR is closed and realizes its expected relative winding",
+      "the exhaustive even-syndrome action quotient has exactly four classes per colour and loss is constant within class",
+      "public second-stage branch fidelity is explicitly tested rather than inferred from endpoint syndrome",
+      "no larger lattice, approximate posterior, new stochastic sample, policy risk, LER, or threshold claim is introduced"
+    ],
+    "fail_closed_rule": "Stop before the homology quotient if any relation has zero or multiple branch provenance. Stop before public-policy reproduction if the decoder collapses duplicate branches. Do not choose a branch by endpoint order, minimum id, or arbitrary tie break."
+  },
+  "alternatives_preserved": [
+    {"alternative": "Switch to paper_periodic_honeycomb(2)", "reason_not_selected": "It removes the primitive degeneracy but changes the exact physical model and expands the ensemble to 2^36; it is not a remediation of the source-frozen primitive posterior."},
+    {"alternative": "Choose one parallel branch per endpoint pair", "reason_not_selected": "It silently erases a winding degree of freedom and can change logical loss."},
+    {"alternative": "Use only the endpoint incidence matrix", "reason_not_selected": "Parallel branches have identical charge boundary, so incidence alone cannot recover homology or physical provenance."},
+    {"alternative": "Approximate or stochastic sequential posterior", "reason_not_selected": "The blocker is topology, not posterior cost or sampling noise. Approximation cannot validate a lossy representation."}
+  ],
+  "compute_budget": {
+    "new_stochastic_samples": 0,
+    "new_lattice_sizes": 0,
+    "maximum_relation_provenance_pairs": 127136,
+    "maximum_charge_affine_chain_rows": 8192,
+    "maximum_branch_or_action_checks": 5000000,
+    "maximum_wall_time_minutes": 10,
+    "maximum_resident_memory_gib": 2,
+    "stop_rule": "Run the branch-catalog and relation-provenance preflight first. Do not enter quotient or decoder integration after a provenance failure."
+  },
+  "outputs": {
+    "machine_result": "results/r4-branch-labelled-charge-topology-audit.json",
+    "report": "results/r4-branch-labelled-charge-topology-audit.md"
+  },
+  "next_action": "Implement and run the branch-catalog and relation-provenance preflight over both colours and all primitive (E,A) pairs; stop before homology quotient if any relation has zero or multiple branch provenance."
+}

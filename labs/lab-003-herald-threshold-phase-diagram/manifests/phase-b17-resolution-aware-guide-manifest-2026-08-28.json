@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "status": "registered_ready",
+  "purpose": "Replace the over-resolved B16 curve and narrow conditional refit envelope with a monotone visual guide plus a conservative finite-grid directional transition region.",
+  "epistemic_role": "Exploratory presentation of decoder-specific finite-window trend evidence; not a threshold, thermodynamic boundary, or publication-strength contour confidence set.",
+  "sources": {
+    "current_evidence": {
+      "path": "results/phase-b14-honeycomb-continuous-log-odds-map-2026-08-28.json",
+      "sha256": "e41be160b471cc5820a8a19b90cd3fad6ed8ed581c2c4c0587652f5e7e918fdf"
+    },
+    "directional_brackets": {
+      "path": "results/phase-b11-honeycomb-three-layer-reanalysis-2026-08-28.json",
+      "sha256": "a169f3bbd77ab63e4995ecd91f9f385b24edd432b0342d2b56795ddd5524a843"
+    }
+  },
+  "evidence_model": {
+    "cell_likelihood": "Independent binomial logical-error counts by measured distance with Jeffreys Beta(1/2,1/2) posteriors.",
+    "directional_quantity": "Posterior probability that the finite-window OLS projection slope of latent LER against measured distance is upward versus downward.",
+    "directional_gate": 0.9,
+    "joint_coverage_claim": false
+  },
+  "transition_region": {
+    "measured_rows": "Use all sixteen non-null B11 lower directional brackets through q=0.75.",
+    "right_censor_rows": [0.8, 0.85, 0.9],
+    "right_censor_rule": "At each row, lower support is the largest sampled p with Pr(upward|data)<=0.1 before the unsampled p=0.5 edge; upper support is p=0.5. Stop at the first q row whose p=0.49 cell is confidently downward.",
+    "monotone_envelope": "Use the narrowest nondecreasing lower/upper envelopes that contain every registered finite-grid bracket; do not spline or interpolate sub-grid features.",
+    "interpretation": "Conservative finite-grid directional bracket/censoring region, not a pointwise or simultaneous confidence/credible band for the guide."
+  },
+  "guide": {
+    "model": "single cubic Bezier graph p(q)",
+    "start_rule": "First q=0 downward-to-upward Pr(upward|data)=0.5 crossing by linear interpolation in p.",
+    "end_rule": "First high-q positive-to-negative log-odds crossing at p=0.49 by linear interpolation in q, rendered on the p=0.5 plot edge.",
+    "interior_control_constraint": "start_p <= p1 <= p2 <= 0.5, guaranteeing nondecreasing p(q)",
+    "objective": "Least-squares distance to B11 bracket midpoints, used only to place the visual guide.",
+    "free_parameter_count": 2,
+    "inferential_interval": false
+  },
+  "validation": {
+    "required": [
+      "guide is nondecreasing in p over q and has no low-q right-then-left reversal",
+      "transition region contains every registered B11 bracket and every high-q censoring bracket",
+      "transition region is materially wider than the withdrawn B16 conditional refit envelope",
+      "figure contains no curve legend or fitting-method footer",
+      "source hashes and data-currency checks pass",
+      "no decoder run or new decode occurs"
+    ]
+  },
+  "display": {
+    "axes": {"x": "edge error probability p", "y": "herald probability q"},
+    "line": "single dark dashed guide",
+    "region": "light neutral finite-grid directional bracket/censoring region",
+    "curve_legend": false,
+    "method_footer": false
+  },
+  "analysis_output": "manifests/phase-b17-resolution-aware-guide-2026-08-28.json",
+  "figure_output": "results/phase-b17-resolution-aware-guide-2026-08-28.png",
+  "render_audit_output": "results/phase-b17-resolution-aware-guide-render-audit-2026-08-28.json",
+  "new_decoder_runs": 0,
+  "new_decodes": 0,
+  "stop_rule": "Stop after one registered existing-data analysis, validation, figure, report update, and visual audit; do not add new decoder samples or promote an asymptotic boundary claim."
+}

@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "status": "historical preflight partially invalidated; causal callback claim superseded by verified R1 evidence",
+  "registered_at": "2026-08-29T11:09:00Z",
+  "title": "Shared-fault-history scheduling baseline harness preflight",
+  "purpose": "Verify that immediate, fixed-delay, Lyons-Brown JIT, and offline scheduling paths consume one immutable record and one versioned inner-decoder callback before any performance or noisy-channel study.",
+  "branch_matrix": [
+    {
+      "id": "immediate",
+      "causal": true,
+      "rule": "invoke on the first current frontier at which a tracked cluster is visible"
+    },
+    {
+      "id": "fixed_delay_1",
+      "causal": true,
+      "rule": "invoke one readout round after a tracked cluster first becomes visible"
+    },
+    {
+      "id": "jit_lyons_brown",
+      "causal": true,
+      "rule": "use the verified persistent cluster and active-nearest-absorber age gate; record defer/commit timing"
+    },
+    {
+      "id": "offline_full_history",
+      "causal": false,
+      "rule": "invoke only after the full registered horizon; label every result noncausal"
+    }
+  ],
+  "shared_contract": {
+    "history": "one immutable SpacetimeRecord and trial identifier per matched branch set",
+    "history_digest": "one canonical digest over decoder-visible syndrome/herald readouts and expected known changes",
+    "private_sidecar": "truth faults and logical scoring remain inaccessible to every schedule and inner-decoder request",
+    "prefix": "causal branches receive only CausalRecordPrefix through their invocation round; offline alone receives the full horizon",
+    "clusters": "one registered check-coordinate map, connectivity radius, persistent tracker semantics, and absorber geometry version",
+    "inner_decoder": "one deterministic versioned callback object is shared by all four paths; the preflight may return a canonical token but no branch-specific physics",
+    "event_log": "record branch, trial/history digest, causal horizon, persistent cluster ID, action, and inner-decoder request/response digest"
+  },
+  "registered_parameters": {
+    "fixed_delay_rounds": 1,
+    "connectivity_radius": 1,
+    "preflight_histories": "small deterministic supplied-fault fixtures only",
+    "replicates": 0,
+    "performance_metrics": "not in preflight"
+  },
+  "invariants": [
+    "all four branches bind to the same trial and full-history digest",
+    "causal branches cannot access detector or herald rows after their invocation horizon",
+    "offline access is explicit and every offline output is labelled noncausal",
+    "the same inner-decoder version and implementation digest serves every branch",
+    "schedule-specific timing may change requests but cannot change the underlying record",
+    "simulation truth and logical scoring never enter a schedule or decoder request",
+    "all four branches produce deterministic invocation logs on the bounded fixtures"
+  ],
+  "source_and_interface_hashes": {
+    "spacetime_record_sha256": "0d8204a7734295fe7defd8822f982d84a5a5a604108bb6c9f6145b7ea7454722",
+    "persistent_clusters_sha256": "f02f4e483b03bcd399a93546741a96e8ce78eb746bb376a704275ca67830852e",
+    "schedule_state_sha256": "319c61536645092df9e1a84bf4355969ba36dacba8e677ab5ca0d35a7f0d9ac1",
+    "d4_policy_interface_sha256": "ad271b7836043dfac696afaa4ea6090e2ec94180e19ff864f7dbd1f54a8654f4",
+    "lyons_source_sha256": "9d7473adeaffbb4065e1f279d5dff8a5911483f5773101bba506b66ba532d6ea",
+    "jing_source_sha256": "6e34ddfcff24d1b5aaed7921aead860889156865d6b9d2f01420da5a13f06219"
+  },
+  "implementation": {
+    "module": "scripts/baseline_harness.py",
+    "fixtures": "scripts/test_baseline_harness.py",
+    "module_sha256": "1fc9ced585579be9a94d7054eb52b4013154a3f1f166db2e8b8f58faf863ddab",
+    "fixtures_sha256": "5f6a53ed5fe478db5a86467c75c95a7bf956a7c38fa9dd583f090a4aa4bbc66b"
+  },
+  "verification": {
+    "focused_tests": "7/7 passed",
+    "full_lab_tests": "67/67 passed",
+    "verified_cases": [
+      "all four registered branches execute through one public runner at their expected invocation rounds",
+      "all branches share one visible-history digest and one decoder version/implementation digest",
+      "causal requests stop at invocation while offline is explicitly marked noncausal",
+      "inner-decoder requests expose no truth, fault, or logical-scoring fields",
+      "visible-history identity is invariant under different private truth/fault decompositions producing the same readouts",
+      "full deterministic replay is bit identical",
+      "missing trial identity or active JIT absorber is rejected"
+    ]
+  },
+  "invalidation": {
+    "recorded_at": "2026-08-29T13:02:05Z",
+    "evidence": "results/j2-causal-request-future-digest-audit-2026-08-29.json",
+    "cause": "causal callback requests contain the full visible-history digest and are future-sensitive",
+    "invalidated_claims": ["causal request digest isolation", "causal response digest isolation"],
+    "unaffected_claims": ["registered branch timing", "shared-history immutability", "explicit offline noncausality", "truth-field exclusion"],
+    "remediation_contract": "manifests/j2-e1-causal-integration-remediation-manifest-2026-08-29.json",
+    "remediation_status": "R1 verified at manifests/j2-r1-causal-callback-remediation-2026-08-29.json; this original artifact remains historical and is not retroactively rehabilitated"
+  },
+  "acceptance_items": [
+    {
+      "item": "Implement immutable history/request digests and a truth-free versioned inner-decoder callback protocol.",
+      "status": "passed",
+      "evidence": "scripts/baseline_harness.py; scripts/test_baseline_harness.py"
+    },
+    {
+      "item": "Implement all four registered scheduling branches through one public runner.",
+      "status": "passed",
+      "evidence": "scripts/baseline_harness.py; scripts/test_baseline_harness.py"
+    },
+    {
+      "item": "Verify matched history, causal truncation, explicit offline access, fixed delay, JIT deferral, and deterministic replay on bounded fixtures.",
+      "status": "original evidence invalidated; replaced by verified R1 counterfactual",
+      "evidence": "results/j2-causal-request-future-digest-audit-2026-08-29.json; manifests/j2-r1-causal-callback-remediation-2026-08-29.json"
+    },
+    {
+      "item": "Report the preflight without performance, noisy-channel, threshold, or fault-tolerance interpretation.",
+      "status": "passed",
+      "evidence": "results/j2-shared-history-baseline-preflight-2026-08-29.md"
+    }
+  ],
+  "claim_boundary": "This contract authorizes only a deterministic harness preflight. It does not authorize noisy sampling, compare logical failure rates, validate a physical D(S3) or D4 inner decoder, or establish schedule advantage, threshold, or fault tolerance.",
+  "next_gate": "Implement I1 round-local E1 record derivation; typed mode/schedule integration and sampling remain blocked."
+}

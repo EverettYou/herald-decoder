@@ -1,0 +1,453 @@
+{
+  "protocol": "lab006-a7-artifact-default-calibration-2026-09-04",
+  "purpose": "Artifact decoder calibration only; no new decoder, schedule tuning, LER, or threshold sample.",
+  "artifact_default": {
+    "orientation": "directed",
+    "algorithm": "sum_product",
+    "damping": 0.5,
+    "max_iterations": 300,
+    "tolerance": 1e-10,
+    "measure_boundary_representation": false
+  },
+  "cells": [
+    {
+      "group": "None",
+      "lattice": "square",
+      "L": 5,
+      "p": 0.18,
+      "artifact_defaults": {
+        "orientation": "directed",
+        "algorithm": "sum_product",
+        "damping": 0.5,
+        "max_iterations": 300,
+        "tolerance": 1e-10,
+        "measure_boundary_representation": false
+      },
+      "scalar_records_per_arm": 8,
+      "batch_records_per_arm": 256,
+      "max_abs_scalar_artifact_difference": 0.0,
+      "max_abs_batch_scalar_difference": 0.0,
+      "none_full_syndrome_only_difference": 0.0,
+      "batch_convergence_matches": true,
+      "batch_iteration_matches": true,
+      "timing_ms": {
+        "scalar_artifact_decode_per_record": 0.6371329375,
+        "scalar_bp_per_record": 0.660933515625,
+        "batch_bp_per_record": 1.177837564453125,
+        "batch_bp_speedup_over_scalar_bp": 0.5611414812804635
+      }
+    },
+    {
+      "group": "None",
+      "lattice": "square",
+      "L": 9,
+      "p": 0.18,
+      "artifact_defaults": {
+        "orientation": "directed",
+        "algorithm": "sum_product",
+        "damping": 0.5,
+        "max_iterations": 300,
+        "tolerance": 1e-10,
+        "measure_boundary_representation": false
+      },
+      "scalar_records_per_arm": 8,
+      "batch_records_per_arm": 256,
+      "max_abs_scalar_artifact_difference": 0.0,
+      "max_abs_batch_scalar_difference": 0.0,
+      "none_full_syndrome_only_difference": 0.0,
+      "batch_convergence_matches": true,
+      "batch_iteration_matches": true,
+      "timing_ms": {
+        "scalar_artifact_decode_per_record": 7.9620233125,
+        "scalar_bp_per_record": 5.97480856640625,
+        "batch_bp_per_record": 5.822096271484375,
+        "batch_bp_speedup_over_scalar_bp": 1.0262297783823728
+      }
+    },
+    {
+      "group": "None",
+      "lattice": "honeycomb",
+      "L": 5,
+      "p": 0.18,
+      "artifact_defaults": {
+        "orientation": "directed",
+        "algorithm": "sum_product",
+        "damping": 0.5,
+        "max_iterations": 300,
+        "tolerance": 1e-10,
+        "measure_boundary_representation": false
+      },
+      "scalar_records_per_arm": 8,
+      "batch_records_per_arm": 256,
+      "max_abs_scalar_artifact_difference": 0.0,
+      "max_abs_batch_scalar_difference": 0.0,
+      "none_full_syndrome_only_difference": 0.0,
+      "batch_convergence_matches": true,
+      "batch_iteration_matches": true,
+      "timing_ms": {
+        "scalar_artifact_decode_per_record": 5.7036589375,
+        "scalar_bp_per_record": 6.590413693359375,
+        "batch_bp_per_record": 4.526856931640625,
+        "batch_bp_speedup_over_scalar_bp": 1.4558475765592342
+      }
+    },
+    {
+      "group": "None",
+      "lattice": "honeycomb",
+      "L": 9,
+      "p": 0.18,
+      "artifact_defaults": {
+        "orientation": "directed",
+        "algorithm": "sum_product",
+        "damping": 0.5,
+        "max_iterations": 300,
+        "tolerance": 1e-10,
+        "measure_boundary_representation": false
+      },
+      "scalar_records_per_arm": 8,
+      "batch_records_per_arm": 256,
+      "max_abs_scalar_artifact_difference": 0.0,
+      "max_abs_batch_scalar_difference": 0.0,
+      "none_full_syndrome_only_difference": 0.0,
+      "batch_convergence_matches": true,
+      "batch_iteration_matches": true,
+      "timing_ms": {
+        "scalar_artifact_decode_per_record": 7.618807375,
+        "scalar_bp_per_record": 7.57941466015625,
+        "batch_bp_per_record": 7.554139240234375,
+        "batch_bp_speedup_over_scalar_bp": 1.003345903367422
+      }
+    },
+    {
+      "group": "U1",
+      "lattice": "square",
+      "L": 5,
+      "p": 0.18,
+      "artifact_defaults": {
+        "orientation": "directed",
+        "algorithm": "sum_product",
+        "damping": 0.5,
+        "max_iterations": 300,
+        "tolerance": 1e-10,
+        "measure_boundary_representation": false
+      },
+      "scalar_records_per_arm": 8,
+      "batch_records_per_arm": 256,
+      "max_abs_scalar_artifact_difference": 0.0,
+      "max_abs_batch_scalar_difference": 0.0,
+      "none_full_syndrome_only_difference": 0.0,
+      "batch_convergence_matches": true,
+      "batch_iteration_matches": true,
+      "timing_ms": {
+        "scalar_artifact_decode_per_record": 0.632609375,
+        "scalar_bp_per_record": 1.199511619140625,
+        "batch_bp_per_record": 0.703311443359375,
+        "batch_bp_speedup_over_scalar_bp": 1.7055198382826593
+      }
+    },
+    {
+      "group": "U1",
+      "lattice": "square",
+      "L": 9,
+      "p": 0.18,
+      "artifact_defaults": {
+        "orientation": "directed",
+        "algorithm": "sum_product",
+        "damping": 0.5,
+        "max_iterations": 300,
+        "tolerance": 1e-10,
+        "measure_boundary_representation": false
+      },
+      "scalar_records_per_arm": 8,
+      "batch_records_per_arm": 256,
+      "max_abs_scalar_artifact_difference": 0.0,
+      "max_abs_batch_scalar_difference": 0.0,
+      "none_full_syndrome_only_difference": 0.0,
+      "batch_convergence_matches": true,
+      "batch_iteration_matches": true,
+      "timing_ms": {
+        "scalar_artifact_decode_per_record": 4.6534686875,
+        "scalar_bp_per_record": 2.69628394921875,
+        "batch_bp_per_record": 3.390467611328125,
+        "batch_bp_speedup_over_scalar_bp": 0.7952543006781748
+      }
+    },
+    {
+      "group": "U1",
+      "lattice": "honeycomb",
+      "L": 5,
+      "p": 0.18,
+      "artifact_defaults": {
+        "orientation": "directed",
+        "algorithm": "sum_product",
+        "damping": 0.5,
+        "max_iterations": 300,
+        "tolerance": 1e-10,
+        "measure_boundary_representation": false
+      },
+      "scalar_records_per_arm": 8,
+      "batch_records_per_arm": 256,
+      "max_abs_scalar_artifact_difference": 0.0,
+      "max_abs_batch_scalar_difference": 0.0,
+      "none_full_syndrome_only_difference": 0.0,
+      "batch_convergence_matches": true,
+      "batch_iteration_matches": true,
+      "timing_ms": {
+        "scalar_artifact_decode_per_record": 0.9094608125,
+        "scalar_bp_per_record": 0.801863197265625,
+        "batch_bp_per_record": 0.869679119140625,
+        "batch_bp_speedup_over_scalar_bp": 0.9220219039615296
+      }
+    },
+    {
+      "group": "U1",
+      "lattice": "honeycomb",
+      "L": 9,
+      "p": 0.18,
+      "artifact_defaults": {
+        "orientation": "directed",
+        "algorithm": "sum_product",
+        "damping": 0.5,
+        "max_iterations": 300,
+        "tolerance": 1e-10,
+        "measure_boundary_representation": false
+      },
+      "scalar_records_per_arm": 8,
+      "batch_records_per_arm": 256,
+      "max_abs_scalar_artifact_difference": 0.0,
+      "max_abs_batch_scalar_difference": 0.0,
+      "none_full_syndrome_only_difference": 0.0,
+      "batch_convergence_matches": true,
+      "batch_iteration_matches": true,
+      "timing_ms": {
+        "scalar_artifact_decode_per_record": 12.797822875,
+        "scalar_bp_per_record": 3.868005025390625,
+        "batch_bp_per_record": 4.19578076171875,
+        "batch_bp_speedup_over_scalar_bp": 0.921879679863479
+      }
+    },
+    {
+      "group": "SU2",
+      "lattice": "square",
+      "L": 5,
+      "p": 0.18,
+      "artifact_defaults": {
+        "orientation": "directed",
+        "algorithm": "sum_product",
+        "damping": 0.5,
+        "max_iterations": 300,
+        "tolerance": 1e-10,
+        "measure_boundary_representation": false
+      },
+      "scalar_records_per_arm": 8,
+      "batch_records_per_arm": 256,
+      "max_abs_scalar_artifact_difference": 0.0,
+      "max_abs_batch_scalar_difference": 0.0,
+      "none_full_syndrome_only_difference": 0.0,
+      "batch_convergence_matches": true,
+      "batch_iteration_matches": true,
+      "timing_ms": {
+        "scalar_artifact_decode_per_record": 0.3400390625,
+        "scalar_bp_per_record": 0.249142783203125,
+        "batch_bp_per_record": 0.243254638671875,
+        "batch_bp_speedup_over_scalar_bp": 1.0242056824215076
+      }
+    },
+    {
+      "group": "SU2",
+      "lattice": "square",
+      "L": 9,
+      "p": 0.18,
+      "artifact_defaults": {
+        "orientation": "directed",
+        "algorithm": "sum_product",
+        "damping": 0.5,
+        "max_iterations": 300,
+        "tolerance": 1e-10,
+        "measure_boundary_representation": false
+      },
+      "scalar_records_per_arm": 8,
+      "batch_records_per_arm": 256,
+      "max_abs_scalar_artifact_difference": 0.0,
+      "max_abs_batch_scalar_difference": 0.0,
+      "none_full_syndrome_only_difference": 0.0,
+      "batch_convergence_matches": true,
+      "batch_iteration_matches": true,
+      "timing_ms": {
+        "scalar_artifact_decode_per_record": 3.0637759375,
+        "scalar_bp_per_record": 2.555888759765625,
+        "batch_bp_per_record": 2.755153564453125,
+        "batch_bp_speedup_over_scalar_bp": 0.9276756086272627
+      }
+    },
+    {
+      "group": "SU2",
+      "lattice": "honeycomb",
+      "L": 5,
+      "p": 0.18,
+      "artifact_defaults": {
+        "orientation": "directed",
+        "algorithm": "sum_product",
+        "damping": 0.5,
+        "max_iterations": 300,
+        "tolerance": 1e-10,
+        "measure_boundary_representation": false
+      },
+      "scalar_records_per_arm": 8,
+      "batch_records_per_arm": 256,
+      "max_abs_scalar_artifact_difference": 0.0,
+      "max_abs_batch_scalar_difference": 0.0,
+      "none_full_syndrome_only_difference": 0.0,
+      "batch_convergence_matches": true,
+      "batch_iteration_matches": true,
+      "timing_ms": {
+        "scalar_artifact_decode_per_record": 0.8662370625,
+        "scalar_bp_per_record": 0.85547451171875,
+        "batch_bp_per_record": 0.96531982421875,
+        "batch_bp_speedup_over_scalar_bp": 0.8862083739045764
+      }
+    },
+    {
+      "group": "SU2",
+      "lattice": "honeycomb",
+      "L": 9,
+      "p": 0.18,
+      "artifact_defaults": {
+        "orientation": "directed",
+        "algorithm": "sum_product",
+        "damping": 0.5,
+        "max_iterations": 300,
+        "tolerance": 1e-10,
+        "measure_boundary_representation": false
+      },
+      "scalar_records_per_arm": 8,
+      "batch_records_per_arm": 256,
+      "max_abs_scalar_artifact_difference": 0.0,
+      "max_abs_batch_scalar_difference": 0.0,
+      "none_full_syndrome_only_difference": 0.0,
+      "batch_convergence_matches": true,
+      "batch_iteration_matches": true,
+      "timing_ms": {
+        "scalar_artifact_decode_per_record": 5.956026,
+        "scalar_bp_per_record": 5.144997357421875,
+        "batch_bp_per_record": 5.79788313671875,
+        "batch_bp_speedup_over_scalar_bp": 0.8873923872038634
+      }
+    },
+    {
+      "group": "SU3",
+      "lattice": "square",
+      "L": 5,
+      "p": 0.18,
+      "artifact_defaults": {
+        "orientation": "directed",
+        "algorithm": "sum_product",
+        "damping": 0.5,
+        "max_iterations": 300,
+        "tolerance": 1e-10,
+        "measure_boundary_representation": false
+      },
+      "scalar_records_per_arm": 8,
+      "batch_records_per_arm": 256,
+      "max_abs_scalar_artifact_difference": 0.0,
+      "max_abs_batch_scalar_difference": 0.0,
+      "none_full_syndrome_only_difference": 0.0,
+      "batch_convergence_matches": true,
+      "batch_iteration_matches": true,
+      "timing_ms": {
+        "scalar_artifact_decode_per_record": 0.5210288125,
+        "scalar_bp_per_record": 0.304903095703125,
+        "batch_bp_per_record": 0.293028970703125,
+        "batch_bp_speedup_over_scalar_bp": 1.0405220172309515
+      }
+    },
+    {
+      "group": "SU3",
+      "lattice": "square",
+      "L": 9,
+      "p": 0.18,
+      "artifact_defaults": {
+        "orientation": "directed",
+        "algorithm": "sum_product",
+        "damping": 0.5,
+        "max_iterations": 300,
+        "tolerance": 1e-10,
+        "measure_boundary_representation": false
+      },
+      "scalar_records_per_arm": 8,
+      "batch_records_per_arm": 256,
+      "max_abs_scalar_artifact_difference": 0.0,
+      "max_abs_batch_scalar_difference": 0.0,
+      "none_full_syndrome_only_difference": 0.0,
+      "batch_convergence_matches": true,
+      "batch_iteration_matches": true,
+      "timing_ms": {
+        "scalar_artifact_decode_per_record": 3.7259428125,
+        "scalar_bp_per_record": 4.62373885546875,
+        "batch_bp_per_record": 3.628186443359375,
+        "batch_bp_speedup_over_scalar_bp": 1.2743939507109736
+      }
+    },
+    {
+      "group": "SU3",
+      "lattice": "honeycomb",
+      "L": 5,
+      "p": 0.18,
+      "artifact_defaults": {
+        "orientation": "directed",
+        "algorithm": "sum_product",
+        "damping": 0.5,
+        "max_iterations": 300,
+        "tolerance": 1e-10,
+        "measure_boundary_representation": false
+      },
+      "scalar_records_per_arm": 8,
+      "batch_records_per_arm": 256,
+      "max_abs_scalar_artifact_difference": 0.0,
+      "max_abs_batch_scalar_difference": 0.0,
+      "none_full_syndrome_only_difference": 0.0,
+      "batch_convergence_matches": true,
+      "batch_iteration_matches": true,
+      "timing_ms": {
+        "scalar_artifact_decode_per_record": 0.6681821875,
+        "scalar_bp_per_record": 0.462010580078125,
+        "batch_bp_per_record": 0.45005533984375,
+        "batch_bp_speedup_over_scalar_bp": 1.0265639337565144
+      }
+    },
+    {
+      "group": "SU3",
+      "lattice": "honeycomb",
+      "L": 9,
+      "p": 0.18,
+      "artifact_defaults": {
+        "orientation": "directed",
+        "algorithm": "sum_product",
+        "damping": 0.5,
+        "max_iterations": 300,
+        "tolerance": 1e-10,
+        "measure_boundary_representation": false
+      },
+      "scalar_records_per_arm": 8,
+      "batch_records_per_arm": 256,
+      "max_abs_scalar_artifact_difference": 0.0,
+      "max_abs_batch_scalar_difference": 0.0,
+      "none_full_syndrome_only_difference": 0.0,
+      "batch_convergence_matches": true,
+      "batch_iteration_matches": true,
+      "timing_ms": {
+        "scalar_artifact_decode_per_record": 4.640934875,
+        "scalar_bp_per_record": 3.207427107421875,
+        "batch_bp_per_record": 2.2171650390625,
+        "batch_bp_speedup_over_scalar_bp": 1.4466343510350923
+      }
+    }
+  ],
+  "summary": {
+    "cells": 16,
+    "max_abs_scalar_artifact_difference": 0.0,
+    "max_abs_batch_scalar_difference": 0.0,
+    "all_batch_convergence_match": true,
+    "all_batch_iteration_match": true
+  }
+}

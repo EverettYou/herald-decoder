@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-28T05:01:31Z",
+  "campaign": "phase4-residual80-honeycomb-highq-l11-l13-scaling-4000-2026-08-28",
+  "status": "passed",
+  "validated_shards": 3,
+  "validated_raw_records": 168000,
+  "syndrome_fidelity": {
+    "checked_corrections": 168000,
+    "faithful_corrections": 168000,
+    "failures": 0,
+    "all_faithful": true
+  },
+  "source_stability": {
+    "all_start_equals_end": true,
+    "common_source_cohort": true
+  },
+  "storage": {
+    "formal_raw_files": 3,
+    "atomic_recovery_required": 0,
+    "gzip_sha256_and_record_counts": "passed for all shards"
+  },
+  "shards": [
+    {
+      "q": 0.85,
+      "records": 56000,
+      "summary_sha256": "5fe93fdcd8f699383a705cc6678a69346c7a14ec53410bdae4382225603eec27",
+      "raw_sha256": "1bcf9a2122e289cb3d8c8fcce1743d140120b2c7d7f4ea96ba417b2712fd8131"
+    },
+    {
+      "q": 0.9,
+      "records": 56000,
+      "summary_sha256": "5f1adec854e8f6649b3bc296c0f504422e2b00b715625554f18bb7449fd1e43e",
+      "raw_sha256": "e8b25a77c18d19271c4b2ea5e1c55bfe015fbe30ea512421047baa399d1ab9d6"
+    },
+    {
+      "q": 0.95,
+      "records": 56000,
+      "summary_sha256": "0de2171855b22e46ed8b0c34cff3525940969df46f837a9ec431c2304589d540",
+      "raw_sha256": "d73829d35e28df8460b605bb97a9f8aa78e4da7cb503daf3cf238569a8ce7852"
+    }
+  ],
+  "runtime": {
+    "python_executable": "/Users/home/Documents/GitHub/emergent_classicality/lab/.venv/bin/python3",
+    "python_version": "3.13.2",
+    "numpy_version": "1.26.4",
+    "numba_version": "0.65.0",
+    "scipy_version": "1.17.1",
+    "pymatching_version": "2.4.0",
+    "numba_available": true
+  },
+  "source_hashes": {
+    "runner": "14adf7579825e64fa4dd74a6ff374207c3f7b55349b5b533c1ff054bf6d66474",
+    "lattice_model": "b87a5feba27675e26970360d730324b7d3740e4dc0492b4dc478e510f140c9e7",
+    "decoder": "990af03ac4c99684e9e9dac6e5a8bb64d773015879c1638906f5fb592cdc6a43",
+    "damping_decoder": "a08ddf0b58e63bb2627c35cafbe570fe6a0ee8dc21bd4eaca720d6dbcbc5e182",
+    "numba_kernels": "c2254c95600c4f5e3a8c2279d5686a99c8d3810a4bb0c814a4fd0cbf16c184cc"
+  },
+  "evidence_boundary": "Production and provenance validation only. No L11/L13 crossing topology, p_c(q), or q_c interpretation is made until the registered 20000-replicate central-90% analysis runs.",
+  "next_transition": "Run the manifest-driven topology-aware L11/L13 analysis; do not add q=0.925 or square before interpreting this standalone cohort."
+}

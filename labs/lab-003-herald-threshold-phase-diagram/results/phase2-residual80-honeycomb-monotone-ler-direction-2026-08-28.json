@@ -1,0 +1,6220 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-28T07:38:49.938752+00:00",
+  "status": "complete",
+  "campaign": "phase2-residual80-q-skeleton-2026-08-28",
+  "primary_statistic": "joint ordering of all adjacent measured-size LER differences",
+  "functional_form_assumed": null,
+  "sizes": [
+    7,
+    9,
+    11
+  ],
+  "q_values": [
+    0.0,
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.5,
+    0.55,
+    0.6,
+    0.65,
+    0.7,
+    0.75,
+    0.8,
+    0.85,
+    0.9,
+    0.95,
+    1.0
+  ],
+  "p_values": [
+    0.08,
+    0.12,
+    0.16,
+    0.2,
+    0.24,
+    0.28,
+    0.32,
+    0.36,
+    0.4,
+    0.45,
+    0.49
+  ],
+  "bootstrap": {
+    "replicates": 20000,
+    "joint_support_threshold": 0.9,
+    "unit": "complete nested-p seed trajectory, independently resampled by distance"
+  },
+  "classification_rule": {
+    "decodable": "observed LER strictly decreases at every adjacent size and joint bootstrap support >= 0.90",
+    "undecodable": "observed LER strictly increases at every adjacent size and joint bootstrap support >= 0.90",
+    "unresolved": "otherwise, including nonmonotone and plateau behavior"
+  },
+  "cell_counts": {
+    "decodable": 10,
+    "undecodable": 0,
+    "unresolved": 221
+  },
+  "lattice": "honeycomb",
+  "analyses": [
+    {
+      "q": 0.0,
+      "cells": [
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.001998001998001998,
+            -0.0029970029970029974
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.00899100899100899,
+              0.003996003996003996
+            ],
+            [
+              -0.007992007992007992,
+              0.000999000999000999
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.47385,
+          "probability_all_adjacent_increase": 0.00075,
+          "probability_nonmonotone": 0.5254,
+          "p": 0.08,
+          "observed_rates": [
+            0.007492507492507493,
+            0.005494505494505495,
+            0.0024975024975024975
+          ]
+        },
+        {
+          "classification": "decodable",
+          "observed_adjacent_deltas": [
+            -0.008991008991008992,
+            -0.023976023976023976
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.01698301698301699,
+              0.0
+            ],
+            [
+              -0.03496503496503496,
+              -0.012987012987012991
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.9449,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.05510000000000004,
+          "p": 0.12,
+          "observed_rates": [
+            0.06643356643356643,
+            0.05744255744255744,
+            0.033466533466533464
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.004995004995004992,
+            -0.017982017982017984
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.01698301698301699,
+              0.027972027972027996
+            ],
+            [
+              -0.038961038961038974,
+              0.002997002997002979
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.28085,
+          "probability_all_adjacent_increase": 0.0102,
+          "probability_nonmonotone": 0.70895,
+          "p": 0.16,
+          "observed_rates": [
+            0.22127872127872128,
+            0.22627372627372627,
+            0.2082917082917083
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.005994005994005958,
+            0.01698301698301702
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.02097902097902099,
+              0.03296703296703296
+            ],
+            [
+              -0.013986013986014012,
+              0.04895104895104896
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.00585,
+          "probability_all_adjacent_increase": 0.43955,
+          "probability_nonmonotone": 0.5546,
+          "p": 0.2,
+          "observed_rates": [
+            0.37012987012987014,
+            0.3761238761238761,
+            0.3931068931068931
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.041958041958041925,
+            0.012987012987012991
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              0.01198801198801197,
+              0.0729270729270729
+            ],
+            [
+              -0.01998001998001997,
+              0.04495504495504499
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0,
+          "probability_all_adjacent_increase": 0.7319,
+          "probability_nonmonotone": 0.2681,
+          "p": 0.24,
+          "observed_rates": [
+            0.4260739260739261,
+            0.468031968031968,
+            0.481018981018981
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.00899100899100902,
+            0.040959040959040904
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.05194805194805191,
+              0.0379620379620379
+            ],
+            [
+              0.0019980019980019303,
+              0.07492507492507494
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0004,
+          "probability_all_adjacent_increase": 0.3085,
+          "probability_nonmonotone": 0.6911,
+          "p": 0.28,
+          "observed_rates": [
+            0.501998001998002,
+            0.493006993006993,
+            0.5339660339660339
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.013986013986013957,
+            -0.008991008991008964
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.03696303696303699,
+              0.007992007992007943
+            ],
+            [
+              -0.03696303696303693,
+              0.02197802197802201
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.53855,
+          "probability_all_adjacent_increase": 0.00605,
+          "probability_nonmonotone": 0.4554,
+          "p": 0.32,
+          "observed_rates": [
+            0.513986013986014,
+            0.5,
+            0.49100899100899104
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.0029970029970030065,
+            0.019980019980019914
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.021978021978021955,
+              0.016983016983016963
+            ],
+            [
+              -0.0029970029970030065,
+              0.042957042957042946
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.02445,
+          "probability_all_adjacent_increase": 0.31645,
+          "probability_nonmonotone": 0.6591,
+          "p": 0.36,
+          "observed_rates": [
+            0.49100899100899104,
+            0.48801198801198803,
+            0.5079920079920079
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.020979020979020935,
+            -0.0029970029970030065
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.04695304695304692,
+              0.006993006993006978
+            ],
+            [
+              -0.03596403596403597,
+              0.031968031968031996
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.4704,
+          "probability_all_adjacent_increase": 0.0144,
+          "probability_nonmonotone": 0.5152000000000001,
+          "p": 0.4,
+          "observed_rates": [
+            0.525974025974026,
+            0.504995004995005,
+            0.501998001998002
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.01998001998001997,
+            0.03396603396603398
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.06393606393606388,
+              0.027972027972027913
+            ],
+            [
+              0.001998001998001986,
+              0.066933066933067
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.02005,
+          "probability_all_adjacent_increase": 0.2057,
+          "probability_nonmonotone": 0.77425,
+          "p": 0.45,
+          "observed_rates": [
+            0.498001998001998,
+            0.47802197802197804,
+            0.511988011988012
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.03096903096903103,
+            0.026973026973026948
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.07492507492507494,
+              0.011988011988012026
+            ],
+            [
+              -0.015984015984015998,
+              0.06793206793206796
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0654,
+          "probability_all_adjacent_increase": 0.04075,
+          "probability_nonmonotone": 0.89385,
+          "p": 0.49,
+          "observed_rates": [
+            0.511988011988012,
+            0.481018981018981,
+            0.5079920079920079
+          ]
+        }
+      ]
+    },
+    {
+      "q": 0.05,
+      "cells": [
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.002997002997002997,
+            -0.0029970029970029974
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.008991008991008992,
+              0.0029970029970029974
+            ],
+            [
+              -0.007992007992007992,
+              0.000999000999000999
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.5677,
+          "probability_all_adjacent_increase": 0.00035,
+          "probability_nonmonotone": 0.43195,
+          "p": 0.08,
+          "observed_rates": [
+            0.008491508491508492,
+            0.005494505494505495,
+            0.0024975024975024975
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.0039960039960039995,
+            -0.018981018981018977
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.010989010989010992,
+              0.0039960039960039925
+            ],
+            [
+              -0.02897102897102897,
+              -0.009990009990009985
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.777,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.22299999999999998,
+          "p": 0.12,
+          "observed_rates": [
+            0.05444555444555445,
+            0.05044955044955045,
+            0.03146853146853147
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.011988011988011998,
+            -0.018981018981018977
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.03296703296703296,
+              0.008991008991008992
+            ],
+            [
+              -0.05194805194805194,
+              0.009990009990010013
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.6508,
+          "probability_all_adjacent_increase": 0.00145,
+          "probability_nonmonotone": 0.34774999999999995,
+          "p": 0.16,
+          "observed_rates": [
+            0.2072927072927073,
+            0.1953046953046953,
+            0.17632367632367632
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.0029970029970030065,
+            0.005994005994006013
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.018981018981019004,
+              0.026973026973026948
+            ],
+            [
+              -0.016983016983016963,
+              0.028971028971028934
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0111,
+          "probability_all_adjacent_increase": 0.2387,
+          "probability_nonmonotone": 0.7502,
+          "p": 0.2,
+          "observed_rates": [
+            0.35614385614385613,
+            0.35914085914085914,
+            0.36513486513486515
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.006993006993006978,
+            0.018981018981019004
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.01198801198801197,
+              0.02797202797202797
+            ],
+            [
+              -0.010989010989011005,
+              0.04995004995004998
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0135,
+          "probability_all_adjacent_increase": 0.5491,
+          "probability_nonmonotone": 0.4374,
+          "p": 0.24,
+          "observed_rates": [
+            0.43806193806193805,
+            0.44505494505494503,
+            0.46403596403596403
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.01998001998001997,
+            0.03696303696303693
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.05194805194805191,
+              0.014985014985014922
+            ],
+            [
+              -0.0029970029970030065,
+              0.0729270729270729
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0152,
+          "probability_all_adjacent_increase": 0.11665,
+          "probability_nonmonotone": 0.86815,
+          "p": 0.28,
+          "observed_rates": [
+            0.512987012987013,
+            0.493006993006993,
+            0.52997002997003
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.02197802197802201,
+            0.025974025974025983
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.043956043956043966,
+              -0.0019980019980020414
+            ],
+            [
+              0.0019980019980020414,
+              0.050949050949051
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0218,
+          "probability_all_adjacent_increase": 0.0216,
+          "probability_nonmonotone": 0.9566,
+          "p": 0.32,
+          "observed_rates": [
+            0.515984015984016,
+            0.494005994005994,
+            0.51998001998002
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.028971028971028934,
+            -0.009990009990009985
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.014985014985015033,
+              0.0729270729270729
+            ],
+            [
+              -0.04695304695304692,
+              0.02397602397602394
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.05515,
+          "probability_all_adjacent_increase": 0.249,
+          "probability_nonmonotone": 0.69585,
+          "p": 0.36,
+          "observed_rates": [
+            0.492007992007992,
+            0.5209790209790209,
+            0.510989010989011
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.0,
+            -0.006993006993006978
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.033966033966033926,
+              0.033966033966033926
+            ],
+            [
+              -0.0379620379620379,
+              0.02297702297702303
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.16875,
+          "probability_all_adjacent_increase": 0.0395,
+          "probability_nonmonotone": 0.7917500000000001,
+          "p": 0.4,
+          "observed_rates": [
+            0.510989010989011,
+            0.510989010989011,
+            0.503996003996004
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.006993006993006978,
+            0.042957042957042946
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.034965034965035,
+              0.017982017982017984
+            ],
+            [
+              0.001948051948051983,
+              0.08491508491508493
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0082,
+          "probability_all_adjacent_increase": 0.30945,
+          "probability_nonmonotone": 0.68235,
+          "p": 0.45,
+          "observed_rates": [
+            0.474025974025974,
+            0.46703296703296704,
+            0.50999000999001
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.00999000999001004,
+            0.0
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.04195804195804198,
+              0.02197802197802201
+            ],
+            [
+              -0.026973026973027007,
+              0.027972027972028024
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.2356,
+          "probability_all_adjacent_increase": 0.04925,
+          "probability_nonmonotone": 0.71515,
+          "p": 0.49,
+          "observed_rates": [
+            0.504995004995005,
+            0.495004995004995,
+            0.495004995004995
+          ]
+        }
+      ]
+    },
+    {
+      "q": 0.1,
+      "cells": [
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.0029970029970029974,
+            0.0
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.006993006993006994,
+              0.000999000999000999
+            ],
+            [
+              -0.002997002997002997,
+              0.0019980019980019984
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.2881,
+          "probability_all_adjacent_increase": 0.0082,
+          "probability_nonmonotone": 0.7037,
+          "p": 0.08,
+          "observed_rates": [
+            0.005494505494505495,
+            0.0024975024975024975,
+            0.0024975024975024975
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.0,
+            -0.018981018981018984
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.007992007992007992,
+              0.008991008991008992
+            ],
+            [
+              -0.027972027972027972,
+              -0.009990009990009992
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.4732,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.5267999999999999,
+          "p": 0.12,
+          "observed_rates": [
+            0.045454545454545456,
+            0.045454545454545456,
+            0.026473526473526472
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.011988011988011998,
+            -0.014985014985014977
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.02797202797202797,
+              0.004995004995004992
+            ],
+            [
+              -0.04395604395604394,
+              0.012987012987012991
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.67575,
+          "probability_all_adjacent_increase": 0.00475,
+          "probability_nonmonotone": 0.31950000000000006,
+          "p": 0.16,
+          "observed_rates": [
+            0.18331668331668333,
+            0.17132867132867133,
+            0.15634365634365635
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.0019980019980020414,
+            0.01198801198801197
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.01998001998001997,
+              0.023976023976023997
+            ],
+            [
+              -0.01198801198801197,
+              0.03596403596403597
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.01905,
+          "probability_all_adjacent_increase": 0.3455,
+          "probability_nonmonotone": 0.6354500000000001,
+          "p": 0.2,
+          "observed_rates": [
+            0.33016983016983015,
+            0.3321678321678322,
+            0.34415584415584416
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.01198801198801197,
+            0.034965034965035
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.007992007992007999,
+              0.031968031968031996
+            ],
+            [
+              -0.007992007992007999,
+              0.0759240759240759
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.00395,
+          "probability_all_adjacent_increase": 0.73905,
+          "probability_nonmonotone": 0.257,
+          "p": 0.24,
+          "observed_rates": [
+            0.4180819180819181,
+            0.43006993006993005,
+            0.46503496503496505
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.00899100899100902,
+            0.021978021978021955
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.03396603396603398,
+              0.017982017982017984
+            ],
+            [
+              -0.005994005994005958,
+              0.04795204795204794
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.015,
+          "probability_all_adjacent_increase": 0.19185,
+          "probability_nonmonotone": 0.79315,
+          "p": 0.28,
+          "observed_rates": [
+            0.48801198801198803,
+            0.479020979020979,
+            0.500999000999001
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.003996003996004027,
+            0.02197802197802201
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.03196803196803194,
+              0.02297702297702292
+            ],
+            [
+              0.0009990009990009652,
+              0.04195804195804198
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.00115,
+          "probability_all_adjacent_increase": 0.34995,
+          "probability_nonmonotone": 0.6489,
+          "p": 0.32,
+          "observed_rates": [
+            0.49100899100899104,
+            0.487012987012987,
+            0.508991008991009
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.016983016983016963,
+            0.012987012987013047
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.014985014985014977,
+              0.047952047952047994
+            ],
+            [
+              -0.01998001998001997,
+              0.04595404595404601
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0,
+          "probability_all_adjacent_increase": 0.53425,
+          "probability_nonmonotone": 0.46575,
+          "p": 0.36,
+          "observed_rates": [
+            0.482017982017982,
+            0.499000999000999,
+            0.511988011988012
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.006993006993007034,
+            0.024975024975024962
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.03596403596403591,
+              0.022977022977022976
+            ],
+            [
+              -0.006993006993006978,
+              0.05494505494505497
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0413,
+          "probability_all_adjacent_increase": 0.2755,
+          "probability_nonmonotone": 0.6832,
+          "p": 0.4,
+          "observed_rates": [
+            0.49600399600399603,
+            0.489010989010989,
+            0.513986013986014
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.030969030969030975,
+            -0.026973026973026948
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              0.0029970029970030065,
+              0.058941058941059
+            ],
+            [
+              -0.06593406593406592,
+              0.00999000999001004
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0118,
+          "probability_all_adjacent_increase": 0.09565,
+          "probability_nonmonotone": 0.89255,
+          "p": 0.45,
+          "observed_rates": [
+            0.476023976023976,
+            0.506993006993007,
+            0.48001998001998003
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.005994005994006013,
+            0.006993006993006978
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.019980019980020025,
+              0.03396603396603398
+            ],
+            [
+              -0.016983016983016963,
+              0.029970029970029954
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0414,
+          "probability_all_adjacent_increase": 0.3448,
+          "probability_nonmonotone": 0.6138,
+          "p": 0.49,
+          "observed_rates": [
+            0.503996003996004,
+            0.50999000999001,
+            0.516983016983017
+          ]
+        }
+      ]
+    },
+    {
+      "q": 0.15,
+      "cells": [
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.0029970029970029974,
+            0.000999000999000999
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.005994005994005994,
+              0.0
+            ],
+            [
+              -0.000999000999000999,
+              0.0029970029970029974
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.1073,
+          "probability_all_adjacent_increase": 0.00795,
+          "probability_nonmonotone": 0.88475,
+          "p": 0.08,
+          "observed_rates": [
+            0.004495504495504496,
+            0.0014985014985014985,
+            0.0024975024975024975
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.001998001998001993,
+            -0.021978021978021976
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.006043956043956003,
+              0.009990009990009992
+            ],
+            [
+              -0.02697302697302697,
+              -0.01798201798201798
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.3153,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.6847,
+          "p": 0.12,
+          "observed_rates": [
+            0.039460539460539464,
+            0.041458541458541456,
+            0.01948051948051948
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.008991008991008992,
+            -0.018981018981019004
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.01198801198801197,
+              0.02897102897102896
+            ],
+            [
+              -0.04295704295704296,
+              0.004995004995004992
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.17675,
+          "probability_all_adjacent_increase": 0.05215,
+          "probability_nonmonotone": 0.7711,
+          "p": 0.16,
+          "observed_rates": [
+            0.15134865134865136,
+            0.16033966033966035,
+            0.14135864135864135
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.001998001998001986,
+            0.016983016983016963
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.017982017982017984,
+              0.022977022977022976
+            ],
+            [
+              -0.005994005994006013,
+              0.04095904095904096
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.02375,
+          "probability_all_adjacent_increase": 0.44105,
+          "probability_nonmonotone": 0.5351999999999999,
+          "p": 0.2,
+          "observed_rates": [
+            0.3091908091908092,
+            0.3111888111888112,
+            0.32817182817182816
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.001998001998001986,
+            0.01698301698301702
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.02097902097902099,
+              0.023976023976023997
+            ],
+            [
+              -0.006993006993006978,
+              0.04195804195804198
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.02105,
+          "probability_all_adjacent_increase": 0.44155,
+          "probability_nonmonotone": 0.5374,
+          "p": 0.24,
+          "observed_rates": [
+            0.4230769230769231,
+            0.42507492507492506,
+            0.4420579420579421
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.010989010989011005,
+            0.015984015984015998
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.012987012987012991,
+              0.03796203796203795
+            ],
+            [
+              -0.01698301698301702,
+              0.0489510489510489
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.00835,
+          "probability_all_adjacent_increase": 0.5344,
+          "probability_nonmonotone": 0.45725000000000005,
+          "p": 0.28,
+          "observed_rates": [
+            0.471028971028971,
+            0.482017982017982,
+            0.498001998001998
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.025974025974025927,
+            -0.013986013986013957
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.003996003996004027,
+              0.05794205794205787
+            ],
+            [
+              -0.050949050949050945,
+              0.02197802197802201
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0218,
+          "probability_all_adjacent_increase": 0.20325,
+          "probability_nonmonotone": 0.77495,
+          "p": 0.32,
+          "observed_rates": [
+            0.47302697302697305,
+            0.499000999000999,
+            0.485014985014985
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.03796203796203801,
+            -0.0009990009990010762
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              0.0009990009990010207,
+              0.07292707292707296
+            ],
+            [
+              -0.025974025974025983,
+              0.024975024975024906
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.01025,
+          "probability_all_adjacent_increase": 0.41745,
+          "probability_nonmonotone": 0.5723,
+          "p": 0.36,
+          "observed_rates": [
+            0.46703296703296704,
+            0.504995004995005,
+            0.503996003996004
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.0009990009990010207,
+            0.017982017982017984
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.041958041958041925,
+              0.042957042957043
+            ],
+            [
+              -0.024975024975024962,
+              0.05594405594405594
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0153,
+          "probability_all_adjacent_increase": 0.2457,
+          "probability_nonmonotone": 0.739,
+          "p": 0.4,
+          "observed_rates": [
+            0.46703296703296704,
+            0.466033966033966,
+            0.484015984015984
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.004995004995004992,
+            -0.0009990009990010207
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.02397602397602394,
+              0.013986013986014012
+            ],
+            [
+              -0.02097902097902099,
+              0.02297702297702303
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.3423,
+          "probability_all_adjacent_increase": 0.1152,
+          "probability_nonmonotone": 0.5425,
+          "p": 0.45,
+          "observed_rates": [
+            0.49000999000999,
+            0.485014985014985,
+            0.484015984015984
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.02797202797202797,
+            -0.01998001998001997
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.007992007992007943,
+              0.058941058941058944
+            ],
+            [
+              -0.04795204795204794,
+              0.003996003996004083
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.07245,
+          "probability_all_adjacent_increase": 0.0738,
+          "probability_nonmonotone": 0.85375,
+          "p": 0.49,
+          "observed_rates": [
+            0.486013986013986,
+            0.513986013986014,
+            0.494005994005994
+          ]
+        }
+      ]
+    },
+    {
+      "q": 0.2,
+      "cells": [
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.002997002997002997,
+            0.001998001998001998
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.004995004995004996,
+              -0.000999000999000999
+            ],
+            [
+              0.0,
+              0.003996003996003996
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 1.0,
+          "p": 0.08,
+          "observed_rates": [
+            0.0034965034965034965,
+            0.0004995004995004995,
+            0.0024975024975024975
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.0029970029970029927,
+            -0.017982017982017984
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.014985014985014984,
+              0.008991008991008988
+            ],
+            [
+              -0.02697302697302697,
+              -0.008991008991008992
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.6402,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.3598,
+          "p": 0.12,
+          "observed_rates": [
+            0.034465534465534464,
+            0.03146853146853147,
+            0.013486513486513486
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.009990009990009985,
+            -0.018981018981018977
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.008991008991008992,
+              0.02797202797202797
+            ],
+            [
+              -0.036963036963036974,
+              0.001998001998001986
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.14795,
+          "probability_all_adjacent_increase": 0.03215,
+          "probability_nonmonotone": 0.8199,
+          "p": 0.16,
+          "observed_rates": [
+            0.13436563436563437,
+            0.14435564435564435,
+            0.12537462537462538
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.002997002997002951,
+            0.017982017982017984
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.02097902097902099,
+              0.014985014985014977
+            ],
+            [
+              -0.001998001998001986,
+              0.03796203796203795
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0108,
+          "probability_all_adjacent_increase": 0.3291,
+          "probability_nonmonotone": 0.6600999999999999,
+          "p": 0.2,
+          "observed_rates": [
+            0.2762237762237762,
+            0.27322677322677325,
+            0.29120879120879123
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.026973026973027003,
+            0.004995004995004992
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.003996003996003972,
+              0.058941058941058944
+            ],
+            [
+              -0.026973026973026948,
+              0.03596403596403597
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.00235,
+          "probability_all_adjacent_increase": 0.5207,
+          "probability_nonmonotone": 0.47695,
+          "p": 0.24,
+          "observed_rates": [
+            0.3941058941058941,
+            0.4210789210789211,
+            0.4260739260739261
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.004995004995004992,
+            0.041958041958041925
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.03396603396603398,
+              0.03096903096903092
+            ],
+            [
+              0.004995004995004992,
+              0.07092907092907091
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0,
+          "probability_all_adjacent_increase": 0.3217,
+          "probability_nonmonotone": 0.6783,
+          "p": 0.28,
+          "observed_rates": [
+            0.46203796203796205,
+            0.45704295704295705,
+            0.499000999000999
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.004995004995004992,
+            0.038961038961038974
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.029970029970029954,
+              0.018981018981019004
+            ],
+            [
+              0.018981018981019004,
+              0.059940059940059964
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0,
+          "probability_all_adjacent_increase": 0.35245,
+          "probability_nonmonotone": 0.6475500000000001,
+          "p": 0.32,
+          "observed_rates": [
+            0.489010989010989,
+            0.484015984015984,
+            0.522977022977023
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.020979020979020935,
+            -0.029970029970029954
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.025974025974025983,
+              0.06693306693306689
+            ],
+            [
+              -0.07692307692307687,
+              0.016983016983016963
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.1347,
+          "probability_all_adjacent_increase": 0.05195,
+          "probability_nonmonotone": 0.8133499999999999,
+          "p": 0.36,
+          "observed_rates": [
+            0.493006993006993,
+            0.513986013986014,
+            0.484015984015984
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.009990009990009985,
+            0.006993006993006978
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.02797202797202797,
+              0.048951048951049014
+            ],
+            [
+              -0.031968031968031996,
+              0.043956043956043966
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0648,
+          "probability_all_adjacent_increase": 0.33485,
+          "probability_nonmonotone": 0.60035,
+          "p": 0.4,
+          "observed_rates": [
+            0.49000999000999,
+            0.5,
+            0.506993006993007
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.01998001998001997,
+            -0.014985014985014977
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.014985014985014977,
+              0.05394605394605395
+            ],
+            [
+              -0.050949050949050945,
+              0.019980019980019914
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.08125,
+          "probability_all_adjacent_increase": 0.15665,
+          "probability_nonmonotone": 0.7621,
+          "p": 0.45,
+          "observed_rates": [
+            0.49000999000999,
+            0.50999000999001,
+            0.495004995004995
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.003996003996003972,
+            0.003996003996004027
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.050949050949050945,
+              0.05494505494505497
+            ],
+            [
+              -0.042957042957043,
+              0.05694305694305696
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.06095,
+          "probability_all_adjacent_increase": 0.15765,
+          "probability_nonmonotone": 0.7814000000000001,
+          "p": 0.49,
+          "observed_rates": [
+            0.48801198801198803,
+            0.492007992007992,
+            0.49600399600399603
+          ]
+        }
+      ]
+    },
+    {
+      "q": 0.25,
+      "cells": [
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.001998001998001998,
+            0.000999000999000999
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.003996003996003996,
+              0.0
+            ],
+            [
+              0.0,
+              0.002997002997002997
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 1.0,
+          "p": 0.08,
+          "observed_rates": [
+            0.0024975024975024975,
+            0.0004995004995004995,
+            0.0014985014985014985
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.003996003996003996,
+            -0.01898101898101898
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.009990009990009992,
+              0.01798201798201798
+            ],
+            [
+              -0.03096903096903097,
+              -0.005994005994005996
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.28505,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.71495,
+          "p": 0.12,
+          "observed_rates": [
+            0.026473526473526472,
+            0.030469530469530468,
+            0.011488511488511488
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.004995004995004992,
+            -0.021978021978021983
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.009990009990009985,
+              0.019980019980019997
+            ],
+            [
+              -0.036963036963036974,
+              -0.005994005994005985
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.26355,
+          "probability_all_adjacent_increase": 0.0008,
+          "probability_nonmonotone": 0.73565,
+          "p": 0.16,
+          "observed_rates": [
+            0.11838161838161838,
+            0.12337662337662338,
+            0.10139860139860139
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.015984015984015998,
+            0.0009990009990010207
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.011988011988012026,
+              0.04595404595404595
+            ],
+            [
+              -0.02097902097902099,
+              0.022977022977022976
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0586,
+          "probability_all_adjacent_increase": 0.38835,
+          "probability_nonmonotone": 0.55305,
+          "p": 0.2,
+          "observed_rates": [
+            0.25124875124875123,
+            0.26723276723276723,
+            0.26823176823176825
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.022977022977022976,
+            0.01198801198801197
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.0029970029970030065,
+              0.049950049950049924
+            ],
+            [
+              -0.020979020979020935,
+              0.04500499500499431
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.00115,
+          "probability_all_adjacent_increase": 0.6315,
+          "probability_nonmonotone": 0.36735000000000007,
+          "p": 0.24,
+          "observed_rates": [
+            0.36513486513486515,
+            0.3881118881118881,
+            0.4000999000999001
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.006993006993007034,
+            0.04495504495504499
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.04000999000999,
+              0.025974025974025983
+            ],
+            [
+              0.01898101898101895,
+              0.07392607392607392
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0,
+          "probability_all_adjacent_increase": 0.35585,
+          "probability_nonmonotone": 0.64415,
+          "p": 0.28,
+          "observed_rates": [
+            0.4420579420579421,
+            0.43506493506493504,
+            0.48001998001998003
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.012987012987012991,
+            0.004995004995004937
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.02397602397602394,
+              0.049950049950049924
+            ],
+            [
+              -0.01898101898101895,
+              0.02797202797202797
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.06305,
+          "probability_all_adjacent_increase": 0.41585,
+          "probability_nonmonotone": 0.5210999999999999,
+          "p": 0.32,
+          "observed_rates": [
+            0.48301698301698304,
+            0.49600399600399603,
+            0.500999000999001
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.0019980019980020414,
+            0.014985014985015033
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.027972027972027916,
+              0.02997002997003001
+            ],
+            [
+              -0.009990009990009985,
+              0.040959040959041015
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0261,
+          "probability_all_adjacent_increase": 0.38945,
+          "probability_nonmonotone": 0.5844499999999999,
+          "p": 0.36,
+          "observed_rates": [
+            0.5079920079920079,
+            0.50999000999001,
+            0.524975024975025
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.01098901098901095,
+            0.012987012987012936
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.04095904095904096,
+              0.018981018981018893
+            ],
+            [
+              -0.018981018981019004,
+              0.04495504495504493
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0588,
+          "probability_all_adjacent_increase": 0.0776,
+          "probability_nonmonotone": 0.8636,
+          "p": 0.4,
+          "observed_rates": [
+            0.499000999000999,
+            0.48801198801198803,
+            0.500999000999001
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.013986013986013957,
+            -0.0009990009990009652
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.0009990009990010207,
+              0.02897102897102899
+            ],
+            [
+              -0.02797202797202797,
+              0.025974025974025927
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0146,
+          "probability_all_adjacent_increase": 0.4147,
+          "probability_nonmonotone": 0.5707,
+          "p": 0.45,
+          "observed_rates": [
+            0.48301698301698304,
+            0.497002997002997,
+            0.49600399600399603
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.021978021978021955,
+            0.026973026973027003
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.05494505494505497,
+              0.009990009990009985
+            ],
+            [
+              -0.006993006993006978,
+              0.0649350649350649
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.05985,
+          "probability_all_adjacent_increase": 0.0893,
+          "probability_nonmonotone": 0.85085,
+          "p": 0.49,
+          "observed_rates": [
+            0.5,
+            0.47802197802197804,
+            0.504995004995005
+          ]
+        }
+      ]
+    },
+    {
+      "q": 0.3,
+      "cells": [
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.001998001998001998,
+            0.000999000999000999
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.003996003996003996,
+              0.0
+            ],
+            [
+              0.0,
+              0.002997002997002997
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 1.0,
+          "p": 0.08,
+          "observed_rates": [
+            0.0024975024975024975,
+            0.0004995004995004995,
+            0.0014985014985014985
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.0009990009990009999,
+            -0.014985014985014984
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.012987012987012984,
+              0.013986013986013988
+            ],
+            [
+              -0.025974025974025976,
+              -0.003996003996003996
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.41815,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.58185,
+          "p": 0.12,
+          "observed_rates": [
+            0.022477522477522476,
+            0.023476523476523476,
+            0.008491508491508492
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.0039960039960039995,
+            -0.018981018981018977
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.021978021978021983,
+              0.013986013986013984
+            ],
+            [
+              -0.03596403596403597,
+              -0.0009990009990010068
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.59075,
+          "probability_all_adjacent_increase": 0.00185,
+          "probability_nonmonotone": 0.4074,
+          "p": 0.16,
+          "observed_rates": [
+            0.1063936063936064,
+            0.1023976023976024,
+            0.08341658341658342
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.025974025974025983,
+            -0.006993006993007006
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              0.0,
+              0.051948051948051965
+            ],
+            [
+              -0.034965034965034975,
+              0.022977022977022976
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.01395,
+          "probability_all_adjacent_increase": 0.29725,
+          "probability_nonmonotone": 0.6888,
+          "p": 0.2,
+          "observed_rates": [
+            0.2242757242757243,
+            0.25024975024975027,
+            0.24325674325674326
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.025974025974025983,
+            0.025974025974025983
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              0.003996003996003972,
+              0.050949050949050945
+            ],
+            [
+              -0.007992007992007999,
+              0.05994005994005991
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0,
+          "probability_all_adjacent_increase": 0.86765,
+          "probability_nonmonotone": 0.13234999999999997,
+          "p": 0.24,
+          "observed_rates": [
+            0.34815184815184813,
+            0.3741258741258741,
+            0.4000999000999001
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.024975024975025018,
+            0.015984015984015942
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.021978021978021955,
+              0.07692307692307693
+            ],
+            [
+              -0.01198801198801197,
+              0.04095904095904096
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0051,
+          "probability_all_adjacent_increase": 0.62655,
+          "probability_nonmonotone": 0.36834999999999996,
+          "p": 0.28,
+          "observed_rates": [
+            0.43006993006993005,
+            0.45504495504495507,
+            0.471028971028971
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.007992007992007999,
+            0.005994005994006013
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.03396603396603398,
+              0.02097902097902099
+            ],
+            [
+              -0.021978021978021955,
+              0.02897102897102899
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.11405,
+          "probability_all_adjacent_increase": 0.08995,
+          "probability_nonmonotone": 0.796,
+          "p": 0.32,
+          "observed_rates": [
+            0.49000999000999,
+            0.482017982017982,
+            0.48801198801198803
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.006993006993006978,
+            -0.005994005994005958
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.03496503496503489,
+              0.021978021978021955
+            ],
+            [
+              -0.026973026973026948,
+              0.014985014985014977
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.37085,
+          "probability_all_adjacent_increase": 0.0396,
+          "probability_nonmonotone": 0.58955,
+          "p": 0.36,
+          "observed_rates": [
+            0.500999000999001,
+            0.494005994005994,
+            0.48801198801198803
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.024975024975024962,
+            0.003996003996004027
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.052947052947052986,
+              -0.0009990009990009652
+            ],
+            [
+              -0.010989010989011005,
+              0.019980019980019914
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.29195,
+          "probability_all_adjacent_increase": 0.00995,
+          "probability_nonmonotone": 0.6981,
+          "p": 0.4,
+          "observed_rates": [
+            0.522977022977023,
+            0.498001998001998,
+            0.501998001998002
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.014985014985014977,
+            0.003996003996004027
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.028971028971028934,
+              0.05794205794205798
+            ],
+            [
+              -0.023976023976023997,
+              0.034965034965035
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.06525,
+          "probability_all_adjacent_increase": 0.3393,
+          "probability_nonmonotone": 0.59545,
+          "p": 0.45,
+          "observed_rates": [
+            0.48301698301698304,
+            0.498001998001998,
+            0.501998001998002
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.017982017982017928,
+            -0.009990009990009985
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.041958041958041925,
+              0.005994005994006013
+            ],
+            [
+              -0.042957042957043,
+              0.0219780219780219
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.56575,
+          "probability_all_adjacent_increase": 0.0016,
+          "probability_nonmonotone": 0.43265000000000003,
+          "p": 0.49,
+          "observed_rates": [
+            0.532967032967033,
+            0.514985014985015,
+            0.504995004995005
+          ]
+        }
+      ]
+    },
+    {
+      "q": 0.35,
+      "cells": [
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.001998001998001998,
+            0.000999000999000999
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.003996003996003996,
+              0.0
+            ],
+            [
+              0.0,
+              0.002997002997002997
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 1.0,
+          "p": 0.08,
+          "observed_rates": [
+            0.0024975024975024975,
+            0.0004995004995004995,
+            0.0014985014985014985
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.004995004995004994,
+            -0.012987012987012984
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.006993006993006992,
+              0.016983016983016984
+            ],
+            [
+              -0.022977022977022976,
+              -0.003996003996003996
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.22695,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.77305,
+          "p": 0.12,
+          "observed_rates": [
+            0.013486513486513486,
+            0.01848151848151848,
+            0.005494505494505495
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.009990009990009999,
+            -0.015984015984015984
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.022977022977022976,
+              0.003996003996003986
+            ],
+            [
+              -0.02897102897102897,
+              -0.0029970029970029927
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.85085,
+          "probability_all_adjacent_increase": 0.00075,
+          "probability_nonmonotone": 0.1484,
+          "p": 0.16,
+          "observed_rates": [
+            0.09940059940059941,
+            0.08941058941058941,
+            0.07342657342657342
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.01698301698301699,
+            -0.018981018981018977
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.01998001998001997,
+              0.05194805194805194
+            ],
+            [
+              -0.05694305694305693,
+              0.016983016983016963
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.1204,
+          "probability_all_adjacent_increase": 0.11225,
+          "probability_nonmonotone": 0.7673500000000001,
+          "p": 0.2,
+          "observed_rates": [
+            0.1953046953046953,
+            0.2122877122877123,
+            0.1933066933066933
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.03196803196803194,
+            0.006993006993006978
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              0.003996003996004027,
+              0.058941058941058944
+            ],
+            [
+              -0.025974025974025983,
+              0.04195804195804198
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0,
+          "probability_all_adjacent_increase": 0.57375,
+          "probability_nonmonotone": 0.42625,
+          "p": 0.24,
+          "observed_rates": [
+            0.3221778221778222,
+            0.35414585414585414,
+            0.3611388611388611
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.03096903096903092,
+            0.0009990009990010207
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              0.004995004995004992,
+              0.05994005994005991
+            ],
+            [
+              -0.022977022977022976,
+              0.025974025974025927
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0004,
+          "probability_all_adjacent_increase": 0.48545,
+          "probability_nonmonotone": 0.5141500000000001,
+          "p": 0.28,
+          "observed_rates": [
+            0.4090909090909091,
+            0.44005994005994004,
+            0.44105894105894106
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.017982017982017984,
+            -0.003996003996004027
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.001998001998001986,
+              0.03796203796203795
+            ],
+            [
+              -0.027972027972028024,
+              0.022977022977022976
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.02895,
+          "probability_all_adjacent_increase": 0.33405,
+          "probability_nonmonotone": 0.637,
+          "p": 0.32,
+          "observed_rates": [
+            0.47302697302697305,
+            0.49100899100899104,
+            0.487012987012987
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.025974025974025927,
+            -0.03496503496503495
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.0009990009990009652,
+              0.05394605394605395
+            ],
+            [
+              -0.06193806193806195,
+              -0.007992007992007999
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.04715,
+          "probability_all_adjacent_increase": 0.0074,
+          "probability_nonmonotone": 0.94545,
+          "p": 0.36,
+          "observed_rates": [
+            0.485014985014985,
+            0.510989010989011,
+            0.476023976023976
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.004995004995004937,
+            -0.012987012987012991
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.03496503496503495,
+              0.027972027972028024
+            ],
+            [
+              -0.06793206793206791,
+              0.03996003996004005
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.32235,
+          "probability_all_adjacent_increase": 0.06665,
+          "probability_nonmonotone": 0.611,
+          "p": 0.4,
+          "observed_rates": [
+            0.5179820179820179,
+            0.512987012987013,
+            0.5
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.019980019980020025,
+            0.003996003996004027
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.04895104895104896,
+              0.007992007992008054
+            ],
+            [
+              -0.02797202797202797,
+              0.03696303696303699
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.293,
+          "probability_all_adjacent_increase": 0.0081,
+          "probability_nonmonotone": 0.6989000000000001,
+          "p": 0.45,
+          "observed_rates": [
+            0.49600399600399603,
+            0.476023976023976,
+            0.48001998001998003
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.02197802197802201,
+            -0.01098901098901095
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.015984015984015998,
+              0.05894105894105889
+            ],
+            [
+              -0.043956043956043966,
+              0.02302697302697235
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.05385,
+          "probability_all_adjacent_increase": 0.17865,
+          "probability_nonmonotone": 0.7675000000000001,
+          "p": 0.49,
+          "observed_rates": [
+            0.500999000999001,
+            0.522977022977023,
+            0.511988011988012
+          ]
+        }
+      ]
+    },
+    {
+      "q": 0.4,
+      "cells": [
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.001998001998001998,
+            0.000999000999000999
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.003996003996003996,
+              0.0
+            ],
+            [
+              0.0,
+              0.002997002997002997
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 1.0,
+          "p": 0.08,
+          "observed_rates": [
+            0.0024975024975024975,
+            0.0004995004995004995,
+            0.0014985014985014985
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.001998001998001998,
+            -0.012987012987012988
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.008991008991008992,
+              0.013986013986013984
+            ],
+            [
+              -0.02097902097902098,
+              -0.005994005994005993
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.36885,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.63115,
+          "p": 0.12,
+          "observed_rates": [
+            0.014485514485514486,
+            0.016483516483516484,
+            0.0034965034965034965
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.0,
+            -0.021978021978021976
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.013986013986013984,
+              0.013986013986013984
+            ],
+            [
+              -0.03696303696303696,
+              -0.006993006993006992
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.4743,
+          "probability_all_adjacent_increase": 0.0008,
+          "probability_nonmonotone": 0.5249,
+          "p": 0.16,
+          "observed_rates": [
+            0.08041958041958042,
+            0.08041958041958042,
+            0.05844155844155844
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.011988011988011998,
+            -0.025974025974025983
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.033966033966033954,
+              0.054945054945054944
+            ],
+            [
+              -0.05794205794205795,
+              0.005994005994005985
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.25135,
+          "probability_all_adjacent_increase": 0.0239,
+          "probability_nonmonotone": 0.72475,
+          "p": 0.2,
+          "observed_rates": [
+            0.17132867132867133,
+            0.18331668331668333,
+            0.15734265734265734
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.018981018981019004,
+            0.01198801198801197
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.005994005994005958,
+              0.043956043956043966
+            ],
+            [
+              -0.018981018981018952,
+              0.042957042957042946
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.00155,
+          "probability_all_adjacent_increase": 0.6191,
+          "probability_nonmonotone": 0.37934999999999997,
+          "p": 0.24,
+          "observed_rates": [
+            0.2972027972027972,
+            0.3161838161838162,
+            0.32817182817182816
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.06393606393606394,
+            -0.004995004995005048
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              0.03996003996003994,
+              0.08791208791208793
+            ],
+            [
+              -0.02797202797202797,
+              0.018981018981019004
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0,
+          "probability_all_adjacent_increase": 0.34675,
+          "probability_nonmonotone": 0.65325,
+          "p": 0.28,
+          "observed_rates": [
+            0.38611388611388614,
+            0.4500499500499501,
+            0.44505494505494503
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.013986013986014012,
+            0.01998001998001997
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.01198801198801197,
+              0.042957042957043
+            ],
+            [
+              -0.02097902097902099,
+              0.05794205794205787
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.00845,
+          "probability_all_adjacent_increase": 0.5848,
+          "probability_nonmonotone": 0.40675000000000006,
+          "p": 0.32,
+          "observed_rates": [
+            0.463036963036963,
+            0.477022977022977,
+            0.497002997002997
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.026973026973027003,
+            -0.0029970029970030065
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              0.006993006993006978,
+              0.04795204795204794
+            ],
+            [
+              -0.039960039960039995,
+              0.028971028971029045
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0019,
+          "probability_all_adjacent_increase": 0.4537,
+          "probability_nonmonotone": 0.5444,
+          "p": 0.36,
+          "observed_rates": [
+            0.466033966033966,
+            0.493006993006993,
+            0.49000999000999
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.0029970029970030065,
+            -0.007992007992008054
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.029970029970029954,
+              0.03396603396603398
+            ],
+            [
+              -0.028971028971028934,
+              0.012987012987012936
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.232,
+          "probability_all_adjacent_increase": 0.0844,
+          "probability_nonmonotone": 0.6836,
+          "p": 0.4,
+          "observed_rates": [
+            0.501998001998002,
+            0.504995004995005,
+            0.497002997002997
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.004995004995004992,
+            0.0
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.02997002997003001,
+              0.01998001998001997
+            ],
+            [
+              -0.024975024975025018,
+              0.024975024975024962
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.1594,
+          "probability_all_adjacent_increase": 0.04485,
+          "probability_nonmonotone": 0.79575,
+          "p": 0.45,
+          "observed_rates": [
+            0.499000999000999,
+            0.494005994005994,
+            0.494005994005994
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.009990009990009985,
+            -0.042957042957042946
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.01798201798201804,
+              0.038961038961038974
+            ],
+            [
+              -0.06293706293706297,
+              -0.01998001998001997
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.28135,
+          "probability_all_adjacent_increase": 0.00075,
+          "probability_nonmonotone": 0.7179,
+          "p": 0.49,
+          "observed_rates": [
+            0.506993006993007,
+            0.516983016983017,
+            0.474025974025974
+          ]
+        }
+      ]
+    },
+    {
+      "q": 0.45,
+      "cells": [
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.0,
+            -0.000999000999000999
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.001998001998001998,
+              0.001998001998001998
+            ],
+            [
+              -0.002997002997002997,
+              0.0
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.12275,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.87725,
+          "p": 0.08,
+          "observed_rates": [
+            0.0014985014985014985,
+            0.0014985014985014985,
+            0.0004995004995004995
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.0,
+            -0.00999000999000999
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.009990009990009988,
+              0.00999000999000999
+            ],
+            [
+              -0.017982017982017984,
+              -0.003996003996003996
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.47955,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.5204500000000001,
+          "p": 0.12,
+          "observed_rates": [
+            0.011488511488511488,
+            0.011488511488511488,
+            0.0014985014985014985
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.007992007992007999,
+            -0.025974025974025976
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.0029970029970029927,
+              0.01898101898101899
+            ],
+            [
+              -0.03996003996003997,
+              -0.009990009990009999
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.1088,
+          "probability_all_adjacent_increase": 0.0013,
+          "probability_nonmonotone": 0.8899,
+          "p": 0.16,
+          "observed_rates": [
+            0.06443556443556443,
+            0.07242757242757243,
+            0.046453546453546456
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.01998001998001997,
+            -0.029970029970029954
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.02397602397602397,
+              0.06193806193806192
+            ],
+            [
+              -0.06193806193806192,
+              0.0019980019980020136
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.1796,
+          "probability_all_adjacent_increase": 0.0207,
+          "probability_nonmonotone": 0.7997,
+          "p": 0.2,
+          "observed_rates": [
+            0.14435564435564435,
+            0.16433566433566432,
+            0.13436563436563437
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.018981018981019004,
+            0.01998001998001997
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.01198801198801197,
+              0.04995004995004995
+            ],
+            [
+              -0.006993006993006978,
+              0.04695304695304697
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0009,
+          "probability_all_adjacent_increase": 0.71555,
+          "probability_nonmonotone": 0.28354999999999997,
+          "p": 0.24,
+          "observed_rates": [
+            0.2692307692307692,
+            0.2882117882117882,
+            0.3081918081918082
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.06993006993006995,
+            -0.010989010989011005
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              0.04495504495504499,
+              0.09290709290709293
+            ],
+            [
+              -0.050949050949050945,
+              0.028971028971028934
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0,
+          "probability_all_adjacent_increase": 0.3286,
+          "probability_nonmonotone": 0.6714,
+          "p": 0.28,
+          "observed_rates": [
+            0.35114885114885114,
+            0.4210789210789211,
+            0.4100899100899101
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.038961038961038974,
+            0.007992007992007999
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              0.004995004995004992,
+              0.07092907092907097
+            ],
+            [
+              -0.027972027972028024,
+              0.04595404595404601
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0007,
+          "probability_all_adjacent_increase": 0.5904,
+          "probability_nonmonotone": 0.40889999999999993,
+          "p": 0.32,
+          "observed_rates": [
+            0.42807192807192807,
+            0.46703296703296704,
+            0.47502497502497504
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.006993006993006978,
+            0.024975024975024962
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.038961038961038974,
+              0.025974025974025983
+            ],
+            [
+              -0.005994005994006013,
+              0.05594405594405594
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.01475,
+          "probability_all_adjacent_increase": 0.263,
+          "probability_nonmonotone": 0.72225,
+          "p": 0.36,
+          "observed_rates": [
+            0.466033966033966,
+            0.45904095904095904,
+            0.484015984015984
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.04095904095904096,
+            0.00899100899100902
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              0.01198801198801197,
+              0.06993006993006995
+            ],
+            [
+              -0.025974025974025983,
+              0.04495504495504493
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0002,
+          "probability_all_adjacent_increase": 0.64505,
+          "probability_nonmonotone": 0.35475,
+          "p": 0.4,
+          "observed_rates": [
+            0.45904095904095904,
+            0.5,
+            0.508991008991009
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.01198801198801197,
+            -0.0009990009990010207
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.039960039960039995,
+              0.016983016983016963
+            ],
+            [
+              -0.029970029970029954,
+              0.029970029970029954
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.36895,
+          "probability_all_adjacent_increase": 0.0914,
+          "probability_nonmonotone": 0.53965,
+          "p": 0.45,
+          "observed_rates": [
+            0.492007992007992,
+            0.48001998001998003,
+            0.479020979020979
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.028971028971028878,
+            -0.027972027972027913
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.003996003996003972,
+              0.058941058941058944
+            ],
+            [
+              -0.054945054945054916,
+              0.0029970029970030065
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.03465,
+          "probability_all_adjacent_increase": 0.026,
+          "probability_nonmonotone": 0.93935,
+          "p": 0.49,
+          "observed_rates": [
+            0.504995004995005,
+            0.5339660339660339,
+            0.505994005994006
+          ]
+        }
+      ]
+    },
+    {
+      "q": 0.5,
+      "cells": [
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.0,
+            -0.000999000999000999
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.001998001998001998,
+              0.001998001998001998
+            ],
+            [
+              -0.002997002997002997,
+              0.0
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.12435,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.87565,
+          "p": 0.08,
+          "observed_rates": [
+            0.0014985014985014985,
+            0.0014985014985014985,
+            0.0004995004995004995
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.0009990009990009981,
+            -0.006993006993006994
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.01098901098901099,
+              0.00999000999000999
+            ],
+            [
+              -0.015984015984015984,
+              0.0
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.47995,
+          "probability_all_adjacent_increase": 0.00015,
+          "probability_nonmonotone": 0.5199,
+          "p": 0.12,
+          "observed_rates": [
+            0.00949050949050949,
+            0.008491508491508492,
+            0.0014985014985014985
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.0029970029970029927,
+            -0.014985014985014991
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.014985014985014984,
+              0.009990009990009992
+            ],
+            [
+              -0.03196803196803197,
+              0.0019980019980019997
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.56445,
+          "probability_all_adjacent_increase": 0.00135,
+          "probability_nonmonotone": 0.4342,
+          "p": 0.16,
+          "observed_rates": [
+            0.05844155844155844,
+            0.05544455544455545,
+            0.040459540459540456
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.005994005994005985,
+            -0.021978021978021983
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.03796203796203795,
+              0.047952047952047966
+            ],
+            [
+              -0.05694305694305693,
+              0.010989010989010978
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.27715,
+          "probability_all_adjacent_increase": 0.01505,
+          "probability_nonmonotone": 0.7078,
+          "p": 0.2,
+          "observed_rates": [
+            0.13736263736263737,
+            0.14335664335664336,
+            0.12137862137862138
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.0,
+            0.03596403596403597
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.041958041958041925,
+              0.03796203796203795
+            ],
+            [
+              0.01098901098901095,
+              0.06093906093906093
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.00035,
+          "probability_all_adjacent_increase": 0.49115,
+          "probability_nonmonotone": 0.5085000000000001,
+          "p": 0.24,
+          "observed_rates": [
+            0.24925074925074925,
+            0.24925074925074925,
+            0.2852147852147852
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.020979020979020935,
+            0.0
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.021978021978021955,
+              0.05694305694305696
+            ],
+            [
+              -0.03996003996003994,
+              0.04395604395604391
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0058,
+          "probability_all_adjacent_increase": 0.2947,
+          "probability_nonmonotone": 0.6995,
+          "p": 0.28,
+          "observed_rates": [
+            0.3501498501498502,
+            0.3711288711288711,
+            0.3711288711288711
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.003996003996004027,
+            0.03196803196803194
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.03296703296703296,
+              0.03696303696303699
+            ],
+            [
+              0.012987012987012991,
+              0.052947052947052986
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.00015,
+          "probability_all_adjacent_increase": 0.579,
+          "probability_nonmonotone": 0.42085000000000006,
+          "p": 0.32,
+          "observed_rates": [
+            0.4230769230769231,
+            0.4270729270729271,
+            0.45904095904095904
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.015984015984015942,
+            0.011988011988012026
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.003996003996004027,
+              0.03696303696303699
+            ],
+            [
+              -0.01698301698301702,
+              0.04095904095904096
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.00635,
+          "probability_all_adjacent_increase": 0.6402,
+          "probability_nonmonotone": 0.35345000000000004,
+          "p": 0.36,
+          "observed_rates": [
+            0.45204795204795206,
+            0.468031968031968,
+            0.48001998001998003
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.047952047952047994,
+            0.006993006993006978
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              0.01698301698301702,
+              0.07392607392607398
+            ],
+            [
+              -0.02097902097902099,
+              0.03501498501498432
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.00155,
+          "probability_all_adjacent_increase": 0.63115,
+          "probability_nonmonotone": 0.36729999999999996,
+          "p": 0.4,
+          "observed_rates": [
+            0.44005994005994004,
+            0.48801198801198803,
+            0.495004995004995
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.015984015984015942,
+            0.01898101898101895
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.03896103896103892,
+              0.005994005994006013
+            ],
+            [
+              -0.003996003996004027,
+              0.042957042957042946
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.04785,
+          "probability_all_adjacent_increase": 0.07185,
+          "probability_nonmonotone": 0.8803000000000001,
+          "p": 0.45,
+          "observed_rates": [
+            0.486013986013986,
+            0.47002997002997005,
+            0.489010989010989
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.009990009990009985,
+            -0.013986013986013957
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.018981018981018893,
+              0.03796203796203795
+            ],
+            [
+              -0.03896103896103892,
+              0.008991008991008964
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.1902,
+          "probability_all_adjacent_increase": 0.0767,
+          "probability_nonmonotone": 0.7331,
+          "p": 0.49,
+          "observed_rates": [
+            0.5,
+            0.50999000999001,
+            0.49600399600399603
+          ]
+        }
+      ]
+    },
+    {
+      "q": 0.55,
+      "cells": [
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.000999000999000999,
+            0.0
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.002997002997002997,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 1.0,
+          "p": 0.08,
+          "observed_rates": [
+            0.0014985014985014985,
+            0.0004995004995004995,
+            0.0004995004995004995
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.002997002997002996,
+            -0.004995004995004996
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.011988011988011988,
+              0.005994005994005994
+            ],
+            [
+              -0.010989010989010988,
+              0.0
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.6038,
+          "probability_all_adjacent_increase": 0.00045,
+          "probability_nonmonotone": 0.39575,
+          "p": 0.12,
+          "observed_rates": [
+            0.00949050949050949,
+            0.006493506493506494,
+            0.0014985014985014985
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.001998001998001993,
+            -0.018981018981018984
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.014985014985014984,
+              0.011988011988011985
+            ],
+            [
+              -0.03296703296703297,
+              -0.005994005994005992
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.57675,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.42325,
+          "p": 0.16,
+          "observed_rates": [
+            0.04945054945054945,
+            0.047452547452547456,
+            0.028471528471528472
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.0029970029970029927,
+            -0.02997002997002997
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.03196803196803197,
+              0.03596403596403597
+            ],
+            [
+              -0.05994005994005994,
+              -0.001998001998001986
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.36285,
+          "probability_all_adjacent_increase": 0.00055,
+          "probability_nonmonotone": 0.6365999999999999,
+          "p": 0.2,
+          "observed_rates": [
+            0.11838161838161838,
+            0.12137862137862138,
+            0.09140859140859141
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.01998001998001997,
+            -0.006993006993006978
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.008991008991008992,
+              0.04595404595404595
+            ],
+            [
+              -0.03196803196803197,
+              0.02097902097902099
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.05385,
+          "probability_all_adjacent_increase": 0.2427,
+          "probability_nonmonotone": 0.70345,
+          "p": 0.24,
+          "observed_rates": [
+            0.2082917082917083,
+            0.22827172827172826,
+            0.22127872127872128
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.005994005994006013,
+            0.029970029970029954
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.05794205794205798,
+              0.04495504495504493
+            ],
+            [
+              -0.022977022977022976,
+              0.08491508491508487
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0175,
+          "probability_all_adjacent_increase": 0.26625,
+          "probability_nonmonotone": 0.71625,
+          "p": 0.28,
+          "observed_rates": [
+            0.3191808191808192,
+            0.3131868131868132,
+            0.34315684315684314
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.01198801198801197,
+            0.03596403596403597
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.017982017982017984,
+              0.042957042957042946
+            ],
+            [
+              0.003996003996003972,
+              0.06693306693306694
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.00035,
+          "probability_all_adjacent_increase": 0.692,
+          "probability_nonmonotone": 0.3076500000000001,
+          "p": 0.32,
+          "observed_rates": [
+            0.38611388611388614,
+            0.3981018981018981,
+            0.4340659340659341
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.03396603396603398,
+            0.010989010989011005
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              0.009990009990009985,
+              0.05694305694305696
+            ],
+            [
+              -0.004995004995004992,
+              0.025974025974025983
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0,
+          "probability_all_adjacent_increase": 0.8522,
+          "probability_nonmonotone": 0.14780000000000004,
+          "p": 0.36,
+          "observed_rates": [
+            0.42507492507492506,
+            0.45904095904095904,
+            0.47002997002997005
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.05294705294705293,
+            0.00999000999001004
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              0.02097902097902099,
+              0.08591408591408595
+            ],
+            [
+              -0.026973026973026948,
+              0.042957042957042946
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0,
+          "probability_all_adjacent_increase": 0.6764,
+          "probability_nonmonotone": 0.3236,
+          "p": 0.4,
+          "observed_rates": [
+            0.4420579420579421,
+            0.495004995004995,
+            0.504995004995005
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.01998001998001997,
+            0.0
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.052947052947052875,
+              0.014985014985014977
+            ],
+            [
+              -0.03796203796203795,
+              0.03396603396603398
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.34875,
+          "probability_all_adjacent_increase": 0.0445,
+          "probability_nonmonotone": 0.60675,
+          "p": 0.45,
+          "observed_rates": [
+            0.502997002997003,
+            0.48301698301698304,
+            0.48301698301698304
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.001998001998001986,
+            0.01998001998001997
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.016983016983016963,
+              0.020979020979021046
+            ],
+            [
+              -0.004995004995004937,
+              0.04495504495504493
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.01085,
+          "probability_all_adjacent_increase": 0.46055,
+          "probability_nonmonotone": 0.5286,
+          "p": 0.49,
+          "observed_rates": [
+            0.49100899100899104,
+            0.493006993006993,
+            0.512987012987013
+          ]
+        }
+      ]
+    },
+    {
+      "q": 0.6,
+      "cells": [
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.000999000999000999,
+            0.0
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.002997002997002997,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 1.0,
+          "p": 0.08,
+          "observed_rates": [
+            0.0014985014985014985,
+            0.0004995004995004995,
+            0.0004995004995004995
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.002997002997002997,
+            -0.0029970029970029974
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.00899100899100899,
+              0.002997002997002997
+            ],
+            [
+              -0.005994005994005994,
+              0.0
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.6733,
+          "probability_all_adjacent_increase": 0.0006,
+          "probability_nonmonotone": 0.3261,
+          "p": 0.12,
+          "observed_rates": [
+            0.007492507492507493,
+            0.004495504495504496,
+            0.0014985014985014985
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.0,
+            -0.016983016983016984
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.011988011988011991,
+              0.012987012987012984
+            ],
+            [
+              -0.02897102897102897,
+              -0.005994005994005992
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.4684,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.5316000000000001,
+          "p": 0.16,
+          "observed_rates": [
+            0.037462537462537464,
+            0.037462537462537464,
+            0.02047952047952048
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.007992007992007985,
+            -0.026973026973026976
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.03696303696303696,
+              0.019980019980019983
+            ],
+            [
+              -0.04995004995004995,
+              -0.004995004995004992
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.64315,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.35685,
+          "p": 0.2,
+          "observed_rates": [
+            0.0984015984015984,
+            0.09040959040959042,
+            0.06343656343656344
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.001998001998001986,
+            -0.03396603396603398
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.02897102897102896,
+              0.022977022977022976
+            ],
+            [
+              -0.051948051948051965,
+              -0.013986013986013984
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.5257,
+          "probability_all_adjacent_increase": 0.0005,
+          "probability_nonmonotone": 0.47380000000000005,
+          "p": 0.24,
+          "observed_rates": [
+            0.1893106893106893,
+            0.18731268731268733,
+            0.15334665334665334
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.015984015984015998,
+            0.024975024975024962
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.05194805194805191,
+              0.017982017982017984
+            ],
+            [
+              -0.009990009990009985,
+              0.06093906093906093
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0346,
+          "probability_all_adjacent_increase": 0.13135,
+          "probability_nonmonotone": 0.8340500000000001,
+          "p": 0.28,
+          "observed_rates": [
+            0.28621378621378624,
+            0.27022977022977024,
+            0.2952047952047952
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.016983016983016963,
+            0.04995004995004998
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.05194805194805191,
+              0.015984015984015942
+            ],
+            [
+              0.021978021978021955,
+              0.07892107892107897
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0,
+          "probability_all_adjacent_increase": 0.196,
+          "probability_nonmonotone": 0.804,
+          "p": 0.32,
+          "observed_rates": [
+            0.3761238761238761,
+            0.35914085914085914,
+            0.4090909090909091
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.012987012987012991,
+            0.016983016983016963
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.006993006993007034,
+              0.03296703296703296
+            ],
+            [
+              -0.006993006993006978,
+              0.038961038961038974
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.00195,
+          "probability_all_adjacent_increase": 0.72185,
+          "probability_nonmonotone": 0.2762,
+          "p": 0.36,
+          "observed_rates": [
+            0.4210789210789211,
+            0.4340659340659341,
+            0.45104895104895104
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.00999000999001004,
+            0.03196803196803194
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.016983016983016963,
+              0.03496503496503495
+            ],
+            [
+              0.008991008991008964,
+              0.05694305694305696
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0,
+          "probability_all_adjacent_increase": 0.722,
+          "probability_nonmonotone": 0.278,
+          "p": 0.4,
+          "observed_rates": [
+            0.44505494505494503,
+            0.45504495504495507,
+            0.487012987012987
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.03296703296703296,
+            0.027972027972028024
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.07692307692307693,
+              0.008991008991008964
+            ],
+            [
+              -0.004995004995004992,
+              0.061938061938062006
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.04405,
+          "probability_all_adjacent_increase": 0.05985,
+          "probability_nonmonotone": 0.8961,
+          "p": 0.45,
+          "observed_rates": [
+            0.506993006993007,
+            0.474025974025974,
+            0.501998001998002
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.012987012987012991,
+            -0.005994005994006013
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.02197802197802201,
+              0.04595404595404601
+            ],
+            [
+              -0.031968031968031996,
+              0.01898101898101906
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.12595,
+          "probability_all_adjacent_increase": 0.21095,
+          "probability_nonmonotone": 0.6631,
+          "p": 0.49,
+          "observed_rates": [
+            0.487012987012987,
+            0.5,
+            0.494005994005994
+          ]
+        }
+      ]
+    },
+    {
+      "q": 0.65,
+      "cells": [
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.000999000999000999,
+            0.0
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.002997002997002997,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 1.0,
+          "p": 0.08,
+          "observed_rates": [
+            0.0014985014985014985,
+            0.0004995004995004995,
+            0.0004995004995004995
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.0029970029970029974,
+            -0.002997002997002997
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.007992007992007992,
+              0.0019980019980019984
+            ],
+            [
+              -0.005994005994005994,
+              0.0
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.7073,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.29269999999999996,
+          "p": 0.12,
+          "observed_rates": [
+            0.006493506493506494,
+            0.0034965034965034965,
+            0.0004995004995004995
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.003996003996003996,
+            -0.012987012987012988
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.013986013986013984,
+              0.005994005994005996
+            ],
+            [
+              -0.022977022977022976,
+              -0.003996003996003994
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.70555,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.29445,
+          "p": 0.16,
+          "observed_rates": [
+            0.029470529470529472,
+            0.025474525474525476,
+            0.012487512487512488
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.006993006993006992,
+            -0.020979020979020976
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.03196803196803196,
+              0.015984015984015984
+            ],
+            [
+              -0.04095904095904096,
+              -0.0009990009990009999
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.6173,
+          "probability_all_adjacent_increase": 0.0003,
+          "probability_nonmonotone": 0.3824,
+          "p": 0.2,
+          "observed_rates": [
+            0.07542457542457542,
+            0.06843156843156843,
+            0.047452547452547456
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.007992007992007999,
+            -0.028971028971028975
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.02897102897102899,
+              0.012987012987012991
+            ],
+            [
+              -0.043956043956043966,
+              -0.014985014985014977
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.7269,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.2731,
+          "p": 0.24,
+          "observed_rates": [
+            0.16033966033966035,
+            0.15234765234765235,
+            0.12337662337662338
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.023976023976023997,
+            0.005994005994005985
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.05294705294705296,
+              0.005994005994006013
+            ],
+            [
+              -0.02297702297702295,
+              0.029970029970029982
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.2348,
+          "probability_all_adjacent_increase": 0.00925,
+          "probability_nonmonotone": 0.75595,
+          "p": 0.28,
+          "observed_rates": [
+            0.25524475524475526,
+            0.23126873126873126,
+            0.23726273726273725
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.017982017982017984,
+            0.03296703296703296
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.04895104895104896,
+              0.010989010989011005
+            ],
+            [
+              0.003996003996003972,
+              0.06293706293706297
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.01115,
+          "probability_all_adjacent_increase": 0.14265,
+          "probability_nonmonotone": 0.8462000000000001,
+          "p": 0.32,
+          "observed_rates": [
+            0.33816183816183815,
+            0.32017982017982016,
+            0.3531468531468531
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.009990009990009985,
+            0.050949050949050945
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.03396603396603398,
+              0.010989010989011005
+            ],
+            [
+              0.015984015984015998,
+              0.08591408591408589
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.00195,
+          "probability_all_adjacent_increase": 0.23365,
+          "probability_nonmonotone": 0.7644,
+          "p": 0.36,
+          "observed_rates": [
+            0.3841158841158841,
+            0.3741258741258741,
+            0.42507492507492506
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.018981018981019004,
+            0.03996003996003994
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.02802197802197797,
+              0.06293706293706292
+            ],
+            [
+              0.003996003996004027,
+              0.07492507492507489
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0004,
+          "probability_all_adjacent_increase": 0.7177,
+          "probability_nonmonotone": 0.28190000000000004,
+          "p": 0.4,
+          "observed_rates": [
+            0.41208791208791207,
+            0.43106893106893107,
+            0.471028971028971
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.02397602397602394,
+            0.04495504495504493
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.013986013986014012,
+              0.058941058941058944
+            ],
+            [
+              0.01998001998001997,
+              0.07392607392607387
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0,
+          "probability_all_adjacent_increase": 0.85035,
+          "probability_nonmonotone": 0.14964999999999995,
+          "p": 0.45,
+          "observed_rates": [
+            0.45504495504495507,
+            0.479020979020979,
+            0.5239760239760239
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.03696303696303693,
+            -0.007992007992007943
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              0.01098901098901095,
+              0.060939060939060985
+            ],
+            [
+              -0.03196803196803194,
+              0.017982017982017984
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0013,
+          "probability_all_adjacent_increase": 0.2797,
+          "probability_nonmonotone": 0.7190000000000001,
+          "p": 0.49,
+          "observed_rates": [
+            0.46703296703296704,
+            0.503996003996004,
+            0.49600399600399603
+          ]
+        }
+      ]
+    },
+    {
+      "q": 0.7,
+      "cells": [
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.000999000999000999,
+            0.0
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.002997002997002997,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 1.0,
+          "p": 0.08,
+          "observed_rates": [
+            0.0014985014985014985,
+            0.0004995004995004995,
+            0.0004995004995004995
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.0019980019980019984,
+            -0.002997002997002997
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.005994005994005994,
+              0.002997002997002997
+            ],
+            [
+              -0.005994005994005994,
+              0.0
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.6369,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.3631,
+          "p": 0.12,
+          "observed_rates": [
+            0.005494505494505495,
+            0.0034965034965034965,
+            0.0004995004995004995
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.013986013986013984,
+            -0.003996003996003996
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.022977022977022976,
+              -0.004995004995004996
+            ],
+            [
+              -0.01098901098901099,
+              0.003996003996003995
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.77225,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.22775,
+          "p": 0.16,
+          "observed_rates": [
+            0.026473526473526472,
+            0.012487512487512488,
+            0.008491508491508492
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.021978021978021983,
+            -0.005994005994005992
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.04095904095904097,
+              -0.0029970029970029996
+            ],
+            [
+              -0.022977022977022976,
+              0.010989010989010985
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.66745,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.33255,
+          "p": 0.2,
+          "observed_rates": [
+            0.06343656343656344,
+            0.041458541458541456,
+            0.035464535464535464
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.006993006993006978,
+            -0.028971028971028975
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.03196803196803197,
+              0.015984015984015998
+            ],
+            [
+              -0.04795204795204795,
+              -0.007992007992007999
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.64635,
+          "probability_all_adjacent_increase": 0.00015,
+          "probability_nonmonotone": 0.35350000000000004,
+          "p": 0.24,
+          "observed_rates": [
+            0.12737262737262736,
+            0.12037962037962038,
+            0.09140859140859141
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.018981018981018977,
+            0.009990009990009985
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.04995004995004995,
+              0.008991008991008992
+            ],
+            [
+              -0.010989010989010978,
+              0.03196803196803197
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.1528,
+          "probability_all_adjacent_increase": 0.0646,
+          "probability_nonmonotone": 0.7826,
+          "p": 0.28,
+          "observed_rates": [
+            0.2072927072927073,
+            0.18831168831168832,
+            0.1983016983016983
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.006993006993006978,
+            0.007992007992007999
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.015984015984015998,
+              0.03396603396603398
+            ],
+            [
+              -0.017982017982017984,
+              0.03596403596403597
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.08795,
+          "probability_all_adjacent_increase": 0.39655,
+          "probability_nonmonotone": 0.5155000000000001,
+          "p": 0.32,
+          "observed_rates": [
+            0.2722277722277722,
+            0.2792207792207792,
+            0.2872127872127872
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.005994005994006013,
+            0.042957042957042946
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.009990009990009985,
+              0.022977022977022976
+            ],
+            [
+              0.017982017982017984,
+              0.06793206793206791
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0,
+          "probability_all_adjacent_increase": 0.7009,
+          "probability_nonmonotone": 0.29910000000000003,
+          "p": 0.36,
+          "observed_rates": [
+            0.33916083916083917,
+            0.3451548451548452,
+            0.3881118881118881
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.02097902097902099,
+            0.016983016983016963
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.006993006993006978,
+              0.04695304695304692
+            ],
+            [
+              -0.00899100899100902,
+              0.04495504495504493
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0009,
+          "probability_all_adjacent_increase": 0.73565,
+          "probability_nonmonotone": 0.26344999999999996,
+          "p": 0.4,
+          "observed_rates": [
+            0.3971028971028971,
+            0.4180819180819181,
+            0.43506493506493504
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.0029970029970030065,
+            0.05694305694305696
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.03796203796203795,
+              0.03596403596403597
+            ],
+            [
+              0.009990009990010037,
+              0.09990009990009996
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0001,
+          "probability_all_adjacent_increase": 0.3918,
+          "probability_nonmonotone": 0.6081000000000001,
+          "p": 0.45,
+          "observed_rates": [
+            0.4290709290709291,
+            0.4260739260739261,
+            0.48301698301698304
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.008991008991008964,
+            0.01698301698301702
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.04395604395604391,
+              0.05694305694305696
+            ],
+            [
+              -0.01998001998001997,
+              0.05394605394605395
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0534,
+          "probability_all_adjacent_increase": 0.44615,
+          "probability_nonmonotone": 0.5004500000000001,
+          "p": 0.49,
+          "observed_rates": [
+            0.45704295704295705,
+            0.466033966033966,
+            0.48301698301698304
+          ]
+        }
+      ]
+    },
+    {
+      "q": 0.75,
+      "cells": [
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.0,
+            0.0
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 1.0,
+          "p": 0.08,
+          "observed_rates": [
+            0.0004995004995004995,
+            0.0004995004995004995,
+            0.0004995004995004995
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.0019980019980019984,
+            -0.001998001998001998
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.005994005994005994,
+              0.0019980019980019984
+            ],
+            [
+              -0.005994005994005994,
+              0.0
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.41325,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.58675,
+          "p": 0.12,
+          "observed_rates": [
+            0.004495504495504496,
+            0.0024975024975024975,
+            0.0004995004995004995
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.012987012987012986,
+            -0.004995004995004994
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.020979020979020976,
+              -0.004995004995004996
+            ],
+            [
+              -0.01098901098901099,
+              0.000999000999000999
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.88665,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.11334999999999995,
+          "p": 0.16,
+          "observed_rates": [
+            0.022477522477522476,
+            0.00949050949050949,
+            0.004495504495504496
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.017982017982017984,
+            -0.005994005994005992
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.029970029970029975,
+              -0.006993006993006992
+            ],
+            [
+              -0.014985014985014984,
+              0.0019980019980019997
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.8479,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.1521,
+          "p": 0.2,
+          "observed_rates": [
+            0.05044955044955045,
+            0.032467532467532464,
+            0.026473526473526472
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.013986013986013984,
+            -0.021978021978021983
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.03896103896103896,
+              0.009990009990009985
+            ],
+            [
+              -0.04195804195804196,
+              -0.0019980019980019997
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.7757,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.22430000000000005,
+          "p": 0.24,
+          "observed_rates": [
+            0.1023976023976024,
+            0.08841158841158842,
+            0.06643356643356643
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.022977022977022976,
+            -0.006993006993007006
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.05694305694305693,
+              0.010989010989010978
+            ],
+            [
+              -0.03596403596403597,
+              0.022977022977022976
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.5137,
+          "probability_all_adjacent_increase": 0.00435,
+          "probability_nonmonotone": 0.48194999999999993,
+          "p": 0.28,
+          "observed_rates": [
+            0.16933066933066934,
+            0.14635364635364637,
+            0.13936063936063936
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.008991008991008992,
+            -0.010989010989010978
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.029970029970029982,
+              0.012987012987012991
+            ],
+            [
+              -0.029970029970029982,
+              0.007992007992007971
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.55735,
+          "probability_all_adjacent_increase": 0.0007,
+          "probability_nonmonotone": 0.44195,
+          "p": 0.32,
+          "observed_rates": [
+            0.23726273726273725,
+            0.22827172827172826,
+            0.21728271728271728
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.003996003996003972,
+            0.019980019980020025
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.021978021978021955,
+              0.02797202797202797
+            ],
+            [
+              -0.013986013986013957,
+              0.05594405594405594
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0181,
+          "probability_all_adjacent_increase": 0.44705,
+          "probability_nonmonotone": 0.53485,
+          "p": 0.36,
+          "observed_rates": [
+            0.2852147852147852,
+            0.2892107892107892,
+            0.3091908091908092
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.016983016983016963,
+            0.007992007992007999
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.011988011988012026,
+              0.04195804195804198
+            ],
+            [
+              -0.018981018981019004,
+              0.038961038961038974
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.00315,
+          "probability_all_adjacent_increase": 0.48425,
+          "probability_nonmonotone": 0.5126,
+          "p": 0.4,
+          "observed_rates": [
+            0.3371628371628372,
+            0.35414585414585414,
+            0.36213786213786214
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.018981018981019004,
+            0.006993006993006978
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.019980019980020025,
+              0.05394605394605395
+            ],
+            [
+              -0.030969030969030975,
+              0.04895104895104896
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0045,
+          "probability_all_adjacent_increase": 0.39215,
+          "probability_nonmonotone": 0.60335,
+          "p": 0.45,
+          "observed_rates": [
+            0.3951048951048951,
+            0.4140859140859141,
+            0.4210789210789211
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.028971028971028934,
+            -0.003996003996003972
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.003996003996004027,
+              0.06093906093906093
+            ],
+            [
+              -0.04095904095904096,
+              0.034965034965035
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.03035,
+          "probability_all_adjacent_increase": 0.3737,
+          "probability_nonmonotone": 0.59595,
+          "p": 0.49,
+          "observed_rates": [
+            0.4110889110889111,
+            0.44005994005994004,
+            0.43606393606393606
+          ]
+        }
+      ]
+    },
+    {
+      "q": 0.8,
+      "cells": [
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.0,
+            0.0
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 1.0,
+          "p": 0.08,
+          "observed_rates": [
+            0.0004995004995004995,
+            0.0004995004995004995,
+            0.0004995004995004995
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.0,
+            -0.001998001998001998
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.002997002997002997,
+              0.003996003996003996
+            ],
+            [
+              -0.005994005994005994,
+              0.0
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.1336,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.8664000000000001,
+          "p": 0.12,
+          "observed_rates": [
+            0.0024975024975024975,
+            0.0024975024975024975,
+            0.0004995004995004995
+          ]
+        },
+        {
+          "classification": "decodable",
+          "observed_adjacent_deltas": [
+            -0.01098901098901099,
+            -0.004995004995004996
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.016983016983016984,
+              -0.005994005994005993
+            ],
+            [
+              -0.007992007992007992,
+              -0.001998001998001998
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.9891,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.01090000000000002,
+          "p": 0.16,
+          "observed_rates": [
+            0.017482517482517484,
+            0.006493506493506494,
+            0.0014985014985014985
+          ]
+        },
+        {
+          "classification": "decodable",
+          "observed_adjacent_deltas": [
+            -0.01698301698301698,
+            -0.00999000999000999
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.029970029970029972,
+              -0.004995004995004996
+            ],
+            [
+              -0.013986013986013988,
+              -0.004995004995004996
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.99305,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.006950000000000012,
+          "p": 0.2,
+          "observed_rates": [
+            0.041458541458541456,
+            0.024475524475524476,
+            0.014485514485514486
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.008991008991008992,
+            -0.03296703296703296
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.03396603396603396,
+              0.016983016983016984
+            ],
+            [
+              -0.05099900099900096,
+              -0.015984015984015984
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.70495,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.29505000000000003,
+          "p": 0.24,
+          "observed_rates": [
+            0.07342657342657342,
+            0.06443556443556443,
+            0.03146853146853147
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.02097902097902099,
+            -0.015984015984015984
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.048951048951048945,
+              0.008991008991008992
+            ],
+            [
+              -0.03496503496503496,
+              0.004995004995004992
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.7791,
+          "probability_all_adjacent_increase": 0.00555,
+          "probability_nonmonotone": 0.21534999999999999,
+          "p": 0.28,
+          "observed_rates": [
+            0.12237762237762238,
+            0.10139860139860139,
+            0.08541458541458541
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.02397602397602397,
+            -0.010989010989010978
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.047952047952047966,
+              -0.000999000999000993
+            ],
+            [
+              -0.026973026973026976,
+              0.0039960039960039995
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.82155,
+          "probability_all_adjacent_increase": 0.0005,
+          "probability_nonmonotone": 0.17795,
+          "p": 0.32,
+          "observed_rates": [
+            0.1823176823176823,
+            0.15834165834165834,
+            0.14735264735264736
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.010989010989011005,
+            -0.009990009990009985
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.04095904095904096,
+              0.01898101898101895
+            ],
+            [
+              -0.03596403596403597,
+              0.01598401598401597
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.4445,
+          "probability_all_adjacent_increase": 0.01235,
+          "probability_nonmonotone": 0.54315,
+          "p": 0.36,
+          "observed_rates": [
+            0.24325674325674326,
+            0.23226773226773226,
+            0.22227772227772227
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.0029970029970030065,
+            -0.04495504495504493
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.025974025974025983,
+              0.03296703296703296
+            ],
+            [
+              -0.06793206793206794,
+              -0.022977022977022976
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.42235,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.57765,
+          "p": 0.4,
+          "observed_rates": [
+            0.2922077922077922,
+            0.2952047952047952,
+            0.25024975024975027
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.02797202797202797,
+            0.022977022977022976
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.06393606393606394,
+              0.008991008991008964
+            ],
+            [
+              -0.016983016983016963,
+              0.06193806193806195
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0775,
+          "probability_all_adjacent_increase": 0.0183,
+          "probability_nonmonotone": 0.9042,
+          "p": 0.45,
+          "observed_rates": [
+            0.35914085914085914,
+            0.33116883116883117,
+            0.35414585414585414
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.0029970029970030065,
+            0.004995004995004992
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.018981018981019004,
+              0.02797202797202797
+            ],
+            [
+              -0.015984015984015998,
+              0.023976023976023997
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.03685,
+          "probability_all_adjacent_increase": 0.25525,
+          "probability_nonmonotone": 0.7079,
+          "p": 0.49,
+          "observed_rates": [
+            0.35114885114885114,
+            0.35414585414585414,
+            0.35914085914085914
+          ]
+        }
+      ]
+    },
+    {
+      "q": 0.85,
+      "cells": [
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.0,
+            0.0
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 1.0,
+          "p": 0.08,
+          "observed_rates": [
+            0.0004995004995004995,
+            0.0004995004995004995,
+            0.0004995004995004995
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.000999000999000999,
+            -0.000999000999000999
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.0029970029970029974,
+              0.000999000999000999
+            ],
+            [
+              -0.002997002997002997,
+              0.0
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.3411,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.6589,
+          "p": 0.12,
+          "observed_rates": [
+            0.0024975024975024975,
+            0.0014985014985014985,
+            0.0004995004995004995
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.007992007992007992,
+            -0.0019980019980019984
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.011988011988011988,
+              -0.003996003996003995
+            ],
+            [
+              -0.004995004995004996,
+              0.0009990009990009994
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.76335,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.23665000000000003,
+          "p": 0.16,
+          "observed_rates": [
+            0.012487512487512488,
+            0.004495504495504496,
+            0.0024975024975024975
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.01798201798201798,
+            -0.002997002997002998
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.027972027972027975,
+              -0.006993006993006992
+            ],
+            [
+              -0.011988011988011988,
+              0.004995004995004995
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.6641,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.3359,
+          "p": 0.2,
+          "observed_rates": [
+            0.030469530469530468,
+            0.012487512487512488,
+            0.00949050949050949
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.008991008991008992,
+            -0.02997002997002997
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.03096903096903096,
+              0.011988011988011991
+            ],
+            [
+              -0.04295704295704296,
+              -0.016983016983016984
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.73785,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.26215,
+          "p": 0.24,
+          "observed_rates": [
+            0.05344655344655345,
+            0.044455544455544456,
+            0.014485514485514486
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.02897102897102897,
+            -0.010989010989010985
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.04595404595404595,
+              -0.011988011988011991
+            ],
+            [
+              -0.02697302697302697,
+              0.004995004995004992
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.8562,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.14380000000000004,
+          "p": 0.28,
+          "observed_rates": [
+            0.08741258741258741,
+            0.05844155844155844,
+            0.047452547452547456
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.01198801198801197,
+            -0.028971028971028975
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.030969030969030975,
+              0.0029970029970030065
+            ],
+            [
+              -0.03896103896103896,
+              -0.019980019980019983
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.8562,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.14380000000000004,
+          "p": 0.32,
+          "observed_rates": [
+            0.13236763236763235,
+            0.12037962037962038,
+            0.09140859140859141
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.02797202797202797,
+            0.0029970029970030065
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.04995004995004995,
+              -0.004995004995004992
+            ],
+            [
+              -0.018981018981018977,
+              0.022977022977022976
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.3588,
+          "probability_all_adjacent_increase": 0.0002,
+          "probability_nonmonotone": 0.641,
+          "p": 0.36,
+          "observed_rates": [
+            0.1903096903096903,
+            0.16233766233766234,
+            0.16533466533466534
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.004995004995004992,
+            -0.04695304695304697
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.02797202797202797,
+              0.017982017982017984
+            ],
+            [
+              -0.06993006993006995,
+              -0.024975024975024962
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.613,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.387,
+          "p": 0.4,
+          "observed_rates": [
+            0.2242757242757243,
+            0.2192807192807193,
+            0.17232767232767232
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.04095904095904096,
+            -0.001998001998001986
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.07192807192807191,
+              -0.009990009990009985
+            ],
+            [
+              -0.02897102897102896,
+              0.026973026973026976
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.54505,
+          "probability_all_adjacent_increase": 0.00085,
+          "probability_nonmonotone": 0.45409999999999995,
+          "p": 0.45,
+          "observed_rates": [
+            0.2872127872127872,
+            0.24625374625374624,
+            0.24425574425574426
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.01098901098901095,
+            -0.007992007992007999
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.005994005994006013,
+              0.02797202797202797
+            ],
+            [
+              -0.016983016983016963,
+              0.0
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.12115,
+          "probability_all_adjacent_increase": 0.02755,
+          "probability_nonmonotone": 0.8513000000000001,
+          "p": 0.49,
+          "observed_rates": [
+            0.28621378621378624,
+            0.2972027972027972,
+            0.2892107892107892
+          ]
+        }
+      ]
+    },
+    {
+      "q": 0.9,
+      "cells": [
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.0,
+            0.0
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 1.0,
+          "p": 0.08,
+          "observed_rates": [
+            0.0004995004995004995,
+            0.0004995004995004995,
+            0.0004995004995004995
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.000999000999000999,
+            -0.000999000999000999
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.0029970029970029974,
+              0.000999000999000999
+            ],
+            [
+              -0.002997002997002997,
+              0.0
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.34285,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.65715,
+          "p": 0.12,
+          "observed_rates": [
+            0.0024975024975024975,
+            0.0014985014985014985,
+            0.0004995004995004995
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.007992007992007992,
+            0.0
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.01098901098901099,
+              -0.004995004995004996
+            ],
+            [
+              -0.001998001998001998,
+              0.001998001998001998
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.3391,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.6609,
+          "p": 0.16,
+          "observed_rates": [
+            0.00949050949050949,
+            0.0014985014985014985,
+            0.0014985014985014985
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.00899100899100899,
+            0.0
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.014985014985014984,
+              -0.003996003996003995
+            ],
+            [
+              -0.003996003996003996,
+              0.003996003996003996
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.4102,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.5898,
+          "p": 0.2,
+          "observed_rates": [
+            0.013486513486513486,
+            0.004495504495504496,
+            0.004495504495504496
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.007992007992007989,
+            -0.016983016983016984
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.01998001998001998,
+              0.003996003996003996
+            ],
+            [
+              -0.02397602397602398,
+              -0.008991008991008992
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.84795,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.15205000000000002,
+          "p": 0.24,
+          "observed_rates": [
+            0.033466533466533464,
+            0.025474525474525476,
+            0.008491508491508492
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.013986013986013991,
+            -0.004995004995004992
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.02697302697302697,
+              0.0
+            ],
+            [
+              -0.016983016983016984,
+              0.006993006993006992
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.66825,
+          "probability_all_adjacent_increase": 0.0065,
+          "probability_nonmonotone": 0.32525,
+          "p": 0.28,
+          "observed_rates": [
+            0.05544455544455545,
+            0.041458541458541456,
+            0.036463536463536464
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.032967032967032975,
+            -0.009990009990009985
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.04595404595404596,
+              -0.01898101898101899
+            ],
+            [
+              -0.023976023976023976,
+              0.0029970029970029927
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.8798,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.12019999999999997,
+          "p": 0.32,
+          "observed_rates": [
+            0.09740259740259741,
+            0.06443556443556443,
+            0.05444555444555445
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.040959040959040946,
+            -0.005994005994005999
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.05494505494505496,
+              -0.02797202797202797
+            ],
+            [
+              -0.02697302697302697,
+              0.014985014985014991
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.66715,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.33285,
+          "p": 0.36,
+          "observed_rates": [
+            0.12437562437562437,
+            0.08341658341658342,
+            0.07742257742257742
+          ]
+        },
+        {
+          "classification": "decodable",
+          "observed_adjacent_deltas": [
+            -0.028971028971028975,
+            -0.018981018981018977
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.044955044955044945,
+              -0.010989010989011005
+            ],
+            [
+              -0.03196803196803197,
+              -0.005994005994005999
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.98945,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.010549999999999948,
+          "p": 0.4,
+          "observed_rates": [
+            0.15234765234765235,
+            0.12337662337662338,
+            0.1043956043956044
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.029970029970029982,
+            -0.017982017982017984
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.06093906093906093,
+              0.001998001998001986
+            ],
+            [
+              -0.04395604395604394,
+              0.005994005994005985
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.81605,
+          "probability_all_adjacent_increase": 0.0002,
+          "probability_nonmonotone": 0.18374999999999994,
+          "p": 0.45,
+          "observed_rates": [
+            0.1933066933066933,
+            0.16333666333666333,
+            0.14535464535464535
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.0,
+            -0.03696303696303696
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.03596403596403597,
+              0.03596403596403597
+            ],
+            [
+              -0.06593406593406592,
+              -0.01198801198801197
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.4845,
+          "probability_all_adjacent_increase": 0.00045,
+          "probability_nonmonotone": 0.5150500000000001,
+          "p": 0.49,
+          "observed_rates": [
+            0.1973026973026973,
+            0.1973026973026973,
+            0.16033966033966035
+          ]
+        }
+      ]
+    },
+    {
+      "q": 0.95,
+      "cells": [
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.0,
+            0.0
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 1.0,
+          "p": 0.08,
+          "observed_rates": [
+            0.0004995004995004995,
+            0.0004995004995004995,
+            0.0004995004995004995
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.0,
+            -0.000999000999000999
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.001998001998001998,
+              0.001998001998001998
+            ],
+            [
+              -0.002997002997002997,
+              0.0
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.1173,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.8827,
+          "p": 0.12,
+          "observed_rates": [
+            0.0014985014985014985,
+            0.0014985014985014985,
+            0.0004995004995004995
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.001998001998001998,
+            -0.000999000999000999
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.003996003996003996,
+              0.0
+            ],
+            [
+              -0.002997002997002997,
+              0.0
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.53305,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.46695,
+          "p": 0.16,
+          "observed_rates": [
+            0.0034965034965034965,
+            0.0014985014985014985,
+            0.0004995004995004995
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.004995004995004996,
+            -0.000999000999000999
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.00999000999000999,
+              0.0
+            ],
+            [
+              -0.003996003996003996,
+              0.001998001998001998
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.505,
+          "probability_all_adjacent_increase": 0.0002,
+          "probability_nonmonotone": 0.4948,
+          "p": 0.2,
+          "observed_rates": [
+            0.007492507492507493,
+            0.0024975024975024975,
+            0.0014985014985014985
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.003996003996003996,
+            -0.00899100899100899
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.01198801198801199,
+              0.003996003996003996
+            ],
+            [
+              -0.012987012987012988,
+              -0.003996003996003996
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.74765,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.25234999999999996,
+          "p": 0.24,
+          "observed_rates": [
+            0.015484515484515484,
+            0.011488511488511488,
+            0.0024975024975024975
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.007992007992007992,
+            -0.006993006993006994
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.015984015984015984,
+              0.0019980019980019963
+            ],
+            [
+              -0.015984015984015984,
+              0.002997002997002996
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.78425,
+          "probability_all_adjacent_increase": 0.0058,
+          "probability_nonmonotone": 0.20995,
+          "p": 0.28,
+          "observed_rates": [
+            0.028471528471528472,
+            0.02047952047952048,
+            0.013486513486513486
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.026973026973026976,
+            -0.007992007992007992
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.03696303696303697,
+              -0.016983016983016977
+            ],
+            [
+              -0.019980019980019983,
+              0.004995004995004992
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.84035,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.15964999999999996,
+          "p": 0.32,
+          "observed_rates": [
+            0.05544455544455545,
+            0.028471528471528472,
+            0.02047952047952048
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.04895104895104895,
+            0.0
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.059940059940059943,
+              -0.03796203796203796
+            ],
+            [
+              -0.011988011988011985,
+              0.011988011988011988
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.47285,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.52715,
+          "p": 0.36,
+          "observed_rates": [
+            0.08241758241758242,
+            0.033466533466533464,
+            0.033466533466533464
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.03196803196803196,
+            -0.0039960039960039995
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.04395604395604396,
+              -0.018981018981018977
+            ],
+            [
+              -0.010989010989010985,
+              0.0029970029970029927
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.80595,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.19404999999999994,
+          "p": 0.4,
+          "observed_rates": [
+            0.0924075924075924,
+            0.06043956043956044,
+            0.05644355644355644
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.017982017982017984,
+            -0.02697302697302697
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.03796203796203797,
+              0.004995004995004992
+            ],
+            [
+              -0.046953046953046945,
+              -0.009990009990009999
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.89955,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.10045000000000004,
+          "p": 0.45,
+          "observed_rates": [
+            0.10539460539460539,
+            0.08741258741258741,
+            0.06043956043956044
+          ]
+        },
+        {
+          "classification": "decodable",
+          "observed_adjacent_deltas": [
+            -0.018981018981018977,
+            -0.023976023976023983
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.033966033966033954,
+              -0.0029970029970029927
+            ],
+            [
+              -0.03996003996003995,
+              -0.008991008991008992
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.97085,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.02915000000000001,
+          "p": 0.49,
+          "observed_rates": [
+            0.11638361638361638,
+            0.09740259740259741,
+            0.07342657342657342
+          ]
+        }
+      ]
+    },
+    {
+      "q": 1.0,
+      "cells": [
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            0.0,
+            0.0
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 1.0,
+          "p": 0.08,
+          "observed_rates": [
+            0.0004995004995004995,
+            0.0004995004995004995,
+            0.0004995004995004995
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.000999000999000999,
+            0.0
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.002997002997002997,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 1.0,
+          "p": 0.12,
+          "observed_rates": [
+            0.0014985014985014985,
+            0.0004995004995004995,
+            0.0004995004995004995
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.002997002997002997,
+            0.0
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.004995004995004996,
+              -0.000999000999000999
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 1.0,
+          "p": 0.16,
+          "observed_rates": [
+            0.0034965034965034965,
+            0.0004995004995004995,
+            0.0004995004995004995
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.005994005994005994,
+            0.0
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.00999000999000999,
+              -0.001998001998001998
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.0,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 1.0,
+          "p": 0.2,
+          "observed_rates": [
+            0.006493506493506494,
+            0.0004995004995004995,
+            0.0004995004995004995
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.007992007992007992,
+            -0.000999000999000999
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.012987012987012988,
+              -0.0029970029970029974
+            ],
+            [
+              -0.002997002997002997,
+              0.0
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.6701,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.32989999999999997,
+          "p": 0.24,
+          "observed_rates": [
+            0.00949050949050949,
+            0.0014985014985014985,
+            0.0004995004995004995
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "observed_adjacent_deltas": [
+            -0.00899100899100899,
+            -0.0009990009990009994
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.012987012987012988,
+              -0.004995004995004995
+            ],
+            [
+              -0.004995004995004996,
+              0.0029970029970029974
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.58575,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.41425,
+          "p": 0.28,
+          "observed_rates": [
+            0.013486513486513486,
+            0.004495504495504496,
+            0.0034965034965034965
+          ]
+        },
+        {
+          "classification": "decodable",
+          "observed_adjacent_deltas": [
+            -0.012987012987012988,
+            -0.003996003996003996
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.019980019980019977,
+              -0.006993006993006993
+            ],
+            [
+              -0.006993006993006992,
+              -0.001998001998001998
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.99445,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.005550000000000055,
+          "p": 0.32,
+          "observed_rates": [
+            0.02047952047952048,
+            0.007492507492507493,
+            0.0034965034965034965
+          ]
+        },
+        {
+          "classification": "decodable",
+          "observed_adjacent_deltas": [
+            -0.023976023976023973,
+            -0.006993006993006994
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.029970029970029972,
+              -0.017982017982017984
+            ],
+            [
+              -0.010989010989010988,
+              -0.0029970029970029974
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.99555,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.004449999999999954,
+          "p": 0.36,
+          "observed_rates": [
+            0.032467532467532464,
+            0.008491508491508492,
+            0.0014985014985014985
+          ]
+        },
+        {
+          "classification": "decodable",
+          "observed_adjacent_deltas": [
+            -0.025974025974025976,
+            -0.005994005994005994
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.03696303696303696,
+              -0.016983016983016984
+            ],
+            [
+              -0.00999000999000999,
+              -0.001998001998001998
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.9869,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.0131,
+          "p": 0.4,
+          "observed_rates": [
+            0.035464535464535464,
+            0.00949050949050949,
+            0.0034965034965034965
+          ]
+        },
+        {
+          "classification": "decodable",
+          "observed_adjacent_deltas": [
+            -0.015984015984015984,
+            -0.01898101898101898
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.030969030969030968,
+              -0.004995004995004992
+            ],
+            [
+              -0.021978021978021976,
+              -0.015984015984015984
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.99845,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.0015500000000000513,
+          "p": 0.45,
+          "observed_rates": [
+            0.035464535464535464,
+            0.01948051948051948,
+            0.0004995004995004995
+          ]
+        },
+        {
+          "classification": "decodable",
+          "observed_adjacent_deltas": [
+            -0.022977022977022976,
+            -0.007992007992007992
+          ],
+          "adjacent_delta_intervals90": [
+            [
+              -0.028971028971028972,
+              -0.01698301698301698
+            ],
+            [
+              -0.012987012987012988,
+              -0.002997002997002997
+            ]
+          ],
+          "probability_all_adjacent_decrease": 0.99075,
+          "probability_all_adjacent_increase": 0.0,
+          "probability_nonmonotone": 0.00924999999999998,
+          "p": 0.49,
+          "observed_rates": [
+            0.034465534465534464,
+            0.011488511488511488,
+            0.0034965034965034965
+          ]
+        }
+      ]
+    }
+  ],
+  "figure": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/figures/phase2-residual80-honeycomb-monotone-ler-direction-2026-08-28.png",
+  "validated_summaries": [
+    "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase2-residual80-honeycomb-q000-discovery-1000-2026-08-28.json",
+    "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase2-residual80-honeycomb-q005-discovery-1000-2026-08-28.json",
+    "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase2-residual80-honeycomb-q010-discovery-1000-2026-08-28.json",
+    "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase2-residual80-honeycomb-q015-discovery-1000-2026-08-28.json",
+    "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase2-residual80-honeycomb-q020-discovery-1000-2026-08-28.json",
+    "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase2-residual80-honeycomb-q025-discovery-1000-2026-08-28.json",
+    "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase2-residual80-honeycomb-q030-discovery-1000-2026-08-28.json",
+    "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase2-residual80-honeycomb-q035-discovery-1000-2026-08-28.json",
+    "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase2-residual80-honeycomb-q040-discovery-1000-2026-08-28.json",
+    "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase2-residual80-honeycomb-q045-discovery-1000-2026-08-28.json",
+    "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase2-residual80-honeycomb-q050-discovery-1000-2026-08-28.json",
+    "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase2-residual80-honeycomb-q055-discovery-1000-2026-08-28.json",
+    "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase2-residual80-honeycomb-q060-discovery-1000-2026-08-28.json",
+    "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase2-residual80-honeycomb-q065-discovery-1000-2026-08-28.json",
+    "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase2-residual80-honeycomb-q070-discovery-1000-2026-08-28.json",
+    "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase2-residual80-honeycomb-q075-discovery-1000-2026-08-28.json",
+    "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase2-residual80-honeycomb-q080-discovery-1000-2026-08-28.json",
+    "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase2-residual80-honeycomb-q085-discovery-1000-2026-08-28.json",
+    "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase2-residual80-honeycomb-q090-discovery-1000-2026-08-28.json",
+    "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase2-residual80-honeycomb-q095-discovery-1000-2026-08-28.json",
+    "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase2-residual80-honeycomb-q100-discovery-1000-2026-08-28.json"
+  ],
+  "runtime": {
+    "python_executable": "/Users/home/Documents/GitHub/emergent_classicality/lab/.venv/bin/python3",
+    "python_version": "3.13.2",
+    "numpy_version": "1.26.4",
+    "numba_version": "0.65.0",
+    "scipy_version": "1.17.1",
+    "pymatching_version": "2.4.0",
+    "numba_available": true
+  },
+  "source_hashes": {
+    "runner": "14adf7579825e64fa4dd74a6ff374207c3f7b55349b5b533c1ff054bf6d66474",
+    "lattice_model": "b87a5feba27675e26970360d730324b7d3740e4dc0492b4dc478e510f140c9e7",
+    "decoder": "990af03ac4c99684e9e9dac6e5a8bb64d773015879c1638906f5fb592cdc6a43",
+    "damping_decoder": "a08ddf0b58e63bb2627c35cafbe570fe6a0ee8dc21bd4eaca720d6dbcbc5e182",
+    "numba_kernels": "c2254c95600c4f5e3a8c2279d5686a99c8d3810a4bb0c814a4fd0cbf16c184cc"
+  },
+  "crossing_statistic_used": false,
+  "evidence_boundary": "Finite-window direction over measured L=7,9,11 only; not an asymptotic phase proof or scaling-law fit."
+}

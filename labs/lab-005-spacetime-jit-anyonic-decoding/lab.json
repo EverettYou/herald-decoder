@@ -1,0 +1,418 @@
+{
+  "stage": "active",
+  "summary": "Lab 005 transfers the Lyons–Brown repeated-measurement/JIT structure to an explicitly labelled D4 projector/fusion model.",
+  "current_focus": "The D4 translation contract preserves spacetime structure, but R6AH withdraws legacy R5a as a spatial-performance baseline; any performance input must use the remediated R6AF interface.",
+  "next_action": "Implement and test the registered D4 translation interface matrix; keep stochastic history generation and schedule-performance sampling blocked until it passes.",
+  "created": "2026-08-28",
+  "updated": "2026-08-29",
+  "parents": [
+    "lab-002-herald-belief-matching",
+    "lab-004-d4-intrinsic-heralded-decoding"
+  ],
+  "motivation": "Make herald-aware anyonic decoding fault tolerant under realistic repeated measurement noise by optimizing when corrections are committed, not only which correction is chosen.",
+  "question": "Can a causal just-in-time commit/defer schedule retain herald information and suppress logical failure when both syndrome and herald measurements are noisy?",
+  "phase": "E4 D4 translation interface registered",
+  "status": "The Lyons–Brown structural translation remains active, but R6AH invalidates legacy R5a numerical support. Interface validation may continue; spatial-performance sampling remains blocked behind corrected Lab 004 evidence.",
+  "related_labs": [
+    "lab-004-d4-intrinsic-heralded-decoding",
+    "lab-002-herald-belief-matching"
+  ],
+  "report_contract": {
+    "max_lines": 500,
+    "max_evidence_links": 12
+  },
+  "results": [
+    {
+      "id": "j1-e4-d4-lyons-brown-translation",
+      "kind": "document",
+      "format": "json",
+      "title": "J1 E4 D4 Lyons–Brown translation contract",
+      "summary": "Registers the transfer of repeated-measurement/JIT structure to D4 projector/fusion semantics, with source boundaries and no-sampling gates.",
+      "path": "j1-e4-d4-lyons-brown-translation-manifest-2026-08-29.json",
+      "presentation": "download"
+    },
+    {
+      "id": "j1-e4-d4-lyons-brown-translation-registration",
+      "kind": "document",
+      "format": "markdown",
+      "title": "J1 E4 D4 translation registration note",
+      "summary": "Explains the D(S3)-to-D4 mapping, preserved JIT semantics, forbidden claims, and the next interface validation gate.",
+      "path": "results/j1-e4-d4-lyons-brown-translation-registration-2026-08-29.md",
+      "presentation": "download"
+    },
+    {
+      "id": "j1-e3-d4-transition-kernel-completeness",
+      "kind": "document",
+      "format": "markdown",
+      "title": "J1 E3 D4 transition-kernel completeness analysis",
+      "summary": "Formally localizes the missing repeated-state physics, compares three non-equivalent closure models, and shows why bounded checks cannot select one.",
+      "path": "results/j1-e3-d4-transition-kernel-completeness-2026-08-29.md",
+      "presentation": "download"
+    },
+    {
+      "id": "j1-e3-d4-transition-kernel-matrix",
+      "kind": "document",
+      "format": "json",
+      "title": "J1 E3 D4 transition-kernel completeness matrix",
+      "summary": "Localizes missing cross-round hidden-state evolution and physical post-action report generation while retaining normalized report layers and a partial private scorer.",
+      "path": "results/j1-e3-d4-transition-kernel-matrix-2026-08-29.json",
+      "presentation": "download"
+    },
+    {
+      "id": "j1-e3-d4-transition-kernel-registration",
+      "kind": "document",
+      "format": "markdown",
+      "title": "J1 E3 repeated D4 transition-kernel audit registration",
+      "summary": "Registers an exact source/interface completeness matrix for the causal noisy D4 transition law and private scorer, with independent round resampling and all performance sampling prohibited.",
+      "path": "results/j1-e3-d4-transition-kernel-registration-2026-08-29.md",
+      "presentation": "download"
+    },
+    {
+      "id": "j2-e2-downstream-release-audit",
+      "kind": "document",
+      "format": "markdown",
+      "title": "J2 E2 downstream release audit",
+      "summary": "Finds no external executable consumer, repairs two stale stage pointers, and releases only corrected deterministic E2 evidence while keeping sampling blocked.",
+      "path": "results/j2-e2-downstream-release-audit-2026-08-29.md",
+      "presentation": "download"
+    },
+    {
+      "id": "j2-e2-post-flux-causal-completion",
+      "kind": "document",
+      "format": "markdown",
+      "title": "J2 E2 causal post-flux completion",
+      "summary": "Consolidates E2A-E2C, the action-conditioned matched-design correction, all eight branches, negative controls, and strict no-performance claim boundaries.",
+      "path": "results/j2-e2-post-flux-causal-completion-2026-08-29.md",
+      "presentation": "download"
+    },
+    {
+      "id": "j2-e2b-e2c-completion-matrix",
+      "kind": "document",
+      "format": "markdown",
+      "title": "J2 E2B/E2C causal completion matrix",
+      "summary": "Verifies all eight two-mode/four-schedule cells, nonempty charge completion, action-conditioned matched design, causal ordering, and registered negative controls without sampling.",
+      "path": "results/j2-e2b-e2c-completion-matrix-2026-08-29.md",
+      "presentation": "download"
+    },
+    {
+      "id": "j2-e2a-post-flux-adapter",
+      "kind": "document",
+      "format": "markdown",
+      "title": "J2 E2A action-bound post-flux adapter",
+      "summary": "Verifies exact flux-action binding, charge/vacuum-only translation, supplied-layout digest binding, perfect-E0 equivalence, and fail-closed controls.",
+      "path": "results/j2-e2a-post-flux-adapter-2026-08-29.md",
+      "presentation": "download"
+    },
+    {
+      "id": "j2-e2-post-flux-causal-completion-registration",
+      "kind": "document",
+      "format": "markdown",
+      "title": "J2 E2 post-flux causal completion registration",
+      "summary": "Registers the action-bound post-flux adapter prerequisite, the dependent two-mode/four-schedule matrix, and strict no-sampling claim limits.",
+      "path": "results/j2-e2-post-flux-causal-completion-registration-2026-08-29.md",
+      "presentation": "download"
+    },
+    {
+      "id": "j2-downstream-causal-release-audit",
+      "kind": "document",
+      "format": "markdown",
+      "title": "J2 downstream causal release audit",
+      "summary": "Finds no external executable consumer, repairs four stale E1 pointers, and releases only corrected deterministic stage-1 evidence.",
+      "path": "results/j2-downstream-causal-release-audit-2026-08-29.md",
+      "presentation": "download"
+    },
+    {
+      "id": "j2-e1-causal-integration-remediation",
+      "kind": "document",
+      "format": "markdown",
+      "title": "Corrected J2 typed E1 causal schedule integration",
+      "summary": "Consolidates the invalid original callback claim, verified R1-I3 replacement evidence, branch matrix, and strict stage-1 claim boundary.",
+      "path": "results/j2-e1-causal-integration-remediation-2026-08-29.md",
+      "presentation": "download"
+    },
+    {
+      "id": "j2-i2-i3-policy-matrix",
+      "kind": "document",
+      "format": "markdown",
+      "title": "J2 I2/I3 typed E1 policy matrix",
+      "summary": "Verifies both public D4 stage-1 modes across four schedules with syndrome fidelity and future, truth, multi-label, parity, offline, and replay controls.",
+      "path": "results/j2-i2-i3-policy-matrix-2026-08-29.md",
+      "presentation": "download"
+    },
+    {
+      "id": "j2-i1-round-local-e1-adapter",
+      "kind": "document",
+      "format": "markdown",
+      "title": "J2 I1 round-local E1 adapter",
+      "summary": "Verifies truth-free final-prefix-row translation to independent D4 flux/charge membership with truth-only and future-only invariance.",
+      "path": "results/j2-i1-round-local-e1-adapter-2026-08-29.md",
+      "presentation": "download"
+    },
+    {
+      "id": "j2-r1-causal-callback-remediation",
+      "kind": "document",
+      "format": "markdown",
+      "title": "J2 R1 causal callback remediation",
+      "summary": "Verifies future-only invariance for immediate, fixed-delay, and JIT callbacks while retaining full-history identity only in outer provenance and explicit offline noncausality.",
+      "path": "results/j2-r1-causal-callback-remediation-2026-08-29.md",
+      "presentation": "download"
+    },
+    {
+      "id": "j2-e1-causal-integration-remediation-registration",
+      "kind": "document",
+      "format": "markdown",
+      "title": "J2 causal callback remediation and E1 integration registration",
+      "summary": "Invalidates future-sensitive causal callback digests and registers R1 remediation before the complete typed E1 mode/schedule matrix.",
+      "path": "results/j2-e1-causal-integration-remediation-registration-2026-08-29.md",
+      "presentation": "download"
+    },
+    {
+      "id": "j2-causal-request-future-digest-audit",
+      "kind": "document",
+      "format": "json",
+      "title": "J2 causal request future-digest audit",
+      "summary": "Shows identical immediate prefixes but different immediate request digests under future-only history changes.",
+      "path": "results/j2-causal-request-future-digest-audit-2026-08-29.json",
+      "presentation": "download"
+    },
+    {
+      "id": "j1-e1-typed-policy-translation-result",
+      "kind": "document",
+      "format": "markdown",
+      "title": "J1 E1 typed-policy translation result",
+      "summary": "Shows that the existing two-field request represents multi-label E1 reports and localizes the old rejection to the restricted adapter.",
+      "path": "results/j1-e1-typed-policy-translation-2026-08-29.md",
+      "presentation": "download"
+    },
+    {
+      "id": "j1-e1-typed-policy-translation-registration",
+      "kind": "document",
+      "format": "markdown",
+      "title": "J1 E1 typed-policy translation registration",
+      "summary": "Registers both public-mode projections plus provenance and the old rejection as a deterministic negative control.",
+      "path": "results/j1-e1-typed-policy-translation-registration-2026-08-29.md",
+      "presentation": "download"
+    },
+    {
+      "id": "j1-e1-projector-instrument-matrix-result",
+      "kind": "document",
+      "format": "markdown",
+      "title": "J1 E1 projector-instrument matrix result",
+      "summary": "Verifies projector update, later typed report corruption, and the localized five-star source fixture while isolating the multi-label-to-binary policy gap.",
+      "path": "results/j1-e1-projector-instrument-matrix-2026-08-29.md",
+      "presentation": "download"
+    },
+    {
+      "id": "j1-e1-projector-instrument-matrix-registration",
+      "kind": "document",
+      "format": "markdown",
+      "title": "J1 E1 projector-instrument matrix registration",
+      "summary": "Registers distinct projector-update, classical-report, and quasi-stabilizer time-like-herald diagnostics with a deterministic no-performance budget.",
+      "path": "results/j1-e1-projector-instrument-matrix-registration-2026-08-29.md",
+      "presentation": "download"
+    },
+    {
+      "id": "j1-primary-source-gap-search",
+      "kind": "document",
+      "format": "markdown",
+      "title": "J1 primary-source physical-gap search",
+      "summary": "Keeps exact D(S3) extraction paused while identifying the source-backed projector-level basis for a phenomenological repeated D4 instrument.",
+      "path": "results/j1-primary-source-gap-search-2026-08-29.md",
+      "presentation": "download"
+    },
+    {
+      "id": "j1-e0-d4-perfect-temporal-composition-audit",
+      "kind": "document",
+      "format": "markdown",
+      "title": "J1 E0 perfect-limit D4 temporal-composition audit",
+      "summary": "Verifies both public D4 modes through a causal three-round action/observation state with deterministic digests and private post-completion scoring.",
+      "path": "results/j1-e0-d4-perfect-temporal-composition-audit-2026-08-29.md",
+      "presentation": "download"
+    },
+    {
+      "id": "j1-r0-ds3-event-catalogue-audit",
+      "kind": "document",
+      "format": "markdown",
+      "title": "J1 R0 D(S3) source-event catalogue audit",
+      "summary": "Preserves source-exact detector identities and locality bounds while localizing the missing gate-level maps that block microscopic reproduction.",
+      "path": "results/j1-r0-ds3-event-catalogue-audit-2026-08-29.md",
+      "presentation": "download"
+    },
+    {
+      "id": "j1-r-e-prerequisite-matrix-registration",
+      "kind": "document",
+      "format": "markdown",
+      "title": "J1 R/E physical prerequisite matrix registration",
+      "summary": "Registers both the D(S3) source-event audit and perfect-limit D4 temporal-composition audit, with noisy D4 and performance work dependency-blocked.",
+      "path": "results/j1-r-e-prerequisite-matrix-registration-2026-08-29.md",
+      "presentation": "download"
+    },
+    {
+      "id": "j1-generic-history-generator-preflight",
+      "kind": "document",
+      "format": "markdown",
+      "title": "J1 generic categorical history generator preflight",
+      "summary": "Verifies normalization, channel isolation, seeded replay, causal categorical prefixes, and one generated-history digest across all four schedules.",
+      "path": "results/j1-generic-history-generator-preflight-2026-08-29.md",
+      "presentation": "download"
+    },
+    {
+      "id": "j1-generator-boundary-audit",
+      "kind": "document",
+      "format": "markdown",
+      "title": "J1 repeated-measurement generator boundary audit",
+      "summary": "Separates Lyons-Brown D(S3) circuit-noise reproduction, a generic categorical schema preflight, and the future noisy D4 herald extension.",
+      "path": "results/j1-repeated-measurement-generator-boundary-audit-2026-08-29.md",
+      "presentation": "download"
+    },
+    {
+      "id": "j2-shared-history-baseline-preflight",
+      "kind": "document",
+      "format": "markdown",
+      "title": "J2 shared-history scheduling baseline harness preflight",
+      "summary": "Historical preflight: timing, outer history, offline labeling, truth exclusion, and replay remain valid; callback future-isolation is invalid and superseded by corrected R1-I3 evidence.",
+      "path": "results/j2-shared-history-baseline-preflight-2026-08-29.md",
+      "presentation": "download"
+    },
+    {
+      "id": "j1-j2-baseline-readiness-audit",
+      "kind": "document",
+      "format": "markdown",
+      "title": "J1/J2 shared-history baseline readiness audit",
+      "summary": "Localizes ready causal-record/JIT pieces versus missing immediate, fixed-delay, offline, common callback, and noisy-history prerequisites.",
+      "path": "results/j1-j2-baseline-readiness-audit-2026-08-29.md",
+      "presentation": "download"
+    },
+    {
+      "id": "j3-persistent-cluster-tracker-preflight",
+      "kind": "document",
+      "format": "markdown",
+      "title": "J3 persistent detector-cluster tracker preflight",
+      "summary": "Verifies stable IDs, immutable event origins, deterministic merge aliases, absorber refresh/self-exclusion, and persistent-ID schedule handoff.",
+      "path": "results/j3-persistent-cluster-tracker-preflight-2026-08-29.md",
+      "presentation": "download"
+    },
+    {
+      "id": "j3-causal-detector-cluster-preflight",
+      "kind": "document",
+      "format": "markdown",
+      "title": "J3 causal detector-cluster construction preflight",
+      "summary": "Verifies causal snapshot components, geometry summaries, active absorber candidates, and a current-frontier public schedule handoff.",
+      "path": "results/j3-causal-detector-cluster-preflight-2026-08-29.md",
+      "presentation": "download"
+    },
+    {
+      "id": "j4-phase-transition-adapter-preflight",
+      "kind": "document",
+      "format": "markdown",
+      "title": "J4 deterministic phase-transition lifecycle preflight",
+      "summary": "Verifies owned D(Z3) region creation, exact supplied fusion-outcome preservation, neutrality binding, neutral termination, and non-neutral persistence.",
+      "path": "results/j4-phase-transition-adapter-preflight-2026-08-29.md",
+      "presentation": "download"
+    },
+    {
+      "id": "j3-absorber-neutrality-preflight",
+      "kind": "document",
+      "format": "markdown",
+      "title": "J3 absorber geometry and neutrality-measurement preflight",
+      "summary": "Verifies causal L-infinity absorber geometry, lifecycle, all three direct-link restrictions, and owned current-round D(Z3) e/m parity handoff.",
+      "path": "results/j3-absorber-neutrality-preflight-2026-08-29.md",
+      "presentation": "download"
+    },
+    {
+      "id": "lyons2026-jit-method-audit",
+      "kind": "document",
+      "format": "markdown",
+      "title": "Lyons-Brown JIT method audit",
+      "summary": "Separates the causal detector history, commit/defer rule, gauging/ungauging correction, threshold proof, and project-specific noisy-herald extension.",
+      "path": "results/lyons2026-jit-method-audit.md",
+      "presentation": "download"
+    },
+    {
+      "id": "j3-explicit-schedule-state-preflight",
+      "kind": "document",
+      "format": "markdown",
+      "title": "J3 explicit schedule-state preflight",
+      "summary": "Verifies distinct Jing retain/commit and Lyons-Brown deferred-readout, ungauging, neutral correction, and non-neutral deferral transitions on deterministic fixtures.",
+      "path": "results/j3-explicit-schedule-state-preflight-2026-08-29.md",
+      "presentation": "download"
+    },
+    {
+      "id": "jit-ilp-source-boundary-audit",
+      "kind": "document",
+      "format": "markdown",
+      "title": "JIT age-gate and spacetime-ILP source-boundary audit",
+      "summary": "Localizes the verified Jing ILP algebra and age predicate versus the still-missing Lyons-Brown absorber, ungauging, neutrality, and re-gauging protocol.",
+      "path": "results/jit-ilp-source-boundary-audit-2026-08-29.md",
+      "presentation": "download"
+    },
+    {
+      "id": "d4-spatial-policy-interface",
+      "kind": "document",
+      "format": "json",
+      "title": "D4 spatial-policy interface contract",
+      "summary": "Freezes the causal observation-only two-call boundary, output actions, invariants, forbidden truth fields, and source hashes for Lab 004 policy use by Lab 005.",
+      "path": "j1-d4-spatial-policy-interface-manifest-2026-08-29.json",
+      "presentation": "download"
+    },
+    {
+      "id": "d4-spatial-policy-interface-note",
+      "kind": "document",
+      "format": "markdown",
+      "title": "D4 spatial-policy interface note",
+      "summary": "Explains why the existing truth-audited end-to-end simulator cannot be used directly as an online causal policy API.",
+      "path": "results/d4-spatial-policy-interface-note-2026-08-29.md",
+      "presentation": "download"
+    }
+  ],
+  "frontier": [
+    "Implement a causal spacetime record that distinguishes spatial data faults from time-directed measurement faults.",
+    "Reproduce the JIT commit/defer state machine and its absorber/neutrality invariants before optimizing it.",
+    "Add explicit repeated herald-readout noise instead of retaining a perfect-herald assumption.",
+    "Connect Lab 004 only through a declared inner-decoder interface after a D4 spacetime model is derived."
+  ],
+  "resolved": [
+    "Fault-tolerant herald decoding requires a schedule layer in addition to an accurate spatial decoder.",
+    "The source establishes a threshold theorem but does not provide a numerical threshold benchmark for this project.",
+    "Noisy D4 herald measurements are a project extension, not a result already implemented by Lyons and Brown.",
+    "Immediate, fixed-delay, JIT, and offline schedules will be compared on identical fault histories.",
+    "The generic causal record preserves raw herald observations instead of inventing a stabilizer-like herald detector definition.",
+    "The Lab 004 D4 policy must be connected through a two-call observation-only interface; its truth-audited decode_physical_error simulator is not an online policy API.",
+    "The current JIT module is a Jing Algorithm-1 bounding-cube age gate, not a reproduction of the Lyons-Brown absorber/ungauging D(S3) decoder.",
+    "Deferred record propagation and branch-labelled D(S3)/boundary/D(Z3) transitions can be tested without conflating them with the Jing ILP age gate."
+    ,
+    "Nearest-absorber distance, absorber lifecycle, Theorem-4 direct-link admissibility, and measured D(Z3) neutrality can be verified as explicit interfaces without claiming a microscopic D(S3) circuit or threshold reproduction."
+    ,
+    "A deterministic phase-labelled lifecycle can preserve an explicit supplied fusion outcome and enforce neutral re-gauging versus non-neutral persistence without claiming a microscopic gauging circuit."
+    ,
+    "A registered causal snapshot clustering rule can replace hand-assembled schedule inputs and verify the current-frontier defer path without claiming persistent or physically optimal cluster reconstruction."
+    ,
+    "Append-only causal prefixes can support stable cluster identity and deterministic merges while preserving immutable event origins separately from current ownership."
+    ,
+    "Immediate, fixed-delay, abstract JIT, and offline timing paths can share one immutable visible history and truth-free callback with explicit causal versus noncausal access."
+    ,
+    "Lyons-Brown D(S3) circuit noise and noisy D4 intrinsic-herald readout are distinct scientific layers; a generic categorical generator may preflight probability and interface invariants but is not source reproduction."
+    ,
+    "The generic categorical G generator passes its registered probability, causality, seeded-replay, and matched-history gates without creating physical or performance evidence."
+    ,
+    "R0 D(S3) source completeness and E0 perfect-limit D4 temporal composition are independent prerequisite diagnostics; both must pass before their respective physical branches can support later sampling."
+    ,
+    "The archived Lyons-Brown source supports stabilizer-level D(S3) detector identities and locality bounds but not a complete gate-level event catalogue for numerical reproduction.",
+    "The validated D4 spatial policy composes into a deterministic perfect-measurement temporal interface, but this does not select or derive a noisy repeated-measurement instrument.",
+    "The primary-source chain supports a phenomenological repeated D4 projector instrument through time-ordered syndrome projectors and species-resolved readout errors, but it does not supply an ancilla-resolved hardware extraction circuit.",
+    "The D(S3) preparation/gauging source does not close the missing repeated-extraction primitive-fault catalogue, so exact circuit-level R reproduction remains locally paused.",
+    "The E1 registration separates quantum projector update, later classical report corruption, and quasi-stabilizer time-like heralding; passing one cannot substitute for another."
+    ,
+    "E1A/E1B/E1C pass at their source-bounded deterministic layer; their retained multi-label public reports motivated a separate translation gate before policy use."
+    ,
+    "The typed translation passes in both public modes: heralded preserves both membership bits, syndrome-only performs its declared projection, and no schema extension is required."
+    ,
+    "The original J2 callback's causal request/response digest claim was invalid because it included a full-history digest; R1 now removes that identity from the callback and verifies future-only invariance for immediate, fixed-delay, and JIT while retaining explicit offline noncausality.",
+    "I1 maps only the bound causal prefix's final public syndrome/herald row to independent flux/charge membership over all paper-L=2 D4 vertices; truth-only and future-only counterfactuals leave earlier records invariant.",
+    "The complete I2/I3 matrix invokes both public D4 stage-1 modes under all four schedules on one shared trace and passes syndrome-fidelity, information-budget, future, truth, multi-label, parity, offline, and replay controls without producing performance evidence.",
+    "The consolidated corrected report keeps the original future-sensitive callback claim invalid and supports only deterministic causal information flow plus stage-1 syndrome fidelity.",
+    "The downstream release audit found no external executable consumer, repaired four stale E1 pointers, and releases only corrected paper-L=2 stage-1 interface evidence while keeping sampling unregistered."
+  ],
+  "blockers": [],
+  "promotion_candidates": []
+}

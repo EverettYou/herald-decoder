@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "branch": "E-d4-herald-extension",
+  "gate": "E0-d4-perfect-temporal-composition",
+  "outcome": "perfect_temporal_interface_verified",
+  "modes": [
+    "syndrome_only",
+    "heralded"
+  ],
+  "maximum_fixture_round": 2,
+  "verified_contexts": [
+    "no-action carry-forward from round 0 to round 1",
+    "stage-1 flux action bound to the round-1 causal-prefix digest",
+    "post-action observation rejected before the flux action",
+    "post-action charge record and action bound by request and action digests",
+    "completed transition advanced to round 2 with only public event digests retained",
+    "private truth scoring rejected before the public transition is complete"
+  ],
+  "focused_tests": "7/7 passed",
+  "full_lab_tests": "86/86 passed",
+  "implementation": "scripts/d4_temporal_composition.py",
+  "implementation_sha256": "f9578a3d78bae4843099e8c28c5f73ee102b1c180cf1c3b2f46cb93e22bb49c4",
+  "tests": "scripts/test_d4_temporal_composition.py",
+  "test_sha256": "297faabe0e12e19001c293e8befcd7c2cc8e95c72931cf90d2b0e73691bda55b",
+  "remaining_gap": "The perfect interface does not define the physical measurement state update or noisy D4 readout instrument. E1 remains blocked pending a source-supported or explicitly chosen model.",
+  "prohibited_claims": [
+    "no noisy D4 measurement model",
+    "no stochastic history",
+    "no schedule comparison",
+    "no LER or threshold",
+    "no fault-tolerance evidence"
+  ]
+}

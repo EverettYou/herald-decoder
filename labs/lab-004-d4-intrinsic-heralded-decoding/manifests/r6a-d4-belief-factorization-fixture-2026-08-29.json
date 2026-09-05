@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "status": "public-input factor ledgers and exact fixtures verified; complete matrix pending",
+  "recorded_at": "2026-08-29T15:45:00Z",
+  "acceptance_item": "public factorization implementation and exact fixtures",
+  "topology": {
+    "label": "primitive periodic honeycomb size=2",
+    "paper_normalized": false,
+    "vertex_count": 8,
+    "edge_count": 12,
+    "paper_L2_vertex_count": 24,
+    "paper_L2_edge_count": 36
+  },
+  "branches": {
+    "F1-local-support": {
+      "implemented": true,
+      "factors": "per-vertex flux-boundary, degree-two measurement support, and one-half charge-outcome weight",
+      "known_boundary": "omits independent closed-loop parity factors"
+    },
+    "F2-support-plus-parity": {
+      "implemented": true,
+      "factors": "F1 factors multiplied by value-two/zero independent loop-parity factors",
+      "known_boundary": "parity scopes are currently derived while evaluating a latent assignment; they are diagnostic-only until the complete matrix establishes a fixed public auxiliary representation"
+    }
+  },
+  "fixture_results": {
+    "vacuum": "F1=F2=oracle=1",
+    "open_two_edge_path": "F1=F2=oracle=0.5",
+    "branched_component": "F1=F2=oracle=1 with zero parity factors",
+    "trivial_loop": {
+      "physical_mask": 27328,
+      "internal_vertices": 6,
+      "independent_parity_factors": 2,
+      "F1_weight": 0.015625,
+      "F2_weight": 0.0625,
+      "oracle_weight": 0.0625
+    },
+    "parity_violation": "F1 remains positive while F2 and oracle are zero",
+    "winding": "classified terminal_winding with zero BP likelihood",
+    "wrong_flux_or_measurement_support": "forbidden with zero weight",
+    "hidden_field": "public observation schema rejects truth-bearing fields"
+  },
+  "verification": {
+    "focused_tests": "7/7 pass",
+    "full_lab004_suite": "137/137 pass",
+    "monte_carlo_samples": 0
+  },
+  "implementation_hashes": {
+    "d4_belief_factorization.py": "d1dcdba5627c9995ec50baa2365e1a5b1cdfa5420388b6ad920cb08183b96d36",
+    "test_d4_belief_factorization.py": "8a66dee87eaabde5ee300fab8cab92c7bf1a51c3a3b91e02bdd537ad98d07203"
+  },
+  "claim_boundary": "Exact primitive-size-2 limiting fixtures for public-input diagnostic factor ledgers only. This is not paper-normalized L=2. A fixed BP factor graph, paper-scale equality, BP convergence, logical performance, scalability, threshold, and fault tolerance remain untested.",
+  "next_gate": "Use the complete primitive-size-2 F0-F2 enumeration as a falsification control, then derive and test a constructive public parity-scope rule on bounded paper-normalized geometry without exhaustive 2^36 enumeration."
+}

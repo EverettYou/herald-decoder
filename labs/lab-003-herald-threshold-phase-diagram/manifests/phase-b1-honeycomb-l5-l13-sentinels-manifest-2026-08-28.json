@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "status": "analyzed",
+  "campaign": "phase-b1-honeycomb-l5-l13-sentinels-2026-08-28",
+  "purpose": "Bounded four-cell L=5/L=13 extension that discriminates persistent monotone flow, red-frontier growth, finite-size curvature, and order-one saturation before any full-grid distance expansion.",
+  "selection_evidence": {
+    "path": "manifests/phase-b1-honeycomb-l5-l13-selection-2026-08-28.json",
+    "bayesian_source": "results/phase2-residual80-honeycomb-bayesian-order-phase-2026-08-28.json",
+    "bayesian_source_sha256": "4bd89c9fc6868fedbf5d06568706b371f0a0abd8d0d6c0fdcfdfd2552b0661a5"
+  },
+  "lattice": "honeycomb",
+  "new_sizes": [5, 13],
+  "new_seeds": [870001, 870002, 870003, 870004, 870005],
+  "shots_per_seed": 200,
+  "cells": [
+    {"role": "decreasing_anchor", "q": 1.0, "p": 0.36},
+    {"role": "increasing_frontier", "q": 0.65, "p": 0.45},
+    {"role": "curvature_sentinel", "q": 0.45, "p": 0.20},
+    {"role": "saturation_sentinel", "q": 0.15, "p": 0.45}
+  ],
+  "jobs": 4,
+  "workers_cap": 4,
+  "expected_new_decodes": 8000,
+  "decoder": {
+    "name": "HeraldAwareBpMatchingDecoder",
+    "recurrence_mode": "damping",
+    "damping": 0.25,
+    "max_iterations": 80,
+    "update_schedule": "residual_priority",
+    "residual_priority_order": "stable_sort",
+    "residual_priority_buffer_reuse": false,
+    "residual_priority_cached_products": false,
+    "matching_projection": "posterior_llr",
+    "p_m": 0.0,
+    "p_h": 0.0,
+    "use_numba": true
+  },
+  "required_source_hashes": {
+    "runner": "14adf7579825e64fa4dd74a6ff374207c3f7b55349b5b533c1ff054bf6d66474",
+    "lattice_model": "b87a5feba27675e26970360d730324b7d3740e4dc0492b4dc478e510f140c9e7",
+    "decoder": "990af03ac4c99684e9e9dac6e5a8bb64d773015879c1638906f5fb592cdc6a43",
+    "damping_decoder": "a08ddf0b58e63bb2627c35cafbe570fe6a0ee8dc21bd4eaca720d6dbcbc5e182",
+    "numba_kernels": "c2254c95600c4f5e3a8c2279d5686a99c8d3810a4bb0c814a4fd0cbf16c184cc"
+  },
+  "inference": {
+    "hypothesis_decreasing": "theta_5 > theta_7 > theta_9 > theta_11 > theta_13",
+    "hypothesis_increasing": "theta_5 < theta_7 < theta_9 < theta_11 < theta_13",
+    "hypothesis_other": "all other strict orderings",
+    "likelihood": "independent binomial logical-error counts at each distance",
+    "primary_prior": "independent Jeffreys Beta(1/2,1/2) priors",
+    "map_score": "log[Pr(H_increasing|data)/Pr(H_decreasing|data)]",
+    "classification_threshold": 0.90,
+    "required_sensitivity": "repeat with independent uniform Beta(1,1) priors",
+    "claim_boundary": "finite-window L=5,7,9,11,13 order only"
+  },
+  "preflight_gate": "Before execution, parameterize and test a non-overwriting dispatcher plus five-distance posterior-order analyzer; verify the exact 8000-decode budget and current source hashes.",
+  "stop_rule": "Stop after these four cells and 8000 new decodes. Do not fill the q-p grid, add p/q midpoints, rerun L=7/9/11, or promote a phase boundary without analyzing this sentinel matrix.",
+  "launch_gate": "completed_no_rerun"
+}

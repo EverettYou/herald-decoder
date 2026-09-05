@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "status": "synthesis_completed_qualitative_consistency",
+  "phase": "R6AG",
+  "registered_at": "2026-09-01T14:53:38Z",
+  "epistemic_role": "Retrospective source-consistency synthesis of two already completed studies; no new experiment, resampling, or confirmatory test.",
+  "question": "Is the direction and stage-level interpretation of the R6AF complete public-pipeline pilot qualitatively consistent with the exact primitive R4.5c policy audit, and what claims remain incommensurate?",
+  "evidence_freeze": {
+    "r4_machine": "manifests/r4-corrected-sequential-policy-audit.json",
+    "r4_report": "wiki/records/r4-corrected-sequential-policy-audit.md",
+    "r4_contract": "manifests/r4-corrected-sequential-policy-manifest-2026-08-29.json",
+    "r6af_machine": "results/r6af-two-stage-public-charge-pilot-analysis-2026-09-01.json",
+    "r6af_report": "results/r6af-two-stage-public-charge-pilot-2026-09-01.md",
+    "r6af_contract": "manifests/r6af-two-stage-public-charge-reproduction-manifest-2026-09-01.json"
+  },
+  "comparison_layers": {
+    "structurally_comparable": [
+      "O0 and O2 denote the syndrome-only and fusion-signal public first-observation layers.",
+      "The public fixed policy in each study uses the source-defined O0/O2 first action followed by one common public charge-decoder family within that study.",
+      "Both studies score the complete two-stage logical outcome only after the first correction controls whether the charge stage is reached.",
+      "The sign of public fixed O2-minus-O0 risk is a qualitative direction within each study.",
+      "Whether first-stage policy choice is more consequential than the common second-stage charge decoder is a qualitative mechanism statement, not a shared numeric estimand."
+    ],
+    "incommensurate": [
+      "R4.5c uses an exact branch-resolved primitive L=2 ensemble; R6AF uses paper-normalized L=3 and L=5 lattices.",
+      "R4.5c headline risks are conditioned on the nonwinding initial channel, while R6AF uses every attempted history in an unconditional Boolean-union denominator.",
+      "R4.5c evaluates p={0.1,0.3,0.5,0.6}; R6AF samples p_X={0.19,0.21}. No interpolation or nearest-p matching is permitted.",
+      "R4.5c is exact enumeration with numerical normalization tolerance; R6AF is paired Monte Carlo with pointwise sampling intervals.",
+      "The primitive public charge decoder uses a branch-preserving private-auxiliary expanded graph, while the larger paper lattice uses its validated nondegenerate public charge graph.",
+      "Risk magnitudes, delta magnitudes, p-values, stage counts, finite-size directions, and exact-policy excesses may not be pooled or numerically compared."
+    ]
+  },
+  "registered_extractions": {
+    "r4": [
+      "public fixed O0 and O2 risk at each registered prior",
+      "future-aware exact O0-minus-O2 information gain",
+      "public first-action excess after exact continuation",
+      "second-stage MWPM excess at fixed public first action",
+      "claim and conditioning boundary"
+    ],
+    "r6af": [
+      "per-cell public fixed O0 and O2 unconditional risk",
+      "paired O2-minus-O0 interval and direction",
+      "physical-, first-union-, charge-, and success-stage counts",
+      "integrity and replay gates",
+      "claim and finite-size boundary"
+    ]
+  },
+  "interpretation_rules": {
+    "qualitative_consistency": "Report consistency when R6AF O2-minus-O0 direction agrees with R4.5c public fixed direction in at least one source-relevant low/intermediate-prior regime and both studies independently localize material performance leverage to the first action rather than a change of charge decoder.",
+    "localized_tension": "Report tension, not contradiction, if one study shows a local public fixed O2 regression or a different dominant stage while another shows improvement, because sizes, conditioning, priors, and charge topology differ.",
+    "contradiction": "Reserve contradiction for mutually exclusive structural statements under the same policy definition and conditioning, such as one artifact claiming the public charge action consumes relations while the other proves it is relation-free. Opposite risk signs on incommensurate ensembles are not by themselves a contradiction.",
+    "unresolved": "Report unresolved transfer if the allowed qualitative direction or first-stage-leverage statement cannot be extracted without comparing numeric magnitudes across incommensurate ensembles."
+  },
+  "allowed_claim": "The complete larger-lattice R6AF pilot is qualitatively consistent with the exact primitive R4.5c evidence that fusion information is valuable and that first-stage policy choice is a major performance lever. This does not equate risks, establish universal O2 dominance, validate exact-to-large-L scaling, or estimate a threshold.",
+  "known_nonuniversal_boundary": "R4.5c public fixed O2 is slightly worse than public fixed O0 at p=0.6 even though its future-aware exact O2 risk remains lower. Any synthesis must preserve this counterexample and avoid claiming O2 dominance for all priors or sizes.",
+  "acceptance_gates": [
+    "All six frozen evidence files exist and machine artifacts have their registered completed/analyzed statuses.",
+    "A machine-readable matrix labels every extracted quantity as comparable, qualitative-only, or incommensurate before interpretation.",
+    "The synthesis reproduces source values exactly without recalculating or refitting either study.",
+    "The p=0.6 public-fixed R4.5c regression is explicitly retained as a nonuniversal boundary.",
+    "No R4/R6AF numerical pooling, interpolation, effect-size ratio, crossing, threshold, scaling, fault-tolerance, BP, or Lab 003 comparison is emitted.",
+    "The output decides whether qualitative consistency is supported, locally tense, contradicted, or unresolved under the registered rules."
+  ],
+  "compute_budget": {
+    "new_histories": 0,
+    "new_arm_evaluations": 0,
+    "bootstrap_replicates": 0,
+    "maximum_wall_time_minutes": 2,
+    "stop_rule": "Stop after one deterministic extraction matrix, one consistency verdict, report/Wiki/metadata updates, and no downstream sampling registration. Censor the verdict on missing evidence, status mismatch, extraction mismatch, or an unclassified quantity."
+  },
+  "outputs": {
+    "machine_synthesis": "results/r6ag-r4-r6af-source-consistency-synthesis-2026-09-01.json",
+    "report": "results/r6ag-r4-r6af-source-consistency-synthesis-2026-09-01.md"
+  },
+  "completed_at": "2026-09-01T15:18:00Z",
+  "outcome": {
+    "verdict": "qualitatively_consistent_with_nonuniversal_boundary",
+    "evidence_status_gates_passed": true,
+    "unclassified_quantity_count": 0,
+    "new_histories": 0,
+    "new_arm_evaluations": 0,
+    "new_bootstrap_replicates": 0,
+    "summary": "R6AF agrees qualitatively with the low/intermediate-prior R4.5c public O2 direction, and both studies independently localize material leverage to the first action. The R4.5c p=0.6 public-fixed O2 regression remains a counterexample to universal O2 dominance."
+  },
+  "next_action": "Register a bounded provenance/compatibility audit of legacy R5a against the remediated R6AF public interface before treating R5a as supporting complete-pipeline evidence; do not sample in the registration tick."
+}

@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-28T04:26:17.870Z",
+  "analysis_kind": "matched_high_q_l11_convergence_cap_diagnostic",
+  "source": {
+    "path": "phase3-honeycomb-highq-l11-convergence-cap-2026-08-28.json",
+    "sha256": "8891d07b846fbb027618888aa9d1adaa4983bffbc8f205394a448c1a087d205e"
+  },
+  "figure": {
+    "path": "../figures/phase3-honeycomb-highq-l11-convergence-cap-2026-08-28.png",
+    "sha256": "02b2fc5c9e01be32fae2cedb3556df1262a0c3f1ebd11970a17670441dff2627"
+  },
+  "design": {
+    "lattice": "honeycomb",
+    "L": 11,
+    "q_values": [0.85, 0.9, 0.95],
+    "p_values": [0.4, 0.45, 0.49],
+    "matched_observations_per_cell": 64,
+    "matched_observations_total": 576,
+    "max_iterations": [80, 160, 320],
+    "schedule": "residual_priority",
+    "priority_order": "stable_sort",
+    "matching_projection": "posterior_llr",
+    "confidence_level": 0.9
+  },
+  "aggregate": {
+    "residual_priority_80": {
+      "converged": 67,
+      "convergence_rate": 0.11631944444444445,
+      "logical_failures": 116,
+      "mean_runtime_ms": 8.384376765661727,
+      "mean_edge_log_loss": 0.1965268839645341,
+      "mean_edge_brier": 0.061054824054165166
+    },
+    "residual_priority_160": {
+      "converged": 308,
+      "convergence_rate": 0.5347222222222222,
+      "logical_failures": 116,
+      "mean_runtime_ms": 11.494932792023368,
+      "mean_edge_log_loss": 0.19653588428138424,
+      "mean_edge_brier": 0.06105962893130764
+    },
+    "residual_priority_320": {
+      "converged": 442,
+      "convergence_rate": 0.7673611111111112,
+      "logical_failures": 116,
+      "mean_runtime_ms": 15.387904946793343,
+      "mean_edge_log_loss": 0.19653361091648414,
+      "mean_edge_brier": 0.061058934031820264
+    }
+  },
+  "matched_correction_effects": {
+    "residual_priority_160_minus_residual_priority_80": {
+      "correction_disagreements": 30,
+      "rescued_failures": 0,
+      "introduced_failures": 0
+    },
+    "residual_priority_320_minus_residual_priority_160": {
+      "correction_disagreements": 22,
+      "rescued_failures": 0,
+      "introduced_failures": 0
+    }
+  },
+  "per_cell_converged_counts_by_cap": [
+    {"q": 0.85, "p": 0.4, "80": 7, "160": 45, "320": 61},
+    {"q": 0.85, "p": 0.45, "80": 14, "160": 53, "320": 64},
+    {"q": 0.85, "p": 0.49, "80": 18, "160": 55, "320": 60},
+    {"q": 0.9, "p": 0.4, "80": 4, "160": 29, "320": 48},
+    {"q": 0.9, "p": 0.45, "80": 4, "160": 37, "320": 56},
+    {"q": 0.9, "p": 0.49, "80": 8, "160": 38, "320": 52},
+    {"q": 0.95, "p": 0.4, "80": 4, "160": 19, "320": 30},
+    {"q": 0.95, "p": 0.45, "80": 5, "160": 16, "320": 34},
+    {"q": 0.95, "p": 0.49, "80": 3, "160": 16, "320": 37}
+  ],
+  "integrity": {
+    "all_corrections_syndrome_faithful": true,
+    "source_start_equals_end": true,
+    "all_cells_cap_sensitive_at_both_steps": true
+  },
+  "interpretation": {
+    "finding": "The 80-iteration fixed-point flag is strongly truncation-sensitive: aggregate convergence rises from 67/576 to 308/576 and 442/576 at caps 160 and 320.",
+    "logical_effect": "All three arms have the same 116 logical failures. The 30 and 22 successive correction disagreements produce zero rescues and zero introduced failures.",
+    "posterior_effect": "Aggregate edge log loss and Brier score change only at approximately 1e-5 and 1e-6 scale, respectively; the matched diagnostic does not show a practically material posterior-quality gain.",
+    "remaining_nonconvergence": "Cap 320 still leaves 134/576 observations nonconverged; q=0.95 cells converge only 30/64, 34/64, and 37/64.",
+    "decision": "Keep residual-priority-80 as the primary registered phase-diagram decoder. Treat convergence counts as cap-dependent diagnostics, do not rehabilitate an unstable crossing, and do not infer p_c(q) or q_c from this mechanism test.",
+    "next_prerequisite": "Register and preflight a fresh matched honeycomb L11/L13 correction-to-scaling wave at q=0.85,0.90,0.95 before inserting q=0.925 or expanding to square."
+  },
+  "evidence_boundary": "This is a bounded matched mechanism diagnostic. It establishes iteration-cap sensitivity of the convergence flag but does not update a phase boundary, q_c, or the primary decoder configuration."
+}

@@ -1,0 +1,545 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-28T05:03:41.469661+00:00",
+  "campaign": "phase4-residual80-honeycomb-highq-l11-l13-scaling-4000-2026-08-28",
+  "manifest": "labs/lab-003-herald-threshold-phase-diagram/phase4-residual80-honeycomb-highq-l11-l13-scaling-manifest-2026-08-28.json",
+  "validated_artifacts": [
+    "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase4-residual80-honeycomb-q085-l11-l13-scaling-4000-2026-08-28.json",
+    "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase4-residual80-honeycomb-q090-l11-l13-scaling-4000-2026-08-28.json",
+    "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase4-residual80-honeycomb-q095-l11-l13-scaling-4000-2026-08-28.json"
+  ],
+  "runtime": {
+    "python_executable": "/Users/home/Documents/GitHub/emergent_classicality/lab/.venv/bin/python3",
+    "python_version": "3.13.2",
+    "numpy_version": "1.26.4",
+    "numba_version": "0.65.0",
+    "scipy_version": "1.17.1",
+    "pymatching_version": "2.4.0",
+    "numba_available": true
+  },
+  "source_hashes": {
+    "runner": "14adf7579825e64fa4dd74a6ff374207c3f7b55349b5b533c1ff054bf6d66474",
+    "lattice_model": "b87a5feba27675e26970360d730324b7d3740e4dc0492b4dc478e510f140c9e7",
+    "decoder": "990af03ac4c99684e9e9dac6e5a8bb64d773015879c1638906f5fb592cdc6a43",
+    "damping_decoder": "a08ddf0b58e63bb2627c35cafbe570fe6a0ee8dc21bd4eaca720d6dbcbc5e182",
+    "numba_kernels": "c2254c95600c4f5e3a8c2279d5686a99c8d3810a4bb0c814a4fd0cbf16c184cc"
+  },
+  "bootstrap": {
+    "cluster": "seed trajectory within size",
+    "replicates": 20000,
+    "seed": 591027,
+    "confidence_level": 0.9
+  },
+  "lattices": {
+    "honeycomb": [
+      {
+        "q": 0.85,
+        "classification": "finite",
+        "cells": [
+          {
+            "p": 0.32,
+            "classification": "unresolved",
+            "adjacent_size_evidence": [
+              {
+                "sizes": [
+                  11,
+                  13
+                ],
+                "delta": 0.008999999999999994,
+                "bootstrap_interval90": [
+                  -0.0030000000000000027,
+                  0.021000000000000005
+                ],
+                "probability_decodable_trend": 0.88555
+              }
+            ]
+          },
+          {
+            "p": 0.36,
+            "classification": "decodable",
+            "adjacent_size_evidence": [
+              {
+                "sizes": [
+                  11,
+                  13
+                ],
+                "delta": 0.015500000000000014,
+                "bootstrap_interval90": [
+                  0.004250000000000004,
+                  0.026500000000000024
+                ],
+                "probability_decodable_trend": 0.9878
+              }
+            ]
+          },
+          {
+            "p": 0.4,
+            "classification": "unresolved",
+            "adjacent_size_evidence": [
+              {
+                "sizes": [
+                  11,
+                  13
+                ],
+                "delta": 0.01200000000000001,
+                "bootstrap_interval90": [
+                  -0.0005000000000000004,
+                  0.02400000000000002
+                ],
+                "probability_decodable_trend": 0.9392
+              }
+            ]
+          },
+          {
+            "p": 0.425,
+            "classification": "unresolved",
+            "adjacent_size_evidence": [
+              {
+                "sizes": [
+                  11,
+                  13
+                ],
+                "delta": -0.009999999999999981,
+                "bootstrap_interval90": [
+                  -0.023749999999999993,
+                  0.0040000000000000036
+                ],
+                "probability_decodable_trend": 0.1167
+              }
+            ]
+          },
+          {
+            "p": 0.45,
+            "classification": "unresolved",
+            "adjacent_size_evidence": [
+              {
+                "sizes": [
+                  11,
+                  13
+                ],
+                "delta": -0.008500000000000008,
+                "bootstrap_interval90": [
+                  -0.025750000000000023,
+                  0.009000000000000008
+                ],
+                "probability_decodable_trend": 0.20415
+              }
+            ]
+          },
+          {
+            "p": 0.47,
+            "classification": "undecodable",
+            "adjacent_size_evidence": [
+              {
+                "sizes": [
+                  11,
+                  13
+                ],
+                "delta": -0.02100000000000002,
+                "bootstrap_interval90": [
+                  -0.035250000000000004,
+                  -0.006500000000000006
+                ],
+                "probability_decodable_trend": 0.0095
+              }
+            ]
+          },
+          {
+            "p": 0.49,
+            "classification": "undecodable",
+            "adjacent_size_evidence": [
+              {
+                "sizes": [
+                  11,
+                  13
+                ],
+                "delta": -0.031000000000000028,
+                "bootstrap_interval90": [
+                  -0.04849999999999999,
+                  -0.013000000000000012
+                ],
+                "probability_decodable_trend": 0.0021
+              }
+            ]
+          }
+        ],
+        "adjacent_size_crossings": [
+          {
+            "sizes": [
+              11,
+              13
+            ],
+            "delta_definition": "LER(smaller)-LER(larger); positive is decodable trend",
+            "deltas": [
+              0.008999999999999994,
+              0.015500000000000014,
+              0.01200000000000001,
+              -0.009999999999999981,
+              -0.008500000000000008,
+              -0.02100000000000002,
+              -0.031000000000000028
+            ],
+            "crossings": [
+              {
+                "kind": "sign_change",
+                "p_interval": [
+                  0.4,
+                  0.425
+                ],
+                "estimate": 0.41363636363636364,
+                "boundary_candidate": true,
+                "bootstrap": {
+                  "cluster": "seed",
+                  "replicates": 20000,
+                  "ordinal_support": 0.99925,
+                  "no_crossing_fraction": 0.00075,
+                  "multiple_crossing_fraction": 0.2529,
+                  "interval90": [
+                    0.32577002379064235,
+                    0.45117647058823535
+                  ]
+                }
+              }
+            ],
+            "noncrossing_zero_ties": []
+          }
+        ],
+        "evidence_boundary": "Seed-cluster bootstrap scouting classification; not a final finite-size scaling threshold.",
+        "confidence_level": 0.9
+      },
+      {
+        "q": 0.9,
+        "classification": "finite",
+        "cells": [
+          {
+            "p": 0.32,
+            "classification": "unresolved",
+            "adjacent_size_evidence": [
+              {
+                "sizes": [
+                  11,
+                  13
+                ],
+                "delta": 0.004750000000000004,
+                "bootstrap_interval90": [
+                  -0.0025000000000000022,
+                  0.011999999999999997
+                ],
+                "probability_decodable_trend": 0.8556
+              }
+            ]
+          },
+          {
+            "p": 0.36,
+            "classification": "decodable",
+            "adjacent_size_evidence": [
+              {
+                "sizes": [
+                  11,
+                  13
+                ],
+                "delta": 0.01725,
+                "bootstrap_interval90": [
+                  0.009999999999999995,
+                  0.024250000000000008
+                ],
+                "probability_decodable_trend": 1.0
+              }
+            ]
+          },
+          {
+            "p": 0.4,
+            "classification": "unresolved",
+            "adjacent_size_evidence": [
+              {
+                "sizes": [
+                  11,
+                  13
+                ],
+                "delta": 0.010749999999999996,
+                "bootstrap_interval90": [
+                  -0.0002500000000000002,
+                  0.021500000000000005
+                ],
+                "probability_decodable_trend": 0.9448
+              }
+            ]
+          },
+          {
+            "p": 0.425,
+            "classification": "decodable",
+            "adjacent_size_evidence": [
+              {
+                "sizes": [
+                  11,
+                  13
+                ],
+                "delta": 0.014999999999999986,
+                "bootstrap_interval90": [
+                  0.004250000000000004,
+                  0.025999999999999995
+                ],
+                "probability_decodable_trend": 0.9891
+              }
+            ]
+          },
+          {
+            "p": 0.45,
+            "classification": "unresolved",
+            "adjacent_size_evidence": [
+              {
+                "sizes": [
+                  11,
+                  13
+                ],
+                "delta": 0.01075000000000001,
+                "bootstrap_interval90": [
+                  -0.0030000000000000027,
+                  0.024500000000000022
+                ],
+                "probability_decodable_trend": 0.89725
+              }
+            ]
+          },
+          {
+            "p": 0.47,
+            "classification": "unresolved",
+            "adjacent_size_evidence": [
+              {
+                "sizes": [
+                  11,
+                  13
+                ],
+                "delta": 0.0050000000000000044,
+                "bootstrap_interval90": [
+                  -0.008500000000000008,
+                  0.01849999999999999
+                ],
+                "probability_decodable_trend": 0.71505
+              }
+            ]
+          },
+          {
+            "p": 0.49,
+            "classification": "unresolved",
+            "adjacent_size_evidence": [
+              {
+                "sizes": [
+                  11,
+                  13
+                ],
+                "delta": -0.002999999999999975,
+                "bootstrap_interval90": [
+                  -0.015249999999999986,
+                  0.009000000000000008
+                ],
+                "probability_decodable_trend": 0.33645
+              }
+            ]
+          }
+        ],
+        "adjacent_size_crossings": [
+          {
+            "sizes": [
+              11,
+              13
+            ],
+            "delta_definition": "LER(smaller)-LER(larger); positive is decodable trend",
+            "deltas": [
+              0.004750000000000004,
+              0.01725,
+              0.010749999999999996,
+              0.014999999999999986,
+              0.01075000000000001,
+              0.0050000000000000044,
+              -0.002999999999999975
+            ],
+            "crossings": [
+              {
+                "kind": "sign_change",
+                "p_interval": [
+                  0.47,
+                  0.49
+                ],
+                "estimate": 0.48250000000000004,
+                "boundary_candidate": true,
+                "bootstrap": {
+                  "cluster": "seed",
+                  "replicates": 20000,
+                  "ordinal_support": 0.7328,
+                  "no_crossing_fraction": 0.2672,
+                  "multiple_crossing_fraction": 0.16975,
+                  "interval90": [
+                    0.3222614934892373,
+                    0.4875
+                  ]
+                }
+              }
+            ],
+            "noncrossing_zero_ties": []
+          }
+        ],
+        "evidence_boundary": "Seed-cluster bootstrap scouting classification; not a final finite-size scaling threshold.",
+        "confidence_level": 0.9
+      },
+      {
+        "q": 0.95,
+        "classification": "unresolved",
+        "cells": [
+          {
+            "p": 0.32,
+            "classification": "decodable",
+            "adjacent_size_evidence": [
+              {
+                "sizes": [
+                  11,
+                  13
+                ],
+                "delta": 0.006250000000000002,
+                "bootstrap_interval90": [
+                  0.002250000000000002,
+                  0.01025
+                ],
+                "probability_decodable_trend": 0.99605
+              }
+            ]
+          },
+          {
+            "p": 0.36,
+            "classification": "decodable",
+            "adjacent_size_evidence": [
+              {
+                "sizes": [
+                  11,
+                  13
+                ],
+                "delta": 0.0072499999999999995,
+                "bootstrap_interval90": [
+                  0.002749999999999999,
+                  0.011750000000000003
+                ],
+                "probability_decodable_trend": 0.99495
+              }
+            ]
+          },
+          {
+            "p": 0.4,
+            "classification": "unresolved",
+            "adjacent_size_evidence": [
+              {
+                "sizes": [
+                  11,
+                  13
+                ],
+                "delta": 0.006249999999999999,
+                "bootstrap_interval90": [
+                  -0.0005000000000000004,
+                  0.012999999999999998
+                ],
+                "probability_decodable_trend": 0.9298
+              }
+            ]
+          },
+          {
+            "p": 0.425,
+            "classification": "decodable",
+            "adjacent_size_evidence": [
+              {
+                "sizes": [
+                  11,
+                  13
+                ],
+                "delta": 0.009000000000000001,
+                "bootstrap_interval90": [
+                  0.0010000000000000009,
+                  0.01725
+                ],
+                "probability_decodable_trend": 0.9672
+              }
+            ]
+          },
+          {
+            "p": 0.45,
+            "classification": "unresolved",
+            "adjacent_size_evidence": [
+              {
+                "sizes": [
+                  11,
+                  13
+                ],
+                "delta": 0.009750000000000002,
+                "bootstrap_interval90": [
+                  0.0,
+                  0.019500000000000003
+                ],
+                "probability_decodable_trend": 0.9491
+              }
+            ]
+          },
+          {
+            "p": 0.47,
+            "classification": "unresolved",
+            "adjacent_size_evidence": [
+              {
+                "sizes": [
+                  11,
+                  13
+                ],
+                "delta": 0.008000000000000007,
+                "bootstrap_interval90": [
+                  -0.0017500000000000016,
+                  0.017999999999999995
+                ],
+                "probability_decodable_trend": 0.90755
+              }
+            ]
+          },
+          {
+            "p": 0.49,
+            "classification": "unresolved",
+            "adjacent_size_evidence": [
+              {
+                "sizes": [
+                  11,
+                  13
+                ],
+                "delta": 0.0024999999999999883,
+                "bootstrap_interval90": [
+                  -0.007500000000000007,
+                  0.012749999999999997
+                ],
+                "probability_decodable_trend": 0.6476
+              }
+            ]
+          }
+        ],
+        "adjacent_size_crossings": [
+          {
+            "sizes": [
+              11,
+              13
+            ],
+            "delta_definition": "LER(smaller)-LER(larger); positive is decodable trend",
+            "deltas": [
+              0.006250000000000002,
+              0.0072499999999999995,
+              0.006249999999999999,
+              0.009000000000000001,
+              0.009750000000000002,
+              0.008000000000000007,
+              0.0024999999999999883
+            ],
+            "crossings": [],
+            "noncrossing_zero_ties": []
+          }
+        ],
+        "evidence_boundary": "Seed-cluster bootstrap scouting classification; not a final finite-size scaling threshold.",
+        "confidence_level": 0.9
+      }
+    ]
+  },
+  "figures": {
+    "honeycomb": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/figures/phase4-residual80-honeycomb-highq-l11-l13-scaling-4000-2026-08-28-honeycomb-phase-map.png"
+  },
+  "evidence_boundary": "Complete common-grid Phase 2 scouting analysis. Cell labels and adjacent-size crossing intervals are seed-cluster bootstrap diagnostics, not final asymptotic thresholds. Multiple crossings are retained."
+}

@@ -1,0 +1,499 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-08-26T21:37:01.367531+00:00",
+  "seed": 260826,
+  "pymatching_version": "2.3.1",
+  "weight_rule": "negative_log",
+  "rows": [
+    {
+      "lattice": "square",
+      "L": 5,
+      "edges": 32,
+      "detectors": 15,
+      "p": 0.06,
+      "q": 0.75,
+      "p_m": 0.0,
+      "p_h": 0.0,
+      "shots": 100,
+      "decoder": "mwpm",
+      "logical_errors": 6.0,
+      "logical_error_rate": 0.06,
+      "logical_error_ci95": [
+        0.027786123963188192,
+        0.1247681544589592
+      ],
+      "mean_correction_edges": 1.57,
+      "mean_residual_density": 0.035,
+      "mean_edge_log_loss": 0.21406970072072035,
+      "mean_edge_brier": 0.052275000000000044,
+      "mean_decode_ms": 0.03590246109524742,
+      "logical_disagreement_with_mwpm": 0.0,
+      "bp_convergence_rate": null,
+      "mean_bp_iterations": null,
+      "paired_comparisons": []
+    },
+    {
+      "lattice": "square",
+      "L": 5,
+      "edges": 32,
+      "detectors": 15,
+      "p": 0.06,
+      "q": 0.75,
+      "p_m": 0.0,
+      "p_h": 0.0,
+      "shots": 100,
+      "decoder": "syndrome_bp_mwpm",
+      "logical_errors": 7.0,
+      "logical_error_rate": 0.07,
+      "logical_error_ci95": [
+        0.03431926106727268,
+        0.137495147390735
+      ],
+      "mean_correction_edges": 1.57,
+      "mean_residual_density": 0.03375,
+      "mean_edge_log_loss": 0.08366757558040154,
+      "mean_edge_brier": 0.022852826543514535,
+      "mean_decode_ms": 71.82411251036683,
+      "logical_disagreement_with_mwpm": 0.03,
+      "bp_convergence_rate": 0.87,
+      "mean_bp_iterations": 28.41,
+      "paired_comparisons": [
+        {
+          "reference": "mwpm",
+          "rescued_failures": 1,
+          "introduced_failures": 2,
+          "net_logical_error_rate_delta": 0.01,
+          "mcnemar_exact_p_value": 1.0
+        }
+      ]
+    },
+    {
+      "lattice": "square",
+      "L": 5,
+      "edges": 32,
+      "detectors": 15,
+      "p": 0.06,
+      "q": 0.75,
+      "p_m": 0.0,
+      "p_h": 0.0,
+      "shots": 100,
+      "decoder": "herald_bp_mwpm",
+      "logical_errors": 6.0,
+      "logical_error_rate": 0.06,
+      "logical_error_ci95": [
+        0.027786123963188192,
+        0.1247681544589592
+      ],
+      "mean_correction_edges": 1.69,
+      "mean_residual_density": 0.01875,
+      "mean_edge_log_loss": 0.04472053554778863,
+      "mean_edge_brier": 0.012556876858885036,
+      "mean_decode_ms": 62.962963710015174,
+      "logical_disagreement_with_mwpm": 0.02,
+      "bp_convergence_rate": 0.93,
+      "mean_bp_iterations": 22.72,
+      "paired_comparisons": [
+        {
+          "reference": "syndrome_bp_mwpm",
+          "rescued_failures": 1,
+          "introduced_failures": 0,
+          "net_logical_error_rate_delta": -0.01,
+          "mcnemar_exact_p_value": 1.0
+        },
+        {
+          "reference": "mwpm",
+          "rescued_failures": 1,
+          "introduced_failures": 1,
+          "net_logical_error_rate_delta": 0.0,
+          "mcnemar_exact_p_value": 1.0
+        }
+      ]
+    },
+    {
+      "lattice": "square",
+      "L": 5,
+      "edges": 32,
+      "detectors": 15,
+      "p": 0.1,
+      "q": 0.75,
+      "p_m": 0.0,
+      "p_h": 0.0,
+      "shots": 100,
+      "decoder": "mwpm",
+      "logical_errors": 11.0,
+      "logical_error_rate": 0.11,
+      "logical_error_ci95": [
+        0.06254196357064568,
+        0.18631296503080313
+      ],
+      "mean_correction_edges": 2.65,
+      "mean_residual_density": 0.07625,
+      "mean_edge_log_loss": 0.3161567485460197,
+      "mean_edge_brier": 0.08675000000000001,
+      "mean_decode_ms": 0.029067121795378625,
+      "logical_disagreement_with_mwpm": 0.0,
+      "bp_convergence_rate": null,
+      "mean_bp_iterations": null,
+      "paired_comparisons": []
+    },
+    {
+      "lattice": "square",
+      "L": 5,
+      "edges": 32,
+      "detectors": 15,
+      "p": 0.1,
+      "q": 0.75,
+      "p_m": 0.0,
+      "p_h": 0.0,
+      "shots": 100,
+      "decoder": "syndrome_bp_mwpm",
+      "logical_errors": 14.0,
+      "logical_error_rate": 0.14,
+      "logical_error_ci95": [
+        0.08526343659939134,
+        0.22137188210963837
+      ],
+      "mean_correction_edges": 2.65,
+      "mean_residual_density": 0.079375,
+      "mean_edge_log_loss": 0.17382543541328627,
+      "mean_edge_brier": 0.05017624408466086,
+      "mean_decode_ms": 81.75660954933846,
+      "logical_disagreement_with_mwpm": 0.09,
+      "bp_convergence_rate": 0.61,
+      "mean_bp_iterations": 36.1,
+      "paired_comparisons": [
+        {
+          "reference": "mwpm",
+          "rescued_failures": 3,
+          "introduced_failures": 6,
+          "net_logical_error_rate_delta": 0.03,
+          "mcnemar_exact_p_value": 0.5078125
+        }
+      ]
+    },
+    {
+      "lattice": "square",
+      "L": 5,
+      "edges": 32,
+      "detectors": 15,
+      "p": 0.1,
+      "q": 0.75,
+      "p_m": 0.0,
+      "p_h": 0.0,
+      "shots": 100,
+      "decoder": "herald_bp_mwpm",
+      "logical_errors": 5.0,
+      "logical_error_rate": 0.05,
+      "logical_error_ci95": [
+        0.02154367915436796,
+        0.11175046923191913
+      ],
+      "mean_correction_edges": 2.88,
+      "mean_residual_density": 0.0453125,
+      "mean_edge_log_loss": 0.0898270646053484,
+      "mean_edge_brier": 0.027431829556163124,
+      "mean_decode_ms": 69.01663709926652,
+      "logical_disagreement_with_mwpm": 0.12,
+      "bp_convergence_rate": 0.73,
+      "mean_bp_iterations": 29.55,
+      "paired_comparisons": [
+        {
+          "reference": "syndrome_bp_mwpm",
+          "rescued_failures": 11,
+          "introduced_failures": 2,
+          "net_logical_error_rate_delta": -0.09,
+          "mcnemar_exact_p_value": 0.0224609375
+        },
+        {
+          "reference": "mwpm",
+          "rescued_failures": 9,
+          "introduced_failures": 3,
+          "net_logical_error_rate_delta": -0.06,
+          "mcnemar_exact_p_value": 0.14599609375
+        }
+      ]
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 5,
+      "edges": 74,
+      "detectors": 48,
+      "p": 0.06,
+      "q": 0.75,
+      "p_m": 0.0,
+      "p_h": 0.0,
+      "shots": 100,
+      "decoder": "mwpm",
+      "logical_errors": 1.0,
+      "logical_error_rate": 0.01,
+      "logical_error_ci95": [
+        0.0017674320641406505,
+        0.054486196178705315
+      ],
+      "mean_correction_edges": 4.27,
+      "mean_residual_density": 0.012027027027027026,
+      "mean_edge_log_loss": 0.22176191515160615,
+      "mean_edge_brier": 0.0547351351351351,
+      "mean_decode_ms": 0.06883841153467074,
+      "logical_disagreement_with_mwpm": 0.0,
+      "bp_convergence_rate": null,
+      "mean_bp_iterations": null,
+      "paired_comparisons": []
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 5,
+      "edges": 74,
+      "detectors": 48,
+      "p": 0.06,
+      "q": 0.75,
+      "p_m": 0.0,
+      "p_h": 0.0,
+      "shots": 100,
+      "decoder": "syndrome_bp_mwpm",
+      "logical_errors": 1.0,
+      "logical_error_rate": 0.01,
+      "logical_error_ci95": [
+        0.0017674320641406505,
+        0.054486196178705315
+      ],
+      "mean_correction_edges": 4.27,
+      "mean_residual_density": 0.009324324324324326,
+      "mean_edge_log_loss": 0.019512101389212975,
+      "mean_edge_brier": 0.005805177452171899,
+      "mean_decode_ms": 207.2561208496336,
+      "logical_disagreement_with_mwpm": 0.0,
+      "bp_convergence_rate": 0.84,
+      "mean_bp_iterations": 32.98,
+      "paired_comparisons": [
+        {
+          "reference": "mwpm",
+          "rescued_failures": 0,
+          "introduced_failures": 0,
+          "net_logical_error_rate_delta": 0.0,
+          "mcnemar_exact_p_value": 1.0
+        }
+      ]
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 5,
+      "edges": 74,
+      "detectors": 48,
+      "p": 0.06,
+      "q": 0.75,
+      "p_m": 0.0,
+      "p_h": 0.0,
+      "shots": 100,
+      "decoder": "herald_bp_mwpm",
+      "logical_errors": 1.0,
+      "logical_error_rate": 0.01,
+      "logical_error_ci95": [
+        0.0017674320641406505,
+        0.054486196178705315
+      ],
+      "mean_correction_edges": 4.29,
+      "mean_residual_density": 0.003648648648648649,
+      "mean_edge_log_loss": 0.008883483904643424,
+      "mean_edge_brier": 0.0023460564993027645,
+      "mean_decode_ms": 159.542987109744,
+      "logical_disagreement_with_mwpm": 0.0,
+      "bp_convergence_rate": 0.97,
+      "mean_bp_iterations": 25.34,
+      "paired_comparisons": [
+        {
+          "reference": "syndrome_bp_mwpm",
+          "rescued_failures": 0,
+          "introduced_failures": 0,
+          "net_logical_error_rate_delta": 0.0,
+          "mcnemar_exact_p_value": 1.0
+        },
+        {
+          "reference": "mwpm",
+          "rescued_failures": 0,
+          "introduced_failures": 0,
+          "net_logical_error_rate_delta": 0.0,
+          "mcnemar_exact_p_value": 1.0
+        }
+      ]
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 5,
+      "edges": 74,
+      "detectors": 48,
+      "p": 0.1,
+      "q": 0.75,
+      "p_m": 0.0,
+      "p_h": 0.0,
+      "shots": 100,
+      "decoder": "mwpm",
+      "logical_errors": 4.0,
+      "logical_error_rate": 0.04,
+      "logical_error_ci95": [
+        0.01566330399154762,
+        0.0983707143588792
+      ],
+      "mean_correction_edges": 6.92,
+      "mean_residual_density": 0.03162162162162162,
+      "mean_edge_log_loss": 0.31736299514675326,
+      "mean_edge_brier": 0.08718918918918915,
+      "mean_decode_ms": 0.05407336982898414,
+      "logical_disagreement_with_mwpm": 0.0,
+      "bp_convergence_rate": null,
+      "mean_bp_iterations": null,
+      "paired_comparisons": []
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 5,
+      "edges": 74,
+      "detectors": 48,
+      "p": 0.1,
+      "q": 0.75,
+      "p_m": 0.0,
+      "p_h": 0.0,
+      "shots": 100,
+      "decoder": "syndrome_bp_mwpm",
+      "logical_errors": 4.0,
+      "logical_error_rate": 0.04,
+      "logical_error_ci95": [
+        0.01566330399154762,
+        0.0983707143588792
+      ],
+      "mean_correction_edges": 6.92,
+      "mean_residual_density": 0.02567567567567567,
+      "mean_edge_log_loss": 0.07376792577771858,
+      "mean_edge_brier": 0.020531940178257956,
+      "mean_decode_ms": 323.35148411191767,
+      "logical_disagreement_with_mwpm": 0.0,
+      "bp_convergence_rate": 0.38,
+      "mean_bp_iterations": 37.3,
+      "paired_comparisons": [
+        {
+          "reference": "mwpm",
+          "rescued_failures": 0,
+          "introduced_failures": 0,
+          "net_logical_error_rate_delta": 0.0,
+          "mcnemar_exact_p_value": 1.0
+        }
+      ]
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 5,
+      "edges": 74,
+      "detectors": 48,
+      "p": 0.1,
+      "q": 0.75,
+      "p_m": 0.0,
+      "p_h": 0.0,
+      "shots": 100,
+      "decoder": "herald_bp_mwpm",
+      "logical_errors": 0.0,
+      "logical_error_rate": 0.0,
+      "logical_error_ci95": [
+        3.469446951953614e-18,
+        0.03699349820698568
+      ],
+      "mean_correction_edges": 7.14,
+      "mean_residual_density": 0.006216216216216217,
+      "mean_edge_log_loss": 0.016079635053724364,
+      "mean_edge_brier": 0.00514478103137354,
+      "mean_decode_ms": 247.87513794959523,
+      "logical_disagreement_with_mwpm": 0.04,
+      "bp_convergence_rate": 0.81,
+      "mean_bp_iterations": 31.71,
+      "paired_comparisons": [
+        {
+          "reference": "syndrome_bp_mwpm",
+          "rescued_failures": 4,
+          "introduced_failures": 0,
+          "net_logical_error_rate_delta": -0.04,
+          "mcnemar_exact_p_value": 0.125
+        },
+        {
+          "reference": "mwpm",
+          "rescued_failures": 4,
+          "introduced_failures": 0,
+          "net_logical_error_rate_delta": -0.04,
+          "mcnemar_exact_p_value": 0.125
+        }
+      ]
+    }
+  ],
+  "effective_physical_error": [
+    {
+      "lattice": "square",
+      "L": 5,
+      "p": 0.06,
+      "herald_logical_error_rate": 0.06,
+      "p_eff_against_mwpm": 0.06,
+      "effective_reduction": 0.0,
+      "status": "interpolated"
+    },
+    {
+      "lattice": "square",
+      "L": 5,
+      "p": 0.1,
+      "herald_logical_error_rate": 0.05,
+      "p_eff_against_mwpm": null,
+      "effective_reduction": null,
+      "status": "below_grid:0.06"
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 5,
+      "p": 0.06,
+      "herald_logical_error_rate": 0.01,
+      "p_eff_against_mwpm": 0.06,
+      "effective_reduction": 0.0,
+      "status": "interpolated"
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 5,
+      "p": 0.1,
+      "herald_logical_error_rate": 0.0,
+      "p_eff_against_mwpm": null,
+      "effective_reduction": null,
+      "status": "below_grid:0.06"
+    }
+  ],
+  "exact_rows": [
+    {
+      "lattice": "square",
+      "L": 3,
+      "edges": 8,
+      "p": 0.1,
+      "q": 0.75,
+      "p_m": 0.0,
+      "p_h": 0.0,
+      "shots": 20,
+      "logical_error_rate": {
+        "mwpm": 0.35,
+        "herald_bp_mwpm": 0.35,
+        "exact_logical_map": 0.15
+      },
+      "mean_bp_edge_marginal_absolute_error": 5.491868973665993e-10,
+      "unique_observations_enumerated": 7
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 2,
+      "edges": 11,
+      "p": 0.1,
+      "q": 0.75,
+      "p_m": 0.0,
+      "p_h": 0.0,
+      "shots": 20,
+      "logical_error_rate": {
+        "mwpm": 0.05,
+        "herald_bp_mwpm": 0.05,
+        "exact_logical_map": 0.0
+      },
+      "mean_bp_edge_marginal_absolute_error": 2.343376123681816e-10,
+      "unique_observations_enumerated": 11
+    }
+  ]
+}

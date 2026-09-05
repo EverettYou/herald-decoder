@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "status": "rendered",
+  "campaign": "phase-b13-honeycomb-continuous-log-odds-map-2026-08-28",
+  "purpose": "Present the current honeycomb finite-window LER trend evidence without assigning any cell to a phase.",
+  "sources": [
+    {
+      "role": "base_grid",
+      "path": "results/phase-b9-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28.json",
+      "sha256": "8692b610ee6e19bb45452494b04c8c45b4d1fb31f240a8c10dd2f81c24c254bf"
+    },
+    {
+      "role": "measured_endpoint_updates",
+      "path": "results/phase-b10-honeycomb-measured-endpoints-analysis-2026-08-28.json",
+      "sha256": "de7ee1d65a83228aac5f35b2d01213a6486a8169dc4d82f653fc6c0422a10cd2"
+    }
+  ],
+  "expected_update_cells": [
+    {"q": 0.3, "p": 0.2},
+    {"q": 0.35, "p": 0.2},
+    {"q": 0.55, "p": 0.24},
+    {"q": 0.65, "p": 0.32}
+  ],
+  "renderer": {
+    "path": "scripts/render_phase_b13_continuous_log_odds.py",
+    "sha256": "ec7f1edbde28ee27e61a9b79f2a92dddf07a4ef5c4c3c4ca1cde992e6c4538fb"
+  },
+  "new_decoder_runs": 0,
+  "new_decodes": 0,
+  "sample_selection": null,
+  "display_semantics": {
+    "quantity": "log[Pr(upward finite-window LER trend | D) / Pr(downward finite-window LER trend | D)]",
+    "axes": {
+      "x": "edge error p",
+      "y": "herald probability q"
+    },
+    "negative_color": "green; evidence favors downward trend",
+    "zero_color": "near-neutral; neither direction favored",
+    "positive_color": "red; evidence favors upward trend",
+    "symmetric_display_limit": 6.0,
+    "display_clipping_only": true,
+    "cell_classification": false,
+    "boundary_inference": false,
+    "point_markers": false,
+    "continuous_interpolation": false
+  },
+  "machine_output": "results/phase-b13-honeycomb-continuous-log-odds-map-2026-08-28.json",
+  "render_output": "figures/phase-b13-honeycomb-continuous-log-odds-map-2026-08-28.png",
+  "render_audit_output": "results/phase-b13-honeycomb-continuous-log-odds-render-audit-2026-08-28.json",
+  "visual_inspection": "passed: continuous raster, axes, colorbar, clipping disclosure, and footer are legible; no point marker, categorical layer, or boundary is present",
+  "acceptance": [
+    "Exactly 231 current honeycomb cells are present: 227 unchanged Phase B9 cells and the four exact Phase B10 endpoint updates.",
+    "The machine output retains both posterior direction probabilities, the uncensored log-odds value when available, and the original censoring relation and bound.",
+    "The figure is one continuous green-neutral-red raster with p horizontal, q vertical, a zero-centered color scale, and no categorical layer, inferred boundary, crossing marker, or point annotation.",
+    "Only the display value is clipped at the preregistered symmetric limit; the machine-readable evidence is not clipped or recoded.",
+    "REPORT.md and the Lab result page promote this evidence-only figure while B5-B12 categorical figures remain provenance downloads."
+  ],
+  "stop_rule": "Stop after the hash-frozen evidence merge, render, focused and Lab tests, visual inspection, and active-report promotion. Do not acquire data, select samples, infer a boundary, or classify cells.",
+  "claim_boundary": "Finite 21x11 grid and finite L windows only. Colors encode posterior trend-direction log odds and are not phase assignments."
+}

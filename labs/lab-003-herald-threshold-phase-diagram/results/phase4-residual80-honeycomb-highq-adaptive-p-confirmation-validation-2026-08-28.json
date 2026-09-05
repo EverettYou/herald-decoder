@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-28T06:03:40Z",
+  "campaign": "phase4-residual80-honeycomb-highq-adaptive-p-confirmation-4000-2026-08-28",
+  "status": "passed",
+  "validated_shards": 3,
+  "validated_raw_records": 264000,
+  "syndrome_fidelity": {
+    "checked_corrections": 264000,
+    "faithful_corrections": 264000,
+    "failures": 0,
+    "all_faithful": true
+  },
+  "source_stability": {
+    "all_start_equals_end": true,
+    "common_source_cohort": true
+  },
+  "storage": {
+    "formal_raw_files": 3,
+    "atomic_recovery_required": 0,
+    "gzip_sha256_and_record_counts": "passed for all shards"
+  },
+  "shards": [
+    {
+      "q": 0.85,
+      "records": 88000,
+      "summary_sha256": "4ed6a35a7ee0c93223fe63f4474d63c83d8579c86c5af71acbf05e0b4d320863",
+      "raw_sha256": "eefd6b7bcd90a2fea03fd86a4a2a19edc831e6ce7cdae42c9924aa1b48e73ecb"
+    },
+    {
+      "q": 0.9,
+      "records": 88000,
+      "summary_sha256": "2acd313de6a626a765170a86eb915ca82a175eb703a7ad615284ea989c9512a6",
+      "raw_sha256": "bbefabbaa7a8208f2db8f482658cc1da0d133124b90ddf4b63bd25b7e40603f4"
+    },
+    {
+      "q": 0.95,
+      "records": 88000,
+      "summary_sha256": "88d91be2b3fb24406f3c0519aa69e73055bc1890a5275a8eec6103db09906aca",
+      "raw_sha256": "c68c9ab5a1022bd0a2187b1030c3f4e789079bd5b7814f6dc41723de8701d1d2"
+    }
+  ],
+  "runtime": {
+    "python_executable": "/Users/home/Documents/GitHub/emergent_classicality/lab/.venv/bin/python3",
+    "python_version": "3.13.2",
+    "numpy_version": "1.26.4",
+    "numba_version": "0.65.0",
+    "scipy_version": "1.17.1",
+    "pymatching_version": "2.4.0",
+    "numba_available": true
+  },
+  "source_hashes": {
+    "runner": "14adf7579825e64fa4dd74a6ff374207c3f7b55349b5b533c1ff054bf6d66474",
+    "lattice_model": "b87a5feba27675e26970360d730324b7d3740e4dc0492b4dc478e510f140c9e7",
+    "decoder": "990af03ac4c99684e9e9dac6e5a8bb64d773015879c1638906f5fb592cdc6a43",
+    "damping_decoder": "a08ddf0b58e63bb2627c35cafbe570fe6a0ee8dc21bd4eaca720d6dbcbc5e182",
+    "numba_kernels": "c2254c95600c4f5e3a8c2279d5686a99c8d3810a4bb0c814a4fd0cbf16c184cc"
+  },
+  "evidence_boundary": "Production and provenance validation only. No independent confirmation topology, p_c(q), or q_c interpretation is made until the registered 20000-replicate central-90% analysis runs.",
+  "next_transition": "Run the manifest-driven independent confirmation analysis; do not add q=0.925, L15, or square before interpreting this cohort."
+}

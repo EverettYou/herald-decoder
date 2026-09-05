@@ -1,0 +1,117 @@
+{
+  "purpose": "mechanism-only Relay transfer audit; no result is used by the decoder",
+  "settings": {
+    "q": 0.75,
+    "p_m": 0.0,
+    "p_h": 0.0,
+    "gamma0": 0.15,
+    "gamma_interval": [
+      -0.24,
+      0.66
+    ],
+    "threshold": 0.5
+  },
+  "default_transfer": {
+    "square_p0.08": {
+      "shots": 200,
+      "any_syndrome_valid_hard_candidate_rate": 1.0,
+      "proxy_selected_syndrome_valid_rate": 0.85,
+      "mean_valid_candidates_per_shot": 6.715,
+      "proxy_selected_mean_edge_log_loss": 0.19572279250774158,
+      "oracle_best_leg_mean_edge_log_loss": 0.07361582370826253,
+      "mean_proxy_rank_by_truth": 5.505,
+      "first_leg_syndrome_valid_rate": 0.86,
+      "relay_compatible_hard_ler": 0.07,
+      "proxy_selected_valid_hard_ler": 0.047058823529411764,
+      "selected_leg_counts": {
+        "2": 92,
+        "0": 38,
+        "6": 10,
+        "4": 30,
+        "3": 16,
+        "5": 14
+      },
+      "numerical_fixed_point_rate": 0.0
+    },
+    "honeycomb_p0.18": {
+      "shots": 200,
+      "any_syndrome_valid_hard_candidate_rate": 1.0,
+      "proxy_selected_syndrome_valid_rate": 0.78,
+      "mean_valid_candidates_per_shot": 6.515,
+      "proxy_selected_mean_edge_log_loss": 0.3883630415995353,
+      "oracle_best_leg_mean_edge_log_loss": 0.21249437893882742,
+      "mean_proxy_rank_by_truth": 4.785,
+      "first_leg_syndrome_valid_rate": 0.735,
+      "relay_compatible_hard_ler": 0.05,
+      "proxy_selected_valid_hard_ler": 0.03205128205128205,
+      "selected_leg_counts": {
+        "0": 71,
+        "4": 26,
+        "1": 69,
+        "3": 8,
+        "6": 6,
+        "5": 17,
+        "2": 3
+      },
+      "numerical_fixed_point_rate": 0.0
+    }
+  },
+  "longer_relay_budget": {
+    "square_p0.08": {
+      "shots": 20,
+      "any_syndrome_valid_hard_candidate_rate": 1.0,
+      "proxy_selected_syndrome_valid_rate": 0.65,
+      "mean_valid_candidates_per_shot": 58.6,
+      "proxy_selected_mean_edge_log_loss": 0.13247807959455377,
+      "oracle_best_leg_mean_edge_log_loss": 0.0014834152771868948,
+      "mean_proxy_rank_by_truth": 45.05,
+      "first_leg_syndrome_valid_rate": 0.95,
+      "relay_compatible_hard_ler": 0.0,
+      "proxy_selected_valid_hard_ler": 0.0,
+      "selected_leg_counts": {
+        "24": 1,
+        "57": 2,
+        "30": 1,
+        "46": 1,
+        "47": 2,
+        "40": 2,
+        "42": 4,
+        "2": 1,
+        "59": 1,
+        "60": 1,
+        "56": 1,
+        "18": 1,
+        "49": 1,
+        "27": 1
+      },
+      "numerical_fixed_point_rate": 0.2
+    },
+    "honeycomb_p0.18": {
+      "shots": 20,
+      "any_syndrome_valid_hard_candidate_rate": 1.0,
+      "proxy_selected_syndrome_valid_rate": 0.9,
+      "mean_valid_candidates_per_shot": 57.4,
+      "proxy_selected_mean_edge_log_loss": 0.35206982710102463,
+      "oracle_best_leg_mean_edge_log_loss": 0.04473345543552099,
+      "mean_proxy_rank_by_truth": 36.7,
+      "first_leg_syndrome_valid_rate": 0.55,
+      "relay_compatible_hard_ler": 0.1,
+      "proxy_selected_valid_hard_ler": 0.16666666666666666,
+      "selected_leg_counts": {
+        "23": 1,
+        "50": 4,
+        "42": 1,
+        "25": 2,
+        "57": 1,
+        "15": 2,
+        "56": 2,
+        "18": 2,
+        "8": 1,
+        "10": 1,
+        "22": 1,
+        "17": 2
+      },
+      "numerical_fixed_point_rate": 0.05
+    }
+  }
+}

@@ -1,0 +1,338 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-29T05:39:18.664912+00:00",
+  "status": "resolution_aware_finite_grid_guide_complete",
+  "manifest": {
+    "path": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/manifests/phase-b17-resolution-aware-guide-manifest-2026-08-28.json",
+    "sha256": "526a80f9d04787995a87c61bdc41a8fd3aa064c6e681ae1db48549c3605e7447"
+  },
+  "sources": {
+    "current_evidence": {
+      "path": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase-b14-honeycomb-continuous-log-odds-map-2026-08-28.json",
+      "sha256": "e41be160b471cc5820a8a19b90cd3fad6ed8ed581c2c4c0587652f5e7e918fdf"
+    },
+    "directional_brackets": {
+      "path": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase-b11-honeycomb-three-layer-reanalysis-2026-08-28.json",
+      "sha256": "a169f3bbd77ab63e4995ecd91f9f385b24edd432b0342d2b56795ddd5524a843"
+    },
+    "withdrawn_b16_comparator": {
+      "path": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/manifests/phase-b16-strong-smooth-boundary-2026-08-28.json",
+      "sha256": "a0545ccf7940c9f13bb25083a5540e5d81fb606c58ac361b3be075e5369c8182"
+    }
+  },
+  "guide": {
+    "kind": "monotone cubic Bezier visual guide",
+    "q_control": [
+      0.0,
+      0.28514808891881527,
+      0.5702961778376305,
+      0.8554442667564458
+    ],
+    "p_control": [
+      0.17692654527437138,
+      0.17692654527437138,
+      0.17692654527437138,
+      0.5
+    ],
+    "derived_endpoints": {
+      "start": [
+        0.17692654527437138,
+        0.0
+      ],
+      "end": [
+        0.5,
+        0.8554442667564458
+      ]
+    },
+    "objective": 0.0004811328184906767,
+    "free_parameter_count": 2,
+    "inferential_interval": false,
+    "fit_targets": {
+      "q": [
+        0.0,
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.4,
+        0.45,
+        0.5,
+        0.55,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.8,
+        0.85
+      ],
+      "bracket_midpoint_p": [
+        0.18,
+        0.18,
+        0.18,
+        0.2,
+        0.18,
+        0.18,
+        0.2,
+        0.2,
+        0.22,
+        0.22,
+        0.22,
+        0.26,
+        0.26,
+        0.30000000000000004,
+        0.3,
+        0.34,
+        0.45,
+        0.475
+      ]
+    }
+  },
+  "transition_region": {
+    "kind": "conservative finite-grid directional bracket and right-censoring region",
+    "directional_gate": 0.9,
+    "joint_coverage_claim": false,
+    "raw_brackets": [
+      {
+        "q": 0.0,
+        "lower": 0.12,
+        "upper": 0.24,
+        "kind": "measured_directional_bracket"
+      },
+      {
+        "q": 0.05,
+        "lower": 0.16,
+        "upper": 0.2,
+        "kind": "measured_directional_bracket"
+      },
+      {
+        "q": 0.1,
+        "lower": 0.16,
+        "upper": 0.2,
+        "kind": "measured_directional_bracket"
+      },
+      {
+        "q": 0.15,
+        "lower": 0.12,
+        "upper": 0.28,
+        "kind": "measured_directional_bracket"
+      },
+      {
+        "q": 0.2,
+        "lower": 0.12,
+        "upper": 0.24,
+        "kind": "measured_directional_bracket"
+      },
+      {
+        "q": 0.25,
+        "lower": 0.12,
+        "upper": 0.24,
+        "kind": "measured_directional_bracket"
+      },
+      {
+        "q": 0.3,
+        "lower": 0.16,
+        "upper": 0.24,
+        "kind": "measured_directional_bracket"
+      },
+      {
+        "q": 0.35,
+        "lower": 0.16,
+        "upper": 0.24,
+        "kind": "measured_directional_bracket"
+      },
+      {
+        "q": 0.4,
+        "lower": 0.2,
+        "upper": 0.24,
+        "kind": "measured_directional_bracket"
+      },
+      {
+        "q": 0.45,
+        "lower": 0.2,
+        "upper": 0.24,
+        "kind": "measured_directional_bracket"
+      },
+      {
+        "q": 0.5,
+        "lower": 0.2,
+        "upper": 0.24,
+        "kind": "measured_directional_bracket"
+      },
+      {
+        "q": 0.55,
+        "lower": 0.2,
+        "upper": 0.32,
+        "kind": "measured_directional_bracket"
+      },
+      {
+        "q": 0.6,
+        "lower": 0.24,
+        "upper": 0.28,
+        "kind": "measured_directional_bracket"
+      },
+      {
+        "q": 0.65,
+        "lower": 0.28,
+        "upper": 0.32,
+        "kind": "measured_directional_bracket"
+      },
+      {
+        "q": 0.7,
+        "lower": 0.24,
+        "upper": 0.36,
+        "kind": "measured_directional_bracket"
+      },
+      {
+        "q": 0.75,
+        "lower": 0.28,
+        "upper": 0.4,
+        "kind": "measured_directional_bracket"
+      },
+      {
+        "q": 0.8,
+        "lower": 0.4,
+        "upper": 0.5,
+        "kind": "right_censored_at_p_edge"
+      },
+      {
+        "q": 0.85,
+        "lower": 0.45,
+        "upper": 0.5,
+        "kind": "right_censored_at_p_edge"
+      },
+      {
+        "q": 0.9,
+        "lower": 0.49,
+        "upper": 0.5,
+        "kind": "right_censored_at_p_edge"
+      }
+    ],
+    "q": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9
+    ],
+    "lower": [
+      0.12,
+      0.12,
+      0.12,
+      0.12,
+      0.12,
+      0.12,
+      0.16,
+      0.16,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.24,
+      0.24,
+      0.24,
+      0.28,
+      0.4,
+      0.45,
+      0.49
+    ],
+    "upper": [
+      0.24,
+      0.24,
+      0.24,
+      0.28,
+      0.28,
+      0.28,
+      0.28,
+      0.28,
+      0.28,
+      0.28,
+      0.28,
+      0.32,
+      0.32,
+      0.32,
+      0.36,
+      0.4,
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  "display": {
+    "guide_q": [
+      0.0,
+      0.05,
+      0.1,
+      0.15000000000000002,
+      0.2,
+      0.25,
+      0.30000000000000004,
+      0.35000000000000003,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6000000000000001,
+      0.65,
+      0.7000000000000001,
+      0.75,
+      0.8,
+      0.8500000000000001,
+      0.8554442667564458
+    ],
+    "guide_p": [
+      0.17692654527437138,
+      0.17699105662415524,
+      0.17744263607264238,
+      0.17866835171853612,
+      0.1810552716605397,
+      0.18499046399735633,
+      0.19086099682768942,
+      0.1990539382502421,
+      0.20995635636371782,
+      0.22395531926681966,
+      0.24143789505825108,
+      0.2627911518367152,
+      0.2884021577009155,
+      0.31865798074955504,
+      0.3539456890813373,
+      0.3946523507949653,
+      0.4411650339891426,
+      0.49387080676257233,
+      0.5
+    ],
+    "guide_point_count": 19
+  },
+  "diagnostics": {
+    "raw_bracket_count": 19,
+    "measured_bracket_count": 16,
+    "right_censor_bracket_count": 3,
+    "guide_monotone_nondecreasing_p": true,
+    "low_q_reversal_present": false,
+    "all_raw_brackets_contained": true,
+    "old_b16_mean_width_through_q075": 0.004829031592166704,
+    "b17_mean_width_through_q075": 0.11500000000000002,
+    "width_ratio_b17_to_b16": 23.814298541045883,
+    "method_footer_required": false,
+    "curve_legend_required": false
+  },
+  "new_decoder_runs": 0,
+  "new_decodes": 0,
+  "claim_boundary": "The dashed curve is a visual guide; the shaded region is a marginal-gate finite-grid bracket/censoring region, not a confidence set for a thermodynamic phase boundary."
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-28T03:57:00Z",
+  "campaign": "phase3-residual80-honeycomb-highq-refinement-4000-2026-08-28",
+  "status": "passed",
+  "validated_shards": 3,
+  "validated_raw_records": 252000,
+  "syndrome_fidelity": {
+    "checked_corrections": 252000,
+    "faithful_corrections": 252000,
+    "failures": 0,
+    "all_faithful": true
+  },
+  "source_stability": {
+    "all_start_equals_end": true,
+    "common_source_cohort": true
+  },
+  "storage": {
+    "formal_raw_files": 3,
+    "atomic_recovery_required": 0,
+    "gzip_sha256_and_record_counts": "passed for all shards"
+  },
+  "shards": [
+    {
+      "q": 0.85,
+      "records": 84000,
+      "summary_sha256": "e89a5c4a1f0fd7ed3c02763475d7124db63400a54907ea8f3b5a77adadf984c3",
+      "raw_sha256": "047e21c3f2b8b4b7c86930d1dff8d741ccdebfbc5f8147451b6710789d1a6492"
+    },
+    {
+      "q": 0.9,
+      "records": 84000,
+      "summary_sha256": "5de8f6ce243e1a9c64f0529c25a12e7975857cac0e3db7aa3906d38acd454de3",
+      "raw_sha256": "34da8309250369f4f876efd5411853b30a3ef730b043e81fb3b57dc486301dee"
+    },
+    {
+      "q": 0.95,
+      "records": 84000,
+      "summary_sha256": "1fd9b6b1dcc5e401487fc941018c2159ebc147d001c33d5df4ffe24b581c55c1",
+      "raw_sha256": "04346a4c4de7d3ccf968f051bdbce6087d3fb521b221def09703e86bdacbda8c"
+    }
+  ],
+  "source_hashes": {
+    "runner": "14adf7579825e64fa4dd74a6ff374207c3f7b55349b5b533c1ff054bf6d66474",
+    "lattice_model": "b87a5feba27675e26970360d730324b7d3740e4dc0492b4dc478e510f140c9e7",
+    "decoder": "990af03ac4c99684e9e9dac6e5a8bb64d773015879c1638906f5fb592cdc6a43",
+    "damping_decoder": "a08ddf0b58e63bb2627c35cafbe570fe6a0ee8dc21bd4eaca720d6dbcbc5e182",
+    "numba_kernels": "c2254c95600c4f5e3a8c2279d5686a99c8d3810a4bb0c814a4fd0cbf16c184cc"
+  },
+  "evidence_boundary": "Production and provenance validation only. No crossing or q_c interpretation is made until the registered topology-aware analysis runs.",
+  "next_transition": "Run the manifest-driven 20000-replicate central-90% topology-aware analysis; do not add q=0.925 or square before interpreting this standalone cohort."
+}

@@ -1,0 +1,57 @@
+{
+  "claim_boundary": "This is an implementation profile, not a GPU benchmark, asymptotic complexity measurement, or a claim that BP intrinsically costs the measured ratio to compiled PyMatching.",
+  "cprofile_top_cumulative": "         8463266 function calls in 11.925 seconds\n\n   Ordered by: cumulative time\n   List reduced from 26 to 20 due to restriction <20>\n\n   ncalls  tottime  percall  cumtime  percall filename:lineno(function)\n       20    3.045    0.152   11.924    0.596 d4_local_bp.py:102(run_sum_product)\n   246960    2.849    0.000    4.600    0.000 d4_local_bp.py:85(_factor_message)\n   743040    1.966    0.000    3.753    0.000 d4_local_bp.py:69(normalise)\n  1236960    1.877    0.000    1.877    0.000 {method 'reduce' of 'numpy.ufunc' objects}\n   743040    0.297    0.000    1.644    0.000 {method 'sum' of 'numpy.ndarray' objects}\n   493920    0.346    0.000    1.593    0.000 fromnumeric.py:2692(max)\n   743040    0.172    0.000    1.347    0.000 _methods.py:47(_sum)\n   493920    0.473    0.000    1.247    0.000 fromnumeric.py:71(_wrapreduction)\n   506160    0.267    0.000    0.267    0.000 {method 'copy' of 'numpy.ndarray' objects}\n   743043    0.143    0.000    0.143    0.000 {built-in method numpy.asarray}\n   246960    0.127    0.000    0.127    0.000 {method 'astype' of 'numpy.ndarray' objects}\n   246960    0.104    0.000    0.104    0.000 {method 'reshape' of 'numpy.ndarray' objects}\n   494900    0.071    0.000    0.071    0.000 {method 'items' of 'dict' objects}\n   493920    0.059    0.000    0.059    0.000 {built-in method builtins.max}\n   493920    0.046    0.000    0.046    0.000 fromnumeric.py:2687(_max_dispatcher)\n   246960    0.032    0.000    0.032    0.000 {built-in method builtins.len}\n   246960    0.029    0.000    0.029    0.000 multiarray.py:892(bincount)\n    10080    0.011    0.000    0.015    0.000 numeric.py:274(full)\n       20    0.003    0.000    0.005    0.000 d4_local_bp.py:77(_incidences)\n    10100    0.003    0.000    0.003    0.000 {built-in method numpy.empty}\n\n\n",
+  "generated_at": "2026-08-30T04:05:33.960551+00:00",
+  "manifest": "manifests/r6p-default-bp-runtime-profile-manifest-2026-08-29.json",
+  "profiled_trajectory_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "replay_failure_count": 0,
+  "schema_version": 1,
+  "source": "r6n-default-flux-policy-comparison-2026-08-29.json",
+  "status": "completed_replay_consistent_runtime_profile",
+  "timing": {
+    "BP_recurrence": {
+      "count": 20,
+      "maximum_seconds": 1.0137865419965237,
+      "mean_seconds": 0.5964184061565903,
+      "median_seconds": 0.5602283955086023,
+      "minimum_seconds": 0.3944077920168638
+    },
+    "BP_share_of_profiled_pipeline": 0.9895289627671444,
+    "factor_graph_build": {
+      "count": 20,
+      "maximum_seconds": 0.009083457989618182,
+      "mean_seconds": 0.00494316874537617,
+      "median_seconds": 0.004587770497892052,
+      "minimum_seconds": 0.003616917005274445
+    },
+    "mean_BP_iterations": 24.5,
+    "posterior_LLR_MWPM_and_scoring": {
+      "count": 20,
+      "maximum_seconds": 0.006454958987887949,
+      "mean_seconds": 0.001368035445921123,
+      "median_seconds": 0.0009261870000045747,
+      "minimum_seconds": 0.0007112919702194631
+    }
+  }
+}

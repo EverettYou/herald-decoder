@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "status": "registered_ready",
+  "purpose": "Fit one globally smooth, low-resolution finite-window LLR=0 guide with a q=0 intercept near p=0.18 and a right-edge critical point near q=0.8.",
+  "sources": {
+    "current_evidence": {
+      "path": "results/phase-b14-honeycomb-continuous-log-odds-map-2026-08-28.json",
+      "sha256": "e41be160b471cc5820a8a19b90cd3fad6ed8ed581c2c4c0587652f5e7e918fdf"
+    },
+    "brackets": {
+      "path": "results/phase-b11-honeycomb-three-layer-reanalysis-2026-08-28.json",
+      "sha256": "a169f3bbd77ab63e4995ecd91f9f385b24edd432b0342d2b56795ddd5524a843"
+    }
+  },
+  "fit": {
+    "model": "single cubic Bezier graph p(q)",
+    "critical_q": 0.82,
+    "q_control": [0.0, 0.2733333333333333, 0.5466666666666666, 0.82],
+    "initial_control_p": [0.18, 0.25, 0.05, 0.5],
+    "fixed_start_p": 0.18,
+    "fixed_final_control_p": 0.5,
+    "free_parameter_count": 2,
+    "transition_margin_p": 0.04,
+    "high_q_min_p": 0.36,
+    "bracket_penalty": 6.0,
+    "control_regularization": 0.0001,
+    "fit_target": "first downward-to-upward LLR zero crossing on each row through q=0.80",
+    "endpoint_constraints": {
+      "start_on_bottom_boundary": [0.18, 0.0],
+      "end_on_right_boundary": [0.5, 0.82]
+    }
+  },
+  "posterior_propagation": {
+    "replicates": 64,
+    "seed": 916128,
+    "interval": 0.9,
+    "limitation": "Independent Jeffreys-Beta latent-LER propagation, not a seed-cluster bootstrap or thermodynamic confidence interval."
+  },
+  "display": {
+    "curve_point_count": 18,
+    "nominal_pq_grid_spacing": 0.05,
+    "minimum_model_control_q_spacing": 0.2733333333333333,
+    "line": "single dark dashed cubic Bezier",
+    "uncertainty": "light 90% propagated envelope",
+    "axes": {"x": "edge error p", "y": "herald probability q"}
+  },
+  "analysis_output": "manifests/phase-b16-strong-smooth-boundary-2026-08-28.json",
+  "figure_output": "results/phase-b16-strong-smooth-boundary-2026-08-28.png",
+  "render_audit_output": "results/phase-b16-strong-smooth-boundary-render-audit-2026-08-28.json",
+  "new_decoder_runs": 0,
+  "new_decodes": 0,
+  "phase_classification": false,
+  "thermodynamic_boundary_claim": false,
+  "stop_rule": "Stop after the one strongly smoothed guide from the fixed q=0 intercept to the fixed right-edge critical intercept, posterior envelope, tests, and visual audit; do not add higher-order controls or sub-grid knots."
+}

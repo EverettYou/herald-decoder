@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-28T08:05:18Z",
+  "status": "complete",
+  "purpose": "Select the smallest L=5/L=13 sentinel matrix that distinguishes persistent monotone flow, red-frontier growth, finite-size curvature, and order-one saturation using the existing Bayesian posterior.",
+  "source": {
+    "path": "results/phase2-residual80-honeycomb-bayesian-order-phase-2026-08-28.json",
+    "sha256": "4bd89c9fc6868fedbf5d06568706b371f0a0abd8d0d6c0fdcfdfd2552b0661a5"
+  },
+  "selection_rule": {
+    "decreasing_anchor": "maximize Pr(H_decreasing|data)",
+    "increasing_frontier": "maximize Pr(H_increasing|data)",
+    "curvature_sentinel": "choose a high-event cell with large Pr(H_other|data) and an interior L=9 extremum; exclude low-event zero plateaus",
+    "saturation_sentinel": "choose a high-event, near-flat cell with high posterior entropy to test persistence of an order-one plateau"
+  },
+  "excluded_as_shot_limited": {
+    "rule": "Do not spend new distances on cells with zero logical events at every existing size; their ordering uncertainty is event-limited rather than evidence of curvature.",
+    "examples": [
+      {"q": 0.75, "p": 0.08, "logical_errors_L7_L9_L11": [0, 0, 0]},
+      {"q": 1.0, "p": 0.08, "logical_errors_L7_L9_L11": [0, 0, 0]}
+    ]
+  },
+  "selected_cells": [
+    {
+      "role": "decreasing_anchor",
+      "q": 1.0,
+      "p": 0.36,
+      "logical_errors_L7_L9_L11": [32, 8, 1],
+      "posterior_probability_decreasing": 0.9930192852817961,
+      "posterior_probability_increasing": 5.841548527007067e-12,
+      "posterior_probability_other_order": 0.006980714712362391,
+      "prediction": "L=5 and L=13 should extend the decreasing order if the high-q green region is a persistent size effect."
+    },
+    {
+      "role": "increasing_frontier",
+      "q": 0.65,
+      "p": 0.45,
+      "logical_errors_L7_L9_L11": [455, 479, 524],
+      "posterior_probability_decreasing": 0.0001095306509724909,
+      "posterior_probability_increasing": 0.8369992333108329,
+      "posterior_probability_other_order": 0.16289123603819455,
+      "prediction": "L=5 and L=13 should either push Pr(H_increasing|data) through 0.90 or expose large-size turnover."
+    },
+    {
+      "role": "curvature_sentinel",
+      "q": 0.45,
+      "p": 0.20,
+      "logical_errors_L7_L9_L11": [144, 164, 134],
+      "posterior_probability_decreasing": 0.09452604061794262,
+      "posterior_probability_increasing": 0.016601869171661607,
+      "posterior_probability_other_order": 0.8888720902103957,
+      "prediction": "Outer distances discriminate a persistent L=9 hump from a three-size fluctuation."
+    },
+    {
+      "role": "saturation_sentinel",
+      "q": 0.15,
+      "p": 0.45,
+      "logical_errors_L7_L9_L11": [490, 485, 484],
+      "posterior_probability_decreasing": 0.22400514067651836,
+      "posterior_probability_increasing": 0.11766992424714225,
+      "posterior_probability_other_order": 0.6583249350763394,
+      "prediction": "L=5 and L=13 test whether the near-one-half LER is a persistent order-one plateau rather than an unresolved directional trend."
+    }
+  ],
+  "matrix": {
+    "lattice": "honeycomb",
+    "new_sizes": [5, 13],
+    "cells": 4,
+    "new_seeds_per_cell_size": 5,
+    "shots_per_seed": 200,
+    "planned_decodes": 8000
+  },
+  "evidence_boundary": "This selection is a bounded sentinel experiment. It does not fill the full q-p grid, promote a boundary, or classify an asymptotic phase."
+}

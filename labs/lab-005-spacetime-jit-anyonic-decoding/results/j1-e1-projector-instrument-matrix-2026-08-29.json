@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "executed_at": "2026-08-29T12:34:02Z",
+  "contract": "../j1-e1-projector-instrument-matrix-manifest-2026-08-29.json",
+  "scope": "deterministic source-bounded physical-observation validation; no performance sampling",
+  "budget_observed": {
+    "lattice": "existing paper L=2 interface fixtures",
+    "rounds": 5,
+    "sampling": "none",
+    "focused_test_runtime_seconds": 0.51,
+    "full_lab_test_runtime_seconds": 1.39
+  },
+  "implementation": {
+    "module": {
+      "path": "../scripts/d4_projector_instrument.py",
+      "sha256": "7601ac3257f65eb60fc161bf9260c481a995a6c93a15a231e24e91f67ca84262"
+    },
+    "tests": {
+      "path": "../scripts/test_d4_projector_instrument.py",
+      "sha256": "e6dc5a04ecb427e3c95cd41a03390fa8e2881f0b1044825383b2f2d5b1b49216"
+    }
+  },
+  "verification": {
+    "focused": "14 passed",
+    "full_lab": "100 passed"
+  },
+  "branches": [
+    {
+      "id": "E1A-projector-state-update",
+      "status": "pass",
+      "evidence": [
+        "registered projector labels are mutually exclusive per site and unknown labels are rejected",
+        "physical-only events change the private state-update digest",
+        "post-action charge projection is rejected without a bound flux-action digest",
+        "the perfect record executes through both syndrome_only and heralded E0 policy modes",
+        "public records omit true labels and private state-update digests"
+      ]
+    },
+    {
+      "id": "E1B-classical-report-channel",
+      "status": "pass at typed record layer; localized downstream API gap",
+      "evidence": [
+        "the exact false-negative/false-positive distribution is normalized and has the correct perfect limit",
+        "readout-only faults change the public report without changing hidden state",
+        "multi-label reports remain typed and are not silently coerced"
+      ],
+      "localized_gap": "The current D4 spatial-policy request is binary. A simultaneous multi-label public report is therefore rejected by the restricted adapter and needs a separately registered typed translation before schedule/performance work."
+    },
+    {
+      "id": "E1C-quasi-stabilizer-time-like-herald",
+      "status": "pass as localized source fixture",
+      "evidence": [
+        "the five-star t0 through t0+4 table is reproduced exactly",
+        "the three source explanation weights are q_m, p_m^3, and p_m^2 p_e",
+        "the fixture is explicitly marked localized and is not promoted to a general memoryless channel"
+      ]
+    }
+  ],
+  "scientific_interpretation": "The phenomenological projector and later report channel are operational and causally separated. This is physical information-structure evidence only. It is not an ancilla extraction circuit, a complete noisy D4 decoder, a schedule comparison, an LER estimate, a threshold, or a fault-tolerance result.",
+  "next_gate": "Satisfied by typed translation and the corrected J2 R1-I3 deterministic integration; see j2-e1-causal-integration-remediation-2026-08-29.json. No performance samples are authorized."
+}

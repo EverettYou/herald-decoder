@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "status": "verified, analyzed, and reported",
+  "registered_at": "2026-08-29T16:55:00Z",
+  "title": "R6E exact-message and small-graph BP marginal gate",
+  "rigor_tier": "bounded exact algorithm validation",
+  "program_alignment": {
+    "central_question": "Can the exact nonnegative R6D likelihood graph support a practical BP approximation to the conditioned D4 posterior?",
+    "scientific_layer": "WP3 scalable decoding",
+    "epistemic_role": "algorithm implementation and exact small-system falsification gate",
+    "upstream_evidence": "R6D proves the local nonnegative factor identity but does not test BP fixed points",
+    "downstream_gate": "no correction or LER sampling until message arithmetic, convergence, and small-graph marginal bias are measured"
+  },
+  "question": {
+    "research_question": "Do exact sum-product factor messages recover exact marginals on factor trees, and what convergence and marginal error arise on the smallest loopy D4 graphs?",
+    "smallest_claim": "Message implementation correctness on trees and descriptive finite-graph convergence/error on registered loopy controls only.",
+    "H1": "both schedules reproduce exact tree marginals within 1e-10",
+    "H2": "loopy D4 BP converges and reproduces exact physical-edge marginals within 1e-8",
+    "H3": "loopy D4 BP converges but has nonzero fixed-point marginal bias",
+    "H4": "one or both schedules fail to converge within the registered cap",
+    "falsification": "any tree error above tolerance rejects the implementation; loopy error or nonconvergence rejects exact-posterior promotion but remains valid algorithmic evidence"
+  },
+  "matrix": {
+    "schedules": [
+      {"id": "synchronous_raw", "old_message_weight": 0.0},
+      {"id": "synchronous_damped_025", "old_message_weight": 0.25}
+    ],
+    "synthetic_controls": [
+      "one fixed positive binary factor tree with brute-force exact marginals",
+      "one fixed binary single-cycle factor graph with brute-force exact marginals"
+    ],
+    "d4_controls": "four deterministic primitive observations selected before BP by candidate-count strata: minimum multi-candidate, lower median, upper median, and maximum; p in {0.10,0.30}",
+    "d4_graph_modes": [
+      "local_only: exact R6D nonnegative factors, including winding candidates in the local likelihood target",
+      "terminal_screened: the same graph plus the finite primitive global projector that zeros the 123 registered terminal-winding masks"
+    ],
+    "exact_targets": "brute-force all assignments for synthetic graphs; enumerate all 4096 physical masks and analytically contract auxiliary flows for primitive D4",
+    "bp_controls": {"max_iterations": 200, "message_tolerance": 1e-10, "marginal_exactness_tolerance": 1e-8},
+    "budget": "under ten CPU minutes and 2 GiB; zero correction, LER, threshold, or performance samples"
+  },
+  "analysis": {
+    "primary_metrics": ["converged", "iterations", "final maximum message delta", "maximum and mean physical-edge marginal absolute error"],
+    "branch_logic": "tree failure blocks all downstream BP; loopy bias or nonconvergence is reported and routes to approximation/schedule work rather than being repaired by interpretation",
+    "terminal_logic": "compare local-only and terminal-screened modes so the separate winding gate is not silently omitted"
+  },
+  "acceptance_items": [
+    {"item": "R6E matrix registered before implementation", "status": "complete", "evidence": "r6e-bp-marginal-gate-manifest-2026-08-29.json"},
+    {"item": "generic exact table-message engine and R6D factor builder", "status": "verified", "evidence": "scripts/d4_local_bp.py and scripts/test_d4_local_bp.py; both schedules reproduce exact factor-tree marginals"},
+    {"item": "tree, single-cycle, and primitive D4 exact-marginal matrix", "status": "analyzed", "evidence": "results/r6e-bp-marginal-gate.json; tree maximum error 2.853e-11, single-cycle bias 1.277e-2, primitive raw convergence 0/16, damped convergence 10/16, exact-within-1e-8 0/32"},
+    {"item": "analysis, tests, report, and roadmap update", "status": "reported", "evidence": "results/r6e-bp-marginal-gate.md; Plan, Report, Wiki roadmap, Lab metadata, and index updated; 12/12 focused tests, 143/143 full-Lab tests, Wiki lint, and 16/16 dashboard tests pass"}
+  ],
+  "claim_boundary": "R6E cannot establish scalable convergence, decoding quality, a polynomial-time decoder, logical performance, threshold, or fault tolerance.",
+  "planned_outputs": [
+    "scripts/d4_local_bp.py",
+    "scripts/run_r6e_bp_marginal_gate.py",
+    "results/r6e-bp-marginal-gate.json",
+    "results/r6e-bp-marginal-gate.md"
+  ]
+}

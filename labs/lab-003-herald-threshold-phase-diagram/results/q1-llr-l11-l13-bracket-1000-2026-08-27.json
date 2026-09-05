@@ -1,0 +1,591 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-27T16:28:15.406930+00:00",
+  "q": 1.0,
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "shots_per_seed": 200,
+  "total_shots_per_cell": 1000,
+  "fixed_decoder": {
+    "recurrence_mode": "damping",
+    "damping": 0.25,
+    "max_iterations": 40,
+    "matching_projection": "posterior_llr"
+  },
+  "p_grid": {
+    "square": [
+      0.3,
+      0.32,
+      0.34,
+      0.36,
+      0.38,
+      0.4
+    ],
+    "honeycomb": [
+      0.49
+    ]
+  },
+  "sizes": [
+    11,
+    13
+  ],
+  "pymatching_version": "2.4.0",
+  "runtime": {
+    "python_executable": "/Users/home/Documents/GitHub/emergent_classicality/lab/.venv/bin/python3",
+    "python_version": "3.13.2",
+    "numpy_version": "1.26.4",
+    "numba_version": "0.65.0",
+    "pymatching_version": "2.4.0",
+    "numba_available": true
+  },
+  "rows": [
+    {
+      "lattice": "square",
+      "L": 11,
+      "edges": 200,
+      "detectors": 99,
+      "q": 1.0,
+      "p": 0.3,
+      "decoder": "mwpm",
+      "shots": 1000,
+      "logical_errors": 481,
+      "logical_error_rate": 0.481,
+      "logical_error_ci95": [
+        0.4501645630755934,
+        0.5119808537468576
+      ],
+      "mean_decode_ms": 0.04687250155257061,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 11,
+      "edges": 200,
+      "detectors": 99,
+      "q": 1.0,
+      "p": 0.3,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1000,
+      "logical_errors": 221,
+      "logical_error_rate": 0.221,
+      "logical_error_ci95": [
+        0.1963781575648541,
+        0.2477571736700857
+      ],
+      "mean_decode_ms": 1.686270264966879,
+      "paired_rescued_failures": 378,
+      "paired_introduced_failures": 118
+    },
+    {
+      "lattice": "square",
+      "L": 11,
+      "edges": 200,
+      "detectors": 99,
+      "q": 1.0,
+      "p": 0.32,
+      "decoder": "mwpm",
+      "shots": 1000,
+      "logical_errors": 492,
+      "logical_error_rate": 0.492,
+      "logical_error_ci95": [
+        0.4611041586281342,
+        0.5229570695076347
+      ],
+      "mean_decode_ms": 0.04872880922630429,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 11,
+      "edges": 200,
+      "detectors": 99,
+      "q": 1.0,
+      "p": 0.32,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1000,
+      "logical_errors": 276,
+      "logical_error_rate": 0.276,
+      "logical_error_ci95": [
+        0.2491910960732594,
+        0.3045232917282693
+      ],
+      "mean_decode_ms": 1.5098721430113073,
+      "paired_rescued_failures": 358,
+      "paired_introduced_failures": 142
+    },
+    {
+      "lattice": "square",
+      "L": 11,
+      "edges": 200,
+      "detectors": 99,
+      "q": 1.0,
+      "p": 0.34,
+      "decoder": "mwpm",
+      "shots": 1000,
+      "logical_errors": 485,
+      "logical_error_rate": 0.485,
+      "logical_error_ci95": [
+        0.4541408702709699,
+        0.5159739324835967
+      ],
+      "mean_decode_ms": 0.05379815393825993,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 11,
+      "edges": 200,
+      "detectors": 99,
+      "q": 1.0,
+      "p": 0.34,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1000,
+      "logical_errors": 301,
+      "logical_error_rate": 0.301,
+      "logical_error_ci95": [
+        0.2733762104461901,
+        0.3301468394310608
+      ],
+      "mean_decode_ms": 1.6300781294412445,
+      "paired_rescued_failures": 331,
+      "paired_introduced_failures": 147
+    },
+    {
+      "lattice": "square",
+      "L": 11,
+      "edges": 200,
+      "detectors": 99,
+      "q": 1.0,
+      "p": 0.36,
+      "decoder": "mwpm",
+      "shots": 1000,
+      "logical_errors": 513,
+      "logical_error_rate": 0.513,
+      "logical_error_ci95": [
+        0.48203026873001686,
+        0.5438702355493588
+      ],
+      "mean_decode_ms": 0.05807000451022759,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 11,
+      "edges": 200,
+      "detectors": 99,
+      "q": 1.0,
+      "p": 0.36,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1000,
+      "logical_errors": 367,
+      "logical_error_rate": 0.367,
+      "logical_error_ci95": [
+        0.33768854423226846,
+        0.3973293735248892
+      ],
+      "mean_decode_ms": 1.7812484733294696,
+      "paired_rescued_failures": 324,
+      "paired_introduced_failures": 178
+    },
+    {
+      "lattice": "square",
+      "L": 11,
+      "edges": 200,
+      "detectors": 99,
+      "q": 1.0,
+      "p": 0.38,
+      "decoder": "mwpm",
+      "shots": 1000,
+      "logical_errors": 484,
+      "logical_error_rate": 0.484,
+      "logical_error_ci95": [
+        0.4531466082917357,
+        0.514975847979802
+      ],
+      "mean_decode_ms": 0.05258040232001804,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 11,
+      "edges": 200,
+      "detectors": 99,
+      "q": 1.0,
+      "p": 0.38,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1000,
+      "logical_errors": 410,
+      "logical_error_rate": 0.41,
+      "logical_error_ci95": [
+        0.3799172576460708,
+        0.4407715588813291
+      ],
+      "mean_decode_ms": 1.6041255065065343,
+      "paired_rescued_failures": 278,
+      "paired_introduced_failures": 204
+    },
+    {
+      "lattice": "square",
+      "L": 11,
+      "edges": 200,
+      "detectors": 99,
+      "q": 1.0,
+      "p": 0.4,
+      "decoder": "mwpm",
+      "shots": 1000,
+      "logical_errors": 507,
+      "logical_error_rate": 0.507,
+      "logical_error_ci95": [
+        0.47604583278568624,
+        0.537900592595516
+      ],
+      "mean_decode_ms": 0.04880073879030533,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 11,
+      "edges": 200,
+      "detectors": 99,
+      "q": 1.0,
+      "p": 0.4,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1000,
+      "logical_errors": 413,
+      "logical_error_rate": 0.413,
+      "logical_error_ci95": [
+        0.3828725319393248,
+        0.44379332403716176
+      ],
+      "mean_decode_ms": 1.5601620569068473,
+      "paired_rescued_failures": 293,
+      "paired_introduced_failures": 199
+    },
+    {
+      "lattice": "square",
+      "L": 13,
+      "edges": 288,
+      "detectors": 143,
+      "q": 1.0,
+      "p": 0.3,
+      "decoder": "mwpm",
+      "shots": 1000,
+      "logical_errors": 517,
+      "logical_error_rate": 0.517,
+      "logical_error_ci95": [
+        0.48602235996108767,
+        0.5478475302504034
+      ],
+      "mean_decode_ms": 0.07878991871257313,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 13,
+      "edges": 288,
+      "detectors": 143,
+      "q": 1.0,
+      "p": 0.3,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1000,
+      "logical_errors": 244,
+      "logical_error_rate": 0.244,
+      "logical_error_ci95": [
+        0.2183928321652609,
+        0.2715664681793434
+      ],
+      "mean_decode_ms": 2.422362844547024,
+      "paired_rescued_failures": 390,
+      "paired_introduced_failures": 117
+    },
+    {
+      "lattice": "square",
+      "L": 13,
+      "edges": 288,
+      "detectors": 143,
+      "q": 1.0,
+      "p": 0.32,
+      "decoder": "mwpm",
+      "shots": 1000,
+      "logical_errors": 502,
+      "logical_error_rate": 0.502,
+      "logical_error_ci95": [
+        0.47106219334840704,
+        0.5329224996176508
+      ],
+      "mean_decode_ms": 0.10763244741247036,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 13,
+      "edges": 288,
+      "detectors": 143,
+      "q": 1.0,
+      "p": 0.32,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1000,
+      "logical_errors": 283,
+      "logical_error_rate": 0.283,
+      "logical_error_ci95": [
+        0.25595244098823255,
+        0.3117083721944983
+      ],
+      "mean_decode_ms": 3.224460281955544,
+      "paired_rescued_failures": 369,
+      "paired_introduced_failures": 150
+    },
+    {
+      "lattice": "square",
+      "L": 13,
+      "edges": 288,
+      "detectors": 143,
+      "q": 1.0,
+      "p": 0.34,
+      "decoder": "mwpm",
+      "shots": 1000,
+      "logical_errors": 494,
+      "logical_error_rate": 0.494,
+      "logical_error_ci95": [
+        0.4630947794652077,
+        0.5249511416366189
+      ],
+      "mean_decode_ms": 0.19229832777637057,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 13,
+      "edges": 288,
+      "detectors": 143,
+      "q": 1.0,
+      "p": 0.34,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1000,
+      "logical_errors": 329,
+      "logical_error_rate": 0.329,
+      "logical_error_ci95": [
+        0.3005817152780353,
+        0.3587270361240246
+      ],
+      "mean_decode_ms": 4.480512763839215,
+      "paired_rescued_failures": 320,
+      "paired_introduced_failures": 155
+    },
+    {
+      "lattice": "square",
+      "L": 13,
+      "edges": 288,
+      "detectors": 143,
+      "q": 1.0,
+      "p": 0.36,
+      "decoder": "mwpm",
+      "shots": 1000,
+      "logical_errors": 502,
+      "logical_error_rate": 0.502,
+      "logical_error_ci95": [
+        0.47106219334840704,
+        0.5329224996176508
+      ],
+      "mean_decode_ms": 0.2270799586258363,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 13,
+      "edges": 288,
+      "detectors": 143,
+      "q": 1.0,
+      "p": 0.36,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1000,
+      "logical_errors": 386,
+      "logical_error_rate": 0.386,
+      "logical_error_ci95": [
+        0.35631736299485905,
+        0.41655513793984755
+      ],
+      "mean_decode_ms": 5.178912946546916,
+      "paired_rescued_failures": 306,
+      "paired_introduced_failures": 190
+    },
+    {
+      "lattice": "square",
+      "L": 13,
+      "edges": 288,
+      "detectors": 143,
+      "q": 1.0,
+      "p": 0.38,
+      "decoder": "mwpm",
+      "shots": 1000,
+      "logical_errors": 472,
+      "logical_error_rate": 0.472,
+      "logical_error_ci95": [
+        0.44122510067058457,
+        0.5029891978046065
+      ],
+      "mean_decode_ms": 0.16642004981986247,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 13,
+      "edges": 288,
+      "detectors": 143,
+      "q": 1.0,
+      "p": 0.38,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1000,
+      "logical_errors": 405,
+      "logical_error_rate": 0.405,
+      "logical_error_ci95": [
+        0.37499439177359234,
+        0.43573269233866313
+      ],
+      "mean_decode_ms": 4.008901519555366,
+      "paired_rescued_failures": 286,
+      "paired_introduced_failures": 219
+    },
+    {
+      "lattice": "square",
+      "L": 13,
+      "edges": 288,
+      "detectors": 143,
+      "q": 1.0,
+      "p": 0.4,
+      "decoder": "mwpm",
+      "shots": 1000,
+      "logical_errors": 508,
+      "logical_error_rate": 0.508,
+      "logical_error_ci95": [
+        0.47704293049236535,
+        0.5388958413718659
+      ],
+      "mean_decode_ms": 0.2057914105243981,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "square",
+      "L": 13,
+      "edges": 288,
+      "detectors": 143,
+      "q": 1.0,
+      "p": 0.4,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1000,
+      "logical_errors": 435,
+      "logical_error_rate": 0.435,
+      "logical_error_ci95": [
+        0.4045798065188989,
+        0.4659176720842233
+      ],
+      "mean_decode_ms": 4.835638047516113,
+      "paired_rescued_failures": 296,
+      "paired_introduced_failures": 223
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 11,
+      "edges": 362,
+      "detectors": 240,
+      "q": 1.0,
+      "p": 0.49,
+      "decoder": "mwpm",
+      "shots": 1000,
+      "logical_errors": 484,
+      "logical_error_rate": 0.484,
+      "logical_error_ci95": [
+        0.4531466082917357,
+        0.514975847979802
+      ],
+      "mean_decode_ms": 0.5377068656671327,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 11,
+      "edges": 362,
+      "detectors": 240,
+      "q": 1.0,
+      "p": 0.49,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1000,
+      "logical_errors": 9,
+      "logical_error_rate": 0.009,
+      "logical_error_ci95": [
+        0.004742060667477063,
+        0.01701581616533807
+      ],
+      "mean_decode_ms": 9.108376079879235,
+      "paired_rescued_failures": 481,
+      "paired_introduced_failures": 6
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 13,
+      "edges": 506,
+      "detectors": 336,
+      "q": 1.0,
+      "p": 0.49,
+      "decoder": "mwpm",
+      "shots": 1000,
+      "logical_errors": 482,
+      "logical_error_rate": 0.482,
+      "logical_error_ci95": [
+        0.4511584546689284,
+        0.5129793086365515
+      ],
+      "mean_decode_ms": 0.815807171020424,
+      "paired_rescued_failures": null,
+      "paired_introduced_failures": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 13,
+      "edges": 506,
+      "detectors": 336,
+      "q": 1.0,
+      "p": 0.49,
+      "decoder": "herald_bp_mwpm",
+      "shots": 1000,
+      "logical_errors": 3,
+      "logical_error_rate": 0.003,
+      "logical_error_ci95": [
+        0.0010207838811386186,
+        0.008783014053503173
+      ],
+      "mean_decode_ms": 11.0458015386248,
+      "paired_rescued_failures": 480,
+      "paired_introduced_failures": 1
+    }
+  ],
+  "crossings_l7_l9": {
+    "square": {
+      "estimate": null,
+      "status": "missing_curve"
+    },
+    "honeycomb": {
+      "estimate": null,
+      "status": "missing_curve"
+    }
+  },
+  "evidence_boundary": "Initial fixed-grid finite-shot LER curves only; not an asymptotic threshold estimate."
+}

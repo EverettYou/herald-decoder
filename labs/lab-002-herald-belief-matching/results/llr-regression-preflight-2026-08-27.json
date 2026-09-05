@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-27T11:45:49Z",
+  "transition": "posterior-LLR executable regression preflight",
+  "command": "./run_research_python.sh -m unittest discover -s labs/lab-002-herald-belief-matching/scripts -p 'test_*.py'",
+  "runtime": {
+    "python": "3.13.2",
+    "numpy": "1.26.4",
+    "numba": "0.65.0",
+    "pymatching": "2.4.0",
+    "scipy": "1.17.1"
+  },
+  "result": {
+    "tests_run": 15,
+    "failures": 0,
+    "errors": 0,
+    "status": "passed"
+  },
+  "new_regression_guards": [
+    "LegacyDampedBpMatchingDecoder and HeraldBeliefMatchingDecoder both map posterior probabilities [0.2, 0.8] to signed LLR weights log([4, 0.25]).",
+    "For square L=9, p=0.20, q=1, seed=12, corrected posterior LLR gives negative weights on edges 123-126, selects the entire right chain, and returns no logical error."
+  ],
+  "evidence_boundary": "Executable correctness guard only; not LER, convergence-rate, threshold, or decoder-promotion evidence."
+}

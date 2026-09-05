@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "status": "implemented_and_verified",
+  "registered_at": "2026-08-29T10:39:00Z",
+  "title": "Deterministic D(S3) to D(Z3) phase-transition lifecycle preflight",
+  "scope": {
+    "ungauge": "Consume a verified abstract ungauge transition, open one cluster-owned D(Z3) region, and preserve an explicit supplied fusion outcome.",
+    "measurement": "Bind one current-round neutrality record to the preserved deterministic outcome and the active region.",
+    "regauge": "Terminate the region only after a neutral record and a matching abstract correct/regauge transition; keep a non-neutral region active.",
+    "not_in_scope": [
+      "microscopic D(S3) gauging or ungauging circuit",
+      "derivation of the supplied fusion outcome",
+      "measurement noise or repeated parity inference",
+      "cluster discovery or linked-cluster search",
+      "noisy D4 translation",
+      "schedule performance, threshold, or fault tolerance"
+    ]
+  },
+  "invariants": [
+    "one active ungauged region exists per cluster",
+    "only an ungauge transition from D(S3) or boundary to D(Z3) may open a region",
+    "the supplied fusion outcome is unchanged across the labelled phase transition",
+    "neutrality records are current-round, owner-bound, region-bound, and consistent with the deterministic supplied outcome",
+    "non-neutral deferral leaves the ungauged region active",
+    "correct/regauge requires a recorded neutral outcome and terminates the absorber exactly once",
+    "all phase lifecycle events are deterministic and causally ordered"
+  ],
+  "implementation": {
+    "module": "scripts/phase_transition.py",
+    "fixtures": "scripts/test_phase_transition.py",
+    "module_sha256": "84fd7cb376ab66f327874166ac51d17b330e1a20808bc1315179047854fd5e44",
+    "fixtures_sha256": "0cbda7025e035b7e6943d9e8714d7e842154d106a70db4b412b3e2afe7a1c7b6",
+    "lyons_source_sha256": "9d7473adeaffbb4065e1f279d5dff8a5911483f5773101bba506b66ba532d6ea"
+  },
+  "verification": {
+    "status": "passed",
+    "focused_tests": "6/6 passed",
+    "full_lab_tests": "46/46 passed",
+    "verified_cases": [
+      "ungauging opens one owned active region and preserves the supplied fusion outcome exactly",
+      "a neutral current-round parity record permits one correct/re-gauge termination",
+      "a non-neutral record keeps the ungauged region active",
+      "a deterministic parity record inconsistent with the preserved outcome is rejected",
+      "invalid transition order and duplicate region creation are rejected",
+      "a public abstract schedule trace drives ungauge, measurement, and re-gauge without truth access"
+    ]
+  },
+  "claim_boundary": "This contract tests only a deterministic phase-labelled lifecycle around the already abstract schedule. Passing it will not constitute a microscopic D(S3) reproduction or evidence for performance, threshold, or fault tolerance.",
+  "next_gate": "Implement causal detector-cluster construction from observation records, including age, extent, separation, and absorber-link candidates, so the schedule no longer receives hand-assembled clusters; keep microscopic/noisy claims excluded."
+}

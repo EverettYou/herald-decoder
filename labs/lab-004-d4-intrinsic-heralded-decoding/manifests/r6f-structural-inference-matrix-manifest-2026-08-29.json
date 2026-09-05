@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "status": "verified, analyzed, and reported",
+  "registered_at": "2026-08-29T17:07:30Z",
+  "title": "R6F exact-preserving structural inference matrix",
+  "rigor_tier": "bounded exact algorithm discrimination",
+  "program_alignment": {
+    "central_question": "Can an exact-preserving refactorization remove enough short-loop pathology from the R6D likelihood graph to make ordinary sum product a credible posterior approximation?",
+    "scientific_layer": "WP3 scalable decoding",
+    "epistemic_role": "structural algorithm experiment after R6E rejected ordinary loopy BP on the unclustered graph",
+    "upstream_evidence": "R6D proves the nonnegative likelihood identity; R6E verifies exact messages but finds convergence failure, hard-message contradictions, and large primitive marginal bias",
+    "downstream_gate": "no correction or LER sampling until an exact-preserving graph representation is compared against exact primitive marginals"
+  },
+  "question": {
+    "research_question": "Are the R6E failures primarily caused by redundant short loops in the exact R6D auxiliary-flow factorization, and how much is recovered by bounded local factor clustering?",
+    "smallest_claim": "Descriptive convergence and exact-marginal error on the same registered 12-edge primitive controls only.",
+    "H1": "bounded exact-preserving superfactor clustering improves convergence or marginal accuracy relative to the matched R6E unclustered baseline",
+    "H2": "the exact global physical-likelihood factor reproduces primitive exact marginals, separating message-engine correctness from loopy-factorization error",
+    "H3": "bounded clustering remains biased or nonconvergent, rejecting this specific refactorization as an exact posterior solver",
+    "falsification": "failure of either clustered or global factors to reproduce the R6D likelihood table rejects the construction before any BP comparison; global-factor marginal error above 1e-8 rejects the inference implementation"
+  },
+  "matrix": {
+    "representations": [
+      "r6e_unclustered: reuse the frozen 32-row R6E baseline without new computation",
+      "bounded_superfactor: merge both colour pin factors on every edge and merge the observation plus both colour-flow factors at every vertex; exact, nonnegative, maximum arity nine, and O(E+V) factors",
+      "global_physical_ceiling: exactly contract all auxiliary flows into one 12-edge likelihood factor; a factor tree on the primitive graph but explicitly non-scalable"
+    ],
+    "schedules": [
+      {"id": "synchronous_raw", "old_message_weight": 0.0},
+      {"id": "synchronous_damped_025", "old_message_weight": 0.25}
+    ],
+    "controls": "reuse the four deterministic R6E observations selected by candidate-count strata, p in {0.10,0.30}, and both local-only and finite terminal-screened modes",
+    "exact_targets": "enumerate all 4096 physical masks and analytically contract R6D auxiliary flows",
+    "identity_gate": "exhaustively compare clustered and global factor products with the R6D local likelihood on every physical mask for one registered observation in each graph mode",
+    "bp_controls": {"max_iterations": 200, "message_tolerance": 1e-10, "marginal_exactness_tolerance": 1e-8},
+    "budget": "under ten CPU minutes and 2 GiB; zero correction, LER, threshold, or performance samples"
+  },
+  "analysis": {
+    "primary_metrics": ["factor-product identity error", "converged", "iterations", "hard-message failure count", "maximum and mean physical-edge marginal absolute error"],
+    "branch_logic": "an identity failure blocks BP; an exact global ceiling with failed bounded clustering localizes the remaining problem to loopy bounded inference rather than the R6D likelihood or message arithmetic",
+    "terminal_logic": "local-only and terminal-screened modes remain separate; the global terminal projector is not relabelled as a local factor"
+  },
+  "acceptance_items": [
+    {"item": "R6F matrix registered before implementation", "status": "complete", "evidence": "r6f-structural-inference-matrix-manifest-2026-08-29.json"},
+    {"item": "exact-preserving bounded and global graph builders plus identity tests", "status": "verified", "evidence": "scripts/d4_local_bp.py and scripts/test_r6f_structural_inference_matrix.py; zero local product-table and global likelihood-table error"},
+    {"item": "matched primitive marginal matrix against frozen R6E baseline", "status": "analyzed", "evidence": "results/r6f-structural-inference-matrix.json; bounded clustering converges 8/32 with 0/32 exact, global ceiling converges and is exact on 32/32"},
+    {"item": "analysis, tests, report, roadmap, and durable-state update", "status": "reported", "evidence": "results/r6f-structural-inference-matrix.md; Plan, Report, Wiki roadmap/log, Lab metadata, and state updated; 2 focused and 145 full Lab tests, Wiki lint, and 12 knowledge-graph tests pass. Node dashboard tests pass 27/28; the sole failure is the pre-existing unmarked-math fixture in Lab 001 REPORT.md, outside R6F scope."}
+  ],
+  "claim_boundary": "R6F cannot establish scalable convergence, decoding quality, a polynomial-time decoder, logical performance, threshold, or fault tolerance. The global physical factor is an exact finite ceiling, not a scalable proposal.",
+  "planned_outputs": [
+    "scripts/d4_local_bp.py",
+    "scripts/run_r6f_structural_inference_matrix.py",
+    "scripts/test_r6f_structural_inference_matrix.py",
+    "results/r6f-structural-inference-matrix.json",
+    "results/r6f-structural-inference-matrix.md"
+  ]
+}

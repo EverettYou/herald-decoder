@@ -1,0 +1,27 @@
+{
+  "id": "lab006-a4-two-dimensional-full-irrep-workbench-2026-09-04",
+  "status": "complete",
+  "registered_before_implementation": true,
+  "supersedes_public_geometry": "The degree-two ring remains only a small-graph/throughput fixture and no longer represents the public lattice-level artifact.",
+  "geometries": [
+    "Lab 002 square lattice with open rough left/right boundaries and smooth transverse boundaries",
+    "Lab 002 honeycomb lattice with open rough left/right boundaries and armchair-smooth transverse boundaries"
+  ],
+  "observation_record": ["m", "R"],
+  "paired_arms": ["P(e|m)", "P(e|m,R)"],
+  "visual_layers": ["full record (m,R)", "full-irrep BP posterior", "signed R effect", "full-irrep correction"],
+  "convergence_diagnostics": ["converged", "iterations", "maximum message delta"],
+  "frozen_effect": "Delta r_a=P(e_a=1|m,R)-P(e_a=1|m), red positive, blue negative, width proportional to magnitude.",
+  "acceptance_gates": [
+    "Square and honeycomb graph payloads reproduce the canonical Lab 002 vertex, edge, detector, boundary-side, and logical-cut data.",
+    "All retained edges touch one or two detector factors and hard corrections reproduce m on detector rows.",
+    "U(1), SU(2), and SU(3) local fusion distributions normalize for every detector degree exercised by both geometries.",
+    "The two posterior arms use the same physical error, m record, prior, schedule, and full-irrep sample.",
+    "The artifact exposes BP convergence, iterations, and residual rather than implying that convergence or exactness is guaranteed on short loops.",
+    "The exact Lab Results page visibly renders both geometries, rough boundaries, all four layers, and the signed R effect.",
+    "The ring is described only as an exact-enumeration and throughput fixture in current report, plan, metadata, and Wiki."
+  ],
+  "sampling": "Interactive fixed-seed explanatory samples only; no finite-size performance or threshold sampling is authorized by this transition.",
+  "stop_rule": "Fail closed if either 2D geometry, syndrome fidelity, fusion normalization, paired-record identity, convergence diagnostics, or the exact rendered surface fails.",
+  "verification": "results/a2-fusion-workbench-verification.json"
+}

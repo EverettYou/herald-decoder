@@ -1,0 +1,951 @@
+{
+  "stage": "complete",
+  "summary": "Phase B18 presents the current B14/B11 evidence with a p<->1-p symmetry-constrained guide, the full 0<=p<=0.5 fundamental domain, and the unchanged conservative finite-grid directional bracket/censoring region.",
+  "current_focus": "Closed at the B18 evidence boundary: the symmetry-constrained guide and corrected finite-window evidence are the final Lab 003 deliverables.",
+  "next_action": "No further Lab 003 transitions. Any new threshold or phase-boundary sampling requires a separately registered follow-on study.",
+  "created": "2026-08-27",
+  "updated": "2026-08-29",
+  "parents": [
+    "lab-001-string-herald-visualization",
+    "lab-002-herald-belief-matching"
+  ],
+  "motivation": "Compare the operational finite-size phase-boundary topology across square/honeycomb and q=0/1 without pooling different geometries or decoder configurations.",
+  "question": "Does ideal heralding leave a finite operational p_c on each lattice, or remove it on honeycomb by making the high-p biased regime decodable again?",
+  "phase": "Phase B18 symmetry-constrained guide complete",
+  "status": "Closed by researcher at the B18 evidence boundary (2026-08-29). The existing-data symmetry correction, full-domain collaborator figure, report update, tests, and visual audit are complete. B16 and B17 remain provenance only.",
+  "report_contract": {
+    "max_lines": 500,
+    "max_evidence_links": 12
+  },
+  "results": [
+    {
+      "id": "current-evidence",
+      "kind": "data",
+      "format": "json",
+      "title": "Current Lab 003 evidence bundle",
+      "summary": "The current finite-window honeycomb trend data together with the selected non-pooled LER context panels cited by the Report.",
+      "path": "results/current-evidence.json",
+      "presentation": "result"
+    },
+    {
+      "id": "final-selected-ler-curves-q0-q075-q1-square-honeycomb-2026-08-28",
+      "kind": "figure",
+      "format": "image",
+      "title": "Final selected q=0/q=0.75/q=1 LER curves",
+      "summary": "Six non-pooled fixed-q panels: rows q=0, 0.75, and 1; square at left and honeycomb at right.",
+      "path": "figures/final-selected-ler-curves-q0-q075-q1-square-honeycomb-2026-08-28.png",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b9-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28",
+      "kind": "figure",
+      "format": "image",
+      "title": "Honeycomb adaptive Bayesian fuzzy-trend phase map",
+      "summary": "Phase B9 continuous Bayesian log-likelihood-ratio evidence with physical p horizontal and herald q vertical; the underlying 90% rule has 87 decodable, 42 undecodable, and 102 conservatively unresolved cells.",
+      "path": "figures/phase-b9-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28.png",
+      "presentation": "download"
+    },
+    {
+      "id": "phase2-residual80-honeycomb-bayesian-order-data-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Honeycomb Bayesian order posterior data",
+      "summary": "Cellwise posterior probabilities for decreasing, increasing, and the four nonmonotone LER orderings, including LER credible intervals and uniform-prior sensitivity.",
+      "path": "results/phase2-residual80-honeycomb-bayesian-order-phase-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase2-residual80-honeycomb-bayesian-fuzzy-trend-data-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Honeycomb Bayesian fuzzy-trend map data",
+      "summary": "Cellwise posterior slope probabilities, intervals, log odds, prior sensitivity, curvature diagnostics, and gray-cell measurement routes.",
+      "path": "results/phase2-residual80-honeycomb-bayesian-fuzzy-trend-phase-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b4-honeycomb-bayesian-fuzzy-trend-phase-map-data-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Honeycomb adaptive Phase B4 map data",
+      "summary": "Merged 231-cell payload with an exact one-cell update ledger, 230 deep-equal Phase B3 cells, 85/41/105 counts, and source hashes for the Phase B3 map and Phase B4 analysis.",
+      "path": "results/phase-b4-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b3-honeycomb-frontier-reuse-selection-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B3 reuse-first frontier selection",
+      "summary": "All six red/green-adjacent gray cells covered: five reuse audited Phase S1 posterior-LLR measurements and only one requires a new 3000-decode job.",
+      "path": "results/phase-b3-honeycomb-frontier-reuse-selection-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b3-honeycomb-frontier-reuse-preflight-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B3 reuse-first preflight",
+      "summary": "Five reuse shards and 11,000 rows verified; one conflict-free 3000-decode job and all heterogeneous Bayesian pooling paths pass fail-closed checks; not launched.",
+      "path": "results/phase-b3-honeycomb-frontier-reuse-preflight-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b3-honeycomb-frontier-reuse-completion-audit-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B3 fresh-output completion audit",
+      "summary": "The one fresh job has 3000/3000 raw and syndrome-faithful rows with exact hash, sampling, source, decoder, and stability gates; not scientifically analyzed.",
+      "path": "results/phase-b3-honeycomb-frontier-reuse-completion-audit-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b3-honeycomb-frontier-reuse-analysis-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B3 heterogeneous Bayesian fuzzy-trend analysis",
+      "summary": "One of six frontier cells resolves: q=0.10,p=0.20 is undecodable at posterior probability 0.95816; five remain gray and all six labels are prior-stable.",
+      "path": "results/phase-b3-honeycomb-frontier-reuse-analysis-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b4-honeycomb-new-frontier-selection-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B4 newly exposed frontier selection",
+      "summary": "Six current frontier cells audited; five were just tested in Phase B3 and only q=0.05,p=0.20 is newly exposed. No unused source-compatible measurement exists, so one launch-closed 3000-decode job is registered.",
+      "path": "results/phase-b4-honeycomb-new-frontier-selection-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b4-honeycomb-new-frontier-preflight-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B4 fail-closed preflight",
+      "summary": "One conflict-free 3000-decode command with frozen source/selection hashes plus tested completion, pooled-analysis, and exact-render gates; production not launched.",
+      "path": "results/phase-b4-honeycomb-new-frontier-preflight-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b4-honeycomb-new-frontier-completion-audit-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B4 completion audit",
+      "summary": "The sole job has 3000/3000 raw and syndrome-faithful rows with exact hashes, registered coordinates/seeds, decoder/source equality, and source stability; not scientifically analyzed.",
+      "path": "results/phase-b4-honeycomb-new-frontier-completion-audit-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b4-honeycomb-new-frontier-analysis-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B4 pooled Bayesian fuzzy-trend analysis",
+      "summary": "Active base plus fresh counts [698,720,738]/2000 resolve q=0.05,p=0.20 as prior-stable undecodable at posterior probability 0.90639.",
+      "path": "results/phase-b4-honeycomb-new-frontier-analysis-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b5-honeycomb-persistent-frontier-selection-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B5 persistent frontier selection",
+      "summary": "All five persistent frontier cells covered by four L5 extensions and one same-window shot arm; 12 direct summaries audited, no unused compatible shard, 7000 decodes registered launch-closed.",
+      "path": "results/phase-b5-honeycomb-persistent-frontier-selection-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b5-honeycomb-persistent-frontier-preflight-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B5 persistent frontier preflight",
+      "summary": "Five conflict-free jobs, 7000 registered decodes, four-worker cap, complete source-chain and downstream gates, and exact five-payload rendering pass 86 tests; production not launched.",
+      "path": "results/phase-b5-honeycomb-persistent-frontier-preflight-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b5-honeycomb-persistent-frontier-completion-audit-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B5 persistent frontier completion audit",
+      "summary": "All five summary/raw pairs pass exact coordinate, sampling, decoder, source, hash, and syndrome gates: 7000/7000 rows are present and faithful; no scientific analysis was performed.",
+      "path": "results/phase-b5-honeycomb-persistent-frontier-completion-audit-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b5-honeycomb-persistent-frontier-analysis-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B5 heterogeneous Bayesian fuzzy-trend analysis",
+      "summary": "All five labels are prior-stable; q=0.40,p=0.20 resolves decodable at posterior downward-trend probability 0.95528, while four cells remain unresolved.",
+      "path": "results/phase-b5-honeycomb-persistent-frontier-analysis-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b5-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28",
+      "kind": "figure",
+      "format": "image",
+      "title": "Honeycomb adaptive Bayesian fuzzy-trend phase map after Phase B5",
+      "summary": "Exactly five evidence payloads update and 226 remain deep-equal to Phase B4; active totals are 86 decodable, 41 undecodable, and 104 unresolved cells.",
+      "path": "figures/phase-b5-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28.png",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b5-honeycomb-bayesian-fuzzy-trend-phase-map-data-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Honeycomb adaptive Phase B5 map data",
+      "summary": "Merged 231-cell payload with an exact five-cell update ledger, 226 deep-equal Phase B4 cells, 86/41/104 counts, and immutable analysis/renderer provenance.",
+      "path": "results/phase-b5-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b6-honeycomb-four-cell-frontier-selection-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B6 four-cell frontier selection",
+      "summary": "All four persistent frontier cells are covered by three shot-balancing arms and one missing-endpoint arm; 14 direct summaries were audited, no compatible unused shard exists, and 14000 decodes are registered launch-closed.",
+      "path": "results/phase-b6-honeycomb-four-cell-frontier-selection-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b6-honeycomb-four-cell-frontier-preflight-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B6 four-cell frontier preflight",
+      "summary": "Four conflict-free jobs, 14000 registered decodes, four-worker cap, complete downstream gates, and four real CLI-shape sentinel smokes pass 92 tests; production not launched.",
+      "path": "results/phase-b6-honeycomb-four-cell-frontier-preflight-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b6-honeycomb-four-cell-frontier-completion-audit-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B6 four-cell frontier completion audit",
+      "summary": "All four summary/raw pairs pass exact coordinate, sampling, decoder, source, hash, and syndrome gates: 14000/14000 rows are present and faithful; no scientific analysis was performed.",
+      "path": "results/phase-b6-honeycomb-four-cell-frontier-completion-audit-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b6-honeycomb-four-cell-frontier-analysis-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B6 map-count Bayesian fuzzy-trend analysis",
+      "summary": "All four labels are prior-stable but remain unresolved; directional confidence ranges from 0.77980 to 0.85715 under the Jeffreys prior.",
+      "path": "results/phase-b6-honeycomb-four-cell-frontier-analysis-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b6-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28",
+      "kind": "figure",
+      "format": "image",
+      "title": "Honeycomb adaptive Bayesian fuzzy-trend phase map after Phase B6",
+      "summary": "Exactly four continuous-evidence payloads update and 227 remain deep-equal to Phase B5; no classification changes and totals remain 86/41/104.",
+      "path": "figures/phase-b6-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28.png",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b6-honeycomb-bayesian-fuzzy-trend-phase-map-data-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Honeycomb adaptive Phase B6 map data",
+      "summary": "Merged 231-cell payload with an exact four-cell update ledger, 227 deep-equal Phase B5 cells, unchanged 86/41/104 counts, and immutable analysis/renderer provenance.",
+      "path": "results/phase-b6-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b6-honeycomb-posterior-predictive-design-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B6 posterior-predictive measurement design",
+      "summary": "Nested Beta-binomial forecasts for three bounded four-cell follow-ups, including 0.90-gate resolution probabilities, sign entropy, false-direction risk, costs, efficiency, and Monte Carlo errors; no data launched.",
+      "path": "results/phase-b6-honeycomb-posterior-predictive-design-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b7-honeycomb-endpoint-followup-selection-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B7 endpoint-only follow-up selection",
+      "summary": "Four fixed L5/L13 jobs selected from the Phase B6 posterior-predictive efficiency result, totaling 8000 decodes with a disjoint seed stream and no outcome-adaptive cell ranking.",
+      "path": "results/phase-b7-honeycomb-endpoint-followup-selection-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b7-honeycomb-endpoint-followup-preflight-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B7 fail-closed preflight",
+      "summary": "Four conflict-free 2000-decode endpoint jobs, frozen source/design hashes, disjoint seeds, four real CLI-shape smokes, and tested completion/analysis/render gates; production not launched.",
+      "path": "results/phase-b7-honeycomb-endpoint-followup-preflight-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b7-honeycomb-endpoint-followup-completion-audit-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B7 completion audit",
+      "summary": "All four summary/raw pairs pass exact coordinates, sampling, decoder/source, hash, source-stability, and syndrome gates: 8000/8000 rows are present and faithful; no scientific analysis performed.",
+      "path": "results/phase-b7-honeycomb-endpoint-followup-completion-audit-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b7-honeycomb-endpoint-followup-analysis-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B7 pooled Bayesian endpoint analysis",
+      "summary": "All four labels are prior-stable; q=0.60,p=0.28 resolves undecodable at posterior upward probability 0.96611, while three cells remain unresolved.",
+      "path": "results/phase-b7-honeycomb-endpoint-followup-analysis-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b7-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28",
+      "kind": "figure",
+      "format": "image",
+      "title": "Honeycomb Bayesian fuzzy-trend phase map after Phase B7",
+      "summary": "Exactly four evidence payloads update and 227 remain deep-equal to Phase B6; one new undecodable label changes totals to 86/42/103.",
+      "path": "figures/phase-b7-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28.png",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b7-honeycomb-bayesian-fuzzy-trend-phase-map-data-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Honeycomb adaptive Phase B7 map data",
+      "summary": "Merged 231-cell payload with an exact four-cell update ledger, 227 deep-equal Phase B6 cells, one classification change, 86/42/103 counts, and immutable provenance.",
+      "path": "results/phase-b7-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b7-honeycomb-frontier-posterior-predictive-design-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B7 frontier posterior-predictive design",
+      "summary": "Exact four-cell frontier plus nested Beta-binomial forecasts for three bounded follow-ups; the 11000-decode efficiency leader predicts only 0.786 resolved cells and no data are registered or launched.",
+      "path": "results/phase-b7-honeycomb-frontier-posterior-predictive-design-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b8-honeycomb-raise-minimum-selection-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B8 fixed raise-minimum selection",
+      "summary": "Four frontier jobs are frozen before outcomes: 11000 decodes with the original 0.786 expected resolved-cell and 0.029 false-direction forecasts preserved.",
+      "path": "results/phase-b8-honeycomb-raise-minimum-selection-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b8-honeycomb-raise-minimum-preflight-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B8 fail-closed preflight",
+      "summary": "Four conflict-free jobs, disjoint seeds, frozen inputs and sources, four real CLI-shape smokes, and tested completion/analysis/render gates; production not launched.",
+      "path": "results/phase-b8-honeycomb-raise-minimum-preflight-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b8-honeycomb-raise-minimum-completion-audit-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B8 completion audit",
+      "summary": "All four registered summary/raw pairs pass exact coordinates, sampling, decoder/source, digest, source-stability, and syndrome gates: 11000/11000 rows are present and faithful; no scientific analysis performed.",
+      "path": "results/phase-b8-honeycomb-raise-minimum-completion-audit-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b8-honeycomb-raise-minimum-analysis-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B8 pooled Bayesian fuzzy-trend analysis",
+      "summary": "All four fixed frontier cells remain unresolved and prior-stable; favored-direction probabilities range from 0.6424 to 0.7241 and every central 90% slope interval contains zero.",
+      "path": "results/phase-b8-honeycomb-raise-minimum-analysis-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b8-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28",
+      "kind": "figure",
+      "format": "image",
+      "title": "Honeycomb Bayesian fuzzy-trend phase map after Phase B8",
+      "summary": "Exactly four evidence payloads update and 227 remain deep-equal to Phase B7; no classification changes and totals remain 86/42/103.",
+      "path": "figures/phase-b8-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28.png",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b8-honeycomb-bayesian-fuzzy-trend-phase-map-data-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Honeycomb adaptive Phase B8 map data",
+      "summary": "Merged 231-cell payload with an exact four-cell update ledger, 227 deep-equal Phase B7 cells, zero classification changes, 86/42/103 counts, and immutable provenance.",
+      "path": "results/phase-b8-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b8-honeycomb-frontier-posterior-predictive-design-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B8 frontier posterior-predictive design",
+      "summary": "Exact four-cell frontier plus nested Beta-binomial forecasts for three measured-size follow-ups; the 8000-decode efficiency leader predicts only 0.3125 resolved cells and no data are registered or launched.",
+      "path": "results/phase-b8-honeycomb-frontier-posterior-predictive-design-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b9-honeycomb-measured-endpoints-selection-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B9 measured-endpoints selection",
+      "summary": "Four fixed endpoint jobs selected from the Phase B8 posterior-predictive efficiency result, totaling 8000 decodes with a disjoint seed stream and the low 0.3125 expected-resolution forecast preserved.",
+      "path": "results/phase-b9-honeycomb-measured-endpoints-selection-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b9-honeycomb-measured-endpoints-preflight-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B9 fail-closed preflight",
+      "summary": "Four conflict-free 2000-decode endpoint jobs, disjoint seeds, frozen inputs and sources, four real CLI-shape smokes, and tested completion/analysis/render gates; production not launched.",
+      "path": "results/phase-b9-honeycomb-measured-endpoints-preflight-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b9-honeycomb-measured-endpoints-completion-audit-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B9 completion audit",
+      "summary": "All four registered summary/raw pairs pass exact coordinates, sampling, decoder/source, digest, source-stability, and syndrome gates: 8000/8000 rows are present and faithful; no scientific analysis performed.",
+      "path": "results/phase-b9-honeycomb-measured-endpoints-completion-audit-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b9-honeycomb-measured-endpoints-analysis-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B9 pooled Bayesian fuzzy-trend analysis",
+      "summary": "All four classifications are prior-stable; q=0.65,p=0.28 resolves decodable at posterior downward probability 0.90820, while three cells remain unresolved.",
+      "path": "results/phase-b9-honeycomb-measured-endpoints-analysis-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b9-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28",
+      "kind": "figure",
+      "format": "image",
+      "title": "Honeycomb Bayesian fuzzy-trend phase map after Phase B9",
+      "summary": "Exactly four evidence payloads update and 227 remain deep-equal to Phase B8; q=0.65,p=0.28 becomes decodable and totals change to 87/42/102.",
+      "path": "figures/phase-b9-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28.png",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b9-honeycomb-bayesian-fuzzy-trend-phase-map-data-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Honeycomb adaptive Phase B9 map data",
+      "summary": "Merged 231-cell payload with an exact four-cell update ledger, 227 deep-equal Phase B8 cells, one classification change, 87/42/102 counts, and immutable provenance.",
+      "path": "results/phase-b9-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b9-honeycomb-frontier-posterior-predictive-design-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B9 frontier posterior-predictive design",
+      "summary": "The exact frontier moves from q=0.65,p=0.28 to q=0.65,p=0.32; among three measured-distance designs, the 8000-decode endpoint design leads at 1.1768 expected resolutions without registering or launching data.",
+      "path": "results/phase-b9-honeycomb-frontier-posterior-predictive-design-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b10-honeycomb-measured-endpoints-selection-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B10 measured-endpoints selection",
+      "summary": "Four exact-frontier endpoint jobs totaling 8000 decodes preserve the 1.1768 expected-resolution forecast and the 0.0293 low-yield q=0.30,p=0.20 branch.",
+      "path": "results/phase-b10-honeycomb-measured-endpoints-selection-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b10-honeycomb-measured-endpoints-preflight-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B10 fail-closed preflight",
+      "summary": "Exact matrix, 8000-decode budget, disjoint seeds, frozen map/design/source hashes, absent outputs, four CLI-shape smokes, and downstream gates pass; production not launched.",
+      "path": "results/phase-b10-honeycomb-measured-endpoints-preflight-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b10-honeycomb-measured-endpoints-completion-audit-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B10 completion audit",
+      "summary": "All four registered output pairs pass exact coordinates, seeds, hashes, decoder/source stability, and syndrome fidelity: 8000/8000 rows are present and faithful; no scientific analysis performed.",
+      "path": "results/phase-b10-honeycomb-measured-endpoints-completion-audit-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b10-honeycomb-measured-endpoints-analysis-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B10 pooled Bayesian boundary analysis",
+      "summary": "q=0.65,p=0.32 resolves prior-stably undecodable at upward probability 0.97292; three boundary cells remain unresolved, no legacy slope-only map is rendered, and no automatic resampling follows.",
+      "path": "results/phase-b10-honeycomb-measured-endpoints-analysis-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b11-honeycomb-three-layer-reanalysis-preflight-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B11 three-layer reanalysis preflight",
+      "summary": "Hash-frozen no-new-data floor/saturation/transition calibration with bounded tolerance/gate sensitivity, fixed validation anchors and exclusions, zero decoder runs, and no render target; analysis not performed.",
+      "path": "results/phase-b11-honeycomb-three-layer-reanalysis-preflight-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b11-honeycomb-three-layer-reanalysis-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B11 three-layer honeycomb reanalysis",
+      "summary": "Frozen no-new-data calibration selects a 0.95 gate, epsilon=0.01 floor and delta=0.075 saturation rule, yielding 25 decodable anchors, 64 undecodable anchors, and 16 discrete lower-boundary brackets without rendering or sample selection.",
+      "path": "results/phase-b11-honeycomb-three-layer-reanalysis-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b12-honeycomb-three-layer-map-preflight-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B12 three-layer map preflight",
+      "summary": "Presentation-only preflight exhaustively classifies the frozen 231-cell grid into 70 decodable-side, 17 discrete-boundary, 101 undecodable-side, and 43 unclassified cells, with zero new data and no render.",
+      "path": "results/phase-b12-honeycomb-three-layer-map-preflight-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b12-honeycomb-three-layer-map-render-audit-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B12 three-layer map render audit",
+      "summary": "Hash-audited presentation-only render preserves the 70/17/101/43 display counts and 25/64 absolute-anchor counts with zero new data or sample selection.",
+      "path": "results/phase-b12-honeycomb-three-layer-map-render-audit-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b12-honeycomb-three-layer-phase-map-2026-08-28",
+      "kind": "figure",
+      "format": "image",
+      "title": "Honeycomb operational phase map",
+      "summary": "Withdrawn categorical presentation retained only for provenance; it is not an active interpretation or Lab-page figure.",
+      "path": "figures/phase-b12-honeycomb-three-layer-phase-map-2026-08-28.png",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b13-honeycomb-continuous-log-odds-map-2026-08-28",
+      "kind": "figure",
+      "format": "image",
+      "title": "Honeycomb finite-window LER trend evidence",
+      "summary": "Continuous zero-centered log posterior odds for upward versus downward finite-window LER trend over 231 current cells; colors are evidence only, with no cell classification or inferred boundary.",
+      "path": "figures/phase-b13-honeycomb-continuous-log-odds-map-2026-08-28.png",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b13-honeycomb-continuous-log-odds-data-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Honeycomb finite-window LER trend evidence data",
+      "summary": "Machine-readable 227-cell Phase B9 base plus four exact Phase B10 updates, preserving posterior probabilities, raw or censored log odds, and display-only clipping provenance.",
+      "path": "results/phase-b13-honeycomb-continuous-log-odds-map-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b13-honeycomb-continuous-log-odds-render-audit-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B13 evidence-only render audit",
+      "summary": "Hash-audited 231-cell render with four exact current updates, zero new decodes, display-only clipping, and no cell classification or boundary inference.",
+      "path": "results/phase-b13-honeycomb-continuous-log-odds-render-audit-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b13-dashboard-e2e-audit-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B13 dashboard end-to-end audit",
+      "summary": "Live route, API, report embed, PNG asset hash, and B5-B12 provenance-only presentation checks all pass for the active evidence-only result.",
+      "path": "results/phase-b13-dashboard-e2e-audit-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b14-honeycomb-two-branch-selection-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B14 lower-transition two-branch selection",
+      "summary": "Deterministic no-new-data selector fixes four moderate-LER sign-contrast cells and both distance-leverage and same-window-precision branches, totaling eight jobs and 10,000 planned decodes.",
+      "path": "results/phase-b14-honeycomb-two-branch-selection-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b14-honeycomb-two-branch-manifest-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B14 acquisition manifest",
+      "summary": "Hash-bound contract for an eight-job empirical comparison of new distance leverage versus same-window precision, launchable only with the valid preflight and with no adaptive cell choice or phase interpretation.",
+      "path": "phase-b14-honeycomb-two-branch-acquisition-manifest-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b14-honeycomb-two-branch-preflight-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B14 two-branch fail-closed preflight",
+      "summary": "Eight distinct branch jobs, 10,000-decode budget, disjoint historical seeds, frozen scientific evidence and decoder sources, absent outputs, downstream gates, and 8/8 public CLI-shape smokes pass; production not launched.",
+      "path": "results/phase-b14-honeycomb-two-branch-preflight-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b14-honeycomb-two-branch-completion-audit-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B14 two-branch completion audit",
+      "summary": "All eight registered output pairs pass exact branch coordinates, sizes, seeds, shots, raw hashes, posterior-LLR decoder/source stability, and syndrome fidelity: 10,000/10,000 rows are present and faithful; no scientific analysis performed.",
+      "path": "results/phase-b14-honeycomb-two-branch-completion-audit-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b14-honeycomb-two-branch-analysis-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B14 two-branch continuous-evidence analysis",
+      "summary": "Branch-separated and combined posterior trend evidence for the four registered transition cells, comparing distance leverage with same-window precision without assigning phases.",
+      "path": "results/phase-b14-honeycomb-two-branch-analysis-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b14-honeycomb-continuous-log-odds-map-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "B14-current honeycomb finite-window trend evidence",
+      "summary": "Current 231-cell continuous posterior trend field with exactly the four B14 combined posteriors merged and all other cells preserved.",
+      "path": "results/phase-b14-honeycomb-continuous-log-odds-map-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b18-symmetry-constrained-guide-manifest-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B18 symmetry-constrained guide contract",
+      "summary": "Hash-bound existing-data contract enforcing q_c(p)=q_c(1-p), exact terminal dq/dp=0, and a full p=[0,0.5] display without fabricated evidence cells.",
+      "path": "phase-b18-symmetry-constrained-guide-manifest-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b18-symmetry-constrained-guide-method-note-2026-08-28",
+      "kind": "data",
+      "format": "markdown",
+      "title": "Phase B18 registered method note",
+      "summary": "Defines the symmetry derivative obligation, exact Bezier control construction, measured p support, and no-extrapolation rule.",
+      "path": "results/phase-b18-symmetry-constrained-guide-method-note-2026-08-28.md",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b18-symmetry-constrained-guide-figure-2026-08-28",
+      "kind": "figure",
+      "format": "image",
+      "title": "Honeycomb symmetry-constrained finite-window phase guide",
+      "summary": "Current 231-cell evidence on p=[0,0.5], with exact horizontal guide tangent at p=0.5, unchanged nineteen-row directional region, and an honest blank unsampled low-p strip.",
+      "path": "figures/phase-b18-symmetry-constrained-guide-2026-08-28.png",
+      "presentation": "page"
+    },
+    {
+      "id": "phase-b18-symmetry-constrained-guide-analysis-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B18 symmetry-constrained guide analysis",
+      "summary": "Parametric controls, exact and sampled endpoint-slope diagnostics, unchanged B17 region, measured support, and zero-new-decode record.",
+      "path": "results/phase-b18-symmetry-constrained-guide-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b18-symmetry-constrained-guide-render-audit-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B18 render audit",
+      "summary": "Hash and visual audit for full fundamental-domain axes, horizontal terminal tangent, blank unsampled strip, legibility, and zero new decoder compute.",
+      "path": "results/phase-b18-symmetry-constrained-guide-render-audit-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b17-resolution-aware-guide-manifest-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B17 resolution-aware guide contract",
+      "summary": "Hash-bound existing-data contract for a nondecreasing cubic-Bezier visual guide and a conservative finite-grid directional bracket/censoring region, with zero new decoder runs.",
+      "path": "phase-b17-resolution-aware-guide-manifest-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b17-resolution-aware-guide-method-note-2026-08-28",
+      "kind": "data",
+      "format": "markdown",
+      "title": "Phase B17 registered method note",
+      "summary": "Defines the evidence object, monotonicity constraint, censoring rules, epistemic limits, and validation failures before implementation.",
+      "path": "results/phase-b17-resolution-aware-guide-method-note-2026-08-28.md",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b17-resolution-aware-guide-figure-2026-08-28",
+      "kind": "figure",
+      "format": "image",
+      "title": "Honeycomb resolution-aware finite-window phase guide",
+      "summary": "Current B14 continuous evidence with a nondecreasing dashed visual guide and a conservative nineteen-row finite-grid directional bracket/censoring region; no curve legend or fitting-method footer.",
+      "path": "figures/phase-b17-resolution-aware-guide-2026-08-28.png",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b17-resolution-aware-guide-analysis-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B17 resolution-aware guide analysis",
+      "summary": "Data-derived edge intercepts, ordered cubic-Bezier controls, all nineteen raw and enveloped brackets, width comparison against B16, and zero-new-decode diagnostics.",
+      "path": "results/phase-b17-resolution-aware-guide-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b17-resolution-aware-guide-render-audit-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B17 render audit",
+      "summary": "Source-hash and visual audit confirming monotonicity, bracket containment, broad resolution-aware shading, edge closure, and absence of a curve legend or method footer.",
+      "path": "results/phase-b17-resolution-aware-guide-render-audit-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b16-strong-smooth-boundary-2026-08-28",
+      "kind": "figure",
+      "format": "image",
+      "title": "Honeycomb evidence with strongly smoothed LLR=0 guide",
+      "summary": "B14-current continuous log-odds field with one four-control cubic-Bezier dashed guide, a light propagated envelope, no sub-grid fit features, and endpoints at (0.18,0) and (0.5,0.82).",
+      "path": "figures/phase-b16-strong-smooth-boundary-2026-08-28.png",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b16-strong-smooth-boundary-analysis-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B16 strongly smoothed boundary analysis",
+      "summary": "Two-parameter cubic-Bezier fit, physical intercept constraints, 18-level display support, posterior envelope, and smoothness diagnostics from the current B14 evidence.",
+      "path": "results/phase-b16-strong-smooth-boundary-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b16-strong-smooth-boundary-render-audit-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B16 render audit",
+      "summary": "Hash audit confirming the single cubic-Bezier guide uses 18 display levels, two fitted parameters, zero new decodes, and closes the bottom and right plot edges.",
+      "path": "results/phase-b16-strong-smooth-boundary-render-audit-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b15-neural-spline-boundary-comparison-2026-08-28",
+      "kind": "figure",
+      "format": "image",
+      "title": "Honeycomb trend evidence with two constrained LLR=0 summaries",
+      "summary": "Collaborator-facing continuous log-odds evidence map with peer constrained spline and width-three neural summaries, propagated envelopes, and an explicit model-difference panel.",
+      "path": "figures/phase-b15-neural-spline-boundary-comparison-2026-08-28.png",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b15-neural-spline-comparison-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B15 neural-versus-spline comparison",
+      "summary": "Identical-evidence fit, leave-one-q-row-out score table, smoothness/runtime diagnostics, posterior-propagation envelopes, and pairwise displacement with no automatic winner.",
+      "path": "results/phase-b15-neural-spline-comparison-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b15-neural-spline-render-audit-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B15 collaborator-figure render audit",
+      "summary": "Hash and visual audit for the 2832x2064 B15 figure; axes, colorbar, curves, bands, and difference panel are legible with no clipping or thermodynamic claim.",
+      "path": "results/phase-b15-neural-spline-render-audit-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b15-neural-boundary-method-note-2026-08-28",
+      "kind": "data",
+      "format": "markdown",
+      "title": "Phase B15 neural-versus-spline comparison contract",
+      "summary": "Researcher-approved peer comparison of constrained neural and interval-constrained spline LLR=0 summaries, gated on the B14 data-currency update and requiring identical evidence, uncertainty, hold-out, and reporting contracts.",
+      "path": "results/phase-b15-neural-boundary-method-note-2026-08-28.md",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b1-honeycomb-l5-l13-sentinels-analysis-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Five-distance Bayesian sentinel analysis",
+      "summary": "Four audited L=5,7,9,11,13 cells with decreasing, increasing, and other-order posterior masses, uniform-prior sensitivity, provenance hashes, and resolution-censored log odds.",
+      "path": "results/phase-b1-honeycomb-l5-l13-sentinels-analysis-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b1-honeycomb-l5-l13-bayesian-fuzzy-trend-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Bayesian fuzzy linear-trend sentinel validation",
+      "summary": "Posterior slope-sign probabilities and 90% intervals for four L=5,7,9,11,13 sentinels, with uniform-prior, endpoint, and Kendall-sign sensitivity diagnostics.",
+      "path": "results/phase-b1-honeycomb-l5-l13-bayesian-fuzzy-trend-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b2-honeycomb-gray-frontier-preflight-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B2 adaptive gray-frontier preflight",
+      "summary": "Fail-closed dry run for exactly three non-overwriting jobs and 8000 planned decodes; source, decoder, evidence hashes, and pooled-analysis path verified; production not launched.",
+      "path": "results/phase-b2-honeycomb-gray-frontier-preflight-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b2-honeycomb-gray-frontier-completion-audit-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B2 adaptive gray-frontier completion audit",
+      "summary": "All three jobs complete: 8000/8000 raw rows and syndrome-faithful corrections with exact hash, sampling, source, decoder, and source-stability gates; not scientifically analyzed.",
+      "path": "results/phase-b2-honeycomb-gray-frontier-completion-audit-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-b2-honeycomb-gray-frontier-analysis-2026-08-28",
+      "kind": "data",
+      "format": "json",
+      "title": "Phase B2 pooled Bayesian fuzzy-trend analysis",
+      "summary": "All four targeted gray cells resolve under both Jeffreys and uniform priors: three decodable and one undecodable; every unregistered cell is unchanged.",
+      "path": "results/phase-b2-honeycomb-gray-frontier-analysis-2026-08-28.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase3-honeycomb-highq-l11-convergence-cap-2026-08-28",
+      "kind": "figure",
+      "format": "image",
+      "title": "Honeycomb high-q L11 convergence-cap diagnostic",
+      "summary": "Across 576 matched observations, convergence rises from 67 to 308 to 442 at caps 80/160/320, but all arms have 116 logical failures and no cap increase rescues a failure.",
+      "path": "figures/phase3-honeycomb-highq-l11-convergence-cap-2026-08-28.png",
+      "presentation": "download"
+    },
+    {
+      "id": "q075-honeycomb-residual80-confirmation-5000-2026-08-27",
+      "kind": "figure",
+      "format": "image",
+      "title": "Honeycomb q=0.75 residual-priority-80 5000-shot confirmation",
+      "summary": "220,000 raw-backed observations reduce median per-cell LER interval width by 56%; first directed adjacent crossings span p=0.264–0.390 and large-size convergence remains limiting.",
+      "path": "figures/q075-honeycomb-5000-ler.png",
+      "presentation": "download"
+    },
+    {
+      "id": "q075-honeycomb-residual80-discovery-1000-2026-08-27",
+      "kind": "figure",
+      "format": "image",
+      "title": "Honeycomb q=0.75 residual-priority-80 LER curve",
+      "summary": "44,000 raw-backed observations through p=0.49 show adjacent-size crossings spanning p=0.290–0.392 and declining middle-region convergence.",
+      "path": "figures/q075-honeycomb-residual80-discovery-1000-2026-08-27.png",
+      "presentation": "download"
+    },
+    {
+      "id": "q1-honeycomb-full-p-residual80-discovery-1000-2026-08-27",
+      "kind": "figure",
+      "format": "image",
+      "title": "Honeycomb q=1 full p=0 to 1 residual-priority-80 LER curve",
+      "summary": "84,000 raw-backed BP observations plus deterministic endpoints show a re-entrant curve: LER is hardest around p=0.45–0.55 and falls again toward p=1; finite-size BP convergence limits any asymptotic threshold claim.",
+      "path": "figures/q1-honeycomb-full-p-residual80-discovery-1000-2026-08-27.png",
+      "presentation": "download"
+    },
+    {
+      "id": "q1-honeycomb-residual80-l9-l13-highp-3000-2026-08-27",
+      "kind": "figure",
+      "format": "image",
+      "title": "Honeycomb q=1 residual-priority-80 high-p sentinel",
+      "summary": "At p=0.45 and 0.49 LER decreases through L=13, but the L11/L13 p=0.49 bootstrap sign probability is 0.9524 and L13 convergence is 9.53%, so held-out L15 remains gated.",
+      "path": "figures/q1-honeycomb-residual80-l9-l13-highp-3000-2026-08-27.png",
+      "presentation": "download"
+    },
+    {
+      "id": "q1-honeycomb-residual80-l9-l11-crossing-refined-3000-2026-08-27",
+      "kind": "figure",
+      "format": "image",
+      "title": "Honeycomb q=1 L9/L11 residual-priority-80 refinement",
+      "summary": "Fresh 3000-shot/cell curves do not reproduce the p=0.380 point crossing; 97.86% of seed bootstraps retain lower L11 LER throughout p=0.36-0.40, with limited BP convergence.",
+      "path": "figures/q1-honeycomb-residual80-l9-l11-crossing-refined-3000-2026-08-27.png",
+      "presentation": "download"
+    },
+    {
+      "id": "q1-honeycomb-residual80-discovery-1000-2026-08-27",
+      "kind": "figure",
+      "format": "image",
+      "title": "Restarted honeycomb q=1 residual-priority-80 LER curve",
+      "summary": "44,000 raw-backed observations show decreasing LER with size through p=0.49, but convergence falls to 18.4% at L=11,p=0.49 and a single L9/L11 point crossing at p=0.380 is not an asymptotic threshold.",
+      "path": "figures/q1-honeycomb-residual80-discovery-1000-2026-08-27-ler-and-convergence.png",
+      "presentation": "download"
+    },
+    {
+      "id": "q0-square-refined-5000-2026-08-27",
+      "kind": "figure",
+      "format": "image",
+      "title": "Refined square q=0 static-MWPM crossing",
+      "summary": "Refined 5000-shot-per-cell LER-versus-p curves localizing adjacent-size crossings to p=0.1134–0.1153.",
+      "path": "figures/q0-square-refined-5000-2026-08-27-ler-vs-p.png",
+      "presentation": "download"
+    },
+    {
+      "id": "q075-square-l11-l13-refined-5000-2026-08-27",
+      "kind": "figure",
+      "format": "image",
+      "title": "Square q=0.75 refined LER crossing",
+      "summary": "Corrected posterior-LLR damping scan at 5000 shots/cell gives a directed L=11/13 operational crossing at p=0.1725 with conditional bootstrap interval 0.1514–0.2120; convergence is effectively absent.",
+      "path": "figures/q075-square-l11-l13-refined-5000-2026-08-27-ler-vs-p.png",
+      "presentation": "download"
+    },
+    {
+      "id": "q1-square-l11-l13-refined-5000-2026-08-27",
+      "kind": "figure",
+      "format": "image",
+      "title": "Refined square q=1 largest-size crossing",
+      "summary": "Fresh 5000-shot-per-cell L=11/13 scan localizes a truncated-decoder crossing near p=0.2956 while exposing near-zero BP convergence.",
+      "path": "figures/q1-square-l11-l13-refined-5000-2026-08-27-ler-vs-p.png",
+      "presentation": "download"
+    },
+    {
+      "id": "q1-square-l3-l13-highp-refined-5000-2026-08-27",
+      "kind": "figure",
+      "format": "image",
+      "title": "Unified refined square q=1 high-p scan",
+      "summary": "Matched 5000-shot-per-cell L=3,5,7,9,11,13 scan through p=0.49 exposes no common crossing and BP convergence collapse with size.",
+      "path": "figures/q1-square-l3-l13-highp-refined-5000-2026-08-27-ler-vs-p.png",
+      "presentation": "download"
+    },
+    {
+      "id": "q1-square-l5-l13-crossing-refined-10000-2026-08-27",
+      "kind": "figure",
+      "format": "image",
+      "title": "No-L3 synchronous-40 crossing diagnostic",
+      "summary": "Requested 10,000-shot-per-cell L=5,7,9,11,13 delta-LER refinement; only L=5/7 has one point crossing, and no common stable boundary is observed.",
+      "path": "figures/q1-square-l5-l13-crossing-refined-10000-2026-08-27-pairwise-delta.png",
+      "presentation": "download"
+    }
+  ],
+  "frontier": [
+    "Does q=0 reproduce a stable finite-size crossover consistent with the matched surface-code MWPM reference?",
+    "Does the q=1 ideal-herald estimate with the corrected LLR projection exceed q=0 after paired bootstrap uncertainty and finite-size corrections?",
+    "How does p_c(q) vary over the mandatory q=0,0.05,...,1.00 skeleton with adaptive p targeting?",
+    "Does a finite q_c separate finite-crossing and ceiling-compatible regimes at p=0.49?",
+    "Do the inferred boundary and any q_c survive fresh confirmation seeds and held-out L=15?",
+    "Is any high-q failure caused by observation ambiguity or by the BP-to-LLR-to-MWPM approximation?"
+  ],
+  "resolved": [
+    "The Phase 2 completeness audit identifies 32 active corrected-LLR summaries, six exactly recoverable atomic-temp raw files, and ten active gaps covered only by a verified superseded Numba-source cohort; a current-code partial resume would mix provenance.",
+    "N0 finds that raising the cap and residual-priority scheduling both improve q=1 square fixed-point rates, but residual-80 still fails in large cells, costs more runtime, and is logically identical to synchronous-80 on all 768 diagnostic observations.",
+    "The corrected-LLR provenance audit finds that current primary Lab 003 artifacts already use posterior LLR; only q0-calibration.json and q1-herald-scan.json are invalid negative-log smoke files. Future runners hash the damping decoder and Numba kernels explicitly.",
+    "The primary herald-aware arm uses Lab 002's unified HeraldAwareBpMatchingDecoder with recurrence_mode=damping, damping=0.25, at most 40 BP iterations, and clipped posterior LLR matching weights.",
+    "The herald remains a current fusion-remnant vertex witness rather than an erasure location or hidden-history oracle.",
+    "Square and honeycomb geometries have separate p_c(q) and q_c estimates and must not be pooled.",
+    "The finite-q_c ceiling hypothesis is a registered strong conjecture, not an assumed property of the model.",
+    "Any plotted crossing is an operational finite-size decoder crossover with uncertainty, not a thermodynamic phase transition or a claim about an asymptotic threshold until the registered scaling checks pass."
+  ],
+  "blockers": [],
+  "promotion_candidates": []
+}

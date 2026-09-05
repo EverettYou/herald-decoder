@@ -1,0 +1,705 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-28T15:24:36.541449+00:00",
+  "status": "complete_design_diagnostic_no_data_registered_or_launched",
+  "source_map": {
+    "path": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase-b9-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28.json",
+    "sha256": "8692b610ee6e19bb45452494b04c8c45b4d1fb31f240a8c10dd2f81c24c254bf"
+  },
+  "frontier_rule": "All unresolved four-neighbor cells adjacent to both a decodable and an undecodable cell.",
+  "frontier_candidates": [
+    {
+      "q": 0.55,
+      "p": 0.24,
+      "lean": "downward",
+      "directional_confidence": 0.8787994384765625,
+      "posterior_probability_upward_trend": 0.1212005615234375,
+      "posterior_probability_downward_trend": 0.8787994384765625,
+      "neighbor_classifications": [
+        "undecodable",
+        "decodable",
+        "decodable",
+        "unresolved"
+      ]
+    },
+    {
+      "q": 0.35,
+      "p": 0.2,
+      "lean": "downward",
+      "directional_confidence": 0.8297119140625,
+      "posterior_probability_upward_trend": 0.1702880859375,
+      "posterior_probability_downward_trend": 0.8297119140625,
+      "neighbor_classifications": [
+        "unresolved",
+        "decodable",
+        "decodable",
+        "undecodable"
+      ]
+    },
+    {
+      "q": 0.65,
+      "p": 0.32,
+      "lean": "upward",
+      "directional_confidence": 0.7597808837890625,
+      "posterior_probability_upward_trend": 0.7597808837890625,
+      "posterior_probability_downward_trend": 0.2402191162109375,
+      "neighbor_classifications": [
+        "undecodable",
+        "unresolved",
+        "decodable",
+        "undecodable"
+      ]
+    },
+    {
+      "q": 0.3,
+      "p": 0.2,
+      "lean": "upward",
+      "directional_confidence": 0.665985107421875,
+      "posterior_probability_upward_trend": 0.665985107421875,
+      "posterior_probability_downward_trend": 0.334014892578125,
+      "neighbor_classifications": [
+        "unresolved",
+        "unresolved",
+        "decodable",
+        "undecodable"
+      ]
+    }
+  ],
+  "frontier_count": 4,
+  "posterior_model": {
+    "likelihood": "independent binomial logical-error counts by measured distance",
+    "prior": "independent Beta(0.5, 0.5) Jeffreys priors",
+    "trend_functional": "OLS projection slope of latent LER on linear distance",
+    "classification_threshold": 0.9,
+    "outer_draws": 1024,
+    "inner_draws_per_outer_draw": 4096,
+    "seed": 8292929
+  },
+  "designs": [
+    {
+      "name": "measured_endpoints_1000",
+      "total_additional_decodes": 8000,
+      "expected_resolved_cells": 1.1767578125,
+      "expected_false_direction_resolutions": 0.0625,
+      "expected_resolved_cells_per_1000_decodes": 0.1470947265625,
+      "mean_expected_sign_entropy_reduction_nats": 0.06504678837099459,
+      "cells": [
+        {
+          "q": 0.3,
+          "p": 0.2,
+          "sizes": [
+            5,
+            7,
+            9,
+            11,
+            13
+          ],
+          "current_logical_errors": [
+            967,
+            727,
+            717,
+            715,
+            994
+          ],
+          "current_shots": [
+            4000,
+            3000,
+            3000,
+            3000,
+            4000
+          ],
+          "additional_shots": [
+            1000,
+            0,
+            0,
+            0,
+            1000
+          ],
+          "additional_decodes": 2000,
+          "current_posterior_probability_upward": 0.665985107421875,
+          "current_sign_entropy_nats": 0.6369855443425947,
+          "posterior_predictive_probability_resolved": 0.029296875,
+          "posterior_predictive_probability_resolved_upward": 0.029296875,
+          "posterior_predictive_probability_resolved_downward": 0.0,
+          "posterior_predictive_probability_unresolved": 0.970703125,
+          "posterior_predictive_probability_false_direction_resolution": 0.005859375,
+          "expected_updated_posterior_probability_upward": 0.6627318859100342,
+          "expected_updated_sign_entropy_nats": 0.5894411404811758,
+          "expected_sign_entropy_reduction_nats": 0.047544403861418894,
+          "monte_carlo_standard_errors": {
+            "resolved": 0.0052699183271691765,
+            "resolved_upward": 0.0052699183271691765,
+            "resolved_downward": 0.0,
+            "false_direction_resolution": 0.002385061484689932,
+            "mean_updated_entropy": 0.0033337667880232423
+          }
+        },
+        {
+          "q": 0.35,
+          "p": 0.2,
+          "sizes": [
+            5,
+            7,
+            9,
+            11,
+            13
+          ],
+          "current_logical_errors": [
+            891,
+            664,
+            630,
+            612,
+            885
+          ],
+          "current_shots": [
+            4000,
+            3000,
+            3000,
+            3000,
+            4000
+          ],
+          "additional_shots": [
+            1000,
+            0,
+            0,
+            0,
+            1000
+          ],
+          "additional_decodes": 2000,
+          "current_posterior_probability_upward": 0.1702880859375,
+          "current_sign_entropy_nats": 0.4563427159815015,
+          "posterior_predictive_probability_resolved": 0.2861328125,
+          "posterior_predictive_probability_resolved_upward": 0.0,
+          "posterior_predictive_probability_resolved_downward": 0.2861328125,
+          "posterior_predictive_probability_unresolved": 0.7138671875,
+          "posterior_predictive_probability_false_direction_resolution": 0.017578125,
+          "expected_updated_posterior_probability_upward": 0.17196226119995117,
+          "expected_updated_sign_entropy_nats": 0.42252955668625847,
+          "expected_sign_entropy_reduction_nats": 0.033813159295243034,
+          "monte_carlo_standard_errors": {
+            "resolved": 0.014123507460927227,
+            "resolved_upward": 0.0,
+            "resolved_downward": 0.014123507460927227,
+            "false_direction_resolution": 0.0041066274704600475,
+            "mean_updated_entropy": 0.004613988663405139
+          }
+        },
+        {
+          "q": 0.55,
+          "p": 0.24,
+          "sizes": [
+            5,
+            7,
+            9,
+            11,
+            13
+          ],
+          "current_logical_errors": [
+            935,
+            650,
+            648,
+            657,
+            880
+          ],
+          "current_shots": [
+            4000,
+            3000,
+            3000,
+            3000,
+            4000
+          ],
+          "additional_shots": [
+            1000,
+            0,
+            0,
+            0,
+            1000
+          ],
+          "additional_decodes": 2000,
+          "current_posterior_probability_upward": 0.1212005615234375,
+          "current_sign_entropy_nats": 0.36931022125813573,
+          "posterior_predictive_probability_resolved": 0.47265625,
+          "posterior_predictive_probability_resolved_upward": 0.0,
+          "posterior_predictive_probability_resolved_downward": 0.47265625,
+          "posterior_predictive_probability_unresolved": 0.52734375,
+          "posterior_predictive_probability_false_direction_resolution": 0.0263671875,
+          "expected_updated_posterior_probability_upward": 0.12558341026306152,
+          "expected_updated_sign_entropy_nats": 0.3448683991442608,
+          "expected_sign_entropy_reduction_nats": 0.02444182211387491,
+          "monte_carlo_standard_errors": {
+            "resolved": 0.015601617483501556,
+            "resolved_upward": 0.0,
+            "resolved_downward": 0.015601617483501556,
+            "false_direction_resolution": 0.0050070223073273865,
+            "mean_updated_entropy": 0.004746718756042235
+          }
+        },
+        {
+          "q": 0.65,
+          "p": 0.32,
+          "sizes": [
+            7,
+            9,
+            11
+          ],
+          "current_logical_errors": [
+            338,
+            320,
+            353
+          ],
+          "current_shots": [
+            1000,
+            1000,
+            1000
+          ],
+          "additional_shots": [
+            1000,
+            0,
+            1000
+          ],
+          "additional_decodes": 2000,
+          "current_posterior_probability_upward": 0.7597808837890625,
+          "current_sign_entropy_nats": 0.5513323672694002,
+          "posterior_predictive_probability_resolved": 0.388671875,
+          "posterior_predictive_probability_resolved_upward": 0.3828125,
+          "posterior_predictive_probability_resolved_downward": 0.005859375,
+          "posterior_predictive_probability_unresolved": 0.611328125,
+          "posterior_predictive_probability_false_direction_resolution": 0.0126953125,
+          "expected_updated_posterior_probability_upward": 0.7587354183197021,
+          "expected_updated_sign_entropy_nats": 0.39694459905595864,
+          "expected_sign_entropy_reduction_nats": 0.15438776821344152,
+          "monte_carlo_standard_errors": {
+            "resolved": 0.015232765895276447,
+            "resolved_upward": 0.01518978538115457,
+            "resolved_downward": 0.002385061484689932,
+            "false_direction_resolution": 0.0034986243865512676,
+            "mean_updated_entropy": 0.007065670631193674
+          }
+        }
+      ]
+    },
+    {
+      "name": "all_measured_sizes_1000",
+      "total_additional_decodes": 18000,
+      "expected_resolved_cells": 1.3154296875,
+      "expected_false_direction_resolutions": 0.0537109375,
+      "expected_resolved_cells_per_1000_decodes": 0.07307942708333333,
+      "mean_expected_sign_entropy_reduction_nats": 0.0779374466767873,
+      "cells": [
+        {
+          "q": 0.3,
+          "p": 0.2,
+          "sizes": [
+            5,
+            7,
+            9,
+            11,
+            13
+          ],
+          "current_logical_errors": [
+            967,
+            727,
+            717,
+            715,
+            994
+          ],
+          "current_shots": [
+            4000,
+            3000,
+            3000,
+            3000,
+            4000
+          ],
+          "additional_shots": [
+            1000,
+            1000,
+            1000,
+            1000,
+            1000
+          ],
+          "additional_decodes": 5000,
+          "current_posterior_probability_upward": 0.665985107421875,
+          "current_sign_entropy_nats": 0.6369855443425947,
+          "posterior_predictive_probability_resolved": 0.0615234375,
+          "posterior_predictive_probability_resolved_upward": 0.060546875,
+          "posterior_predictive_probability_resolved_downward": 0.0009765625,
+          "posterior_predictive_probability_unresolved": 0.9384765625,
+          "posterior_predictive_probability_false_direction_resolution": 0.0048828125,
+          "expected_updated_posterior_probability_upward": 0.664236307144165,
+          "expected_updated_sign_entropy_nats": 0.5698699807544786,
+          "expected_sign_entropy_reduction_nats": 0.0671155635881161,
+          "monte_carlo_standard_errors": {
+            "resolved": 0.007508998777130339,
+            "resolved_upward": 0.007453039892578437,
+            "resolved_downward": 0.0009760855463695969,
+            "false_direction_resolution": 0.0021783224090262355,
+            "mean_updated_entropy": 0.003925553808115442
+          }
+        },
+        {
+          "q": 0.35,
+          "p": 0.2,
+          "sizes": [
+            5,
+            7,
+            9,
+            11,
+            13
+          ],
+          "current_logical_errors": [
+            891,
+            664,
+            630,
+            612,
+            885
+          ],
+          "current_shots": [
+            4000,
+            3000,
+            3000,
+            3000,
+            4000
+          ],
+          "additional_shots": [
+            1000,
+            1000,
+            1000,
+            1000,
+            1000
+          ],
+          "additional_decodes": 5000,
+          "current_posterior_probability_upward": 0.1702880859375,
+          "current_sign_entropy_nats": 0.4563427159815015,
+          "posterior_predictive_probability_resolved": 0.3466796875,
+          "posterior_predictive_probability_resolved_upward": 0.0,
+          "posterior_predictive_probability_resolved_downward": 0.3466796875,
+          "posterior_predictive_probability_unresolved": 0.6533203125,
+          "posterior_predictive_probability_false_direction_resolution": 0.0126953125,
+          "expected_updated_posterior_probability_upward": 0.17017221450805664,
+          "expected_updated_sign_entropy_nats": 0.40746188987806164,
+          "expected_sign_entropy_reduction_nats": 0.048880826103439856,
+          "monte_carlo_standard_errors": {
+            "resolved": 0.01487227134160425,
+            "resolved_upward": 0.0,
+            "resolved_downward": 0.01487227134160425,
+            "false_direction_resolution": 0.0034986243865512676,
+            "mean_updated_entropy": 0.00521688341034463
+          }
+        },
+        {
+          "q": 0.55,
+          "p": 0.24,
+          "sizes": [
+            5,
+            7,
+            9,
+            11,
+            13
+          ],
+          "current_logical_errors": [
+            935,
+            650,
+            648,
+            657,
+            880
+          ],
+          "current_shots": [
+            4000,
+            3000,
+            3000,
+            3000,
+            4000
+          ],
+          "additional_shots": [
+            1000,
+            1000,
+            1000,
+            1000,
+            1000
+          ],
+          "additional_decodes": 5000,
+          "current_posterior_probability_upward": 0.1212005615234375,
+          "current_sign_entropy_nats": 0.36931022125813573,
+          "posterior_predictive_probability_resolved": 0.5263671875,
+          "posterior_predictive_probability_resolved_upward": 0.0,
+          "posterior_predictive_probability_resolved_downward": 0.5263671875,
+          "posterior_predictive_probability_unresolved": 0.4736328125,
+          "posterior_predictive_probability_false_direction_resolution": 0.0244140625,
+          "expected_updated_posterior_probability_upward": 0.11785674095153809,
+          "expected_updated_sign_entropy_nats": 0.323411750434234,
+          "expected_sign_entropy_reduction_nats": 0.04589847082390175,
+          "monte_carlo_standard_errors": {
+            "resolved": 0.015603258981479008,
+            "resolved_upward": 0.0,
+            "resolved_downward": 0.015603258981479008,
+            "false_direction_resolution": 0.004822839547509493,
+            "mean_updated_entropy": 0.00518909376465687
+          }
+        },
+        {
+          "q": 0.65,
+          "p": 0.32,
+          "sizes": [
+            7,
+            9,
+            11
+          ],
+          "current_logical_errors": [
+            338,
+            320,
+            353
+          ],
+          "current_shots": [
+            1000,
+            1000,
+            1000
+          ],
+          "additional_shots": [
+            1000,
+            1000,
+            1000
+          ],
+          "additional_decodes": 3000,
+          "current_posterior_probability_upward": 0.7597808837890625,
+          "current_sign_entropy_nats": 0.5513323672694002,
+          "posterior_predictive_probability_resolved": 0.380859375,
+          "posterior_predictive_probability_resolved_upward": 0.3720703125,
+          "posterior_predictive_probability_resolved_downward": 0.0087890625,
+          "posterior_predictive_probability_unresolved": 0.619140625,
+          "posterior_predictive_probability_false_direction_resolution": 0.01171875,
+          "expected_updated_posterior_probability_upward": 0.7518548965454102,
+          "expected_updated_sign_entropy_nats": 0.40147744107770866,
+          "expected_sign_entropy_reduction_nats": 0.1498549261916915,
+          "monte_carlo_standard_errors": {
+            "resolved": 0.015174940520457508,
+            "resolved_upward": 0.015104906431256825,
+            "resolved_downward": 0.002916784482801634,
+            "false_direction_resolution": 0.003363031570790017,
+            "mean_updated_entropy": 0.007082200002049892
+          }
+        }
+      ]
+    },
+    {
+      "name": "balance_measured_to_4000",
+      "total_additional_decodes": 18000,
+      "expected_resolved_cells": 1.0712890625,
+      "expected_false_direction_resolutions": 0.052734375,
+      "expected_resolved_cells_per_1000_decodes": 0.059516059027777776,
+      "mean_expected_sign_entropy_reduction_nats": 0.07807510364257485,
+      "cells": [
+        {
+          "q": 0.3,
+          "p": 0.2,
+          "sizes": [
+            5,
+            7,
+            9,
+            11,
+            13
+          ],
+          "current_logical_errors": [
+            967,
+            727,
+            717,
+            715,
+            994
+          ],
+          "current_shots": [
+            4000,
+            3000,
+            3000,
+            3000,
+            4000
+          ],
+          "additional_shots": [
+            0,
+            1000,
+            1000,
+            1000,
+            0
+          ],
+          "additional_decodes": 3000,
+          "current_posterior_probability_upward": 0.665985107421875,
+          "current_sign_entropy_nats": 0.6369855443425947,
+          "posterior_predictive_probability_resolved": 0.001953125,
+          "posterior_predictive_probability_resolved_upward": 0.001953125,
+          "posterior_predictive_probability_resolved_downward": 0.0,
+          "posterior_predictive_probability_unresolved": 0.998046875,
+          "posterior_predictive_probability_false_direction_resolution": 0.0,
+          "expected_updated_posterior_probability_upward": 0.6652014255523682,
+          "expected_updated_sign_entropy_nats": 0.6172984729850143,
+          "expected_sign_entropy_reduction_nats": 0.01968707135758041,
+          "monte_carlo_standard_errors": {
+            "resolved": 0.001379718573664223,
+            "resolved_upward": 0.001379718573664223,
+            "resolved_downward": 0.0,
+            "false_direction_resolution": 0.0,
+            "mean_updated_entropy": 0.002145793721701243
+          }
+        },
+        {
+          "q": 0.35,
+          "p": 0.2,
+          "sizes": [
+            5,
+            7,
+            9,
+            11,
+            13
+          ],
+          "current_logical_errors": [
+            891,
+            664,
+            630,
+            612,
+            885
+          ],
+          "current_shots": [
+            4000,
+            3000,
+            3000,
+            3000,
+            4000
+          ],
+          "additional_shots": [
+            0,
+            1000,
+            1000,
+            1000,
+            0
+          ],
+          "additional_decodes": 3000,
+          "current_posterior_probability_upward": 0.1702880859375,
+          "current_sign_entropy_nats": 0.4563427159815015,
+          "posterior_predictive_probability_resolved": 0.1103515625,
+          "posterior_predictive_probability_resolved_upward": 0.0,
+          "posterior_predictive_probability_resolved_downward": 0.1103515625,
+          "posterior_predictive_probability_unresolved": 0.8896484375,
+          "posterior_predictive_probability_false_direction_resolution": 0.0078125,
+          "expected_updated_posterior_probability_upward": 0.17000102996826172,
+          "expected_updated_sign_entropy_nats": 0.4430430083814342,
+          "expected_sign_entropy_reduction_nats": 0.013299707600067323,
+          "monte_carlo_standard_errors": {
+            "resolved": 0.009791483023456723,
+            "resolved_upward": 0.0,
+            "resolved_downward": 0.009791483023456723,
+            "false_direction_resolution": 0.0027513251146446885,
+            "mean_updated_entropy": 0.0029051476925373906
+          }
+        },
+        {
+          "q": 0.55,
+          "p": 0.24,
+          "sizes": [
+            5,
+            7,
+            9,
+            11,
+            13
+          ],
+          "current_logical_errors": [
+            935,
+            650,
+            648,
+            657,
+            880
+          ],
+          "current_shots": [
+            4000,
+            3000,
+            3000,
+            3000,
+            4000
+          ],
+          "additional_shots": [
+            0,
+            1000,
+            1000,
+            1000,
+            0
+          ],
+          "additional_decodes": 3000,
+          "current_posterior_probability_upward": 0.1212005615234375,
+          "current_sign_entropy_nats": 0.36931022125813573,
+          "posterior_predictive_probability_resolved": 0.3662109375,
+          "posterior_predictive_probability_resolved_upward": 0.0,
+          "posterior_predictive_probability_resolved_downward": 0.3662109375,
+          "posterior_predictive_probability_unresolved": 0.6337890625,
+          "posterior_predictive_probability_false_direction_resolution": 0.029296875,
+          "expected_updated_posterior_probability_upward": 0.12360882759094238,
+          "expected_updated_sign_entropy_nats": 0.36216663838251184,
+          "expected_sign_entropy_reduction_nats": 0.007143582875623888,
+          "monte_carlo_standard_errors": {
+            "resolved": 0.015055252624816433,
+            "resolved_upward": 0.0,
+            "resolved_downward": 0.015055252624816433,
+            "false_direction_resolution": 0.0052699183271691765,
+            "mean_updated_entropy": 0.0030034315303212288
+          }
+        },
+        {
+          "q": 0.65,
+          "p": 0.32,
+          "sizes": [
+            7,
+            9,
+            11
+          ],
+          "current_logical_errors": [
+            338,
+            320,
+            353
+          ],
+          "current_shots": [
+            1000,
+            1000,
+            1000
+          ],
+          "additional_shots": [
+            3000,
+            3000,
+            3000
+          ],
+          "additional_decodes": 9000,
+          "current_posterior_probability_upward": 0.7597808837890625,
+          "current_sign_entropy_nats": 0.5513323672694002,
+          "posterior_predictive_probability_resolved": 0.5927734375,
+          "posterior_predictive_probability_resolved_upward": 0.5244140625,
+          "posterior_predictive_probability_resolved_downward": 0.068359375,
+          "posterior_predictive_probability_unresolved": 0.4072265625,
+          "posterior_predictive_probability_false_direction_resolution": 0.015625,
+          "expected_updated_posterior_probability_upward": 0.7550477981567383,
+          "expected_updated_sign_entropy_nats": 0.2791623145323724,
+          "expected_sign_entropy_reduction_nats": 0.27217005273702777,
+          "monte_carlo_standard_errors": {
+            "resolved": 0.01535367834637991,
+            "resolved_upward": 0.0156063624330228,
+            "resolved_downward": 0.007886299609628184,
+            "false_direction_resolution": 0.0038756122720672716,
+            "mean_updated_entropy": 0.007918157800956421
+          }
+        }
+      ]
+    }
+  ],
+  "efficiency_ranking_descriptive_only": [
+    "measured_endpoints_1000",
+    "all_measured_sizes_1000",
+    "balance_measured_to_4000"
+  ],
+  "unmeasured_distance_policy": "No L5/L13 forecast for the three-distance cell: the independent-Beta model has no justified cross-distance extrapolation.",
+  "registration_decision": "not_made_by_this_diagnostic",
+  "evidence_boundary": "Conditional finite-window posterior-predictive design comparison for the exact Phase B9 frontier; no data registration, launch, crossing statistic, interpolation, unmeasured-distance extrapolation, or asymptotic phase claim.",
+  "frontier_transition_from_phase_b8": {
+    "left_frontier_after_resolution": {
+      "q": 0.65,
+      "p": 0.28,
+      "phase": "decodable"
+    },
+    "entered_frontier_as_adjacent_unresolved_cell": {
+      "q": 0.65,
+      "p": 0.32
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-28T11:01:57.906729+00:00",
+  "status": "complete",
+  "source_map": {
+    "path": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase-b3-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28.json",
+    "sha256": "fc792ca61258c3e527bd3f369162fa2d114073b41da6102d7854c1f020b2b04e"
+  },
+  "phase_b3_analysis": {
+    "path": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase-b3-honeycomb-frontier-reuse-analysis-2026-08-28.json",
+    "sha256": "90978f2cf5780ea773b6e67438d56b30633644f2b36edaac8f661a24bb68baa0"
+  },
+  "selection_rule": "Recompute all red/green-adjacent gray cells; carry forward cells just tested in Phase B3 and select only a newly exposed untested cell after a source-compatibility audit.",
+  "frontier_candidates": [
+    {
+      "q": 0.3,
+      "p": 0.2,
+      "lean": "upward",
+      "directional_confidence": 0.8421783447265625,
+      "posterior_probability_upward_trend": 0.8421783447265625,
+      "posterior_probability_downward_trend": 0.1578216552734375,
+      "neighbor_classifications": [
+        "unresolved",
+        "unresolved",
+        "decodable",
+        "undecodable"
+      ]
+    },
+    {
+      "q": 0.4,
+      "p": 0.2,
+      "lean": "downward",
+      "directional_confidence": 0.8011322021484375,
+      "posterior_probability_upward_trend": 0.1988677978515625,
+      "posterior_probability_downward_trend": 0.8011322021484375,
+      "neighbor_classifications": [
+        "unresolved",
+        "decodable",
+        "decodable",
+        "undecodable"
+      ]
+    },
+    {
+      "q": 0.55,
+      "p": 0.24,
+      "lean": "upward",
+      "directional_confidence": 0.760345458984375,
+      "posterior_probability_upward_trend": 0.760345458984375,
+      "posterior_probability_downward_trend": 0.239654541015625,
+      "neighbor_classifications": [
+        "undecodable",
+        "decodable",
+        "decodable",
+        "unresolved"
+      ]
+    },
+    {
+      "q": 0.6,
+      "p": 0.28,
+      "lean": "upward",
+      "directional_confidence": 0.671234130859375,
+      "posterior_probability_upward_trend": 0.671234130859375,
+      "posterior_probability_downward_trend": 0.328765869140625,
+      "neighbor_classifications": [
+        "unresolved",
+        "unresolved",
+        "decodable",
+        "undecodable"
+      ]
+    },
+    {
+      "q": 0.05,
+      "p": 0.2,
+      "lean": "upward",
+      "directional_confidence": 0.662628173828125,
+      "posterior_probability_upward_trend": 0.662628173828125,
+      "posterior_probability_downward_trend": 0.337371826171875,
+      "neighbor_classifications": [
+        "unresolved",
+        "undecodable",
+        "decodable",
+        "unresolved"
+      ]
+    },
+    {
+      "q": 0.35,
+      "p": 0.2,
+      "lean": "downward",
+      "directional_confidence": 0.5448760986328125,
+      "posterior_probability_upward_trend": 0.4551239013671875,
+      "posterior_probability_downward_trend": 0.5448760986328125,
+      "neighbor_classifications": [
+        "unresolved",
+        "unresolved",
+        "decodable",
+        "undecodable"
+      ]
+    }
+  ],
+  "recently_tested_unresolved_cells": [
+    {
+      "q": 0.3,
+      "p": 0.2
+    },
+    {
+      "q": 0.35,
+      "p": 0.2
+    },
+    {
+      "q": 0.4,
+      "p": 0.2
+    },
+    {
+      "q": 0.55,
+      "p": 0.24
+    },
+    {
+      "q": 0.6,
+      "p": 0.28
+    }
+  ],
+  "newly_exposed_cells": [
+    {
+      "q": 0.05,
+      "p": 0.2,
+      "lean": "upward",
+      "directional_confidence": 0.662628173828125,
+      "posterior_probability_upward_trend": 0.662628173828125,
+      "posterior_probability_downward_trend": 0.337371826171875,
+      "neighbor_classifications": [
+        "unresolved",
+        "undecodable",
+        "decodable",
+        "unresolved"
+      ]
+    }
+  ],
+  "source_compatibility_audit": {
+    "records": [
+      {
+        "path": "results/phase2-honeycomb-q005-discovery-1000-2026-08-27.json",
+        "sha256": "2a5c13188af68ccfad5736e26edcbe0bce5190fd8143859aaf57c1cce3f2de80",
+        "disposition": "excluded_incompatible_decoder_or_source"
+      },
+      {
+        "path": "results/phase2-residual80-honeycomb-q005-discovery-1000-2026-08-28.json",
+        "sha256": "6d81b6a6007f1ab6cadc6c15fc9175f24111e0874afe2cfa86077814213aad28",
+        "disposition": "already_consumed_in_active_map"
+      },
+      {
+        "path": "results/.phase2-honeycomb-q005-discovery-1000-2026-08-27-raw.jsonl.gz.tmp-5261",
+        "sha256": "90c3ed40feb6516a084f6a211e08e1449a8cd750930feb90495c0c740b2d3d59",
+        "disposition": "excluded_orphan_temporary_raw_without_compatible_final_summary"
+      }
+    ],
+    "compatible_unused_count": 0,
+    "conclusion": "No source-compatible unused measurement can replace fresh independent shots."
+  },
+  "new_jobs": [
+    {
+      "q": 0.05,
+      "p": 0.2,
+      "lean": "upward",
+      "directional_confidence": 0.662628173828125,
+      "posterior_probability_upward_trend": 0.662628173828125,
+      "posterior_probability_downward_trend": 0.337371826171875,
+      "neighbor_classifications": [
+        "unresolved",
+        "undecodable",
+        "decodable",
+        "unresolved"
+      ],
+      "branch": "independent_shots",
+      "sizes": [
+        7,
+        9,
+        11
+      ],
+      "additional_shots_per_size": 1000
+    }
+  ],
+  "candidate_count": 6,
+  "recently_tested_count": 5,
+  "new_job_count": 1,
+  "expected_new_decodes": 3000,
+  "claim_boundary": "Selection and registration only. Do not reinterpret the five Phase B3-unresolved cells, expand the grid, or use crossing statistics."
+}

@@ -1,0 +1,280 @@
+<div id="unified-lattice-decoder">
+  <style>
+    #unified-lattice-decoder { color: #172033; background: #f7f8fb; font: 14px/1.4 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; max-width: none; margin: 0; padding: 18px; }
+    #unified-lattice-decoder * { box-sizing: border-box; }
+    #unified-lattice-decoder .artifact-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; margin-bottom: 12px; }
+    #unified-lattice-decoder h1 { margin: 0 0 3px; color: #172033; font-size: 22px; line-height: 1.15; font-weight: 650; letter-spacing: -.02em; }
+    #unified-lattice-decoder .artifact-subtitle { margin: 0; color: #64748b; }
+    #unified-lattice-decoder .artifact-meta { color: #475569; text-align: right; }
+    #unified-lattice-decoder .workbench { display: grid; grid-template-columns: minmax(0,1fr) 260px; gap: 14px; align-items: start; }
+    #unified-lattice-decoder .visual-stage { min-width: 0; }
+    #unified-lattice-decoder .control-panel { display: grid; grid-template-columns: 1fr; align-items: start; overflow: hidden; border: 1px solid #dbe3e0; border-radius: 10px; background: #fbfcfb; }
+    #unified-lattice-decoder .panel-head { display: none; }
+    #unified-lattice-decoder .panel-kicker, #unified-lattice-decoder .section-label { color: #087a70; font-size: 10px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    #unified-lattice-decoder .panel-head h2 { margin: 3px 0 0; color: #173b36; font: 700 19px/1.2 ui-sans-serif,system-ui,sans-serif; }
+    #unified-lattice-decoder .control-section { min-width: 0; padding: 10px 12px; border-bottom: 1px solid #e1e6e4; }
+    #unified-lattice-decoder .control-section:last-child { border-bottom: 0; }
+    #unified-lattice-decoder .lattice-segment { display: grid; grid-template-columns: 1fr 1fr; margin-top: 8px; }
+    #unified-lattice-decoder .lattice-segment button { border-color: #d5dbe5; border-radius: 0; background: #fff; color: #475569; }
+    #unified-lattice-decoder .lattice-segment button:first-child { border-radius: 7px 0 0 7px; }
+    #unified-lattice-decoder .lattice-segment button:last-child { border-radius: 0 7px 7px 0; border-left: 0; }
+    #unified-lattice-decoder .lattice-segment button + button { border-left: 0; }
+    #unified-lattice-decoder .lattice-segment button[aria-pressed="true"] { border-color: #168173; background: #e8f4f1; color: #0c5d53; font-weight: 650; }
+    #unified-lattice-decoder .lattice-segment + .parameter { margin-top: 10px; }
+    #unified-lattice-decoder button { appearance: none; border: 1px solid #bdc9c4; border-radius: 7px; background: #edf1ef; color: #29413d; padding: 8px 10px; font: 700 13px ui-sans-serif, system-ui, sans-serif; cursor: pointer; transition: border-color .15s, background .15s, color .15s, transform .15s; }
+    #unified-lattice-decoder button:hover { border-color: #6f9f96; }
+    #unified-lattice-decoder button:active { transform: translateY(1px); }
+    #unified-lattice-decoder button:focus-visible { outline: 2px solid #087a70; outline-offset: 2px; }
+    #unified-lattice-decoder button[aria-pressed="true"] { border-color: #168173; background: #e8f4f1; color: #0c5d53; }
+    #unified-lattice-decoder .decoder-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    #unified-lattice-decoder .decoder-copy { display: grid; min-width: 0; gap: 2px; }
+    #unified-lattice-decoder .decoder-copy strong { color: #223b37; }
+    #unified-lattice-decoder .decoder-copy small { color: #71807c; font-size: 11px; }
+    #unified-lattice-decoder .decoder-copy a { color: #087a70; text-decoration: underline; text-underline-offset: 2px; }
+    #unified-lattice-decoder .decoder-rules { display: none; }
+    #unified-lattice-decoder .decoder-view { margin-top: 8px; padding-top: 8px; border-top: 1px solid #e1e6e4; }
+    #unified-lattice-decoder .decoder-view-head { display: flex; justify-content: space-between; gap: 8px; margin-bottom: 7px; color: #536661; font-size: 11px; font-weight: 700; }
+    #unified-lattice-decoder .stage-choice { display: grid; grid-template-columns: repeat(3,1fr); gap: 5px; }
+    #unified-lattice-decoder .stage-choice button { padding: 6px 4px; font-size: 11px; }
+    #unified-lattice-decoder button:disabled { cursor: not-allowed; opacity: .48; transform: none; }
+    #unified-lattice-decoder .mwpm-state { min-height: 15px; margin-top: 7px; color: #71807c; font-size: 10px; }
+    #unified-lattice-decoder .mwpm-state.error { color: #a63d32; }
+    #unified-lattice-decoder .stats-summary { margin: 0 5px 7px; pointer-events: none; }
+    #unified-lattice-decoder .view-chip { margin: 0 0 3px; }
+    #unified-lattice-decoder .statistics { display: flex; flex-wrap: wrap; gap: 3px 16px; margin: 0; }
+    #unified-lattice-decoder .statistic { display: flex; align-items: baseline; gap: 6px; margin: 0; color: #71807c; font-size: 11px; white-space: nowrap; }
+    #unified-lattice-decoder .statistic dt, #unified-lattice-decoder .statistic dd { margin: 0; }
+    #unified-lattice-decoder .statistic dd { color: #173b36; font-variant-numeric: tabular-nums; font-weight: 800; text-align: right; }
+    #unified-lattice-decoder .logical-result[data-error="false"] { color: #188f65; }
+    #unified-lattice-decoder .logical-result[data-error="true"] { color: #b43b30; }
+    #unified-lattice-decoder .decoder-toggle { display: flex; align-items: center; gap: 7px; font-weight: 700; }
+    #unified-lattice-decoder .switch { position: relative; display: inline-block; width: 42px; height: 24px; }
+    #unified-lattice-decoder .switch input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+    #unified-lattice-decoder .track { position: absolute; inset: 0; border-radius: 12px; background: #9ca3af; transition: background .15s; cursor: pointer; }
+    #unified-lattice-decoder .track::after { content: ''; position: absolute; width: 18px; height: 18px; left: 3px; top: 3px; border-radius: 50%; background: #fff; transition: transform .15s; }
+    #unified-lattice-decoder .switch input:checked + .track { background: #188f65; }
+    #unified-lattice-decoder .switch input:checked + .track::after { transform: translateX(18px); }
+    #unified-lattice-decoder .switch input:focus-visible + .track { outline: 2px solid #17252a; outline-offset: 2px; }
+    #unified-lattice-decoder .parameters { display: grid; gap: 9px; margin-top: 8px; }
+    #unified-lattice-decoder .parameter { display: grid; gap: 4px; }
+    #unified-lattice-decoder .parameter-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+    #unified-lattice-decoder .parameter-name { color: #314944; font-size: 12px; font-weight: 700; }
+    #unified-lattice-decoder .value { min-width: 38px; color: #086b63; font-variant-numeric: tabular-nums; font-weight: 800; text-align: right; }
+    #unified-lattice-decoder input[type="range"] { width: 100%; margin: 0; accent-color: #087a70; cursor: pointer; }
+    #unified-lattice-decoder .seed-fields { display: grid; grid-template-columns: minmax(0,1fr) 34px; gap: 6px; margin-top: 7px; }
+    #unified-lattice-decoder .seed-fields input { width: 100%; height: 33px; border: 1px solid #bdc9c4; border-radius: 7px; background: #fff; color: #17252a; padding: 5px 8px; font: 600 12px ui-monospace, SFMono-Regular, Consolas, monospace; }
+    #unified-lattice-decoder .seed-fields input:focus { border-color: #087a70; outline: 2px solid #9bd8d2; outline-offset: 1px; }
+    #unified-lattice-decoder .seed-fields .seed-refresh { width: 34px; height: 33px; padding: 0; font-size: 18px; line-height: 1; }
+    #unified-lattice-decoder svg { display: block; width: 100%; height: min(68vh,600px); min-height: 440px; }
+    #unified-lattice-decoder .legend { display: flex; flex-wrap: wrap; gap: 14px; padding: 8px 5px 0; color: #43544f; font-size: 12px; }
+    #unified-lattice-decoder .swatch { display: inline-block; vertical-align: middle; margin-right: 5px; }
+    #unified-lattice-decoder .edge-zero { width: 22px; border-top: 2px solid #cbd5e1; }
+    #unified-lattice-decoder .error { width: 22px; border-top: 6px solid #e4572e; border-radius: 2px; }
+    #unified-lattice-decoder .resolved { width: 22px; border-top: 6px solid #188f65; border-radius: 2px; }
+    #unified-lattice-decoder .correction { width: 22px; border-top: 6px solid #8b5cf6; border-radius: 2px; }
+    #unified-lattice-decoder .syndrome { width: 13px; height: 13px; border-radius: 50%; background: #fbbf24; border: 2px solid #7c4a03; }
+    #unified-lattice-decoder .herald { width: 12px; height: 12px; background: #2563eb; border: 2px solid #172554; transform: rotate(45deg); }
+    #unified-lattice-decoder .logical-check { width: 22px; border-top: 2px dashed #0f766e; }
+    @media (max-width: 860px) { #unified-lattice-decoder .workbench { grid-template-columns: 1fr; } #unified-lattice-decoder .control-panel { grid-template-columns: repeat(2,minmax(0,1fr)); } #unified-lattice-decoder .control-section { border-right: 1px solid #e1e6e4; } #unified-lattice-decoder .control-section:nth-child(even) { border-right: 0; } #unified-lattice-decoder .control-section:last-child { border-bottom: 0; } }
+    @media (max-width: 560px) { #unified-lattice-decoder { padding: 10px; } #unified-lattice-decoder .artifact-head { align-items: flex-start; flex-direction: column; } #unified-lattice-decoder .artifact-meta { text-align: left; } #unified-lattice-decoder .control-panel { grid-template-columns: 1fr; } #unified-lattice-decoder .control-section { border-right: 0; } #unified-lattice-decoder svg { min-height: 390px; height: 58vh; } #unified-lattice-decoder .statistics { gap: 2px 10px; } }
+  </style>
+  <div class="artifact-head">
+    <div><h1>Two-stage herald decoder</h1><p class="artifact-subtitle">From sampled strings and fusion remnants to local predecoding and PyMatching</p></div>
+    <div class="artifact-meta">Configuration workbench</div>
+  </div>
+  <div class="workbench">
+    <section class="visual-stage" aria-label="Sampled lattice configuration">
+      <div class="stats-summary" aria-live="polite">
+        <div class="section-label view-chip">Current view · <span id="view-name">Decoder off</span></div>
+        <dl class="statistics">
+          <div class="statistic"><dt>Error</dt><dd id="error-density">0.0% · 0/0</dd></div>
+          <div class="statistic"><dt>Syndrome</dt><dd id="syndrome-density">0.0% · 0/0</dd></div>
+          <div class="statistic"><dt>Herald</dt><dd id="herald-density">0.0% · 0/0</dd></div>
+          <div class="statistic"><dt>Logical coset</dt><dd class="logical-result" id="logical-result" data-error="false">correct · parity 0</dd></div>
+        </dl>
+      </div>
+      <svg id="lattice" viewBox="0 0 760 560" role="img" aria-label="Configurable lattice with noisy syndrome and herald observations"></svg>
+      <div class="legend"><span><i class="swatch edge-zero"></i>x=0</span><span><i class="swatch error"></i><span id="error-label">residual</span></span><span data-decoder-only><i class="swatch resolved"></i>resolved</span><span data-decoder-only><i class="swatch correction"></i>correction</span><span><i class="swatch syndrome"></i>syndrome</span><span><i class="swatch herald"></i>herald</span><span><i class="swatch logical-check"></i>logical cut</span></div>
+    </section>
+
+    <aside class="control-panel" aria-label="Simulation controls">
+      <section class="control-section">
+        <div class="section-label">Lattice</div>
+        <nav class="lattice-segment" aria-label="Lattice choice">
+          <button type="button" data-lattice="square" aria-pressed="true">Square</button>
+          <button type="button" data-lattice="honeycomb" aria-pressed="false">Honeycomb</button>
+        </nav>
+        <label class="parameter"><span class="parameter-head"><span class="parameter-name">L · lattice size</span><span class="value" id="size-value" aria-live="polite">9</span></span><input id="size-input" type="range" min="3" max="12" step="1" value="9"></label>
+      </section>
+      <section class="control-section">
+        <div class="section-label">Tuning parameters</div>
+        <div class="parameters">
+          <label class="parameter"><span class="parameter-head"><span class="parameter-name">p · edge flip</span><span class="value" id="p-value" aria-live="polite">0.20</span></span><input id="p-input" type="range" min="0" max="0.5" step="0.01" value="0.20"></label>
+          <label class="parameter"><span class="parameter-head"><span class="parameter-name">q · herald</span><span class="value" id="q-value" aria-live="polite">0.75</span></span><input id="q-input" type="range" min="0" max="1" step="0.05" value="0.75"></label>
+        </div>
+      </section>
+      <section class="control-section">
+        <div class="decoder-row">
+          <div class="decoder-copy"><strong>Decoder</strong><small><a href="/lab-result?lab=lab-001-string-herald-visualization&amp;result=stage-one-decoder" target="_top">Lab Python predecoder</a> → PyMatching MWPM</small></div>
+          <div class="decoder-toggle"><label class="switch" aria-label="Toggle decoder"><input id="decoder-input" type="checkbox"><span class="track"></span></label><span class="value" id="decoder-state" aria-live="polite">Off</span></div>
+        </div>
+        <div class="decoder-view">
+          <div class="decoder-view-head"><span>Display stage</span><span>Combined by default</span></div>
+          <div class="stage-choice" role="group" aria-label="Decoder stage view">
+            <button type="button" data-decoder-view="stage1" aria-pressed="false" disabled>Stage 1</button>
+            <button type="button" data-decoder-view="stage2" aria-pressed="false" disabled>Stage 2</button>
+            <button type="button" data-decoder-view="combined" aria-pressed="true" disabled>Combined</button>
+          </div>
+          <div class="mwpm-state" id="mwpm-state" aria-live="polite">Enable decoder to run both stages</div>
+        </div>
+      </section>
+      <section class="control-section">
+        <div class="section-label">Measurement errors</div>
+        <div class="parameters">
+          <label class="parameter"><span class="parameter-head"><span class="parameter-name">pₘ · syndrome flip</span><span class="value" id="pm-value" aria-live="polite">0.00</span></span><input id="pm-input" type="range" min="0" max="0.5" step="0.01" value="0"></label>
+          <label class="parameter"><span class="parameter-head"><span class="parameter-name">pₕ · herald loss</span><span class="value" id="ph-value" aria-live="polite">0.00</span></span><input id="ph-input" type="range" min="0" max="1" step="0.05" value="0"></label>
+        </div>
+      </section>
+      <section class="control-section">
+        <label class="section-label" for="seed-input">Random seed</label>
+        <div class="seed-fields"><input id="seed-input" type="number" inputmode="numeric" min="0" max="4294967295" step="1" value="1" aria-label="Random seed"><button class="seed-refresh" id="seed-refresh" type="button" title="Generate a new random seed" aria-label="Generate a new random seed">↻</button></div>
+      </section>
+    </aside>
+  </div>
+  <script>
+    (() => {
+      const root = document.getElementById('unified-lattice-decoder'), svg = root.querySelector('#lattice');
+      const pInput = root.querySelector('#p-input'), pmInput = root.querySelector('#pm-input'), qInput = root.querySelector('#q-input'), phInput = root.querySelector('#ph-input'), sizeInput = root.querySelector('#size-input'), decoderInput = root.querySelector('#decoder-input'), seedInput = root.querySelector('#seed-input'), seedRefresh = root.querySelector('#seed-refresh');
+      const pValue = root.querySelector('#p-value'), pmValue = root.querySelector('#pm-value'), qValue = root.querySelector('#q-value'), phValue = root.querySelector('#ph-value'), sizeValue = root.querySelector('#size-value'), decoderState = root.querySelector('#decoder-state'), errorLabel = root.querySelector('#error-label'), mwpmState = root.querySelector('#mwpm-state'), viewName = root.querySelector('#view-name'), errorDensity = root.querySelector('#error-density'), syndromeDensity = root.querySelector('#syndrome-density'), heraldDensity = root.querySelector('#herald-density'), logicalResult = root.querySelector('#logical-result'), stageButtons = [...root.querySelectorAll('[data-decoder-view]')];
+      let lattice = 'square', seed = 1, decoderView = 'combined', stageOneOrder = 'Lab Python Stage 1', drawRevision = 0, drawTimer;
+      const stageOneCache = new Map(), mwpmCache = new Map();
+      function rngFactory(seed) { let s = seed >>> 0; return () => ((s = (1664525 * s + 1013904223) >>> 0) / 4294967296); }
+      function parseSeed(value) { const parsed=Number(value); return Number.isFinite(parsed)?Math.min(4294967295,Math.max(0,Math.trunc(parsed)))>>>0:null; }
+      function randomSeed() { if(globalThis.crypto&&typeof globalThis.crypto.getRandomValues==='function')return globalThis.crypto.getRandomValues(new Uint32Array(1))[0];return Math.floor(Math.random()*4294967296)>>>0; }
+      function segmentsCross(p1,p2,q1,q2) { const rx=p2.x-p1.x,ry=p2.y-p1.y,sx=q2.x-q1.x,sy=q2.y-q1.y,denominator=rx*sy-ry*sx;if(Math.abs(denominator)<1e-8)return false;const qpx=q1.x-p1.x,qpy=q1.y-p1.y,t=(qpx*sy-qpy*sx)/denominator,u=(qpx*ry-qpy*rx)/denominator;return t>1e-6&&t<1-1e-6&&u>1e-6&&u<1-1e-6; }
+      function intersectingEdges(vertices,edges,logicalLine) { const result=new Set();for(let segment=0;segment<logicalLine.length-1;segment++)edges.forEach(([a,b],index)=>{if(segmentsCross(logicalLine[segment],logicalLine[segment+1],vertices[a],vertices[b]))result.add(index);});return result; }
+      function boundaryTopology(vertices,edges) {
+        const indices=new Set(),counts={left:0,right:0};
+        edges.forEach(([a,b],index)=>{const endpoints=[vertices[a],vertices[b]],detectors=endpoints.filter(vertex=>vertex.detector),terminals=endpoints.filter(vertex=>!vertex.detector);if(detectors.length===2)return;if(detectors.length!==1||terminals.length!==1||terminals[0].boundary!=='rough'||!['left','right'].includes(terminals[0].boundarySide))throw new Error(`Invalid boundary incidence on edge ${index}`);indices.add(index);counts[terminals[0].boundarySide]++;});
+        return {indices,counts};
+      }
+      function validateGraph(vertices,edges,logicalEdgeIndices,logicalLine,boundaryTopologyResult) {
+        if(!edges.length||!logicalEdgeIndices.size)throw new Error('Lattice requires retained data edges and a nonempty logical cut');
+        if(!boundaryTopologyResult.counts.left||!boundaryTopologyResult.counts.right)throw new Error('Both rough boundaries require at least one retained boundary edge');
+        if([...logicalEdgeIndices].some(index=>index<0||index>=edges.length))throw new Error('Logical cut references an invalid data edge');
+        const smoothY=boundaryTopologyResult.smoothY;if(logicalLine[0].y>=smoothY.min||logicalLine.at(-1).y<=smoothY.max)throw new Error('Logical cut must extend beyond both smooth boundaries');
+      }
+      function traceBoundary(vertices,boundaryEdges) {
+        const adjacency=new Map();boundaryEdges.forEach(([a,b])=>{if(!adjacency.has(a))adjacency.set(a,[]);if(!adjacency.has(b))adjacency.set(b,[]);adjacency.get(a).push(b);adjacency.get(b).push(a);});
+        const endpoints=[...adjacency].filter(([,neighbors])=>neighbors.length===1).map(([id])=>id).sort((a,b)=>vertices[a].x-vertices[b].x);if(endpoints.length!==2||[...adjacency.values()].some(neighbors=>neighbors.length>2))throw new Error('Smooth boundary must be one open armchair chain');
+        const ordered=[endpoints[0]];let previous=null,current=endpoints[0];while(current!==endpoints[1]){const next=adjacency.get(current).find(vertex=>vertex!==previous);if(next===undefined)throw new Error('Smooth boundary chain is disconnected');ordered.push(next);previous=current;current=next;}if(ordered.length!==boundaryEdges.length+1)throw new Error('Smooth boundary chain does not include every boundary edge');return ordered.map(id=>vertices[id]);
+      }
+      function fitGraph(vertices,edges,logicalEdgeIndices,boundary,logicalLine) {
+        const topology=boundaryTopology(vertices,edges);topology.smoothY={min:Math.min(...boundary.smooth.flat().map(point=>point.y)),max:Math.max(...boundary.smooth.flat().map(point=>point.y))};validateGraph(vertices,edges,logicalEdgeIndices,logicalLine,topology);
+        const rotatePoint=point=>({...point,x:point.y,y:-point.x}),rotatedVertices=vertices.map(rotatePoint),rotatedLogicalLine=logicalLine.map(rotatePoint),rotatedSmooth=boundary.smooth.map(line=>line.map(rotatePoint)),boundaryPoints=rotatedSmooth.flat(),points=[...rotatedVertices,...rotatedLogicalLine,...boundaryPoints],xs=points.map(point=>point.x),ys=points.map(point=>point.y),minX=Math.min(...xs),maxX=Math.max(...xs),minY=Math.min(...ys),maxY=Math.max(...ys);
+        const scale=Math.min(620/(maxX-minX||1),430/(maxY-minY||1)),offsetX=380-scale*(minX+maxX)/2,offsetY=280-scale*(minY+maxY)/2,mapPoint=point=>({...point,x:offsetX+scale*point.x,y:offsetY+scale*point.y}),mapLines=lines=>lines.map(line=>line.map(mapPoint));
+        return {vertices:rotatedVertices.map(mapPoint),edges,logicalEdgeIndices,logicalLine:rotatedLogicalLine.map(mapPoint),boundaryEdgeIndices:topology.indices,boundaryEdgeCounts:topology.counts,boundary:{smooth:mapLines(rotatedSmooth)}};
+      }
+      function squareGraph(L) {
+        const vertices = [], edges = [];
+        for (let y=0;y<L;y++) for (let x=0;x<L;x++) vertices.push({id:y*L+x,x,y,detector:x>0&&x<L-1,boundary:x===0||x===L-1?'rough':null,boundarySide:x===0?'left':x===L-1?'right':null});
+        for (let y=0;y<L;y++) for (let x=0;x<L;x++) { const id=y*L+x; if(x<L-1) edges.push([id,id+1]); if(y<L-1&&x>0&&x<L-1) edges.push([id,id+L]); }
+        const lineX=L-1.5,logicalLine=[{x:lineX,y:-.65},...Array.from({length:L-1},(_,row)=>({x:lineX,y:row+.5})),{x:lineX,y:L-.35}],logicalEdgeIndices=intersectingEdges(vertices,edges,logicalLine);
+        const boundary={smooth:[[{x:0,y:0},{x:L-1,y:0}],[{x:0,y:L-1},{x:L-1,y:L-1}]]};
+        return fitGraph(vertices,edges,logicalEdgeIndices,boundary,logicalLine);
+      }
+      function honeycombGraph(L) {
+        const rawVertices=new Map(),rawEdges=new Map();
+        function vertex(x,y) { const key=`${x.toFixed(4)},${y.toFixed(4)}`;if(!rawVertices.has(key))rawVertices.set(key,{id:rawVertices.size,x,y,detector:true});return rawVertices.get(key).id; }
+        for(let col=0;col<L;col++)for(let row=0;row<L;row++){const cx=1.5*col,cy=Math.sqrt(3)*(row+.5*(col%2)),corners=[];for(let k=0;k<6;k++){const angle=Math.PI*k/3;corners.push(vertex(cx+Math.cos(angle),cy+Math.sin(angle)));}for(let k=0;k<6;k++){const a=corners[k],b=corners[(k+1)%6],key=a<b?`${a}|${b}`:`${b}|${a}`;if(!rawEdges.has(key))rawEdges.set(key,{edge:a<b?[a,b]:[b,a],count:0,occurrences:[]});const record=rawEdges.get(key);record.count++;record.occurrences.push({col,row,side:k});}}
+        const vertices=[...rawVertices.values()].sort((a,b)=>a.id-b.id),records=[...rawEdges.values()],leftRough=new Set(),rightRough=new Set();
+        records.forEach((record,index)=>{if(record.count!==1)return;const occurrence=record.occurrences[0];if(occurrence.col===0&&(occurrence.side===2||occurrence.side===3))leftRough.add(index);if(occurrence.col===L-1&&(occurrence.side===0||occurrence.side===5))rightRough.add(index);});
+        leftRough.forEach(index=>{const [a,b]=records[index].edge;vertices[a].detector=false;vertices[a].boundary='rough';vertices[a].boundarySide='left';vertices[b].detector=false;vertices[b].boundary='rough';vertices[b].boundarySide='left';});
+        rightRough.forEach(index=>{const [a,b]=records[index].edge;vertices[a].detector=false;vertices[a].boundary='rough';vertices[a].boundarySide='right';vertices[b].detector=false;vertices[b].boundary='rough';vertices[b].boundarySide='right';});
+        const retainedRecords=records.filter((_,index)=>!leftRough.has(index)&&!rightRough.has(index)),edges=retainedRecords.map(record=>record.edge),detectorXs=vertices.map(item=>item.x),detectorYs=vertices.map(item=>item.y),minX=Math.min(...detectorXs),maxX=Math.max(...detectorXs),minY=Math.min(...detectorYs),maxY=Math.max(...detectorYs),midY=(minY+maxY)/2,outerSmooth=retainedRecords.filter(record=>record.count===1),topBoundary=traceBoundary(vertices,outerSmooth.filter(record=>{const [a,b]=record.edge;return (vertices[a].y+vertices[b].y)/2<midY;}).map(record=>record.edge)),bottomBoundary=traceBoundary(vertices,outerSmooth.filter(record=>{const [a,b]=record.edge;return (vertices[a].y+vertices[b].y)/2>midY;}).map(record=>record.edge)),rightCenters=Array.from({length:L},(_,row)=>({x:1.5*(L-1),y:Math.sqrt(3)*(row+.5*((L-1)%2))})),logicalLine=[{x:rightCenters[0].x,y:minY-.65},...rightCenters,{x:rightCenters[L-1].x,y:maxY+.65}],logicalEdgeIndices=intersectingEdges(vertices,edges,logicalLine);
+        const boundary={smooth:[topBoundary,bottomBoundary]};
+        return fitGraph(vertices,edges,logicalEdgeIndices,boundary,logicalLine);
+      }
+      function symmetricDifference(left,right) { const result=new Set(left);right.forEach(value=>result.has(value)?result.delete(value):result.add(value));return result; }
+      function edgeDegree(vertexCount,edges,active) { const degree=Array(vertexCount).fill(0);edges.forEach(([a,b],index)=>{if(active.has(index)){degree[a]++;degree[b]++;}});return degree; }
+      function measuredSyndrome(degree,measurementFlip) { return degree.map((value,id)=>(value%2===1)!==measurementFlip[id]); }
+      async function requestStageOne(vertices,edges,syndromes,heralds) {
+        const payload={vertex_count:vertices.length,edges,detector_vertices:vertices.filter(vertex=>vertex.detector).map(vertex=>vertex.id),syndromes,heralds},key=JSON.stringify(payload);
+        if(!stageOneCache.has(key))stageOneCache.set(key,fetch('/api/labs/lab-001-string-herald-visualization/predecode',{method:'POST',headers:{'Content-Type':'application/json'},body:key}).then(async response=>{if(!response.ok)throw new Error((await response.json().catch(()=>({}))).detail||`Stage 1 request failed (${response.status})`);return response.json();}).catch(error=>{stageOneCache.delete(key);throw error;}));
+        return stageOneCache.get(key);
+      }
+      function validateStageOneResult(vertices,edges,heralds,result) {
+        if(result.status!=='ok'||result.algorithm_source!=='scripts/local_decoder.py')throw new Error('Stage 1 response is not sourced from the Lab Python decoder');
+        const correction=result.correction_edge_indices,consumed=result.consumed_herald_vertices,remaining=result.remaining_herald_vertices;
+        if(!Array.isArray(correction)||correction.some(edge=>!Number.isInteger(edge)||edge<0||edge>=edges.length)||new Set(correction).size!==correction.length)throw new Error('Lab Python decoder returned invalid correction edges');
+        for(const messages of [consumed,remaining])if(!Array.isArray(messages)||messages.some(vertex=>!Number.isInteger(vertex)||vertex<0||vertex>=vertices.length)||new Set(messages).size!==messages.length)throw new Error('Lab Python decoder returned invalid herald vertices');
+        const observed=new Set(heralds),partition=[...consumed,...remaining];if(partition.length!==observed.size||partition.some(vertex=>!observed.has(vertex))||new Set(partition).size!==partition.length)throw new Error('Lab Python decoder returned an invalid herald partition');
+      }
+      function formatStageOneOrder(result) { const labels={'herald_distance_1':'H-H (d=1)','syndrome_herald_syndrome':'S-H-S','herald_distance_2':'H-H (d=2)'};return Array.isArray(result.rule_order)&&result.rule_order.length?`Lab Python · ${result.rule_order.map(rule=>labels[rule]||rule).join(' → ')}`:'Lab Python Stage 1'; }
+      async function requestMwpm(vertices,edges,syndromes) {
+        const payload={vertex_count:vertices.length,edges,detector_vertices:vertices.filter(vertex=>vertex.detector).map(vertex=>vertex.id),boundary_vertices:vertices.filter(vertex=>vertex.boundary==='rough').map(vertex=>vertex.id),syndromes};
+        const key=JSON.stringify(payload);
+        if(!mwpmCache.has(key))mwpmCache.set(key,fetch('/api/labs/lab-001-string-herald-visualization/mwpm',{method:'POST',headers:{'Content-Type':'application/json'},body:key}).then(async response=>{if(!response.ok)throw new Error((await response.json().catch(()=>({}))).detail||`MWPM request failed (${response.status})`);return response.json();}).catch(error=>{mwpmCache.delete(key);throw error;}));
+        return mwpmCache.get(key);
+      }
+      function validateMwpmResult(vertices,edges,syndromes,graph,result) {
+        if(result.status!=='ok')return;
+        const expectedBoundary=[...graph.boundaryEdgeIndices].sort((a,b)=>a-b),returnedBoundary=[...(result.boundary_edge_indices||[])].sort((a,b)=>a-b);if(expectedBoundary.length!==returnedBoundary.length||expectedBoundary.some((edge,index)=>edge!==returnedBoundary[index]))throw new Error('PyMatching boundary columns do not match the displayed rough edges');
+        const correction=new Set(result.correction_edge_indices||[]);if([...correction].some(edge=>!Number.isInteger(edge)||edge<0||edge>=edges.length))throw new Error('PyMatching returned an invalid correction edge');
+        const correctionDegree=edgeDegree(vertices.length,edges,correction),syndromeSet=new Set(syndromes);if(vertices.some(vertex=>vertex.detector&&((correctionDegree[vertex.id]%2===1)!==syndromeSet.has(vertex.id))))throw new Error('PyMatching correction does not reproduce the residual syndrome');
+      }
+      function scheduleDraw(delay) { const revision=++drawRevision;clearTimeout(drawTimer);drawTimer=setTimeout(()=>draw(revision),delay??(decoderInput.checked&&decoderView!=='stage1'?80:0)); }
+      async function draw(revision) {
+        const p=Number(pInput.value),pm=Number(pmInput.value),q=Number(qInput.value),ph=Number(phInput.value),L=Number(sizeInput.value),decoderOn=decoderInput.checked,rand=rngFactory(seed),graph=lattice==='square'?squareGraph(L):honeycombGraph(L),{vertices,edges}=graph,detectorVertices=vertices.filter(vertex=>vertex.detector);
+        pValue.textContent=p.toFixed(2);pmValue.textContent=pm.toFixed(2);qValue.textContent=q.toFixed(2);phValue.textContent=ph.toFixed(2);sizeValue.textContent=String(L);decoderState.textContent=decoderOn?'On':'Off';errorLabel.textContent=decoderOn?'residual':'x=1';root.querySelectorAll('[data-decoder-only]').forEach(item=>item.hidden=!decoderOn);
+        stageButtons.forEach(button=>{button.disabled=!decoderOn;button.setAttribute('aria-pressed',String(button.dataset.decoderView===decoderView));});
+        const errors=new Set();edges.forEach((_,index)=>{if(rand()<p)errors.add(index);});
+        const degree=edgeDegree(vertices.length,edges,errors),measurementFlip=[],observedSyndrome=[],underlyingHerald=[],observedHerald=[];
+        vertices.forEach((vertex,id)=>{if(!vertex.detector){measurementFlip[id]=false;observedSyndrome[id]=false;underlyingHerald[id]=false;observedHerald[id]=false;return;}const m=rand()<pm,heraldDraw=rand()<q,heraldLoss=rand()<ph,underlyingHeraldPresent=degree[id]>=2&&heraldDraw;measurementFlip[id]=m;observedSyndrome[id]=(degree[id]%2===1)!==m;underlyingHerald[id]=underlyingHeraldPresent;observedHerald[id]=underlyingHeraldPresent&&!heraldLoss;});
+        const observedSyndromeIds=vertices.map((vertex,id)=>vertex.detector&&observedSyndrome[id]?id:null).filter(id=>id!==null),observedHeraldIds=vertices.map((vertex,id)=>vertex.detector&&observedHerald[id]?id:null).filter(id=>id!==null);
+        let consumedHeralds=new Set(),preCorrection=new Set();
+        const detectorEdges=edges.filter(([a,b])=>vertices[a].detector&&vertices[b].detector),neighborSpacing=detectorEdges.length?Math.min(...detectorEdges.map(([a,b])=>Math.hypot(vertices[a].x-vertices[b].x,vertices[a].y-vertices[b].y))):60,markerScale=Math.max(.35,Math.min(1,neighborSpacing/55));
+        const latticeWidth=Math.max(1,2*markerScale),activeWidth=Math.max(2.5,7*markerScale),markerStroke=Math.max(.8,2*markerScale),syndromeRadius=Math.max(3.5,9*markerScale),dotRadius=Math.max(1.4,3.5*markerScale),heraldRadius=Math.max(3.5,11*markerScale),heraldOverlapRadius=Math.max(3,8*markerScale),heraldOffset=Math.max(3.5,10*markerScale);
+        const paint=(view,inputErrors,correction,showHeralds,mwpmInfo)=>{
+          const residual=symmetricDifference(inputErrors,correction),residualDegree=edgeDegree(vertices.length,edges,residual),shownSyndrome=decoderOn?measuredSyndrome(residualDegree,measurementFlip):observedSyndrome,shownHerald=vertices.map((vertex,id)=>vertex.detector&&observedHerald[id]&&(!decoderOn||(showHeralds&&!consumedHeralds.has(id)&&residualDegree[id]>=2)));
+          let out='<rect width="760" height="560" fill="#ffffff"/>';
+          edges.forEach(([a,b])=>{const u=vertices[a],v=vertices[b];out+=`<line x1="${u.x}" y1="${u.y}" x2="${v.x}" y2="${v.y}" stroke="#cbd5e1" stroke-width="${latticeWidth}"/>`;});
+          const logicalPoints=graph.logicalLine.map(point=>`${point.x},${point.y}`).join(' ');out+=`<polyline points="${logicalPoints}" fill="none" stroke="#fffdf8" stroke-width="5" stroke-linejoin="round"/><polyline points="${logicalPoints}" fill="none" stroke="#0f766e" stroke-width="2.2" stroke-dasharray="7 6" stroke-linejoin="round"><title>Logical cut crosses ${graph.logicalEdgeIndices.size} retained data edges</title></polyline>`;
+          edges.forEach(([a,b],index)=>{const truth=inputErrors.has(index),applied=decoderOn&&correction.has(index);if(!truth&&!applied)return;const color=truth&&applied?'#188f65':truth?'#e4572e':'#8b5cf6',u=vertices[a],v=vertices[b];out+=`<line x1="${u.x}" y1="${u.y}" x2="${v.x}" y2="${v.y}" stroke="${color}" stroke-width="${activeWidth}" stroke-linecap="round"/>`;});
+          vertices.forEach((v,id)=>{if(!v.detector)return;const syndrome=shownSyndrome[id],herald=shownHerald[id],heraldState=consumedHeralds.has(id)?'consumed':decoderOn&&!showHeralds&&observedHerald[id]?'forgotten':observedHerald[id]?'visible':'absent';out+=`<g><title>original d=${degree[id]}; measured syndrome=${observedSyndrome[id]?1:0}; underlying herald=${underlyingHerald[id]?1:0}; observed herald=${observedHerald[id]?1:0}; herald state=${heraldState}; displayed d=${residualDegree[id]}</title>`;out+=syndrome?`<circle cx="${v.x}" cy="${v.y}" r="${syndromeRadius}" fill="#fbbf24" stroke="#7c4a03" stroke-width="${markerStroke}"/>`:`<circle cx="${v.x}" cy="${v.y}" r="${dotRadius}" fill="#334155"/>`;if(herald){const hx=syndrome?v.x+heraldOffset:v.x,hy=syndrome?v.y-heraldOffset:v.y,r=syndrome?heraldOverlapRadius:heraldRadius;out+=`<path d="M ${hx} ${hy-r} L ${hx+r} ${hy} L ${hx} ${hy+r} L ${hx-r} ${hy} Z" fill="#2563eb" stroke="#172554" stroke-width="${markerStroke}"/>`;}out+='</g>';});
+          const syndromeCount=detectorVertices.filter(vertex=>shownSyndrome[vertex.id]).length,heraldCount=detectorVertices.filter(vertex=>shownHerald[vertex.id]).length,logicalCutWeight=[...graph.logicalEdgeIndices].filter(index=>residual.has(index)).length,logicalParity=logicalCutWeight%2,formatDensity=(count,total)=>`${(100*count/Math.max(1,total)).toFixed(1)}% · ${count}/${total}`;
+          viewName.textContent=view;errorDensity.textContent=formatDensity(residual.size,edges.length);syndromeDensity.textContent=formatDensity(syndromeCount,detectorVertices.length);heraldDensity.textContent=formatDensity(heraldCount,detectorVertices.length);logicalResult.dataset.error=String(logicalParity===1);logicalResult.textContent=logicalParity?'wrong · parity 1':'correct · parity 0';
+          const resolved=[...correction].filter(index=>inputErrors.has(index)).length,losses=underlyingHerald.filter((value,id)=>vertices[id].detector&&value&&!observedHerald[id]).length,boundaryMatches=mwpmInfo?mwpmInfo.matching.filter(pair=>pair[1]===null).length:0,mwpmSummary=mwpmInfo?`, PyMatching ${mwpmInfo.matching.length} pairs including ${boundaryMatches} boundary matches at weight ${mwpmInfo.total_weight}`:'';
+          svg.setAttribute('aria-label',`${lattice} lattice size ${L}, seed ${seed}, ${view}: ${inputErrors.size} input errors, ${correction.size} corrections, ${resolved} resolved, ${residual.size} residual bonds, logical parity ${logicalParity}, ${consumedHeralds.size} heralds consumed${mwpmSummary}, and ${losses} herald losses`);svg.innerHTML=out;
+        };
+        svg.removeAttribute('aria-busy');mwpmState.classList.remove('error');
+        if(!decoderOn){mwpmState.textContent='Enable decoder to run both stages';paint('Decoder off',errors,new Set(),true,null);return;}
+        mwpmState.textContent='Running Lab Python predecoder…';svg.setAttribute('aria-busy','true');paint('Stage 1 loading',errors,new Set(),true,null);
+        try {
+          const stageOneResult=await requestStageOne(vertices,edges,observedSyndromeIds,observedHeraldIds);if(revision!==drawRevision)return;validateStageOneResult(vertices,edges,observedHeraldIds,stageOneResult);stageOneOrder=formatStageOneOrder(stageOneResult);consumedHeralds=new Set(stageOneResult.consumed_herald_vertices);preCorrection=new Set(stageOneResult.correction_edge_indices);
+        } catch(error) {
+          if(revision!==drawRevision)return;svg.removeAttribute('aria-busy');mwpmState.classList.add('error');mwpmState.textContent='Lab Python predecoder unavailable';paint('Decoder unavailable',errors,new Set(),true,null);return;
+        }
+        const stage1Residual=symmetricDifference(errors,preCorrection),stage1Degree=edgeDegree(vertices.length,edges,stage1Residual),stage1Syndrome=measuredSyndrome(stage1Degree,measurementFlip),stage1SyndromeIds=vertices.map((vertex,id)=>vertex.detector&&stage1Syndrome[id]?id:null).filter(id=>id!==null);
+        svg.removeAttribute('aria-busy');
+        if(decoderView==='stage1'){mwpmState.textContent=`${stageOneOrder} · ${consumedHeralds.size} heralds consumed · ${stage1SyndromeIds.length} residual syndromes`;paint('Stage 1',errors,preCorrection,true,null);return;}
+        const loadingInput=decoderView==='stage2'?stage1Residual:errors,loadingCorrection=decoderView==='stage2'?new Set():preCorrection;
+        mwpmState.textContent='Running PyMatching MWPM…';svg.setAttribute('aria-busy','true');paint(decoderView==='stage2'?'Stage 2 loading':'Combined loading',loadingInput,loadingCorrection,false,null);
+        try {
+          const result=await requestMwpm(vertices,edges,stage1SyndromeIds);if(revision!==drawRevision)return;validateMwpmResult(vertices,edges,stage1SyndromeIds,graph,result);svg.removeAttribute('aria-busy');
+          if(result.status!=='ok'){mwpmState.classList.add('error');mwpmState.textContent=result.status==='odd_syndrome_count'?'MWPM paused: odd syndrome count and no boundary':'MWPM paused: syndrome component has no valid match';paint(decoderView==='stage2'?'Stage 2 unavailable':'Combined through Stage 1',loadingInput,loadingCorrection,false,null);return;}
+          const stage2Correction=new Set(result.correction_edge_indices);mwpmState.textContent=`PyMatching MWPM · ${result.matching.length} pairs · weight ${Number(result.total_weight).toFixed(0)}`;
+          if(decoderView==='stage2')paint('Stage 2',stage1Residual,stage2Correction,false,result);else paint('Combined',errors,symmetricDifference(preCorrection,stage2Correction),false,result);
+        } catch(error) {
+          if(revision!==drawRevision)return;svg.removeAttribute('aria-busy');mwpmState.classList.add('error');mwpmState.textContent='PyMatching MWPM unavailable';paint(decoderView==='stage2'?'Stage 2 unavailable':'Combined through Stage 1',loadingInput,loadingCorrection,false,null);
+        }
+      }
+      root.querySelectorAll('[data-lattice]').forEach(button=>button.addEventListener('click',()=>{lattice=button.dataset.lattice;root.querySelectorAll('[data-lattice]').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));scheduleDraw();}));
+      [pInput,pmInput,qInput,phInput,sizeInput].forEach(input=>input.addEventListener('input',()=>scheduleDraw()));decoderInput.addEventListener('change',()=>scheduleDraw(0));
+      stageButtons.forEach(button=>button.addEventListener('click',()=>{if(button.disabled)return;decoderView=button.dataset.decoderView;scheduleDraw(0);}));
+      seedInput.addEventListener('input',()=>{const next=parseSeed(seedInput.value);if(next!==null){seed=next;scheduleDraw();}});
+      seedInput.addEventListener('change',()=>{const next=parseSeed(seedInput.value);if(next===null)seedInput.value=String(seed);else{seed=next;seedInput.value=String(seed);scheduleDraw();}});
+      seedRefresh.addEventListener('click',()=>{seed=randomSeed();seedInput.value=String(seed);scheduleDraw();});scheduleDraw(0);
+    })();
+  </script>
+</div>

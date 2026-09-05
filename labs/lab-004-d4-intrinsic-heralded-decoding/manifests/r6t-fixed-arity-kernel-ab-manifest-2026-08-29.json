@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "registered",
+  "phase": "R6T",
+  "title": "Fixed-arity R6D CPU recurrence A/B test",
+  "question": "Can a fixed-arity R6D factor-message kernel reduce CPU recurrence latency without changing any BP output or correction?",
+  "A": "current dense template recurrence",
+  "B": "fixed-arity specialized recurrence",
+  "scope": {
+    "sizes": [5, 9, 15],
+    "observations_per_size": 8,
+    "damping": 0.25,
+    "max_iterations": 40,
+    "tolerance": 1e-8,
+    "timing_repetitions": 5,
+    "new_physical_samples": 0
+  },
+  "acceptance": [
+    "bitwise-identical marginals, convergence flags, iteration counts, and residuals for every matched row",
+    "identical posterior-LLR MWPM corrections for every matched row",
+    "report median and mean recurrence latency separately from template refresh"
+  ],
+  "claim_boundary": "A CPU micro-optimization A/B test only; it does not alter BP approximation, establish decoder accuracy, or imply GPU throughput.",
+  "outputs": {
+    "result": "results/r6t-fixed-arity-kernel-ab-2026-08-29.json",
+    "report": "results/r6t-fixed-arity-kernel-ab-2026-08-29.md"
+  }
+}

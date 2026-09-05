@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-28T09:37:20.255663+00:00",
+  "status": "preflight_passed_not_launched",
+  "manifest": {
+    "path": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-b2-honeycomb-gray-frontier-manifest-2026-08-28.json",
+    "sha256": "60178de8cedee0dabf4f05b5cd4baf72931dd7cf0d2c9b99592f442074500937"
+  },
+  "campaign": "phase-b2-honeycomb-gray-frontier-2026-08-28",
+  "jobs": [
+    {
+      "branch": "distance_leverage",
+      "q": 0.2,
+      "p": 0.08,
+      "sizes": [
+        5,
+        13
+      ],
+      "stem": "phase-b2-honeycomb-l5-13-q020-p008-2026-08-28",
+      "result": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase-b2-honeycomb-l5-13-q020-p008-2026-08-28.json",
+      "raw": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase-b2-honeycomb-l5-13-q020-p008-2026-08-28-raw.jsonl.gz",
+      "expected_decodes": 2000,
+      "output_conflict": false,
+      "command": [
+        "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/run_research_python.sh",
+        "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/run_phase2_scout.py",
+        "--lattice",
+        "honeycomb",
+        "--q",
+        "0.20",
+        "--p",
+        "0.08",
+        "--campaign",
+        "phase-b2-honeycomb-gray-frontier-2026-08-28",
+        "--stem",
+        "phase-b2-honeycomb-l5-13-q020-p008-2026-08-28",
+        "--shots-per-seed",
+        "200",
+        "--sizes",
+        "5",
+        "13",
+        "--seeds",
+        "871001",
+        "871002",
+        "871003",
+        "871004",
+        "871005",
+        "--max-iterations",
+        "80",
+        "--update-schedule",
+        "residual_priority",
+        "--residual-priority-order",
+        "stable_sort"
+      ]
+    },
+    {
+      "branch": "shot_limited_upward_frontier",
+      "q": 0.75,
+      "p": 0.4,
+      "sizes": [
+        7,
+        9,
+        11
+      ],
+      "stem": "phase-b2-honeycomb-l7-9-11-q075-p040-2026-08-28",
+      "result": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase-b2-honeycomb-l7-9-11-q075-p040-2026-08-28.json",
+      "raw": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase-b2-honeycomb-l7-9-11-q075-p040-2026-08-28-raw.jsonl.gz",
+      "expected_decodes": 3000,
+      "output_conflict": false,
+      "command": [
+        "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/run_research_python.sh",
+        "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/run_phase2_scout.py",
+        "--lattice",
+        "honeycomb",
+        "--q",
+        "0.75",
+        "--p",
+        "0.40",
+        "--campaign",
+        "phase-b2-honeycomb-gray-frontier-2026-08-28",
+        "--stem",
+        "phase-b2-honeycomb-l7-9-11-q075-p040-2026-08-28",
+        "--shots-per-seed",
+        "200",
+        "--sizes",
+        "7",
+        "9",
+        "11",
+        "--seeds",
+        "871001",
+        "871002",
+        "871003",
+        "871004",
+        "871005",
+        "--max-iterations",
+        "80",
+        "--update-schedule",
+        "residual_priority",
+        "--residual-priority-order",
+        "stable_sort"
+      ]
+    },
+    {
+      "branch": "shot_limited_downward_frontier",
+      "q": 0.5,
+      "p": 0.2,
+      "sizes": [
+        7,
+        9,
+        11
+      ],
+      "stem": "phase-b2-honeycomb-l7-9-11-q050-p020-2026-08-28",
+      "result": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase-b2-honeycomb-l7-9-11-q050-p020-2026-08-28.json",
+      "raw": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase-b2-honeycomb-l7-9-11-q050-p020-2026-08-28-raw.jsonl.gz",
+      "expected_decodes": 3000,
+      "output_conflict": false,
+      "command": [
+        "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/run_research_python.sh",
+        "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/run_phase2_scout.py",
+        "--lattice",
+        "honeycomb",
+        "--q",
+        "0.50",
+        "--p",
+        "0.20",
+        "--campaign",
+        "phase-b2-honeycomb-gray-frontier-2026-08-28",
+        "--stem",
+        "phase-b2-honeycomb-l7-9-11-q050-p020-2026-08-28",
+        "--shots-per-seed",
+        "200",
+        "--sizes",
+        "7",
+        "9",
+        "11",
+        "--seeds",
+        "871001",
+        "871002",
+        "871003",
+        "871004",
+        "871005",
+        "--max-iterations",
+        "80",
+        "--update-schedule",
+        "residual_priority",
+        "--residual-priority-order",
+        "stable_sort"
+      ]
+    }
+  ],
+  "job_count": 3,
+  "expected_new_decodes": 8000,
+  "workers_cap": 3,
+  "output_conflicts": [],
+  "source_chain": {
+    "selection_evidence": {
+      "path": {
+        "path": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase-b2-honeycomb-gray-frontier-selection-2026-08-28.json",
+        "sha256": "04de23dedb794b5a796441d39e12e2096b8281ba5f4a49c18cc256512810062d"
+      },
+      "phase_map": {
+        "path": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase2-residual80-honeycomb-bayesian-fuzzy-trend-phase-2026-08-28.json",
+        "sha256": "bf9b692081a64960ddbdb5fb2127c34547de3eae72b9498db678dbd335c7c27f"
+      },
+      "phase_b1": {
+        "path": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase-b1-honeycomb-l5-l13-bayesian-fuzzy-trend-2026-08-28.json",
+        "sha256": "e103b6bc29ea5e2862a3b3fc665d2f3b9415decd3b32f6cbbe729725a8090650"
+      }
+    },
+    "baseline": {
+      "path": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase2-residual80-honeycomb-q000-discovery-1000-2026-08-28.json",
+      "sha256": "6eebc790f5405f6ef9948f0d50bbfc1c31f155bfed3537adf9febb3c078b4b55"
+    },
+    "analyzer": {
+      "path": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/analyze_phase_b2_gray_frontier.py",
+      "sha256": "4081f6e747a0d42a3d6207849fe512fb8c842d0d745807888760498b5da99003"
+    },
+    "completion_audit": {
+      "path": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/audit_phase_b2_gray_frontier.py",
+      "sha256": "0d2ce6c6e19d6495795cfb1c76709fc8a62524755f0afc46c804fb1ecb696e94"
+    },
+    "source_cohort_matches": true,
+    "decoder_config_matches": true
+  },
+  "production_launched": false,
+  "crossing_statistic_used": false,
+  "unregistered_gray_cells_added": false
+}

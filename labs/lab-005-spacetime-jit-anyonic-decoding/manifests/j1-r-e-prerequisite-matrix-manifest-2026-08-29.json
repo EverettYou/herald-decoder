@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "status": "executed: R0 localized source gap; E0 perfect temporal interface verified",
+  "registered_at": "2026-08-29T11:53:00Z",
+  "executed_at": "2026-08-29T12:03:00Z",
+  "title": "R/E source and temporal-model prerequisite matrix",
+  "rigor_tier": "exploratory prerequisite validation; no performance study",
+  "program_alignment": {
+    "central_question": "Can a physically defined noisy spacetime record support causal anyonic decoding without conflating source-specific D(S3) fault tolerance with a future noisy D4 fusion-herald extension?",
+    "scientific_layer": "physical information structure and fault-tolerance prerequisites",
+    "epistemic_role": "validation and falsification of the earliest unsupported gates",
+    "upstream_dependencies": [
+      "Lyons-Brown D(S3) local-circuit and JIT construction",
+      "Jing intrinsic-herald D4 perfect-measurement channel",
+      "Jing spacetime ILP structural noisy-syndrome formulation",
+      "verified Lab 004 observation-only two-call D4 spatial-policy interface",
+      "verified Lab 005 G generic probability/schema layer"
+    ],
+    "downstream_consumers": [
+      "source-matched D(S3) history generation",
+      "derived noisy D4 measurement instrument",
+      "matched schedule comparison and logical scoring",
+      "any future threshold or fault-tolerance study"
+    ],
+    "information_value": "The matrix can stop an invalid performance pilot by determining whether each branch has a source-complete operational record before sampling."
+  },
+  "source_basis": [
+    {
+      "source": "references/lyons2026-anyonic-fault-tolerance/paper.pdf",
+      "sha256": "9d7473adeaffbb4065e1f279d5dff8a5911483f5773101bba506b66ba532d6ea",
+      "role": "D(S3) circuit-noise, repeated-detector, absorber, ungauging, neutrality, re-gauging, and linking requirements"
+    },
+    {
+      "source": "references/jing2025-intrinsic-heralding/paper.pdf",
+      "sha256": "7a17c3d3a743e3dec4266b64d0321a6af7a5eeacfab67e42b9ec77d30b65a2ac",
+      "role": "D4 intrinsic-fusion observation and perfect-measurement limit; does not supply noisy repeated readout"
+    },
+    {
+      "source": "references/jing2026-ilp-topological-decoder/paper.pdf",
+      "sha256": "6e34ddfcff24d1b5aaed7921aead860889156865d6b9d2f01420da5a13f06219",
+      "role": "structural separation of spatial physical events, temporal measurement errors, and measured-syndrome-dependent fusion channels"
+    }
+  ],
+  "fork_classification": {
+    "R0_and_E0": "independent, reversible, in-scope prerequisite diagnostics; both must be run rather than ranked by a human",
+    "E1_noisy_instrument": "dependent on E0 perfect-limit temporal composition and an explicit measurement-instrument basis; it must not run first",
+    "performance_pilot": "blocked until at least one physical branch supplies both a correction semantics and a private logical scorer"
+  },
+  "matrix": [
+    {
+      "id": "R0-ds3-event-catalogue",
+      "branch": "R-ds3-source",
+      "question": "Does the archived source specify enough local circuit and phase-boundary detail to compile a deterministic single-fault-to-detector event catalogue for the D(S3) JIT state machine?",
+      "hypothesis": "Source-indexed local fault classes can be assigned to decoder-visible detector support and D(S3), boundary, or D(Z3) ownership without importing D4 herald labels or future information.",
+      "alternative": "One or more required circuit, stabilizer, boundary, or detector maps are under-specified; the exact missing map must be reported and R remains blocked rather than guessed.",
+      "design": {
+        "contexts": [
+          "bulk D(S3)",
+          "D(S3)-D(Z3) gauging boundary",
+          "ungauged D(Z3) region"
+        ],
+        "unit": "one source-declared local circuit fault class in one context",
+        "method": "compile a source-cited event catalogue and exercise deterministic one-fault locality and phase-ownership fixtures only",
+        "budget": "at most three local contexts, source-declared single-fault classes only, under two CPU minutes and 0.5 GiB; no stochastic sampling or solver"
+      },
+      "acceptance": [
+        "every row cites a source equation, figure, circuit, or explicit statement",
+        "each row declares physical location, time support, detector support, and phase/boundary ownership",
+        "source-unspecified mappings are marked unresolved rather than completed by analogy",
+        "single-fault detector support satisfies the source local-neighborhood bound",
+        "known computational-anyon motion is separated from fault-generated detector events",
+        "no D4 blue/green herald variable appears in the R catalogue"
+      ],
+      "outputs": [
+        "results/j1-r0-ds3-event-catalogue-audit-2026-08-29.json",
+        "results/j1-r0-ds3-event-catalogue-audit-2026-08-29.md"
+      ]
+    },
+    {
+      "id": "E0-d4-perfect-temporal-composition",
+      "branch": "E-d4-herald-extension",
+      "question": "Can the verified perfect-measurement D4 spatial observation/action channel be composed into a causal temporal state transition without revealing the hidden physical chain?",
+      "hypothesis": "A versioned perfect-limit temporal state can reproduce the existing stage-1 and post-action stage-2 observations, with the latter becoming available only after the declared physical action.",
+      "alternative": "The current spatial handoff lacks an operational state-update or post-action measurement rule; E remains blocked at the physical-observation gate before adding readout noise.",
+      "design": {
+        "contexts": [
+          "no-action perfect-readout carry-forward",
+          "stage-1 flux action followed by physically supplied post-action charge record",
+          "next-round causal prefix with private truth scorer withheld"
+        ],
+        "unit": "one deterministic source-allowed observation/action trajectory",
+        "method": "wrap only the existing validated L=2 interface fixtures in a maximum three-round state transition and test perfect-limit conservation, action ordering, and anti-leakage",
+        "budget": "existing L=2 fixtures only, at most three rounds, under two CPU minutes and 0.5 GiB; no stochastic noisy channel, Monte Carlo, or larger lattice"
+      },
+      "acceptance": [
+        "round-zero and perfect-readout requests reproduce the verified Lab 004 spatial observations exactly",
+        "post-action measurements are unavailable before the bound stage-1 action digest",
+        "the next causal prefix contains only measurements and declared actions, never physical errors, future records, or logical labels",
+        "all visible state transitions have deterministic canonical digests",
+        "the private scorer can evaluate a frozen action only after the public transition is fixed",
+        "failure to define a source-supported state update is reported as a model gap rather than replaced by the G memoryless confusion channel"
+      ],
+      "outputs": [
+        "results/j1-e0-d4-perfect-temporal-composition-audit-2026-08-29.json",
+        "results/j1-e0-d4-perfect-temporal-composition-audit-2026-08-29.md"
+      ]
+    }
+  ],
+  "dependent_future_gate": {
+    "id": "E1-d4-noisy-measurement-instrument",
+    "condition": "E0 passes and a measurement-instrument basis is explicitly sourced or derived",
+    "required_alternatives": [
+      "projective repeated anyon-content measurement with state update",
+      "declared phenomenological readout confusion conditional on that state"
+    ],
+    "boundary": "The already verified G channel may test probability and software invariants but cannot choose the physical D4 temporal instrument."
+  },
+  "execution_result": {
+    "R0-ds3-event-catalogue": {
+      "outcome": "localized_source_gap",
+      "focused_tests": "4/4 passed",
+      "evidence": "results/j1-r0-ds3-event-catalogue-audit-2026-08-29.json",
+      "branch_status": "blocked only at exact gate-level source reproduction; stabilizer identities and locality bounds retained"
+    },
+    "E0-d4-perfect-temporal-composition": {
+      "outcome": "perfect_temporal_interface_verified",
+      "focused_tests": "7/7 passed",
+      "evidence": "results/j1-e0-d4-perfect-temporal-composition-audit-2026-08-29.json",
+      "branch_status": "E0 complete; E1 remains blocked on a physical measurement-instrument basis"
+    },
+    "full_lab_tests": "86/86 passed",
+    "data_status": "no stochastic or performance data produced"
+  },
+  "analysis_and_stop_rules": {
+    "comparison_rule": "Evaluate R0 and E0 independently against all branch-specific acceptance items; neither branch can compensate for failure of the other.",
+    "success": "A branch advances only if its operational source/state map is complete on every registered tiny fixture.",
+    "negative": "Report a localized source or state-update gap and keep only that dependent branch blocked.",
+    "escalation": "Ask the researcher only if resolving a documented gap requires selecting a new physical measurement model, external dependency, or materially larger resource budget.",
+    "prohibited": "No schedule ranking, LER, threshold, numerical fault-tolerance, cross-model transfer, or physical-noise claim."
+  },
+  "next_gate": "Before consulting the researcher, run a bounded primary-source gap search for exact D(S3) extraction/ungauging circuits and for an operational repeated D4 anyon-content measurement instrument. Keep R and E searches independent; if the archive cannot close a gap, then escalate only the specific model or external-dependency decision."
+}

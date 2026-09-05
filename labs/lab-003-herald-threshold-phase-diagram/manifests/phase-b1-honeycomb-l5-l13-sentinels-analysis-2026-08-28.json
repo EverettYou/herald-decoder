@@ -1,0 +1,1408 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-28T08:47:02.532797+00:00",
+  "status": "complete",
+  "campaign": "phase-b1-honeycomb-l5-l13-sentinels-2026-08-28",
+  "sizes": [
+    5,
+    7,
+    9,
+    11,
+    13
+  ],
+  "hypotheses": {
+    "hypothesis_decreasing": "theta_5 > theta_7 > theta_9 > theta_11 > theta_13",
+    "hypothesis_increasing": "theta_5 < theta_7 < theta_9 < theta_11 < theta_13",
+    "hypothesis_other": "all other strict orderings",
+    "likelihood": "independent binomial logical-error counts at each distance",
+    "primary_prior": "independent Jeffreys Beta(1/2,1/2) priors",
+    "map_score": "log[Pr(H_increasing|data)/Pr(H_decreasing|data)]",
+    "classification_threshold": 0.9,
+    "required_sensitivity": "repeat with independent uniform Beta(1,1) priors",
+    "claim_boundary": "finite-window L=5,7,9,11,13 order only"
+  },
+  "numerical_method": "eight replicated scrambled Sobol integrations with 8192 draws per replicate",
+  "zero_event_policy": "A zero directional event count is resolution-censored at one over total QMC draws; the log odds is null and a one-sided numerical bound is reported instead of inventing a finite floor.",
+  "provenance": {
+    "manifest": {
+      "path": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/manifests/phase-b1-honeycomb-l5-l13-sentinels-manifest-2026-08-28.json",
+      "sha256": "6824c2845b579c64f7b5f44c306df4c307d8c4e2dc3642a01fc00d8f5587810c"
+    },
+    "completion_audit": {
+      "path": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase-b1-honeycomb-l5-l13-sentinels-completion-audit-2026-08-28.json",
+      "sha256": "ccbf03b3475139bd82598d2353848bca1f2e7fa571d9c80952ffb62f2105ee31"
+    },
+    "three_distance_base": {
+      "path": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase2-residual80-honeycomb-bayesian-order-phase-2026-08-28.json",
+      "sha256": "4bd89c9fc6868fedbf5d06568706b371f0a0abd8d0d6c0fdcfdfd2552b0661a5"
+    },
+    "analyzer": {
+      "path": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/analyze_phase_b1_l5_l13_sentinels.py",
+      "sha256": "5e18f4a8b1d132ff22c1446e69939eb621626d037c87ad62fb4387875f59a746"
+    }
+  },
+  "analyses": [
+    {
+      "role": "decreasing_anchor",
+      "q": 1.0,
+      "p": 0.36,
+      "sizes": [
+        5,
+        7,
+        9,
+        11,
+        13
+      ],
+      "logical_errors": [
+        77,
+        32,
+        8,
+        1,
+        1
+      ],
+      "shots": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000
+      ],
+      "posterior_probability_decreasing": 0.4930572509765625,
+      "posterior_probability_increasing": 0.0,
+      "posterior_probability_other_order": 0.5069427490234375,
+      "posterior_log_odds_increasing_vs_decreasing": null,
+      "posterior_log_odds_censoring": {
+        "relation": "less_than",
+        "bound": -10.38322490501888
+      },
+      "qmc_standard_error_decreasing": 0.0001748351719754949,
+      "qmc_standard_error_increasing": null,
+      "qmc_decreasing_events": 32313,
+      "qmc_increasing_events": 0,
+      "qmc_probability_resolution": 1.52587890625e-05,
+      "qmc_ordering_entropy_bits": 1.1078415503881938,
+      "qmc_effective_ordering_count": 2.1552295705916427,
+      "qmc_top_orderings": [
+        {
+          "indices_low_to_high": [
+            3,
+            4,
+            2,
+            1,
+            0
+          ],
+          "probability": 0.493255615234375,
+          "sizes_low_to_high_ler": [
+            11,
+            13,
+            9,
+            7,
+            5
+          ]
+        },
+        {
+          "indices_low_to_high": [
+            4,
+            3,
+            2,
+            1,
+            0
+          ],
+          "probability": 0.4930572509765625,
+          "sizes_low_to_high_ler": [
+            13,
+            11,
+            9,
+            7,
+            5
+          ]
+        },
+        {
+          "indices_low_to_high": [
+            3,
+            2,
+            4,
+            1,
+            0
+          ],
+          "probability": 0.0066070556640625,
+          "sizes_low_to_high_ler": [
+            11,
+            9,
+            13,
+            7,
+            5
+          ]
+        },
+        {
+          "indices_low_to_high": [
+            4,
+            2,
+            3,
+            1,
+            0
+          ],
+          "probability": 0.006561279296875,
+          "sizes_low_to_high_ler": [
+            13,
+            9,
+            11,
+            7,
+            5
+          ]
+        },
+        {
+          "indices_low_to_high": [
+            2,
+            3,
+            4,
+            1,
+            0
+          ],
+          "probability": 0.0002288818359375,
+          "sizes_low_to_high_ler": [
+            9,
+            11,
+            13,
+            7,
+            5
+          ]
+        },
+        {
+          "indices_low_to_high": [
+            2,
+            4,
+            3,
+            1,
+            0
+          ],
+          "probability": 0.000213623046875,
+          "sizes_low_to_high_ler": [
+            9,
+            13,
+            11,
+            7,
+            5
+          ]
+        },
+        {
+          "indices_low_to_high": [
+            3,
+            4,
+            1,
+            2,
+            0
+          ],
+          "probability": 4.57763671875e-05,
+          "sizes_low_to_high_ler": [
+            11,
+            13,
+            7,
+            9,
+            5
+          ]
+        },
+        {
+          "indices_low_to_high": [
+            4,
+            3,
+            1,
+            2,
+            0
+          ],
+          "probability": 3.0517578125e-05,
+          "sizes_low_to_high_ler": [
+            13,
+            11,
+            7,
+            9,
+            5
+          ]
+        }
+      ],
+      "qmc_scramble_replicates": 8,
+      "qmc_draws_per_replicate": 8192,
+      "classification": "unresolved",
+      "uniform_prior_sensitivity": {
+        "posterior_probability_decreasing": 0.4895172119140625,
+        "posterior_probability_increasing": 0.0,
+        "posterior_probability_other_order": 0.5104827880859375,
+        "posterior_log_odds_increasing_vs_decreasing": null,
+        "posterior_log_odds_censoring": {
+          "relation": "less_than",
+          "bound": -10.376019233564437
+        },
+        "qmc_standard_error_decreasing": 0.00018082055932085734,
+        "qmc_standard_error_increasing": null,
+        "qmc_decreasing_events": 32081,
+        "qmc_increasing_events": 0,
+        "qmc_probability_resolution": 1.52587890625e-05,
+        "qmc_ordering_entropy_bits": 1.1514736110747519,
+        "qmc_effective_ordering_count": 2.2214067958389205,
+        "qmc_top_orderings": [
+          {
+            "indices_low_to_high": [
+              3,
+              4,
+              2,
+              1,
+              0
+            ],
+            "probability": 0.4896697998046875,
+            "sizes_low_to_high_ler": [
+              11,
+              13,
+              9,
+              7,
+              5
+            ]
+          },
+          {
+            "indices_low_to_high": [
+              4,
+              3,
+              2,
+              1,
+              0
+            ],
+            "probability": 0.4895172119140625,
+            "sizes_low_to_high_ler": [
+              13,
+              11,
+              9,
+              7,
+              5
+            ]
+          },
+          {
+            "indices_low_to_high": [
+              4,
+              2,
+              3,
+              1,
+              0
+            ],
+            "probability": 0.0100860595703125,
+            "sizes_low_to_high_ler": [
+              13,
+              9,
+              11,
+              7,
+              5
+            ]
+          },
+          {
+            "indices_low_to_high": [
+              3,
+              2,
+              4,
+              1,
+              0
+            ],
+            "probability": 0.009857177734375,
+            "sizes_low_to_high_ler": [
+              11,
+              9,
+              13,
+              7,
+              5
+            ]
+          },
+          {
+            "indices_low_to_high": [
+              2,
+              3,
+              4,
+              1,
+              0
+            ],
+            "probability": 0.00048828125,
+            "sizes_low_to_high_ler": [
+              9,
+              11,
+              13,
+              7,
+              5
+            ]
+          },
+          {
+            "indices_low_to_high": [
+              2,
+              4,
+              3,
+              1,
+              0
+            ],
+            "probability": 0.0003204345703125,
+            "sizes_low_to_high_ler": [
+              9,
+              13,
+              11,
+              7,
+              5
+            ]
+          },
+          {
+            "indices_low_to_high": [
+              4,
+              3,
+              1,
+              2,
+              0
+            ],
+            "probability": 4.57763671875e-05,
+            "sizes_low_to_high_ler": [
+              13,
+              11,
+              7,
+              9,
+              5
+            ]
+          },
+          {
+            "indices_low_to_high": [
+              3,
+              4,
+              1,
+              2,
+              0
+            ],
+            "probability": 1.52587890625e-05,
+            "sizes_low_to_high_ler": [
+              11,
+              13,
+              7,
+              9,
+              5
+            ]
+          }
+        ],
+        "qmc_scramble_replicates": 8,
+        "qmc_draws_per_replicate": 8192,
+        "classification": "unresolved"
+      }
+    },
+    {
+      "role": "increasing_frontier",
+      "q": 0.65,
+      "p": 0.45,
+      "sizes": [
+        5,
+        7,
+        9,
+        11,
+        13
+      ],
+      "logical_errors": [
+        424,
+        455,
+        479,
+        524,
+        501
+      ],
+      "shots": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000
+      ],
+      "posterior_probability_decreasing": 0.0,
+      "posterior_probability_increasing": 0.1069793701171875,
+      "posterior_probability_other_order": 0.8930206298828125,
+      "posterior_log_odds_increasing_vs_decreasing": null,
+      "posterior_log_odds_censoring": {
+        "relation": "greater_than",
+        "bound": 8.855235623206967
+      },
+      "qmc_standard_error_decreasing": null,
+      "qmc_standard_error_increasing": 0.0002758062679377889,
+      "qmc_decreasing_events": 0,
+      "qmc_increasing_events": 7011,
+      "qmc_probability_resolution": 1.52587890625e-05,
+      "qmc_ordering_entropy_bits": 2.4156388830795197,
+      "qmc_effective_ordering_count": 5.335556983353917,
+      "qmc_top_orderings": [
+        {
+          "indices_low_to_high": [
+            0,
+            1,
+            2,
+            4,
+            3
+          ],
+          "probability": 0.518096923828125,
+          "sizes_low_to_high_ler": [
+            5,
+            7,
+            9,
+            13,
+            11
+          ]
+        },
+        {
+          "indices_low_to_high": [
+            0,
+            1,
+            4,
+            2,
+            3
+          ],
+          "probability": 0.1258392333984375,
+          "sizes_low_to_high_ler": [
+            5,
+            7,
+            13,
+            9,
+            11
+          ]
+        },
+        {
+          "indices_low_to_high": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "probability": 0.1069793701171875,
+          "sizes_low_to_high_ler": [
+            5,
+            7,
+            9,
+            11,
+            13
+          ]
+        },
+        {
+          "indices_low_to_high": [
+            0,
+            2,
+            1,
+            4,
+            3
+          ],
+          "probability": 0.104644775390625,
+          "sizes_low_to_high_ler": [
+            5,
+            9,
+            7,
+            13,
+            11
+          ]
+        },
+        {
+          "indices_low_to_high": [
+            1,
+            0,
+            2,
+            4,
+            3
+          ],
+          "probability": 0.053375244140625,
+          "sizes_low_to_high_ler": [
+            7,
+            5,
+            9,
+            13,
+            11
+          ]
+        },
+        {
+          "indices_low_to_high": [
+            0,
+            2,
+            1,
+            3,
+            4
+          ],
+          "probability": 0.020355224609375,
+          "sizes_low_to_high_ler": [
+            5,
+            9,
+            7,
+            11,
+            13
+          ]
+        },
+        {
+          "indices_low_to_high": [
+            1,
+            0,
+            4,
+            2,
+            3
+          ],
+          "probability": 0.0118560791015625,
+          "sizes_low_to_high_ler": [
+            7,
+            5,
+            13,
+            9,
+            11
+          ]
+        },
+        {
+          "indices_low_to_high": [
+            1,
+            0,
+            2,
+            3,
+            4
+          ],
+          "probability": 0.0104522705078125,
+          "sizes_low_to_high_ler": [
+            7,
+            5,
+            9,
+            11,
+            13
+          ]
+        }
+      ],
+      "qmc_scramble_replicates": 8,
+      "qmc_draws_per_replicate": 8192,
+      "classification": "unresolved",
+      "uniform_prior_sensitivity": {
+        "posterior_probability_decreasing": 0.0,
+        "posterior_probability_increasing": 0.10662841796875,
+        "posterior_probability_other_order": 0.89337158203125,
+        "posterior_log_odds_increasing_vs_decreasing": null,
+        "posterior_log_odds_censoring": {
+          "relation": "greater_than",
+          "bound": 8.851949671253948
+        },
+        "qmc_standard_error_decreasing": null,
+        "qmc_standard_error_increasing": 0.00044133826502663795,
+        "qmc_decreasing_events": 0,
+        "qmc_increasing_events": 6988,
+        "qmc_probability_resolution": 1.52587890625e-05,
+        "qmc_ordering_entropy_bits": 2.4191016010817843,
+        "qmc_effective_ordering_count": 5.348378625266485,
+        "qmc_top_orderings": [
+          {
+            "indices_low_to_high": [
+              0,
+              1,
+              2,
+              4,
+              3
+            ],
+            "probability": 0.517822265625,
+            "sizes_low_to_high_ler": [
+              5,
+              7,
+              9,
+              13,
+              11
+            ]
+          },
+          {
+            "indices_low_to_high": [
+              0,
+              1,
+              4,
+              2,
+              3
+            ],
+            "probability": 0.1258544921875,
+            "sizes_low_to_high_ler": [
+              5,
+              7,
+              13,
+              9,
+              11
+            ]
+          },
+          {
+            "indices_low_to_high": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "probability": 0.10662841796875,
+            "sizes_low_to_high_ler": [
+              5,
+              7,
+              9,
+              11,
+              13
+            ]
+          },
+          {
+            "indices_low_to_high": [
+              0,
+              2,
+              1,
+              4,
+              3
+            ],
+            "probability": 0.104766845703125,
+            "sizes_low_to_high_ler": [
+              5,
+              9,
+              7,
+              13,
+              11
+            ]
+          },
+          {
+            "indices_low_to_high": [
+              1,
+              0,
+              2,
+              4,
+              3
+            ],
+            "probability": 0.053131103515625,
+            "sizes_low_to_high_ler": [
+              7,
+              5,
+              9,
+              13,
+              11
+            ]
+          },
+          {
+            "indices_low_to_high": [
+              0,
+              2,
+              1,
+              3,
+              4
+            ],
+            "probability": 0.0204620361328125,
+            "sizes_low_to_high_ler": [
+              5,
+              9,
+              7,
+              11,
+              13
+            ]
+          },
+          {
+            "indices_low_to_high": [
+              1,
+              0,
+              4,
+              2,
+              3
+            ],
+            "probability": 0.01202392578125,
+            "sizes_low_to_high_ler": [
+              7,
+              5,
+              13,
+              9,
+              11
+            ]
+          },
+          {
+            "indices_low_to_high": [
+              1,
+              0,
+              2,
+              3,
+              4
+            ],
+            "probability": 0.0106353759765625,
+            "sizes_low_to_high_ler": [
+              7,
+              5,
+              9,
+              11,
+              13
+            ]
+          }
+        ],
+        "qmc_scramble_replicates": 8,
+        "qmc_draws_per_replicate": 8192,
+        "classification": "unresolved"
+      }
+    },
+    {
+      "role": "curvature_sentinel",
+      "q": 0.45,
+      "p": 0.2,
+      "sizes": [
+        5,
+        7,
+        9,
+        11,
+        13
+      ],
+      "logical_errors": [
+        197,
+        144,
+        164,
+        134,
+        149
+      ],
+      "shots": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000
+      ],
+      "posterior_probability_decreasing": 0.0115509033203125,
+      "posterior_probability_increasing": 0.0,
+      "posterior_probability_other_order": 0.9884490966796875,
+      "posterior_log_odds_increasing_vs_decreasing": null,
+      "posterior_log_odds_censoring": {
+        "relation": "less_than",
+        "bound": -6.6293632534374485
+      },
+      "qmc_standard_error_decreasing": 0.00013829452013778163,
+      "qmc_standard_error_increasing": null,
+      "qmc_decreasing_events": 757,
+      "qmc_increasing_events": 0,
+      "qmc_probability_resolution": 1.52587890625e-05,
+      "qmc_ordering_entropy_bits": 3.3771662754885945,
+      "qmc_effective_ordering_count": 10.390306270813209,
+      "qmc_top_orderings": [
+        {
+          "indices_low_to_high": [
+            3,
+            1,
+            4,
+            2,
+            0
+          ],
+          "probability": 0.2807159423828125,
+          "sizes_low_to_high_ler": [
+            11,
+            7,
+            13,
+            9,
+            5
+          ]
+        },
+        {
+          "indices_low_to_high": [
+            3,
+            4,
+            1,
+            2,
+            0
+          ],
+          "probability": 0.193328857421875,
+          "sizes_low_to_high_ler": [
+            11,
+            13,
+            7,
+            9,
+            5
+          ]
+        },
+        {
+          "indices_low_to_high": [
+            1,
+            3,
+            4,
+            2,
+            0
+          ],
+          "probability": 0.1202392578125,
+          "sizes_low_to_high_ler": [
+            7,
+            11,
+            13,
+            9,
+            5
+          ]
+        },
+        {
+          "indices_low_to_high": [
+            3,
+            1,
+            2,
+            4,
+            0
+          ],
+          "probability": 0.0841827392578125,
+          "sizes_low_to_high_ler": [
+            11,
+            7,
+            9,
+            13,
+            5
+          ]
+        },
+        {
+          "indices_low_to_high": [
+            4,
+            3,
+            1,
+            2,
+            0
+          ],
+          "probability": 0.0589599609375,
+          "sizes_low_to_high_ler": [
+            13,
+            11,
+            7,
+            9,
+            5
+          ]
+        },
+        {
+          "indices_low_to_high": [
+            1,
+            4,
+            3,
+            2,
+            0
+          ],
+          "probability": 0.0441436767578125,
+          "sizes_low_to_high_ler": [
+            7,
+            13,
+            11,
+            9,
+            5
+          ]
+        },
+        {
+          "indices_low_to_high": [
+            3,
+            4,
+            2,
+            1,
+            0
+          ],
+          "probability": 0.041748046875,
+          "sizes_low_to_high_ler": [
+            11,
+            13,
+            9,
+            7,
+            5
+          ]
+        },
+        {
+          "indices_low_to_high": [
+            1,
+            3,
+            2,
+            4,
+            0
+          ],
+          "probability": 0.0342559814453125,
+          "sizes_low_to_high_ler": [
+            7,
+            11,
+            9,
+            13,
+            5
+          ]
+        }
+      ],
+      "qmc_scramble_replicates": 8,
+      "qmc_draws_per_replicate": 8192,
+      "classification": "unresolved",
+      "uniform_prior_sensitivity": {
+        "posterior_probability_decreasing": 0.0111236572265625,
+        "posterior_probability_increasing": 0.0,
+        "posterior_probability_other_order": 0.9888763427734375,
+        "posterior_log_odds_increasing_vs_decreasing": null,
+        "posterior_log_odds_censoring": {
+          "relation": "less_than",
+          "bound": -6.591673732008657
+        },
+        "qmc_standard_error_decreasing": 0.00019084382350909235,
+        "qmc_standard_error_increasing": null,
+        "qmc_decreasing_events": 729,
+        "qmc_increasing_events": 0,
+        "qmc_probability_resolution": 1.52587890625e-05,
+        "qmc_ordering_entropy_bits": 3.3804183919456166,
+        "qmc_effective_ordering_count": 10.413754469406532,
+        "qmc_top_orderings": [
+          {
+            "indices_low_to_high": [
+              3,
+              1,
+              4,
+              2,
+              0
+            ],
+            "probability": 0.2806549072265625,
+            "sizes_low_to_high_ler": [
+              11,
+              7,
+              13,
+              9,
+              5
+            ]
+          },
+          {
+            "indices_low_to_high": [
+              3,
+              4,
+              1,
+              2,
+              0
+            ],
+            "probability": 0.1924591064453125,
+            "sizes_low_to_high_ler": [
+              11,
+              13,
+              7,
+              9,
+              5
+            ]
+          },
+          {
+            "indices_low_to_high": [
+              1,
+              3,
+              4,
+              2,
+              0
+            ],
+            "probability": 0.1204681396484375,
+            "sizes_low_to_high_ler": [
+              7,
+              11,
+              13,
+              9,
+              5
+            ]
+          },
+          {
+            "indices_low_to_high": [
+              3,
+              1,
+              2,
+              4,
+              0
+            ],
+            "probability": 0.0842132568359375,
+            "sizes_low_to_high_ler": [
+              11,
+              7,
+              9,
+              13,
+              5
+            ]
+          },
+          {
+            "indices_low_to_high": [
+              4,
+              3,
+              1,
+              2,
+              0
+            ],
+            "probability": 0.0592193603515625,
+            "sizes_low_to_high_ler": [
+              13,
+              11,
+              7,
+              9,
+              5
+            ]
+          },
+          {
+            "indices_low_to_high": [
+              1,
+              4,
+              3,
+              2,
+              0
+            ],
+            "probability": 0.043975830078125,
+            "sizes_low_to_high_ler": [
+              7,
+              13,
+              11,
+              9,
+              5
+            ]
+          },
+          {
+            "indices_low_to_high": [
+              3,
+              4,
+              2,
+              1,
+              0
+            ],
+            "probability": 0.0422515869140625,
+            "sizes_low_to_high_ler": [
+              11,
+              13,
+              9,
+              7,
+              5
+            ]
+          },
+          {
+            "indices_low_to_high": [
+              1,
+              3,
+              2,
+              4,
+              0
+            ],
+            "probability": 0.034210205078125,
+            "sizes_low_to_high_ler": [
+              7,
+              11,
+              9,
+              13,
+              5
+            ]
+          }
+        ],
+        "qmc_scramble_replicates": 8,
+        "qmc_draws_per_replicate": 8192,
+        "classification": "unresolved"
+      }
+    },
+    {
+      "role": "saturation_sentinel",
+      "q": 0.15,
+      "p": 0.45,
+      "sizes": [
+        5,
+        7,
+        9,
+        11,
+        13
+      ],
+      "logical_errors": [
+        478,
+        490,
+        485,
+        484,
+        487
+      ],
+      "shots": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000
+      ],
+      "posterior_probability_decreasing": 0.0044403076171875,
+      "posterior_probability_increasing": 0.0118865966796875,
+      "posterior_probability_other_order": 0.983673095703125,
+      "posterior_log_odds_increasing_vs_decreasing": 0.9846877786992563,
+      "posterior_log_odds_censoring": {
+        "relation": "equal",
+        "bound": 0.9846877786992563
+      },
+      "qmc_standard_error_decreasing": 0.00022477599888086295,
+      "qmc_standard_error_increasing": 0.00024946403527688544,
+      "qmc_decreasing_events": 291,
+      "qmc_increasing_events": 779,
+      "qmc_probability_resolution": 1.52587890625e-05,
+      "qmc_ordering_entropy_bits": 6.7302367629009465,
+      "qmc_effective_ordering_count": 106.17032420972211,
+      "qmc_top_orderings": [
+        {
+          "indices_low_to_high": [
+            0,
+            3,
+            2,
+            4,
+            1
+          ],
+          "probability": 0.0201568603515625,
+          "sizes_low_to_high_ler": [
+            5,
+            11,
+            9,
+            13,
+            7
+          ]
+        },
+        {
+          "indices_low_to_high": [
+            0,
+            2,
+            3,
+            4,
+            1
+          ],
+          "probability": 0.0197601318359375,
+          "sizes_low_to_high_ler": [
+            5,
+            9,
+            11,
+            13,
+            7
+          ]
+        },
+        {
+          "indices_low_to_high": [
+            0,
+            3,
+            4,
+            2,
+            1
+          ],
+          "probability": 0.01873779296875,
+          "sizes_low_to_high_ler": [
+            5,
+            11,
+            13,
+            9,
+            7
+          ]
+        },
+        {
+          "indices_low_to_high": [
+            0,
+            3,
+            2,
+            1,
+            4
+          ],
+          "probability": 0.017578125,
+          "sizes_low_to_high_ler": [
+            5,
+            11,
+            9,
+            7,
+            13
+          ]
+        },
+        {
+          "indices_low_to_high": [
+            0,
+            2,
+            4,
+            3,
+            1
+          ],
+          "probability": 0.0174713134765625,
+          "sizes_low_to_high_ler": [
+            5,
+            9,
+            13,
+            11,
+            7
+          ]
+        },
+        {
+          "indices_low_to_high": [
+            0,
+            4,
+            3,
+            2,
+            1
+          ],
+          "probability": 0.017364501953125,
+          "sizes_low_to_high_ler": [
+            5,
+            13,
+            11,
+            9,
+            7
+          ]
+        },
+        {
+          "indices_low_to_high": [
+            0,
+            2,
+            3,
+            1,
+            4
+          ],
+          "probability": 0.016876220703125,
+          "sizes_low_to_high_ler": [
+            5,
+            9,
+            11,
+            7,
+            13
+          ]
+        },
+        {
+          "indices_low_to_high": [
+            0,
+            4,
+            2,
+            3,
+            1
+          ],
+          "probability": 0.016265869140625,
+          "sizes_low_to_high_ler": [
+            5,
+            13,
+            9,
+            11,
+            7
+          ]
+        }
+      ],
+      "qmc_scramble_replicates": 8,
+      "qmc_draws_per_replicate": 8192,
+      "classification": "unresolved",
+      "uniform_prior_sensitivity": {
+        "posterior_probability_decreasing": 0.004302978515625,
+        "posterior_probability_increasing": 0.011474609375,
+        "posterior_probability_other_order": 0.984222412109375,
+        "posterior_log_odds_increasing_vs_decreasing": 0.9808292530117262,
+        "posterior_log_odds_censoring": {
+          "relation": "equal",
+          "bound": 0.9808292530117262
+        },
+        "qmc_standard_error_decreasing": 0.00013793328002542876,
+        "qmc_standard_error_increasing": 0.0002484620334956579,
+        "qmc_decreasing_events": 282,
+        "qmc_increasing_events": 752,
+        "qmc_probability_resolution": 1.52587890625e-05,
+        "qmc_ordering_entropy_bits": 6.730616976562296,
+        "qmc_effective_ordering_count": 106.19830845193003,
+        "qmc_top_orderings": [
+          {
+            "indices_low_to_high": [
+              0,
+              3,
+              2,
+              4,
+              1
+            ],
+            "probability": 0.02001953125,
+            "sizes_low_to_high_ler": [
+              5,
+              11,
+              9,
+              13,
+              7
+            ]
+          },
+          {
+            "indices_low_to_high": [
+              0,
+              2,
+              3,
+              4,
+              1
+            ],
+            "probability": 0.01953125,
+            "sizes_low_to_high_ler": [
+              5,
+              9,
+              11,
+              13,
+              7
+            ]
+          },
+          {
+            "indices_low_to_high": [
+              0,
+              3,
+              4,
+              2,
+              1
+            ],
+            "probability": 0.0191192626953125,
+            "sizes_low_to_high_ler": [
+              5,
+              11,
+              13,
+              9,
+              7
+            ]
+          },
+          {
+            "indices_low_to_high": [
+              0,
+              2,
+              4,
+              3,
+              1
+            ],
+            "probability": 0.0175018310546875,
+            "sizes_low_to_high_ler": [
+              5,
+              9,
+              13,
+              11,
+              7
+            ]
+          },
+          {
+            "indices_low_to_high": [
+              0,
+              3,
+              2,
+              1,
+              4
+            ],
+            "probability": 0.017303466796875,
+            "sizes_low_to_high_ler": [
+              5,
+              11,
+              9,
+              7,
+              13
+            ]
+          },
+          {
+            "indices_low_to_high": [
+              0,
+              2,
+              3,
+              1,
+              4
+            ],
+            "probability": 0.0168304443359375,
+            "sizes_low_to_high_ler": [
+              5,
+              9,
+              11,
+              7,
+              13
+            ]
+          },
+          {
+            "indices_low_to_high": [
+              0,
+              4,
+              3,
+              2,
+              1
+            ],
+            "probability": 0.016815185546875,
+            "sizes_low_to_high_ler": [
+              5,
+              13,
+              11,
+              9,
+              7
+            ]
+          },
+          {
+            "indices_low_to_high": [
+              0,
+              4,
+              2,
+              3,
+              1
+            ],
+            "probability": 0.0163421630859375,
+            "sizes_low_to_high_ler": [
+              5,
+              13,
+              9,
+              11,
+              7
+            ]
+          }
+        ],
+        "qmc_scramble_replicates": 8,
+        "qmc_draws_per_replicate": 8192,
+        "classification": "unresolved"
+      }
+    }
+  ],
+  "crossing_statistic_used": false,
+  "evidence_boundary": "Four-cell five-distance sentinel analysis only; no grid fill or asymptotic boundary."
+}

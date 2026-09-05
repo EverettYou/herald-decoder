@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-27T19:05:42Z",
+  "audit": "Lab 003 Phase 2 q-skeleton completeness and recoverability",
+  "manifest": {
+    "path": "phase2-scout-manifest.json",
+    "expected_summary_shards": 42,
+    "q_values": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+    ],
+    "lattices": ["square", "honeycomb"],
+    "sizes": [5, 7, 9, 11],
+    "seeds": [520001, 520002, 520003, 520004, 520005],
+    "shots_per_seed": 200,
+    "expected_raw_records_per_square_shard": 48000,
+    "expected_raw_records_per_honeycomb_shard": 44000
+  },
+  "active_evidence": {
+    "summary_shards": 32,
+    "matching_projection": "posterior_llr",
+    "decoder_max_iterations": 40,
+    "uniform_recorded_numba_source_sha256": "8f903ad82c2e6c96022b09af99845b98ffb185c7b00a5dafb2edaae9a6c5a830",
+    "finalized_raw_pairs_with_matching_sha256": 26,
+    "recoverable_atomic_temp_raw_pairs_with_matching_sha256": 6,
+    "unrecoverable_or_hash_mismatched_raw_pairs": 0,
+    "recoverable_atomic_temp_files": [
+      {
+        "summary": "phase2-honeycomb-q000-discovery-1000-2026-08-27.json",
+        "temp_raw": ".phase2-honeycomb-q000-discovery-1000-2026-08-27-raw.jsonl.gz.tmp-5259",
+        "target_raw": "phase2-honeycomb-q000-discovery-1000-2026-08-27-raw.jsonl.gz",
+        "sha256": "8969a8b5f35e76b812b457c1dac27bee0c9b8a25d8123b323f213a9cceab7b02",
+        "bytes": 1826877
+      },
+      {
+        "summary": "phase2-honeycomb-q005-discovery-1000-2026-08-27.json",
+        "temp_raw": ".phase2-honeycomb-q005-discovery-1000-2026-08-27-raw.jsonl.gz.tmp-5261",
+        "target_raw": "phase2-honeycomb-q005-discovery-1000-2026-08-27-raw.jsonl.gz",
+        "sha256": "90c3ed40feb6516a084f6a211e08e1449a8cd750930feb90495c0c740b2d3d59",
+        "bytes": 1833772
+      },
+      {
+        "summary": "phase2-honeycomb-q010-discovery-1000-2026-08-27.json",
+        "temp_raw": ".phase2-honeycomb-q010-discovery-1000-2026-08-27-raw.jsonl.gz.tmp-5383",
+        "target_raw": "phase2-honeycomb-q010-discovery-1000-2026-08-27-raw.jsonl.gz",
+        "sha256": "9ad811f7a9dc45a9304560f7fb3ef47504aeba34d0d71eb0be5f33da82ae45d2",
+        "bytes": 1832206
+      },
+      {
+        "summary": "phase2-honeycomb-q015-discovery-1000-2026-08-27.json",
+        "temp_raw": ".phase2-honeycomb-q015-discovery-1000-2026-08-27-raw.jsonl.gz.tmp-5544",
+        "target_raw": "phase2-honeycomb-q015-discovery-1000-2026-08-27-raw.jsonl.gz",
+        "sha256": "4f327502b4a6d808bb1c6e556dcc48ef75defaa2eea35e582ab5ea192308b759",
+        "bytes": 1821051
+      },
+      {
+        "summary": "phase2-square-q015-discovery-1000-2026-08-27.json",
+        "temp_raw": ".phase2-square-q015-discovery-1000-2026-08-27-raw.jsonl.gz.tmp-5529",
+        "target_raw": "phase2-square-q015-discovery-1000-2026-08-27-raw.jsonl.gz",
+        "sha256": "6d0d43c4977a7964f4d29ae4765a36c958d4249c8d0a819653a7d55953cbe779",
+        "bytes": 2005092
+      },
+      {
+        "summary": "phase2-square-q020-discovery-1000-2026-08-27.json",
+        "temp_raw": ".phase2-square-q020-discovery-1000-2026-08-27-raw.jsonl.gz.tmp-5598",
+        "target_raw": "phase2-square-q020-discovery-1000-2026-08-27-raw.jsonl.gz",
+        "sha256": "30dc0cebef02f35441595f7c7392f81d1a42c66c00d651ab9bd4d834abd44f6e",
+        "bytes": 2004126
+      }
+    ]
+  },
+  "missing_active_shards": [
+    {"lattice": "honeycomb", "q": 0.2},
+    {"lattice": "square", "q": 0.25},
+    {"lattice": "honeycomb", "q": 0.25},
+    {"lattice": "square", "q": 0.3},
+    {"lattice": "honeycomb", "q": 0.3},
+    {"lattice": "square", "q": 0.35},
+    {"lattice": "honeycomb", "q": 0.35},
+    {"lattice": "square", "q": 0.4},
+    {"lattice": "honeycomb", "q": 0.4},
+    {"lattice": "square", "q": 0.45}
+  ],
+  "superseded_evidence": {
+    "directory": "results/superseded-source-98deb10d-2026-08-27",
+    "summary_shards": 19,
+    "raw_pairs_with_matching_sha256": 19,
+    "recorded_numba_source_sha256": "98deb10df6326f52c546a922fc52a0d205660a067fb31f2c9f1edc86d6eb61bf",
+    "covers_all_10_missing_active_shards": true,
+    "reason_excluded": "The parallel campaign crossed a Numba-kernel source change. These shards remain auditable but cannot be pooled with the active common-source set."
+  },
+  "current_source_state": {
+    "runner_sha256": "e05f252bda62c3b3d00f0d49b40409f667c724fc397096d8e69fa6e5c00f3ad9",
+    "lattice_model_sha256": "e7f2cd19f3534cf26f7b1e577861955703a4256aad5cb50560f1c023e2a8dd6f",
+    "decoder_sha256": "09899e2622c54019a67521f2524b8d7ab735d978940314a00eb175e4ab079ec0",
+    "damping_decoder_sha256": "c08bfab74ae17bb0ea9b8d3c1292e1b9c997258e07371fe16dbb7df65c3f900c",
+    "numba_kernels_sha256": "c2254c95600c4f5e3a8c2279d5686a99c8d3810a4bb0c814a4fd0cbf16c184cc",
+    "strictly_compatible_with_active_32": false,
+    "compatibility_note": "The active shards predate the strengthened five-file provenance schema and record an older runner and Numba hash. A current-code continuation would not form a single strict source cohort with them."
+  },
+  "scheduler_state": {
+    "status_file": ".tmp/lab3-phase2-scout/status.json",
+    "status_file_updated_at": "2026-08-27T17:30:58.439928+00:00",
+    "authoritative": false,
+    "reason": "Its completed, active, and queued lists predate later finished shards and no longer match durable artifacts."
+  },
+  "other_orphan_temp": {
+    "path": ".q1-square-l5-l13-crossing-refined-10000-2026-08-27-raw.jsonl.gz.tmp-9453",
+    "bytes_approx": 46000000,
+    "disposition": "not inspected or modified in this Phase 2 audit"
+  },
+  "transition": {
+    "classification": "independent reversible provenance diagnostic",
+    "compute_started": false,
+    "files_deleted_or_renamed": false,
+    "conclusion": "Phase 2 is not a complete 42-shard common-source campaign. It has 32 active corrected-LLR summaries, six exactly recoverable raw finalizations, and ten active gaps represented only by a superseded source cohort. Resuming or rerunning depends on the primary-decoder decision in Discussion thread-006."
+  }
+}

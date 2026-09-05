@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "status": "production_complete_analyzed_reported",
+  "phase": "R5a",
+  "registered_at": "2026-08-29T09:14:32Z",
+  "title": "Matched paper-lattice public-decoder transfer pilot",
+  "program_alignment": {
+    "central_question": "Does physically available D4 fusion information remain useful beyond the exact primitive fixture, and is the published public decoder able to convert that information into lower logical risk?",
+    "work_package": "WP2 intrinsic information to scalable-decoder bridge; Lab 004 R5 bounded reproduction pilot",
+    "epistemic_role": "finite-size transfer and falsification pilot",
+    "rationale": "R4.5c established exact fusion-information value but localized most primitive public O2 excess to the first herald-weight action. A matched paper-normalized public-decoder pilot is the cheapest test of whether either observation survives beyond the primitive channel. It is also the prerequisite for choosing a D4 inner decoder for Lab 005; the source-matched D(S3) schedule branch in Lab 005 can continue independently."
+  },
+  "question_and_hypotheses": {
+    "question": "On paper-normalized periodic D4 honeycomb lattices at L=2 and L=3, how do syndrome-only O0 MWPM and published heralded O2 MWPM compare on the same initial physical/fusion histories near the source-reported transition window?",
+    "h_information_transfer": "The heralded public policy has lower logical failure probability than syndrome-only decoding in at least part of the registered window, with a direction that does not reverse between L=2 and L=3.",
+    "h_primitive_gap_persists": "The heralded policy's first-stage logical-failure contribution remains large enough that its realized advantage is materially smaller than the primitive exact O2 information advantage.",
+    "null_or_negative": "The public heralded policy ties or underperforms syndrome-only decoding, or its apparent advantage reverses with size; this weakens transfer of the published heuristic but does not negate R4.5c's exact primitive information result.",
+    "unresolved_outcome": "Intervals are too wide or decoder failures/censoring exceed their gates; report the pilot as unresolved and do not add samples without a new registration."
+  },
+  "source_basis": {
+    "external": [
+      "Jing et al. (2025) report syndrome-only and intrinsically heralded D4 thresholds near 0.15860 and 0.20842 under their fixed-point channel; these values motivate the pilot window but are not project results.",
+      "Jing et al. (2026) motivates constrained optimization as a reference for general fusion rules but does not replace the 2025 public D4 PyMatching decoder."
+    ],
+    "project": [
+      "R0 verifies the paper normalization 6L^2 vertices, 9L^2 red edges, and K=27L^2.",
+      "R2 verifies both public decoder stages and their objectives on bounded matched records.",
+      "R4.5c establishes exact primitive O2 information gain and a first-action-dominated public-policy gap."
+    ],
+    "claim_boundary": "This pilot may report finite-size public-decoder logical risks and paired differences only. It cannot estimate a threshold, an asymptotic phase boundary, an exact larger-lattice Bayes risk, a noisy-measurement result, or a fault-tolerance claim."
+  },
+  "design": {
+    "lattice": "paper-normalized periodic coloured honeycomb",
+    "sizes": [2, 3],
+    "physical_error_rates": [0.14, 0.16, 0.18, 0.20, 0.22],
+    "public_policies": ["syndrome_only", "heralded"],
+    "initial_observations": ["O0 flux-only", "O2 flux-plus-initial-charge"],
+    "independent_unit": "one seeded complete physical/fusion trajectory",
+    "matching": "For every (L,p,seed), both public policies share the same physical error and initial fusion record. The policy-dependent second measurement is generated from the corresponding post-flux state with a deterministic seed stream; comparisons are paired by complete seed trajectory without pretending the second observations are identical.",
+    "production_histories_per_size_rate": 2000,
+    "planned_physical_histories": 20000,
+    "planned_public_decoder_evaluations": 40000,
+    "seed_salt": 222973953,
+    "seed_rule": "SeedSequence([222973953,L,round(10000p),seed]) for the physical draw and a separately derived decoder stream; integer seed is 0..1999 and no seed may be selected after outcomes are inspected.",
+    "recorded_outcomes": [
+      "final logical_error",
+      "terminal physical-winding failure",
+      "first-stage Boolean-union winding failure",
+      "second-stage charge-recovery failure",
+      "decoder exception or invalid-support status",
+      "wall time by policy and stage"
+    ]
+  },
+  "analysis": {
+    "primary_estimands": [
+      "logical failure probability for each (L,p,policy)",
+      "paired heralded-minus-syndrome-only logical-risk difference for each (L,p)",
+      "stage-resolved failure fractions within each policy",
+      "L=3 minus L=2 risk change for each fixed p and policy"
+    ],
+    "uncertainty": "Two-sided 90% Wilson intervals for each binomial risk and a two-sided 90% seed-cluster bootstrap interval for each paired policy difference and size difference. Resampling unit is the complete seeded trajectory; 10000 deterministic bootstrap replicates.",
+    "decision_rule": "Call a directional public-policy advantage at a cell only when the paired 90% interval for heralded-minus-syndrome-only risk excludes zero. Otherwise retain the numerical difference and label the cell unresolved. Do not fit or report a crossing or threshold.",
+    "sensitivity": "Repeat paired-difference summaries after separating terminal physical windings from decoder-contingent failures. Any conclusion that changes sign is reported as mechanism-dependent rather than robust.",
+    "no_interpretive_mapping": "The output is a finite-size risk table/curve with uncertainty and stage decomposition, not a categorical phase map."
+  },
+  "preflight": {
+    "matrix": {
+      "sizes": [2, 3],
+      "physical_error_rates": [0.16, 0.20],
+      "histories_per_size_rate": 50,
+      "policies": ["syndrome_only", "heralded"]
+    },
+    "required_gates": [
+      "all frozen source hashes match",
+      "paper-normalized vertex, edge, degree, period-rank, and K=3E invariants pass at both sizes",
+      "same (L,p,seed) produces identical physical error and initial fusion record in both public policies",
+      "every nonterminal public correction is syndrome faithful and every post-flux record satisfies its generated support constraints",
+      "stage statuses are exhaustive and mutually exclusive",
+      "no decoder exception, invalid support, future observation, or truth field enters a policy decision",
+      "projected production wall time is at most 30 minutes and projected resident memory is at most 4 GiB"
+    ],
+    "stop_rule": "Stop before production on any scientific, observation-boundary, source-stability, topology, support, syndrome-fidelity, status-accounting, wall-time, or memory failure. Preserve the failing witness."
+  },
+  "compute_budget": {
+    "maximum_preflight_histories": 200,
+    "maximum_production_histories": 20000,
+    "maximum_public_decoder_evaluations": 40000,
+    "maximum_preflight_wall_time_minutes": 10,
+    "maximum_production_wall_time_minutes": 30,
+    "maximum_resident_memory_gib": 4,
+    "new_lattice_sizes": [2, 3],
+    "no_l4_or_adaptive_refinement": true
+  },
+  "source_freeze": {
+    "scripts/run_r5a_public_decoder_preflight.py": "0d7d104f69460fc1b3c9c3dfe046f7e49a936b89e528037ce9be491130ad5072",
+    "scripts/analyze_r5a_public_decoder_pilot.py": "bc50f06c109f005d308a85f097d90fc9794f1bfe51ef07dd6d54d58af075f543",
+    "scripts/test_r5a_public_decoder_pilot.py": "3fb081765a2fb92e789922680f901fe9557b906cec4f4d56294794dc18f9d62e",
+    "scripts/d4_honeycomb.py": "0895892c00f1f629ec469d4f7b4e42fb8e83bc07666edbc3b8fc26a1f30eb869",
+    "scripts/d4_sampler.py": "6294b71a20a372526ae0d812b62d3f9aced2ced724709297b6900e54a72b26a1",
+    "scripts/d4_pipeline.py": "0e517f922fcd21b3c347be5f59d39b0640d260d11ddd314f408d18035c42e485",
+    "scripts/d4_matching.py": "1ad1c96af3bf98353c89820b68eb07183a49c954650c51218ca5c1b5c211739e",
+    "scripts/d4_postflux.py": "5435f1fcea89c9eccf369f8bfef44b23deea1ebe954b5e0f1dea5fce0cf12658",
+    "scripts/d4_charge.py": "c7b528d343abedb052e6bea7f5c29f65de2bab5dae96befa339763198bb17e9a",
+    "results/r4-corrected-sequential-policy-audit.json": "f7b007ac9dc784b125ead19829f3b6acb460d4bbc3f628f924faadff5f9f7878"
+  },
+  "outputs": {
+    "preflight_result": "results/r5a-paper-lattice-public-decoder-preflight.json",
+    "production_records": "results/r5a-paper-lattice-public-decoder-sufficient-statistics.json",
+    "analysis_result": "results/r5a-paper-lattice-public-decoder-analysis.json",
+    "report": "results/r5a-paper-lattice-public-decoder-analysis.md"
+  },
+  "preflight_result": {
+    "completed_at": "2026-08-29T09:27:00Z",
+    "histories": 200,
+    "public_decoder_evaluations": 400,
+    "wall_seconds": 1.74124295898946,
+    "projected_production_wall_seconds": 174.12429589894597,
+    "maximum_rss_gib": 0.080718994140625,
+    "all_gates_passed": true,
+    "failure_count": 0,
+    "evidence": "results/r5a-paper-lattice-public-decoder-preflight.json"
+  },
+  "production_activation": {
+    "authorized_at": "2026-08-29T09:28:00Z",
+    "source_freeze": {
+      "scripts/run_r5a_public_decoder_pilot.py": "7f8e91a56cdb20ed683ff38ef272732bec40398d7db005fd16758f4507113bb7",
+      "scripts/analyze_r5a_public_decoder_pilot.py": "bc50f06c109f005d308a85f097d90fc9794f1bfe51ef07dd6d54d58af075f543",
+      "scripts/test_r5a_public_decoder_runner.py": "e70951ac882500b939ce47667b8c0f7cba49b643c405d2df87a0fa7c6d2b150c",
+      "results/r5a-paper-lattice-public-decoder-preflight.json": "3604633f075b70f4b40f343c34cf952125e206ce824c1bc447dd61a12b9ffa36"
+    },
+    "execution_rule": "Run exactly the registered 20000 histories and 40000 public decoder evaluations, then run the frozen analyzer. Stop on any source-hash, pipeline-invariant, paired-record, count, output-integrity, wall-time, or memory failure.",
+    "claim_rule": "Report only finite-size public-policy risks, paired differences, size changes, and stage decomposition with the registered 90% intervals."
+  },
+  "analysis_amendment": {
+    "recorded_at": "2026-08-29T09:40:00Z",
+    "trigger": "Pre-promotion completeness review found that the first analyzer emitted policy differences but omitted the registered size-difference estimand and terminal-winding sensitivity.",
+    "correction": "Add L=3 minus L=2 risk differences using independent complete-trajectory bootstrap resampling within each size, because physical seed streams are intentionally size-specific; also report the paired policy difference after excluding shared terminal physical-winding histories.",
+    "affected_artifacts": "The raw 40000-record production cohort is unchanged and remains valid. The first analysis JSON is overwritten before promotion; no scientific claim used it.",
+    "selection_boundary": "The correction follows the preregistered estimands and sampling independence, not observed effect direction. No grid, sample, confidence level, decision threshold, or claim boundary changes."
+  },
+  "production_result": {
+    "completed_at": "2026-08-29T09:38:30Z",
+    "histories": 20000,
+    "public_decoder_evaluations": 40000,
+    "wall_seconds": 174.47887337498832,
+    "raw_record_count": 40000,
+    "raw_output": "results/r5a-paper-lattice-public-decoder-pilot.jsonl.gz",
+    "retained_output": "results/r5a-paper-lattice-public-decoder-sufficient-statistics.json",
+    "retention_note": "The original gzip SHA-256 remains recorded for provenance; trajectories were removed after exact reconciliation to cell, stage, batch, and paired-policy counts.",
+    "raw_sha256": "8993f8126f3184266dca1d14d7816ae3d42638df4c9bf0f9093f7c91a39901a5",
+    "analysis_output": "results/r5a-paper-lattice-public-decoder-analysis.json",
+    "analysis_sha256": "9a4cb2e3a19c18794759c94ab5f2dc24602a1cd999be806ed741b5a4b116e22c",
+    "report_output": "results/r5a-paper-lattice-public-decoder-analysis.md",
+    "report_sha256": "6c18e875d74e93f0a18b770d760f6f79df4697cc8747fb229d4cab18d40c20d9",
+    "validation": "gzip stream readable; exactly 40000 records, 20 policy cells, 10 paired policy differences, and 10 independent size differences; no adaptive sampling or threshold fit"
+  },
+  "next_action": "Register the validated D4 public spatial-policy interface consumed by Lab 005, preserving Lab 005 causal/noisy observation boundaries; keep the R6 matched belief-decoder comparison as a separate scalable-algorithm branch."
+}

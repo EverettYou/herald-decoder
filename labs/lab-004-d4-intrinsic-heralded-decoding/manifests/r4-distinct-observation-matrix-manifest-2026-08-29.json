@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "status": "registered_ready",
+  "phase": "R4.2",
+  "purpose": "Exhaust the complete distinct nonwinding observation set on the primitive 12-edge D4 fixture and quantify exact logical-sector inference across a small prior matrix.",
+  "epistemic_role": "Bounded exact intrinsic-information audit; not a finite-size performance estimate, threshold, or scalable decoder result.",
+  "lattice": {
+    "constructor": "periodic_honeycomb(2)",
+    "edge_count": 12,
+    "physical_error_masks": 4096,
+    "maximum_edges": 20
+  },
+  "source_freeze": {
+    "scripts/d4_r4.py": "18b2bc62477b0e0d66391af3d52b77051f9456d7cdc24fdc483061b46872a94e",
+    "scripts/d4_r3.py": "1a6d5c6114e639dc7dae9424ac86d4647662d2247bd19e5a72b4bc1307f3fa57",
+    "scripts/d4_sampler.py": "6294b71a20a372526ae0d812b62d3f9aced2ced724709297b6900e54a72b26a1",
+    "scripts/d4_honeycomb.py": "0895892c00f1f629ec469d4f7b4e42fb8e83bc07666edbc3b8fc26a1f30eb869",
+    "results/r4-reference-invariance-sector-sum-audit.json": "6c96d95a7765742db60913940504b31f838557fd7e052d94cb4548e409164393"
+  },
+  "prior_matrix": [0.1, 0.3, 0.5, 0.6],
+  "prior_rationale": "p=0.1 and p=0.6 preserve the exact R3/R4 semantic fixtures; p=0.3 probes the sparse-error interior; p=0.5 removes Bernoulli weight preference and isolates the conditioned observation likelihood.",
+  "observation_enumeration": {
+    "nonwinding_rule": "For every nonwinding physical error mask, enumerate every charge assignment on exactly the degree-two internal vertices that satisfies all geometry-derived parity constraints. The observation key is the complete flux vector plus the complete {-1,0,1} charge vector.",
+    "conditional_likelihood": "Every allowed record has P(s|E)=2^(C-N_internal); the allowed probabilities for each fixed nonwinding E must sum to one.",
+    "deduplication": "Deduplicate identical observation keys before posterior analysis while retaining the complete compatible error-mask set.",
+    "terminal_winding_rule": "Physical masks with a nontrivial winding component remain terminal ground-state-relative logical failures. They receive no fabricated charge record and are excluded from conditioned nonwinding posteriors.",
+    "candidate_observation_pair_guard": 1000000
+  },
+  "analysis": {
+    "sector_reference": "Lexicographically first compatible error mask for each observation; reference relabeling may change sector names but not evidence multisets or risks.",
+    "configuration_map_comparison": "Compare the set of sectors occupied by all maximum-weight configurations with the set of maximum-evidence logical sectors. Report exact singleton agreement, set overlap, and forced disjoint disagreement; also report the lexicographic configuration-MAP convention separately.",
+    "weighting": "Report both unweighted structural counts over distinct observations and observation-probability-weighted distributions at each p. Weighted nonwinding summaries are normalized by nonterminal mass.",
+    "observables": [
+      "distinct observation count",
+      "compatible candidate count",
+      "logical-sector count",
+      "conditional logical entropy",
+      "Bayes logical failure probability",
+      "top-two sector log2-evidence gap",
+      "configuration-MAP versus sector-Bayes agreement class",
+      "terminal winding prior mass",
+      "combined ground-state-relative Bayes failure probability"
+    ]
+  },
+  "validation": {
+    "required": [
+      "all 4096 physical masks are classified exactly once",
+      "the terminal winding-mask count reproduces the R3.5 value 123",
+      "allowed observation likelihoods normalize to one for every nonwinding physical mask",
+      "terminal prior mass plus summed nonwinding observation evidence equals one at every registered p",
+      "every sector posterior normalizes and has Bayes risk in [0,1]",
+      "R4.0 exact fractions and both R4.1 invariance/summation fixtures are reproduced",
+      "an independently selected observation subset agrees with exact_conditioned_logical_posterior",
+      "no winding-sector charge likelihood or absolute-sector label is invented"
+    ]
+  },
+  "outputs": {
+    "machine_result": "results/r4-distinct-observation-matrix-audit.json",
+    "report": "results/r4-distinct-observation-matrix-audit.md"
+  },
+  "compute_budget": {
+    "new_stochastic_samples": 0,
+    "physical_masks": 4096,
+    "maximum_candidate_observation_pairs": 1000000,
+    "stop_rule": "Stop after one exact primitive enumeration, registered prior matrix, validation suite, machine-readable audit, and report update; do not increase lattice size or launch LER sampling."
+  }
+}

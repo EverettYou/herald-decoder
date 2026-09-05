@@ -1,0 +1,17 @@
+{
+  "stage": "active",
+  "created": "2026-09-04",
+  "updated": "2026-09-05",
+  "parents": ["lab-002-herald-belief-matching"],
+  "summary": "SU(N) full-irrep likelihood, accelerated belief matching, and a U(1)/SU(2)/SU(3) workbench comparing m-only with (m,R) inference.",
+  "current_focus": "A8 final-correction-v2 LER reacquisition is active for complete interior (m,R) on honeycomb/square and U(1)/SU(2)/SU(3). Pre-correction A7/A8 LER aggregates are invalid because they incorrectly counted BP tolerance nonconvergence as logical failure.",
+  "next_action": "Complete the six 20,000-shot/cell A8 v2 scans. Score only final residual-syndrome consistency and logical parity; retain BP convergence solely as a companion numerical diagnostic.",
+  "question": "How do the interior Z2 detector syndrome m and complete interior symmetry irrep R jointly determine p(e|m,R) for oriented fundamental/antifundamental pair errors when rough boundaries are unmeasured?",
+  "results": [
+    {"id": "sun-fusion-herald-belief-propagation", "title": "SU(N) full-irrep belief propagation", "summary": "The canonical method page for the (m,R) observation model, directed and hidden-orientation channels, sum-product and min-sum inference, damping, posterior LLRs, and the R-induced error-log-odds shift.", "wiki_page": "methods/sun-fusion-herald-belief-propagation", "presentation": "page"},
+    {"id": "small-graph-exact-vs-bp", "kind": "data", "format": "json", "title": "SU(3) exact posterior versus BP", "summary": "Matched tree and plaquette inference comparison.", "path": "results/small-graph-exact-vs-bp.json", "presentation": "download"},
+    {"id": "a1-numba-belief-matching", "kind": "data", "format": "json", "title": "A1 accelerated SU(3) belief matching", "summary": "Correctness, syndrome fidelity, and warmed Python/scalar-Numba/batched-Numba throughput evidence.", "path": "results/a1-numba-belief-matching.json", "presentation": "result"},
+    {"id": "fusion-belief-matching-workbench", "kind": "artifact", "format": "interactive", "title": "Two-dimensional full-irrep belief matching", "summary": "On canonical square and honeycomb lattices, compare P(error|m) with P(error|m,R), inspect the signed error-LLR shift from R, convergence diagnostics, and full-irrep correction.", "path": "figures/fusion-belief-matching.html", "presentation": "page"},
+    {"id": "a5b-two-dimensional-convergence-scan", "kind": "data", "format": "json", "title": "Two-dimensional BP convergence scan", "summary": "Frozen 128-observation square/honeycomb scan exposing geometry-, size-, and group-dependent convergence failures.", "path": "results/a5b-two-dimensional-convergence-scan.json", "presentation": "download"}
+  ]
+}

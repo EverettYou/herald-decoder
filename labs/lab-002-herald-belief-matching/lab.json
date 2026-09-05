@@ -1,0 +1,75 @@
+{
+  "stage": "complete",
+    "summary": "The phenomenological belief-matching backend is frozen on synchronous damped Numba BP and posterior-LLR PyMatching; D4 adaptation now begins through Lab 004 R6A.",
+    "current_focus": "Closed at the corrected-LLR evidence boundary through C8; the frozen backend is handed off to Lab 003 and Lab 004.",
+    "next_action": "No further Lab 002 transitions. Use the frozen posterior-LLR/damped-Numba backend as a downstream dependency.",
+  "created": "2026-08-26",
+    "updated": "2026-08-29",
+  "parents": [
+    "lab-001-string-herald-visualization"
+  ],
+  "motivation": "Use the fusion-remnant herald as a probabilistic vertex factor and test whether posterior edge reweighting improves a mature PyMatching back end.",
+  "question": "How far is herald-aware BP plus PyMatching from syndrome-only PyMatching and from exact logical MAP on enumerable graphs?",
+  "phase": "Convergence remediation complete through C8",
+  "status": "Closed by researcher at the C8 evidence boundary (2026-08-29). Cached products fail equivalence on 13/64 square and 15/64 honeycomb observations, including one correction and three iteration disagreements, so timing was skipped. Synchronous Numba remains the production default; residual priority remains research-only convergence evidence.",
+  "report_contract": {
+    "max_lines": 500,
+    "max_evidence_links": 12
+  },
+  "results": [
+    {
+      "id": "herald-aware-belief-matching-note",
+      "title": "Herald-aware belief matching",
+      "summary": "A probabilistic decoder that converts syndrome and herald observations into posterior-weighted PyMatching.",
+      "wiki_page": "methods/herald-aware-belief-matching"
+    },
+    {
+      "id": "belief-matching-workbench",
+      "kind": "artifact",
+      "format": "interactive",
+      "title": "Belief-matching inference workbench",
+      "summary": "Inspect the herald-aware soft posterior, herald-induced belief shifts, and the final belief-matching correction against simulated ground truth.",
+      "path": "figures/herald-belief-matching.html",
+      "presentation": "page"
+    },
+    {
+      "id": "bp-convergence-trace-seed12",
+      "kind": "figure",
+      "format": "image",
+      "title": "BP convergence bottleneck trace",
+      "summary": "Measurement-only iteration trace for square L=9, p=0.20, q=1, seed=12; shows slow residual decay through iteration 80.",
+      "path": "figures/convergence-trace-seed12.png",
+      "presentation": "page"
+    }
+  ],
+  "frontier": [
+    "On the deterministic square L=9, p=0.20, q=1, seed=12 sample, which factor vertices and edges dominate the late-iteration message residual, and is the failure a fixed residual floor or an oscillatory cycle?",
+    "Only after Phase C0 may one bounded convergence intervention be preregistered; increasing max_iterations alone does not count as improved convergence.",
+    "Regenerate the affected Lab 002 matched logical comparisons with posterior LLR before claiming herald benefit or Relay-versus-damping LER differences.",
+    "Separate still-usable BP-only convergence, calibration, and runtime diagnostics from invalidated MWPM logical outcomes.",
+    "The q-by-p finite-size operational boundary is now owned by Lab 003.",
+    "A new memory-assisted BP design would require a separate, pre-registered ablation after the retained BP-only convergence and calibration diagnostics."
+  ],
+  "resolved": [
+    "C8 cached edge products fail the registered equivalence gate: 13 square and 15 honeycomb observations fail, including one correction and three iteration disagreements. Timing is skipped and the candidate is rejected.",
+    "C7 preallocated-buffer residual priority is bit-identical to the validated stable-sort kernel on both C6 streams but slower by 0.85 ms on square and 0.053 ms on honeycomb, so it remains disabled.",
+    "C6 fresh end-to-end confirmation reproduces the square convergence gain (+15.6 points) but finds stable-sort residual priority slower on square by 1.63 ms and honeycomb by 0.29 ms. All corrections are syndrome faithful and neither geometry has a paired logical rescue or harm.",
+    "C5 stable residual sorting preserves the scan schedule bit for bit on 64 square observations and reduces mean compiled inference time by 2.01 ms (95% interval -4.27 to -0.29); it has not yet been compared with synchronous Numba under one common protocol.",
+    "The accelerated 15-test LLR regression preflight passes. It locks signed LLR weights in both decoder classes and the square L=9, p=0.20, q=1, seed=12 right-chain selection on edges 123-126.",
+    "Phase C0 reproduced the seed-12 trace bit-identically with the production Python recurrence. The max message residual decays from 1.32e-2 at iteration 20 to 4.69e-3 at 40 and 2.16e-3 at 80, far above 1e-8; the two-step residual is about twice the one-step residual, so this sample shows slow drift rather than a period-2 cycle.",
+    "The convergence investigation begins with a measurement-only trace of the frozen damping recurrence: global max message delta, per-factor and per-edge residuals, belief drift, factor-variable marginal inconsistency, and period-2 oscillation amplitude by iteration. It changes no decoder output and authorizes no parameter sweep.",
+    "The old -log P(error) projection was an incorrect MWPM interface. All Lab 002 LER, rescue/introduction, and logical-comparison conclusions produced with weight_rule=negative_log are invalidated; historical files are provenance only.",
+    "The unqualified herald is a fusion-remnant vertex witness, not an erasure/loss location.",
+    "The syndrome-only baseline and every reweighted completion use the maintained pymatching package; this Lab does not implement MWPM.",
+    "A syndrome-BP plus PyMatching ablation separates BP-only gains from herald-information gains.",
+    "Tiny graphs use exact posterior enumeration as a logical-class accuracy oracle.",
+    "The first benchmark set p_m=p_h=0, but every negative-log MWPM logical outcome from it is invalidated.",
+    "The interactive workbench exposes observation, posterior, herald-induced posterior shift, correction-versus-truth attribution, proper soft scores, syndrome-density diagnostics, recurrence diagnostics, and per-edge inference values on one deterministic sample.",
+    "Soft BP does not change syndrome density or apply a correction; its standalone contribution is evaluated through proper posterior scores, while logical contribution is evaluated through matched decoder ablations.",
+    "Operational p_eff is defined by inverting the finite-size static-MWPM logical-error curve rather than by using gauge-dependent residual edge density.",
+    "The unified Lab 002 decoder and interactive artifact use recurrence_mode=damping by researcher direction; recurrence_mode=memory is an explicit experimental mode. The old negative-log A/B cannot establish their relative corrected-LLR logical performance.",
+    "The retained memory-recurrence evidence is BP-only: under the tested configuration it worsened proper posterior scores, selected no converged candidate, and cost more runtime. Its old LER comparisons are invalid."
+  ],
+  "blockers": [],
+  "promotion_candidates": []
+}

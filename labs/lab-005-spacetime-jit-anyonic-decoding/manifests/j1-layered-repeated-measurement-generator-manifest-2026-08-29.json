@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "status": "G-generic-preflight implemented and verified; R/E remain separate",
+  "registered_at": "2026-08-29T11:30:00Z",
+  "verified_at": "2026-08-29T11:43:00Z",
+  "title": "Layered repeated-measurement history generator preflight",
+  "scientific_correction": "There is no single source-matched generator that simultaneously reproduces Lyons-Brown D(S3) local circuit noise and supplies noisy D4 intrinsic-herald labels. The former is a source-reproduction layer; the latter is a project extension beyond Jing et al.'s perfect-measurement D4 analysis.",
+  "layers": [
+    {
+      "id": "R-ds3-source",
+      "role": "source reproduction",
+      "scope": "Lyons-Brown local circuit faults, repeated D(S3)/D(Z3) stabilizer measurements, syndrome detectors, gauging-boundary consistency, and computational-anyon motion",
+      "status": "not implemented",
+      "forbidden_claim": "No noisy D4 herald label may be attributed to this source layer without a derived translation."
+    },
+    {
+      "id": "G-generic-preflight",
+      "role": "schema and probability preflight",
+      "scope": "Independent binary edge-data faults, binary syndrome-readout flips, and a categorical herald confusion channel on supplied truth trajectories",
+      "status": "implemented and verified",
+      "forbidden_claim": "This phenomenological layer is not the Lyons-Brown circuit model and is not a physical D4 reproduction."
+    },
+    {
+      "id": "E-d4-herald-extension",
+      "role": "project extension",
+      "scope": "A future derived D4 spacetime channel connecting repeated fusion-remnant labels to the validated Lab 004 observation-only spatial decoder",
+      "status": "blocked on generic schema and D4 spacetime derivation",
+      "forbidden_claim": "Jing et al.'s perfect-measurement threshold results cannot be reused as noisy-herald evidence."
+    }
+  ],
+  "generic_registered_model": {
+    "data_faults": "independent Bernoulli edge flips between adjacent readout rounds with rate p_data, propagated through a supplied binary check-edge incidence matrix",
+    "syndrome_readout": "independent Bernoulli check-readout flips with rate p_syndrome",
+    "herald_alphabet": [
+      "none",
+      "blue",
+      "green"
+    ],
+    "herald_confusion_matrix": {
+      "truth_none": {
+        "observed_none": "1-p_fp",
+        "observed_blue": "p_fp/2",
+        "observed_green": "p_fp/2"
+      },
+      "truth_blue": {
+        "observed_none": "p_fn",
+        "observed_blue": "1-p_fn-p_confuse",
+        "observed_green": "p_confuse"
+      },
+      "truth_green": {
+        "observed_none": "p_fn",
+        "observed_blue": "p_confuse",
+        "observed_green": "1-p_fn-p_confuse"
+      }
+    },
+    "parameter_domain": "0<=p_data,p_syndrome,p_fp,p_fn,p_confuse<=1 and p_fn+p_confuse<=1",
+    "random_streams": "one explicit master seed expanded into distinct deterministic data, syndrome, and herald substreams",
+    "matched_history": "sample one complete history per trial and pass the same immutable result/digest to every schedule branch"
+  },
+  "acceptance_tests": [
+    "every confusion-matrix row is nonnegative and sums to one throughout the registered parameter domain",
+    "p_fp changes only none-to-labelled observations; p_fn changes only labelled-to-none observations; p_confuse changes only blue/green label identity",
+    "p_data=0 and p_syndrome=0 recover the supplied truth trajectory and detector identity",
+    "one syndrome-readout fault creates the expected adjacent-time detector pair",
+    "separate seeded substreams make channel replay bit identical and prevent one parameter from perturbing unrelated sampled masks",
+    "causal prefixes expose no future readouts and no truth/fault sidecars",
+    "all four scheduling branches bind to the same generated-history digest",
+    "categorical herald truth/readout is preserved without silently coercing label confusion to a Boolean field"
+  ],
+  "source_and_interface_hashes": {
+    "lyons_source_sha256": "9d7473adeaffbb4065e1f279d5dff8a5911483f5773101bba506b66ba532d6ea",
+    "jing_intrinsic_herald_source_sha256": "7a17c3d3a743e3dec4266b64d0321a6af7a5eeacfab67e42b9ec77d30b65a2ac",
+    "binary_record_sha256": "0d8204a7734295fe7defd8822f982d84a5a5a604108bb6c9f6145b7ea7454722",
+    "shared_harness_sha256": "64ac262f3401f04dbb7cb27d095b675abe37a46ccf0031b81c3e188cf40424da",
+    "generic_history_sha256": "6b2509ed4619ff2a7e4610a2262874abb94fb961c384f7ca6d25407c8f05f8d4",
+    "generic_history_tests_sha256": "10e55d8702148e5d9e46cbcf122cd6115e8e338ea83538548c8a333b128f1f09"
+  },
+  "verification": {
+    "focused_tests": "8/8 passed",
+    "lab_tests": "75/75 passed",
+    "evidence": "results/j1-generic-history-generator-preflight-2026-08-29.md",
+    "data_status": "no pilot samples or logical-performance data produced"
+  },
+  "claim_boundary": "The next implementation is a generic probability/schema preflight only. It will not reproduce D(S3) circuit noise, derive a D4 spacetime herald channel, generate logical-performance evidence, or establish a threshold or fault tolerance.",
+  "next_gate": "Use the registered research workflow to define the smallest prerequisite matrix for R-ds3-source and E-d4-herald-extension. Keep the branches distinct and do not launch a performance pilot until one branch supplies physical correction and logical-scoring semantics."
+}

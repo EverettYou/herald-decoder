@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "audited_at": "2026-08-29T13:02:05Z",
+  "target": "scripts/baseline_harness.py",
+  "target_sha256": "64ac262f3401f04dbb7cb27d095b675abe37a46ccf0031b81c3e188cf40424da",
+  "diagnostic": "two deterministic histories identical through the immediate invocation round and different only afterward",
+  "result": {
+    "same_prefix_digest": true,
+    "same_immediate_request_digest": false,
+    "request_digests": [
+      "f2a8bf0b074a08f8a12f3f583a4a82195c7699e4f8b85452edd2354fcb671668",
+      "004b21b002161502518569164d77eef9c142f7608d4e1216549746bec0b84d0b"
+    ]
+  },
+  "cause": "InnerDecoderRequest contains the full visible-history digest and request_digest includes it for causal as well as offline branches.",
+  "affected_claim": "causal inner-decoder request/response isolation in the J2 shared-history preflight",
+  "unaffected_evidence": [
+    "the underlying record is not mutated by schedule branches",
+    "registered branch invocation timing on the original deterministic fixture",
+    "offline_full_history remains explicitly noncausal",
+    "truth fields are absent from the callback schema"
+  ],
+  "downstream_status": "typed E1 schedule integration and every stochastic schedule comparison remain blocked until replacement causal invariance evidence passes"
+}

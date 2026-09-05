@@ -1,0 +1,145 @@
+{
+  "status": "r5a_preflight_passed",
+  "manifest": "manifests/r5a-paper-lattice-public-decoder-pilot-manifest-2026-08-29.json",
+  "histories": 200,
+  "public_decoder_evaluations": 400,
+  "source_checks": [
+    {
+      "path": "scripts/run_r5a_public_decoder_preflight.py",
+      "expected": "0d7d104f69460fc1b3c9c3dfe046f7e49a936b89e528037ce9be491130ad5072",
+      "actual": "0d7d104f69460fc1b3c9c3dfe046f7e49a936b89e528037ce9be491130ad5072",
+      "passed": true
+    },
+    {
+      "path": "scripts/analyze_r5a_public_decoder_pilot.py",
+      "expected": "820018eb8c283972400943e5096573c48beacc9a93d811b7f19c5a9daeddd74d",
+      "actual": "820018eb8c283972400943e5096573c48beacc9a93d811b7f19c5a9daeddd74d",
+      "passed": true
+    },
+    {
+      "path": "scripts/test_r5a_public_decoder_pilot.py",
+      "expected": "3465c574e9a393c4eeaf5e2a6edcbb9b9f86c2ec20bcfd761404c0e459fe2bfb",
+      "actual": "3465c574e9a393c4eeaf5e2a6edcbb9b9f86c2ec20bcfd761404c0e459fe2bfb",
+      "passed": true
+    },
+    {
+      "path": "scripts/d4_honeycomb.py",
+      "expected": "0895892c00f1f629ec469d4f7b4e42fb8e83bc07666edbc3b8fc26a1f30eb869",
+      "actual": "0895892c00f1f629ec469d4f7b4e42fb8e83bc07666edbc3b8fc26a1f30eb869",
+      "passed": true
+    },
+    {
+      "path": "scripts/d4_sampler.py",
+      "expected": "6294b71a20a372526ae0d812b62d3f9aced2ced724709297b6900e54a72b26a1",
+      "actual": "6294b71a20a372526ae0d812b62d3f9aced2ced724709297b6900e54a72b26a1",
+      "passed": true
+    },
+    {
+      "path": "scripts/d4_pipeline.py",
+      "expected": "0e517f922fcd21b3c347be5f59d39b0640d260d11ddd314f408d18035c42e485",
+      "actual": "0e517f922fcd21b3c347be5f59d39b0640d260d11ddd314f408d18035c42e485",
+      "passed": true
+    },
+    {
+      "path": "scripts/d4_matching.py",
+      "expected": "1ad1c96af3bf98353c89820b68eb07183a49c954650c51218ca5c1b5c211739e",
+      "actual": "1ad1c96af3bf98353c89820b68eb07183a49c954650c51218ca5c1b5c211739e",
+      "passed": true
+    },
+    {
+      "path": "scripts/d4_postflux.py",
+      "expected": "5435f1fcea89c9eccf369f8bfef44b23deea1ebe954b5e0f1dea5fce0cf12658",
+      "actual": "5435f1fcea89c9eccf369f8bfef44b23deea1ebe954b5e0f1dea5fce0cf12658",
+      "passed": true
+    },
+    {
+      "path": "scripts/d4_charge.py",
+      "expected": "c7b528d343abedb052e6bea7f5c29f65de2bab5dae96befa339763198bb17e9a",
+      "actual": "c7b528d343abedb052e6bea7f5c29f65de2bab5dae96befa339763198bb17e9a",
+      "passed": true
+    },
+    {
+      "path": "results/manifests/r4-corrected-sequential-policy-audit.json",
+      "expected": "f7b007ac9dc784b125ead19829f3b6acb460d4bbc3f628f924faadff5f9f7878",
+      "actual": "f7b007ac9dc784b125ead19829f3b6acb460d4bbc3f628f924faadff5f9f7878",
+      "passed": true
+    }
+  ],
+  "topology_checks": [
+    {
+      "size": 2,
+      "vertices": 24,
+      "edges": 36,
+      "degree_values": [
+        3
+      ],
+      "period_rank": 2,
+      "forcing_scale": 108,
+      "expected_vertices": 24,
+      "expected_edges": 36,
+      "expected_forcing_scale": 108,
+      "passed": true
+    },
+    {
+      "size": 3,
+      "vertices": 54,
+      "edges": 81,
+      "degree_values": [
+        3
+      ],
+      "period_rank": 2,
+      "forcing_scale": 243,
+      "expected_vertices": 54,
+      "expected_edges": 81,
+      "expected_forcing_scale": 243,
+      "passed": true
+    }
+  ],
+  "failure_counts": {},
+  "representative_failures": [],
+  "status_counts": {
+    "heralded:decoded": 166,
+    "heralded:flux_union_logical_failure": 34,
+    "syndrome_only:decoded": 129,
+    "syndrome_only:flux_union_logical_failure": 71
+  },
+  "cell_stage_counts": {
+    "L2:p0.16:heralded:decoded_success": 43,
+    "L2:p0.16:heralded:first_stage_union_winding": 6,
+    "L2:p0.16:heralded:second_stage_logical_failure": 1,
+    "L2:p0.16:syndrome_only:decoded_success": 41,
+    "L2:p0.16:syndrome_only:first_stage_union_winding": 9,
+    "L2:p0.20:heralded:decoded_success": 39,
+    "L2:p0.20:heralded:first_stage_union_winding": 8,
+    "L2:p0.20:heralded:second_stage_logical_failure": 3,
+    "L2:p0.20:syndrome_only:decoded_success": 27,
+    "L2:p0.20:syndrome_only:first_stage_union_winding": 20,
+    "L2:p0.20:syndrome_only:second_stage_logical_failure": 3,
+    "L3:p0.16:heralded:decoded_success": 41,
+    "L3:p0.16:heralded:first_stage_union_winding": 7,
+    "L3:p0.16:heralded:second_stage_logical_failure": 2,
+    "L3:p0.16:syndrome_only:decoded_success": 33,
+    "L3:p0.16:syndrome_only:first_stage_union_winding": 17,
+    "L3:p0.20:heralded:decoded_success": 36,
+    "L3:p0.20:heralded:first_stage_union_winding": 13,
+    "L3:p0.20:heralded:second_stage_logical_failure": 1,
+    "L3:p0.20:syndrome_only:decoded_success": 23,
+    "L3:p0.20:syndrome_only:first_stage_union_winding": 25,
+    "L3:p0.20:syndrome_only:second_stage_logical_failure": 2
+  },
+  "resource": {
+    "preflight_wall_seconds": 1.74124295898946,
+    "projected_production_wall_seconds": 174.12429589894597,
+    "maximum_rss_gib": 0.080718994140625,
+    "registered_wall_limit_seconds": 1800.0,
+    "registered_rss_limit_gib": 4.0
+  },
+  "gates": {
+    "source_hashes": true,
+    "paper_topology": true,
+    "matched_initial_records_and_pipeline_invariants": true,
+    "resource_projection": true,
+    "all_passed": true
+  },
+  "claim_boundary": "Structural/resource preflight only. No production LER, paired risk inference, crossing, threshold, phase, noisy-measurement, or fault-tolerance result."
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "status": "verified, analyzed, and reported",
+  "registered_at": "2026-08-29T17:57:00Z",
+  "title": "R6J multi-observation mini-bucket exact-reference validation",
+  "rigor_tier": "bounded deterministic validation",
+  "program_alignment": {
+    "central_question": "Are R6I mini-bucket marginal errors and cancellations stable across the existing exact primitive observation/prior cohort?",
+    "scientific_layer": "WP3 scalable decoding",
+    "epistemic_role": "prerequisite validation before selecting GBP or tensor approximation",
+    "upstream_dependencies": ["R6D exact factorization", "R6I verified mini-bucket implementation"],
+    "downstream_gate": "do not select an approximation family or run correction/LER until accuracy is tested across matched exact observations"
+  },
+  "research_basis": {
+    "method_source": "Dechter and Rish, Mini-buckets: A general scheme for bounded inference, JACM 50 (2003), DOI 10.1145/636865.636866",
+    "partition_sensitivity_source": "Rollon and Dechter, New Mini-Bucket Partitioning Heuristics for Bounding the Probability of Evidence, AAAI 2010",
+    "project_source": "R6I showed exact ceilings but one-observation cancellation and nonmonotone marginal error"
+  },
+  "question": {
+    "H1": "the R6I auxiliary-first exact pseudo-marginal cancellation is not robust across all observation strata and both priors",
+    "H2": "increasing i-bound tightens evidence bounds in every matched branch but does not guarantee monotone marginal-error improvement in every condition",
+    "H3": "no single representation/order branch achieves max marginal error <=1e-2 on every condition at i<=14",
+    "falsification": "any evidence-bound violation or exact-ceiling mismatch above 1e-10 rejects the implementation or cohort"
+  },
+  "matrix": {
+    "observations": ["minimum_multi", "lower_stratum", "upper_stratum", "maximum"],
+    "physical_error_rates": [0.10, 0.30],
+    "representations": ["r6d_unclustered", "r6f_bounded_superfactor"],
+    "orders": ["global_min_fill", "auxiliary_first_min_fill"],
+    "i_bounds": [10, 14, 18, 20],
+    "row_count": 128,
+    "metrics": ["evidence upper-bound ratio", "max/mean physical pseudo-marginal error", "split buckets", "exact-ceiling status"],
+    "prospective_cancellation": "evidence ratio >2 and max marginal error <1e-10",
+    "prospective_useful_accuracy": "max marginal error <=1e-2",
+    "budget": "under ten CPU minutes and 2 GiB; deterministic exact-reference computation only"
+  },
+  "analysis": {
+    "unit": "one observation × p × representation × order × i row",
+    "aggregation": "report worst, median, useful-accuracy coverage, cancellation count, monotonicity violations, and condition-wise best branches without post-hoc branch deletion",
+    "stop_rule": "report the complete matrix; use its failure pattern to register the next approximation prerequisite, not correction or LER sampling",
+    "claim_boundary": "Primitive deterministic validation only; no paper-L2 accuracy, scalable decoder, correction, LER, threshold, runtime-scaling, or fault-tolerance claim."
+  },
+  "acceptance_items": [
+    {"item": "prospective matched-cohort contract", "status": "registered", "evidence": "this manifest"},
+    {"item": "complete 128-row exact-reference matrix and invariant checks", "status": "verified", "evidence": "results/r6j-multi-observation-mini-bucket-validation.json; all rows complete and 56 exact-ceiling rows pass"},
+    {"item": "analysis of cancellation, monotonicity, and useful-accuracy coverage", "status": "analyzed", "evidence": "20/32 auxiliary low-i cancellations, 3 evidence and 14 marginal monotonicity violations, 0 uniformly useful low-i branches"},
+    {"item": "report, roadmap, metadata, and durable state", "status": "reported", "evidence": "results/r6j-multi-observation-mini-bucket-validation.md and updated Lab/Wiki/state artifacts"}
+  ],
+  "hypothesis_outcomes": {
+    "H1": "supported: auxiliary-first low-i cancellation occurs in 20/32 rows, not all matched conditions",
+    "H2": "rejected as written: evidence ratios are nonmonotone in 3/32 sequences and marginal errors in 14/32; the greedy partitions are not nested as i changes",
+    "H3": "supported: zero representation/order branches achieve max marginal error <=1e-2 on all eight conditions at i<=14"
+  }
+}

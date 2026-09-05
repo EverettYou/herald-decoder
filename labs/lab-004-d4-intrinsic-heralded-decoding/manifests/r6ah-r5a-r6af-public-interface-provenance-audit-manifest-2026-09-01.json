@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "status": "audit_completed_incompatible",
+  "phase": "R6AH",
+  "registered_at": "2026-09-01T16:11:11Z",
+  "epistemic_role": "Zero-sampling provenance and public-interface compatibility audit of legacy R5a against the remediated R6AF contract.",
+  "scientific_question": "Can the legacy R5a cohort still support a complete two-stage public-decoder claim after R6AF separated full-binary decoder-visible records and relation-free charge actions from hidden action-conditioned generation and scoring truth?",
+  "rationale": "R5a predates the R6AF fail-closed discovery that inactive -1 sentinels and hidden post-flux relations crossed the public action boundary. Its large cohort must be audited before any of its numerical results are reused as corrected complete-pipeline evidence.",
+  "frozen_evidence": {
+    "r5a_contract": {
+      "path": "manifests/r5a-paper-lattice-public-decoder-pilot-manifest-2026-08-29.json",
+      "sha256": "0d8ba3d736640dd3d680498adc7a233d188dc52760a0f0153275797d96212ce1"
+    },
+    "r5a_preflight": {
+      "path": "results/r5a-paper-lattice-public-decoder-preflight.json",
+      "sha256": "c7c6003a9e2eba911b4172e7be3d9a60f49fec353b3e5dcc045c429044d9f900"
+    },
+    "r5a_raw_cohort": {
+      "path": "results/r5a-paper-lattice-public-decoder-pilot.jsonl.gz",
+      "sha256": "8993f8126f3184266dca1d14d7816ae3d42638df4c9bf0f9093f7c91a39901a5"
+    },
+    "r5a_analysis": {
+      "path": "results/r5a-paper-lattice-public-decoder-analysis.json",
+      "sha256": "9a4cb2e3a19c18794759c94ab5f2dc24602a1cd999be806ed741b5a4b116e22c"
+    },
+    "r5a_runner": {
+      "path": "scripts/run_r5a_public_decoder_pilot.py",
+      "sha256": "7f8e91a56cdb20ed683ff38ef272732bec40398d7db005fd16758f4507113bb7"
+    },
+    "r5a_preflight_runner": {
+      "path": "scripts/run_r5a_public_decoder_preflight.py",
+      "sha256": "0d7d104f69460fc1b3c9c3dfe046f7e49a936b89e528037ce9be491130ad5072"
+    },
+    "r5a_declared_pipeline_hash": "0e517f922fcd21b3c347be5f59d39b0640d260d11ddd314f408d18035c42e485",
+    "r5a_declared_charge_hash": "c7b528d343abedb052e6bea7f5c29f65de2bab5dae96befa339763198bb17e9a",
+    "r6af_contract": {
+      "path": "manifests/r6af-two-stage-public-charge-reproduction-manifest-2026-09-01.json",
+      "sha256": "22059c375008bd6a1e90417cddc802a20ee0649f361a20a0a268f21c48ef9ca7"
+    },
+    "r6af_preflight": {
+      "path": "results/r6af-two-stage-public-charge-preflight-2026-09-01.json",
+      "sha256": "cd8d12cd3d920b6f933a7d78f1512d68904abb911d4cf0d0f8d72ca944367c81"
+    },
+    "remediated_pipeline": {
+      "path": "scripts/d4_pipeline.py",
+      "sha256": "5f5b1bcb2fd71ffc3bbbfe6ef21ac98f63eb48d15c036db76714587c82ed03e0"
+    },
+    "remediated_charge": {
+      "path": "scripts/d4_charge.py",
+      "sha256": "2ba3dd13feda42e4441ae0089be2403b5c75b626ae0a0542d4aa9089807472fd"
+    }
+  },
+  "audit_dimensions": [
+    {
+      "dimension": "artifact identity and status",
+      "required_check": "Verify every frozen hash, declared completion status, raw record count, and analysis provenance before inspecting semantics."
+    },
+    {
+      "dimension": "physical channel and geometry",
+      "required_check": "Compare lattice normalization, red-X channel, physical-winding handling, sizes, and error parameters without comparing numerical risks."
+    },
+    {
+      "dimension": "first observation and timing",
+      "required_check": "Determine whether the R5a decoder-visible first record is the corrected signal-only binary record and whether it is sampled before the first action."
+    },
+    {
+      "dimension": "matched randomness",
+      "required_check": "Audit physical, first-observation, and second-exogenous seed coupling across O0/O2 and whether policy-dependent second records are generated from each arm's own action."
+    },
+    {
+      "dimension": "second public record",
+      "required_check": "Inspect raw R5a records for a full binary star field and separately identify internal -1 sentinels, active support, relation pairs, physical truth, and homology truth."
+    },
+    {
+      "dimension": "charge action information budget",
+      "required_check": "Establish whether the legacy charge action itself consumed hidden relations or active support, distinguishing action inputs from private generation, validation, and scoring inputs."
+    },
+    {
+      "dimension": "action-conditioned support",
+      "required_check": "Verify each second record is conditioned on its own first action and that wrong-action records fail closed."
+    },
+    {
+      "dimension": "logical scorer and denominator",
+      "required_check": "Compare physical-winding, first Boolean-union, and blue/green charge-residual loss semantics and confirm every attempted history remains in the denominator."
+    },
+    {
+      "dimension": "anti-leak and replay gates",
+      "required_check": "Determine whether legacy evidence contains public transcripts, relation-perturbation invariance, action binding, first/middle/final deterministic replay, and explicit private-field exclusion."
+    },
+    {
+      "dimension": "claim usability",
+      "required_check": "Classify each R5a result family as corrected complete-pipeline evidence, first-stage/provenance-only evidence, or withdrawn pending a separately registered rerun."
+    }
+  ],
+  "classification_rules": {
+    "compatible": "All public-information, causal, scorer, denominator, matched-randomness, and integrity dimensions are evidenced equivalent to R6AF; legacy finite-size results may retain their original bounded claim only.",
+    "partially_compatible_provenance_only": "Physical or first-stage structure remains useful, but at least one complete-pipeline public-action or integrity gate is absent or fails; numerical final-loss results cannot support the remediated complete pipeline.",
+    "incompatible": "A frozen witness shows that decoder-visible information, causal order, scorer, denominator, or action conditioning differs materially from R6AF.",
+    "censored": "Missing or hash-mismatched evidence prevents a deterministic classification."
+  },
+  "acceptance_gates": [
+    "All frozen artifact hashes and registered statuses match.",
+    "Every audit dimension receives a machine-readable verdict with a direct evidence path and witness.",
+    "Stored private provenance is not mistaken for decoder-visible input; action, generation, validation, and scoring boundaries are classified separately.",
+    "No R5a/R6AF risk, interval, stage-count, size-trend, crossing, or threshold comparison is performed.",
+    "Any legacy result invalidated for complete-pipeline use is marked withdrawn or provenance-only in PLAN, REPORT, metadata, and Local Wiki before downstream reuse.",
+    "Exactly one overall compatibility verdict is issued under the frozen rules."
+  ],
+  "compute_budget": {
+    "new_histories": 0,
+    "new_arm_evaluations": 0,
+    "new_bootstrap_replicates": 0,
+    "maximum_raw_records_inspected": 40000,
+    "maximum_wall_time_minutes": 5,
+    "stop_rule": "Stop after one deterministic evidence/status/hash audit, one dimension matrix, one verdict, and required evidence-boundary updates. Censor on a missing artifact, hash mismatch, unclassified dimension, or unsupported inference. Do not register or execute a rerun in the verdict tick."
+  },
+  "outputs": {
+    "machine_audit": "results/r6ah-r5a-r6af-public-interface-provenance-audit-2026-09-01.json",
+    "report": "wiki/records/r6ah-r5a-r6af-public-interface-provenance-audit-2026-09-01.md"
+  },
+  "registration_amendment": {
+    "recorded_at": "2026-09-01T16:40:58Z",
+    "change": "Route the prose audit record to wiki/records rather than results, as required by the lab evidence-integration contract.",
+    "scientific_effect": "None. Frozen evidence, audit dimensions, classification rules, acceptance gates, and zero-compute stop rule are unchanged."
+  },
+  "registration_tick_outcome": {
+    "new_histories": 0,
+    "new_arm_evaluations": 0,
+    "new_bootstrap_replicates": 0,
+    "compatibility_verdict": null
+  },
+  "completed_at": "2026-09-01T16:48:00Z",
+  "audit_outcome": {
+    "overall_verdict": "incompatible",
+    "incompatible_dimensions": [
+      "first observation and timing",
+      "second public record",
+      "charge action information budget"
+    ],
+    "raw_records_inspected": 40000,
+    "unclassified_dimension_count": 0,
+    "new_histories": 0,
+    "new_arm_evaluations": 0,
+    "new_bootstrap_replicates": 0,
+    "claim_usability": "R5a physical/lattice records remain provenance; its complete-pipeline numerical risks, O0/O2 differences, stage mechanism, size directions, and Lab 005 baseline promotion are withdrawn."
+  },
+  "next_action": "In a later registration tick, preregister the smallest corrected replacement of the withdrawn R5a transfer question using the remediated R6AF public interface; do not reuse or reinterpret the legacy numerical cohort."
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-08-29T00:10:00Z",
+  "purpose": "direct edge-variable structural MILP validation",
+  "formulation": {
+    "edge_variables": 12,
+    "degree_parity_auxiliaries": 8,
+    "boundary_and_measurement_support": "structural equalities",
+    "fusion_compatibility": "bounded no-good cuts over structurally feasible chains",
+    "complete_explanation_selectors": 0,
+    "varying_conditional_likelihood": "not yet encoded; fails closed"
+  },
+  "map_fixture": {
+    "structurally_feasible_chains": 4,
+    "fusion_no_good_cuts": 0,
+    "p_0_1_maximizers": [73, 82, 268],
+    "p_0_6_maximizers": [279],
+    "global_and_sector_objectives_match_r3_0_r3_1": true
+  },
+  "fusion_branch_fixture": {
+    "loop_mask": 238,
+    "allowed_observation_solutions": 1,
+    "single_charge_flip_violates_loop_parity": true,
+    "incompatible_observation_fails_closed": true
+  },
+  "tests_passed": 81,
+  "claim_boundary": "Boundary and measurement support are structural and no complete-explanation selectors remain. Fusion cuts are still compiled by bounded enumeration, and varying candidate likelihood is not structurally encoded; no size increase is authorized."
+}

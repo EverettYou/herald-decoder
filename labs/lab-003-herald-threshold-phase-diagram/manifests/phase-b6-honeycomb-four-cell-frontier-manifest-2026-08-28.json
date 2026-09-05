@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "status": "analyzed",
+  "campaign": "phase-b6-honeycomb-four-cell-frontier-2026-08-28",
+  "purpose": "Cover all four Phase B5 persistent frontier cells with balanced shots or missing endpoints.",
+  "selection_evidence": {
+    "path": "manifests/phase-b6-honeycomb-four-cell-frontier-selection-2026-08-28.json",
+    "sha256": "828acb448d9e85adee68d84dd4a8cbf90106678402e687de55a2200a79f41435"
+  },
+  "source_map": {
+    "path": "results/phase-b5-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28.json",
+    "sha256": "a1c2b5377697083f111be69cc3376635181ff8bce7d9b885ade0a6bdeb614813"
+  },
+  "lattice": "honeycomb",
+  "frontier_candidate_count": 4,
+  "new_seeds": [
+    876001,
+    876002,
+    876003,
+    876004,
+    876005
+  ],
+  "shots_per_seed": 200,
+  "jobs": [
+    {
+      "branch": "rebalance_to_2000_shots",
+      "q": 0.3,
+      "p": 0.2,
+      "sizes": [
+        5,
+        7,
+        9,
+        13
+      ],
+      "expected_decodes": 4000
+    },
+    {
+      "branch": "rebalance_to_2000_shots",
+      "q": 0.35,
+      "p": 0.2,
+      "sizes": [
+        5,
+        7,
+        9,
+        13
+      ],
+      "expected_decodes": 4000
+    },
+    {
+      "branch": "endpoint_extension_l5_l13",
+      "q": 0.55,
+      "p": 0.24,
+      "sizes": [
+        5,
+        13
+      ],
+      "expected_decodes": 2000
+    },
+    {
+      "branch": "rebalance_to_2000_shots",
+      "q": 0.6,
+      "p": 0.28,
+      "sizes": [
+        5,
+        7,
+        9,
+        13
+      ],
+      "expected_decodes": 4000
+    }
+  ],
+  "job_count": 4,
+  "workers_cap": 4,
+  "expected_new_decodes": 14000,
+  "decoder": {
+    "name": "HeraldAwareBpMatchingDecoder",
+    "recurrence_mode": "damping",
+    "damping": 0.25,
+    "max_iterations": 80,
+    "update_schedule": "residual_priority",
+    "residual_priority_order": "stable_sort",
+    "residual_priority_buffer_reuse": false,
+    "residual_priority_cached_products": false,
+    "matching_projection": "posterior_llr",
+    "p_m": 0.0,
+    "p_h": 0.0,
+    "use_numba": true
+  },
+  "required_source_hashes": {
+    "runner": "14adf7579825e64fa4dd74a6ff374207c3f7b55349b5b533c1ff054bf6d66474",
+    "lattice_model": "b87a5feba27675e26970360d730324b7d3740e4dc0492b4dc478e510f140c9e7",
+    "decoder": "990af03ac4c99684e9e9dac6e5a8bb64d773015879c1638906f5fb592cdc6a43",
+    "damping_decoder": "a08ddf0b58e63bb2627c35cafbe570fe6a0ee8dc21bd4eaca720d6dbcbc5e182",
+    "numba_kernels": "c2254c95600c4f5e3a8c2279d5686a99c8d3810a4bb0c814a4fd0cbf16c184cc"
+  },
+  "analysis": {
+    "primary": "Bayesian posterior OLS linear-projection slope against code distance",
+    "classification_threshold": 0.9,
+    "prior_sensitivity": "Jeffreys primary and uniform sensitivity",
+    "pooling": "Pool fresh counts only with each Phase B5 map cell's declared logical_errors/shots vector.",
+    "claim_boundary": "Update only these four payloads after completion, source, and prior-stability gates."
+  },
+  "preflight_gate": "Passed: four-job non-overwriting dispatcher, exact completion audit, map-count pooling analyzer, and exact four-payload renderer are implemented and tested. All four real runner command shapes also pass a zero-shot sentinel smoke through size validation without writing outputs.",
+  "preflight_evidence": {
+    "path": "results/phase-b6-honeycomb-four-cell-frontier-preflight-2026-08-28.json",
+    "sha256": "3c4f6d0b4951d426a8879ed1d20aec21774ea0cfed8c46510a55c5d55a9867ec",
+    "tests_passed": 92,
+    "cli_shape_smokes_passed": 4,
+    "production_launched": false
+  },
+  "completion_evidence": {
+    "path": "results/phase-b6-honeycomb-four-cell-frontier-completion-audit-2026-08-28.json",
+    "sha256": "bb2244bdb2aad6e896ea192ef2d6fbb10fc0db005e8b970d4b2b2ca4e499826c",
+    "jobs_complete": 4,
+    "raw_rows_observed": 14000,
+    "syndrome_faithful_rows": 14000,
+    "scientific_analysis_performed": false
+  },
+  "analysis_evidence": {
+    "path": "results/phase-b6-honeycomb-four-cell-frontier-analysis-2026-08-28.json",
+    "sha256": "1db0aa45e8851ba249716e84ece3acfb8a77fae1ebed48c33b9a19571725b889",
+    "cells_analyzed": 4,
+    "prior_stable_cells": 4,
+    "resolved_cells": 0
+  },
+  "presentation_evidence": {
+    "data_path": "results/phase-b6-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28.json",
+    "data_sha256": "2648f6ec0d08ed11b809d2867c771a3a750889b11e762a56a2b0702defa795ab",
+    "figure_path": "figures/phase-b6-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28.png",
+    "figure_sha256": "3acc9640dc21709be61bd1bcde7ca39b8c39c9157049052d34a7bc355d37fe52",
+    "payloads_updated": 4,
+    "payloads_deep_preserved": 227,
+    "classification_changes": 0,
+    "counts": {
+      "decodable": 86,
+      "undecodable": 41,
+      "unresolved": 104
+    }
+  },
+  "stop_rule": "Stop after four jobs and 14000 decodes. Do not add another cell, p/q midpoint, square lattice, or distance outside L=5..13.",
+  "launch_gate": "closed_data_complete"
+}

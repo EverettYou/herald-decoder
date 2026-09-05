@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "status": "completed_quick_scan",
+  "phase": "R6AB",
+  "title": "Published O2 D4 flux-threshold quick scan",
+  "question": "Do finite-size curves for the published intrinsically heralded O2 MWPM decoder change size direction near the paper value p_c=0.20842?",
+  "scope": "Paper-normalized periodic D4 honeycomb, X-only non-Abelian charge-pair noise, perfect first fusion record, published O2 weights w_e=1-n_e(27L^2), first-stage Boolean-union flux logical failure.",
+  "scan_design": {
+    "sizes": [5, 7, 9, 11],
+    "p_X_grid": [0.19, 0.20, 0.21, 0.22],
+    "attempted_histories_per_cell": 1000,
+    "total_attempted_histories": 16000,
+    "seed_salt": 68511,
+    "paper_reference_threshold": 0.20842
+  },
+  "decoder": {
+    "id": "O2_published_herald_weight_MWPM",
+    "weight_rule": "w_e=1-n_e K",
+    "forcing_scale": "K=3E=27L^2",
+    "visible_record": "flux syndrome plus sampled intermediate Abelian charge outcomes",
+    "score": "Boolean-union flux winding; terminal physical windings are reported separately and counted as failures only in the unconditional sensitivity"
+  },
+  "acceptance": [
+    "Complete all 16 cells with 1000 attempted histories per cell and deterministic replay seeds.",
+    "Report conditional and terminal-restored flux risks with 90% Wilson intervals.",
+    "Report adjacent-size risk differences with 90% independent bootstrap intervals.",
+    "Estimate a quick finite-size crossing only when adjacent-size differences change sign inside the registered grid; otherwise report a bracket or no resolved crossing.",
+    "Plot all finite-size O2 curves and mark the paper reference p_c=0.20842 without treating it as fitted project data."
+  ],
+  "claim_boundary": "This is a quick 1000-shot-per-cell finite-size reproduction check. It can show consistency or tension with a threshold near 0.20842, but cannot reproduce the paper's quoted 2e-5 uncertainty, its L=10--28 scale, or its approximately one-million-sample-per-point analysis.",
+  "outputs": {
+    "checkpoint": "results/r6ab-o2-threshold-quick-scan-2026-08-31.checkpoint.json",
+    "result": "results/r6ab-o2-threshold-quick-scan-sufficient-statistics-2026-09-05.json",
+    "analysis": "results/r6ab-o2-threshold-quick-scan-analysis-2026-08-31.json",
+    "report": "results/r6ab-o2-threshold-quick-scan-2026-08-31.md",
+    "figure": "figures/r6ab-o2-threshold-quick-scan-2026-08-31.png"
+  },
+  "execution": {
+    "completed_at": "2026-08-31",
+    "attempted_histories": 16000,
+    "completed_cells": 16,
+    "raw_median_sign_change": 0.21408955223880596,
+    "raw_sign_change_range": [0.19458333333333333, 0.21605263157894736],
+    "statistically_resolved_direction_bracket_pair_count": 1,
+    "conclusion": "Quick finite-size evidence is compatible with the paper threshold neighborhood, but the paper value p_c=0.20842(2) is not reproduced at this sample and size scale."
+  }
+}

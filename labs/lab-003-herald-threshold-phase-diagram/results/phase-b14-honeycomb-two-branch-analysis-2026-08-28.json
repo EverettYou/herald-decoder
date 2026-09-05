@@ -1,0 +1,630 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-28T19:28:10.837587+00:00",
+  "status": "complete_continuous_evidence_only",
+  "manifest": {
+    "path": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-b14-honeycomb-two-branch-acquisition-manifest-2026-08-28.json",
+    "sha256": "a00e79e1cfcfeac1403e16fbf810ede454ac3d71ca8a6acb2edbbd336a828485"
+  },
+  "completion_audit": {
+    "path": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase-b14-honeycomb-two-branch-completion-audit-2026-08-28.json",
+    "sha256": "85e5925dc4b69f329aeeb2b27edd70b1600e8fbb724cb6f46e52b3a235d6836e"
+  },
+  "primary_comparison": "posterior sign-entropy reduction in nats per 1000 new decodes",
+  "analyses": [
+    {
+      "q": 0.2,
+      "p": 0.16,
+      "variants": {
+        "base": {
+          "sizes": [
+            7,
+            9,
+            11
+          ],
+          "logical_errors": [
+            134,
+            144,
+            125
+          ],
+          "shots": [
+            1000,
+            1000,
+            1000
+          ],
+          "posterior_probability_upward_trend": 0.27423095703125,
+          "posterior_probability_downward_trend": 0.72576904296875,
+          "posterior_log_odds_upward_vs_downward": -0.9732611813674189,
+          "posterior_log_odds_censoring": {
+            "relation": "equal",
+            "bound": -0.9732611813674189
+          },
+          "posterior_mean_slope_ler_per_distance": -0.002247680864244832,
+          "posterior_slope_interval90": [
+            -0.008418288578628523,
+            0.003923442169907702
+          ],
+          "posterior_sign_entropy_nats": 0.5874217826094078,
+          "qmc_standard_error_upward_probability": 0.00020633648797082921,
+          "new_decodes": 0
+        },
+        "distance_leverage": {
+          "sizes": [
+            5,
+            7,
+            9,
+            11,
+            13
+          ],
+          "logical_errors": [
+            98,
+            134,
+            144,
+            125,
+            61
+          ],
+          "shots": [
+            500,
+            1000,
+            1000,
+            1000,
+            500
+          ],
+          "posterior_probability_upward_trend": 0.00067138671875,
+          "posterior_probability_downward_trend": 0.99932861328125,
+          "posterior_log_odds_upward_vs_downward": -7.305493642841122,
+          "posterior_log_odds_censoring": {
+            "relation": "equal",
+            "bound": -7.305493642841122
+          },
+          "posterior_mean_slope_ler_per_distance": -0.007834770007150861,
+          "posterior_slope_interval90": [
+            -0.011821575198244328,
+            -0.0038738212735374643
+          ],
+          "posterior_sign_entropy_nats": 0.005576423605458087,
+          "qmc_standard_error_upward_probability": 8.934632015520017e-05,
+          "new_decodes": 1000,
+          "sign_entropy_reduction_nats": 0.5818453590039497,
+          "sign_entropy_reduction_nats_per_1000_new_decodes": 0.5818453590039497
+        },
+        "same_window_precision": {
+          "sizes": [
+            7,
+            9,
+            11
+          ],
+          "logical_errors": [
+            188,
+            210,
+            197
+          ],
+          "shots": [
+            1500,
+            1500,
+            1500
+          ],
+          "posterior_probability_upward_trend": 0.6886444091796875,
+          "posterior_probability_downward_trend": 0.3113555908203125,
+          "posterior_log_odds_upward_vs_downward": 0.7937894029452679,
+          "posterior_log_odds_censoring": {
+            "relation": "equal",
+            "bound": 0.7937894029452679
+          },
+          "posterior_mean_slope_ler_per_distance": 0.001499073168624051,
+          "posterior_slope_interval90": [
+            -0.003515093331887393,
+            0.006520884132343407
+          ],
+          "posterior_sign_entropy_nats": 0.6201810067148779,
+          "qmc_standard_error_upward_probability": 0.000235189091218226,
+          "new_decodes": 1500,
+          "sign_entropy_reduction_nats": -0.03275922410547005,
+          "sign_entropy_reduction_nats_per_1000_new_decodes": -0.021839482736980036
+        },
+        "combined": {
+          "sizes": [
+            5,
+            7,
+            9,
+            11,
+            13
+          ],
+          "logical_errors": [
+            98,
+            188,
+            210,
+            197,
+            61
+          ],
+          "shots": [
+            500,
+            1500,
+            1500,
+            1500,
+            500
+          ],
+          "posterior_probability_upward_trend": 0.00152587890625,
+          "posterior_probability_downward_trend": 0.99847412109375,
+          "posterior_log_odds_upward_vs_downward": -6.483657658725971,
+          "posterior_log_odds_censoring": {
+            "relation": "equal",
+            "bound": -6.483657658725971
+          },
+          "posterior_mean_slope_ler_per_distance": -0.007085435068516238,
+          "posterior_slope_interval90": [
+            -0.011004877335599593,
+            -0.003183260758899061
+          ],
+          "posterior_sign_entropy_nats": 0.01142032070185929,
+          "qmc_standard_error_upward_probability": 6.920736200120128e-05,
+          "new_decodes": 2500,
+          "sign_entropy_reduction_nats": 0.5760014619075485,
+          "sign_entropy_reduction_nats_per_1000_new_decodes": 0.23040058476301942
+        }
+      }
+    },
+    {
+      "q": 0.2,
+      "p": 0.2,
+      "variants": {
+        "base": {
+          "sizes": [
+            7,
+            9,
+            11
+          ],
+          "logical_errors": [
+            276,
+            273,
+            291
+          ],
+          "shots": [
+            1000,
+            1000,
+            1000
+          ],
+          "posterior_probability_upward_trend": 0.7714691162109375,
+          "posterior_probability_downward_trend": 0.2285308837890625,
+          "posterior_log_odds_upward_vs_downward": 1.216625280151734,
+          "posterior_log_odds_censoring": {
+            "relation": "equal",
+            "bound": 1.216625280151734
+          },
+          "posterior_mean_slope_ler_per_distance": 0.0037463033384848355,
+          "posterior_slope_interval90": [
+            -0.004540566983600499,
+            0.012022698700438423
+          ],
+          "posterior_sign_entropy_nats": 0.5374950893281869,
+          "qmc_standard_error_upward_probability": 0.00024461699740419614,
+          "new_decodes": 0
+        },
+        "distance_leverage": {
+          "sizes": [
+            5,
+            7,
+            9,
+            11,
+            13
+          ],
+          "logical_errors": [
+            158,
+            276,
+            273,
+            291,
+            151
+          ],
+          "shots": [
+            500,
+            1000,
+            1000,
+            1000,
+            500
+          ],
+          "posterior_probability_upward_trend": 0.4158782958984375,
+          "posterior_probability_downward_trend": 0.5841217041015625,
+          "posterior_log_odds_upward_vs_downward": -0.3397166990292872,
+          "posterior_log_odds_censoring": {
+            "relation": "equal",
+            "bound": -0.3397166990292872
+          },
+          "posterior_mean_slope_ler_per_distance": -0.000647959421090037,
+          "posterior_slope_interval90": [
+            -0.005719810539842937,
+            0.00442266715905431
+          ],
+          "posterior_sign_entropy_nats": 0.6789267223119988,
+          "qmc_standard_error_upward_probability": 0.0006623841160576364,
+          "new_decodes": 1000,
+          "sign_entropy_reduction_nats": -0.1414316329838119,
+          "sign_entropy_reduction_nats_per_1000_new_decodes": -0.14143163298381187
+        },
+        "same_window_precision": {
+          "sizes": [
+            7,
+            9,
+            11
+          ],
+          "logical_errors": [
+            427,
+            414,
+            455
+          ],
+          "shots": [
+            1500,
+            1500,
+            1500
+          ],
+          "posterior_probability_upward_trend": 0.869171142578125,
+          "posterior_probability_downward_trend": 0.130828857421875,
+          "posterior_log_odds_upward_vs_downward": 1.8936500106710612,
+          "posterior_log_odds_censoring": {
+            "relation": "equal",
+            "bound": 1.8936500106710612
+          },
+          "posterior_mean_slope_ler_per_distance": 0.004663622940424769,
+          "posterior_slope_interval90": [
+            -0.002175579989725448,
+            0.011495094518099047
+          ],
+          "posterior_sign_entropy_nats": 0.3879592983831578,
+          "qmc_standard_error_upward_probability": 0.00015603663999872068,
+          "new_decodes": 1500,
+          "sign_entropy_reduction_nats": 0.1495357909450291,
+          "sign_entropy_reduction_nats_per_1000_new_decodes": 0.09969052729668607
+        },
+        "combined": {
+          "sizes": [
+            5,
+            7,
+            9,
+            11,
+            13
+          ],
+          "logical_errors": [
+            158,
+            427,
+            414,
+            455,
+            151
+          ],
+          "shots": [
+            500,
+            1500,
+            1500,
+            1500,
+            500
+          ],
+          "posterior_probability_upward_trend": 0.43841552734375,
+          "posterior_probability_downward_trend": 0.56158447265625,
+          "posterior_log_odds_upward_vs_downward": -0.24759505070755955,
+          "posterior_log_odds_censoring": {
+            "relation": "equal",
+            "bound": -0.24759505070755955
+          },
+          "posterior_mean_slope_ler_per_distance": -0.0004644642065031684,
+          "posterior_slope_interval90": [
+            -0.005439866856200359,
+            0.004517857109354509
+          ],
+          "posterior_sign_entropy_nats": 0.6855425897805304,
+          "qmc_standard_error_upward_probability": 0.0005808656162788248,
+          "new_decodes": 2500,
+          "sign_entropy_reduction_nats": -0.1480475004523435,
+          "sign_entropy_reduction_nats_per_1000_new_decodes": -0.05921900018093739
+        }
+      }
+    },
+    {
+      "q": 0.7,
+      "p": 0.28,
+      "variants": {
+        "base": {
+          "sizes": [
+            7,
+            9,
+            11
+          ],
+          "logical_errors": [
+            207,
+            188,
+            198
+          ],
+          "shots": [
+            1000,
+            1000,
+            1000
+          ],
+          "posterior_probability_upward_trend": 0.307952880859375,
+          "posterior_probability_downward_trend": 0.692047119140625,
+          "posterior_log_odds_upward_vs_downward": -0.8097072574957577,
+          "posterior_log_odds_censoring": {
+            "relation": "equal",
+            "bound": -0.8097072574957577
+          },
+          "posterior_mean_slope_ler_per_distance": -0.0022477231565264993,
+          "posterior_slope_interval90": [
+            -0.009628882674465069,
+            0.00513763418487497
+          ],
+          "posterior_sign_entropy_nats": 0.6174529170374555,
+          "qmc_standard_error_upward_probability": 0.00020341418713881496,
+          "new_decodes": 0
+        },
+        "distance_leverage": {
+          "sizes": [
+            5,
+            7,
+            9,
+            11,
+            13
+          ],
+          "logical_errors": [
+            115,
+            207,
+            188,
+            198,
+            96
+          ],
+          "shots": [
+            500,
+            1000,
+            1000,
+            1000,
+            500
+          ],
+          "posterior_probability_upward_trend": 0.0603485107421875,
+          "posterior_probability_downward_trend": 0.9396514892578125,
+          "posterior_log_odds_upward_vs_downward": -2.7453727801835344,
+          "posterior_log_odds_censoring": {
+            "relation": "equal",
+            "bound": -2.7453727801835344
+          },
+          "posterior_mean_slope_ler_per_distance": -0.004241966257393858,
+          "posterior_slope_interval90": [
+            -0.008728615266613496,
+            0.00025890836233148016
+          ],
+          "posterior_sign_entropy_nats": 0.2279253872900516,
+          "qmc_standard_error_upward_probability": 0.00039886069329608917,
+          "new_decodes": 1000,
+          "sign_entropy_reduction_nats": 0.3895275297474039,
+          "sign_entropy_reduction_nats_per_1000_new_decodes": 0.3895275297474039
+        },
+        "same_window_precision": {
+          "sizes": [
+            7,
+            9,
+            11
+          ],
+          "logical_errors": [
+            320,
+            291,
+            290
+          ],
+          "shots": [
+            1500,
+            1500,
+            1500
+          ],
+          "posterior_probability_upward_trend": 0.086517333984375,
+          "posterior_probability_downward_trend": 0.913482666015625,
+          "posterior_log_odds_upward_vs_downward": -2.356919613540864,
+          "posterior_log_odds_censoring": {
+            "relation": "equal",
+            "bound": -2.356919613540864
+          },
+          "posterior_mean_slope_ler_per_distance": -0.00499655910247402,
+          "posterior_slope_interval90": [
+            -0.011034301354803034,
+            0.0010358542469901585
+          ],
+          "posterior_sign_entropy_nats": 0.2944052800755025,
+          "qmc_standard_error_upward_probability": 0.00011242498742874256,
+          "new_decodes": 1500,
+          "sign_entropy_reduction_nats": 0.32304763696195304,
+          "sign_entropy_reduction_nats_per_1000_new_decodes": 0.21536509130796871
+        },
+        "combined": {
+          "sizes": [
+            5,
+            7,
+            9,
+            11,
+            13
+          ],
+          "logical_errors": [
+            115,
+            320,
+            291,
+            290,
+            96
+          ],
+          "shots": [
+            500,
+            1500,
+            1500,
+            1500,
+            500
+          ],
+          "posterior_probability_upward_trend": 0.036865234375,
+          "posterior_probability_downward_trend": 0.963134765625,
+          "posterior_log_odds_upward_vs_downward": -3.2629243964650505,
+          "posterior_log_odds_censoring": {
+            "relation": "equal",
+            "bound": -3.2629243964650505
+          },
+          "posterior_mean_slope_ler_per_distance": -0.004791712331920097,
+          "posterior_slope_interval90": [
+            -0.009184842688524302,
+            -0.00037925215325965226
+          ],
+          "posterior_sign_entropy_nats": 0.1578504060629586,
+          "qmc_standard_error_upward_probability": 0.0002548067661168118,
+          "new_decodes": 2500,
+          "sign_entropy_reduction_nats": 0.4596025109744969,
+          "sign_entropy_reduction_nats_per_1000_new_decodes": 0.18384100438979875
+        }
+      }
+    },
+    {
+      "q": 0.7,
+      "p": 0.32,
+      "variants": {
+        "base": {
+          "sizes": [
+            7,
+            9,
+            11
+          ],
+          "logical_errors": [
+            272,
+            279,
+            287
+          ],
+          "shots": [
+            1000,
+            1000,
+            1000
+          ],
+          "posterior_probability_upward_trend": 0.772247314453125,
+          "posterior_probability_downward_trend": 0.227752685546875,
+          "posterior_log_odds_upward_vs_downward": 1.2210445265167909,
+          "posterior_log_odds_censoring": {
+            "relation": "equal",
+            "bound": 1.2210445265167909
+          },
+          "posterior_mean_slope_ler_per_distance": 0.0037463278852693403,
+          "posterior_slope_interval90": [
+            -0.004499793404935615,
+            0.011993351218652016
+          ],
+          "posterior_sign_entropy_nats": 0.5365465948375129,
+          "qmc_standard_error_upward_probability": 0.00018988282767493168,
+          "new_decodes": 0
+        },
+        "distance_leverage": {
+          "sizes": [
+            5,
+            7,
+            9,
+            11,
+            13
+          ],
+          "logical_errors": [
+            131,
+            272,
+            279,
+            287,
+            169
+          ],
+          "shots": [
+            500,
+            1000,
+            1000,
+            1000,
+            500
+          ],
+          "posterior_probability_upward_trend": 0.9969024658203125,
+          "posterior_probability_downward_trend": 0.0030975341796875,
+          "posterior_log_odds_upward_vs_downward": 5.7740465684489255,
+          "posterior_log_odds_censoring": {
+            "relation": "equal",
+            "bound": 5.7740465684489255
+          },
+          "posterior_mean_slope_ler_per_distance": 0.008334099024626654,
+          "posterior_slope_interval90": [
+            0.0033131478107124926,
+            0.013344336167764809
+          ],
+          "posterior_sign_entropy_nats": 0.02098764806929001,
+          "qmc_standard_error_upward_probability": 8.297671208266898e-05,
+          "new_decodes": 1000,
+          "sign_entropy_reduction_nats": 0.5155589467682229,
+          "sign_entropy_reduction_nats_per_1000_new_decodes": 0.5155589467682229
+        },
+        "same_window_precision": {
+          "sizes": [
+            7,
+            9,
+            11
+          ],
+          "logical_errors": [
+            408,
+            434,
+            439
+          ],
+          "shots": [
+            1500,
+            1500,
+            1500
+          ],
+          "posterior_probability_upward_trend": 0.8956451416015625,
+          "posterior_probability_downward_trend": 0.1043548583984375,
+          "posterior_log_odds_upward_vs_downward": 2.1497470960866845,
+          "posterior_log_odds_censoring": {
+            "relation": "equal",
+            "bound": 2.1497470960866845
+          },
+          "posterior_mean_slope_ler_per_distance": 0.005163257163875907,
+          "posterior_slope_interval90": [
+            -0.0015924687259695376,
+            0.011919306274515873
+          ],
+          "posterior_sign_entropy_nats": 0.33454754557892247,
+          "qmc_standard_error_upward_probability": 0.00020560980663246177,
+          "new_decodes": 1500,
+          "sign_entropy_reduction_nats": 0.2019990492585904,
+          "sign_entropy_reduction_nats_per_1000_new_decodes": 0.13466603283906028
+        },
+        "combined": {
+          "sizes": [
+            5,
+            7,
+            9,
+            11,
+            13
+          ],
+          "logical_errors": [
+            131,
+            408,
+            434,
+            439,
+            169
+          ],
+          "shots": [
+            500,
+            1500,
+            1500,
+            1500,
+            500
+          ],
+          "posterior_probability_upward_trend": 0.9980010986328125,
+          "posterior_probability_downward_trend": 0.0019989013671875,
+          "posterior_log_odds_upward_vs_downward": 6.2131566639211755,
+          "posterior_log_odds_censoring": {
+            "relation": "equal",
+            "bound": 6.2131566639211755
+          },
+          "posterior_mean_slope_ler_per_distance": 0.008617446552529462,
+          "posterior_slope_interval90": [
+            0.003699055387441656,
+            0.013524790771211562
+          ],
+          "posterior_sign_entropy_nats": 0.014420389186859697,
+          "qmc_standard_error_upward_probability": 9.20960788150356e-05,
+          "new_decodes": 2500,
+          "sign_entropy_reduction_nats": 0.5221262056506532,
+          "sign_entropy_reduction_nats_per_1000_new_decodes": 0.20885048226026123
+        }
+      }
+    }
+  ],
+  "cells_analyzed": 4,
+  "new_decodes": 10000,
+  "cell_or_phase_classification_performed": false,
+  "boundary_inference_performed": false,
+  "crossing_statistic_used": false,
+  "evidence_boundary": "Four preregistered moderate-LER cells; branch-separated finite-window posterior trend evidence only."
+}

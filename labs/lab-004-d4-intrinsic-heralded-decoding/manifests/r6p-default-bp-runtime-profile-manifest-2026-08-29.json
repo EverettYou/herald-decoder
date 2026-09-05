@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "status": "completed_replay_consistent_runtime_profile",
+  "phase": "R6P",
+  "title": "R6D default-recurrence runtime profile",
+  "question": "Which implementation layers account for the default R6D BP-to-MWPM runtime in the frozen R6N cell?",
+  "input": "results/r6n-default-flux-policy-comparison-2026-08-29.json",
+  "scope": {
+    "records": "first 20 nonterminal frozen R6N trajectories in trajectory-index order",
+    "recurrence": "R6D local graph, damping 0.25, 40 iterations, tolerance 1e-8",
+    "timed_layers": ["factor graph construction", "loopy BP recurrence", "posterior-LLR MWPM and scoring"],
+    "new_physical_samples": 0
+  },
+  "acceptance": [
+    "each profiled BP correction equals its frozen R6N correction",
+    "all timing layers are nonnegative and their record count is fixed",
+    "profile labels the Python-table implementation rather than extrapolating to GPU runtime"
+  ],
+  "claim_boundary": "This is an implementation profile, not a GPU benchmark, asymptotic complexity measurement, or a claim that BP intrinsically costs the measured ratio to compiled PyMatching.",
+  "outputs": {
+    "result": "results/r6p-default-bp-runtime-profile-2026-08-29.json",
+    "report": "results/r6p-default-bp-runtime-profile-2026-08-29.md"
+  },
+  "execution": {
+    "profiled_records": 20,
+    "BP_share_of_python_pipeline": 0.9895289627671444,
+    "mean_BP_recurrence_seconds": 0.5964184061565903,
+    "identified_hotspots": ["_factor_message", "normalise", "per-message NumPy reductions and Python dictionary traffic"]
+  }
+}

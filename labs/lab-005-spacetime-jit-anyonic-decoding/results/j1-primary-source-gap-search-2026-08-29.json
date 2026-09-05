@@ -1,0 +1,43 @@
+{
+  "date": "2026-08-29",
+  "transition": "bounded_primary_source_gap_search",
+  "sources": [
+    {
+      "id": "lyons2026-anyonic-fault-tolerance",
+      "version": "arXiv:2602.11258v1",
+      "locations": ["Detectors", "Methods: Quantum Double of S3", "Methods: Ungauging S3", "Methods: Error model and spacetime unit cells"]
+    },
+    {
+      "id": "verresen2022-measurement-prepared-topological-order",
+      "version": "arXiv:2112.03061",
+      "locations": ["Supplemental: Details for preparing S3 topological order", "Supplemental: Relation to the quantum double model D(S3)", "Supplemental: Implementation with Rydberg atoms"]
+    },
+    {
+      "id": "jing2025-intrinsic-heralding",
+      "version": "arXiv:2507.23765v2",
+      "locations": ["Supplemental Appendix D: Measurement Errors", "Eq. measurement_Probability"]
+    },
+    {
+      "id": "jing2026-ilp-topological-decoder",
+      "version": "arXiv:2608.18512v1",
+      "locations": ["Section VII: Measurement Errors", "Appendix B: Anyon Syndrome Measurements in Quantum Double Models"]
+    }
+  ],
+  "r_branch": {
+    "outcome": "localized_gap_remains",
+    "source_support": ["stabilizer-level detector differences", "D(S3)-D(Z3) boundary detector identities", "coarse-grained one-neighborhood locality", "finite-depth D(S3) preparation and gauging sequence", "microscopic D(S3) commuting projectors"],
+    "missing": ["ancilla-resolved repeated D(S3) syndrome-extraction circuit", "primitive circuit-fault to exact detector-index catalogue", "complete ungauging/waiting/regauging primitive-fault propagation map"],
+    "exact_circuit_reproduction_ready": false,
+    "disposition": "pause_only_r_branch_without_guessing"
+  },
+  "e_branch": {
+    "outcome": "projector_level_instrument_basis_found",
+    "source_support": ["complete local D(G) anyon projectors", "time-ordered repeated projector and physical-error state update", "false-negative non-Abelian flux readout example", "spacelike physical-error and timelike measurement-error variables"],
+    "hardware_circuit_instrument_ready": false,
+    "phenomenological_projector_instrument_ready_for_registration": true,
+    "claim_boundary": "source-bounded phenomenological model only"
+  },
+  "next_gate": "invoke_research_workflow_to_register_e1_projector_instrument_matrix",
+  "performance_sampling_allowed": false,
+  "produced_stochastic_data": false
+}

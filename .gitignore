@@ -1,0 +1,19 @@
+.venv/
+.venv-research/
+.env
+.tmp/*
+!.tmp/README.md
+tmp/
+__pycache__/
+*.py[cod]
+.DS_Store
+
+# Large reproducible Monte-Carlo payloads stay in local/archive storage, not
+# Git history. Plans, scripts, reports, figures, and compact result summaries
+# remain tracked.
+labs/**/results/*.checkpoint.json
+labs/**/results/*.tmp-*
+labs/lab-003-herald-threshold-phase-diagram/results/*-raw.jsonl.gz
+labs/lab-004-d4-intrinsic-heralded-decoding/results/*-raw-trajectories*.json
+references/**/source.tar
+references/**/source.tar.gz

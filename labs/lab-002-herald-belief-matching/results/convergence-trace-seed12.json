@@ -1,0 +1,1147 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-27T09:47:06.805550+00:00",
+  "transition": "Lab 002 Phase C0 measurement-only BP convergence trace",
+  "sample": {
+    "lattice": "square",
+    "L": 9,
+    "p": 0.2,
+    "q": 1.0,
+    "p_m": 0.0,
+    "p_h": 0.0,
+    "seed": 12,
+    "syndrome_weight": 31,
+    "herald_weight": 15
+  },
+  "decoder": {
+    "recurrence": "probability_damping",
+    "damping": 0.25,
+    "max_iterations": 80,
+    "tolerance": 1e-08,
+    "matching_projection": "posterior_llr",
+    "changed_decoder_output": false
+  },
+  "validation": {
+    "production_converged": false,
+    "production_iterations": 80,
+    "final_marginals_bit_identical": true,
+    "script_sha256": "0d5a0d03374924ffe6da7c5a71acf1d681efa80d0f28c1647990cbfde212b524"
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "max_message_delta": 0.375,
+      "max_factor_message_delta": 0.375,
+      "max_variable_message_delta": 0.32795031055900625,
+      "max_belief_drift": 0.5830802603036878,
+      "max_factor_marginal_disagreement": 0.2675784636623121,
+      "period2_message_delta": null,
+      "worst_factor_row": 6,
+      "worst_edge": 6
+    },
+    {
+      "iteration": 2,
+      "max_message_delta": 0.2625130370851643,
+      "max_factor_message_delta": 0.21012931034482762,
+      "max_variable_message_delta": 0.2625130370851643,
+      "max_belief_drift": 0.2556089403061087,
+      "max_factor_marginal_disagreement": 0.1850359051493365,
+      "period2_message_delta": 0.5496925242646515,
+      "worst_factor_row": 59,
+      "worst_edge": 124
+    },
+    {
+      "iteration": 3,
+      "max_message_delta": 0.19834745289885136,
+      "max_factor_message_delta": 0.14787310218649752,
+      "max_variable_message_delta": 0.19834745289885136,
+      "max_belief_drift": 0.14796510850628503,
+      "max_factor_marginal_disagreement": 0.16077632964689365,
+      "period2_message_delta": 0.4555145405408759,
+      "worst_factor_row": 12,
+      "worst_edge": 24
+    },
+    {
+      "iteration": 4,
+      "max_message_delta": 0.14674885669254217,
+      "max_factor_message_delta": 0.14674885669254217,
+      "max_variable_message_delta": 0.09475158269205797,
+      "max_belief_drift": 0.12409072402504784,
+      "max_factor_marginal_disagreement": 0.1493456373165788,
+      "period2_message_delta": 0.2929519545443974,
+      "worst_factor_row": 59,
+      "worst_edge": 113
+    },
+    {
+      "iteration": 5,
+      "max_message_delta": 0.0993564660239542,
+      "max_factor_message_delta": 0.09388856892385622,
+      "max_variable_message_delta": 0.0993564660239542,
+      "max_belief_drift": 0.10710299868131445,
+      "max_factor_marginal_disagreement": 0.11781158543210701,
+      "period2_message_delta": 0.23749834352434945,
+      "worst_factor_row": 45,
+      "worst_edge": 98
+    },
+    {
+      "iteration": 6,
+      "max_message_delta": 0.08734666520137824,
+      "max_factor_message_delta": 0.07276653936897004,
+      "max_variable_message_delta": 0.08734666520137824,
+      "max_belief_drift": 0.06733267689068756,
+      "max_factor_marginal_disagreement": 0.08429527597045039,
+      "period2_message_delta": 0.18670313122533244,
+      "worst_factor_row": 45,
+      "worst_edge": 98
+    },
+    {
+      "iteration": 7,
+      "max_message_delta": 0.07185820486760935,
+      "max_factor_message_delta": 0.07185820486760935,
+      "max_variable_message_delta": 0.06652910380909727,
+      "max_belief_drift": 0.06767622104227339,
+      "max_factor_marginal_disagreement": 0.0838345987478753,
+      "period2_message_delta": 0.1538757690104755,
+      "worst_factor_row": 45,
+      "worst_edge": 83
+    },
+    {
+      "iteration": 8,
+      "max_message_delta": 0.059867252267137294,
+      "max_factor_message_delta": 0.059867252267137294,
+      "max_variable_message_delta": 0.05936941493864023,
+      "max_belief_drift": 0.04526078588864951,
+      "max_factor_marginal_disagreement": 0.07438589030912085,
+      "period2_message_delta": 0.1317254571347466,
+      "worst_factor_row": 45,
+      "worst_edge": 83
+    },
+    {
+      "iteration": 9,
+      "max_message_delta": 0.054207547054721306,
+      "max_factor_message_delta": 0.05241382386792781,
+      "max_variable_message_delta": 0.054207547054721306,
+      "max_belief_drift": 0.047563419590658906,
+      "max_factor_marginal_disagreement": 0.06267792084199436,
+      "period2_message_delta": 0.11357696199336154,
+      "worst_factor_row": 37,
+      "worst_edge": 80
+    },
+    {
+      "iteration": 10,
+      "max_message_delta": 0.047517504147500056,
+      "max_factor_message_delta": 0.047517504147500056,
+      "max_variable_message_delta": 0.04610092448857156,
+      "max_belief_drift": 0.04307567286231606,
+      "max_factor_marginal_disagreement": 0.05173023020536499,
+      "period2_message_delta": 0.10030847154329287,
+      "worst_factor_row": 37,
+      "worst_edge": 78
+    },
+    {
+      "iteration": 11,
+      "max_message_delta": 0.03957731920385066,
+      "max_factor_message_delta": 0.03957731920385066,
+      "max_variable_message_delta": 0.03789072179978331,
+      "max_belief_drift": 0.03941860363406402,
+      "max_factor_marginal_disagreement": 0.04376583669703743,
+      "period2_message_delta": 0.08709482335135066,
+      "worst_factor_row": 37,
+      "worst_edge": 78
+    },
+    {
+      "iteration": 12,
+      "max_message_delta": 0.03236842661921502,
+      "max_factor_message_delta": 0.031649257347874715,
+      "max_variable_message_delta": 0.03236842661921502,
+      "max_belief_drift": 0.03433047418405022,
+      "max_factor_marginal_disagreement": 0.03687139127436295,
+      "period2_message_delta": 0.07122657655172537,
+      "worst_factor_row": 43,
+      "worst_edge": 79
+    },
+    {
+      "iteration": 13,
+      "max_message_delta": 0.027315084137730372,
+      "max_factor_message_delta": 0.02713769274379696,
+      "max_variable_message_delta": 0.027315084137730372,
+      "max_belief_drift": 0.03243309221323454,
+      "max_factor_marginal_disagreement": 0.03389567605703958,
+      "period2_message_delta": 0.05968351075694528,
+      "worst_factor_row": 43,
+      "worst_edge": 79
+    },
+    {
+      "iteration": 14,
+      "max_message_delta": 0.02537280735382197,
+      "max_factor_message_delta": 0.0247321758813831,
+      "max_variable_message_delta": 0.02537280735382197,
+      "max_belief_drift": 0.03267438926008881,
+      "max_factor_marginal_disagreement": 0.03181234374438002,
+      "period2_message_delta": 0.05186986862517995,
+      "worst_factor_row": 53,
+      "worst_edge": 115
+    },
+    {
+      "iteration": 15,
+      "max_message_delta": 0.02366845725299893,
+      "max_factor_message_delta": 0.021511311484168072,
+      "max_variable_message_delta": 0.02366845725299893,
+      "max_belief_drift": 0.02984419211396916,
+      "max_factor_marginal_disagreement": 0.029810740269951785,
+      "period2_message_delta": 0.049041264606820845,
+      "worst_factor_row": 53,
+      "worst_edge": 115
+    },
+    {
+      "iteration": 16,
+      "max_message_delta": 0.021217512401335625,
+      "max_factor_message_delta": 0.017933651871597123,
+      "max_variable_message_delta": 0.021217512401335625,
+      "max_belief_drift": 0.026736430147358714,
+      "max_factor_marginal_disagreement": 0.027569311201746605,
+      "period2_message_delta": 0.04488596965433456,
+      "worst_factor_row": 53,
+      "worst_edge": 115
+    },
+    {
+      "iteration": 17,
+      "max_message_delta": 0.018295254099807368,
+      "max_factor_message_delta": 0.015667550575473532,
+      "max_variable_message_delta": 0.018295254099807368,
+      "max_belief_drift": 0.02315665900543118,
+      "max_factor_marginal_disagreement": 0.025328950238840797,
+      "period2_message_delta": 0.03951276650114288,
+      "worst_factor_row": 53,
+      "worst_edge": 115
+    },
+    {
+      "iteration": 18,
+      "max_message_delta": 0.01623346981426632,
+      "max_factor_message_delta": 0.015152180049571251,
+      "max_variable_message_delta": 0.01623346981426632,
+      "max_belief_drift": 0.019757108999699624,
+      "max_factor_marginal_disagreement": 0.023408490904058665,
+      "period2_message_delta": 0.03435662996868094,
+      "worst_factor_row": 1,
+      "worst_edge": 3
+    },
+    {
+      "iteration": 19,
+      "max_message_delta": 0.014500936007840415,
+      "max_factor_message_delta": 0.013952800526986275,
+      "max_variable_message_delta": 0.014500936007840415,
+      "max_belief_drift": 0.016856322200275442,
+      "max_factor_marginal_disagreement": 0.021869293744829543,
+      "period2_message_delta": 0.03053194505137552,
+      "worst_factor_row": 25,
+      "worst_edge": 55
+    },
+    {
+      "iteration": 20,
+      "max_message_delta": 0.013239478003005511,
+      "max_factor_message_delta": 0.012569368085345145,
+      "max_variable_message_delta": 0.013239478003005511,
+      "max_belief_drift": 0.014507336728828535,
+      "max_factor_marginal_disagreement": 0.020564607688466574,
+      "period2_message_delta": 0.027740414010845926,
+      "worst_factor_row": 25,
+      "worst_edge": 55
+    },
+    {
+      "iteration": 21,
+      "max_message_delta": 0.01211198668352298,
+      "max_factor_message_delta": 0.011564378643755702,
+      "max_variable_message_delta": 0.01211198668352298,
+      "max_belief_drift": 0.012631462767333512,
+      "max_factor_marginal_disagreement": 0.019351581125844786,
+      "period2_message_delta": 0.025351464686528435,
+      "worst_factor_row": 41,
+      "worst_edge": 86
+    },
+    {
+      "iteration": 22,
+      "max_message_delta": 0.011101612893550883,
+      "max_factor_message_delta": 0.010615295051270901,
+      "max_variable_message_delta": 0.011101612893550883,
+      "max_belief_drift": 0.011304723238381942,
+      "max_factor_marginal_disagreement": 0.018196787445743656,
+      "period2_message_delta": 0.023213599577073807,
+      "worst_factor_row": 25,
+      "worst_edge": 55
+    },
+    {
+      "iteration": 23,
+      "max_message_delta": 0.010194093556727624,
+      "max_factor_message_delta": 0.009781901998037246,
+      "max_variable_message_delta": 0.010194093556727624,
+      "max_belief_drift": 0.010221415397506095,
+      "max_factor_marginal_disagreement": 0.01716677197189892,
+      "period2_message_delta": 0.02129570645027845,
+      "worst_factor_row": 41,
+      "worst_edge": 86
+    },
+    {
+      "iteration": 24,
+      "max_message_delta": 0.009378440775563296,
+      "max_factor_message_delta": 0.009032581063618261,
+      "max_variable_message_delta": 0.009378440775563296,
+      "max_belief_drift": 0.009147565711152938,
+      "max_factor_marginal_disagreement": 0.016264864089237996,
+      "period2_message_delta": 0.019572534332290892,
+      "worst_factor_row": 25,
+      "worst_edge": 55
+    },
+    {
+      "iteration": 25,
+      "max_message_delta": 0.008646369529070497,
+      "max_factor_message_delta": 0.00833755632743971,
+      "max_variable_message_delta": 0.008646369529070497,
+      "max_belief_drift": 0.00812248554561168,
+      "max_factor_marginal_disagreement": 0.015427887691899289,
+      "period2_message_delta": 0.018024810304633765,
+      "worst_factor_row": 25,
+      "worst_edge": 55
+    },
+    {
+      "iteration": 26,
+      "max_message_delta": 0.007990883176104635,
+      "max_factor_message_delta": 0.007704166098885967,
+      "max_variable_message_delta": 0.007990883176104635,
+      "max_belief_drift": 0.007163712591157778,
+      "max_factor_marginal_disagreement": 0.01467049439479301,
+      "period2_message_delta": 0.016637252705175132,
+      "worst_factor_row": 25,
+      "worst_edge": 55
+    },
+    {
+      "iteration": 27,
+      "max_message_delta": 0.007518876442155875,
+      "max_factor_message_delta": 0.007157756289017825,
+      "max_variable_message_delta": 0.007518876442155875,
+      "max_belief_drift": 0.006277547626943214,
+      "max_factor_marginal_disagreement": 0.013988796342823906,
+      "period2_message_delta": 0.015435197981058413,
+      "worst_factor_row": 16,
+      "worst_edge": 35
+    },
+    {
+      "iteration": 28,
+      "max_message_delta": 0.0071404352849645525,
+      "max_factor_message_delta": 0.00671034818518812,
+      "max_variable_message_delta": 0.0071404352849645525,
+      "max_belief_drift": 0.0054685045791408315,
+      "max_factor_marginal_disagreement": 0.01336520851691192,
+      "period2_message_delta": 0.014659311727120428,
+      "worst_factor_row": 16,
+      "worst_edge": 35
+    },
+    {
+      "iteration": 29,
+      "max_message_delta": 0.00678349704446779,
+      "max_factor_message_delta": 0.006349001630892803,
+      "max_variable_message_delta": 0.00678349704446779,
+      "max_belief_drift": 0.004740701841578154,
+      "max_factor_marginal_disagreement": 0.01278574964942808,
+      "period2_message_delta": 0.013923932329432342,
+      "worst_factor_row": 16,
+      "worst_edge": 35
+    },
+    {
+      "iteration": 30,
+      "max_message_delta": 0.006492679253856548,
+      "max_factor_message_delta": 0.006059827360703984,
+      "max_variable_message_delta": 0.006492679253856548,
+      "max_belief_drift": 0.004095371892792743,
+      "max_factor_marginal_disagreement": 0.012246997534562931,
+      "period2_message_delta": 0.013271294090638708,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 31,
+      "max_message_delta": 0.006234381702346137,
+      "max_factor_message_delta": 0.005801665117742882,
+      "max_variable_message_delta": 0.006234381702346137,
+      "max_belief_drift": 0.00367589881537278,
+      "max_factor_marginal_disagreement": 0.011750097315747554,
+      "period2_message_delta": 0.012727060956202685,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 32,
+      "max_message_delta": 0.006002557008824183,
+      "max_factor_message_delta": 0.005565841755970857,
+      "max_variable_message_delta": 0.006002557008824183,
+      "max_belief_drift": 0.003442389394630041,
+      "max_factor_marginal_disagreement": 0.011293456142091818,
+      "period2_message_delta": 0.012236938711170264,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 33,
+      "max_message_delta": 0.005792775121056137,
+      "max_factor_message_delta": 0.005350096144769445,
+      "max_variable_message_delta": 0.005792775121056137,
+      "max_belief_drift": 0.0032106382164924785,
+      "max_factor_marginal_disagreement": 0.010872028968798686,
+      "period2_message_delta": 0.011795332129880265,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 34,
+      "max_message_delta": 0.005600809154573783,
+      "max_factor_message_delta": 0.0051527316278339175,
+      "max_variable_message_delta": 0.005600809154573783,
+      "max_belief_drift": 0.0029783054517397156,
+      "max_factor_marginal_disagreement": 0.010480899705010871,
+      "period2_message_delta": 0.011393584275629864,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 35,
+      "max_message_delta": 0.005423714696487392,
+      "max_factor_message_delta": 0.00497118328024293,
+      "max_variable_message_delta": 0.005423714696487392,
+      "max_belief_drift": 0.0027490988915855885,
+      "max_factor_marginal_disagreement": 0.010117442321472436,
+      "period2_message_delta": 0.011024523851061174,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 36,
+      "max_message_delta": 0.005259312416951378,
+      "max_factor_message_delta": 0.0048023112955052905,
+      "max_variable_message_delta": 0.005259312416951378,
+      "max_belief_drift": 0.0025290052442734634,
+      "max_factor_marginal_disagreement": 0.009780328985430187,
+      "period2_message_delta": 0.01068302711343877,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 37,
+      "max_message_delta": 0.005105645498744371,
+      "max_factor_message_delta": 0.004643586861345084,
+      "max_variable_message_delta": 0.005105645498744371,
+      "max_belief_drift": 0.002323542867050943,
+      "max_factor_marginal_disagreement": 0.009467736658893722,
+      "period2_message_delta": 0.01036495791569575,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 38,
+      "max_message_delta": 0.004961026331428586,
+      "max_factor_message_delta": 0.004493770831799249,
+      "max_variable_message_delta": 0.004961026331428586,
+      "max_belief_drift": 0.002136352813711828,
+      "max_factor_marginal_disagreement": 0.00917698064692929,
+      "period2_message_delta": 0.010066671830172957,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 39,
+      "max_message_delta": 0.004824314297259491,
+      "max_factor_message_delta": 0.004352594803815668,
+      "max_variable_message_delta": 0.004824314297259491,
+      "max_belief_drift": 0.001968902176805787,
+      "max_factor_marginal_disagreement": 0.008905377136801507,
+      "period2_message_delta": 0.009785340628688077,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 40,
+      "max_message_delta": 0.004694933877650742,
+      "max_factor_message_delta": 0.004219958689433978,
+      "max_variable_message_delta": 0.004694933877650742,
+      "max_belief_drift": 0.00182084685007744,
+      "max_factor_marginal_disagreement": 0.008650926078058063,
+      "period2_message_delta": 0.009519248174910233,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 41,
+      "max_message_delta": 0.004572569442201524,
+      "max_factor_message_delta": 0.004095377804870792,
+      "max_variable_message_delta": 0.004572569442201524,
+      "max_belief_drift": 0.0016906438900358145,
+      "max_factor_marginal_disagreement": 0.00841218037346525,
+      "period2_message_delta": 0.009267503319852266,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 42,
+      "max_message_delta": 0.004456820029896225,
+      "max_factor_message_delta": 0.003977969003580051,
+      "max_variable_message_delta": 0.004456820029896225,
+      "max_belief_drift": 0.001576155118467426,
+      "max_factor_marginal_disagreement": 0.008187784780803842,
+      "period2_message_delta": 0.009029389472097749,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 43,
+      "max_message_delta": 0.004347073201271812,
+      "max_factor_message_delta": 0.003866766915745612,
+      "max_variable_message_delta": 0.004347073201271812,
+      "max_belief_drift": 0.0014751190600926778,
+      "max_factor_marginal_disagreement": 0.007976307231529034,
+      "period2_message_delta": 0.008803893231168036,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 44,
+      "max_message_delta": 0.004242615108553838,
+      "max_factor_message_delta": 0.0037610124757826435,
+      "max_variable_message_delta": 0.004242615108553838,
+      "max_belief_drift": 0.001385451646640723,
+      "max_factor_marginal_disagreement": 0.007776407774358451,
+      "period2_message_delta": 0.00858968830982565,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 45,
+      "max_message_delta": 0.004142814548491913,
+      "max_factor_message_delta": 0.0036602255033206244,
+      "max_variable_message_delta": 0.004142814548491913,
+      "max_belief_drift": 0.0013140988927324848,
+      "max_factor_marginal_disagreement": 0.007587007423053627,
+      "period2_message_delta": 0.008385429657045751,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 46,
+      "max_message_delta": 0.0040472235848499905,
+      "max_factor_message_delta": 0.0035641033428445157,
+      "max_variable_message_delta": 0.0040472235848499905,
+      "max_belief_drift": 0.0012581863619650635,
+      "max_factor_marginal_disagreement": 0.007407257362223418,
+      "period2_message_delta": 0.008190038133341904,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 47,
+      "max_message_delta": 0.003955554820198437,
+      "max_factor_message_delta": 0.0034723869656598794,
+      "max_variable_message_delta": 0.003955554820198437,
+      "max_belief_drift": 0.0012065260268355749,
+      "max_factor_marginal_disagreement": 0.0072364049902765015,
+      "period2_message_delta": 0.008002778405048427,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 48,
+      "max_message_delta": 0.0038675954655196243,
+      "max_factor_message_delta": 0.00338479258371549,
+      "max_variable_message_delta": 0.0038675954655196243,
+      "max_belief_drift": 0.001158618001117051,
+      "max_factor_marginal_disagreement": 0.007073725352334415,
+      "period2_message_delta": 0.007823150285718061,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 49,
+      "max_message_delta": 0.0037831360849694406,
+      "max_factor_message_delta": 0.003301016627661635,
+      "max_variable_message_delta": 0.0037831360849694406,
+      "max_belief_drift": 0.0011140441304788862,
+      "max_factor_marginal_disagreement": 0.006918549100918048,
+      "period2_message_delta": 0.007650731550489065,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 50,
+      "max_message_delta": 0.0037019490604088268,
+      "max_factor_message_delta": 0.003220769832702919,
+      "max_variable_message_delta": 0.0037019490604088268,
+      "max_belief_drift": 0.001072449586322577,
+      "max_factor_marginal_disagreement": 0.00677030386557298,
+      "period2_message_delta": 0.007485085145378267,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 51,
+      "max_message_delta": 0.0036238042155666284,
+      "max_factor_message_delta": 0.003143800032330335,
+      "max_variable_message_delta": 0.0036238042155666284,
+      "max_belief_drift": 0.0010335297412381594,
+      "max_factor_marginal_disagreement": 0.006628507489813085,
+      "period2_message_delta": 0.0073257532759754,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 52,
+      "max_message_delta": 0.003548491450981628,
+      "max_factor_message_delta": 0.0030698927451744407,
+      "max_variable_message_delta": 0.003548491450981628,
+      "max_belief_drift": 0.0009970216869166215,
+      "max_factor_marginal_disagreement": 0.006492730156400617,
+      "period2_message_delta": 0.007172295666548201,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 53,
+      "max_message_delta": 0.003475830869730856,
+      "max_factor_message_delta": 0.0029988601248589486,
+      "max_variable_message_delta": 0.003475830869730856,
+      "max_belief_drift": 0.0009626978112220463,
+      "max_factor_marginal_disagreement": 0.006362570315549765,
+      "period2_message_delta": 0.007024322320712484,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 54,
+      "max_message_delta": 0.003405669142946488,
+      "max_factor_message_delta": 0.002930531241631451,
+      "max_variable_message_delta": 0.003405669142946488,
+      "max_belief_drift": 0.0009303599725418721,
+      "max_factor_marginal_disagreement": 0.00623765730541187,
+      "period2_message_delta": 0.006881500012677344,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 55,
+      "max_message_delta": 0.003337870647541652,
+      "max_factor_message_delta": 0.002864748333805067,
+      "max_variable_message_delta": 0.003337870647541652,
+      "max_belief_drift": 0.0008998343618396021,
+      "max_factor_marginal_disagreement": 0.006117660556936466,
+      "period2_message_delta": 0.00674353979048814,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 56,
+      "max_message_delta": 0.0032723108230826026,
+      "max_factor_message_delta": 0.002801366532473759,
+      "max_variable_message_delta": 0.0032723108230826026,
+      "max_belief_drift": 0.0008709675517095672,
+      "max_factor_marginal_disagreement": 0.0060022872842032116,
+      "period2_message_delta": 0.006610181470624199,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 57,
+      "max_message_delta": 0.003208873638758547,
+      "max_factor_message_delta": 0.0027402534271793177,
+      "max_variable_message_delta": 0.003208873638758547,
+      "max_belief_drift": 0.0008436237185643902,
+      "max_factor_marginal_disagreement": 0.0058912711886389135,
+      "period2_message_delta": 0.006481184461841094,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 58,
+      "max_message_delta": 0.0031474513077077715,
+      "max_factor_message_delta": 0.002681287358736295,
+      "max_variable_message_delta": 0.0031474513077077715,
+      "max_belief_drift": 0.0008176825202280691,
+      "max_factor_marginal_disagreement": 0.005784364122607355,
+      "period2_message_delta": 0.0063563249464663185,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 59,
+      "max_message_delta": 0.0030879441241669636,
+      "max_factor_message_delta": 0.0026243554599280072,
+      "max_variable_message_delta": 0.0030879441241669636,
+      "max_belief_drift": 0.0007930371222721888,
+      "max_factor_marginal_disagreement": 0.005681335231245199,
+      "period2_message_delta": 0.00623539543187468,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 60,
+      "max_message_delta": 0.0030302597549314303,
+      "max_factor_message_delta": 0.002569352548796866,
+      "max_variable_message_delta": 0.0030302597549314303,
+      "max_belief_drift": 0.0007695922279461476,
+      "max_factor_marginal_disagreement": 0.00558197267714966,
+      "period2_message_delta": 0.006118203879098338,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 61,
+      "max_message_delta": 0.0029743123829319984,
+      "max_factor_message_delta": 0.0025161809053269035,
+      "max_variable_message_delta": 0.0029743123829319984,
+      "max_belief_drift": 0.0007472622696815812,
+      "max_factor_marginal_disagreement": 0.005486082657215785,
+      "period2_message_delta": 0.006004572137863318,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 62,
+      "max_message_delta": 0.002920022127465338,
+      "max_factor_message_delta": 0.002464750214903,
+      "max_variable_message_delta": 0.002920022127465338,
+      "max_belief_drift": 0.0007259699538952891,
+      "max_factor_marginal_disagreement": 0.005393485847169477,
+      "period2_message_delta": 0.005894334510397281,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 63,
+      "max_message_delta": 0.002867314711617497,
+      "max_factor_message_delta": 0.002414977094230386,
+      "max_variable_message_delta": 0.002867314711617497,
+      "max_belief_drift": 0.0007056451954934317,
+      "max_factor_marginal_disagreement": 0.005304014441382898,
+      "period2_message_delta": 0.005787336839082835,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 64,
+      "max_message_delta": 0.0028161210992786456,
+      "max_factor_message_delta": 0.0023667841919861043,
+      "max_variable_message_delta": 0.0028161210992786456,
+      "max_belief_drift": 0.0006862243271517077,
+      "max_factor_marginal_disagreement": 0.005217511279349107,
+      "period2_message_delta": 0.0056834358108961425,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 65,
+      "max_message_delta": 0.002766376949353999,
+      "max_factor_message_delta": 0.0023200992374523555,
+      "max_variable_message_delta": 0.002766376949353999,
+      "max_belief_drift": 0.0006676494338153649,
+      "max_factor_marginal_disagreement": 0.005133829887734087,
+      "period2_message_delta": 0.005582498048632645,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 66,
+      "max_message_delta": 0.002718021979266738,
+      "max_factor_message_delta": 0.0022748543637779173,
+      "max_variable_message_delta": 0.002718021979266738,
+      "max_belief_drift": 0.000649867725905473,
+      "max_factor_marginal_disagreement": 0.005052833913251509,
+      "period2_message_delta": 0.005484398928620737,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 67,
+      "max_message_delta": 0.002670999427169196,
+      "max_factor_message_delta": 0.002230985756180748,
+      "max_variable_message_delta": 0.002670999427169196,
+      "max_belief_drift": 0.0006328309438518032,
+      "max_factor_marginal_disagreement": 0.00497439583979159,
+      "period2_message_delta": 0.005389021406435934,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 68,
+      "max_message_delta": 0.002625255712753405,
+      "max_factor_message_delta": 0.002188433466156686,
+      "max_variable_message_delta": 0.002625255712753405,
+      "max_belief_drift": 0.0006164948235909407,
+      "max_factor_marginal_disagreement": 0.004898395824974533,
+      "period2_message_delta": 0.00529625513992249,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 69,
+      "max_message_delta": 0.002580740253242897,
+      "max_factor_message_delta": 0.0021471412166763626,
+      "max_variable_message_delta": 0.002580740253242897,
+      "max_belief_drift": 0.0006008186440917829,
+      "max_factor_marginal_disagreement": 0.004824721126667653,
+      "period2_message_delta": 0.005205995965996135,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 70,
+      "max_message_delta": 0.0025374053237917638,
+      "max_factor_message_delta": 0.00210705613137141,
+      "max_variable_message_delta": 0.0025374053237917638,
+      "max_belief_drift": 0.0005857648529613568,
+      "max_factor_marginal_disagreement": 0.004753265842406873,
+      "period2_message_delta": 0.005118145577034661,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 71,
+      "max_message_delta": 0.00249520588341845,
+      "max_factor_message_delta": 0.0020681284231441888,
+      "max_variable_message_delta": 0.00249520588341845,
+      "max_belief_drift": 0.0005712987508594836,
+      "max_factor_marginal_disagreement": 0.004683930524741253,
+      "period2_message_delta": 0.005032611207210214,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 72,
+      "max_message_delta": 0.0024540993585426274,
+      "max_factor_message_delta": 0.0020303111058474488,
+      "max_variable_message_delta": 0.0024540993585426274,
+      "max_belief_drift": 0.0005573882161046262,
+      "max_factor_marginal_disagreement": 0.004616621605341709,
+      "period2_message_delta": 0.004949305241960911,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 73,
+      "max_message_delta": 0.0024140454210599405,
+      "max_factor_message_delta": 0.001993559761947372,
+      "max_variable_message_delta": 0.0024140454210599405,
+      "max_belief_drift": 0.0005440034593499066,
+      "max_factor_marginal_disagreement": 0.004551250847572796,
+      "period2_message_delta": 0.004868144779602512,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 74,
+      "max_message_delta": 0.0023750057969154637,
+      "max_factor_message_delta": 0.0019578323592748803,
+      "max_variable_message_delta": 0.0023750057969154637,
+      "max_belief_drift": 0.0005311168050030624,
+      "max_factor_marginal_disagreement": 0.004487734972820789,
+      "period2_message_delta": 0.004789051217975349,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 75,
+      "max_message_delta": 0.0023369441153348047,
+      "max_factor_message_delta": 0.00192308909352501,
+      "max_variable_message_delta": 0.0023369441153348047,
+      "max_belief_drift": 0.0005187024979036448,
+      "max_factor_marginal_disagreement": 0.004425995396681037,
+      "period2_message_delta": 0.004711949912250268,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 76,
+      "max_message_delta": 0.0022998257872064443,
+      "max_factor_message_delta": 0.0018892922399479373,
+      "max_variable_message_delta": 0.0022998257872064443,
+      "max_belief_drift": 0.0005067365327098283,
+      "max_factor_marginal_disagreement": 0.004365957950283328,
+      "period2_message_delta": 0.004636769902541249,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 77,
+      "max_message_delta": 0.0022636178964426934,
+      "max_factor_message_delta": 0.00185640601100856,
+      "max_variable_message_delta": 0.0022636178964426934,
+      "max_belief_drift": 0.0004951965025404848,
+      "max_factor_marginal_disagreement": 0.004307552557858474,
+      "period2_message_delta": 0.004563443683649138,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 78,
+      "max_message_delta": 0.0022282890954755663,
+      "max_factor_message_delta": 0.0018243964237143473,
+      "max_variable_message_delta": 0.0022282890954755663,
+      "max_belief_drift": 0.0004840614637755536,
+      "max_factor_marginal_disagreement": 0.004250712927755251,
+      "period2_message_delta": 0.00449190699191826,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 79,
+      "max_message_delta": 0.0021938095044908845,
+      "max_factor_message_delta": 0.0017932311793927569,
+      "max_variable_message_delta": 0.0021938095044908845,
+      "max_belief_drift": 0.00047331181487675344,
+      "max_factor_marginal_disagreement": 0.00419537630075989,
+      "period2_message_delta": 0.00442209859996634,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    },
+    {
+      "iteration": 80,
+      "max_message_delta": 0.0021601506173666296,
+      "max_factor_message_delta": 0.001762879555122443,
+      "max_variable_message_delta": 0.0021601506173666296,
+      "max_belief_drift": 0.00046292918777190994,
+      "max_factor_marginal_disagreement": 0.004141483241242472,
+      "period2_message_delta": 0.004353960121857514,
+      "worst_factor_row": 10,
+      "worst_edge": 23
+    }
+  ],
+  "final_bottlenecks": {
+    "factors": [
+      {
+        "factor_row": 18,
+        "vertex": 23,
+        "x": 5.0,
+        "y": 2.0,
+        "syndrome": 0,
+        "herald": 0,
+        "true_degree": 0,
+        "message_residual": 0.0021601506173666296,
+        "marginal_disagreement": 8.561479335605867e-49
+      },
+      {
+        "factor_row": 10,
+        "vertex": 13,
+        "x": 4.0,
+        "y": 1.0,
+        "syndrome": 0,
+        "herald": 0,
+        "true_degree": 0,
+        "message_residual": 0.0021601506173666296,
+        "marginal_disagreement": 8.561479335605867e-49
+      },
+      {
+        "factor_row": 30,
+        "vertex": 39,
+        "x": 3.0,
+        "y": 4.0,
+        "syndrome": 0,
+        "herald": 0,
+        "true_degree": 0,
+        "message_residual": 0.0021281603804166327,
+        "marginal_disagreement": 8.645716942640636e-49
+      },
+      {
+        "factor_row": 14,
+        "vertex": 19,
+        "x": 1.0,
+        "y": 2.0,
+        "syndrome": 0,
+        "herald": 0,
+        "true_degree": 0,
+        "message_residual": 0.0018155314825244462,
+        "marginal_disagreement": 9.64807673608001e-49
+      },
+      {
+        "factor_row": 16,
+        "vertex": 21,
+        "x": 3.0,
+        "y": 2.0,
+        "syndrome": 1,
+        "herald": 0,
+        "true_degree": 1,
+        "message_residual": 0.0018037631101847085,
+        "marginal_disagreement": 0.003284736300072144
+      },
+      {
+        "factor_row": 24,
+        "vertex": 31,
+        "x": 4.0,
+        "y": 3.0,
+        "syndrome": 1,
+        "herald": 0,
+        "true_degree": 1,
+        "message_residual": 0.001762879555122443,
+        "marginal_disagreement": 0.0030756409349348424
+      },
+      {
+        "factor_row": 22,
+        "vertex": 29,
+        "x": 2.0,
+        "y": 3.0,
+        "syndrome": 1,
+        "herald": 0,
+        "true_degree": 1,
+        "message_residual": 0.001762237880838624,
+        "marginal_disagreement": 0.003074867538540915
+      },
+      {
+        "factor_row": 31,
+        "vertex": 40,
+        "x": 4.0,
+        "y": 4.0,
+        "syndrome": 0,
+        "herald": 0,
+        "true_degree": 0,
+        "message_residual": 0.0009345700732601853,
+        "marginal_disagreement": 3.8874437406983216e-48
+      },
+      {
+        "factor_row": 25,
+        "vertex": 32,
+        "x": 5.0,
+        "y": 3.0,
+        "syndrome": 0,
+        "herald": 0,
+        "true_degree": 0,
+        "message_residual": 0.0009345700732601853,
+        "marginal_disagreement": 3.8874437406983216e-48
+      },
+      {
+        "factor_row": 41,
+        "vertex": 52,
+        "x": 7.0,
+        "y": 5.0,
+        "syndrome": 0,
+        "herald": 0,
+        "true_degree": 0,
+        "message_residual": 0.0009345700732601853,
+        "marginal_disagreement": 3.8874437406983216e-48
+      },
+      {
+        "factor_row": 47,
+        "vertex": 60,
+        "x": 6.0,
+        "y": 6.0,
+        "syndrome": 0,
+        "herald": 0,
+        "true_degree": 0,
+        "message_residual": 0.0009345700732601853,
+        "marginal_disagreement": 3.8874437406983216e-48
+      },
+      {
+        "factor_row": 17,
+        "vertex": 22,
+        "x": 4.0,
+        "y": 2.0,
+        "syndrome": 1,
+        "herald": 0,
+        "true_degree": 1,
+        "message_residual": 0.0008762345092095947,
+        "marginal_disagreement": 0.0030923893919758694
+      }
+    ],
+    "edges": [
+      {
+        "edge": 37,
+        "vertices": [
+          22,
+          23
+        ],
+        "message_residual": 0.0021601506173666296
+      },
+      {
+        "edge": 23,
+        "vertices": [
+          13,
+          22
+        ],
+        "message_residual": 0.0021601506173666296
+      },
+      {
+        "edge": 51,
+        "vertices": [
+          30,
+          39
+        ],
+        "message_residual": 0.0021281603804166327
+      },
+      {
+        "edge": 31,
+        "vertices": [
+          19,
+          20
+        ],
+        "message_residual": 0.0018155314825244462
+      },
+      {
+        "edge": 35,
+        "vertices": [
+          21,
+          22
+        ],
+        "message_residual": 0.0018037631101847085
+      },
+      {
+        "edge": 38,
+        "vertices": [
+          22,
+          31
+        ],
+        "message_residual": 0.001762879555122443
+      },
+      {
+        "edge": 34,
+        "vertices": [
+          20,
+          29
+        ],
+        "message_residual": 0.001762237880838624
+      },
+      {
+        "edge": 36,
+        "vertices": [
+          21,
+          30
+        ],
+        "message_residual": 0.0017488230902582558
+      },
+      {
+        "edge": 50,
+        "vertices": [
+          30,
+          31
+        ],
+        "message_residual": 0.0017234565540107383
+      },
+      {
+        "edge": 48,
+        "vertices": [
+          29,
+          30
+        ],
+        "message_residual": 0.0017228810170247522
+      },
+      {
+        "edge": 33,
+        "vertices": [
+          20,
+          21
+        ],
+        "message_residual": 0.0014697482944385776
+      },
+      {
+        "edge": 67,
+        "vertices": [
+          40,
+          41
+        ],
+        "message_residual": 0.0009345700732601853
+      }
+    ]
+  },
+  "evidence_boundary": "One deterministic measurement-only trace; no tuning, convergence-rate, or LER inference."
+}

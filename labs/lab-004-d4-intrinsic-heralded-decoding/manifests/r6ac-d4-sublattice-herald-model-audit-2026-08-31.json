@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-01T03:16:22.434535+00:00",
+  "status": "implemented_q_half_sublattice_event_table_passed",
+  "scope": {
+    "lattice": "paper_periodic_honeycomb(L=2)",
+    "decoder": "none; source-to-event likelihood audit only"
+  },
+  "intended_model_checked": {
+    "internal_degree_two_vertex": "vacuum with probability 1/2; matching-colour Abelian e with probability 1/2",
+    "wrong_colour_outcome": "zero probability at a given sublattice vertex",
+    "closed_component_constraint": "separate parity relations for blue/A and green/B internal vertices"
+  },
+  "signal_only_event_table_gate_passed": true,
+  "acceptance": {
+    "all_event_tables_normalized": true,
+    "all_per_vertex_marginals_q_half": true,
+    "factorized_weight_matches_direct_likelihood": true,
+    "sampler_support_matches_event_table": true
+  },
+  "cases": [
+    {
+      "case": "open_two_edge_path",
+      "selected_edge_count": 2,
+      "internal_vertex_count": 1,
+      "allowed_outcome_count": 2,
+      "probability_sum": 1.0,
+      "constraints": [],
+      "per_vertex_event_table": [
+        {
+          "vertex": 1,
+          "sublattice": "green/B",
+          "P_vacuum": 0.5,
+          "P_matching_colour_e": 0.5,
+          "P_wrong_colour_e": 0.0
+        }
+      ],
+      "sampled_support_count": 2,
+      "sampled_histogram_min": 1978,
+      "sampled_histogram_max": 2118
+    },
+    {
+      "case": "trivial_hexagon",
+      "selected_edge_count": 6,
+      "internal_vertex_count": 6,
+      "allowed_outcome_count": 16,
+      "probability_sum": 1.0,
+      "constraints": [
+        {
+          "vertices": [
+            0,
+            2,
+            10
+          ],
+          "required_parity": 0,
+          "label": "component-0-blue"
+        },
+        {
+          "vertices": [
+            1,
+            9,
+            11
+          ],
+          "required_parity": 0,
+          "label": "component-0-green"
+        }
+      ],
+      "per_vertex_event_table": [
+        {
+          "vertex": 0,
+          "sublattice": "blue/A",
+          "P_vacuum": 0.5,
+          "P_matching_colour_e": 0.5,
+          "P_wrong_colour_e": 0.0
+        },
+        {
+          "vertex": 1,
+          "sublattice": "green/B",
+          "P_vacuum": 0.5,
+          "P_matching_colour_e": 0.5,
+          "P_wrong_colour_e": 0.0
+        },
+        {
+          "vertex": 2,
+          "sublattice": "blue/A",
+          "P_vacuum": 0.5,
+          "P_matching_colour_e": 0.5,
+          "P_wrong_colour_e": 0.0
+        },
+        {
+          "vertex": 9,
+          "sublattice": "green/B",
+          "P_vacuum": 0.5,
+          "P_matching_colour_e": 0.5,
+          "P_wrong_colour_e": 0.0
+        },
+        {
+          "vertex": 10,
+          "sublattice": "blue/A",
+          "P_vacuum": 0.5,
+          "P_matching_colour_e": 0.5,
+          "P_wrong_colour_e": 0.0
+        },
+        {
+          "vertex": 11,
+          "sublattice": "green/B",
+          "P_vacuum": 0.5,
+          "P_matching_colour_e": 0.5,
+          "P_wrong_colour_e": 0.0
+        }
+      ],
+      "sampled_support_count": 16,
+      "sampled_histogram_min": 231,
+      "sampled_histogram_max": 282
+    }
+  ],
+  "claim_boundary": "This verifies the current abstract implementation realizes a q=1/2 coloured-vertex record. It does not by itself prove the abstract red-edge-to-source geometry or p_X convention matches Jing et al.; those remain required before reinterpreting the suspended BP curve."
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "runtime": {
+    "interpreter": "/Users/home/Documents/GitHub/emergent_classicality/lab/.venv/bin/python3",
+    "python": "3.13.2",
+    "numpy": "1.26.4",
+    "numba": "0.65.0",
+    "scipy": "1.17.1",
+    "pymatching": "2.4.0",
+    "pythonpath_overlay": ".tmp/numba-runtime:labs/lab-002-herald-belief-matching/scripts",
+    "dependency_files_modified": false
+  },
+  "frozen_executables": {
+    "legacy_pre_update_pyc_sha256": "df56e859609a89e04383cae05ad015224f6827c8b3aebc6ddccbca2c67c4b22e",
+    "memory_pre_optimization_pyc_sha256": "ee278d9fd8ffbe663e8839051b62dbadfaed054cc9ce327d00649e57043f2ed7"
+  },
+  "equivalence": {
+    "lattices": ["square", "honeycomb"],
+    "physical_error_rates": [0.08, 0.10, 0.12, 0.14, 0.16, 0.18, 0.20, 0.11],
+    "samples_per_lattice": 8,
+    "legacy_numba_vs_python_max_marginal_delta": 0.0,
+    "legacy_python_vs_archived_pyc_max_marginal_delta": 0.0,
+    "memory_numba_vs_python_max_marginal_delta": 0.0,
+    "memory_python_vs_frozen_pyc_max_marginal_delta": 0.0,
+    "corrections_exact": true,
+    "iterations_and_convergence_exact": true,
+    "memory_candidate_selection_exact": true
+  },
+  "steady_state_timing_ms_per_shot": {
+    "conditions": "L=5, p=0.14, q=0.75, p_m=p_h=0, 20 observations after warm-up",
+    "square": {
+      "legacy_python": 72.513,
+      "legacy_numba": 0.839,
+      "legacy_speedup": 86.43,
+      "memory_python": 254.387,
+      "memory_numba": 13.205,
+      "memory_speedup": 19.26
+    },
+    "honeycomb": {
+      "legacy_python": 127.024,
+      "legacy_numba": 1.423,
+      "legacy_speedup": 89.26,
+      "memory_python": 644.852,
+      "memory_numba": 30.776,
+      "memory_speedup": 20.95
+    }
+  },
+  "parallel_final_run": {
+    "workers": 4,
+    "first_registered_wall_seconds": 60.785498665994965,
+    "deterministic_regeneration_wall_seconds": 67.8,
+    "matched_observations": 6000,
+    "decoder_arms_per_observation": 2
+  }
+}

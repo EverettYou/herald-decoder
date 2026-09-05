@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-28T06:29:14Z",
+  "status": "completed",
+  "defect": "The active phase-map workflow treated pairwise LER-curve crossings as the primary boundary statistic. Small seed-trajectory fluctuations repeatedly change adjacent-size difference signs, creating arbitrarily many crossing locations. Bootstrapping those locations measures their instability but does not make them a robust phase statistic.",
+  "researcher_direction": "Define the operational phase by the average LER scaling direction with code distance: decreasing LER is decodable, increasing LER is undecodable, and the zero of that scaling slope is the boundary.",
+  "evidence_impact": {
+    "still_valid": [
+      "All corrected posterior-LLR raw shot records, cell counts, syndrome-fidelity checks, runtime/source provenance, and decoder metadata.",
+      "BP convergence-cap mechanism diagnostics, which compare matched logical outcomes rather than infer a phase from curve crossings.",
+      "The two-cohort heterogeneity result as a sampling-fluctuation diagnostic only."
+    ],
+    "superseded_for_phase_inference": [
+      "phase2-residual80-q-skeleton-2026-08-28-analysis.json and its crossing-overlay phase map",
+      "phase3-residual80-honeycomb-highq-refinement-4000-2026-08-28-analysis.json and its crossing-overlay phase map",
+      "phase4-residual80-honeycomb-highq-l11-l13-scaling-4000-2026-08-28-analysis.json, interpretation, and crossing-overlay phase map",
+      "phase4-residual80-honeycomb-highq-adaptive-p-confirmation-4000-2026-08-28-analysis.json, interpretation, and crossing-overlay phase map",
+      "Any finite, ceiling, p_c, or q_c label whose primary support is a pairwise crossing count or location."
+    ],
+    "raw_data_rerun_required": false,
+    "reason": "The defect is in the phase statistic and presentation, not the corrected decoder outputs or stored logical-error counts."
+  },
+  "replacement_primary_statistic": {
+    "name": "finite-size scaling-flow slope",
+    "model": "logit(P_logical(L;p,q)) = alpha(p,q) + beta(p,q) * log(L)",
+    "likelihood": "Binomial logical-error counts at each measured distance.",
+    "primary_scope": "Fit all available common-source L=7,9,11 honeycomb q-skeleton distances jointly within each measured (p,q) cell; do not reduce the fit to an adjacent-size pair.",
+    "uncertainty": "Resample complete nested-p seed trajectories independently within each distance for 20000 replicates and refit beta.",
+    "decodability_probability": "D(p,q) = Pr[beta(p,q) < 0] over seed-trajectory bootstrap replicates.",
+    "classification": {
+      "decodable_green": "central 90% beta interval lies below zero and D(p,q) >= 0.95",
+      "undecodable_red": "central 90% beta interval lies above zero and D(p,q) <= 0.05",
+      "unresolved_gray": "otherwise"
+    },
+    "boundary": "The operational finite-size boundary is beta(p,q)=0, shown only where its bootstrap band and leave-one-distance-out direction are stable.",
+    "crossing_role": "None in primary classification, promotion gates, or the main figure. Historical crossing outputs remain provenance only."
+  },
+  "visual_contract": {
+    "main_panel": "A red/green/gray q-p raster of measured cells. Color represents beta sign; saturation represents sign confidence or absolute beta.",
+    "boundary": "A beta=0 contour with uncertainty band only where supported; no line through unresolved or unmeasured regions.",
+    "diagnostics": "Separate panels show beta with central-90% intervals, LER-versus-distance fits, convergence, and leave-one-distance-out stability.",
+    "forbidden": "No crossing markers, crossing-count legend, or crossing-derived phase label in the primary phase map."
+  },
+  "acceptance_items": [
+    {"item": "Implement the binomial logit slope estimator and trajectory bootstrap with synthetic sign and zero-slope tests.", "status": "complete", "evidence": "scripts/analyze_slope_flow_phase_map.py and scripts/test_slope_flow_phase_map.py"},
+    {"item": "Reanalyze the validated honeycomb L=7,9,11 q skeleton without any crossing statistic.", "status": "complete", "evidence": "phase2-residual80-honeycomb-slope-flow-2026-08-28.json"},
+    {"item": "Generate the red/green/gray slope-flow phase map and uncertainty diagnostics.", "status": "complete", "evidence": "../figures/phase2-residual80-honeycomb-slope-flow-phase-map-2026-08-28.png"},
+    {"item": "Rewrite active Lab 003 conclusions and presentation metadata from the slope-flow evidence only.", "status": "complete", "evidence": "../REPORT.md and ../lab.json"},
+    {"item": "Summarize leave-one-distance-out stability and target unresolved cells by seed-limited versus distance-limited evidence need.", "status": "complete", "evidence": "phase2-residual80-honeycomb-slope-flow-stability-2026-08-28.json"}
+  ],
+  "execution_gate": "The bounded gray-frontier matrix and preregistered slope-flow analysis are complete. One of ten targets becomes red and nine remain gray; the active map has 81 green, 37 red, and 113 gray cells with one supported local boundary segment. Further compute, q/p expansion, unrestricted L15, square, and continuous-boundary promotion remain gated."
+}

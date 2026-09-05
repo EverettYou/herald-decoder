@@ -1,0 +1,297 @@
+{
+  "campaign": "phase-b4-honeycomb-new-frontier-2026-08-28",
+  "config_sha256": "703f816baac3484d2252575535aa9268d501d65887a47fe0d731022a03c2b297",
+  "decoder": {
+    "damping": 0.25,
+    "matching_projection": "posterior_llr",
+    "max_iterations": 80,
+    "name": "HeraldAwareBpMatchingDecoder",
+    "p_h": 0.0,
+    "p_m": 0.0,
+    "recurrence_mode": "damping",
+    "residual_priority_buffer_reuse": false,
+    "residual_priority_cached_products": false,
+    "residual_priority_order": "stable_sort",
+    "update_schedule": "residual_priority",
+    "use_numba": true
+  },
+  "evidence_boundary": "Phase 2 finite-size scouting cell map; crossings require adaptive refinement and confirmation before threshold claims.",
+  "experiment": "Lab 003 Phase 2 full q-skeleton discovery shard",
+  "generated_at": "2026-08-28T11:18:53.787379+00:00",
+  "lattice": "honeycomb",
+  "p_grid": [
+    0.2
+  ],
+  "per_seed": [
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 68,
+      "p": 0.2,
+      "q": 0.05,
+      "seed": 874001,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 68,
+      "p": 0.2,
+      "q": 0.05,
+      "seed": 874002,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 61,
+      "p": 0.2,
+      "q": 0.05,
+      "seed": 874003,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 73,
+      "p": 0.2,
+      "q": 0.05,
+      "seed": 874004,
+      "shots": 200
+    },
+    {
+      "L": 7,
+      "lattice": "honeycomb",
+      "logical_errors": 72,
+      "p": 0.2,
+      "q": 0.05,
+      "seed": 874005,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 79,
+      "p": 0.2,
+      "q": 0.05,
+      "seed": 874001,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 62,
+      "p": 0.2,
+      "q": 0.05,
+      "seed": 874002,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 70,
+      "p": 0.2,
+      "q": 0.05,
+      "seed": 874003,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 75,
+      "p": 0.2,
+      "q": 0.05,
+      "seed": 874004,
+      "shots": 200
+    },
+    {
+      "L": 9,
+      "lattice": "honeycomb",
+      "logical_errors": 75,
+      "p": 0.2,
+      "q": 0.05,
+      "seed": 874005,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 73,
+      "p": 0.2,
+      "q": 0.05,
+      "seed": 874001,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 72,
+      "p": 0.2,
+      "q": 0.05,
+      "seed": 874002,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 71,
+      "p": 0.2,
+      "q": 0.05,
+      "seed": 874003,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 72,
+      "p": 0.2,
+      "q": 0.05,
+      "seed": 874004,
+      "shots": 200
+    },
+    {
+      "L": 11,
+      "lattice": "honeycomb",
+      "logical_errors": 85,
+      "p": 0.2,
+      "q": 0.05,
+      "seed": 874005,
+      "shots": 200
+    }
+  ],
+  "q": 0.05,
+  "raw_records": {
+    "available_statistics": [
+      "per_seed",
+      "summaries"
+    ],
+    "format": "gzip_json_lines",
+    "path": "results/phase-b4-honeycomb-l7-9-11-q005-p020-2026-08-28-raw.jsonl.gz",
+    "records": 3000,
+    "retention": "trajectory payload removed after count/hash validation",
+    "sha256": "060a86a5a846eeab4491a7dfe1c57a33519536457ab9f7ba65757f0b79e0c009"
+  },
+  "runtime": {
+    "numba_available": true,
+    "numba_version": "0.65.0",
+    "numpy_version": "1.26.4",
+    "pymatching_version": "2.4.0",
+    "python_executable": "/Users/home/Documents/GitHub/emergent_classicality/lab/.venv/bin/python3",
+    "python_version": "3.13.2",
+    "scipy_version": "1.17.1"
+  },
+  "sampling": {
+    "error_rule": "x_e(p) = 1[u_e < p]",
+    "herald_rule": "h_v(p,q) = 1[d_v(p)>=2] 1[u_v<q]",
+    "master_rng": "numpy.default_rng(SeedSequence([0x48445233, lattice_id, L, seed]))",
+    "nested_common_random_numbers": true
+  },
+  "schema_version": 1,
+  "seeds": [
+    874001,
+    874002,
+    874003,
+    874004,
+    874005
+  ],
+  "shots_per_seed": 200,
+  "sizes": [
+    7,
+    9,
+    11
+  ],
+  "source_hashes": {
+    "damping_decoder": "a08ddf0b58e63bb2627c35cafbe570fe6a0ee8dc21bd4eaca720d6dbcbc5e182",
+    "decoder": "990af03ac4c99684e9e9dac6e5a8bb64d773015879c1638906f5fb592cdc6a43",
+    "lattice_model": "b87a5feba27675e26970360d730324b7d3740e4dc0492b4dc478e510f140c9e7",
+    "numba_kernels": "c2254c95600c4f5e3a8c2279d5686a99c8d3810a4bb0c814a4fd0cbf16c184cc",
+    "runner": "14adf7579825e64fa4dd74a6ff374207c3f7b55349b5b533c1ff054bf6d66474"
+  },
+  "source_stability": {
+    "checked_files": [
+      "damping_decoder",
+      "decoder",
+      "lattice_model",
+      "numba_kernels",
+      "runner"
+    ],
+    "enforcement": "fail before raw atomic finalization",
+    "start_equals_end": true
+  },
+  "summaries": [
+    {
+      "L": 7,
+      "bp_convergence_rate": 0.946,
+      "decoder": "herald_residual_priority_bp_llr_mwpm",
+      "detectors": 96,
+      "edges": 146,
+      "lattice": "honeycomb",
+      "logical_error_ci95": [
+        0.3132528988050859,
+        0.37195635687634954
+      ],
+      "logical_error_rate": 0.342,
+      "logical_errors": 342,
+      "mean_bp_iterations": 54.378,
+      "mean_bp_max_message_delta": 2.0746963600962176e-07,
+      "mean_decode_ms": 2.5936115724034607,
+      "p": 0.2,
+      "q": 0.05,
+      "shots": 1000,
+      "syndrome_faithful_shots": 1000,
+      "syndrome_fidelity_rate": 1.0
+    },
+    {
+      "L": 9,
+      "bp_convergence_rate": 0.858,
+      "decoder": "herald_residual_priority_bp_llr_mwpm",
+      "detectors": 160,
+      "edges": 242,
+      "lattice": "honeycomb",
+      "logical_error_ci95": [
+        0.3318160018268193,
+        0.391247837032165
+      ],
+      "logical_error_rate": 0.361,
+      "logical_errors": 361,
+      "mean_bp_iterations": 61.954,
+      "mean_bp_max_message_delta": 1.0753808104671526e-06,
+      "mean_decode_ms": 3.9355235668481328,
+      "p": 0.2,
+      "q": 0.05,
+      "shots": 1000,
+      "syndrome_faithful_shots": 1000,
+      "syndrome_fidelity_rate": 1.0
+    },
+    {
+      "L": 11,
+      "bp_convergence_rate": 0.78,
+      "decoder": "herald_residual_priority_bp_llr_mwpm",
+      "detectors": 240,
+      "edges": 362,
+      "lattice": "honeycomb",
+      "logical_error_ci95": [
+        0.3435660379642266,
+        0.4034059586911044
+      ],
+      "logical_error_rate": 0.373,
+      "logical_errors": 373,
+      "mean_bp_iterations": 66.099,
+      "mean_bp_max_message_delta": 1.4966480241526414e-06,
+      "mean_decode_ms": 6.385116542922333,
+      "p": 0.2,
+      "q": 0.05,
+      "shots": 1000,
+      "syndrome_faithful_shots": 1000,
+      "syndrome_fidelity_rate": 1.0
+    }
+  ],
+  "syndrome_fidelity": {
+    "all_faithful": true,
+    "checked_corrections": 3000,
+    "enforcement": "raise before raw-row write and atomic shard finalization",
+    "failures": 0,
+    "faithful_corrections": 3000
+  },
+  "total_shots_per_cell": 1000
+}

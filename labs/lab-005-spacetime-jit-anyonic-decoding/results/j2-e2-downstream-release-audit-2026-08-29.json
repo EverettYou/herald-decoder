@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "status": "passed; corrected deterministic E2 evidence released",
+  "recorded_at": "2026-08-29T14:44:00Z",
+  "acceptance_item": "downstream release audit with sampling still blocked",
+  "audit_scope": ["labs", "src", "wiki", "dashboard"],
+  "findings": {
+    "executable_consumers_outside_lab005": 0,
+    "stale_machine_readable_next_gates": 2,
+    "stale_next_gates_corrected": 2,
+    "historical_stage_evidence_retained": true,
+    "active_lab_and_wiki_surfaces_point_to_final_analysis": true,
+    "performance_or_sampling_consumer_found": false
+  },
+  "corrected_pointers": [
+    "results/j2-e2a-post-flux-adapter-2026-08-29.json",
+    "results/j2-e2b-e2c-completion-matrix-2026-08-29.json"
+  ],
+  "release_set": [
+    "results/j2-e2-post-flux-causal-completion-2026-08-29.json",
+    "results/j2-e2-post-flux-causal-completion-2026-08-29.md",
+    "scripts/d4_projector_instrument.py",
+    "scripts/e1_schedule_integration.py"
+  ],
+  "supporting_evidence": [
+    "results/j2-e2a-post-flux-adapter-2026-08-29.json",
+    "results/j2-e2b-e2c-completion-matrix-2026-08-29.json"
+  ],
+  "release_claim": "The deterministic paper-L=2 public interface safely composes corrected causal stage-1 flux recovery, an action-bound physical charge/vacuum report, public charge recovery, and properly ordered causal next-prefix attachment across both public modes and all four registered schedules.",
+  "still_blocked": [
+    "stochastic or performance sampling",
+    "decoder or schedule advantage",
+    "logical-error rate",
+    "threshold",
+    "hardware extraction fidelity",
+    "runtime scalability",
+    "fault tolerance"
+  ],
+  "released_hashes": {
+    "final_analysis_json": "2d45b96ad2dd76e02cc2568b113304024ec526af58345232a02f23e978c39052",
+    "final_report_md": "a103c40068856e9e18cda4b2f1ac7a8e8ef96778c0d9f7e93731dafe071ee190",
+    "d4_projector_instrument.py": "96e0b9bb923a481013064e5b7d7333ecc8eaab1c7fffb9bd7cbeb3aca8a862e4",
+    "e1_schedule_integration.py": "7d4847111e3a30dba6773f3277c7bde3eb00f243e7080461c54b7e5a2531bb5f"
+  },
+  "next_gate": "Restart the research workflow at the earliest unsupported Lab 005 dependency before registering stochastic histories, logical scoring, or schedule-performance experiments."
+}

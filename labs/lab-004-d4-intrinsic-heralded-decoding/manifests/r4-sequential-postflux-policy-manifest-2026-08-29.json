@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "status": "preflight_failed",
+  "phase": "R4.5",
+  "purpose": "Complete the primitive D4 decision model by integrating the action-dependent second post-flux charge measurement and separating information gain, first-stage myopia, and second-stage algorithmic loss.",
+  "epistemic_role": "Bounded exact sequential-decision audit on the paper L=2 nonwinding channel; not an LER, threshold, scalable decoder, noisy-measurement, or fault-tolerance result.",
+  "source_basis": {
+    "primary": "Jing et al. (2025), Appendix A section 4 and Appendix C section 2: after a homologically trivial physical/correction union, a second simultaneous e-charge measurement obeys one even constraint per colour per connected union component, followed by unit-weight charge MWPM.",
+    "project_model": "The validated R2 pipeline samples the second record uniformly on this affine parity support and scores charge recovery by XOR-residual homology.",
+    "important_correction": "The simulator's -1 value and inferred relation graph are internal generative metadata. The exact decoder-visible second record is a full binary charge vector with deterministic zero outside active union support; neither the active mask nor the hidden physical/correction relation partition is exposed."
+  },
+  "source_freeze": {
+    "../../references/jing2025-intrinsic-heralding/paper.pdf": "7a17c3d3a743e3dec4266b64d0321a6af7a5eeacfab67e42b9ec77d30b65a2ac",
+    "results/r4-first-stage-loss-bridge-audit.json": "e1a4a8ad799a9e1551ae7621cea7695e133066112a128a4e808c2b52d6585012",
+    "scripts/run_r4_first_stage_loss_bridge.py": "d60cd198946476a2aaa07a8bc72709693884a61bd48a8e5520f94d9103a8d3f5",
+    "scripts/d4_pipeline.py": "0e517f922fcd21b3c347be5f59d39b0640d260d11ddd314f408d18035c42e485",
+    "scripts/d4_postflux.py": "5435f1fcea89c9eccf369f8bfef44b23deea1ebe954b5e0f1dea5fce0cf12658",
+    "scripts/d4_charge.py": "c7b528d343abedb052e6bea7f5c29f65de2bab5dae96befa339763198bb17e9a",
+    "scripts/d4_matching.py": "1ad1c96af3bf98353c89820b68eb07183a49c954650c51218ca5c1b5c211739e",
+    "results/r2-end-to-end-pipeline-truth-audit.json": "3d18791d2b69e30d86bd388bd96ca724f512bf05aaba76c7c4bad4379be5cad2"
+  },
+  "scientific_question": {
+    "primary": "How far is the published two-stage D4 policy from the exact policy when the first correction changes the distribution of the later charge record?",
+    "mechanism": "The first correction is both a recovery action and an intervention: together with the hidden physical error it determines whether failure is immediate and, if not, which affine second-measurement channel is realized.",
+    "possible_outcomes": [
+      "The first-stage action that minimizes immediate union loss is also sequentially optimal, so anticipating the second measurement has zero value on the primitive channel.",
+      "A future-aware first action differs from the myopic union-loss action and lowers final risk, demonstrating an active information-gathering or continuation-value effect.",
+      "The public first action is near optimal but unit-weight second-stage MWPM causes most of the full-policy gap.",
+      "The public first action causes most of the full-policy gap even after an exact second-stage continuation.",
+      "The exact O2 policy improves on exact O0, preserving the first-charge information advantage after the adaptive second round.",
+      "Any expected risk ordering fails, localizing an observation leak, likelihood error, incomplete action quotient, or implementation defect."
+    ]
+  },
+  "sequential_model": {
+    "lattice": "periodic_honeycomb(2), 12 red edges, with two four-vertex triangular charge lattices",
+    "physical_ensemble": "The source-frozen R4.4 nonwinding physical-error ensemble at p={0.1,0.3,0.5,0.6}; terminal physical-winding prior mass is retained and reported separately.",
+    "initial_observations": {
+      "o0": "red flux syndrome only",
+      "o2": "red flux syndrome plus the physically allowed first fusion-charge record"
+    },
+    "first_action": "For each initial flux syndrome, choose one of all 32 syndrome-faithful red-X corrections. Public O0 uses unit-weight MWPM; public O2 uses the published 1-n_e K herald-weight MWPM.",
+    "immediate_branch": "For hidden physical mask E and first action A, any winding component in E union A is terminal logical loss one and emits no second record.",
+    "second_observation": "For a homologically trivial union, infer its same-colour parity components only inside the generative likelihood. The decoder-visible Y is a binary value on every star, with zero outside the active union support.",
+    "second_observation_likelihood": "Let N(E,A) be the number of active stars and C(E,A) the number of independent even-parity components across both colours. Then P(Y=y|E,A)=2^(C-N) when y is zero outside the active set and has even parity on every component, and zero otherwise.",
+    "second_action": "For each colour, quotient all charge corrections with boundary Y by the four torus homology sectors. The joint exact action space therefore has 4x4=16 blue/green sector pairs; a representative within a sector cannot change XOR-residual homology.",
+    "terminal_loss": "One iff the first union winds or, after a nonwinding first branch, either colour's effective-Z/correction XOR residual has nontrivial winding.",
+    "observable_history": "An exact second-stage decision may condition on (O,A,Y), where O is O0 or O2 and A is the known chosen first action. It may not condition on E, inferred relation components, active-set metadata, simulator sentinels, or truth-derived effective strings."
+  },
+  "policy_matrix": {
+    "public_fixed": "Published first-stage action for O0 or O2 followed by unit-weight charge MWPM using only the measured charge syndrome.",
+    "fixed_first_exact_continuation": "Hold the corresponding public first action fixed, then choose the exact 16-class second action from the posterior given observable history.",
+    "myopic_first_exact_continuation": "Choose an R4.4 immediate union-loss-minimizing first action with a deterministic mask tie break, then use the exact second continuation.",
+    "future_aware_exact": "Choose the first action minimizing immediate failure plus posterior-optimal continuation loss, then choose the exact second action after Y.",
+    "layers": ["o0", "o2"]
+  },
+  "estimands": [
+    "exact sequential risk under O0 and O2, both nonwinding-conditioned and with terminal physical-winding mass restored",
+    "exact sequential information gain R*_O0-R*_O2",
+    "public full-policy excess risk",
+    "second-stage MWPM excess at the fixed public first action",
+    "public first-action excess after exact continuation",
+    "myopia cost of the immediate union-loss first action",
+    "observation-probability mass on which future-aware and myopic/public first actions differ"
+  ],
+  "validation": {
+    "absolute_tolerance": 1e-12,
+    "required": [
+      "all source hashes match the registration freeze",
+      "the exact second-channel support and 2^(C-N) likelihood normalize independently for every nonterminal (E,A)",
+      "full-binary Y is obtained by replacing internal inactive -1 sentinels with zero, and neither the active mask nor relation partition enters a decoder key",
+      "the exact enumerator reproduces the seeded public sampler support on bounded fixtures without using samples as likelihood evidence",
+      "all 32 first actions are unique and syndrome faithful and both public actions belong to the set",
+      "four charge homology classes per colour are complete and loss-equivalent to exhaustive affine charge chains for every supported syndrome",
+      "public second-stage corrections belong to the registered charge-sector action quotient",
+      "posterior mass is conserved from O0/O2 through immediate-failure and all Y branches",
+      "O2 future-aware exact risk does not exceed O0 future-aware exact risk",
+      "future-aware exact risk does not exceed myopic, fixed-first/exact-continuation, or public risk at the same observation layer",
+      "fixed-first exact continuation does not exceed the corresponding public full-policy risk",
+      "no truth metadata, new stochastic sample, larger lattice, noisy measurement, LER, or threshold claim is introduced"
+    ]
+  },
+  "sensitivity": {
+    "tie_policy": "Use minimum correction mask for exact first-action and charge-sector ties; report tie counts and verify Bayes risk is invariant to the representative.",
+    "observable_ablation": "Run a leak diagnostic that intentionally adds the hidden active/relation metadata only as a labeled oracle upper bound; it must not be used as the primary exact policy.",
+    "continuation_ablation": "Report myopic, fixed-public-first, and future-aware policies rather than attributing the total gap to one stage."
+  },
+  "outputs": {
+    "machine_result": "results/r4-sequential-postflux-policy-audit.json",
+    "report": "results/r4-sequential-postflux-policy-audit.md"
+  },
+  "compute_budget": {
+    "new_stochastic_samples": 0,
+    "new_lattice_sizes": 0,
+    "maximum_initial_o2_observations": 16230,
+    "first_actions_per_syndrome": 32,
+    "maximum_second_outcomes_per_nonterminal_branch": 64,
+    "joint_charge_sector_actions": 16,
+    "maximum_streamed_candidate_transition_contributions": 120000000,
+    "maximum_projected_wall_time_minutes": 30,
+    "maximum_resident_memory_gib": 4,
+    "preflight_rule": "Before the full four-prior run, verify exact structural counts and time a deterministic source-frozen subset. Stop and register an algebraically equivalent aggregation if the transition, wall-time, or memory guard would be exceeded.",
+    "stop_rule": "Stop after one complete primitive O0/O2 sequential policy matrix, exact validations, machine-readable audit, and report update; do not launch R5 or any larger/noisy simulation."
+  },
+  "preflight_outcome": {
+    "status": "failed_before_policy_computation",
+    "evidence": "results/r4-sequential-postflux-policy-preflight.json",
+    "passing_gates": "The exact second-record likelihood normalizes, observation keys exclude hidden metadata, 2,320,936 streamed transitions fit the registered count guard, and projected wall time and memory fit their guards.",
+    "failed_gate": "The primitive periodic_honeycomb(2) charge sublattice is a multigraph: for each colour its 12 physical triangular edges collapse to six endpoint pairs, every pair has two branches with distinct periodic displacement, and the production endpoint-only ChargeLattice rejects this degeneracy.",
+    "consequence": "The registered sixteen-class charge-action quotient and public second-stage MWPM are undefined on the R4 primitive topology. No sequential Bayes risk may be computed from this contract until branch-labelled charge edges and post-flux relations are derived and independently validated.",
+    "next_prerequisite": "Register and validate a topology-preserving branch-labelled primitive charge multigraph, including relation-to-edge provenance and homology fixtures, before re-registering the R4.5 policy computation."
+  }
+}

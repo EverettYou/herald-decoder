@@ -1,0 +1,3490 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-27T16:12:34.535541+00:00",
+  "transition": "Lab 002 Phase C1 complete matched BP convergence ablation",
+  "sample_design": {
+    "lattice": "square",
+    "L": 9,
+    "p": 0.2,
+    "q": 1.0,
+    "p_m": 0.0,
+    "p_h": 0.0,
+    "seeds": [
+      12,
+      8201,
+      8202,
+      8203,
+      8204,
+      8205,
+      8206,
+      8207,
+      8208,
+      8209,
+      8210,
+      8211,
+      8212,
+      8213,
+      8214,
+      8215,
+      8216,
+      8217,
+      8218,
+      8219,
+      8220,
+      8221,
+      8222,
+      8223,
+      8224,
+      8225,
+      8226,
+      8227,
+      8228,
+      8229,
+      8230,
+      8231,
+      8232,
+      8233,
+      8234,
+      8235,
+      8236,
+      8237,
+      8238,
+      8239,
+      8240,
+      8241,
+      8242,
+      8243,
+      8244,
+      8245,
+      8246,
+      8247,
+      8248,
+      8249,
+      8250,
+      8251,
+      8252,
+      8253,
+      8254,
+      8255,
+      8256,
+      8257,
+      8258,
+      8259,
+      8260,
+      8261,
+      8262,
+      8263
+    ],
+    "observations": 64,
+    "includes_c0_seed": true,
+    "tolerance": 1e-08,
+    "max_iterations": 80
+  },
+  "reference_validation": {
+    "seed12_marginals_bit_identical_to_frozen_production": true,
+    "seed12_final_residual_identical_to_frozen_production": true
+  },
+  "conditions": [
+    {
+      "id": "baseline",
+      "family": "reference",
+      "label": "frozen synchronous, damping 0.25",
+      "damping": 0.25,
+      "schedule": "synchronous",
+      "initialization": "prior"
+    },
+    {
+      "id": "damping_0",
+      "family": "damping",
+      "label": "damping 0.00",
+      "damping": 0.0,
+      "schedule": "synchronous",
+      "initialization": "prior"
+    },
+    {
+      "id": "damping_010",
+      "family": "damping",
+      "label": "damping 0.10",
+      "damping": 0.1,
+      "schedule": "synchronous",
+      "initialization": "prior"
+    },
+    {
+      "id": "damping_050",
+      "family": "damping",
+      "label": "damping 0.50",
+      "damping": 0.5,
+      "schedule": "synchronous",
+      "initialization": "prior"
+    },
+    {
+      "id": "residual_priority",
+      "family": "schedule",
+      "label": "residual-priority Gauss-Seidel",
+      "damping": 0.25,
+      "schedule": "residual_priority",
+      "initialization": "prior"
+    },
+    {
+      "id": "local_bootstrap",
+      "family": "initialization",
+      "label": "local-observation bootstrap",
+      "damping": 0.25,
+      "schedule": "synchronous",
+      "initialization": "local_bootstrap"
+    }
+  ],
+  "summaries": [
+    {
+      "id": "baseline",
+      "family": "reference",
+      "label": "frozen synchronous, damping 0.25",
+      "controls": {
+        "damping": 0.25,
+        "schedule": "synchronous",
+        "initialization": "prior"
+      },
+      "converged": 12,
+      "convergence_rate": 0.1875,
+      "means": {
+        "iterations": 76.390625,
+        "final_max_message_delta": 0.0007798421615900022,
+        "edge_log_loss": 0.1313232666525309,
+        "edge_brier": 0.044118863886568126,
+        "runtime_ms": 1777.2886523389388
+      }
+    },
+    {
+      "id": "damping_0",
+      "family": "damping",
+      "label": "damping 0.00",
+      "controls": {
+        "damping": 0.0,
+        "schedule": "synchronous",
+        "initialization": "prior"
+      },
+      "converged": 12,
+      "convergence_rate": 0.1875,
+      "means": {
+        "iterations": 74.5625,
+        "final_max_message_delta": 0.02829455386629877,
+        "edge_log_loss": 0.13132250787687194,
+        "edge_brier": 0.04416877456800008,
+        "runtime_ms": 4242.965615874709
+      },
+      "paired_vs_baseline": {
+        "edge_log_loss": {
+          "mean_delta": -7.587756589894122e-07,
+          "bootstrap_ci95": [
+            -0.0001917867536917262,
+            0.00022226563288325145
+          ]
+        },
+        "edge_brier": {
+          "mean_delta": 4.991068143195469e-05,
+          "bootstrap_ci95": [
+            -1.2960344316476069e-05,
+            0.00012643130090463886
+          ]
+        },
+        "runtime_ms": {
+          "mean_delta": 2465.6769635357705,
+          "bootstrap_ci95": [
+            1206.1449062515976,
+            3946.945828531306
+          ]
+        },
+        "convergence_rate": {
+          "mean_delta": 0.0,
+          "bootstrap_ci95": [
+            -0.078125,
+            0.078125
+          ]
+        }
+      }
+    },
+    {
+      "id": "damping_010",
+      "family": "damping",
+      "label": "damping 0.10",
+      "controls": {
+        "damping": 0.1,
+        "schedule": "synchronous",
+        "initialization": "prior"
+      },
+      "converged": 11,
+      "convergence_rate": 0.171875,
+      "means": {
+        "iterations": 75.25,
+        "final_max_message_delta": 0.0007240993128775775,
+        "edge_log_loss": 0.13122035010187688,
+        "edge_brier": 0.04410915538351366,
+        "runtime_ms": 2627.790466829083
+      },
+      "paired_vs_baseline": {
+        "edge_log_loss": {
+          "mean_delta": -0.00010291655065404112,
+          "bootstrap_ci95": [
+            -0.0001772375481878006,
+            -3.479402049572969e-05
+          ]
+        },
+        "edge_brier": {
+          "mean_delta": -9.708503054461052e-06,
+          "bootstrap_ci95": [
+            -3.0047362242994978e-05,
+            1.2104151981821028e-05
+          ]
+        },
+        "runtime_ms": {
+          "mean_delta": 850.5018144901442,
+          "bootstrap_ci95": [
+            256.9604649167786,
+            1399.230968835604
+          ]
+        },
+        "convergence_rate": {
+          "mean_delta": -0.015625,
+          "bootstrap_ci95": [
+            -0.09375,
+            0.0625
+          ]
+        }
+      }
+    },
+    {
+      "id": "damping_050",
+      "family": "damping",
+      "label": "damping 0.50",
+      "controls": {
+        "damping": 0.5,
+        "schedule": "synchronous",
+        "initialization": "prior"
+      },
+      "converged": 5,
+      "convergence_rate": 0.078125,
+      "means": {
+        "iterations": 78.578125,
+        "final_max_message_delta": 0.0009593462583826506,
+        "edge_log_loss": 0.1316558769886031,
+        "edge_brier": 0.04416466210859037,
+        "runtime_ms": 1540.2028997368689
+      },
+      "paired_vs_baseline": {
+        "edge_log_loss": {
+          "mean_delta": 0.000332610336072188,
+          "bootstrap_ci95": [
+            0.00015141422730892307,
+            0.0005395766721717555
+          ]
+        },
+        "edge_brier": {
+          "mean_delta": 4.579822202224881e-05,
+          "bootstrap_ci95": [
+            -2.8998791984374405e-06,
+            9.416523729728626e-05
+          ]
+        },
+        "runtime_ms": {
+          "mean_delta": -237.08575260207,
+          "bootstrap_ci95": [
+            -861.3917581051169,
+            304.33273202391973
+          ]
+        },
+        "convergence_rate": {
+          "mean_delta": -0.109375,
+          "bootstrap_ci95": [
+            -0.1875,
+            -0.046875
+          ]
+        }
+      }
+    },
+    {
+      "id": "residual_priority",
+      "family": "schedule",
+      "label": "residual-priority Gauss-Seidel",
+      "controls": {
+        "damping": 0.25,
+        "schedule": "residual_priority",
+        "initialization": "prior"
+      },
+      "converged": 22,
+      "convergence_rate": 0.34375,
+      "means": {
+        "iterations": 70.296875,
+        "final_max_message_delta": 0.0006800873757795446,
+        "edge_log_loss": 0.1310202086092033,
+        "edge_brier": 0.044056620581356946,
+        "runtime_ms": 2184.906483782015
+      },
+      "paired_vs_baseline": {
+        "edge_log_loss": {
+          "mean_delta": -0.00030305804332762446,
+          "bootstrap_ci95": [
+            -0.0006517622060013674,
+            -2.8657845683141852e-05
+          ]
+        },
+        "edge_brier": {
+          "mean_delta": -6.224330521117734e-05,
+          "bootstrap_ci95": [
+            -0.00022424589727761986,
+            7.158097969587418e-05
+          ]
+        },
+        "runtime_ms": {
+          "mean_delta": 407.6178314430763,
+          "bootstrap_ci95": [
+            -258.14702909057127,
+            1115.7844316050273
+          ]
+        },
+        "convergence_rate": {
+          "mean_delta": 0.15625,
+          "bootstrap_ci95": [
+            0.078125,
+            0.25
+          ]
+        }
+      }
+    },
+    {
+      "id": "local_bootstrap",
+      "family": "initialization",
+      "label": "local-observation bootstrap",
+      "controls": {
+        "damping": 0.25,
+        "schedule": "synchronous",
+        "initialization": "local_bootstrap"
+      },
+      "converged": 12,
+      "convergence_rate": 0.1875,
+      "means": {
+        "iterations": 76.125,
+        "final_max_message_delta": 0.0007563396874001233,
+        "edge_log_loss": 0.13131447138114627,
+        "edge_brier": 0.04411927802660577,
+        "runtime_ms": 3773.819522124086
+      },
+      "paired_vs_baseline": {
+        "edge_log_loss": {
+          "mean_delta": -8.795271384633542e-06,
+          "bootstrap_ci95": [
+            -4.0477671176018963e-05,
+            2.3147452455466445e-05
+          ]
+        },
+        "edge_brier": {
+          "mean_delta": 4.14140037650353e-07,
+          "bootstrap_ci95": [
+            -1.4707175295867614e-05,
+            1.5718091933297595e-05
+          ]
+        },
+        "runtime_ms": {
+          "mean_delta": 1996.530869785147,
+          "bootstrap_ci95": [
+            783.6152096914702,
+            3805.3656726993718
+          ]
+        },
+        "convergence_rate": {
+          "mean_delta": 0.0,
+          "bootstrap_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    }
+  ],
+  "per_observation": {
+    "baseline": [
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0021601506173666296,
+        "edge_log_loss": 0.20539941077467283,
+        "edge_brier": 0.06325535860020182,
+        "runtime_ms": 1528.3485419931822
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 5.214002656461769e-06,
+        "edge_log_loss": 0.15450554204513317,
+        "edge_brier": 0.05161198062903509,
+        "runtime_ms": 967.5684579997323
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0019848645259267217,
+        "edge_log_loss": 0.10195484691500459,
+        "edge_brier": 0.033749955862572026,
+        "runtime_ms": 1048.9600419823546
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 2.4346580365097736e-06,
+        "edge_log_loss": 0.049538020321531304,
+        "edge_brier": 0.01662962296896161,
+        "runtime_ms": 1199.976333999075
+      },
+      {
+        "iterations": 39,
+        "converged": true,
+        "final_max_message_delta": 8.389313133072562e-09,
+        "edge_log_loss": 9.99977878280379e-13,
+        "edge_brier": 9.99991013150604e-25,
+        "runtime_ms": 483.01070800516754
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.5921660091455792e-06,
+        "edge_log_loss": 0.13832264796093463,
+        "edge_brier": 0.04502192967398056,
+        "runtime_ms": 1031.690083007561
+      },
+      {
+        "iterations": 64,
+        "converged": true,
+        "final_max_message_delta": 6.896063886596693e-09,
+        "edge_log_loss": 0.09517852536760728,
+        "edge_brier": 0.029356923684237188,
+        "runtime_ms": 768.0102500016801
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0001099625459285436,
+        "edge_log_loss": 0.2402650698903655,
+        "edge_brier": 0.08615186952120865,
+        "runtime_ms": 808.6851249972824
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0018536029666598453,
+        "edge_log_loss": 0.12744310198445466,
+        "edge_brier": 0.042280537255053936,
+        "runtime_ms": 897.8784579958301
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 2.397833223366508e-06,
+        "edge_log_loss": 0.0995149267283624,
+        "edge_brier": 0.03456964358325866,
+        "runtime_ms": 922.3547499859706
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0008872735287950295,
+        "edge_log_loss": 0.08822890441629377,
+        "edge_brier": 0.031042944971952223,
+        "runtime_ms": 835.2638329961337
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.002224368393892534,
+        "edge_log_loss": 0.08893458007298033,
+        "edge_brier": 0.027310018023603735,
+        "runtime_ms": 936.8643329944462
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0009981149378356785,
+        "edge_log_loss": 0.03179696560783851,
+        "edge_brier": 0.008978378558974091,
+        "runtime_ms": 797.1967079793103
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.002502417313954841,
+        "edge_log_loss": 0.11504363860133897,
+        "edge_brier": 0.03653291166404892,
+        "runtime_ms": 861.5722079994157
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.0419554695717537e-06,
+        "edge_log_loss": 0.09203703902700772,
+        "edge_brier": 0.03189345775029749,
+        "runtime_ms": 963.8060420111287
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 8.092521241886974e-05,
+        "edge_log_loss": 0.19414392085707488,
+        "edge_brier": 0.06686632115564031,
+        "runtime_ms": 813.875249994453
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 2.6549322074131965e-08,
+        "edge_log_loss": 0.12270852985612496,
+        "edge_brier": 0.04108385320839,
+        "runtime_ms": 1190.9568329865579
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.002736088946027393,
+        "edge_log_loss": 0.05893820543838133,
+        "edge_brier": 0.018059266415887013,
+        "runtime_ms": 1076.7582080152351
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 2.137388819267727e-06,
+        "edge_log_loss": 0.20197380835334244,
+        "edge_brier": 0.06607754545731657,
+        "runtime_ms": 1006.8995830079075
+      },
+      {
+        "iterations": 75,
+        "converged": true,
+        "final_max_message_delta": 9.091440378306004e-09,
+        "edge_log_loss": 0.10962225473763082,
+        "edge_brier": 0.03650638956033499,
+        "runtime_ms": 784.5709999965038
+      },
+      {
+        "iterations": 71,
+        "converged": true,
+        "final_max_message_delta": 9.094027531020288e-09,
+        "edge_log_loss": 0.06974561230858223,
+        "edge_brier": 0.02482311963188059,
+        "runtime_ms": 795.0844169827178
+      },
+      {
+        "iterations": 75,
+        "converged": true,
+        "final_max_message_delta": 7.299951643169322e-09,
+        "edge_log_loss": 0.04887098450661244,
+        "edge_brier": 0.012659781988566907,
+        "runtime_ms": 897.0282080117613
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.002045241480695348,
+        "edge_log_loss": 0.0365807897411676,
+        "edge_brier": 0.010657981459217218,
+        "runtime_ms": 847.8817499999423
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 4.536490452317077e-05,
+        "edge_log_loss": 0.17395033599018261,
+        "edge_brier": 0.05565507495676544,
+        "runtime_ms": 971.9959169742651
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0022427878696857917,
+        "edge_log_loss": 0.07165329297992412,
+        "edge_brier": 0.02230137236203132,
+        "runtime_ms": 1179.044915974373
+      },
+      {
+        "iterations": 73,
+        "converged": true,
+        "final_max_message_delta": 8.673854579033247e-09,
+        "edge_log_loss": 0.08362697206658726,
+        "edge_brier": 0.03009245343588699,
+        "runtime_ms": 934.5048329851124
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0018664247237542009,
+        "edge_log_loss": 0.10216901606629855,
+        "edge_brier": 0.03398198439564756,
+        "runtime_ms": 850.5630409927107
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 3.682012916783606e-07,
+        "edge_log_loss": 0.1382772014944867,
+        "edge_brier": 0.04429673977830699,
+        "runtime_ms": 886.8276249850169
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 2.7608043362548074e-07,
+        "edge_log_loss": 0.1614537678711016,
+        "edge_brier": 0.05489220901997763,
+        "runtime_ms": 820.848917006515
+      },
+      {
+        "iterations": 70,
+        "converged": true,
+        "final_max_message_delta": 8.126750383752324e-09,
+        "edge_log_loss": 0.05972217614638704,
+        "edge_brier": 0.01852578608203165,
+        "runtime_ms": 775.5254170042463
+      },
+      {
+        "iterations": 48,
+        "converged": true,
+        "final_max_message_delta": 4.149894372584839e-09,
+        "edge_log_loss": 0.03323498520230887,
+        "edge_brier": 0.0098804012345679,
+        "runtime_ms": 457.5177089718636
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 2.3516001146917098e-05,
+        "edge_log_loss": 0.16457641553007402,
+        "edge_brier": 0.05159224443665102,
+        "runtime_ms": 871.5679580054712
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0016975254273124962,
+        "edge_log_loss": 0.1882799847269114,
+        "edge_brier": 0.06525465460910325,
+        "runtime_ms": 1039.3256249953993
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0020422587446357054,
+        "edge_log_loss": 0.09837689712209031,
+        "edge_brier": 0.031198952397310645,
+        "runtime_ms": 857.3003339988645
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 8.90847371204373e-07,
+        "edge_log_loss": 0.16897892347530297,
+        "edge_brier": 0.05899708654907776,
+        "runtime_ms": 865.397750021657
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.153769523254411e-07,
+        "edge_log_loss": 0.15824119036339934,
+        "edge_brier": 0.05276103822403683,
+        "runtime_ms": 761.5456249914132
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0026819796254834993,
+        "edge_log_loss": 0.15347913780708705,
+        "edge_brier": 0.05049921114060471,
+        "runtime_ms": 946.3329580030404
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0012961532997337183,
+        "edge_log_loss": 0.09972477290720902,
+        "edge_brier": 0.033192060855725646,
+        "runtime_ms": 964.7679170011543
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0013967551073276185,
+        "edge_log_loss": 0.1833972318846323,
+        "edge_brier": 0.061731939002524536,
+        "runtime_ms": 855.7595000020228
+      },
+      {
+        "iterations": 29,
+        "converged": true,
+        "final_max_message_delta": 4.089876344129665e-09,
+        "edge_log_loss": 0.04465785152562543,
+        "edge_brier": 0.015694444444432923,
+        "runtime_ms": 371.1811669927556
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 5.43466591118591e-07,
+        "edge_log_loss": 0.1466476085382814,
+        "edge_brier": 0.04955968528030891,
+        "runtime_ms": 905.7861249893904
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 3.1743256867500236e-06,
+        "edge_log_loss": 0.317400469815343,
+        "edge_brier": 0.10825798413353405,
+        "runtime_ms": 882.140999980038
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.001052830843538799,
+        "edge_log_loss": 0.23402399080494168,
+        "edge_brier": 0.07897003626656153,
+        "runtime_ms": 1059.6996250096709
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0009686743847207024,
+        "edge_log_loss": 0.28342477284155654,
+        "edge_brier": 0.10156145812220846,
+        "runtime_ms": 975.169207988074
+      },
+      {
+        "iterations": 46,
+        "converged": true,
+        "final_max_message_delta": 5.724533846951374e-09,
+        "edge_log_loss": 0.07363900163894577,
+        "edge_brier": 0.024660254951778,
+        "runtime_ms": 527.5207499798853
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 9.708246810813392e-05,
+        "edge_log_loss": 0.22591800052963978,
+        "edge_brier": 0.07428711152145731,
+        "runtime_ms": 841.1980829841923
+      },
+      {
+        "iterations": 60,
+        "converged": true,
+        "final_max_message_delta": 8.64565996572253e-09,
+        "edge_log_loss": 0.08743024174117725,
+        "edge_brier": 0.030761562512230143,
+        "runtime_ms": 792.4599169928115
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.7543017489796142e-06,
+        "edge_log_loss": 0.20818727544473423,
+        "edge_brier": 0.0711869934445748,
+        "runtime_ms": 1106.4479580090847
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 3.7825238952127194e-07,
+        "edge_log_loss": 0.20099705671610213,
+        "edge_brier": 0.07119054058968916,
+        "runtime_ms": 1142.4090829968918
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 5.0768950784596534e-05,
+        "edge_log_loss": 0.10717034952371528,
+        "edge_brier": 0.03349073141274769,
+        "runtime_ms": 9099.945458990987
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 5.0960584863091185e-08,
+        "edge_log_loss": 0.07473046306947724,
+        "edge_brier": 0.02844731930214276,
+        "runtime_ms": 4718.356624973239
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0031870695429006557,
+        "edge_log_loss": 0.11139506240314606,
+        "edge_brier": 0.03624278261376922,
+        "runtime_ms": 4531.5312079910655
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0028311950966813937,
+        "edge_log_loss": 0.12484150954828686,
+        "edge_brier": 0.04318890004494451,
+        "runtime_ms": 4596.0840419866145
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0018162848697711453,
+        "edge_log_loss": 0.06736040602175257,
+        "edge_brier": 0.023414339924895382,
+        "runtime_ms": 5866.88066701754
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.656757778784046e-05,
+        "edge_log_loss": 0.18272010610620967,
+        "edge_brier": 0.062220239407006064,
+        "runtime_ms": 3803.579917002935
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 2.0234526074691672e-06,
+        "edge_log_loss": 0.23841881986343344,
+        "edge_brier": 0.08292019955172548,
+        "runtime_ms": 3282.2597500053234
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0016198850040302082,
+        "edge_log_loss": 0.0656684013495375,
+        "edge_brier": 0.024012110880263334,
+        "runtime_ms": 3994.142291980097
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0026086794684493375,
+        "edge_log_loss": 0.09750902808607556,
+        "edge_brier": 0.03209953791474453,
+        "runtime_ms": 2846.6201669943985
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0010782798290918105,
+        "edge_log_loss": 0.2556352090897468,
+        "edge_brier": 0.08660846625991134,
+        "runtime_ms": 2939.4582090026233
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.509318381387459e-08,
+        "edge_log_loss": 0.18822677830576984,
+        "edge_brier": 0.06544062846421508,
+        "runtime_ms": 2397.8647500043735
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 6.629400607655045e-05,
+        "edge_log_loss": 0.11284766076576719,
+        "edge_brier": 0.034832988274787,
+        "runtime_ms": 2726.0385419940576
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.003582437307206754,
+        "edge_log_loss": 0.12237631760300748,
+        "edge_brier": 0.04320003940214822,
+        "runtime_ms": 2445.6087079888675
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 3.354939074651231e-05,
+        "edge_log_loss": 0.17287029001382376,
+        "edge_brier": 0.05893408838207707,
+        "runtime_ms": 4456.497541978024
+      },
+      {
+        "iterations": 79,
+        "converged": true,
+        "final_max_message_delta": 8.335017342986362e-09,
+        "edge_log_loss": 0.15070276726845652,
+        "edge_brier": 0.05245184553333748,
+        "runtime_ms": 11934.52579100267
+      }
+    ],
+    "damping_0": [
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.004019344005222525,
+        "edge_log_loss": 0.2043156774349666,
+        "edge_brier": 0.0629781966585124,
+        "runtime_ms": 3674.2723339993972
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 4.204881492997359e-07,
+        "edge_log_loss": 0.1545056496739953,
+        "edge_brier": 0.0516121010124804,
+        "runtime_ms": 2816.9421670027077
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.04458855175057502,
+        "edge_log_loss": 0.10174160098046242,
+        "edge_brier": 0.0337242313443096,
+        "runtime_ms": 3013.776666019112
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 2.258408349220531e-08,
+        "edge_log_loss": 0.04953807071093988,
+        "edge_brier": 0.016629647807678435,
+        "runtime_ms": 3001.6403750050813
+      },
+      {
+        "iterations": 14,
+        "converged": true,
+        "final_max_message_delta": 0.0,
+        "edge_log_loss": 9.99977878280379e-13,
+        "edge_brier": 9.99991013150604e-25,
+        "runtime_ms": 1039.8148340173066
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 5.517227152918025e-08,
+        "edge_log_loss": 0.13832319838663748,
+        "edge_brier": 0.04502213872855181,
+        "runtime_ms": 4371.036583994282
+      },
+      {
+        "iterations": 65,
+        "converged": true,
+        "final_max_message_delta": 5.5748461402771454e-09,
+        "edge_log_loss": 0.0951785248527525,
+        "edge_brier": 0.029356923464839937,
+        "runtime_ms": 2030.5160830030218
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 6.421905126519079e-05,
+        "edge_log_loss": 0.2402401588543092,
+        "edge_brier": 0.08614253747580963,
+        "runtime_ms": 4239.929208997637
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0021468331512929373,
+        "edge_log_loss": 0.12711402519305953,
+        "edge_brier": 0.04220723934614471,
+        "runtime_ms": 8000.614707998466
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.9236844345238424e-07,
+        "edge_log_loss": 0.0995148846860773,
+        "edge_brier": 0.03456961909879347,
+        "runtime_ms": 8372.281666990602
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0033379952607147656,
+        "edge_log_loss": 0.08798739877868308,
+        "edge_brier": 0.031038478999512904,
+        "runtime_ms": 5332.233541994356
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.018807879078068912,
+        "edge_log_loss": 0.08867804922972211,
+        "edge_brier": 0.02722650263205406,
+        "runtime_ms": 3923.236000002362
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0025795244019672925,
+        "edge_log_loss": 0.03119032635675581,
+        "edge_brier": 0.00891257845557689,
+        "runtime_ms": 3612.9154170048423
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.018593708533368503,
+        "edge_log_loss": 0.11463277715611464,
+        "edge_brier": 0.03651297705595803,
+        "runtime_ms": 3546.7592919885647
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 2.715309088685558e-08,
+        "edge_log_loss": 0.09203696495185859,
+        "edge_brier": 0.03189342909656905,
+        "runtime_ms": 2809.4439580163453
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 2.4678093086372144e-05,
+        "edge_log_loss": 0.1941371644068074,
+        "edge_brier": 0.0668667564054089,
+        "runtime_ms": 3220.5193330009934
+      },
+      {
+        "iterations": 73,
+        "converged": true,
+        "final_max_message_delta": 9.346949103594682e-09,
+        "edge_log_loss": 0.12270852940132934,
+        "edge_brier": 0.041083853170399316,
+        "runtime_ms": 2416.106083022896
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.004139272937368876,
+        "edge_log_loss": 0.05775661699169183,
+        "edge_brier": 0.017816709209972963,
+        "runtime_ms": 3198.548375017708
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.137717123178561e-06,
+        "edge_log_loss": 0.2019732512063544,
+        "edge_brier": 0.06607727532011624,
+        "runtime_ms": 3234.8400829941966
+      },
+      {
+        "iterations": 53,
+        "converged": true,
+        "final_max_message_delta": 5.127090418888258e-09,
+        "edge_log_loss": 0.10962225489704572,
+        "edge_brier": 0.0365063896393919,
+        "runtime_ms": 2171.442249993561
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.31428571428571445,
+        "edge_log_loss": 0.07131520144817075,
+        "edge_brier": 0.025557217265016686,
+        "runtime_ms": 3325.745417008875
+      },
+      {
+        "iterations": 77,
+        "converged": true,
+        "final_max_message_delta": 6.449878631187289e-09,
+        "edge_log_loss": 0.0488709843775593,
+        "edge_brier": 0.012659781940251486,
+        "runtime_ms": 3109.493249998195
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.014187467698844047,
+        "edge_log_loss": 0.03637410885558599,
+        "edge_brier": 0.010616731575754037,
+        "runtime_ms": 4211.964332993375
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.1801027174962453e-05,
+        "edge_log_loss": 0.17394392292713723,
+        "edge_brier": 0.05565081537593696,
+        "runtime_ms": 3568.7181249959394
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.002779288549606268,
+        "edge_log_loss": 0.07142222100020318,
+        "edge_brier": 0.022289480910047055,
+        "runtime_ms": 5820.881249994272
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.26666666666666694,
+        "edge_log_loss": 0.08698517408310251,
+        "edge_brier": 0.03144157421766811,
+        "runtime_ms": 5393.5294580005575
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.003429978720452101,
+        "edge_log_loss": 0.10057992052718173,
+        "edge_brier": 0.033962577460948815,
+        "runtime_ms": 4299.395917012589
+      },
+      {
+        "iterations": 77,
+        "converged": true,
+        "final_max_message_delta": 7.774672849958364e-09,
+        "edge_log_loss": 0.13827720064926202,
+        "edge_brier": 0.04429674315261141,
+        "runtime_ms": 5036.163916025544
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 3.03685793179298e-08,
+        "edge_log_loss": 0.16145375950847252,
+        "edge_brier": 0.054892201895448085,
+        "runtime_ms": 28885.57212500018
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.2580355610702642,
+        "edge_log_loss": 0.063697503286349,
+        "edge_brier": 0.01996809050484264,
+        "runtime_ms": 22283.565374993486
+      },
+      {
+        "iterations": 19,
+        "converged": true,
+        "final_max_message_delta": 0.0,
+        "edge_log_loss": 0.033234985202308866,
+        "edge_brier": 0.009880401234567902,
+        "runtime_ms": 1684.9109590111766
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 4.29921557443258e-06,
+        "edge_log_loss": 0.1645784500212704,
+        "edge_brier": 0.05159291973926757,
+        "runtime_ms": 19774.363624979742
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.01590093056938202,
+        "edge_log_loss": 0.1880633652766435,
+        "edge_brier": 0.06518803419807208,
+        "runtime_ms": 2958.523832989158
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.002326364532408781,
+        "edge_log_loss": 0.09897063877532604,
+        "edge_brier": 0.03163930150521841,
+        "runtime_ms": 3860.3805000020657
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 9.283690349803919e-08,
+        "edge_log_loss": 0.1689794920574025,
+        "edge_brier": 0.058997332330914996,
+        "runtime_ms": 3530.612457980169
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.5532309882715367e-08,
+        "edge_log_loss": 0.15824117929102233,
+        "edge_brier": 0.05276103308614412,
+        "runtime_ms": 7905.114416003926
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.07634212551127645,
+        "edge_log_loss": 0.1532464562737924,
+        "edge_brier": 0.05041294052469618,
+        "runtime_ms": 3066.3275830156635
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0014232520868825427,
+        "edge_log_loss": 0.0985705857686979,
+        "edge_brier": 0.0329681270148475,
+        "runtime_ms": 7330.216082977131
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.002921227180115893,
+        "edge_log_loss": 0.18334526825610145,
+        "edge_brier": 0.06177344413103203,
+        "runtime_ms": 9508.695917000296
+      },
+      {
+        "iterations": 8,
+        "converged": true,
+        "final_max_message_delta": 0.0,
+        "edge_log_loss": 0.044657851521677804,
+        "edge_brier": 0.01569444444444445,
+        "runtime_ms": 564.0928339853417
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.1273788258492345e-07,
+        "edge_log_loss": 0.14664772650810903,
+        "edge_brier": 0.04955973285482278,
+        "runtime_ms": 3991.7303749825805
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 2.783256105587384e-07,
+        "edge_log_loss": 0.3174011320986845,
+        "edge_brier": 0.10825832440207113,
+        "runtime_ms": 3862.6207079796586
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.001862999335372359,
+        "edge_log_loss": 0.23383688905454345,
+        "edge_brier": 0.07902409321507704,
+        "runtime_ms": 1864.639665989671
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0014665086909552288,
+        "edge_log_loss": 0.283402762882224,
+        "edge_brier": 0.10156964011858098,
+        "runtime_ms": 2716.6320830001496
+      },
+      {
+        "iterations": 42,
+        "converged": true,
+        "final_max_message_delta": 4.462260672077889e-09,
+        "edge_log_loss": 0.07363900134359785,
+        "edge_brier": 0.024660254825312297,
+        "runtime_ms": 1058.5978329763748
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 8.660099327062465e-05,
+        "edge_log_loss": 0.22590326478832873,
+        "edge_brier": 0.07428110183924391,
+        "runtime_ms": 3486.8374160141684
+      },
+      {
+        "iterations": 45,
+        "converged": true,
+        "final_max_message_delta": 9.448392734867639e-09,
+        "edge_log_loss": 0.08743024126507713,
+        "edge_brier": 0.030761562279187714,
+        "runtime_ms": 1083.0556669970974
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 7.620284009357547e-08,
+        "edge_log_loss": 0.20818694509735466,
+        "edge_brier": 0.07118685241190575,
+        "runtime_ms": 1455.3495000000112
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 4.12165462093661e-07,
+        "edge_log_loss": 0.20099710047354957,
+        "edge_brier": 0.07119055425986479,
+        "runtime_ms": 1704.0938330173958
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 9.62547970151384e-06,
+        "edge_log_loss": 0.1071627831996668,
+        "edge_brier": 0.03348720604183799,
+        "runtime_ms": 1796.6653329785913
+      },
+      {
+        "iterations": 69,
+        "converged": true,
+        "final_max_message_delta": 9.478987206268386e-09,
+        "edge_log_loss": 0.07473046267947495,
+        "edge_brier": 0.028447319114017308,
+        "runtime_ms": 1790.6837920018006
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.11396780180333232,
+        "edge_log_loss": 0.11189837912841226,
+        "edge_brier": 0.03656091992773061,
+        "runtime_ms": 2276.7676249786746
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.06279726494510735,
+        "edge_log_loss": 0.12442966514780376,
+        "edge_brier": 0.04306347658786941,
+        "runtime_ms": 1660.9067090030294
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.030428185531027885,
+        "edge_log_loss": 0.0667498090630561,
+        "edge_brier": 0.02335023826060718,
+        "runtime_ms": 1462.1416250010952
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 2.2087898041700527e-06,
+        "edge_log_loss": 0.1827256126371127,
+        "edge_brier": 0.06222155354887714,
+        "runtime_ms": 1840.079333022004
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.8348606511953136e-07,
+        "edge_log_loss": 0.23841819535686015,
+        "edge_brier": 0.08292005120971699,
+        "runtime_ms": 1884.246792003978
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.004045368164764529,
+        "edge_log_loss": 0.06538205027483945,
+        "edge_brier": 0.023940161929477836,
+        "runtime_ms": 2873.310458002379
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.21666666666666679,
+        "edge_log_loss": 0.09589988813653585,
+        "edge_brier": 0.031707610021661656,
+        "runtime_ms": 2119.806292001158
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0015279445157347915,
+        "edge_log_loss": 0.2553571336670681,
+        "edge_brier": 0.08658208424397407,
+        "runtime_ms": 2514.567917009117
+      },
+      {
+        "iterations": 70,
+        "converged": true,
+        "final_max_message_delta": 9.065058370616441e-09,
+        "edge_log_loss": 0.18822678287683797,
+        "edge_brier": 0.06544063067858955,
+        "runtime_ms": 1774.7280840121675
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 3.5362043514008956e-05,
+        "edge_log_loss": 0.11281292975419052,
+        "edge_brier": 0.03481795881458644,
+        "runtime_ms": 2863.0815829965286
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.1449369416000349,
+        "edge_log_loss": 0.12325470539855285,
+        "edge_brier": 0.04368997949548607,
+        "runtime_ms": 1800.3773329837713
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.064575200365736e-05,
+        "edge_log_loss": 0.1728871510840003,
+        "edge_brier": 0.05894355498322401,
+        "runtime_ms": 1812.9187500162516
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.17638751588758655,
+        "edge_log_loss": 0.151256498946092,
+        "edge_brier": 0.05271593385847119,
+        "runtime_ms": 1710.8243749826215
+      }
+    ],
+    "damping_010": [
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0020410092984862738,
+        "edge_log_loss": 0.20467752906413528,
+        "edge_brier": 0.06306817241000634,
+        "runtime_ms": 3292.1619590197224
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 6.043946136902179e-07,
+        "edge_log_loss": 0.15450563793766614,
+        "edge_brier": 0.05161209030203385,
+        "runtime_ms": 1788.638208003249
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.002033190125711015,
+        "edge_log_loss": 0.1017708097998203,
+        "edge_brier": 0.03370519026614572,
+        "runtime_ms": 1953.21387500735
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.501260839531504e-07,
+        "edge_log_loss": 0.049538068497722756,
+        "edge_brier": 0.016629646717934737,
+        "runtime_ms": 2578.7131669931114
+      },
+      {
+        "iterations": 28,
+        "converged": true,
+        "final_max_message_delta": 2.109464491972801e-09,
+        "edge_log_loss": 9.99977878280379e-13,
+        "edge_brier": 9.99991013150604e-25,
+        "runtime_ms": 726.239915995393
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.859008866844647e-07,
+        "edge_log_loss": 0.13832315583661392,
+        "edge_brier": 0.045022122599424154,
+        "runtime_ms": 2849.9130830168724
+      },
+      {
+        "iterations": 60,
+        "converged": true,
+        "final_max_message_delta": 9.427369773717942e-09,
+        "edge_log_loss": 0.09517852540449276,
+        "edge_brier": 0.029356923698235032,
+        "runtime_ms": 1731.5451669855975
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 3.8703853953880873e-05,
+        "edge_log_loss": 0.2402434908930584,
+        "edge_brier": 0.08614360159307936,
+        "runtime_ms": 1928.7392920232378
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.001656473266294256,
+        "edge_log_loss": 0.12722435554532785,
+        "edge_brier": 0.04223160595462137,
+        "runtime_ms": 2026.8137920065783
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 3.0995935085265103e-07,
+        "edge_log_loss": 0.09951488845264976,
+        "edge_brier": 0.034569621199023653,
+        "runtime_ms": 1886.50800002506
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0007322037799895043,
+        "edge_log_loss": 0.0880571002576502,
+        "edge_brier": 0.031034134830282258,
+        "runtime_ms": 2233.2447080116253
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.002000213229026687,
+        "edge_log_loss": 0.08880418528976691,
+        "edge_brier": 0.027274095339392505,
+        "runtime_ms": 4594.139332999475
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0007931761612083865,
+        "edge_log_loss": 0.031385021384557975,
+        "edge_brier": 0.008931586090059705,
+        "runtime_ms": 3472.107417008374
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.002357466595805824,
+        "edge_log_loss": 0.1147539350756041,
+        "edge_brier": 0.03651325431750092,
+        "runtime_ms": 4090.54504201049
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.0166308217485209e-07,
+        "edge_log_loss": 0.09203696988057711,
+        "edge_brier": 0.031893430996838966,
+        "runtime_ms": 2615.078958013328
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 2.4212358147090995e-05,
+        "edge_log_loss": 0.19413829768449367,
+        "edge_brier": 0.06686664274359408,
+        "runtime_ms": 3209.8879579862114
+      },
+      {
+        "iterations": 71,
+        "converged": true,
+        "final_max_message_delta": 9.250650745418199e-09,
+        "edge_log_loss": 0.12270852950117797,
+        "edge_brier": 0.04108385316395786,
+        "runtime_ms": 1707.1218749915715
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0025950865638066922,
+        "edge_log_loss": 0.0581579364903335,
+        "edge_brier": 0.017893669694604104,
+        "runtime_ms": 1964.2016669968143
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 3.6608891429423807e-07,
+        "edge_log_loss": 0.20197331398500593,
+        "edge_brier": 0.06607730608158563,
+        "runtime_ms": 1807.932209019782
+      },
+      {
+        "iterations": 60,
+        "converged": true,
+        "final_max_message_delta": 9.815253498857146e-09,
+        "edge_log_loss": 0.10962225479197447,
+        "edge_brier": 0.0365063895869872,
+        "runtime_ms": 1502.8305409941822
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 4.841805053779069e-05,
+        "edge_log_loss": 0.06974561243880377,
+        "edge_brier": 0.02482311969699135,
+        "runtime_ms": 1866.3964169973042
+      },
+      {
+        "iterations": 73,
+        "converged": true,
+        "final_max_message_delta": 9.709382797762345e-09,
+        "edge_log_loss": 0.04887098400922662,
+        "edge_brier": 0.012659781799007085,
+        "runtime_ms": 2225.9050420252606
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0018221883980930054,
+        "edge_log_loss": 0.03641980258228291,
+        "edge_brier": 0.010617222728410777,
+        "runtime_ms": 3515.2177909913007
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.0363166472626695e-05,
+        "edge_log_loss": 0.17394477250887405,
+        "edge_brier": 0.055651403122551305,
+        "runtime_ms": 2559.620250016451
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0020474592491791788,
+        "edge_log_loss": 0.07150018598291463,
+        "edge_brier": 0.02229242622614202,
+        "runtime_ms": 3184.5386670029256
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 7.079670769921664e-05,
+        "edge_log_loss": 0.08359243671086028,
+        "edge_brier": 0.030075195957977148,
+        "runtime_ms": 1888.6766669747885
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0015878163250739874,
+        "edge_log_loss": 0.10107410199812969,
+        "edge_brier": 0.03394598851772737,
+        "runtime_ms": 1749.1340000124183
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.7730779511282435e-08,
+        "edge_log_loss": 0.13827720072504646,
+        "edge_brier": 0.044296743055244364,
+        "runtime_ms": 1726.5737089910544
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 2.2073911365438903e-08,
+        "edge_log_loss": 0.16145376006651185,
+        "edge_brier": 0.05489220230234467,
+        "runtime_ms": 1958.4518750198185
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 6.427683182230748e-05,
+        "edge_log_loss": 0.06052507617799016,
+        "edge_brier": 0.018924886348845878,
+        "runtime_ms": 1744.9905000103172
+      },
+      {
+        "iterations": 34,
+        "converged": true,
+        "final_max_message_delta": 5.130173619249945e-09,
+        "edge_log_loss": 0.033234985202308866,
+        "edge_brier": 0.009880401234567902,
+        "runtime_ms": 2630.6450410047546
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 5.93785013197623e-06,
+        "edge_log_loss": 0.1645781565381463,
+        "edge_brier": 0.05159282108305215,
+        "runtime_ms": 4885.9297079907265
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0018614542893132802,
+        "edge_log_loss": 0.1881314318806229,
+        "edge_brier": 0.0652063699753484,
+        "runtime_ms": 4273.209417006001
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.001780827164337695,
+        "edge_log_loss": 0.09876721270260194,
+        "edge_brier": 0.031489316550012816,
+        "runtime_ms": 1780.3055839904118
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.2184398240355776e-07,
+        "edge_log_loss": 0.16897944152509095,
+        "edge_brier": 0.0589973104713806,
+        "runtime_ms": 1632.089791004546
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.0816041062788884e-08,
+        "edge_log_loss": 0.15824118000319848,
+        "edge_brier": 0.05276103340471955,
+        "runtime_ms": 1455.2441250125412
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0023978869003893344,
+        "edge_log_loss": 0.15337283948766617,
+        "edge_brier": 0.05047075258405,
+        "runtime_ms": 1790.6638749991544
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.001092548571600127,
+        "edge_log_loss": 0.09894718855898066,
+        "edge_brier": 0.03303860415557491,
+        "runtime_ms": 1622.4569590121973
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0011834672657707462,
+        "edge_log_loss": 0.18334689256003833,
+        "edge_brier": 0.06175059626349419,
+        "runtime_ms": 2755.494666984305
+      },
+      {
+        "iterations": 20,
+        "converged": true,
+        "final_max_message_delta": 1.8331641760127582e-09,
+        "edge_log_loss": 0.0446578515222857,
+        "edge_brier": 0.015694444444443387,
+        "runtime_ms": 446.3990000076592
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 9.221612712329019e-08,
+        "edge_log_loss": 0.1466477144606894,
+        "edge_brier": 0.04955972788569673,
+        "runtime_ms": 2163.8975829991978
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 4.769882011590454e-07,
+        "edge_log_loss": 0.3174010679076591,
+        "edge_brier": 0.10825829191059021,
+        "runtime_ms": 5883.995791984489
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0008937560021311935,
+        "edge_log_loss": 0.23391720621576076,
+        "edge_brier": 0.07901527491011494,
+        "runtime_ms": 2026.5714999986812
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0008202943825166287,
+        "edge_log_loss": 0.2834213225862937,
+        "edge_brier": 0.10157286875120577,
+        "runtime_ms": 2652.7115409844555
+      },
+      {
+        "iterations": 37,
+        "converged": true,
+        "final_max_message_delta": 5.099268451935757e-09,
+        "edge_log_loss": 0.073639001553447,
+        "edge_brier": 0.024660254914737965,
+        "runtime_ms": 857.4004999827594
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 3.763104209858481e-05,
+        "edge_log_loss": 0.2259059905414188,
+        "edge_brier": 0.07428227014676281,
+        "runtime_ms": 3403.5430830263067
+      },
+      {
+        "iterations": 49,
+        "converged": true,
+        "final_max_message_delta": 7.630318155094074e-09,
+        "edge_log_loss": 0.08743024155146951,
+        "edge_brier": 0.030761562419678493,
+        "runtime_ms": 1468.0588750052266
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 2.3059280473969324e-07,
+        "edge_log_loss": 0.20818697424562493,
+        "edge_brier": 0.0711868648512659,
+        "runtime_ms": 2158.8640410045628
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 5.746276687812468e-08,
+        "edge_log_loss": 0.200997097106079,
+        "edge_brier": 0.07119055219984174,
+        "runtime_ms": 4037.2830419801176
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.2964935215520335e-05,
+        "edge_log_loss": 0.10716389947947283,
+        "edge_brier": 0.03348771465395409,
+        "runtime_ms": 2340.31529200729
+      },
+      {
+        "iterations": 74,
+        "converged": true,
+        "final_max_message_delta": 9.075076023989936e-09,
+        "edge_log_loss": 0.07473046258744218,
+        "edge_brier": 0.02844731908269277,
+        "runtime_ms": 1590.677667001728
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.003120109483184308,
+        "edge_log_loss": 0.11148104538696318,
+        "edge_brier": 0.036329481356229563,
+        "runtime_ms": 1688.1793749926146
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.002980796777899253,
+        "edge_log_loss": 0.12469450469721481,
+        "edge_brier": 0.04316388329019248,
+        "runtime_ms": 1451.9112500129268
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0019261370291035473,
+        "edge_log_loss": 0.06691174908997438,
+        "edge_brier": 0.023303972713799376,
+        "runtime_ms": 1506.979333003983
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 4.421378296814993e-06,
+        "edge_log_loss": 0.18272476415851868,
+        "edge_brier": 0.06222134963640629,
+        "runtime_ms": 2344.0741669910494
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 2.681680797422814e-07,
+        "edge_log_loss": 0.2384182476086733,
+        "edge_brier": 0.08292006357827426,
+        "runtime_ms": 2585.594999982277
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0013354964428034383,
+        "edge_log_loss": 0.06546920757652036,
+        "edge_brier": 0.02395984722045722,
+        "runtime_ms": 3194.601666997187
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.002642302168249566,
+        "edge_log_loss": 0.09643357172379521,
+        "edge_brier": 0.03182724931927557,
+        "runtime_ms": 5533.219000004465
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0009207642451861675,
+        "edge_log_loss": 0.2554455919675519,
+        "edge_brier": 0.08658989590584174,
+        "runtime_ms": 9329.91862500785
+      },
+      {
+        "iterations": 70,
+        "converged": true,
+        "final_max_message_delta": 8.500608439376833e-09,
+        "edge_log_loss": 0.1882267803774447,
+        "edge_brier": 0.06544062962454567,
+        "runtime_ms": 5980.213874980109
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.748393212097632e-05,
+        "edge_log_loss": 0.11281807275262161,
+        "edge_brier": 0.03482029396211169,
+        "runtime_ms": 5167.410583992023
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0033189791046033257,
+        "edge_log_loss": 0.12252324931808647,
+        "edge_brier": 0.04329241279545047,
+        "runtime_ms": 1342.5980409956537
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 8.354981106406534e-06,
+        "edge_log_loss": 0.17288468932961387,
+        "edge_brier": 0.05894218717437369,
+        "runtime_ms": 1440.7834579760674
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 5.459451044254049e-05,
+        "edge_log_loss": 0.15035483534257443,
+        "edge_brier": 0.052278018734181655,
+        "runtime_ms": 4378.267333988333
+      }
+    ],
+    "damping_050": [
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.002329302590293847,
+        "edge_log_loss": 0.207616251539056,
+        "edge_brier": 0.06386044579382322,
+        "runtime_ms": 7320.7087500195485
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.00010716701616386715,
+        "edge_log_loss": 0.15449334801873685,
+        "edge_brier": 0.051603679565923835,
+        "runtime_ms": 4130.736291001085
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0017121375770743352,
+        "edge_log_loss": 0.10227282461866401,
+        "edge_brier": 0.033787884624838074,
+        "runtime_ms": 2540.2937500039116
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.00017717944281858689,
+        "edge_log_loss": 0.049532548672446323,
+        "edge_brier": 0.016626913567593965,
+        "runtime_ms": 2492.7826250204816
+      },
+      {
+        "iterations": 69,
+        "converged": true,
+        "final_max_message_delta": 8.81892451300024e-09,
+        "edge_log_loss": 9.99977878280379e-13,
+        "edge_brier": 9.99991013150604e-25,
+        "runtime_ms": 1188.2860409968998
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 4.4734199297957744e-05,
+        "edge_log_loss": 0.13829839333235605,
+        "edge_brier": 0.045012714265469496,
+        "runtime_ms": 1406.8504589959048
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.4700715533777498e-08,
+        "edge_log_loss": 0.0951785237651736,
+        "edge_brier": 0.029356923106434066,
+        "runtime_ms": 1942.1340830158442
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0004686803546750107,
+        "edge_log_loss": 0.24033123774030932,
+        "edge_brier": 0.08616818750392913,
+        "runtime_ms": 1323.883917008061
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0023026238795162413,
+        "edge_log_loss": 0.1280981033970488,
+        "edge_brier": 0.04243422819437045,
+        "runtime_ms": 1151.8125829752535
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 5.8428855677084e-05,
+        "edge_log_loss": 0.099516649041297,
+        "edge_brier": 0.034570650043633744,
+        "runtime_ms": 1335.997916990891
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.001343032458012386,
+        "edge_log_loss": 0.0886860347113513,
+        "edge_brier": 0.031034101683115652,
+        "runtime_ms": 1109.823792008683
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.002619203099730405,
+        "edge_log_loss": 0.08935975455752188,
+        "edge_brier": 0.027442751813653764,
+        "runtime_ms": 1251.2706670095213
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0017061011073573606,
+        "edge_log_loss": 0.03327586916566716,
+        "edge_brier": 0.009178463360249156,
+        "runtime_ms": 1369.9240829737391
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0026691723643651466,
+        "edge_log_loss": 0.1159545320153913,
+        "edge_brier": 0.036622639463755075,
+        "runtime_ms": 1123.48783298512
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 3.7148575169398956e-05,
+        "edge_log_loss": 0.09204118459721741,
+        "edge_brier": 0.03189506188942337,
+        "runtime_ms": 1129.5044160215184
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0005226632704464773,
+        "edge_log_loss": 0.19421754185128934,
+        "edge_brier": 0.06686573116931016,
+        "runtime_ms": 1174.9349170131609
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 3.0717291518156387e-06,
+        "edge_log_loss": 0.12270863020479528,
+        "edge_brier": 0.04108386866843286,
+        "runtime_ms": 1636.1247089807875
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0029067770175615903,
+        "edge_log_loss": 0.061228397778632086,
+        "edge_brier": 0.01865236505278774,
+        "runtime_ms": 1365.7471670012455
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 3.303968925194578e-05,
+        "edge_log_loss": 0.20198790704384348,
+        "edge_brier": 0.0660842657923051,
+        "runtime_ms": 1249.476583005162
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 2.8808282785286465e-05,
+        "edge_log_loss": 0.1096188176129486,
+        "edge_brier": 0.0365047039778966,
+        "runtime_ms": 989.096541015897
+      },
+      {
+        "iterations": 50,
+        "converged": true,
+        "final_max_message_delta": 9.883156182333153e-09,
+        "edge_log_loss": 0.06974561287845293,
+        "edge_brier": 0.0248231198254808,
+        "runtime_ms": 648.1422090146225
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.0369695219170083e-07,
+        "edge_log_loss": 0.04887097606798797,
+        "edge_brier": 0.012659777767668346,
+        "runtime_ms": 1095.1052080199588
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.002463729930937908,
+        "edge_log_loss": 0.03700206120217578,
+        "edge_brier": 0.010756192067654867,
+        "runtime_ms": 986.5937500144355
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.00043058342010871,
+        "edge_log_loss": 0.1740524886749643,
+        "edge_brier": 0.05572155075272073,
+        "runtime_ms": 920.086583995726
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.002589651854519315,
+        "edge_log_loss": 0.072112507792308,
+        "edge_brier": 0.02235419039159815,
+        "runtime_ms": 1115.6445420056116
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.4022229910537476e-07,
+        "edge_log_loss": 0.0835925789202281,
+        "edge_brier": 0.0300752569682015,
+        "runtime_ms": 947.4943329987582
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0027122599091382593,
+        "edge_log_loss": 0.10584752495938701,
+        "edge_brier": 0.034339911780917436,
+        "runtime_ms": 970.2800000086427
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 2.426392751897488e-05,
+        "edge_log_loss": 0.13827928501555864,
+        "edge_brier": 0.04429697039725555,
+        "runtime_ms": 988.254166994011
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.2587311517819888e-05,
+        "edge_log_loss": 0.16145546750190604,
+        "edge_brier": 0.05489321900936145,
+        "runtime_ms": 913.5800410003867
+      },
+      {
+        "iterations": 61,
+        "converged": true,
+        "final_max_message_delta": 7.1197571727132924e-09,
+        "edge_log_loss": 0.05911642013802064,
+        "edge_brier": 0.018223837827412034,
+        "runtime_ms": 727.6456249819603
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 2.1524404314465784e-08,
+        "edge_log_loss": 0.033234985202555786,
+        "edge_brier": 0.0098804012345679,
+        "runtime_ms": 1013.8431249943096
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.00018847880520078686,
+        "edge_log_loss": 0.16455209517154226,
+        "edge_brier": 0.05158430661030686,
+        "runtime_ms": 943.7451249978039
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0013785091828767415,
+        "edge_log_loss": 0.1886161044446984,
+        "edge_brier": 0.06536451594500292,
+        "runtime_ms": 961.6569579811767
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.00265581263850867,
+        "edge_log_loss": 0.09730011432644435,
+        "edge_brier": 0.030380573634881648,
+        "runtime_ms": 913.7230000051204
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.911252616387804e-05,
+        "edge_log_loss": 0.168959929083005,
+        "edge_brier": 0.058988872551325,
+        "runtime_ms": 1077.3860420158599
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 5.029551458202164e-06,
+        "edge_log_loss": 0.15824250871376958,
+        "edge_brier": 0.05276156541500062,
+        "runtime_ms": 1181.2167919997592
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0032590784463946143,
+        "edge_log_loss": 0.15364796126776586,
+        "edge_brier": 0.05050645652458262,
+        "runtime_ms": 2078.0950829794165
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0018720234132618974,
+        "edge_log_loss": 0.10221146305255831,
+        "edge_brier": 0.03372337803565496,
+        "runtime_ms": 1643.895415996667
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0019703431348494505,
+        "edge_log_loss": 0.1836308207813553,
+        "edge_brier": 0.06171034623732586,
+        "runtime_ms": 1966.304500005208
+      },
+      {
+        "iterations": 52,
+        "converged": true,
+        "final_max_message_delta": 5.782488289410507e-09,
+        "edge_log_loss": 0.04465785153815482,
+        "edge_brier": 0.0156944444443802,
+        "runtime_ms": 795.7413750118576
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 8.983819507535351e-06,
+        "edge_log_loss": 0.1466445802369319,
+        "edge_brier": 0.04955846839249656,
+        "runtime_ms": 1318.4518750058487
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 6.233093784985266e-05,
+        "edge_log_loss": 0.31738179820952256,
+        "edge_brier": 0.10824800817355179,
+        "runtime_ms": 2197.6932079996914
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.001540036310569759,
+        "edge_log_loss": 0.2343319950401625,
+        "edge_brier": 0.07880440384254073,
+        "runtime_ms": 3937.470792006934
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.001369919175070941,
+        "edge_log_loss": 0.28343573758131513,
+        "edge_brier": 0.10153391586793131,
+        "runtime_ms": 2538.7414170254488
+      },
+      {
+        "iterations": 77,
+        "converged": true,
+        "final_max_message_delta": 9.343859463939452e-09,
+        "edge_log_loss": 0.07363900152062046,
+        "edge_brier": 0.024660254891085157,
+        "runtime_ms": 4464.930999994976
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.00042078126696554197,
+        "edge_log_loss": 0.22601899419700533,
+        "edge_brier": 0.07432782141641839,
+        "runtime_ms": 3273.5093330265954
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.089448324886888e-07,
+        "edge_log_loss": 0.08743025468281862,
+        "edge_brier": 0.030761568834145006,
+        "runtime_ms": 942.0816659985576
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 4.1869481507805784e-05,
+        "edge_log_loss": 0.20819846713371642,
+        "edge_brier": 0.07119172236807941,
+        "runtime_ms": 1239.4823329814244
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 7.625317025694578e-06,
+        "edge_log_loss": 0.20099568842206056,
+        "edge_brier": 0.0711901397780264,
+        "runtime_ms": 917.9800420242827
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.00041114399009178904,
+        "edge_log_loss": 0.10726761624243128,
+        "edge_brier": 0.03353642943102247,
+        "runtime_ms": 878.5296250134706
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 5.472867982025953e-06,
+        "edge_log_loss": 0.07473056310310648,
+        "edge_brier": 0.0284473648187584,
+        "runtime_ms": 810.1735829841346
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0030778998738060226,
+        "edge_log_loss": 0.11181390583776056,
+        "edge_brier": 0.036317914875772225,
+        "runtime_ms": 721.1945000162814
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0025870836819159027,
+        "edge_log_loss": 0.12522195656831103,
+        "edge_brier": 0.04324728130455767,
+        "runtime_ms": 796.1379580083303
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0015099240177908202,
+        "edge_log_loss": 0.06840254410665253,
+        "edge_brier": 0.023678993863305402,
+        "runtime_ms": 863.597874995321
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.00012466858015036664,
+        "edge_log_loss": 0.18265680357907438,
+        "edge_brier": 0.06220508210786449,
+        "runtime_ms": 845.4249170026742
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 4.7312842438307356e-05,
+        "edge_log_loss": 0.23844160129671796,
+        "edge_brier": 0.08292558027102814,
+        "runtime_ms": 775.8375000266824
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0024747765362078677,
+        "edge_log_loss": 0.06632961478959712,
+        "edge_brier": 0.024196190755026537,
+        "runtime_ms": 1614.928291994147
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0028906501416742225,
+        "edge_log_loss": 0.10017103506303437,
+        "edge_brier": 0.032713241805140916,
+        "runtime_ms": 2125.3944580093957
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0014922696396917345,
+        "edge_log_loss": 0.25619957422925566,
+        "edge_brier": 0.08665997852638993,
+        "runtime_ms": 1676.4866670127958
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 3.009568908751703e-06,
+        "edge_log_loss": 0.18822520368048226,
+        "edge_brier": 0.06543987961558895,
+        "runtime_ms": 1853.0829589872155
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.000498842169706637,
+        "edge_log_loss": 0.11326048512239709,
+        "edge_brier": 0.035010879911251104,
+        "runtime_ms": 1347.0678750018124
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0038841470379701315,
+        "edge_log_loss": 0.12199285519416068,
+        "edge_brier": 0.042952792642624776,
+        "runtime_ms": 1525.6307919917163
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.00028492119442136143,
+        "edge_log_loss": 0.17265296228947316,
+        "edge_brier": 0.05881159494769824,
+        "runtime_ms": 1462.6040419971105
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 3.3264860433424026e-06,
+        "edge_log_loss": 0.15098758274640564,
+        "edge_brier": 0.05259439955123493,
+        "runtime_ms": 1325.241874990752
+      }
+    ],
+    "residual_priority": [
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0018336504794318753,
+        "edge_log_loss": 0.20380903497195302,
+        "edge_brier": 0.06284212832628676,
+        "runtime_ms": 1615.3280409926083
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 2.858010728079563e-08,
+        "edge_log_loss": 0.15450564987963053,
+        "edge_brier": 0.05161210274936125,
+        "runtime_ms": 1587.2182080056518
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0022567817802947587,
+        "edge_log_loss": 0.10184032110578367,
+        "edge_brier": 0.033788423631522985,
+        "runtime_ms": 1416.752249991987
+      },
+      {
+        "iterations": 80,
+        "converged": true,
+        "final_max_message_delta": 7.752738673261206e-09,
+        "edge_log_loss": 0.04953807097253057,
+        "edge_brier": 0.016629647937031283,
+        "runtime_ms": 2074.723792000441
+      },
+      {
+        "iterations": 34,
+        "converged": true,
+        "final_max_message_delta": 6.156163800952186e-09,
+        "edge_log_loss": 9.99977878280379e-13,
+        "edge_brier": 9.99991013150604e-25,
+        "runtime_ms": 683.8645829993766
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.004400457249588e-08,
+        "edge_log_loss": 0.13832320662320818,
+        "edge_brier": 0.04502214189931579,
+        "runtime_ms": 1687.6422080094926
+      },
+      {
+        "iterations": 34,
+        "converged": true,
+        "final_max_message_delta": 7.668132573357411e-09,
+        "edge_log_loss": 0.0951785250582449,
+        "edge_brier": 0.029356923571402703,
+        "runtime_ms": 727.9618339962326
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.0998570203923919e-05,
+        "edge_log_loss": 0.24023730453245587,
+        "edge_brier": 0.08614132135474611,
+        "runtime_ms": 1347.6021249953192
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0014938782831231956,
+        "edge_log_loss": 0.1270127727710228,
+        "edge_brier": 0.042185807129997324,
+        "runtime_ms": 1567.29741601157
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 3.4322846842460564e-08,
+        "edge_log_loss": 0.09951488457571522,
+        "edge_brier": 0.03456961888905391,
+        "runtime_ms": 1397.4388749920763
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0005963214371977887,
+        "edge_log_loss": 0.08796191860937438,
+        "edge_brier": 0.031066582443440113,
+        "runtime_ms": 1268.2474169996567
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0017453583307716625,
+        "edge_log_loss": 0.08842496205515535,
+        "edge_brier": 0.027117941279157416,
+        "runtime_ms": 1473.4226670116186
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0006086945511369068,
+        "edge_log_loss": 0.03103818566017987,
+        "edge_brier": 0.008917621307490506,
+        "runtime_ms": 12675.046249991283
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.002140357036533286,
+        "edge_log_loss": 0.11450306361368402,
+        "edge_brier": 0.03653181010196995,
+        "runtime_ms": 1582.295833999524
+      },
+      {
+        "iterations": 77,
+        "converged": true,
+        "final_max_message_delta": 8.370203141705446e-09,
+        "edge_log_loss": 0.09203696431573932,
+        "edge_brier": 0.031893428846523464,
+        "runtime_ms": 1355.3725829988252
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 3.6965812877376436e-06,
+        "edge_log_loss": 0.19413662430233553,
+        "edge_brier": 0.06686670040940224,
+        "runtime_ms": 2179.950750025455
+      },
+      {
+        "iterations": 60,
+        "converged": true,
+        "final_max_message_delta": 8.51283893377186e-09,
+        "edge_log_loss": 0.12270852946380345,
+        "edge_brier": 0.04108385316616589,
+        "runtime_ms": 1285.683499998413
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0028436127226917907,
+        "edge_log_loss": 0.05761283155223306,
+        "edge_brier": 0.017864191950066312,
+        "runtime_ms": 1439.513374993112
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 2.5904828615530562e-08,
+        "edge_log_loss": 0.20197323929857974,
+        "edge_brier": 0.06607726983581344,
+        "runtime_ms": 1875.6102909974288
+      },
+      {
+        "iterations": 56,
+        "converged": true,
+        "final_max_message_delta": 6.91905616134747e-09,
+        "edge_log_loss": 0.10962225477180042,
+        "edge_brier": 0.03650638957789534,
+        "runtime_ms": 790.010708005866
+      },
+      {
+        "iterations": 27,
+        "converged": true,
+        "final_max_message_delta": 4.634728822949796e-09,
+        "edge_log_loss": 0.0697441620612771,
+        "edge_brier": 0.024822394504943113,
+        "runtime_ms": 359.67600002186373
+      },
+      {
+        "iterations": 40,
+        "converged": true,
+        "final_max_message_delta": 8.184421695922595e-09,
+        "edge_log_loss": 0.0488709843668699,
+        "edge_brier": 0.012659781952612496,
+        "runtime_ms": 514.4920000166167
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0016097126243471982,
+        "edge_log_loss": 0.03628509905146766,
+        "edge_brier": 0.010591996966529774,
+        "runtime_ms": 979.523916990729
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.054068540451425e-06,
+        "edge_log_loss": 0.17394354834110248,
+        "edge_brier": 0.05565060555257739,
+        "runtime_ms": 992.4875420110766
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0017936569474203967,
+        "edge_log_loss": 0.07132769014813665,
+        "edge_brier": 0.022288065113300337,
+        "runtime_ms": 1309.3109589826781
+      },
+      {
+        "iterations": 51,
+        "converged": true,
+        "final_max_message_delta": 9.289931712785915e-09,
+        "edge_log_loss": 0.08260050847729308,
+        "edge_brier": 0.02957930202807402,
+        "runtime_ms": 755.3623330022674
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0013092906142762872,
+        "edge_log_loss": 0.09999512142114232,
+        "edge_brier": 0.03396372968942071,
+        "runtime_ms": 1161.9883750099689
+      },
+      {
+        "iterations": 70,
+        "converged": true,
+        "final_max_message_delta": 7.969358728487919e-09,
+        "edge_log_loss": 0.1382772007520024,
+        "edge_brier": 0.044296743179668405,
+        "runtime_ms": 890.1634170033503
+      },
+      {
+        "iterations": 70,
+        "converged": true,
+        "final_max_message_delta": 9.683596424725494e-09,
+        "edge_log_loss": 0.16145375953410243,
+        "edge_brier": 0.05489220191759537,
+        "runtime_ms": 887.7285839989781
+      },
+      {
+        "iterations": 31,
+        "converged": true,
+        "final_max_message_delta": 4.784551865810727e-09,
+        "edge_log_loss": 0.059129988383208765,
+        "edge_brier": 0.018230607484561345,
+        "runtime_ms": 322.1607079904061
+      },
+      {
+        "iterations": 40,
+        "converged": true,
+        "final_max_message_delta": 5.420412452217249e-09,
+        "edge_log_loss": 0.03323498520231159,
+        "edge_brier": 0.0098804012345679,
+        "runtime_ms": 702.2281670069788
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.1723538450025828e-06,
+        "edge_log_loss": 0.1645785440927687,
+        "edge_brier": 0.051592947444352874,
+        "runtime_ms": 1207.5180419778917
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.002098596532067898,
+        "edge_log_loss": 0.1879100480467661,
+        "edge_brier": 0.06513462862272917,
+        "runtime_ms": 1211.466750013642
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0015216903277246452,
+        "edge_log_loss": 0.09920356988981473,
+        "edge_brier": 0.03181089102774011,
+        "runtime_ms": 1122.4993749929126
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.2767818247105822e-08,
+        "edge_log_loss": 0.16897950264471012,
+        "edge_brier": 0.05899733691129031,
+        "runtime_ms": 1612.4744580010884
+      },
+      {
+        "iterations": 64,
+        "converged": true,
+        "final_max_message_delta": 7.279950420269188e-09,
+        "edge_log_loss": 0.15824117958089934,
+        "edge_brier": 0.05276103321378157,
+        "runtime_ms": 1247.7033749746624
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0021291635024729416,
+        "edge_log_loss": 0.15352611362740795,
+        "edge_brier": 0.05057311918852442,
+        "runtime_ms": 2890.099625015864
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0008966558875859176,
+        "edge_log_loss": 0.09110292723005559,
+        "edge_brier": 0.029465546603356794,
+        "runtime_ms": 1981.1666670138948
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0009762456145432363,
+        "edge_log_loss": 0.18322486173974525,
+        "edge_brier": 0.0617368677101544,
+        "runtime_ms": 1831.9725419860333
+      },
+      {
+        "iterations": 26,
+        "converged": true,
+        "final_max_message_delta": 7.327940924768047e-09,
+        "edge_log_loss": 0.04465785152929,
+        "edge_brier": 0.01569444444441111,
+        "runtime_ms": 510.44437498785555
+      },
+      {
+        "iterations": 76,
+        "converged": true,
+        "final_max_message_delta": 8.70863281487999e-09,
+        "edge_log_loss": 0.14664773017852373,
+        "edge_brier": 0.04955973421929576,
+        "runtime_ms": 1377.6753749989439
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 5.341923170476548e-08,
+        "edge_log_loss": 0.31740114668885366,
+        "edge_brier": 0.10825833239783121,
+        "runtime_ms": 1795.665250014281
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0007494436127696291,
+        "edge_log_loss": 0.23374562072554458,
+        "edge_brier": 0.07903403472617032,
+        "runtime_ms": 2406.5214590227697
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0006636270509305237,
+        "edge_log_loss": 0.28333140114450817,
+        "edge_brier": 0.10154303943767774,
+        "runtime_ms": 1691.2451249954756
+      },
+      {
+        "iterations": 37,
+        "converged": true,
+        "final_max_message_delta": 9.714510307290425e-09,
+        "edge_log_loss": 0.07363900131763387,
+        "edge_brier": 0.024660254806956345,
+        "runtime_ms": 1983.5206250136252
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 8.85213424994813e-06,
+        "edge_log_loss": 0.22590126407764666,
+        "edge_brier": 0.07428032011820992,
+        "runtime_ms": 8054.034500004491
+      },
+      {
+        "iterations": 42,
+        "converged": true,
+        "final_max_message_delta": 9.968374126145818e-09,
+        "edge_log_loss": 0.08743024158353246,
+        "edge_brier": 0.030761562435896873,
+        "runtime_ms": 2345.532875013305
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 3.9505389515248623e-08,
+        "edge_log_loss": 0.20818694531669146,
+        "edge_brier": 0.07118685260831774,
+        "runtime_ms": 10928.914874995826
+      },
+      {
+        "iterations": 54,
+        "converged": true,
+        "final_max_message_delta": 9.901270137113727e-09,
+        "edge_log_loss": 0.20099710190518844,
+        "edge_brier": 0.07119055357342904,
+        "runtime_ms": 1372.1674580010585
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 2.459385991859797e-06,
+        "edge_log_loss": 0.10716234144865834,
+        "edge_brier": 0.03348698856659926,
+        "runtime_ms": 1617.6470830105245
+      },
+      {
+        "iterations": 64,
+        "converged": true,
+        "final_max_message_delta": 7.236473420491052e-09,
+        "edge_log_loss": 0.07473046254443577,
+        "edge_brier": 0.028447319063994968,
+        "runtime_ms": 1873.2958750042599
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.002993752988907472,
+        "edge_log_loss": 0.10916124144161615,
+        "edge_brier": 0.035228259066792764,
+        "runtime_ms": 3475.0906669942196
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.003156320265242374,
+        "edge_log_loss": 0.12450577030504018,
+        "edge_brier": 0.043126149524399755,
+        "runtime_ms": 2734.2995420040097
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0021030427794812012,
+        "edge_log_loss": 0.06630277049291375,
+        "edge_brier": 0.02315583714089727,
+        "runtime_ms": 5267.676916992059
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 9.655503968586387e-07,
+        "edge_log_loss": 0.1827259177913692,
+        "edge_brier": 0.06222162489208074,
+        "runtime_ms": 5435.828666988527
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.6482531006722922e-08,
+        "edge_log_loss": 0.23841818135272438,
+        "edge_brier": 0.08292004777611331,
+        "runtime_ms": 4293.946165998932
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.001074861887461892,
+        "edge_log_loss": 0.06526189372883402,
+        "edge_brier": 0.023906307165247255,
+        "runtime_ms": 3705.862667004112
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.003007089746169145,
+        "edge_log_loss": 0.10152376608011418,
+        "edge_brier": 0.03464272190763111,
+        "runtime_ms": 2905.6997090228833
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0007548330583826424,
+        "edge_log_loss": 0.25527394419231275,
+        "edge_brier": 0.08658754273088028,
+        "runtime_ms": 2504.9003750027623
+      },
+      {
+        "iterations": 52,
+        "converged": true,
+        "final_max_message_delta": 8.999254397235035e-09,
+        "edge_log_loss": 0.1882267831024751,
+        "edge_brier": 0.06544063077016954,
+        "runtime_ms": 3391.188166977372
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 2.272833749483727e-06,
+        "edge_log_loss": 0.11281073161326304,
+        "edge_brier": 0.034817150492349506,
+        "runtime_ms": 1918.7981249997392
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.003136139998208276,
+        "edge_log_loss": 0.12288902676637911,
+        "edge_brier": 0.04349377479923043,
+        "runtime_ms": 2419.675582990749
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 9.47280225704894e-07,
+        "edge_log_loss": 0.17288806233337295,
+        "edge_brier": 0.05894408502388034,
+        "runtime_ms": 2246.8209590006154
+      },
+      {
+        "iterations": 54,
+        "converged": true,
+        "final_max_message_delta": 9.722927629685074e-09,
+        "edge_log_loss": 0.1498660146025765,
+        "edge_brier": 0.052034044765958666,
+        "runtime_ms": 1566.5569999837317
+      }
+    ],
+    "local_bootstrap": [
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.00210229335177603,
+        "edge_log_loss": 0.20531375562987692,
+        "edge_brier": 0.06323273484492056,
+        "runtime_ms": 3028.9995839993935
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 4.104011396444118e-06,
+        "edge_log_loss": 0.15450555100676894,
+        "edge_brier": 0.051611999641703515,
+        "runtime_ms": 3452.1450420143083
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0019225989679579891,
+        "edge_log_loss": 0.10175886950294077,
+        "edge_brier": 0.03366030175301018,
+        "runtime_ms": 4160.9414579870645
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.7840818241077194e-06,
+        "edge_log_loss": 0.04953803383693022,
+        "edge_brier": 0.016629629632585276,
+        "runtime_ms": 2844.402540998999
+      },
+      {
+        "iterations": 37,
+        "converged": true,
+        "final_max_message_delta": 6.3403917697539515e-09,
+        "edge_log_loss": 9.99977878280379e-13,
+        "edge_brier": 9.99991013150604e-25,
+        "runtime_ms": 967.23037501215
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.3527547944591767e-06,
+        "edge_log_loss": 0.13832273229883144,
+        "edge_brier": 0.04502196171131896,
+        "runtime_ms": 1962.694209010806
+      },
+      {
+        "iterations": 63,
+        "converged": true,
+        "final_max_message_delta": 7.503529020347344e-09,
+        "edge_log_loss": 0.09517852533272839,
+        "edge_brier": 0.029356923662703576,
+        "runtime_ms": 1775.34354099771
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 9.442472326676166e-05,
+        "edge_log_loss": 0.2402604213515651,
+        "edge_brier": 0.08615004189948341,
+        "runtime_ms": 2003.807125001913
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0018077054936527226,
+        "edge_log_loss": 0.12742290905315926,
+        "edge_brier": 0.04227596919062286,
+        "runtime_ms": 2526.931708009215
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 2.0571983705974795e-06,
+        "edge_log_loss": 0.09951492063719844,
+        "edge_brier": 0.034569640021126266,
+        "runtime_ms": 4438.917916995706
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0008455916699590116,
+        "edge_log_loss": 0.08818510297508779,
+        "edge_brier": 0.03103174944907567,
+        "runtime_ms": 48221.37854198809
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.002135953026888404,
+        "edge_log_loss": 0.08893230509394276,
+        "edge_brier": 0.02731331364614586,
+        "runtime_ms": 4878.939124988392
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0009558832001996809,
+        "edge_log_loss": 0.031749165028396274,
+        "edge_brier": 0.008972740435465108,
+        "runtime_ms": 2740.049459011061
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.002403185259404861,
+        "edge_log_loss": 0.11500262913976733,
+        "edge_brier": 0.03652722481086689,
+        "runtime_ms": 2499.2450829886366
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 7.808595497982296e-07,
+        "edge_log_loss": 0.0920370202176165,
+        "edge_brier": 0.03189345047277076,
+        "runtime_ms": 2918.157040985534
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 7.01794980082493e-05,
+        "edge_log_loss": 0.19414292511524522,
+        "edge_brier": 0.06686637452948133,
+        "runtime_ms": 2452.9113339958712
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.995244602870372e-08,
+        "edge_log_loss": 0.12270852973376843,
+        "edge_brier": 0.04108385319304132,
+        "runtime_ms": 11754.490124993026
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0026680968694283713,
+        "edge_log_loss": 0.05884588529660129,
+        "edge_brier": 0.018038625464218777,
+        "runtime_ms": 3363.5843750089407
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.75927901724382e-06,
+        "edge_log_loss": 0.20197370740938847,
+        "edge_brier": 0.06607749649746021,
+        "runtime_ms": 7940.778374992078
+      },
+      {
+        "iterations": 74,
+        "converged": true,
+        "final_max_message_delta": 7.360743070616849e-09,
+        "edge_log_loss": 0.10962225479479562,
+        "edge_brier": 0.036506389588370665,
+        "runtime_ms": 2998.008166992804
+      },
+      {
+        "iterations": 71,
+        "converged": true,
+        "final_max_message_delta": 8.802635398375003e-09,
+        "edge_log_loss": 0.06974561230858223,
+        "edge_brier": 0.024823119631880587,
+        "runtime_ms": 4149.992833001306
+      },
+      {
+        "iterations": 73,
+        "converged": true,
+        "final_max_message_delta": 9.474830420241886e-09,
+        "edge_log_loss": 0.04887098453945504,
+        "edge_brier": 0.012659781996728042,
+        "runtime_ms": 2075.0094579998404
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.001961678183458715,
+        "edge_log_loss": 0.03651641043461551,
+        "edge_brier": 0.010631851808153674,
+        "runtime_ms": 3632.7969999983907
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 3.864391603303208e-05,
+        "edge_log_loss": 0.1739493169165413,
+        "edge_brier": 0.05565440294455661,
+        "runtime_ms": 3574.5324169984087
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0021923581457298225,
+        "edge_log_loss": 0.07163928660192503,
+        "edge_brier": 0.022300361344726235,
+        "runtime_ms": 2580.1259169820696
+      },
+      {
+        "iterations": 72,
+        "converged": true,
+        "final_max_message_delta": 9.632123765257461e-09,
+        "edge_log_loss": 0.08377853867742507,
+        "edge_brier": 0.03016818234263717,
+        "runtime_ms": 2523.7207089958247
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0017997250505059625,
+        "edge_log_loss": 0.10202989905146928,
+        "edge_brier": 0.033970540028722976,
+        "runtime_ms": 2353.034084022511
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 2.739987077227113e-07,
+        "edge_log_loss": 0.1382772023638142,
+        "edge_brier": 0.04429674102539301,
+        "runtime_ms": 2405.601459002355
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 2.0793600086221886e-07,
+        "edge_log_loss": 0.16145376571579179,
+        "edge_brier": 0.054892207204192606,
+        "runtime_ms": 2090.0755829934496
+      },
+      {
+        "iterations": 71,
+        "converged": true,
+        "final_max_message_delta": 9.26073362439439e-09,
+        "edge_log_loss": 0.060285439914054814,
+        "edge_brier": 0.018805924436783236,
+        "runtime_ms": 2047.0031659933738
+      },
+      {
+        "iterations": 46,
+        "converged": true,
+        "final_max_message_delta": 4.602316305835075e-09,
+        "edge_log_loss": 0.03323498520230887,
+        "edge_brier": 0.0098804012345679,
+        "runtime_ms": 1706.8858339916915
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.9742375887199515e-05,
+        "edge_log_loss": 0.16457676721978434,
+        "edge_brier": 0.0515923608424377,
+        "runtime_ms": 3874.250374996336
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0017081860394100312,
+        "edge_log_loss": 0.18829103161810007,
+        "edge_brier": 0.06525824968520942,
+        "runtime_ms": 3773.286499985261
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.001971493842926164,
+        "edge_log_loss": 0.09842000350561844,
+        "edge_brier": 0.031231193504864745,
+        "runtime_ms": 3619.0677499980666
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 6.081464727358821e-07,
+        "edge_log_loss": 0.1689791083872939,
+        "edge_brier": 0.058997166475915665,
+        "runtime_ms": 2867.3649999836925
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.2130792709230676e-07,
+        "edge_log_loss": 0.15824119067188275,
+        "edge_brier": 0.05276103839714355,
+        "runtime_ms": 2294.361291016685
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0026065243938219185,
+        "edge_log_loss": 0.15378604751101105,
+        "edge_brier": 0.050655258599897814,
+        "runtime_ms": 1642.572165990714
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0012535463946925507,
+        "edge_log_loss": 0.09964029370485518,
+        "edge_brier": 0.033173770083560886,
+        "runtime_ms": 2203.404458006844
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0013480165460848098,
+        "edge_log_loss": 0.18341563787640958,
+        "edge_brier": 0.06174600716887045,
+        "runtime_ms": 2047.366292012157
+      },
+      {
+        "iterations": 27,
+        "converged": true,
+        "final_max_message_delta": 3.6037435258151618e-09,
+        "edge_log_loss": 0.04465785152501463,
+        "edge_brier": 0.01569444444443779,
+        "runtime_ms": 859.2236659897026
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 5.369144556177652e-07,
+        "edge_log_loss": 0.14664761001680676,
+        "edge_brier": 0.04955968587486918,
+        "runtime_ms": 2624.854833004065
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 2.754203922483711e-06,
+        "edge_log_loss": 0.3174005593089707,
+        "edge_brier": 0.10825803029867817,
+        "runtime_ms": 2772.6498749980237
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0010097514385262463,
+        "edge_log_loss": 0.23401367431330453,
+        "edge_brier": 0.0789778093597781,
+        "runtime_ms": 3276.168124983087
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0009340495560128531,
+        "edge_log_loss": 0.2834448755363911,
+        "edge_brier": 0.10157299331550765,
+        "runtime_ms": 6608.728624996729
+      },
+      {
+        "iterations": 44,
+        "converged": true,
+        "final_max_message_delta": 8.084176772449325e-09,
+        "edge_log_loss": 0.07363900171344583,
+        "edge_brier": 0.024660254984518147,
+        "runtime_ms": 2496.190583013231
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 8.965038026043093e-05,
+        "edge_log_loss": 0.2259166505009147,
+        "edge_brier": 0.07428656729998154,
+        "runtime_ms": 3544.140125013655
+      },
+      {
+        "iterations": 57,
+        "converged": true,
+        "final_max_message_delta": 9.866380379364159e-09,
+        "edge_log_loss": 0.08743024195691801,
+        "edge_brier": 0.03076156261871999,
+        "runtime_ms": 1887.2345839918125
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.487594551874416e-06,
+        "edge_log_loss": 0.20818724176213704,
+        "edge_brier": 0.07118697980855612,
+        "runtime_ms": 3486.007250001421
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 3.7053677837128873e-07,
+        "edge_log_loss": 0.2009970575022012,
+        "edge_brier": 0.07119054078673491,
+        "runtime_ms": 1883.637874998385
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 4.409170828795217e-05,
+        "edge_log_loss": 0.10716927540791173,
+        "edge_brier": 0.03349022891284569,
+        "runtime_ms": 2539.633459004108
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 3.610491700056784e-08,
+        "edge_log_loss": 0.07473046286547863,
+        "edge_brier": 0.02844731920926967,
+        "runtime_ms": 2298.679750005249
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0031322708649647035,
+        "edge_log_loss": 0.11172717889106455,
+        "edge_brier": 0.03641246187768293,
+        "runtime_ms": 1829.1707080206834
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0027735591272885496,
+        "edge_log_loss": 0.12477697513855242,
+        "edge_brier": 0.04316548815012099,
+        "runtime_ms": 4078.1354590144474
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0017921513990812321,
+        "edge_log_loss": 0.06730871580884529,
+        "edge_brier": 0.02340151599237371,
+        "runtime_ms": 2675.2626670058817
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.4949665364860643e-05,
+        "edge_log_loss": 0.18272068898205265,
+        "edge_brier": 0.06222037848156686,
+        "runtime_ms": 2647.813000017777
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.7474088686575406e-06,
+        "edge_log_loss": 0.23841873240004557,
+        "edge_brier": 0.08292017877062052,
+        "runtime_ms": 2393.28179100994
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0015542263782825916,
+        "edge_log_loss": 0.06563450967692917,
+        "edge_brier": 0.024000801218479827,
+        "runtime_ms": 2246.231708006235
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.002526642490848552,
+        "edge_log_loss": 0.09713373070693068,
+        "edge_brier": 0.03194631280955577,
+        "runtime_ms": 3446.172582975123
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0010466917643768836,
+        "edge_log_loss": 0.25561121700783285,
+        "edge_brier": 0.08660377441102886,
+        "runtime_ms": 2692.8525829862338
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 1.0942902917143726e-08,
+        "edge_log_loss": 0.1882267783015542,
+        "edge_brier": 0.0654406285438966,
+        "runtime_ms": 3386.1328749917448
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 5.8053775113864337e-05,
+        "edge_log_loss": 0.11284296457892007,
+        "edge_brier": 0.034830972933383456,
+        "runtime_ms": 3339.0143329743296
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 0.0034750389811706306,
+        "edge_log_loss": 0.12229657060353578,
+        "edge_brier": 0.0431626334324122,
+        "runtime_ms": 4199.441458011279
+      },
+      {
+        "iterations": 80,
+        "converged": false,
+        "final_max_message_delta": 2.8678803202564218e-05,
+        "edge_log_loss": 0.1728729125920731,
+        "edge_brier": 0.05893556367119862,
+        "runtime_ms": 3740.207750000991
+      },
+      {
+        "iterations": 77,
+        "converged": true,
+        "final_max_message_delta": 8.947225627053967e-09,
+        "edge_log_loss": 0.15017392561898313,
+        "edge_brier": 0.052187687295938756,
+        "runtime_ms": 2184.176332986681
+      }
+    ]
+  },
+  "evidence_boundary": "Matched recurrence diagnostics only. No decoding, LER, or promotion inference is made."
+}

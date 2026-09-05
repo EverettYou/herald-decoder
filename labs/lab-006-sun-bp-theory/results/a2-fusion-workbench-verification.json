@@ -1,0 +1,42 @@
+{
+  "id": "lab006-a4-two-dimensional-workbench-verification-2026-09-04",
+  "status": "passed",
+  "tests": {
+    "focused_python_suite": "15 passed",
+    "javascript_parse": "passed",
+    "groups": ["U(1)", "SU(2)", "SU(3)"],
+    "lattices": ["square", "honeycomb"],
+    "deterministic_payload": true,
+    "degree_three_four_fusion_normalization": true,
+    "paired_m_and_mR_records": true,
+    "numba_backend_provenance": true,
+    "syndrome_faithful_all_group_lattice_fixtures": true
+  },
+  "user_visible_chain": {
+    "current_inputs": "passed",
+    "artifact_file": "figures/fusion-belief-matching.html",
+    "report_embed": "passed",
+    "active_lab_registry": "passed",
+    "lab_results_api": "passed",
+    "exact_result_page": "/lab-result?lab=lab-006-sun-bp-theory&result=fusion-belief-matching-workbench",
+    "headless_chrome_render": "passed",
+    "selenium_interaction": "passed"
+  },
+  "browser_interactions": {
+    "square_default": {"edges": 32, "visible_irreps": 8, "bp_state": "converged", "mean_abs_R_effect": 0.2677},
+    "honeycomb_selector": {"pressed": true, "edges": 74, "visible_irreps": 25, "bp_state": "converged", "mean_abs_R_effect": 0.2910},
+    "R_effect_layer": {"pressed": true, "positive_color": "red", "negative_color": "blue", "magnitude": "line width"}
+  },
+  "semantic_checks": {
+    "observation_record": ["m", "R"],
+    "auxiliary_H_absent": true,
+    "coarse_graining_absent": true,
+    "square_boundary_contract": "rough left/right, smooth transverse",
+    "honeycomb_boundary_contract": "rough left/right, armchair-smooth transverse",
+    "display_orientation": "rotated for rough top/bottom and smooth left/right; decoder graph unchanged",
+    "node_grammar": "R is the centered colored badge; m=1 is the only surrounding ring; no third red ring",
+    "edge_orientation_visible": "Fbar-to-F arrow markers",
+    "loopy_BP_warning_visible": true,
+    "ring_restricted_to_oracle_and_throughput": true
+  }
+}

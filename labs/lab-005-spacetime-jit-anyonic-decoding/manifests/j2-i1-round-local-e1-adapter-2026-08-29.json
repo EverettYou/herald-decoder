@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "status": "verified",
+  "recorded_at": "2026-08-29T13:22:07Z",
+  "acceptance_item": "I1 round-local E1 adapter",
+  "scope": {
+    "lattice": "paper periodic D4 L=2",
+    "rounds": "at most four readout rows",
+    "sampling": "none",
+    "policy_invocation": "not performed"
+  },
+  "adapter": {
+    "entry_point": "derive_round_local_e1_record(InnerDecoderRequest, size=2)",
+    "input_horizon": "the supplied causal prefix only",
+    "row_rule": "use syndrome_readout[-1] and herald_readout[-1]",
+    "flux_mapping": "true syndrome membership maps to m_flux",
+    "charge_mapping": "true herald membership maps to e_charge",
+    "multi_label": "independent membership bits permit simultaneous e_charge and m_flux at one site",
+    "provenance": "trial_id and round are inherited from the schedule request and its bound prefix",
+    "fail_closed": [
+      "reject a request whose prefix digest does not match its supplied prefix",
+      "reject arrays that do not cover all 24 paper-L=2 D4 vertices",
+      "reject unverified lattice sizes"
+    ]
+  },
+  "verified_cases": [
+    "all 24 sites are represented and the final public row maps site by site",
+    "trial identity and round equal the schedule invocation identity",
+    "a simultaneous flux/charge site remains a two-label public report",
+    "private truth/fault decompositions with identical readouts produce identical E1 records",
+    "a future-only public mutation produces an identical earlier E1 record",
+    "deterministic replay is bit identical and the public signature exposes no truth or full-history input"
+  ],
+  "verification": {
+    "focused": "6 passed in 0.67s",
+    "full_lab": "113 passed in 1.01s"
+  },
+  "source_hashes": {
+    "e1_schedule_integration.py": "76c3eb21d17f78294312b094f58d31e942fc200a07de330986694c48e14f4465",
+    "test_e1_schedule_integration.py": "b965e817813e7901e8ff6bc5e144e7ea674556952457d4d7cee194c5561bd0cb",
+    "baseline_harness.py": "ee94606fa604d87694c9ca4408e291fe50c6e49b15e61382ee6c90983b2ec836",
+    "d4_projector_instrument.py": "83b7d65d99542dde08638d45393f2f81528f036729aa95d1ad83ad6781561ee1"
+  },
+  "claim_boundary": "I1 verifies a truth-free causal observation translation only. It does not invoke either D4 decoder mode, compare schedules, implement post-action charge recovery, or establish logical performance or fault tolerance.",
+  "next_gate": "Execute the registered I2 two-mode by four-schedule public-policy matrix together with its I3 deterministic boundary controls; no sampling."
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-28T05:03:17.967Z",
+  "source_analysis": {
+    "path": "phase4-residual80-honeycomb-highq-l11-l13-scaling-4000-2026-08-28-analysis.json",
+    "sha256": "8913c68898f1e2a5210498449bdefde8d6ba9521a95a881da581ab083477cd62"
+  },
+  "source_figure": {
+    "path": "../figures/phase4-residual80-honeycomb-highq-l11-l13-scaling-4000-2026-08-28-honeycomb-phase-map.png",
+    "sha256": "90fd0a10b4eb491faae1b51fa51d04f46a384baee0faf5db48622a7f87a18b8e"
+  },
+  "registered_inference": {
+    "bootstrap_replicates": 20000,
+    "confidence_level": 0.9,
+    "cluster": "fresh seed trajectory within size",
+    "topology_retained": ["no_crossing", "single_crossing", "multiple_crossing"]
+  },
+  "q_results": [
+    {
+      "q": 0.85,
+      "analyzer_label": "finite",
+      "point_crossing": 0.41363636363636364,
+      "conditional_interval90": [0.32577002379064235, 0.45117647058823535],
+      "crossing_support": 0.99925,
+      "no_crossing_fraction": 0.00075,
+      "multiple_crossing_fraction": 0.2529,
+      "reconciliation": "The L11/L13 point crossing is close to the earlier L9/L11 estimate 0.4206, but the interval remains broad and one quarter of bootstrap trajectories have multiple crossings. This is consistent finite-crossing evidence, not a precision p_c estimate."
+    },
+    {
+      "q": 0.9,
+      "analyzer_label": "finite",
+      "point_crossing": 0.48250000000000004,
+      "conditional_interval90": [0.3222614934892373, 0.4875],
+      "crossing_support": 0.7328,
+      "no_crossing_fraction": 0.2672,
+      "multiple_crossing_fraction": 0.16975,
+      "reconciliation": "The point crossing moves upward from the earlier L9/L11 estimate 0.4686, but 26.7% of bootstrap trajectories contain no crossing, 17.0% contain multiple crossings, and the p=0.49 size trend is unresolved. The automatic finite label does not pass the registered topology/sign promotion gate."
+    },
+    {
+      "q": 0.95,
+      "analyzer_label": "unresolved",
+      "point_crossing": null,
+      "p049_delta_l11_minus_l13": 0.0024999999999999883,
+      "p049_delta_interval90": [-0.007500000000000007, 0.012749999999999997],
+      "p049_probability_decodable_trend": 0.6476,
+      "reconciliation": "L11/L13 has no point crossing and reverses the earlier five-crossing L9/L11 topology, but the high-p sign is not resolved, so q=0.95 is not ceiling-compatible."
+    }
+  ],
+  "convergence_boundary": {
+    "L13_q085_range": [0.01675, 0.136],
+    "L13_q090_range": [0.012, 0.024],
+    "L13_q095_range": [0.0065, 0.0265],
+    "L13_q095_p049": 0.00825,
+    "interpretation": "L13 fixed-point convergence is substantially below L11 and is below 3% throughout q=0.90 and q=0.95. Finite-size topology therefore remains a result for the registered truncated decoder, not evidence of an asymptotic phase boundary."
+  },
+  "promotion_decision": {
+    "promote_pc": false,
+    "promote_qc": false,
+    "authorize_q0925": false,
+    "authorize_square": false,
+    "reason": "q=0.90 lacks stable crossing topology, q=0.95 lacks a resolved high-p sign, and L13 BP convergence is nearly absent in the decisive cells."
+  },
+  "next_prerequisite": "Register and preflight a matched honeycomb L13 iteration-cap diagnostic at q=0.85,0.90,0.95 and p=0.40,0.45,0.49 before spending additional shots on an adaptive crossing refinement.",
+  "evidence_boundary": "This interpretation reconciles the registered L11/L13 analysis with the earlier L9/L11 evidence. It does not change the primary cap or make a phase-transition claim."
+}

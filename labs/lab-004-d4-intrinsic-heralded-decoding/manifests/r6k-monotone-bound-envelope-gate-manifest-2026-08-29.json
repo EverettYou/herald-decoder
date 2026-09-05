@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "status": "verified, analyzed, and reported",
+  "registered_at": "2026-08-29T18:07:00Z",
+  "title": "R6K monotone mini-bucket bound-envelope gate",
+  "rigor_tier": "bounded deterministic method diagnostic",
+  "program_alignment": {
+    "central_question": "Is R6J low-i posterior error mainly caused by non-nested greedy bound selection, or does it persist after enforcing a monotone valid-bound envelope?",
+    "scientific_layer": "WP3 scalable decoding",
+    "epistemic_role": "cheapest prerequisite before a new content-based/nested region implementation",
+    "upstream_dependencies": ["R6J 128-row exact cohort", "verified nonnegative mini-bucket bounds"],
+    "downstream_gate": "implement a richer partition/region family only if monotone envelope selection cannot deliver uniform low-i accuracy"
+  },
+  "research_basis": {
+    "source": "Rollon and Dechter, New Mini-Bucket Partitioning Heuristics for Bounding the Probability of Evidence, AAAI 2010",
+    "role": "partition refinement governs monotonic bound improvement and partition strategy affects likelihood-bound quality",
+    "project_finding": "R6J independent greedy runs have 3 evidence and 14 marginal monotonicity violations"
+  },
+  "model": {
+    "greedy_branch": "independent scope-greedy mini-bucket result at each i",
+    "envelope_branch": "for every total or clamped evidence query at i_j, take the minimum valid upper bound over all registered i<=i_j, then normalize the two clamped envelopes as a pseudo-marginal",
+    "guarantee": "each evidence envelope is a valid nonincreasing upper bound; normalized clamped ratios remain diagnostics, not posterior bounds",
+    "not_claimed": "the envelope is not a new nested mini-bucket partition algorithm"
+  },
+  "matrix": {
+    "conditions": "same 4 observations × 2 p × 2 representations × 2 orders × 4 i values as R6J",
+    "branches": ["independent_greedy", "cumulative_valid_bound_envelope"],
+    "row_count": 256,
+    "useful_accuracy_gate": "maximum physical pseudo-marginal error <=1e-2",
+    "metrics": ["evidence monotonicity", "marginal-error monotonicity", "uniform useful coverage", "envelope minus greedy error"],
+    "budget": "under ten CPU minutes and 2 GiB; no correction, LER, threshold, or fault-tolerance samples"
+  },
+  "question": {
+    "H1": "the envelope removes every total-evidence monotonicity violation",
+    "H2": "the envelope reduces marginal-error monotonicity violations and improves low-i useful-accuracy coverage",
+    "H3": "even after envelope selection, no representation/order branch is uniformly useful on all eight conditions at i<=14",
+    "falsification": "any envelope above its corresponding greedy bound, below exact evidence, or exact-ceiling mismatch rejects the implementation"
+  },
+  "analysis": {
+    "comparison": "matched condition/representation/order/i rows; report improvements and regressions without post-hoc deletion",
+    "stop_rule": "if H3 holds, route next work to genuinely richer content/region construction; otherwise validate the successful envelope on paper-L2 bounds before correction",
+    "claim_boundary": "Method diagnostic on primitive exact evidence only; no nested-algorithm, paper-L2 accuracy, decoder, LER, threshold, scaling, or fault-tolerance claim."
+  },
+  "acceptance_items": [
+    {"item": "prospective envelope contract", "status": "registered", "evidence": "this manifest"},
+    {"item": "query-level clamped bound provenance and 256 matched rows", "status": "passed", "evidence": "results/r6k-monotone-bound-envelope-gate.json"},
+    {"item": "monotonicity and useful-coverage analysis", "status": "passed", "evidence": "3 to 0 evidence violations; 14 to 13 marginal-error violations; useful low-i rows remain 20 and uniform branches remain 0"},
+    {"item": "report, roadmap, metadata, and durable state", "status": "passed", "evidence": "results/r6k-monotone-bound-envelope-gate.md plus Lab/Wiki/state updates"}
+  ],
+  "outcome": {
+    "H1": "supported",
+    "H2": "mixed or rejected",
+    "H3": "supported",
+    "decision": "Do not promote mini-bucket to correction or LER sampling; next compare a genuinely content-aware region/partition construction on the same exact cohort."
+  }
+}

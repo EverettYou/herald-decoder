@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "status": "analyzed",
+  "campaign": "phase-b8-honeycomb-raise-minimum-2026-08-28",
+  "purpose": "Run the smallest fixed design covering every exact Phase B7 frontier branch.",
+  "selection_evidence": {
+    "path": "manifests/phase-b8-honeycomb-raise-minimum-selection-2026-08-28.json",
+    "sha256": "11851a9bf8a799898304e322e8ea7293ecbc6728a9984bbfb7e9b70e426cecdf"
+  },
+  "source_map": {
+    "path": "results/phase-b7-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28.json",
+    "sha256": "d7bf5ab0b60076b41105d07e92a24a8fe00a7f247b8ffbc358313abc351b1dc8"
+  },
+  "design_evidence": {
+    "path": "results/phase-b7-honeycomb-frontier-posterior-predictive-design-2026-08-28.json",
+    "sha256": "fa95195e10e5e14bccc5e05bbac40c14edabde9dfef52b4b903eb661c7f9bf60"
+  },
+  "lattice": "honeycomb",
+  "new_seeds": [
+    878001,
+    878002,
+    878003,
+    878004,
+    878005
+  ],
+  "shots_per_seed": 200,
+  "jobs": [
+    {
+      "branch": "raise_minimum_by_1000",
+      "q": 0.3,
+      "p": 0.2,
+      "sizes": [
+        7,
+        9,
+        11
+      ],
+      "expected_decodes": 3000
+    },
+    {
+      "branch": "raise_minimum_by_1000",
+      "q": 0.35,
+      "p": 0.2,
+      "sizes": [
+        7,
+        9,
+        11
+      ],
+      "expected_decodes": 3000
+    },
+    {
+      "branch": "raise_minimum_by_1000",
+      "q": 0.55,
+      "p": 0.24,
+      "sizes": [
+        5,
+        13
+      ],
+      "expected_decodes": 2000
+    },
+    {
+      "branch": "raise_minimum_by_1000",
+      "q": 0.65,
+      "p": 0.28,
+      "sizes": [
+        7,
+        9,
+        11
+      ],
+      "expected_decodes": 3000
+    }
+  ],
+  "job_count": 4,
+  "workers_cap": 4,
+  "expected_new_decodes": 11000,
+  "forecast": {
+    "expected_resolved_cells": 0.7861328125,
+    "expected_false_direction_resolutions": 0.029296875
+  },
+  "decoder": {
+    "name": "HeraldAwareBpMatchingDecoder",
+    "recurrence_mode": "damping",
+    "damping": 0.25,
+    "max_iterations": 80,
+    "update_schedule": "residual_priority",
+    "residual_priority_order": "stable_sort",
+    "residual_priority_buffer_reuse": false,
+    "residual_priority_cached_products": false,
+    "matching_projection": "posterior_llr",
+    "p_m": 0.0,
+    "p_h": 0.0,
+    "use_numba": true
+  },
+  "required_source_hashes": {
+    "runner": "14adf7579825e64fa4dd74a6ff374207c3f7b55349b5b533c1ff054bf6d66474",
+    "lattice_model": "b87a5feba27675e26970360d730324b7d3740e4dc0492b4dc478e510f140c9e7",
+    "decoder": "990af03ac4c99684e9e9dac6e5a8bb64d773015879c1638906f5fb592cdc6a43",
+    "damping_decoder": "a08ddf0b58e63bb2627c35cafbe570fe6a0ee8dc21bd4eaca720d6dbcbc5e182",
+    "numba_kernels": "c2254c95600c4f5e3a8c2279d5686a99c8d3810a4bb0c814a4fd0cbf16c184cc"
+  },
+  "analysis": {
+    "primary": "Bayesian posterior OLS linear-projection slope against code distance",
+    "classification_threshold": 0.9,
+    "prior_sensitivity": "Jeffreys primary and uniform sensitivity",
+    "pooling": "Pool fresh counts only with the corresponding Phase B7 map-count vector."
+  },
+  "preflight_gate": "Passed: non-overwriting dispatch, exact completion, pooled analysis and four-payload rendering gates are implemented and tested.",
+  "preflight_evidence_path": "results/phase-b8-honeycomb-raise-minimum-preflight-2026-08-28.json",
+  "completion_evidence_path": "results/phase-b8-honeycomb-raise-minimum-completion-audit-2026-08-28.json",
+  "analysis_evidence_path": "results/phase-b8-honeycomb-raise-minimum-analysis-2026-08-28.json",
+  "map_evidence_path": "results/phase-b8-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28.json",
+  "figure_evidence_path": "figures/phase-b8-honeycomb-bayesian-fuzzy-trend-phase-map-2026-08-28.png",
+  "stop_rule": "Stop after four jobs and 11000 decodes; no outcome-adaptive branch, size, cell, coordinate, lattice or gate change.",
+  "launch_gate": "closed_data_complete"
+}

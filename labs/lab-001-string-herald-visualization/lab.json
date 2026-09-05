@@ -1,0 +1,115 @@
+{
+  "stage": "complete",
+  "summary": "Concluded configuration-level study of hard herald predecoding plus syndrome-only PyMatching on square and honeycomb lattices.",
+  "current_focus": "Lab 001 is concluded; its frozen simulator, boundary conventions, and hard-decision baseline feed Labs 002–003.",
+  "next_action": "No further implementation in Lab 001. Use its observations and conventions as inputs to Lab 002 and threshold work in Lab 003.",
+  "created": "2026-08-26",
+  "updated": "2026-08-26",
+  "motivation": "Make the \\(p,q\\) string-herald model, boundary conventions, and stage-resolved configuration display operational.",
+  "question": "Do the square/honeycomb visualizations faithfully expose errors, syndrome, heralds, corrections, residuals, and logical parity?",
+  "phase": "Concluded",
+  "status": "Concluded as a tested configuration-level hard-decision baseline; no ensemble LER or threshold estimate is claimed.",
+  "report_contract": {
+    "max_lines": 500,
+    "max_evidence_links": 12
+  },
+  "results": [
+    {
+      "id": "simulator-model-note",
+      "title": "String-herald simulator model",
+      "summary": "The generative model, surface-code boundaries, logical observable, and square/honeycomb conventions behind the viewer.",
+      "wiki_page": "models/string-herald-simulator"
+    },
+    {
+      "id": "two-stage-decoder-note",
+      "title": "Two-stage herald decoder",
+      "summary": "A named hard-decision decoder: three local herald rules followed by syndrome-only MWPM.",
+      "wiki_page": "methods/two-stage-herald-decoder"
+    },
+    {
+      "id": "interactive-decoder",
+      "kind": "artifact",
+      "format": "interactive",
+      "title": "Stage-resolved decoder workbench",
+      "summary": "Explore square and honeycomb configurations, decoder stages, noise parameters, and logical parity in one live workbench.",
+      "path": "figures/string-herald-sample.html",
+      "presentation": "page"
+    },
+    {
+      "id": "seed1-herald-ablation",
+      "kind": "figure",
+      "format": "image",
+      "title": "Seed-1 herald ablation",
+      "summary": "The same square L=9 error string decoded with q=1 and q=0.75, showing one logical success and one logical failure.",
+      "path": "figures/seed1-herald-ablation.svg",
+      "presentation": "inline"
+    },
+    {
+      "id": "sample-renderer",
+      "kind": "code",
+      "format": "code",
+      "language": "python",
+      "title": "Configuration figure renderer",
+      "summary": "Deterministically samples and renders the static square-lattice evidence figures.",
+      "path": "scripts/render_sample.py",
+      "presentation": "page"
+    },
+    {
+      "id": "stage-one-decoder",
+      "kind": "code",
+      "format": "code",
+      "language": "python",
+      "title": "Stage 1 local decoder",
+      "summary": "The Lab-owned implementation of herald-guided local predecoding.",
+      "path": "scripts/local_decoder.py",
+      "presentation": "page"
+    },
+    {
+      "id": "stage-two-mwpm",
+      "kind": "code",
+      "format": "code",
+      "language": "python",
+      "title": "Stage 2 PyMatching adapter",
+      "summary": "Builds the explicit-boundary check matrix and delegates residual matching to PyMatching.",
+      "path": "scripts/mwpm_decoder.py",
+      "presentation": "page"
+    },
+    {
+      "id": "stage-one-tests",
+      "kind": "code",
+      "format": "code",
+      "language": "python",
+      "title": "Stage 1 decoder checks",
+      "summary": "Unit checks for local rules, herald consumption, and the logical parity convention.",
+      "path": "scripts/test_local_decoder.py",
+      "presentation": "page"
+    },
+    {
+      "id": "stage-two-tests",
+      "kind": "code",
+      "format": "code",
+      "language": "python",
+      "title": "Stage 2 MWPM checks",
+      "summary": "Unit checks for matching paths, rough boundaries, and invalid check-matrix columns.",
+      "path": "scripts/test_mwpm_decoder.py",
+      "presentation": "page"
+    }
+  ],
+  "frontier": [],
+  "resolved": [
+    "Each link flips independently with probability \\(p\\).",
+    "The ordinary syndrome is the incident-error parity at each available vertex.",
+    "Every vertex with at least two incident error bonds carries an independent herald with probability \\(q\\); odd-degree vertices also carry syndrome.",
+    "Stage 1 is executed by scripts/local_decoder.py in the order distance-one herald pairs, syndrome-herald-syndrome, then distance-two herald pairs; each rule uses a synchronous snapshot and consumes touched heralds only at that rule boundary.",
+    "Stage 2 discards all remaining heralds, builds a sparse detector-by-edge check matrix, and delegates the residual-syndrome correction to PyMatching.",
+    "Square and honeycomb use top/bottom smooth boundaries and left/right open rough plaquettes; the outward rough-side edge is absent and its outer vertices have no stabilizer.",
+    "The Results view rotates both lattices by 90 degrees, so rough boundaries appear at the top and bottom; boundary labels and thick guides are omitted.",
+    "Retained edges joining an open-side vertex to an interior detector become singleton check-matrix columns.",
+    "Logical error is the parity of displayed residual edges crossed by a dashed smooth-to-smooth path through the right open-plaquette centers.",
+    "The viewer reports error, syndrome, and visible-herald densities for its current decoder stage.",
+    "On the honeycomb lattice, \\(d=0,1,2,3\\) maps to noiseless messages none, parity, herald-eligible, and parity plus herald-eligible; the present baseline sets both measurement-error parameters \\(p_m=p_h=0\\).",
+    "Posterior inference, belief propagation, decoder benchmarking, and exact-oracle comparisons are owned by Lab 002."
+  ],
+  "blockers": [],
+  "promotion_candidates": []
+}

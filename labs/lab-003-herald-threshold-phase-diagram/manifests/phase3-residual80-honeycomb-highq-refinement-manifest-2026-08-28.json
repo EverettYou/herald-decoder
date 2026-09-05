@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "status": "analyzed_unresolved",
+  "campaign": "phase3-residual80-honeycomb-highq-refinement-4000-2026-08-28",
+  "q_grid_policy": "explicit",
+  "q_values": [0.85, 0.9, 0.95],
+  "lattices": ["honeycomb"],
+  "deferred_lattices": ["square"],
+  "sizes": [7, 9, 11],
+  "seeds": [571001, 571002, 571003, 571004, 571005, 571006, 571007, 571008, 571009, 571010, 571011, 571012, 571013, 571014, 571015, 571016, 571017, 571018, 571019, 571020],
+  "shots_per_seed": 200,
+  "shots_per_cell": 4000,
+  "workers": 3,
+  "p_grid": {
+    "honeycomb": [0.32, 0.36, 0.4, 0.425, 0.45, 0.47, 0.49]
+  },
+  "decoder": {
+    "name": "HeraldAwareBpMatchingDecoder",
+    "recurrence_mode": "damping",
+    "damping": 0.25,
+    "max_iterations": 80,
+    "update_schedule": "residual_priority",
+    "residual_priority_order": "stable_sort",
+    "residual_priority_buffer_reuse": false,
+    "residual_priority_cached_products": false,
+    "matching_projection": "posterior_llr",
+    "p_m": 0.0,
+    "p_h": 0.0,
+    "use_numba": true
+  },
+  "artifact_stem_template": "phase3-residual80-{lattice}-{q_tag}-highq-refinement-4000-2026-08-28",
+  "expected_shards": 3,
+  "expected_raw_records": 252000,
+  "inference": {
+    "confidence_level": 0.9,
+    "bootstrap_replicates": 20000,
+    "bootstrap_seed": 581027,
+    "cluster_policy": "Resample all seven nested-p observations for one seed as a complete trajectory, independently within each lattice size. Twenty fresh clusters replace rather than pool with the five-cluster discovery wave.",
+    "crossing_policy": "Retain no-crossing and multiple-crossing outcomes. Quote a conditional central 90% interval only with its topology support.",
+    "cell_sign_policy": "Classify an adjacent-size LER difference only when its central 90% seed-trajectory bootstrap interval excludes zero.",
+    "selection_rationale": "q=0.85 had broad, inconsistent high-p crossings; q=0.90 had no point crossing but failed the ceiling sign-stability gate; q=0.95 was ceiling-compatible. The seven-point high-p grid covers both q=0.85 point-crossing regions and adds 0.425 and 0.47 guards without adding a q midpoint prematurely.",
+    "promotion_gate": "No p_c(q), ceiling classification, or q_c bracket is promoted unless both L7/L9 and L9/L11 satisfy the registered 90% topology/sign gates. This wave may justify a later q=0.925 midpoint only after q=0.90 and q=0.95 endpoints are independently classified."
+  },
+  "provenance_policy": "Every shard must use one identical runtime/source cohort and pass syndrome fidelity plus start/end source-hash equality. This fresh 20-cluster wave is analyzed independently and is never pooled with the five-cluster discovery wave.",
+  "execution_gate": "Passed 21/21 runner, dispatcher, analyzer, and recovery tests plus a three-job dry run on 2026-08-28. Production may start; every shard remains fail-closed on syndrome fidelity and source stability.",
+  "purpose": "Smallest discriminating high-q honeycomb matrix for the unresolved q=0.90 to ceiling-compatible q=0.95 transition, while retaining q=0.85 as the finite-side guard and leaving square deferred."
+}

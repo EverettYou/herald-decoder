@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-28T03:27:00Z",
+  "campaign": "phase3-residual80-honeycomb-highq-refinement-4000-2026-08-28",
+  "status": "passed",
+  "scope": {
+    "lattice": "honeycomb",
+    "q_values": [0.85, 0.9, 0.95],
+    "sizes": [7, 9, 11],
+    "p_values": [0.32, 0.36, 0.4, 0.425, 0.45, 0.47, 0.49],
+    "fresh_seed_clusters": 20,
+    "shots_per_seed": 200,
+    "shots_per_cell": 4000,
+    "planned_shards": 3,
+    "planned_raw_records": 252000,
+    "workers": 3
+  },
+  "selection": {
+    "basis": "The completed full q-skeleton leaves q=0.90 unresolved and q=0.95 ceiling-compatible. q=0.85 is retained as the finite-side guard because its two adjacent-size point crossings are broad and inconsistent.",
+    "why_more_clusters_first": "The discovery used only five independent seed trajectories and produced widespread sign instability and multiple crossings. Twenty fresh clusters distinguish sampling fluctuation from stable topology before any q midpoint is added.",
+    "why_these_p_values": "The grid covers the q=0.85 L9/L11 crossing region near 0.36 and L7/L9 crossing region near 0.48, retains high-p sentinels, and adds guards at 0.425 and 0.47.",
+    "claim_boundary": "This wave is analyzed independently from the discovery and cannot itself establish q_c. A q=0.925 midpoint is permitted only after the q=0.90 and q=0.95 endpoint classifications pass the registered 90% gates."
+  },
+  "verification": {
+    "unit_tests": "21/21 passed",
+    "dry_run": "3/3 unique jobs",
+    "explicit_q_manifest": "passed",
+    "4000_shots_per_cell_manifest": "passed",
+    "posterior_llr_residual_priority_80_commands": "passed",
+    "syndrome_fidelity_and_source_stability": "fail-closed in the shard runner and analyzer"
+  },
+  "hashes_before_ready_status_flip": {
+    "manifest": "f88f2027147c1f8fa53b0034c3c5d3d272208cf745028a5c522f63f2cdfc7b1d",
+    "analyzer": "6e287fdbae168e2d03152725969c81c14e66a8b1f77a6e98c816da62ed1f3dc6",
+    "dispatcher": "47a69c67629270b6cc75c17372467ae4d42539eea68536e2e357cde99097ed4f",
+    "runner": "14adf7579825e64fa4dd74a6ff374207c3f7b55349b5b533c1ff054bf6d66474",
+    "lattice_model": "b87a5feba27675e26970360d730324b7d3740e4dc0492b4dc478e510f140c9e7",
+    "decoder": "990af03ac4c99684e9e9dac6e5a8bb64d773015879c1638906f5fb592cdc6a43",
+    "damping_decoder": "a08ddf0b58e63bb2627c35cafbe570fe6a0ee8dc21bd4eaca720d6dbcbc5e182",
+    "numba_kernels": "c2254c95600c4f5e3a8c2279d5686a99c8d3810a4bb0c814a4fd0cbf16c184cc"
+  },
+  "next_transition": "Launch the three bounded shards with three workers; do not add q midpoints or square jobs before this wave is validated and analyzed."
+}
