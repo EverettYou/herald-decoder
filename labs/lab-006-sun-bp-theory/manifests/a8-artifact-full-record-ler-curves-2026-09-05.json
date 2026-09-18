@@ -1,7 +1,7 @@
 {
   "id": "lab006-a8-artifact-full-record-ler-curves-2026-09-05",
-  "status": "active",
-  "active_deliverable": "Reacquire full-record final-correction LER curves using the validated optimized runner.",
+  "status": "complete",
+  "active_deliverable": "Completed combined six-panel directed LER figure and verified report replacement.",
   "registered_before_sampling": true,
   "question": "For the accepted Lab 006 artifact decoder with its complete interior record (m,R), what are the final-correction LER curves from p=0 to p=0.5 on honeycomb and square lattices for U(1), SU(2), and SU(3)?",
   "frozen_decoder": {
@@ -13,10 +13,78 @@
     "tolerance": 1e-10,
     "rough_boundary": "neither m nor R is measured; both are marginalized"
   },
-  "lattices": ["honeycomb", "square"],
-  "groups": ["SU3", "SU2", "U1"],
-  "sizes": [5, 7, 9, 11],
-  "p": {"display": [0.0, 0.02, 0.04, 0.06, 0.08, 0.1, 0.12, 0.14, 0.16, 0.18, 0.2, 0.22, 0.24, 0.26, 0.28, 0.3, 0.32, 0.34, 0.36, 0.38, 0.4, 0.42, 0.44, 0.46, 0.48, 0.5], "sampled": [0.02, 0.04, 0.06, 0.08, 0.1, 0.12, 0.14, 0.16, 0.18, 0.2, 0.22, 0.24, 0.26, 0.28, 0.3, 0.32, 0.34, 0.36, 0.38, 0.4, 0.42, 0.44, 0.46, 0.48, 0.5]},
+  "lattices": [
+    "honeycomb",
+    "square"
+  ],
+  "groups": [
+    "SU3",
+    "SU2",
+    "U1"
+  ],
+  "sizes": [
+    5,
+    7,
+    9,
+    11
+  ],
+  "p": {
+    "display": [
+      0.0,
+      0.02,
+      0.04,
+      0.06,
+      0.08,
+      0.1,
+      0.12,
+      0.14,
+      0.16,
+      0.18,
+      0.2,
+      0.22,
+      0.24,
+      0.26,
+      0.28,
+      0.3,
+      0.32,
+      0.34,
+      0.36,
+      0.38,
+      0.4,
+      0.42,
+      0.44,
+      0.46,
+      0.48,
+      0.5
+    ],
+    "sampled": [
+      0.02,
+      0.04,
+      0.06,
+      0.08,
+      0.1,
+      0.12,
+      0.14,
+      0.16,
+      0.18,
+      0.2,
+      0.22,
+      0.24,
+      0.26,
+      0.28,
+      0.3,
+      0.32,
+      0.34,
+      0.36,
+      0.38,
+      0.4,
+      0.42,
+      0.44,
+      0.46,
+      0.48,
+      0.5
+    ]
+  },
   "shots_per_sampled_cell": 20000,
   "batch_size": 256,
   "runner_optimization": {
@@ -26,10 +94,80 @@
     "equivalence": "Fixed-seed m and all group label codes, fixed-weight corrections, and full LER output rows agree exactly on square/honeycomb L=5,9 fixtures.",
     "constraint": "Full-record posterior weights differ by shot, so its weighted PyMatching instance remains per shot; PyMatching exposes no supported in-place bulk edge-weight update."
   },
-  "sampling_order": ["honeycomb/SU3", "honeycomb/SU2", "honeycomb/U1", "square/SU3", "square/SU2", "square/U1"],
+  "sampling_order": [
+    "honeycomb/SU3",
+    "honeycomb/SU2",
+    "honeycomb/U1",
+    "square/SU3",
+    "square/SU2",
+    "square/U1"
+  ],
   "primary_metric": "Final-correction decoder failure: the correction must clear the detector syndrome and error XOR correction must have trivial logical parity. BP nonconvergence is diagnostic only and never gates LER.",
   "invalidated_pre_correction_results": "All A7/A8 rows acquired before this scoring correction counted BP nonconvergence as failure and are prohibited from LER or threshold inference; aggregate counts cannot be repaired without replaying shots because overlap with true logical failures was not stored.",
-  "presentation": "six separate figures, one per lattice/group. Each figure shows only the four code distances, Wilson 95% intervals, and a separate companion plot for BP nonconvergence.",
-  "acceptance": ["Every figure identifies its lattice, group, full (m,R) record, directed channel, and number of independent samples.", "The p=0 point is the exact zero-error endpoint, not a sampled or extrapolated value.", "No m-only, no-herald, boundary-record, or cross-group curve appears in a primary LER panel.", "The LER and companion convergence figure derive from the same checkpointed raw counts."],
-  "claim_boundary": "Finite-size curves only; no threshold estimate until the high-statistics size ordering and convergence diagnostics are jointly analyzed."
+  "presentation": "One 3x2 LER figure: rows U1, SU2, SU3; columns square, honeycomb. One external legend below, shared p axis, independent LER scales, Wilson 95% intervals. Separate BP diagnostic figures retained.",
+  "acceptance": [
+    "Every figure identifies its lattice, group, full (m,R) record, directed channel, and number of independent samples.",
+    "The p=0 point is the exact zero-error endpoint, not a sampled or extrapolated value.",
+    "No m-only, no-herald, boundary-record, or cross-group curve appears in a primary LER panel.",
+    "The LER and companion convergence figure derive from the same checkpointed raw counts."
+  ],
+  "claim_boundary": "Finite-size curves only; no threshold estimate until the high-statistics size ordering and convergence diagnostics are jointly analyzed.",
+  "execution_resume": {
+    "date": "2026-09-07",
+    "authorized_scope": "U1, SU2, SU3 on square and honeycomb; None deferred; rough-boundary charge unmeasured",
+    "dispatch": "scripts/dispatch_a8_ler.py",
+    "workers": 48,
+    "unit": "whole registered cell; unchanged seed 950000+100*L+rate_index, batch size 256",
+    "checkpoint": "atomic per completed cell; preserve inherited final-correction-v2 originals",
+    "preflight": "results/a8-resume-preflight-2026-09-07.json",
+    "display": "partial figures updated after every cell, full p range, missing cells not zero; final figures require 100 sampled cells each"
+  },
+  "delivery_gates": [
+    {
+      "item": "600 sampled cells with 20000 shots each",
+      "status": "passed",
+      "evidence": "results/a8-completion-audit-2026-09-07.json"
+    },
+    {
+      "item": "six LER and six companion convergence figures",
+      "status": "passed",
+      "evidence": "results/a8-completion-audit-2026-09-07.json"
+    },
+    {
+      "item": "report and local Wiki evidence integration",
+      "status": "passed",
+      "evidence": "results/a8-delivery-audit-2026-09-07.json"
+    },
+    {
+      "item": "active dashboard registry and rendered URL verification",
+      "status": "passed",
+      "evidence": "results/a8-delivery-audit-2026-09-07.json"
+    }
+  ],
+  "completed": "2026-09-07",
+  "completion_evidence": [
+    "results/a8-completion-audit-2026-09-07.json",
+    "results/a8-delivery-audit-2026-09-07.json",
+    "wiki/ler-curves.md",
+    "REPORT.md"
+  ],
+  "presentation_revision": {
+    "status": "complete",
+    "requested_layout": "One 3x2 LER figure: rows U1, SU2, SU3; columns square, honeycomb. One external legend below, shared p axis, independent LER scales, Wilson 95% intervals. Separate BP diagnostic figures retained.",
+    "acceptance": [
+      "data hashes unchanged",
+      "six panels from raw counts with correct order and shared x",
+      "one external size legend, independent y axes",
+      "one report embed and one active LER result",
+      "remove six superseded standalone PNGs",
+      "rendered report and result page verified",
+      "monotone red palette with increasing L",
+      "no p=0 marker or legend entry"
+    ],
+    "palette": "L=5,7,9,11 use light-to-dark reds; no p=0 marker or legend entry",
+    "evidence": [
+      "results/a8-ler-overview-render.json",
+      "results/a8-overview-delivery-audit.json"
+    ]
+  }
 }

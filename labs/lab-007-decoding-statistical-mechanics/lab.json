@@ -1,0 +1,56 @@
+{
+  "stage": "complete",
+  "created": "2026-09-09",
+  "updated": "2026-09-14",
+  "parents": [
+    "lab-006-sun-bp-theory"
+  ],
+  "summary": "Exact statistical-mechanics formulation of representation-informed decoding: sector posteriors, SU(2) orientation quotient, constrained currents and fusion vertex models, with finite hardening counterexamples.",
+  "current_focus": "Completed exact classical formulation: normalized sector weights, SU(2) orientation quotient, spin/current and restricted loop reductions, and verified finite decoder-hardening counterexamples.",
+  "next_action": "Next scientific direction: controlled typical-record sector contraction on finite-width strips, compared with exact-marginal and BP-marginal matching; continuum universality remains open.",
+  "question": "How do representation self-conjugacy, lattice geometry, and posterior-to-MWPM hardening produce the contrasting finite-size decoding behavior of U1, SU2, and SU3?",
+  "report_contract": {
+    "max_lines": 160,
+    "max_evidence_links": 8
+  },
+  "source_refs": [
+    "sala2025-decohering-nonabelian-topological-order",
+    "dennis2001-topological-quantum-memory",
+    "temkin2025-charge-informed-qec"
+  ],
+  "results": [
+    {
+      "id": "representation-informed-sector-model",
+      "title": "Statistical mechanics of logical sectors",
+      "summary": "Exact classical vertex, spin and current formulations, conjugacy distinctions, and the decoder-hardening gap.",
+      "wiki_page": "models/representation-informed-sector-model",
+      "presentation": "page"
+    },
+    {
+      "id": "exact-model-checks",
+      "kind": "data",
+      "format": "json",
+      "title": "Exact sector and fusion checks",
+      "summary": "Exhaustive rational checks on five finite motifs; no threshold estimate.",
+      "path": "results/exact-model-checks-2026-09-14.json",
+      "presentation": "download"
+    },
+    {
+      "id": "mapping-supplement",
+      "kind": "data",
+      "format": "json",
+      "title": "Integer-current and decoder witness checks",
+      "summary": "Integer-cycle reconstruction, exact tree BP, and documented matching-backend boundary.",
+      "path": "results/mapping-supplement-2026-09-14.json",
+      "presentation": "download"
+    }
+  ],
+  "motivation": "Explain the completed Lab 006 group/orientation contrast through an exact statistical-mechanics formulation and its connection to practical hard decoding.",
+  "frontier": [
+    "Derive a controlled typical-record continuum theory without importing the restricted singlet loop gas.",
+    "Compare exact sector inference with exact-marginal and BP-marginal matching on finite-width strips.",
+    "Determine which intrinsic observables discriminate conventional and BKT-like explanations."
+  ],
+  "completion_scope": "The six-item bounded theory formulation contract is complete. Typical-record continuum theory, thermodynamic thresholds, and a microscopic quantum instrument remain open; no follow-on acquisition is running.",
+  "delivery_audit": "results/theory-delivery-2026-09-14.json"
+}

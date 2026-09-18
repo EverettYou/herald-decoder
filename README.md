@@ -84,18 +84,28 @@ and posterior-LLR PyMatching. Its LER score depends only on the final
 correction clearing the detector syndrome and having trivial residual logical
 parity; BP convergence is recorded as a diagnostic and does not gate LER.
 
-Example server acquisition:
+Example acquisition of the six registered Lab 006 curves:
 
 ```bash
-./run_research_python.sh \
-  labs/lab-006-sun-bp-theory/scripts/run_a8_fullrecord_ler.py \
-  --lattice honeycomb --group SU3 --shots 20000 \
-  --tag honeycomb-SU3-final-v2 --resume
+./run_research_python.sh -u labs/lab-006-sun-bp-theory/scripts/dispatch_a8_ler.py --workers 48
 ```
 
-Run the same command for `U1`, `SU2`, and `SU3`, and for `honeycomb` and
-`square`. Each lattice/group combination writes a separate checkpoint and
-figure under `labs/lab-006-sun-bp-theory/results/`.
+The dispatcher resumes the six `final-v2` checkpoints without changing their
+per-cell RNG streams, keeps inherited originals, and atomically saves each
+completed cell. Run only one dispatcher at a time. Each worker uses one CPU
+thread; reduce `--workers` on smaller hosts. It refreshes explicitly partial
+LER and BP diagnostic panels throughout acquisition. The research scope is
+U(1), SU(2), SU(3), square/honeycomb, L=5,7,9,11, 20,000 shots per sampled
+cell, with rough-boundary m and R unmeasured; None is deferred.
+
+After the dispatcher finishes, audit all cells and render final plots with:
+
+```bash
+./run_research_python.sh labs/lab-006-sun-bp-theory/scripts/finalize_a8_ler.py
+```
+
+The original single-curve runner remains available for fresh separately tagged
+runs; the expanded current checkpoints are owned by the dispatcher.
 
 ## Repository map
 

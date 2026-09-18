@@ -1,3 +1,7 @@
+# Current execution — 2026-09-09
+
+The user has reopened Lab 004 compute/sampling planning. Execute `manifests/compute-scaling-2026-09-09.json`: unchanged-decoder serial/process-batch timing, exact equivalence, and a bounded 40/80/160-iteration sensitivity pilot. Use measured throughput and diagnostics to specify a new prospective production campaign. Previously withdrawn/aborted scans stay excluded; the prior R6AJ transfer remains incomplete, not silently completed or replaced by first-stage evidence. Lab 007 remains the theory follow-up.
+
 # Lab 004 — Reproduce and benchmark intrinsic-heralded decoding in the D4 topological order
 
 ## Motivation and relation to Lab 002

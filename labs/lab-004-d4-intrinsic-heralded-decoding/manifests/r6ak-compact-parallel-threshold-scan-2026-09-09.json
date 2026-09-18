@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "status": "registered",
+  "phase": "R6AK",
+  "registered_at": "2026-09-09",
+  "question": "Does the unchanged paper-normalized D4 first-stage public-record decoder show a reproducible finite-size crossing near the published heralded-MWPM threshold, and does signal-only BP retain a paired advantage?",
+  "channel": "Periodic red-X D4, p_Z=0, public binary e_B/e_G record, unconditional first-stage Boolean-union winding score.",
+  "scan_design": {
+    "sizes": [5, 7, 9, 11, 13],
+    "p_X_grid": [0.204, 0.208, 0.212],
+    "histories_per_cell": 10000,
+    "seed_salt": 909204,
+    "workers": 64,
+    "bp_max_iterations": 40,
+    "bp_tolerance": 1e-8
+  },
+  "storage_contract": "Persist sufficient statistics only: attempted, terminal physical winding, decoder failures, decoder unavailable, BP convergence counts, and paired discordance counts. No trajectory rows, physical error lists, public records, corrections, or posterior arrays are persisted.",
+  "reuse_contract": "Existing R6AE aggregate counts may be retained as historical anchors only when the cell, channel, score, decoder, and history denominator match; they are never concatenated with this prospective seed stream.",
+  "claim_boundary": "First-stage finite-size crossing evidence only; not a full two-stage D4 threshold, not a convergence proof, and not a comparison with Lab 003.",
+  "output": "results/r6ak-compact-parallel-threshold-scan-2026-09-09.json"
+}

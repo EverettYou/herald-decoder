@@ -2,8 +2,9 @@
 title: SU(N) full-irrep belief propagation
 page_type: method
 status: validated-finite-size
-updated: 2026-09-04
+updated: 2026-09-14
 source_refs:
+  - labs/lab-007-decoding-statistical-mechanics/REPORT.md
   - labs/lab-006-sun-bp-theory/REPORT.md
   - labs/lab-006-sun-bp-theory/PLAN.md
   - labs/lab-006-sun-bp-theory/scripts/sun_fusion_bp.py
@@ -35,7 +36,7 @@ alternative, and explicit message damping; these choices have different probabil
 
 **Sources**: [Lab 006 viewer](/lab?id=lab-006-sun-bp-theory) · [Lab 006 report](../../labs/lab-006-sun-bp-theory/REPORT.md)
 
-**Last updated**: 2026-09-04
+**Last updated**: 2026-09-14
 
 ---
 
@@ -617,6 +618,26 @@ See the [Lab 006 report](../../labs/lab-006-sun-bp-theory/REPORT.md),
   decoder.
 - The fixed-size demonstrations establish small-graph correctness, a visible information effect, and a
   schedule-specific convergence boundary, not a decoding threshold.
+
+## Exact sector model and the logical hardening gap
+
+Lab 007 now derives the normalized observation-conditioned sector partition
+function for this classical instrument, including unmeasured rough boundaries
+and shared hidden orientations. Its SU(2) quotient holds for the entire joint
+activity/record law, not only local beliefs. U(1) has an exact bounded-current
+representation; full-record SU(3) generally requires extra source structure.
+These reductions and their claim boundaries are synthesized in
+[[models/representation-informed-sector-model|the logical-sector model]].
+
+Exact marginals still need not make matching Bayes-optimal: a finite SU(2)
+rough-hexagon record has sector probabilities (128/193,65/193), but the exact
+marginal-weighted chain lies in the less probable sector. PyMatching reproduces
+that witness. A deliberately small star also exposes merging of repeated
+boundary columns, so the ideal surrogate equivalence assumes a graph encoding
+that preserves the intended objective. The inspected canonical L=5,7,9,11
+matrices have no such duplicate columns. These are finite mathematical and
+implementation boundaries, not revised production LER estimates.
+[Lab 007, decoder-gap evidence](../../labs/lab-007-decoding-statistical-mechanics/wiki/decoder-gap.md).
 
 ## Related pages
 

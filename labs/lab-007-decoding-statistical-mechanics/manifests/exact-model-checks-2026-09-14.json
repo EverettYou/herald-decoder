@@ -1,0 +1,232 @@
+{
+  "id": "lab007-exact-model-checks-2026-09-14",
+  "status": "complete",
+  "registered_at": "2026-09-14",
+  "parent_contract": "theory-scope-2026-09-09.json",
+  "question": "Does the normalized classical fusion instrument admit exact relative-sector, spin, and current representations, and what obstructs orientation quotienting and marginal-weight hard decoding?",
+  "groups": [
+    "U1",
+    "SU2",
+    "SU3"
+  ],
+  "orientation": [
+    "directed",
+    "shared-hidden-fair"
+  ],
+  "priors": [
+    "1/5",
+    "1/3",
+    "1/2"
+  ],
+  "fixtures": [
+    {
+      "id": "rough-path",
+      "edges": [
+        [
+          "L",
+          "a"
+        ],
+        [
+          "a",
+          "R"
+        ]
+      ],
+      "measured": [
+        "a"
+      ],
+      "logical_edges": [
+        0
+      ]
+    },
+    {
+      "id": "square-cycle",
+      "edges": [
+        [
+          "a",
+          "b"
+        ],
+        [
+          "b",
+          "c"
+        ],
+        [
+          "c",
+          "d"
+        ],
+        [
+          "d",
+          "a"
+        ]
+      ],
+      "measured": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "logical_edges": []
+    },
+    {
+      "id": "rough-square",
+      "edges": [
+        [
+          "L",
+          "a"
+        ],
+        [
+          "a",
+          "b"
+        ],
+        [
+          "b",
+          "c"
+        ],
+        [
+          "c",
+          "d"
+        ],
+        [
+          "d",
+          "a"
+        ],
+        [
+          "c",
+          "R"
+        ]
+      ],
+      "measured": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "logical_edges": [
+        0
+      ]
+    },
+    {
+      "id": "rough-hexagon",
+      "edges": [
+        [
+          "L",
+          "a"
+        ],
+        [
+          "a",
+          "b"
+        ],
+        [
+          "b",
+          "c"
+        ],
+        [
+          "c",
+          "d"
+        ],
+        [
+          "d",
+          "e"
+        ],
+        [
+          "e",
+          "f"
+        ],
+        [
+          "f",
+          "a"
+        ],
+        [
+          "d",
+          "R"
+        ]
+      ],
+      "measured": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f"
+      ],
+      "logical_edges": [
+        0
+      ]
+    },
+    {
+      "id": "degree-four-star",
+      "edges": [
+        [
+          "L1",
+          "a"
+        ],
+        [
+          "L2",
+          "a"
+        ],
+        [
+          "a",
+          "R1"
+        ],
+        [
+          "a",
+          "R2"
+        ]
+      ],
+      "measured": [
+        "a"
+      ],
+      "logical_edges": [
+        0,
+        1
+      ]
+    }
+  ],
+  "geometry_scope": "Finite planar motifs with the parent interior likelihood, rough boundaries, degree-three honeycomb and degree-four square local valences; not full finite-size lattice families or threshold estimates. The cycle has one contractible face and no logical sector.",
+  "method": "Exhaust every allowed edge state and every nonzero interior record with Fraction arithmetic. Independently construct SU3 multiplicities by Dynkin-label fundamental tensor recursion and compare the parent implementation through degree four. Reconstruct compatible chains with an independent GF(2) kernel basis; compare sector sums. U1 direct signed-divergence enumeration; SU2 hidden/direct equality. Search this fixed matrix for a strict sector-Bayes versus exact-marginal matching gap, retaining ties separately.",
+  "acceptance": [
+    "Every local and global probability sums exactly to one; every supported posterior normalizes.",
+    "Sector reference changes only permute labels; binary kernel parameterization is bijective.",
+    "SU2 hidden and directed joint record/activity laws agree exactly on all fixtures.",
+    "At least one explicit U1/SU3 record or sector counterexample rejects an orientation-independent quotient.",
+    "U1 current-sector enumeration matches the full likelihood; degree-three and degree-four SU(N) weights are retained.",
+    "Give a strict matched hardening counterexample if found; otherwise retain a mathematical risk bound without claiming a numerical counterexample.",
+    "Record browser/report/registry verification separately from algebraic verification."
+  ],
+  "numerical_tolerance": {
+    "rational_checks": "exact equality",
+    "parent_float_likelihood": "1e-14",
+    "optional_BP_tree_check": "1e-10"
+  },
+  "budget": {
+    "max_edges": 8,
+    "max_edge_states_per_fixture": 6561,
+    "max_processes": 1,
+    "wall_time_limit_minutes": 10,
+    "large_monte_carlo": false
+  },
+  "stop_rule": "Any identity failure blocks its scientific claim and downstream use; repair transparently or report obstruction. No fitted critical parameters.",
+  "outputs": [
+    "results/exact-model-checks-2026-09-14.json",
+    "wiki/partition-function.md",
+    "wiki/conjugacy.md",
+    "wiki/statistical-model.md",
+    "wiki/decoder-gap.md",
+    "wiki/predictions.md"
+  ],
+  "supplementary_validation": {
+    "registered_at": "2026-09-14",
+    "selection": "All 21 first strict witnesses from the already fixed matrix, identified before backend evaluation; all physical U1 states on original fixtures for integral-cycle reconstruction.",
+    "checks": [
+      "Compare PyMatching exact-marginal correction with the exact surrogate objective, retaining any backend mismatch as a separate limitation.",
+      "Verify parent BP tree marginals for degree-four-star witnesses with tolerance 1e-10, 100 sweeps, zero damping.",
+      "Construct integer fundamental-cycle basis after collapsing unmeasured endpoints; reconstruct all U1 state differences from chord coordinates."
+    ],
+    "budget": "one process, under 2 minutes; no additional Monte Carlo",
+    "post_result_followup": "Backend star mismatch triggered a read-only repeated detector-column audit on both canonical parent geometries at L=5,7,9,11; no decoder or channel changes."
+  },
+  "results": [
+    "results/exact-model-checks-2026-09-14.json",
+    "results/mapping-supplement-2026-09-14.json"
+  ],
+  "interpretation": "Exact model identities pass. Strict ideal hardening witnesses found; six hexagon witnesses reproduce PyMatching, 15 star examples expose a separate parallel-boundary-edge backend limitation."
+}

@@ -1,5 +1,20 @@
 # Plan — SU(N) full-irrep belief propagation
 
+## Final disposition — 2026-09-09
+
+Lab 006 is complete at its numerical evidence boundary. All 600 paired cells
+and 12,000,000 paired trials pass the full-data audit; 600 directed replays match
+the corrected baseline, and all 4,000,000 SU(2) control trials agree. The three
+hidden-orientation figures and short final analysis are integrated. No threshold
+or KT/BKT transition is claimed. See the [final interpretation](wiki/interpretation.md)
+and [closure delivery audit](results/closure-delivery-2026-09-09.json).
+
+No Lab 006 acquisition remains active. The next scientific deliverable is the
+[Lab 007 statistical-mechanics theory plan](../lab-007-decoding-statistical-mechanics/PLAN.md),
+with Lab 006 as its parent. The sections below retain the registered protocols
+and changes as provenance, not instructions to resume completed sampling.
+
+
 ## Question
 
 For an oriented lattice bond, an elementary error creates an SU(N) pair
@@ -270,3 +285,17 @@ end-to-end cells improved by 1.23--7.41x; see
 shot-specific, so its weighted PyMatching construction/decode must remain
 per-shot unless a replacement supplies a new exact A/B proof; PyMatching's
 current public API has no supported bulk in-place weight update.
+
+**Authorized resumption (2026-09-07):** Acquire U(1), SU(2), SU(3) on both lattices concurrently; None deferred. Rough-boundary m and R remain unmeasured. Whole-cell process scheduling preserves the registered seed and 256-shot batch stream. Retain the 40 inherited final-correction-v2 cells with original backups and record their missing historical source hashes; checkpoint each new completed cell atomically. Publish explicitly partial figures during acquisition, then verify all 600 cells, six LER panels with Wilson 95% intervals, six convergence companions, report integration, registry, and rendered dashboard before completion.
+
+**Completed delivery (2026-09-07):** All six panels have 100 sampled cells each: 12,000,000 shots in total, including 800,000 inherited corrected shots and 11,200,000 newly acquired shots. Count, interval, seed, inherited-count preservation, and new-source stability audits passed. Six final LER panels, six companion diagnostics, report embeds, active registry entries, and all rendered result pages passed delivery verification. See `results/a8-completion-audit-2026-09-07.json`, `results/a8-delivery-audit-2026-09-07.json`, and `wiki/ler-curves.md`. This completes the authorized curve delivery; None remains deferred and no threshold estimate is promoted.
+
+**Presentation revision (2026-09-07):** Replace the six standalone LER images with one 3×2 figure: Square left, Honeycomb right; U1/SU2/SU3 top to bottom. Share x, retain independent y scales, and place one size legend below all panels. Use the unchanged audited counts. Replace report and registry entries, remove the six old PNGs, and verify the exact rendered surface.
+
+## Phase A9 — Hidden pair orientation as a controlled mechanism test
+
+The researcher hypothesizes that fixed fundamental/antifundamental ordering explains the contrast between SU2 and U1/SU3. The directed curves show finite-size behavior, not a proof of threshold absence. The new intervention randomizes each active pair direction with probability 1/2, hidden from inference, while keeping activity noise, geometry, full interior observation, rough-boundary marginalization, and final correction score fixed. The existing Wiki ternary channel supplies the model. Competing explanations are useful fixed-orientation information, weak/no orientation effect, and numerical/algorithmic degradation in loopy ternary BP.
+
+The [A9 contract](manifests/a9-hidden-orientation-ler-2026-09-07.json) freezes six 20,000-shot, L=5,7,9,11, p=0.02..0.50 paired scans. A separate orientation RNG preserves the A8 activity/fusion stream; baseline replays must match A8 counts. Store paired joint failures and convergence diagnostics. SU2 uses its exact orientation quotient so an irrelevant duplicate state cannot alter the damped BP schedule; validate its local-channel invariance and shotwise identity. U1/SU3 use a verified ternary batch path, because the existing undirected class inherits a binary-only batch method that is unsuitable for production. Scalar/batch, tree enumeration, boundary, charge conservation, directed replay, and resource pilot gates precede production.
+
+Analysis uses Wilson intervals, paired discordance confidence bounds, exact McNemar tests with Holm correction, and explicitly descriptive finite-size ordering. The experiment can identify orientation effects for this decoder but cannot separate all BP approximation effects from intrinsic recoverability or establish a thermodynamic threshold. Deliver the requested red six-panel undirected figure, retain the directed comparison, add effect/convergence diagnostics, and verify data → figure → report → registry → rendered page. None remains deferred.

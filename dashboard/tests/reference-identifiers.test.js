@@ -14,6 +14,18 @@ test('reference cards use source-appropriate identifiers', () => {
   assert.doesNotMatch(source, /arXiv:\$\{escapeHtml\(i\.arxiv\|\|'—'\)\}/);
 });
 
+test('reference viewer has one page and an explicit PDF action', () => {
+  const matches = source.match(/async function reference\(/g) || [];
+  assert.equal(matches.length, 1);
+  assert.match(source, /Open PDF/);
+  assert.match(source, /d\.has_pdf/);
+  assert.match(source, /HeraldPdfViewer\.mount/);
+  assert.match(source, /\/api\/references\/\$\{id\}\/bytes/);
+  assert.match(source, /\/pdf-viewer\?id=/);
+  assert.doesNotMatch(source, /view=FitH&navpanes=0/);
+  assert.doesNotMatch(source, /<iframe title="\$\{escapeHtml\(i\.title\)\} PDF"/);
+});
+
 test('repository cards use repository language and iconography', () => {
   assert.match(source, /fa-brands fa-github/);
   assert.match(source, /githubPath\(item\)/);

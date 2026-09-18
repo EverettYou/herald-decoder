@@ -2,8 +2,9 @@
 title: Program-level scientific roadmap after the finite-window phase map
 page_type: question
 status: proposed-program
-updated: 2026-08-28
+updated: 2026-09-14
 source_refs:
+  - labs/lab-007-decoding-statistical-mechanics/REPORT.md
   - references/dennis2001-topological-quantum-memory/paper.pdf
   - references/fan2023-mixed-state-topological-memory/paper.pdf
   - references/lessa2024-swssb-mixed-states/paper.pdf
@@ -28,7 +29,7 @@ analysis, not the scientific center.
 
 **Sources**: [Topological Quantum Memory](/reference?id=dennis2001-topological-quantum-memory); [Diagnostics of Mixed-State Topological Order and Breakdown of Quantum Memory](/reference?id=fan2023-mixed-state-topological-memory); [Strong-to-Weak Spontaneous Symmetry Breaking in Mixed Quantum States](/reference?id=lessa2024-swssb-mixed-states); [Symmetry Enforced Entanglement in Maximally Mixed States](/reference?id=moharramipour2024-symmetry-enforced-entanglement); [Improved Quantum Error Correction Using Soft Information](/reference?id=pattison2021-soft-information-qec); [Charge-Informed Quantum Error Correction](/reference?id=temkin2025-charge-informed-qec); [Intrinsic Heralding and Optimal Decoders for Non-Abelian Topological Order](/reference?id=jing2025-intrinsic-heralding); [Non-Abelian Topological Order and Anyons on a Trapped-Ion Processor](/reference?id=iqbal2023-nonabelian-topological-order); [Quantum Computing with Anyons Is Fault Tolerant](/reference?id=lyons2026-anyonic-fault-tolerance); [Stability and Loop Models from Decohering Non-Abelian Topological Order](/reference?id=sala2025-decohering-nonabelian-topological-order)
 
-**Last updated**: 2026-08-29
+**Last updated**: 2026-09-14
 
 ## What the strongest papers treat as a major question
 
@@ -392,6 +393,24 @@ nonfinite intermediates. The program therefore does not silently compare IJGP
 only with the successful tensor representation. A zero-safe tensor smoke on
 the same target is the next prerequisite; posterior accuracy and LER remain
 blocked.
+
+## SU(N) formulation gate completed; typical-record scaling remains open
+
+Lab 007 supplies an exact sector partition function for the inherited classical
+full-irrep instrument, its SU(2) orientation quotient, a constrained U(1)
+current/height model, and explicit SU(3) source and decoder-hardening
+obstructions. Its restricted trivalent singlet loop weights cannot be used as
+an unqualified typical-record transition theory. This advances WP2/WP3 from
+formulation to controlled intrinsic inference; it does not resolve the
+microscopic quantum-channel gate or thermodynamic universality.
+[Lab 007, formulation and checks](/lab?id=lab-007-decoding-statistical-mechanics).
+
+The next discriminating direction is an exact finite-width sector contraction
+with the same physical channel, full record, rough boundaries and binary score,
+paired with exact-marginal and BP-marginal matching. A periodic integer-winding
+or BKT study requires a separately specified geometry, observable and effective
+theory. See [[models/representation-informed-sector-model|the sector model]]
+and [Lab 007, follow-on design](../../labs/lab-007-decoding-statistical-mechanics/wiki/predictions.md).
 
 ## Related pages
 

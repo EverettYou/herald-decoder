@@ -1,0 +1,494 @@
+{
+  "status": "passed",
+  "source_sha256": "44282842f81bd43b88d6455848db7e11de8b959db0e89fa7fe78f5c729d2d5d7",
+  "height_reconstruction": [
+    {
+      "fixture": "rough-path",
+      "hidden": false,
+      "currents_checked": 4,
+      "integer_basis_dimension": 1,
+      "charge_records": 3
+    },
+    {
+      "fixture": "rough-path",
+      "hidden": true,
+      "currents_checked": 9,
+      "integer_basis_dimension": 1,
+      "charge_records": 5
+    },
+    {
+      "fixture": "square-cycle",
+      "hidden": false,
+      "currents_checked": 16,
+      "integer_basis_dimension": 1,
+      "charge_records": 15
+    },
+    {
+      "fixture": "square-cycle",
+      "hidden": true,
+      "currents_checked": 81,
+      "integer_basis_dimension": 1,
+      "charge_records": 65
+    },
+    {
+      "fixture": "rough-square",
+      "hidden": false,
+      "currents_checked": 64,
+      "integer_basis_dimension": 2,
+      "charge_records": 54
+    },
+    {
+      "fixture": "rough-square",
+      "hidden": true,
+      "currents_checked": 729,
+      "integer_basis_dimension": 2,
+      "charge_records": 425
+    },
+    {
+      "fixture": "rough-hexagon",
+      "hidden": false,
+      "currents_checked": 256,
+      "integer_basis_dimension": 2,
+      "charge_records": 238
+    },
+    {
+      "fixture": "rough-hexagon",
+      "hidden": true,
+      "currents_checked": 6561,
+      "integer_basis_dimension": 2,
+      "charge_records": 4769
+    },
+    {
+      "fixture": "degree-four-star",
+      "hidden": false,
+      "currents_checked": 16,
+      "integer_basis_dimension": 3,
+      "charge_records": 5
+    },
+    {
+      "fixture": "degree-four-star",
+      "hidden": true,
+      "currents_checked": 81,
+      "integer_basis_dimension": 3,
+      "charge_records": 9
+    }
+  ],
+  "matching_backend": [
+    {
+      "fixture": "rough-hexagon",
+      "group": "U1",
+      "orientation": "directed",
+      "p": "1/2",
+      "correction_mask": 143,
+      "exact_surrogate_maximizers": [
+        143
+      ],
+      "syndrome_valid": true,
+      "matches_exact_objective": true
+    },
+    {
+      "fixture": "rough-hexagon",
+      "group": "SU2",
+      "orientation": "directed",
+      "p": "1/3",
+      "correction_mask": 153,
+      "exact_surrogate_maximizers": [
+        153
+      ],
+      "syndrome_valid": true,
+      "matches_exact_objective": true
+    },
+    {
+      "fixture": "rough-hexagon",
+      "group": "SU2",
+      "orientation": "directed",
+      "p": "1/2",
+      "correction_mask": 145,
+      "exact_surrogate_maximizers": [
+        145
+      ],
+      "syndrome_valid": true,
+      "matches_exact_objective": true
+    },
+    {
+      "fixture": "rough-hexagon",
+      "group": "SU2",
+      "orientation": "shared-hidden-fair",
+      "p": "1/3",
+      "correction_mask": 153,
+      "exact_surrogate_maximizers": [
+        153
+      ],
+      "syndrome_valid": true,
+      "matches_exact_objective": true
+    },
+    {
+      "fixture": "rough-hexagon",
+      "group": "SU2",
+      "orientation": "shared-hidden-fair",
+      "p": "1/2",
+      "correction_mask": 145,
+      "exact_surrogate_maximizers": [
+        145
+      ],
+      "syndrome_valid": true,
+      "matches_exact_objective": true
+    },
+    {
+      "fixture": "rough-hexagon",
+      "group": "SU3",
+      "orientation": "shared-hidden-fair",
+      "p": "1/2",
+      "correction_mask": 153,
+      "exact_surrogate_maximizers": [
+        153
+      ],
+      "syndrome_valid": true,
+      "matches_exact_objective": true
+    },
+    {
+      "fixture": "degree-four-star",
+      "group": "U1",
+      "orientation": "shared-hidden-fair",
+      "p": "1/5",
+      "correction_mask": 0,
+      "exact_surrogate_maximizers": [
+        15
+      ],
+      "syndrome_valid": true,
+      "matches_exact_objective": false
+    },
+    {
+      "fixture": "degree-four-star",
+      "group": "U1",
+      "orientation": "shared-hidden-fair",
+      "p": "1/3",
+      "correction_mask": 0,
+      "exact_surrogate_maximizers": [
+        15
+      ],
+      "syndrome_valid": true,
+      "matches_exact_objective": false
+    },
+    {
+      "fixture": "degree-four-star",
+      "group": "U1",
+      "orientation": "shared-hidden-fair",
+      "p": "1/2",
+      "correction_mask": 0,
+      "exact_surrogate_maximizers": [
+        15
+      ],
+      "syndrome_valid": true,
+      "matches_exact_objective": false
+    },
+    {
+      "fixture": "degree-four-star",
+      "group": "SU2",
+      "orientation": "directed",
+      "p": "1/5",
+      "correction_mask": 0,
+      "exact_surrogate_maximizers": [
+        15
+      ],
+      "syndrome_valid": true,
+      "matches_exact_objective": false
+    },
+    {
+      "fixture": "degree-four-star",
+      "group": "SU2",
+      "orientation": "directed",
+      "p": "1/3",
+      "correction_mask": 0,
+      "exact_surrogate_maximizers": [
+        15
+      ],
+      "syndrome_valid": true,
+      "matches_exact_objective": false
+    },
+    {
+      "fixture": "degree-four-star",
+      "group": "SU2",
+      "orientation": "directed",
+      "p": "1/2",
+      "correction_mask": 0,
+      "exact_surrogate_maximizers": [
+        15
+      ],
+      "syndrome_valid": true,
+      "matches_exact_objective": false
+    },
+    {
+      "fixture": "degree-four-star",
+      "group": "SU2",
+      "orientation": "shared-hidden-fair",
+      "p": "1/5",
+      "correction_mask": 0,
+      "exact_surrogate_maximizers": [
+        15
+      ],
+      "syndrome_valid": true,
+      "matches_exact_objective": false
+    },
+    {
+      "fixture": "degree-four-star",
+      "group": "SU2",
+      "orientation": "shared-hidden-fair",
+      "p": "1/3",
+      "correction_mask": 0,
+      "exact_surrogate_maximizers": [
+        15
+      ],
+      "syndrome_valid": true,
+      "matches_exact_objective": false
+    },
+    {
+      "fixture": "degree-four-star",
+      "group": "SU2",
+      "orientation": "shared-hidden-fair",
+      "p": "1/2",
+      "correction_mask": 0,
+      "exact_surrogate_maximizers": [
+        15
+      ],
+      "syndrome_valid": true,
+      "matches_exact_objective": false
+    },
+    {
+      "fixture": "degree-four-star",
+      "group": "SU3",
+      "orientation": "directed",
+      "p": "1/5",
+      "correction_mask": 0,
+      "exact_surrogate_maximizers": [
+        15
+      ],
+      "syndrome_valid": true,
+      "matches_exact_objective": false
+    },
+    {
+      "fixture": "degree-four-star",
+      "group": "SU3",
+      "orientation": "directed",
+      "p": "1/3",
+      "correction_mask": 0,
+      "exact_surrogate_maximizers": [
+        15
+      ],
+      "syndrome_valid": true,
+      "matches_exact_objective": false
+    },
+    {
+      "fixture": "degree-four-star",
+      "group": "SU3",
+      "orientation": "directed",
+      "p": "1/2",
+      "correction_mask": 0,
+      "exact_surrogate_maximizers": [
+        15
+      ],
+      "syndrome_valid": true,
+      "matches_exact_objective": false
+    },
+    {
+      "fixture": "degree-four-star",
+      "group": "SU3",
+      "orientation": "shared-hidden-fair",
+      "p": "1/5",
+      "correction_mask": 0,
+      "exact_surrogate_maximizers": [
+        15
+      ],
+      "syndrome_valid": true,
+      "matches_exact_objective": false
+    },
+    {
+      "fixture": "degree-four-star",
+      "group": "SU3",
+      "orientation": "shared-hidden-fair",
+      "p": "1/3",
+      "correction_mask": 0,
+      "exact_surrogate_maximizers": [
+        15
+      ],
+      "syndrome_valid": true,
+      "matches_exact_objective": false
+    },
+    {
+      "fixture": "degree-four-star",
+      "group": "SU3",
+      "orientation": "shared-hidden-fair",
+      "p": "1/2",
+      "correction_mask": 0,
+      "exact_surrogate_maximizers": [
+        15
+      ],
+      "syndrome_valid": true,
+      "matches_exact_objective": false
+    }
+  ],
+  "parent_tree_BP": [
+    {
+      "group": "U1",
+      "orientation": "shared-hidden-fair",
+      "p": "1/5",
+      "max_marginal_error": 0.0,
+      "iterations": 2
+    },
+    {
+      "group": "U1",
+      "orientation": "shared-hidden-fair",
+      "p": "1/3",
+      "max_marginal_error": 1.1102230246251565e-16,
+      "iterations": 2
+    },
+    {
+      "group": "U1",
+      "orientation": "shared-hidden-fair",
+      "p": "1/2",
+      "max_marginal_error": 1.1102230246251565e-16,
+      "iterations": 2
+    },
+    {
+      "group": "SU2",
+      "orientation": "directed",
+      "p": "1/5",
+      "max_marginal_error": 0.0,
+      "iterations": 2
+    },
+    {
+      "group": "SU2",
+      "orientation": "directed",
+      "p": "1/3",
+      "max_marginal_error": 0.0,
+      "iterations": 2
+    },
+    {
+      "group": "SU2",
+      "orientation": "directed",
+      "p": "1/2",
+      "max_marginal_error": 0.0,
+      "iterations": 2
+    },
+    {
+      "group": "SU2",
+      "orientation": "shared-hidden-fair",
+      "p": "1/5",
+      "max_marginal_error": 0.0,
+      "iterations": 2
+    },
+    {
+      "group": "SU2",
+      "orientation": "shared-hidden-fair",
+      "p": "1/3",
+      "max_marginal_error": 1.1102230246251565e-16,
+      "iterations": 2
+    },
+    {
+      "group": "SU2",
+      "orientation": "shared-hidden-fair",
+      "p": "1/2",
+      "max_marginal_error": 1.1102230246251565e-16,
+      "iterations": 2
+    },
+    {
+      "group": "SU3",
+      "orientation": "directed",
+      "p": "1/5",
+      "max_marginal_error": 0.0,
+      "iterations": 2
+    },
+    {
+      "group": "SU3",
+      "orientation": "directed",
+      "p": "1/3",
+      "max_marginal_error": 0.0,
+      "iterations": 2
+    },
+    {
+      "group": "SU3",
+      "orientation": "directed",
+      "p": "1/2",
+      "max_marginal_error": 0.0,
+      "iterations": 2
+    },
+    {
+      "group": "SU3",
+      "orientation": "shared-hidden-fair",
+      "p": "1/5",
+      "max_marginal_error": 0.0,
+      "iterations": 2
+    },
+    {
+      "group": "SU3",
+      "orientation": "shared-hidden-fair",
+      "p": "1/3",
+      "max_marginal_error": 1.1102230246251565e-16,
+      "iterations": 2
+    },
+    {
+      "group": "SU3",
+      "orientation": "shared-hidden-fair",
+      "p": "1/2",
+      "max_marginal_error": 1.1102230246251565e-16,
+      "iterations": 2
+    }
+  ],
+  "summary": {
+    "integer_current_reconstructions": 7817,
+    "backend_witnesses": 21,
+    "backend_exact_objective_matches": 6,
+    "tree_BP_checks": 15,
+    "max_tree_BP_error": 1.1102230246251565e-16
+  },
+  "claim_boundary": "Matching mismatches are separate from the exact mathematical hardening counterexample.",
+  "parent_geometry_inspection": [
+    {
+      "geometry": "square",
+      "L": 5,
+      "duplicate_detector_columns": 0
+    },
+    {
+      "geometry": "square",
+      "L": 7,
+      "duplicate_detector_columns": 0
+    },
+    {
+      "geometry": "square",
+      "L": 9,
+      "duplicate_detector_columns": 0
+    },
+    {
+      "geometry": "square",
+      "L": 11,
+      "duplicate_detector_columns": 0
+    },
+    {
+      "geometry": "honeycomb",
+      "L": 5,
+      "duplicate_detector_columns": 0
+    },
+    {
+      "geometry": "honeycomb",
+      "L": 7,
+      "duplicate_detector_columns": 0
+    },
+    {
+      "geometry": "honeycomb",
+      "L": 9,
+      "duplicate_detector_columns": 0
+    },
+    {
+      "geometry": "honeycomb",
+      "L": 11,
+      "duplicate_detector_columns": 0
+    }
+  ],
+  "parent_lattice_sha256": "b87a5feba27675e26970360d730324b7d3740e4dc0492b4dc478e510f140c9e7",
+  "runtime": {
+    "python": "3.13.2",
+    "numpy": "1.26.4",
+    "pymatching": "2.4.0"
+  },
+  "backend_status": "Six hexagon witnesses reproduce the exact objective; 15 star witnesses do not because repeated detector columns are merged. The canonical parent matrices inspected have no repeated columns."
+}

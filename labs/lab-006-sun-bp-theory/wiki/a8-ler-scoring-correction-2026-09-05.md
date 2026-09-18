@@ -1,6 +1,12 @@
+---
+title: Logical-rate scoring correction
+status: current
+updated: 2026-09-07
+---
+
 # A8 LER scoring correction — 2026-09-05
 
-## Finding
+## Summary
 
 The A7/A8 experiment contract incorrectly defined BP tolerance
 nonconvergence as a logical failure. That rule is invalid for this two-stage
@@ -15,7 +21,7 @@ detector residual, or if `error XOR correction` has nontrivial logical parity.
 The BP convergence flag, iteration count, and terminal message delta are
 retained as numerical diagnostics and never gate LER.
 
-## Root cause and propagation
+## Evidence
 
 The incorrect rule first entered the Lab 006 A7 PLAN and A7 manifest. The A7
 runner then implemented `not bp_converged OR residual OR logical_parity`, and
@@ -32,3 +38,13 @@ threshold inference. They store the union count but not the overlap between BP
 nonconvergence and genuine final logical failure, so they cannot be repaired
 algebraically. The shots must be replayed. New checkpoints carry the explicit
 `final-correction-v2` scoring rule and refuse to resume an old scope.
+
+
+## Status
+
+Current correction. Replacement curves are complete and audited in [logical-rate evidence](ler-curves.md). The [scoring preflight](../results/a8-resume-preflight-2026-09-07.json) verifies the corrected decision and six full-record arms.
+
+## Related pages
+
+- [Method overview](overview.md)
+- [Logical-rate evidence](ler-curves.md)

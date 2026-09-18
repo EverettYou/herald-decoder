@@ -1,0 +1,170 @@
+{
+  "verified_at": "2026-09-09T05:25:32.850286+00:00",
+  "surface": "http://localhost:8010/ \u2014 Lab evolution",
+  "status": "implemented and verified in Chromium",
+  "model": "Ancestry columns with balanced subtree placement; dates are creation metadata, not a proportional x-axis",
+  "live_assets": {
+    "dashboard/frontend/js/research-timeline.js": {
+      "url": "http://localhost:8010/js/research-timeline.js",
+      "sha256": "1038174e7d98eec34841aef9a9a4fa6e4da95dcaf30e2a53a7ed00b99a1562fb",
+      "matches_working_tree": true
+    },
+    "dashboard/frontend/js/app.js": {
+      "url": "http://localhost:8010/js/app.js",
+      "sha256": "14ec5c668e2af7f762c6bb7edeaacdc146491c5d4d772ae8cf85e7f7ba9980c1",
+      "matches_working_tree": true
+    },
+    "dashboard/frontend/css/interface.css": {
+      "url": "http://localhost:8010/css/interface.css",
+      "sha256": "fe685ffc2ab9156623d9cdd3659ae141e1e9f18165c4f6956db66187e95a252c",
+      "matches_working_tree": true
+    },
+    "dashboard/frontend/index.html": {
+      "url": "http://localhost:8010/index.html",
+      "sha256": "e608e38834f96752fff1441f3fccea230b2c352afab44ab759dfc35cb6b0acd9",
+      "matches_working_tree": true
+    }
+  },
+  "live_labs": [
+    {
+      "id": "lab-001-string-herald-visualization",
+      "title": "Square-lattice string-herald decoder",
+      "created": "2026-08-26",
+      "parents": [],
+      "stage": "complete"
+    },
+    {
+      "id": "lab-002-herald-belief-matching",
+      "title": "Herald-aware belief matching",
+      "created": "2026-08-26",
+      "parents": [
+        "lab-001-string-herald-visualization"
+      ],
+      "stage": "complete"
+    },
+    {
+      "id": "lab-003-herald-threshold-phase-diagram",
+      "title": "Herald decoding threshold phase diagram",
+      "created": "2026-08-27",
+      "parents": [
+        "lab-001-string-herald-visualization",
+        "lab-002-herald-belief-matching"
+      ],
+      "stage": "complete"
+    },
+    {
+      "id": "lab-004-d4-intrinsic-heralded-decoding",
+      "title": "D4 intrinsic-heralded decoder reproduction",
+      "created": "2026-08-28",
+      "parents": [
+        "lab-002-herald-belief-matching"
+      ],
+      "stage": "active"
+    },
+    {
+      "id": "lab-005-spacetime-jit-anyonic-decoding",
+      "title": "Spacetime just-in-time anyonic decoding",
+      "created": "2026-08-28",
+      "parents": [
+        "lab-002-herald-belief-matching",
+        "lab-004-d4-intrinsic-heralded-decoding"
+      ],
+      "stage": "active"
+    },
+    {
+      "id": "lab-006-sun-bp-theory",
+      "title": "SU(N) full-irrep belief propagation",
+      "created": "2026-09-04",
+      "parents": [
+        "lab-002-herald-belief-matching"
+      ],
+      "stage": "active"
+    }
+  ],
+  "browser": {
+    "live_catalog": {
+      "cards": 6,
+      "edges": 7
+    },
+    "desktop_cards": [
+      {
+        "id": "lab-001-string-herald-visualization",
+        "title": "Square-lattice string-herald decoder",
+        "visible": true,
+        "textFits": true
+      },
+      {
+        "id": "lab-002-herald-belief-matching",
+        "title": "Herald-aware belief matching",
+        "visible": true,
+        "textFits": true
+      },
+      {
+        "id": "lab-003-herald-threshold-phase-diagram",
+        "title": "Herald decoding threshold phase diagram",
+        "visible": true,
+        "textFits": true
+      },
+      {
+        "id": "lab-004-d4-intrinsic-heralded-decoding",
+        "title": "D4 intrinsic-heralded decoder reproduction",
+        "visible": true,
+        "textFits": true
+      },
+      {
+        "id": "lab-005-spacetime-jit-anyonic-decoding",
+        "title": "Spacetime just-in-time anyonic decoding",
+        "visible": true,
+        "textFits": true
+      },
+      {
+        "id": "lab-006-sun-bp-theory",
+        "title": "SU(N) full-irrep belief propagation",
+        "visible": true,
+        "textFits": true
+      }
+    ],
+    "edge_crossings": [],
+    "ordinary_scroll_does_not_zoom": true,
+    "native_two_axis_scroll": {
+      "before": {
+        "x": 180,
+        "y": 120
+      },
+      "after": {
+        "x": 260,
+        "y": 230
+      }
+    },
+    "pinch_cursor_anchor": {
+      "before": {
+        "x": 318.3574389474633,
+        "y": 255.82294201135446
+      },
+      "after": {
+        "x": 318.5654714549977,
+        "y": 255.7497446892235
+      }
+    },
+    "mouse_drag": true,
+    "keyboard_navigation_and_trace": true,
+    "remount_controls": true,
+    "safari_gesture_event_mapping": "Synthetic event test; physical Safari not tested",
+    "page_errors": [],
+    "two_finger_touch_pinch": true,
+    "touch_pan_without_navigation": true,
+    "mobile_overview": true,
+    "touch_tap_navigation": true
+  },
+  "unit_tests": "7 layout tests and 3 reference identifier tests passed",
+  "limitations": [
+    "Physical macOS trackpad and Safari were not available; Chromium ctrl+wheel pinch, touch input, and synthetic Safari gesture events were tested.",
+    "Current six-study graph has zero edge crossings. The layout does not claim global crossing minimization for arbitrary future DAGs."
+  ],
+  "screenshots": {
+    "desktop": ".tmp/evolution-audit/desktop.png",
+    "mobile": ".tmp/evolution-audit/mobile.png",
+    "focus": ".tmp/evolution-audit/focus.png",
+    "before": ".tmp/evolution-audit/before.png"
+  }
+}

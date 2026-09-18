@@ -5,18 +5,19 @@ from __future__ import annotations
 import hashlib
 import importlib.util
 import json
+import logging
 import math
 import mimetypes
 import os
 import re
 import shlex
-import tarfile
+import subprocess
 import sys
 import tarfile
-import logging
-import subprocess
+import threading
 from collections import Counter, defaultdict
 from datetime import UTC, datetime
+from html import escape as html_escape
 from http import HTTPStatus
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -72,6 +73,7 @@ except ModuleNotFoundError:
 
 ROOT = Path(__file__).resolve().parents[1]
 load_dotenv(ROOT / ".env", override=False)
+load_dotenv(Path.home() / ".env", override=False)
 DASHBOARD = ROOT / "dashboard"
 FRONTEND = DASHBOARD / "frontend"
 LABS = ROOT / "labs"
@@ -317,6 +319,96 @@ def project_document_payload(raw_path: str) -> dict:
         "size": candidate.stat().st_size,
         "content": candidate.read_text(encoding="utf-8", errors="replace"),
     }
+
+
+def cache_headers_for_content_type(content_type: str) -> list[tuple[str, str]]:
+    """Return cache headers that keep live JSON fresh without blanking Chromium PDFs."""
+    media = (content_type or "").split(";", 1)[0].strip().lower()
+    if media in {"application/pdf", "image/png", "image/jpeg", "image/gif", "image/webp", "image/svg+xml"}:
+        return [
+            ("Cache-Control", "private, max-age=0, must-revalidate"),
+            ("X-Content-Type-Options", "nosniff"),
+        ]
+    return [
+        ("Cache-Control", "no-store, max-age=0"),
+        ("Pragma", "no-cache"),
+    ]
+
+
+def parse_byte_range(length: int, header: str | None) -> tuple[int, int] | None:
+    """Return an inclusive byte range, or None when the request wants the full body."""
+    if not header or length <= 0:
+        return None
+    if not header.startswith("bytes="):
+        raise ValueError("Unsupported range unit")
+    spec = header.removeprefix("bytes=").split(",", 1)[0].strip()
+    first, separator, last = spec.partition("-")
+    if not separator:
+        raise ValueError("Invalid byte range")
+    if first and last:
+        start, end = int(first), int(last)
+    elif first:
+        start, end = int(first), length - 1
+    elif last:
+        suffix = int(last)
+        if suffix <= 0:
+            raise ValueError("Invalid byte range")
+        start, end = max(length - suffix, 0), length - 1
+    else:
+        raise ValueError("Invalid byte range")
+    if start < 0 or end < start or start >= length:
+        raise ValueError("Invalid byte range")
+    return start, min(end, length - 1)
+
+
+def prefers_pdf_html_viewer(method: str, query: dict, headers) -> bool:
+    """Use the in-page PDF.js viewer for ordinary GET, bytes for file clients.
+
+    Cursor's embedded Chromium paints a dark native PDF chrome without page
+    content, and some of its navigations omit Sec-Fetch / Accept hints. Serve
+    HTML unless the client clearly asked for the file.
+    """
+    if str(method or "GET").upper() == "HEAD":
+        return False
+    if (query.get("raw") or [""])[0] == "1":
+        return False
+    if headers.get("Range"):
+        return False
+    dest = (headers.get("Sec-Fetch-Dest") or "").lower()
+    if dest in {"empty", "object", "embed", "script", "image", "font", "style"}:
+        return False
+    return True
+
+
+def reference_title(reference_id: str) -> str:
+    records = read_json(REFERENCES / "references.json", {"references": []})["references"]
+    record = next((item for item in records if item.get("id") == reference_id), None)
+    return str((record or {}).get("title") or reference_id)
+
+
+def pdf_viewer_page(title: str, source: str, back_href: str, back_label: str) -> bytes:
+    safe_title = html_escape(title, quote=True)
+    safe_back_href = html_escape(back_href, quote=True)
+    safe_back_label = html_escape(back_label, quote=True)
+    return f"""<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{safe_title} · Herald Decoder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/interface.css?v=20260909-pdf-04">
+  </head>
+  <body class="pdf-standalone-page">
+    <header class="pdf-standalone-bar">
+      <a href="{safe_back_href}">← {safe_back_label}</a>
+    </header>
+    <div class="pdf-shell" id="pdf-viewer" role="region" aria-label="{safe_title} PDF"></div>
+    <script src="/js/pdf-viewer.js?v=20260909-pdf-04"></script>
+    <script>window.HeraldPdfViewer.mount(document.querySelector('#pdf-viewer'), {json.dumps(source)});</script>
+  </body>
+</html>
+""".encode("utf-8")
 
 
 def project_document_href(relative_path: str, fragment: str = "") -> str:
@@ -933,9 +1025,22 @@ class Handler(SimpleHTTPRequestHandler):
     def log_message(self, fmt, *args):
         print("dashboard | " + fmt % args)
 
+    def _queued_header_value(self, name: str) -> str:
+        prefix = f"{name.lower()}:"
+        for item in getattr(self, "_headers_buffer", []) or []:
+            line = item.decode("iso-8859-1") if isinstance(item, (bytes, bytearray)) else str(item)
+            if line.lower().startswith(prefix):
+                return line.split(":", 1)[1].strip()
+        return ""
+
     def end_headers(self):
-        self.send_header("Cache-Control", "no-store, max-age=0")
-        self.send_header("Pragma", "no-cache")
+        # Chromium's PDF viewer stays blank when the response forbids storage
+        # (`Cache-Control: no-store`). Keep JSON/API responses uncached, but
+        # let PDFs and images use a revalidate policy the plugin can render.
+        if not self._queued_header_value("Cache-Control"):
+            content_type = self._queued_header_value("Content-Type").split(";", 1)[0].strip().lower()
+            for key, value in cache_headers_for_content_type(content_type):
+                self.send_header(key, value)
         super().end_headers()
 
     def send_json(self, payload, status=HTTPStatus.OK) -> None:
@@ -949,7 +1054,57 @@ class Handler(SimpleHTTPRequestHandler):
             # answer that file-origin request.
             self.send_header("Access-Control-Allow-Origin", "*")
         self.end_headers()
-        self.wfile.write(body)
+        if getattr(self, "_send_body", True):
+            self.wfile.write(body)
+
+    def serve_bytes(self, body: bytes, content_type: str, filename: str | None = None, send_body: bool = True) -> None:
+        """Serve a PDF or other binary with HEAD and Range support."""
+        length = len(body)
+        try:
+            span = parse_byte_range(length, self.headers.get("Range"))
+        except ValueError:
+            self.send_response(HTTPStatus.REQUESTED_RANGE_NOT_SATISFIABLE)
+            self.send_header("Content-Range", f"bytes */{length}")
+            self.send_header("Content-Length", "0")
+            self.end_headers()
+            return
+        start, end = (0, length - 1) if span is None else span
+        payload = body[start:end + 1] if length else b""
+        status = HTTPStatus.OK if span is None else HTTPStatus.PARTIAL_CONTENT
+        self.send_response(status)
+        self.send_header("Content-Type", content_type)
+        self.send_header("Accept-Ranges", "bytes")
+        self.send_header("Content-Length", str(len(payload)))
+        if filename:
+            self.send_header("Content-Disposition", f'inline; filename="{filename}"')
+        if span is not None:
+            self.send_header("Content-Range", f"bytes {start}-{end}/{length}")
+        self.end_headers()
+        if send_body:
+            self.wfile.write(payload)
+
+    def serve_html(self, body: bytes, send_body: bool = True) -> None:
+        self.send_response(HTTPStatus.OK)
+        self.send_header("Content-Type", "text/html; charset=utf-8")
+        self.send_header("Content-Length", str(len(body)))
+        self.send_header("Cache-Control", "no-store")
+        self.end_headers()
+        if send_body:
+            self.wfile.write(body)
+
+    def serve_reference_pdf(self, reference_id: str, query: dict) -> None:
+        reference_id = valid_id(reference_id)
+        pdf = REFERENCES / reference_id / "paper.pdf"
+        if not pdf.exists():
+            raise FileNotFoundError("Local PDF not available")
+        send_body = getattr(self, "_send_body", True)
+        if prefers_pdf_html_viewer(self.command, query, self.headers):
+            self.send_response(HTTPStatus.FOUND)
+            self.send_header("Location", f"/pdf-viewer?id={reference_id}")
+            self.send_header("Content-Length", "0")
+            self.end_headers()
+            return
+        self.serve_bytes(pdf.read_bytes(), "application/pdf", f"{reference_id}.pdf", send_body=send_body)
 
     def error_json(self, status, message: str) -> None:
         self.send_json({"detail": message}, status)
@@ -967,6 +1122,20 @@ class Handler(SimpleHTTPRequestHandler):
                 return self.serve_lab_asset(parsed.path)
             if parsed.path.startswith("/api/"):
                 return self.api_get(parsed)
+            if parsed.path.rstrip("/") == "/pdf-viewer":
+                reference_id = (parse_qs(parsed.query).get("id") or [""])[0]
+                title = reference_title(valid_id(reference_id))
+                return self.serve_html(
+                    pdf_viewer_page(
+                        title,
+                        f"/api/references/{reference_id}/bytes",
+                        f"/reference?id={reference_id}",
+                        title,
+                    )
+                )
+            paper = re.fullmatch(r"/references/([a-z0-9][a-z0-9-]{1,100})/paper\.pdf", parsed.path)
+            if paper:
+                return self.serve_reference_pdf(paper.group(1), parse_qs(parsed.query))
             direct_path = unquote(parsed.path.lstrip("/"))
             try:
                 project_document_path(direct_path)
@@ -989,6 +1158,19 @@ class Handler(SimpleHTTPRequestHandler):
         try:
             if parsed.path.startswith("/lab-assets/"):
                 return self.serve_lab_asset(parsed.path, send_body=False)
+            if parsed.path.startswith("/api/"):
+                self._send_body = False
+                try:
+                    return self.api_get(parsed)
+                finally:
+                    self._send_body = True
+            paper = re.fullmatch(r"/references/([a-z0-9][a-z0-9-]{1,100})/paper\.pdf", parsed.path)
+            if paper:
+                self._send_body = False
+                try:
+                    return self.serve_reference_pdf(paper.group(1), parse_qs(parsed.query))
+                finally:
+                    self._send_body = True
             direct_path = unquote(parsed.path.lstrip("/"))
             try:
                 project_document_path(direct_path)
@@ -1019,6 +1201,12 @@ class Handler(SimpleHTTPRequestHandler):
         if not candidate.is_relative_to(folder.resolve()) or not candidate.is_file() or not is_evidence_asset:
             raise FileNotFoundError("Lab artifact not found")
         content_type = mimetypes.guess_type(candidate.name)[0] or "application/octet-stream"
+        if candidate.suffix.lower() == ".pdf" and prefers_pdf_html_viewer(self.command, {}, self.headers):
+            self.serve_html(
+                pdf_viewer_page(candidate.name, request_path, "/", candidate.name),
+                send_body=send_body,
+            )
+            return
         body = candidate.read_bytes()
         self.send_response(HTTPStatus.OK)
         self.send_header("Content-Type", content_type)
@@ -1069,25 +1257,27 @@ class Handler(SimpleHTTPRequestHandler):
             return self.send_json({"references": read_json(REFERENCES / "references.json", {"references": []})["references"]})
         if path.startswith("/api/references/"):
             parts, reference_id = path.split("/"), path.split("/")[3]
-            if len(parts) == 5 and parts[4] == "pdf":
+            if len(parts) == 5 and parts[4] == "bytes":
                 pdf = REFERENCES / valid_id(reference_id) / "paper.pdf"
                 if not pdf.exists():
                     raise FileNotFoundError("Local PDF not available")
-                self.send_response(HTTPStatus.OK)
-                self.send_header("Content-Type", "application/pdf")
-                self.send_header("Content-Length", str(pdf.stat().st_size))
-                self.end_headers()
-                self.wfile.write(pdf.read_bytes())
+                self.serve_bytes(
+                    pdf.read_bytes(),
+                    "application/pdf",
+                    f"{valid_id(reference_id)}.pdf",
+                    send_body=getattr(self, "_send_body", True),
+                )
                 return
+            if len(parts) == 5 and parts[4] == "pdf":
+                return self.serve_reference_pdf(reference_id, query)
             if len(parts) == 5 and parts[4] == "files":
                 return self.send_json({"files": archive_files(reference_id)})
             if len(parts) == 5 and parts[4] == "file":
                 if query.get("raw", [""])[0] == "1":
                     filename, body = archive_file_payload(reference_id, query.get("path", [""])[0], raw=True)
-                    self.send_response(HTTPStatus.OK)
-                    self.send_header("Content-Type", mimetypes.guess_type(filename)[0] or "application/octet-stream")
-                    self.send_header("Content-Length", str(len(body)))
-                    self.end_headers(); self.wfile.write(body); return
+                    guessed = mimetypes.guess_type(filename)[0] or "application/octet-stream"
+                    self.serve_bytes(body, guessed, Path(filename).name, send_body=getattr(self, "_send_body", True))
+                    return
                 return self.send_json(archive_file_payload(reference_id, query.get("path", [""])[0]))
             return self.send_json(reference_payload(reference_id))
         if path == "/api/labs":
@@ -1295,15 +1485,20 @@ if __name__ == "__main__":
     if os.environ.get("HERALD_SERVER_LAUNCHED") != "1":
         raise SystemExit("Start this service through ./run_server.sh")
     port = 8010
-    # Move Lab 006's Numba specialization cost to server startup.  Its BP
-    # kernels specialize by dtype/rank, so this tiny graph covers every L and
-    # every group in the interactive artifact.
-    try:
-        run_lab_function(
-            "lab-006-sun-bp-theory", "scripts/artifact_backend.py",
-            "warm_numba_kernels", {},
-        )
-    except Exception:
-        LOGGER.exception("Lab 006 Numba warm-up failed; artifact will compile lazily")
-    print(f"Herald Decoder server: http://127.0.0.1:{port}")
-    ThreadingHTTPServer(("127.0.0.1", port), Handler).serve_forever()
+    # Bind immediately so ./run_server.sh can see the port, then warm Lab 006
+    # kernels in the background.  The kernels specialize by dtype/rank; this
+    # tiny graph covers every L and every group in the interactive artifact.
+    server = ThreadingHTTPServer(("127.0.0.1", port), Handler)
+    print(f"Herald Decoder server: http://127.0.0.1:{port}", flush=True)
+
+    def warm_lab_006_kernels() -> None:
+        try:
+            run_lab_function(
+                "lab-006-sun-bp-theory", "scripts/artifact_backend.py",
+                "warm_numba_kernels", {},
+            )
+        except Exception:
+            LOGGER.exception("Lab 006 Numba warm-up failed; artifact will compile lazily")
+
+    threading.Thread(target=warm_lab_006_kernels, name="lab-006-warmup", daemon=True).start()
+    server.serve_forever()

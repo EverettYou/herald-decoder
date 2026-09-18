@@ -1,177 +1,192 @@
 (function () {
-  const NS = 'http://www.w3.org/2000/svg';
-  const PADDING_X = 74;
-  const DATE_GROUP_GAP = .72;
-  const MAX_SLOT_PIXELS = 118;
-  const MIN_ZOOM = 1;
-  const MAX_ZOOM = 10;
-  const STAGE_COLORS = { design: '#7567b7', active: '#087a70', blocked: '#b94034', complete: '#687673' };
-  let cleanup = () => {};
+  const CARD_WIDTH = 224, CARD_HEIGHT = 118, COLUMN_GAP = 72, BRANCH_GAP = 28;
+  const MIN_ZOOM = .2, MAX_ZOOM = 2, VIEWPORT_GAP = 24, VIEWPORT_MAX = 548;
+  const escape = value => String(value ?? '').replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#039;','"':'&quot;'}[c]));
+  const clamp = (value, low, high) => Math.max(low, Math.min(high, value));
+  const number = id => `Lab ${id.match(/^lab-(\d+)/)?.[1] || id}`;
+  const dateLabel = value => {
+    const date = new Date(`${value}T00:00:00Z`);
+    return Number.isNaN(+date) ? 'Date not recorded' : new Intl.DateTimeFormat('en', {month:'short',day:'numeric',year:'numeric',timeZone:'UTC'}).format(date);
+  };
+  let dispose = () => {};
 
-  const escape = value => String(value ?? '').replace(/[&<>'"]/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#039;', '"': '&quot;' }[character]));
-  const dateValue = value => Date.parse(`${value}T00:00:00Z`);
-  const dateLabel = value => new Intl.DateTimeFormat('en', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(dateValue(value)));
-  const shortNumber = id => `Lab ${String(id).match(/^lab-(\d+)/)?.[1] || id}`;
-  const svg = (name, attributes = {}) => { const element = document.createElementNS(NS, name); Object.entries(attributes).forEach(([key, value]) => element.setAttribute(key, value)); return element; };
-  const clamp = (value, minimum, maximum) => Math.max(minimum, Math.min(maximum, value));
-
-  function layout(labs) {
+  // Columns encode ancestry, not elapsed time. A spanning tree places cards;
+  // every recorded parent edge is drawn with the same cubic, even if it passes
+  // under an unrelated card.
+  function layout(labs, heights = new Map()) {
     const byId = new Map(labs.map(lab => [lab.id, lab]));
-    const children = new Map(labs.map(lab => [lab.id, []]));
-    labs.forEach(lab => (lab.parents || []).filter(parent => byId.has(parent)).forEach(parent => children.get(parent).push(lab)));
-    children.forEach(items => items.sort((a, b) => dateValue(a.created) - dateValue(b.created) || a.id.localeCompare(b.id)));
-    const ordered = [...labs].sort((a, b) => dateValue(a.created) - dateValue(b.created) || a.id.localeCompare(b.id));
-    const dateGroups = [];
+    if (byId.size !== labs.length) throw new Error('Duplicate Lab identifiers');
+    if (!labs.length) return {ordered:[],nodes:new Map(),edges:[],width:0,height:0};
+    const parents = new Map(labs.map(lab => [lab.id,[...new Set(lab.parents || [])].filter(id => byId.has(id))]));
+    const children = new Map(labs.map(lab => [lab.id,[]]));
+    parents.forEach((ids,id) => ids.forEach(parent => children.get(parent).push(id)));
+    const compare = (a,b) => (byId.get(a).created || '').localeCompare(byId.get(b).created || '') || a.localeCompare(b);
+    const pending = new Map([...parents].map(([id,ids]) => [id,ids.length]));
+    const ready = [...pending].filter(([,count]) => !count).map(([id]) => id).sort(compare);
+    const ordered = [], ranks = new Map();
+    while (ready.length) {
+      const id = ready.shift(); ordered.push(byId.get(id));
+      ranks.set(id, Math.max(-1,...parents.get(id).map(parent => ranks.get(parent))) + 1);
+      children.get(id).forEach(child => {pending.set(child,pending.get(child)-1);if (!pending.get(child)) ready.push(child);});
+      ready.sort(compare);
+    }
+    if (ordered.length !== labs.length) throw new Error('Lab parent relationships contain a cycle');
+    const primary = new Map(), branches = new Map(labs.map(lab => [lab.id,[]]));
     ordered.forEach(lab => {
-      let group = dateGroups.at(-1);
-      if (!group || group.date !== lab.created) { group = { date: lab.created, labs: [] }; dateGroups.push(group); }
-      group.labs.push(lab);
+      const parent = [...parents.get(lab.id)].sort((a,b) => ranks.get(b)-ranks.get(a) || compare(b,a))[0];
+      if (parent) {primary.set(lab.id,parent);branches.get(parent).push(lab.id);}
     });
-    const xPositions = new Map();
-    const withinDays = new Map();
-    let xCursor = 0;
-    dateGroups.forEach((group, index) => {
-      group.start = xCursor;
-      group.labs.forEach((lab, withinDay) => { xPositions.set(lab.id, xCursor + withinDay); withinDays.set(lab.id, withinDay); });
-      group.end = xCursor + group.labs.length - 1;
-      group.center = (group.start + group.end) / 2;
-      xCursor = group.end + 1 + (index < dateGroups.length - 1 ? DATE_GROUP_GAP : 0);
-    });
-    const separators = dateGroups.slice(0, -1).map((group, index) => (group.end + dateGroups[index + 1].start) / 2);
-    const lanes = new Map();
-    let nextLane = 0;
-    ordered.forEach(lab => {
-      const parents = (lab.parents || []).filter(parent => byId.has(parent));
-      if (!parents.length) { lanes.set(lab.id, nextLane++); return; }
-      const primary = parents[0];
-      const siblings = children.get(primary) || [];
-      lanes.set(lab.id, siblings[0]?.id === lab.id ? lanes.get(primary) : nextLane++);
-    });
-    return {
-      byId, children, ordered, lanes, laneCount: Math.max(1, nextLane),
-      dateGroups, separators, xPositions, withinDays,
-      minX: dateGroups[0].start - .55,
-      maxX: dateGroups.at(-1).end + .55
+    const newest = new Map();
+    [...ordered].reverse().forEach(lab => newest.set(lab.id,[lab.created || '',...branches.get(lab.id).map(id => newest.get(id))].sort().at(-1)));
+    const branchOrder = (a,b) => newest.get(b).localeCompare(newest.get(a)) || compare(a,b);
+    branches.forEach(ids => ids.sort(branchOrder));
+    const roots = ordered.filter(lab => !primary.has(lab.id)).map(lab => lab.id).sort(branchOrder);
+    const marginY = 44;
+    const rowHeight = Math.max(CARD_HEIGHT,...heights.values());
+    let cursor = 0;
+    const centers = new Map();
+    const place = id => {
+      const kids = branches.get(id);
+      if (!kids.length) {centers.set(id,marginY+rowHeight/2+cursor*(rowHeight+BRANCH_GAP));cursor++;}
+      else {kids.forEach(place);centers.set(id,(centers.get(kids[0])+centers.get(kids.at(-1)))/2);}
     };
+    roots.forEach(place);
+    const nodes = new Map(ordered.map(lab => {
+      const height = heights.get(lab.id) || CARD_HEIGHT;
+      return [lab.id,{...lab,rank:ranks.get(lab.id),x:30+ranks.get(lab.id)*(CARD_WIDTH+COLUMN_GAP),y:centers.get(lab.id)-height/2,width:CARD_WIDTH,height}];
+    }));
+    const width = Math.max(...[...nodes.values()].map(n => n.x+n.width))+30;
+    const height = Math.max(...[...nodes.values()].map(n => n.y+n.height))+marginY;
+    const edges = ordered.flatMap(lab => parents.get(lab.id).map(source => ({source,target:lab.id,primary:primary.get(lab.id)===source})));
+    edges.forEach(edge => {
+      const source = nodes.get(edge.source), target = nodes.get(edge.target);
+      const outgoing = edges.filter(e => e.source===edge.source).sort((a,b) => nodes.get(a.target).y-nodes.get(b.target).y || a.target.localeCompare(b.target));
+      const incoming = edges.filter(e => e.target===edge.target).sort((a,b) => nodes.get(a.source).y-nodes.get(b.source).y || a.source.localeCompare(b.source));
+      const sx = source.x+source.width, tx = target.x;
+      const sy = source.y+source.height*(outgoing.indexOf(edge)+1)/(outgoing.length+1);
+      const ty = target.y+target.height*(incoming.indexOf(edge)+1)/(incoming.length+1);
+      const dx = COLUMN_GAP*.48;
+      edge.path = `M ${sx} ${sy} C ${sx+dx} ${sy}, ${tx-dx} ${ty}, ${tx} ${ty}`;
+    });
+    return {ordered,nodes,edges,parents,children,primary,width,height};
   }
 
   function mount(labs) {
-    cleanup();
+    dispose();
     const target = document.querySelector('#research-timeline');
-    if (!target || !labs?.length) return;
-    const model = layout(labs);
-    const state = { zoom: 1, pan: 0, laneSpacing: 52, dragging: null, disposed: false };
-    target.innerHTML = `<div class="timeline-canvas" tabindex="0" aria-label="Research timeline. Drag to pan; use the controls or mouse wheel to zoom."></div><div class="timeline-tooltip" role="tooltip" hidden></div>`;
-    const canvas = target.querySelector('.timeline-canvas');
-    const tooltip = target.querySelector('.timeline-tooltip');
+    if (!target) return;
+    if (!labs?.length) {target.innerHTML='<p class="evolution-empty">Research studies will appear here as they are created.</p>';return;}
     const controls = document.querySelector('#timeline-controls');
-    const dimensions = () => ({ width: Math.max(320, Math.round(canvas.getBoundingClientRect().width || 800)), height: Math.max(172, 72 + (model.laneCount - 1) * state.laneSpacing + 58) });
-    const domain = () => {
-      const full = model.maxX - model.minX;
-      const visible = full / state.zoom;
-      const center = (model.minX + model.maxX) / 2 + state.pan * (full - visible) / 2;
-      return [center - visible / 2, center + visible / 2];
-    };
-    const setZoom = (next, anchor = .5) => {
-      const old = domain(), oldSpan = old[1] - old[0];
-      state.zoom = clamp(next, MIN_ZOOM, MAX_ZOOM);
-      const nextSpan = (model.maxX - model.minX) / state.zoom;
-      const anchorPosition = old[0] + oldSpan * anchor;
-      const center = anchorPosition - nextSpan * anchor;
-      const available = Math.max(.0001, (model.maxX - model.minX) - nextSpan);
-      state.pan = clamp(((center - (model.minX + model.maxX) / 2) * 2) / available, -1, 1);
-      draw();
-    };
-    const open = lab => (window.HeraldNavigate || (path => { window.location.href = path; }))(`/lab?id=${encodeURIComponent(lab.id)}`);
-    const showTip = (event, lab) => {
-      tooltip.innerHTML = `<strong>${escape(shortNumber(lab.id))}</strong><span>${escape(lab.title)}</span><small>${escape(dateLabel(lab.created))} · ${escape(lab.stage)}</small>`;
-      tooltip.hidden = false;
-      const bounds = target.getBoundingClientRect();
-      tooltip.style.left = `${clamp(event.clientX - bounds.left + 12, 8, bounds.width - 220)}px`;
-      tooltip.style.top = `${clamp(event.clientY - bounds.top + 12, 8, bounds.height - 74)}px`;
-    };
-
-    function draw() {
-      const size = dimensions();
-      const [start, end] = domain();
-      const availableWidth = size.width - PADDING_X - 28;
-      const plotWidth = Math.min(availableWidth, (model.maxX - model.minX) * MAX_SLOT_PIXELS);
-      const plotLeft = PADDING_X + (availableWidth - plotWidth) / 2;
-      const plotRight = plotLeft + plotWidth;
-      const scaleX = value => plotLeft + ((value - start) / (end - start)) * plotWidth;
-      const laneY = lane => 58 + lane * state.laneSpacing;
-      const surface = svg('svg', { viewBox: `0 0 ${size.width} ${size.height}`, width: '100%', height: size.height, role: 'img', 'aria-label': 'Branching timeline of Labs by creation date' });
-      surface.append(svg('rect', { x: .5, y: .5, width: size.width - 1, height: size.height - 1, rx: 8, class: 'timeline-frame' }));
-      const axisY = size.height - 29;
-      surface.append(svg('line', { x1: plotLeft, y1: axisY, x2: plotRight, y2: axisY, class: 'timeline-axis' }));
-      model.separators.forEach(separator => {
-        const x = scaleX(separator);
-        if (x > plotLeft && x < plotRight) surface.append(svg('line', { x1: x, y1: 18, x2: x, y2: axisY, class: 'timeline-day-separator' }));
-      });
-      model.dateGroups.forEach(group => {
-        const x = scaleX(group.center);
-        if (x < plotLeft - 2 || x > plotRight + 2) return;
-        const label = svg('text', { x, y: axisY + 20, 'text-anchor': 'middle', class: 'timeline-tick' });
-        label.textContent = dateLabel(group.date);
-        surface.append(label);
-      });
-      model.ordered.forEach(lab => {
-        const targetX = scaleX(model.xPositions.get(lab.id)), targetY = laneY(model.lanes.get(lab.id));
-        (lab.parents || []).filter(parent => model.byId.has(parent)).forEach(parentId => {
-          const sourceX = scaleX(model.xPositions.get(parentId)), sourceY = laneY(model.lanes.get(parentId));
-          const lane = model.lanes.get(parentId);
-          const obstruction = model.ordered.some(other => other.id !== parentId && other.id !== lab.id && model.lanes.get(other.id) === lane && model.xPositions.get(other.id) > model.xPositions.get(parentId) && model.xPositions.get(other.id) < model.xPositions.get(lab.id));
-          let path;
-          if (sourceY === targetY && !obstruction) path = `M ${sourceX} ${sourceY} L ${targetX} ${targetY}`;
-          else {
-            const direction = targetY >= sourceY ? 1 : -1;
-            const corridorY = sourceY + direction * state.laneSpacing * .42;
-            const shoulder = Math.min(34, Math.max(16, (targetX - sourceX) * .22));
-            path = `M ${sourceX} ${sourceY} C ${sourceX + shoulder * .45} ${sourceY}, ${sourceX + shoulder * .55} ${corridorY}, ${sourceX + shoulder} ${corridorY} L ${targetX - shoulder} ${corridorY} C ${targetX - shoulder * .55} ${corridorY}, ${targetX - shoulder * .45} ${targetY}, ${targetX} ${targetY}`;
-          }
-          surface.append(svg('path', { d: path, class: 'timeline-link' }));
-        });
-      });
-      model.ordered.forEach(lab => {
-        const x = scaleX(model.xPositions.get(lab.id)), y = laneY(model.lanes.get(lab.id));
-        if (x < plotLeft - 24 || x > plotRight + 24) return;
-        const group = svg('g', { class: 'timeline-node', tabindex: '0', role: 'link', 'aria-label': `${shortNumber(lab.id)}: ${lab.title}` });
-        group.append(svg('circle', { cx: x, cy: y, r: 15, class: 'timeline-node-halo' }));
-        group.append(svg('circle', { cx: x, cy: y, r: 10, fill: STAGE_COLORS[lab.stage] || '#687673', class: 'timeline-node-marker' }));
-        group.append(svg('circle', { cx: x, cy: y, r: 4, class: 'timeline-node-core' }));
-        const labelAbove = model.withinDays.get(lab.id) % 2 === 0;
-        const label = svg('text', { x, y: y + (labelAbove ? -17 : 25), 'text-anchor': 'middle', class: 'timeline-label' });
-        label.textContent = shortNumber(lab.id);
-        group.append(label);
-        group.addEventListener('pointerenter', event => showTip(event, lab));
-        group.addEventListener('pointermove', event => showTip(event, lab));
-        group.addEventListener('pointerleave', () => { tooltip.hidden = true; });
-        group.addEventListener('click', () => open(lab));
-        group.addEventListener('keydown', event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); open(lab); } });
-        surface.append(group);
-      });
-      canvas.replaceChildren(surface);
-      controls?.querySelector('[data-timeline-zoom-out]')?.toggleAttribute('disabled', state.zoom <= MIN_ZOOM);
-      controls?.querySelector('[data-timeline-zoom-in]')?.toggleAttribute('disabled', state.zoom >= MAX_ZOOM);
+    const controller = new AbortController(), signal = controller.signal;
+    const on = (node,type,fn,options={}) => node?.addEventListener(type,fn,{...options,signal});
+    let model;
+    try {model=layout(labs);} catch(error) {
+      target.innerHTML=`<p class="evolution-empty">${escape(error.message)}. <a href="/labs">Browse all Labs</a></p>`;return;
     }
-
-    const onWheel = event => { event.preventDefault(); const rect = canvas.getBoundingClientRect(); setZoom(state.zoom * Math.exp(-event.deltaY * .0015), clamp((event.clientX - rect.left) / rect.width, 0, 1)); };
-    const onDown = event => { if (event.target.closest('.timeline-node')) return; state.dragging = { x: event.clientX, pan: state.pan }; canvas.setPointerCapture(event.pointerId); };
-    const onMove = event => { if (!state.dragging) return; const rect = canvas.getBoundingClientRect(); const visibleRatio = 1 - 1 / state.zoom; state.pan = visibleRatio ? clamp(state.dragging.pan - ((event.clientX - state.dragging.x) / rect.width) * 2 / visibleRatio, -1, 1) : 0; draw(); };
-    const onUp = () => { state.dragging = null; };
-    const zoomIn = () => setZoom(state.zoom * 1.55);
-    const zoomOut = () => setZoom(state.zoom / 1.55);
-    const fit = () => { state.zoom = 1; state.pan = 0; draw(); };
-    const spacing = event => { state.laneSpacing = Number(event.target.value); draw(); };
-    canvas.addEventListener('wheel', onWheel, { passive: false });
-    canvas.addEventListener('pointerdown', onDown); canvas.addEventListener('pointermove', onMove); canvas.addEventListener('pointerup', onUp); canvas.addEventListener('pointercancel', onUp);
-    controls?.querySelector('[data-timeline-zoom-in]')?.addEventListener('click', zoomIn);
-    controls?.querySelector('[data-timeline-zoom-out]')?.addEventListener('click', zoomOut);
-    controls?.querySelector('[data-timeline-fit]')?.addEventListener('click', fit);
-    controls?.querySelector('[data-timeline-spacing]')?.addEventListener('change', spacing);
-    const observer = new ResizeObserver(draw); observer.observe(canvas); draw();
-    cleanup = () => { state.disposed = true; observer.disconnect(); canvas.removeEventListener('wheel', onWheel); canvas.removeEventListener('pointerdown', onDown); canvas.removeEventListener('pointermove', onMove); canvas.removeEventListener('pointerup', onUp); canvas.removeEventListener('pointercancel', onUp); cleanup = () => {}; };
+    target.innerHTML=`<div class="evolution-viewport" tabindex="0" role="region" aria-label="Lab evolution map. Scroll or drag to pan; pinch to zoom. Tab to a study and press Enter to open it."><div class="evolution-space"><div class="evolution-world"><svg class="evolution-edges" aria-hidden="true"></svg>${model.ordered.map(lab=>`<a class="evolution-card" data-lab="${escape(lab.id)}" data-stage="${escape(lab.stage)}" href="/lab?id=${encodeURIComponent(lab.id)}" aria-label="${escape(lab.title)}, ${escape(lab.stage)}, created ${escape(dateLabel(lab.created))}" title="${escape(lab.summary || lab.title)}"><span class="evolution-card-top"><span class="evolution-status"><i></i>${escape(lab.stage || 'Study')}</span><span class="evolution-open" aria-hidden="true">↗</span></span><h3>${escape(lab.title)}</h3><span class="evolution-card-bottom"><span>${escape(number(lab.id))}</span><time datetime="${escape(lab.created || '')}">${escape(dateLabel(lab.created))}</time></span></a>`).join('')}</div></div></div><div class="evolution-context" aria-live="polite"><span class="evolution-context-label">THE RESEARCH SO FAR</span><span data-evolution-context>${labs.length} studies, connected by the work they build on.</span></div>`;
+    const viewport=target.querySelector('.evolution-viewport'), space=target.querySelector('.evolution-space'), world=target.querySelector('.evolution-world'), surface=target.querySelector('svg');
+    const cards=[...world.querySelectorAll('.evolution-card')];
+    model=layout(labs,new Map(cards.map(card=>[card.dataset.lab,card.offsetHeight])));
+    const state={zoom:1,offsetX:0,offsetY:0,fit:false,followLatest:true,disposed:false};
+    world.style.width=`${model.width}px`;world.style.height=`${model.height}px`;
+    surface.setAttribute('viewBox',`0 0 ${model.width} ${model.height}`);
+    surface.innerHTML=model.edges.map(edge=>`<path class="evolution-edge" data-source="${escape(edge.source)}" data-target="${escape(edge.target)}" d="${edge.path}"/>`).join('');
+    cards.forEach(card=>{const node=model.nodes.get(card.dataset.lab);card.style.left=`${node.x}px`;card.style.top=`${node.y}px`;});
+    const edgeElements=[...surface.querySelectorAll('.evolution-edge')];
+    const defaultContext=`${labs.length} studies · ${model.edges.length} recorded connections. Dates show when each study began.`;
+    const context=target.querySelector('[data-evolution-context]');context.textContent=defaultContext;
+    const trace=id=>{
+      const neighbors=new Set([id]);model.edges.filter(e=>e.source===id || e.target===id).forEach(e=>{neighbors.add(e.source);neighbors.add(e.target);});
+      cards.forEach(card=>{card.classList.toggle('is-muted',Boolean(id)&&!neighbors.has(card.dataset.lab));card.classList.toggle('is-traced',id===card.dataset.lab);});
+      edgeElements.forEach(edge=>{const active=edge.dataset.source===id || edge.dataset.target===id;edge.classList.toggle('is-traced',active);edge.classList.toggle('is-muted',Boolean(id)&&!active);});
+      const lab=model.nodes.get(id);
+      context.textContent=lab ? `${lab.title}${model.parents.get(id).length?' · Builds on '+model.parents.get(id).map(parent=>model.nodes.get(parent).title).join(' and '):' · Founding study'}` : defaultContext;
+    };
+    const maxViewportHeight=()=>{
+      const cssMax=parseFloat(getComputedStyle(viewport).maxHeight);
+      return Number.isFinite(cssMax)&&cssMax>0?cssMax:VIEWPORT_MAX;
+    };
+    const revealLatest=()=>{
+      viewport.scrollLeft=Math.max(0,viewport.scrollWidth-viewport.clientWidth);
+      viewport.scrollTop=0;
+    };
+    const paint=()=>{
+      const scaledW=model.width*state.zoom,scaledH=model.height*state.zoom;
+      const nextHeight=Math.min(maxViewportHeight(),Math.max(160,Math.ceil(scaledH+VIEWPORT_GAP)));
+      if (viewport.style.height!==`${nextHeight}px`) viewport.style.height=`${nextHeight}px`;
+      const width=Math.max(viewport.clientWidth,scaledW),height=Math.max(viewport.clientHeight,scaledH);
+      const spareX=width-scaledW;
+      state.offsetX=state.followLatest?spareX:spareX/2;
+      state.offsetY=(height-scaledH)/2;
+      space.style.width=`${width}px`;space.style.height=`${height}px`;
+      world.style.transform=`translate(${state.offsetX}px, ${state.offsetY}px) scale(${state.zoom})`;
+      viewport.dataset.zoom=String(state.zoom);
+      const output=controls?.querySelector('[data-timeline-scale]');if(output)output.textContent=`${Math.round(state.zoom*100)}%`;
+      controls?.querySelector('[data-timeline-zoom-out]')?.toggleAttribute('disabled',state.zoom<=MIN_ZOOM);
+      controls?.querySelector('[data-timeline-zoom-in]')?.toggleAttribute('disabled',state.zoom>=MAX_ZOOM);
+    };
+    const zoomTo=(value,x=viewport.clientWidth/2,y=viewport.clientHeight/2)=>{
+      const wx=(viewport.scrollLeft+x-state.offsetX)/state.zoom,wy=(viewport.scrollTop+y-state.offsetY)/state.zoom;
+      state.zoom=clamp(value,MIN_ZOOM,MAX_ZOOM);state.fit=false;state.followLatest=false;paint();
+      viewport.scrollLeft=wx*state.zoom+state.offsetX-x;viewport.scrollTop=wy*state.zoom+state.offsetY-y;
+    };
+    const fit=(overview=false)=>{
+      state.followLatest=false;state.fit=overview?'overview':false;
+      state.zoom=clamp(Math.min(1,viewport.clientWidth/model.width,viewport.clientHeight/model.height),overview?MIN_ZOOM:1,MAX_ZOOM);
+      paint();viewport.scrollLeft=0;viewport.scrollTop=0;trace(null);
+    };
+    const showLatest=()=>{state.fit=false;state.followLatest=true;state.zoom=1;paint();revealLatest();};
+    on(controls?.querySelector('[data-timeline-zoom-in]'),'click',()=>zoomTo(state.zoom*1.2));
+    on(controls?.querySelector('[data-timeline-zoom-out]'),'click',()=>zoomTo(state.zoom/1.2));
+    on(controls?.querySelector('[data-timeline-fit]'),'click',()=>fit(true));
+    let safariGesture=false,gestureZoom=1;
+    // Unmodified wheel/trackpad scrolling is deliberately left to the browser.
+    // macOS trackpad pinch is delivered as ctrl+wheel in Chromium/Firefox.
+    on(viewport,'wheel',event=>{
+      if (!event.ctrlKey) return;
+      event.preventDefault();if(safariGesture)return;
+      const rect=viewport.getBoundingClientRect();zoomTo(state.zoom*Math.exp(-event.deltaY*.008),event.clientX-rect.left,event.clientY-rect.top);
+    },{passive:false});
+    on(viewport,'gesturestart',event=>{event.preventDefault();safariGesture=true;gestureZoom=state.zoom;},{passive:false});
+    on(viewport,'gesturechange',event=>{
+      event.preventDefault();const rect=viewport.getBoundingClientRect();
+      const x=Number.isFinite(event.clientX)?event.clientX-rect.left:viewport.clientWidth/2;
+      const y=Number.isFinite(event.clientY)?event.clientY-rect.top:viewport.clientHeight/2;
+      if(Number.isFinite(event.scale))zoomTo(gestureZoom*event.scale,x,y);
+    },{passive:false});
+    on(viewport,'gestureend',event=>{event.preventDefault();safariGesture=false;},{passive:false});
+    const pointers=new Map();let drag=null,pinch=null,suppressClick=false;
+    const pair=()=>{const [a,b]=[...pointers.values()];return {distance:Math.hypot(a.x-b.x,a.y-b.y),x:(a.x+b.x)/2,y:(a.y+b.y)/2};};
+    on(viewport,'pointerdown',event=>{
+      if(event.button!==0)return;
+      if(event.pointerType==='mouse'&&event.target.closest('.evolution-card')){suppressClick=false;return;}
+      pointers.set(event.pointerId,{x:event.clientX,y:event.clientY});
+      if(pointers.size===1){suppressClick=false;drag={x:event.clientX,y:event.clientY,left:viewport.scrollLeft,top:viewport.scrollTop};}
+      else if(pointers.size===2){pinch={...pair(),zoom:state.zoom};drag=null;suppressClick=true;}
+      // Capture on the original link for touch, preserving stationary tap clicks.
+      event.target.setPointerCapture(event.pointerId);
+    });
+    on(viewport,'pointermove',event=>{
+      if(!pointers.has(event.pointerId))return;
+      pointers.set(event.pointerId,{x:event.clientX,y:event.clientY});
+      if(pointers.size===2&&pinch){const next=pair(),rect=viewport.getBoundingClientRect();zoomTo(pinch.zoom*next.distance/Math.max(1,pinch.distance),pinch.x-rect.left,pinch.y-rect.top);viewport.scrollLeft-=next.x-pinch.x;viewport.scrollTop-=next.y-pinch.y;pinch={...next,zoom:state.zoom};}
+      else if(drag){const dx=event.clientX-drag.x,dy=event.clientY-drag.y;if(Math.hypot(dx,dy)>4){suppressClick=true;state.followLatest=false;viewport.classList.add('is-dragging');viewport.scrollLeft=drag.left-dx;viewport.scrollTop=drag.top-dy;}}
+    });
+    const release=event=>{pointers.delete(event.pointerId);pinch=null;drag=null;viewport.classList.remove('is-dragging');if(pointers.size===1){const p=[...pointers.values()][0];drag={x:p.x,y:p.y,left:viewport.scrollLeft,top:viewport.scrollTop};}};
+    on(viewport,'pointerup',release);on(viewport,'pointercancel',release);
+    on(viewport,'click',event=>{if(suppressClick){event.preventDefault();event.stopPropagation();suppressClick=false;}},{capture:true});
+    on(viewport,'keydown',event=>{if(event.target!==viewport)return;if(event.key==='+'||event.key==='='){event.preventDefault();zoomTo(state.zoom*1.2);}if(event.key==='-'){event.preventDefault();zoomTo(state.zoom/1.2);}if(event.key==='0'){event.preventDefault();fit(true);}});
+    cards.forEach(card=>{
+      on(card,'pointerenter',()=>{if(!pointers.size)trace(card.dataset.lab);});on(card,'pointerleave',()=>{if(document.activeElement!==card)trace(null);});
+      on(card,'focus',()=>trace(card.dataset.lab));on(card,'blur',()=>trace(null));
+      on(card,'click',event=>{if(event.defaultPrevented||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;if(window.HeraldNavigate){event.preventDefault();window.HeraldNavigate(card.getAttribute('href'));}});
+    });
+    const observer=new ResizeObserver(()=>{
+      if(state.disposed)return;
+      if(state.fit==='overview') fit(true);
+      else {paint();if(state.followLatest)revealLatest();}
+    });observer.observe(viewport);showLatest();
+    dispose=()=>{state.disposed=true;controller.abort();observer.disconnect();dispose=()=>{};};
   }
-
-  window.HeraldResearchTimeline = { mount, layout };
+  window.HeraldResearchTimeline={mount,layout,dispose:()=>dispose()};
 }());

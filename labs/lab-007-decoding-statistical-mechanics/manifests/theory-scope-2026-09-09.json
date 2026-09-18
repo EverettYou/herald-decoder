@@ -1,0 +1,113 @@
+{
+  "id": "lab007-theory-scope-2026-09-09",
+  "status": "complete",
+  "registered_at": "2026-09-09",
+  "parent": "lab-006-sun-bp-theory",
+  "active_deliverable": "Exact conditional logical-sector formulation and a justified statistical-mechanics mapping or explicit obstruction, followed by conjugacy/decoder implications.",
+  "launch_status": "Historical launch: scope and source orientation only. Resumed 2026-09-14; gates below record the derived and checked formulation.",
+  "affected_modes": {
+    "groups": [
+      "U1",
+      "SU2",
+      "SU3"
+    ],
+    "lattices": [
+      "square",
+      "honeycomb"
+    ],
+    "orientation": [
+      "directed",
+      "shared-hidden-fair"
+    ],
+    "inference_targets": [
+      "exact logical sectors",
+      "exact-marginal MWPM",
+      "BP-marginal MWPM"
+    ]
+  },
+  "hypotheses": [
+    "Self-conjugacy explains orientation invariance but may not alone explain critical behavior.",
+    "Full-irrep multiplicities, geometry/boundaries and approximate hard decoding contribute.",
+    "Hidden square U1 merging may be KT/BKT-like, ordinary finite-size drift, or algorithmic."
+  ],
+  "gates": [
+    {
+      "item": 1,
+      "deliverable": "Normalized conditional sector partition function and exact checks",
+      "status": "passed",
+      "evidence": [
+        "wiki/partition-function.md",
+        "results/exact-model-checks-2026-09-14.json"
+      ]
+    },
+    {
+      "item": 2,
+      "deliverable": "SU2 sector quotient and U1/SU3 distinction or counterexample",
+      "status": "passed",
+      "evidence": [
+        "wiki/conjugacy.md",
+        "results/exact-model-checks-2026-09-14.json"
+      ]
+    },
+    {
+      "item": 3,
+      "deliverable": "Loop/current/height/spin mapping or obstruction with source/boundary audit",
+      "status": "passed",
+      "evidence": [
+        "wiki/statistical-model.md",
+        "results/mapping-supplement-2026-09-14.json"
+      ]
+    },
+    {
+      "item": 4,
+      "deliverable": "Sector versus marginal versus BP-MWPM theorem, bound, or counterexample",
+      "status": "passed",
+      "evidence": [
+        "wiki/decoder-gap.md",
+        "results/exact-model-checks-2026-09-14.json",
+        "results/mapping-supplement-2026-09-14.json"
+      ]
+    },
+    {
+      "item": 5,
+      "deliverable": "Discriminating predictions and concise synthesis",
+      "status": "passed",
+      "evidence": [
+        "wiki/predictions.md",
+        "REPORT.md"
+      ]
+    },
+    {
+      "item": 6,
+      "deliverable": "Wiki/report lints, any required visuals, registry and browser delivery",
+      "status": "passed",
+      "evidence": [
+        "results/theory-delivery-2026-09-14.json",
+        "REPORT.md",
+        "wiki/index.md",
+        "../../wiki/models/representation-informed-sector-model.md"
+      ]
+    }
+  ],
+  "stop_conditions": [
+    "A proposed mapping changes shared orientation, observations, geometry or sectors.",
+    "An exact check disagrees: reject or repair the candidate before downstream inference.",
+    "No universality claim before a valid model and observable."
+  ],
+  "sampling": "No new large Monte Carlo acquisition authorized by this launch; register any bounded exact check before execution.",
+  "claim_boundary": "Inherited numerical evidence is Lab006 data. No threshold, BKT transition, or new theorem established by creating this lab.",
+  "launch_delivery": {
+    "status": "passed",
+    "updated": "2026-09-09T07:22:10.332075+00:00",
+    "parent_state": "complete",
+    "report_lint": "passed",
+    "wiki_lint": "passed",
+    "browser_evidence": "../lab-006-sun-bp-theory/results/closure-delivery-2026-09-09.json",
+    "new_theorems_established": false,
+    "new_simulations_run": false
+  },
+  "active_check_manifest": "exact-model-checks-2026-09-14.json",
+  "updated": "2026-09-14",
+  "completed_at": "2026-09-14",
+  "conclusion": "Exact model and scoped reductions established; typical-record pure-loop reduction obstructed, exact-marginal hardening can lose logical information, thermodynamic interpretation unresolved."
+}

@@ -34,16 +34,10 @@ Threshold figures are shown only where their horizontal range contains the corre
 
 ### L004.8 Corrected herald-aware finite-size scan
 
-The completed corrected scan contains 100,000 matched trajectories across $L=5,7,9,11,13$ and
-$p_X=0.19$–$0.22$. The corrected BP decoder sees only the public binary
-$e_B/e_G$ signal. At the 5,000-history/cell cap, all four adjacent-size
-differences at $p_X=0.19$ and two at $p_X=0.20$ resolve negative. Ten of the
-sixteen BP adjacent-size intervals remain unresolved, including every interval
-at $p_X=0.21$ and $0.22$. The frozen rule would retain 19 cells, but the
-registered cap ends allocation. This is not a threshold fit; the [BP signal-model boundary](wiki/bp-signal-boundary.md) maintains the source record and interpretation.
+The original corrected scan contained 100,000 matched trajectories and remains historical evidence. The intermediate three-point compact scan is retained only as an auxiliary count record. The new dense compact scan adds 550,000 matched trajectories across $L=5,7,9,11,13$ and $p_X=0.198,0.200,\ldots,0.218$. It persists only sufficient counts, from which Wilson intervals are reconstructed. The corrected BP decoder sees only the public binary $e_B/e_G$ signal. The new scan still uses a fixed 40-iteration BP cap; every BP history reaches that cap, so it improves sampling precision without establishing BP convergence or a thermodynamic threshold. The [BP signal-model boundary](wiki/bp-signal-boundary.md) maintains the source record and interpretation.
 
-![Herald-weight MWPM and signal-only BeliefMatching finite-size curves](figures/l004-1-current-herald-aware-flux-curves.png)
-*Figure L004.8 — the current herald-aware flux-recovery figure: Herald-weight MWPM and signal-only BeliefMatching at the 5,000-history cap with 90% Wilson intervals. Unit-weight MWPM is deliberately absent because its transition lies near $p_X=0.159$ and requires its own low-error-rate plot; data: [corrected finite-size record](wiki/records/r6ae-signal-only-bp-threshold-stage5-2026-09-01.md).* 
+![Herald-weight MWPM and signal-only BeliefMatching compact finite-size curves](figures/l004-1-current-herald-aware-flux-curves.png)
+*Figure L004.8 — updated dense matched scan: Herald-weight MWPM and signal-only BeliefMatching over $L=5,7,9,11,13$ and $p_X=0.198,0.200,\ldots,0.218$, with 10,000 histories per cell. The upper panels show 90% Wilson intervals reconstructed from counts; the lower panels show adjacent-size differences with independent binomial error approximations because compact storage does not retain cross-size trajectory pairing. The dashed line marks the paper value $p_c=0.20842$; it is a reference, not a fit from this scan. Unit-weight MWPM is absent because its transition lies near $p_X=0.159$; data: [dense count record](results/r6al-dense-crossing-scan-2026-09-09.json).* 
 
 ### L004.9 Cross-lab channel-equivalence audit
 
@@ -67,11 +61,11 @@ comparable to this scan or the paper D4 result. The [observation model](wiki/obs
 
 ### L004.11 Implications
 
-The completed work supplies a validated comparison framework and a corrected signal-only finite-size comparison through its registered cap. BP remains lower-risk than O0 and O2 in every sampled cell, but finite-size direction—not same-cell decoder ordering—is the unresolved threshold question. The [BP signal-model boundary](wiki/bp-signal-boundary.md) owns the underlying audit trail and detailed records.
+The compact 150,000-history scan preserves the validated public-record comparison at higher sampling precision. BP remains lower-risk than O0 and O2 in every sampled cell, while the size-difference signs near $p_X=0.208$ still vary across adjacent pairs; same-cell decoder ordering therefore does not establish a threshold. The [BP signal-model boundary](wiki/bp-signal-boundary.md) owns the underlying audit trail and detailed records.
 
 ### L004.12 Limitations
 
-The corrected scan supports a signal-only belief-assisted finite-size LER curve, but not a threshold. Earlier support-revealing BP curves remain provenance only because their input record was invalid, as documented in the [BP signal-model boundary](wiki/bp-signal-boundary.md). Every capped-grid BP run reached the registered 40-iteration cap, so convergence remains a reported sensitivity limitation.
+The corrected compact scan supports a signal-only belief-assisted finite-size LER curve with count-derived Wilson intervals, but not a threshold. The compact storage contract omits per-history records, so paired bootstrap intervals across sizes cannot be reconstructed from this artifact alone. Earlier support-revealing BP curves remain provenance only because their input record was invalid, as documented in the [BP signal-model boundary](wiki/bp-signal-boundary.md). Every capped-grid BP run reached the registered 40-iteration cap, so convergence remains a reported sensitivity limitation.
 
 ### L004.13 Two-stage public-charge preflight
 
@@ -137,8 +131,8 @@ registration were generated. See the [legacy-cohort provenance audit](wiki/recor
 
 ### L004.17 Registered corrected transfer question
 
-R6AJ prospectively replaces the withdrawn transfer question on the remediated
-R6AF public interface. It freezes $L=7,9$, $p_X=0.17,0.21$, and 512
+the corrected transfer registration prospectively replaces the withdrawn transfer question on the remediated
+the corrected public interface public interface. It freezes $L=7,9$, $p_X=0.17,0.21$, and 512
 matched attempted histories/cell. Both arms share physical, first-observation,
 and second-exogenous keys; the second full-binary record is generated
 separately under each realized first action, and the common relation-free
@@ -152,5 +146,9 @@ replicates. Future execution is capped at 2,048 independent histories and
 anti-leak, action-binding, support, scorer, completeness, and replay gates. It
 cannot fit a crossing or threshold, pool prior studies numerically, claim
 universal O2 dominance, or promote a Lab 005 baseline. The earlier off-frontier
-R6AI crossing smoke (24 one-history cells) is explicitly excluded from all
+the off-frontier crossing smoke crossing smoke (24 one-history cells) is explicitly excluded from all
 analysis and claims.
+
+### L004.18 Closure disposition
+
+Lab 004 closes under a narrowed first-stage scope: corrected public-record D4 observation, the paper herald-weight MWPM reproduction, and a dense finite-size LER diagnostic comparing MWPM with signal-only BeliefMatching. The final the dense compact scan compact scan contains 550,000 matched histories over 55 cells and stores sufficient counts only. It supports a paper-MWPM crossing region broadly compatible with $p_c=0.20842$ and a lower finite-size BP LER at every sampled cell. It does not claim a fitted thermodynamic threshold. Complete two-stage recovery, converged BP, and conditioned-optimal decoding remain deferred.

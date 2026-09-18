@@ -26,9 +26,57 @@ if [ ! -x "$research_launcher" ]; then
 fi
 
 saved_pid() { [ -f "$pid_file" ] && sed -n '1p' "$pid_file"; }
-listener_pid() { lsof -tiTCP:"$dashboard_port" -sTCP:LISTEN 2>/dev/null | sed -n '1p'; }
+listener_pid() {
+    pid=""
+    if command -v lsof >/dev/null 2>&1; then
+        pid=$(lsof -tiTCP:"$dashboard_port" -sTCP:LISTEN 2>/dev/null | sed -n '1p')
+    fi
+    if [ -z "$pid" ] && command -v ss >/dev/null 2>&1; then
+        pid=$(ss -ltnp "sport = :$dashboard_port" 2>/dev/null | sed -n 's/.*pid=\([0-9][0-9]*\).*/\1/p' | sed -n '1p')
+    fi
+    if [ -z "$pid" ]; then
+        pid=$(python3 -c "
+import os, pathlib
+port = $dashboard_port
+inodes = set()
+for path in ('/proc/net/tcp', '/proc/net/tcp6'):
+    candidate = pathlib.Path(path)
+    if not candidate.exists():
+        continue
+    for line in candidate.read_text().splitlines()[1:]:
+        parts = line.split()
+        if parts[3] != '0A':
+            continue
+        if int(parts[1].rsplit(':', 1)[1], 16) == port:
+            inodes.add(parts[9])
+if not inodes:
+    raise SystemExit
+for proc in pathlib.Path('/proc').iterdir():
+    if not proc.name.isdigit():
+        continue
+    try:
+        for entry in (proc / 'fd').iterdir():
+            try:
+                target = os.readlink(entry)
+            except OSError:
+                continue
+            if target.startswith('socket:[') and target[8:-1] in inodes:
+                print(proc.name, end='')
+                raise SystemExit
+    except (FileNotFoundError, PermissionError):
+        continue
+" 2>/dev/null)
+    fi
+    printf '%s' "$pid"
+}
 process_command() { ps -p "$1" -o command= 2>/dev/null | sed -n '1p'; }
-process_cwd() { lsof -a -p "$1" -d cwd -Fn 2>/dev/null | sed -n 's/^n//p' | sed -n '1p'; }
+process_cwd() {
+    if command -v lsof >/dev/null 2>&1; then
+        lsof -a -p "$1" -d cwd -Fn 2>/dev/null | sed -n 's/^n//p' | sed -n '1p'
+        return
+    fi
+    readlink -f "/proc/$1/cwd" 2>/dev/null
+}
 project_api_identity() {
     curl -fsS --max-time 1 "http://localhost:$dashboard_port/api/project" 2>/dev/null \
         | grep -F -- '"title": "Herald Decoder"' >/dev/null
@@ -58,8 +106,17 @@ stop_process() {
     while kill -0 "$pid_to_stop" 2>/dev/null && [ "$attempts" -lt 25 ]; do attempts=$((attempts + 1)); sleep 0.2; done
     if kill -0 "$pid_to_stop" 2>/dev/null; then print_dashboard_card "FAILED" "process did not stop" "PID $pid_to_stop" >&2; return 1; fi
 }
+# Prefer GNU sha1sum. macOS shasum is a Perl script and spam-warns when
+# LANG requests a locale the machine does not have generated.
+checksum() {
+    if command -v sha1sum >/dev/null 2>&1; then
+        sha1sum "$@"
+    else
+        LC_ALL=C shasum "$@"
+    fi
+}
 dashboard_fingerprint() {
-    find dashboard -type f -name '*.py' -print | sort | while IFS= read -r path; do shasum "$path"; done | shasum | awk '{print $1}'
+    find dashboard -type f -name '*.py' -print | sort | while IFS= read -r path; do checksum "$path"; done | checksum | awk '{print $1}'
 }
 saved_fingerprint() { [ -f "$state_file" ] && sed -n 's/^fingerprint=//p' "$state_file" | sed -n '1p'; }
 write_state() { printf 'pid=%s\nfingerprint=%s\n' "$1" "$(dashboard_fingerprint)" >"$state_file"; }

@@ -2,8 +2,9 @@
 title: Herald Decoder research program
 page_type: thesis
 status: framing
-updated: 2026-09-04
+updated: 2026-09-14
 source_refs:
+  - labs/lab-007-decoding-statistical-mechanics/REPORT.md
   - references/temkin2025-charge-informed-qec/paper.pdf
   - references/lessa2024-swssb-mixed-states/paper.pdf
   - references/pattison2021-soft-information-qec/paper.pdf
@@ -18,7 +19,7 @@ idea_ids: []
 
 **Sources**: [Charge-Informed Quantum Error Correction](/reference?id=temkin2025-charge-informed-qec); [Strong-to-Weak Spontaneous Symmetry Breaking in Mixed Quantum States](/reference?id=lessa2024-swssb-mixed-states); [Improved Quantum Error Correction Using Soft Information](/reference?id=pattison2021-soft-information-qec); [Topological Quantum Memory](/reference?id=dennis2001-topological-quantum-memory); [Lab 006: SU(N) full-irrep belief propagation](/lab?id=lab-006-sun-bp-theory)
 
-**Last updated**: 2026-09-04
+**Last updated**: 2026-09-14
 
 ## Central question
 
@@ -71,7 +72,7 @@ Some related work formulates decodability through the inferability of particle w
 
 It is currently an open question whether the relevant two-dimensional \(SU(2)\) system has a finite strong-to-weak transition of the desired kind. Mermin--Wagner intuition motivates caution, but cannot simply be imported without specifying the mixed-state order parameter and effective model.
 
-## Current evidence boundary
+## Early convergence evidence (2026-09-04)
 
 Lab 006 now supplies a normalized static generative model and a compiled
 belief-matching implementation for the unique record \((m,R)\). A paired
@@ -82,10 +83,25 @@ with the clearest failures on \(L=7\) honeycomb SU(2). This narrows the next
 algorithmic question to convergence control on genuinely two-dimensional
 loopy graphs.
 
-The result does not establish a decoding threshold, logical-error improvement,
+That early scan does not establish a decoding threshold, logical-error improvement,
 or a physical measurement protocol for the complete irrep. Those require
 separately registered evidence. In particular, four samples per scan cell
 cannot support a finite-size or group-comparison conclusion.
+
+## Current theoretical evidence boundary
+
+Lab 007 now gives an exact statistical-mechanics formulation for the stipulated
+classical full-irrep instrument: normalized logical-sector weights, the SU(2)
+orientation quotient, bounded U(1) currents/heights, and explicit limits of a
+simple SU(3) current reduction. Exact finite witnesses also show that matching
+can select the less probable logical sector even with exact edge marginals.
+[Lab 007, report](/lab?id=lab-007-decoding-statistical-mechanics).
+
+This narrows the outstanding problem from defining the classical sector model
+to evaluating its typical-record scaling and separating intrinsic recovery
+from practical decoder loss. It leaves the microscopic joint quantum instrument,
+thermodynamic threshold, and universality unresolved. See
+[[models/representation-informed-sector-model|the representation-informed sector model]].
 
 ## Program-level next step
 

@@ -1,0 +1,192 @@
+{
+  "id": "lab006-a9-hidden-orientation-ler-2026-09-07",
+  "status": "complete",
+  "registered_before_production": true,
+  "active_deliverable": "Six hidden-random-orientation LER panels plus paired directed comparison and mechanism analysis, with verified report/dashboard delivery.",
+  "question": "Does hiding a fresh fair pair orientation on each active edge change the U1/SU3 finite-size LER curves relative to directed errors, while SU2 remains invariant?",
+  "program_role": "Controlled physical-channel intervention and practical-decoder mechanism test; not an intrinsic or asymptotic threshold determination.",
+  "hypotheses": {
+    "H_orientation": "Fixed charge-pair orientation supplies useful constraints for U1/SU3; random hidden orientations increase LER or change finite-size ordering.",
+    "H_null": "Orientation randomization has little effect on these practical-decoder curves at the registered resolution.",
+    "H_algorithm": "Ternary BP approximation/nonconvergence, rather than intrinsic recoverability, contributes to any observed degradation.",
+    "SU2_control": "Fundamental and antifundamental are equivalent in the local SU2 fusion law: the sampled (m,R) law is unchanged. Collapse the redundant latent orientation exactly before BP to retain the same binary activity decoder and schedule."
+  },
+  "model": {
+    "activity": "iid Bernoulli(p) on each physical edge for each shot",
+    "directed": "active edge deposits anti at stored tail and fund at head",
+    "undirected": "independent hidden fair orientation on each edge each shot, giving edge states (off,forward,reverse) probabilities (1-p,p/2,p/2); one shared orientation at both endpoints",
+    "measured": "complete interior (m,R); no pairing/orientation/truth oracle",
+    "rough_boundary": "m and R unmeasured and marginalized",
+    "SU2_primary": "exact orientation quotient, binary activity BP; independent hidden-channel sampling is checked to produce identical records",
+    "U1_SU3_primary": "ternary sum-product BP, marginalize active orientations before posterior-LLR matching",
+    "decoder": {
+      "damping": 0.5,
+      "max_iterations": 300,
+      "tolerance": 1e-10,
+      "matching": "posterior-LLR PyMatching; clipped activity probabilities [1e-12,1-1e-12]"
+    },
+    "score": "final-correction-v2; BP nonconvergence diagnostic only"
+  },
+  "grid": {
+    "lattices": [
+      "square",
+      "honeycomb"
+    ],
+    "groups": [
+      "U1",
+      "SU2",
+      "SU3"
+    ],
+    "sizes": [
+      5,
+      7,
+      9,
+      11
+    ],
+    "p": [
+      0.02,
+      0.04,
+      0.06,
+      0.08,
+      0.1,
+      0.12,
+      0.14,
+      0.16,
+      0.18,
+      0.2,
+      0.22,
+      0.24,
+      0.26,
+      0.28,
+      0.3,
+      0.32,
+      0.34,
+      0.36,
+      0.38,
+      0.4,
+      0.42,
+      0.44,
+      0.46,
+      0.48,
+      0.5
+    ],
+    "shots_per_cell": 20000,
+    "batch_size": 256
+  },
+  "matching": {
+    "activity_and_fusion_seed": "950000+100*L+rate_index, same as directed A8",
+    "orientation_seed": "activity_seed+10000000; separate RNG so activity/fusion stream is unchanged",
+    "paired": "same activity errors, binary syndromes and fusion uniforms; R changes only through the explicit orientation intervention",
+    "directed_replay": "recompute baseline on matched shots and require each completed aggregate to match A8 exactly; store 2x2 joint failure counts",
+    "source_integrity": "freeze runner and imported scientific source hashes, baseline checkpoint hashes, runtime versions; preserve completed cells atomically"
+  },
+  "preflight": [
+    "exhaust all degree<=4 SU2 local fusion configurations to prove orientation invariance",
+    "scalar and new ternary batch posterior/convergence/iteration equality on both lattices and all groups",
+    "ternary factor-tree posterior versus independent enumeration",
+    "shared endpoint direction and U1 total-charge conservation in the complete latent graph",
+    "boundary likelihood constant and no decoder-visible orientation",
+    "directed replay equality against legacy A8 runner on matched fixtures",
+    "SU2 exact paired observation and final failure equality",
+    "small pilot on all groups/lattices before full production"
+  ],
+  "pilot": {
+    "sizes": [
+      5,
+      9
+    ],
+    "p": [
+      0.1,
+      0.3,
+      0.5
+    ],
+    "shots_per_cell": 32,
+    "purpose": "correctness, finite numerical outputs and resource measurement; separate from production"
+  },
+  "production_budget": {
+    "paired_cells": 600,
+    "hidden_shots": 12000000,
+    "directed_replay_shots": 12000000,
+    "workers": 48,
+    "stop": "complete registered grid; no adaptive p/size expansion. Stop dependent acquisition on nonfinite output, invalid correction, control mismatch, baseline replay mismatch or source drift."
+  },
+  "analysis": {
+    "LER": "pointwise Wilson 95% intervals",
+    "paired_difference": "hidden minus directed; save discordant counts; conservative pointwise 95% CI from two 97.5% exact binomial Clopper-Pearson intervals via union bound; not simultaneous across cells",
+    "hypothesis_test": "exact paired McNemar on discordant counts, Holm correction across 400 U1/SU3 cells; SU2 structural null checked shotwise",
+    "finite_size": "show four size curves per panel; descriptive size ordering and possible finite-grid crossings only; no asymptotic threshold/no-threshold claim",
+    "diagnostics": "paired BP nonconvergence fractions; note finite-schedule binary vs ternary parameterization is an algorithmic limitation",
+    "interpretation": "orientation-induced finite-size changes can support a practical-decoder mechanism; cannot alone prove lack/existence of intrinsic threshold or universality"
+  },
+  "presentation": "One 3x2 hidden-orientation LER figure: square left, honeycomb right; U1,SU2,SU3 rows; shared x, independent y, red light-to-dark L=5,7,9,11, external legend, no p=0 marker. Keep directed combined figure for comparison. Separate convergence and paired-effect figures.",
+  "research_basis": [
+    {
+      "url": "https://arxiv.org/abs/2512.22119",
+      "role": "Charge-conserving U1 model and local-charge side information can support a decoding transition; no inference that directed A8 has no threshold."
+    },
+    {
+      "url": "https://arxiv.org/abs/2203.04948",
+      "role": "BP-to-matching method; algorithmic accuracy and boundary details matter, so practical finite-size curves are not Bayes limits."
+    },
+    {
+      "url": "https://www.sas.rochester.edu/pas/assets/pdf/undergraduate/su-2s_double_covering_of_so-3.pdf",
+      "role": "SU2 fundamental pseudoreality; combined with repository fusion law motivates exact orientation-invariant control."
+    },
+    {
+      "path": "wiki/methods/sun-fusion-herald-belief-propagation.md",
+      "role": "Existing ternary hidden-orientation model and observation semantics reused, not a new invented channel."
+    }
+  ],
+  "search_scope": "2026-09-07 local thesis/roadmap/method/A8 report, then targeted primary-source search on SU2 pseudoreality, charge-informed QEC, and belief matching. Tong PDF fetch failed; used accessible Rochester derivation and arXiv primary papers.",
+  "delivery_gates": [
+    {
+      "item": "preflight and exact-model checks",
+      "status": "passed",
+      "evidence": [
+        "results/a9-validation.json",
+        "results/a9-pilot.json"
+      ]
+    },
+    {
+      "item": "600 paired cells and SU2 null control",
+      "status": "passed",
+      "evidence": [
+        "results/a9-orientation-analysis.json"
+      ]
+    },
+    {
+      "item": "statistical comparison and limitations",
+      "status": "passed",
+      "evidence": [
+        "results/a9-orientation-analysis.json",
+        "wiki/hidden-orientation.md",
+        "wiki/interpretation.md"
+      ]
+    },
+    {
+      "item": "three figures and current report/Wiki",
+      "status": "passed",
+      "evidence": [
+        "results/a9-figure-inputs.json",
+        "REPORT.md",
+        "wiki/hidden-orientation.md"
+      ]
+    },
+    {
+      "item": "rendered dashboard verification",
+      "status": "passed",
+      "evidence": [
+        "results/closure-delivery-2026-09-09.json"
+      ]
+    }
+  ],
+  "preflight_numeric_tolerance": {
+    "posterior_absolute_tolerance": 1e-12,
+    "convergence_and_iterations": "exact",
+    "final_failure_flags": "exact on matched fixtures",
+    "registration_note": "Before accepted production, replace inappropriate bitwise floating-point check with existing lab posterior tolerance; measured max difference 2.22e-16, identical convergence and iterations. Require scalar/batch final-score equality. Stale validation file caused a brief launch; all its files quarantined, never pooled. Validation and pilot now bind to current source hashes and write non-passed state before execution."
+  },
+  "completed_at": "2026-09-09T07:19:14.862258+00:00",
+  "successor_lab": "lab-007-decoding-statistical-mechanics",
+  "closure_boundary": "Completed finite-schedule paired orientation study. No fitted/asymptotic threshold or BKT universality claim; theory transferred to Lab 007."
+}

@@ -540,3 +540,14 @@ shifts lower error odds and remain blue. The exact rendered Lab Results page,
 the Wiki formulas, 21 focused tests, report lint, and Wiki lint passed. The
 thesis is unchanged because this corrects the evidence coordinate without
 adding performance data.
+
+## [2026-09-14] ingest | Lab 007 exact classical sector model
+
+Integrated the normalized full-irrep sector partition function, SU(2) joint-law
+orientation quotient, constrained U(1) currents/heights, restricted singlet-loop
+weights, and exact marginal-hardening counterexamples. The new model page and
+parent BP method distinguish the mathematical surrogate from the documented
+parallel-boundary-edge backend limitation. The roadmap and thesis now separate
+the completed classical formulation from typical-record scaling, a microscopic
+quantum instrument, and unresolved universality. Evidence is the Lab 007 report
+and its rational enumeration and mapping supplement; no transition is promoted.

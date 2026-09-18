@@ -1,0 +1,133 @@
+{
+  "status": "passed",
+  "figure": "figures/a8-full-record-ler-overview.png",
+  "figure_sha256": "835c842eaccc160ae7275c0777757fea98a5498bbfb7f2bbf181e913047efd1e",
+  "renderer_sha256": "0f3466b53ed6411885aa4e0c410aa9a7c21621e8622f55ff5ee3920d8a95c88b",
+  "layout": {
+    "rows": [
+      "U1",
+      "SU2",
+      "SU3"
+    ],
+    "columns": [
+      "square",
+      "honeycomb"
+    ],
+    "shared_x": true,
+    "shared_y": false,
+    "legend": "one external legend below all panels, L=5,7,9,11 only",
+    "colors": {
+      "5": "#fca082",
+      "7": "#ef6548",
+      "9": "#cb181d",
+      "11": "#7f0000"
+    },
+    "p_zero_marker": false
+  },
+  "sampled_cells": 600,
+  "shots": 12000000,
+  "panels": [
+    {
+      "row": 0,
+      "column": 0,
+      "lattice": "square",
+      "group": "U1",
+      "input": "results/a8-fullrecord-square-U1-final-v2.json",
+      "input_sha256": "c27d238812e84546b7cd5e0d8c56d6d6d7203ebd84bb446dc582b9a1ae45bd49",
+      "sampled_cells": 100,
+      "x_limits": [
+        0,
+        0.5
+      ],
+      "y_limits": [
+        0,
+        0.463428789225374
+      ]
+    },
+    {
+      "row": 0,
+      "column": 1,
+      "lattice": "honeycomb",
+      "group": "U1",
+      "input": "results/a8-fullrecord-honeycomb-U1-final-v2.json",
+      "input_sha256": "75e5f0cc9eb594945ba0eafe6759f4ae3a0cfaec1c3ba43a4088f4c01d17f262",
+      "sampled_cells": 100,
+      "x_limits": [
+        0,
+        0.5
+      ],
+      "y_limits": [
+        0,
+        0.11930871775295714
+      ]
+    },
+    {
+      "row": 1,
+      "column": 0,
+      "lattice": "square",
+      "group": "SU2",
+      "input": "results/a8-fullrecord-square-SU2-final-v2.json",
+      "input_sha256": "6e11ad05195a8f3b49af0c724894ddab557ac6b2888edd794b2ce6ef268b9f3f",
+      "sampled_cells": 100,
+      "x_limits": [
+        0,
+        0.5
+      ],
+      "y_limits": [
+        0,
+        0.5715674055193354
+      ]
+    },
+    {
+      "row": 1,
+      "column": 1,
+      "lattice": "honeycomb",
+      "group": "SU2",
+      "input": "results/a8-fullrecord-honeycomb-SU2-final-v2.json",
+      "input_sha256": "2763400b253a126e4b4c89ec017509ea55f57964f605f52c4b213939cf97f616",
+      "sampled_cells": 100,
+      "x_limits": [
+        0,
+        0.5
+      ],
+      "y_limits": [
+        0,
+        0.5555528166836695
+      ]
+    },
+    {
+      "row": 2,
+      "column": 0,
+      "lattice": "square",
+      "group": "SU3",
+      "input": "results/a8-fullrecord-square-SU3-final-v2.json",
+      "input_sha256": "6a49de20dc7c37784f11303284fc694049c5755329ea8e896c3324a91d0004b1",
+      "sampled_cells": 100,
+      "x_limits": [
+        0,
+        0.5
+      ],
+      "y_limits": [
+        0,
+        0.0705223625602166
+      ]
+    },
+    {
+      "row": 2,
+      "column": 1,
+      "lattice": "honeycomb",
+      "group": "SU3",
+      "input": "results/a8-fullrecord-honeycomb-SU3-final-v2.json",
+      "input_sha256": "8a8ee952119d7fde01d2a0e1590dc16ae213f9736c23a1add1a130a79b3a5abd",
+      "sampled_cells": 100,
+      "x_limits": [
+        0,
+        0.5
+      ],
+      "y_limits": [
+        0,
+        0.00894134793739126
+      ]
+    }
+  ]
+}

@@ -1,10 +1,17 @@
 ---
-title: 'R6 raw-trajectory compaction'
-date: 2026-09-05
-status: validated
+title: 'Raw-trajectory compaction'
+status: current
+updated: 2026-09-05
+record: true
 ---
 
-# R6 raw-trajectory compaction
+## Summary
+
+This record documents conversion of historical decoder outputs to sufficient statistics before raw trajectory removal.
+
+## Evidence
+
+# Raw-trajectory compaction
 
 The R6 Monte Carlo outputs incorrectly retained every physical error pattern,
 public observation, correction edge set, BP diagnostic, and wall time.  R6AE
@@ -31,3 +38,24 @@ The compact counts passed internal invariants and cell-by-cell comparisons with
 the frozen R6AE, R6W, R6X, R6Y, R6AB, and R6AF analyses.  The complete removal
 map and validation record are in
 `results/r6-raw-trajectory-compaction-manifest-2026-09-05.json`.
+
+
+## Related pages
+
+- [[index|Lab Wiki index]]
+- [[observation-model|D4 observation model]]
+
+
+## Status
+
+Current as provenance; compact counts remain the reproducible storage boundary.
+
+
+## Status
+
+Current as provenance; compact counts remain the reproducible storage boundary.
+
+## Related pages
+
+- [[index|Lab Wiki index]]
+- [[observation-model|D4 observation model]]

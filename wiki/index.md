@@ -9,6 +9,7 @@
 - [Error-correction decoding](concepts/error-correction-decoding.md) — the main decoding-concept and method-family map.
 - [Lie groups, Lie algebras, and representations](concepts/lie-algebra-representations.md) — representation labels and channel bookkeeping.
 - [SU(N) full-irrep belief propagation](methods/sun-fusion-herald-belief-propagation.md) — the joint gauge/symmetry record \((m,R)\), directed versus hidden-orientation edge channels, sum-product versus min-sum inference, damping, and the observed two-dimensional convergence boundary.
+- [Statistical mechanics of representation-informed logical sectors](models/representation-informed-sector-model.md) — exact classical sector model, conjugacy/current reductions, and the gap between marginals and logical inference.
 - [LieART](references/lieart.md) — paper and Wolfram toolkit for finite-dimensional representation calculations.
 - [Quantum spin liquids](concepts/quantum-spin-liquids.md) — fractionalized phases, including an exactly solvable SU(2)-symmetric non-Abelian-spinon example.
 - [Non-Abelian topological order](concepts/non-abelian-topological-order.md) — fusion channels, braiding, and concrete (D_4) examples.

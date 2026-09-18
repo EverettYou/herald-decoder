@@ -105,3 +105,5 @@ Current as an audit trail.
 ## Related pages
 
 - [[index|Lab Wiki index]]
+
+- [[records/r6-raw-trajectory-compaction-2026-09-05|Raw-trajectory compaction]]

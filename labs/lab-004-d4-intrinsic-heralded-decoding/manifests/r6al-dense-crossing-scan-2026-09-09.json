@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "status": "registered",
+  "phase": "R6AL",
+  "registered_at": "2026-09-09",
+  "question": "Resolve the heralded-MWPM and signal-only BP finite-size crossing with a dense p_X grid near the published 0.20842 reference.",
+  "channel": "Periodic red-X D4, p_Z=0, public binary e_B/e_G record, unconditional first-stage Boolean-union winding score.",
+  "scan_design": {
+    "sizes": [
+      5,
+      7,
+      9,
+      11,
+      13
+    ],
+    "p_X_grid": [
+      0.198,
+      0.2,
+      0.202,
+      0.204,
+      0.206,
+      0.208,
+      0.21,
+      0.212,
+      0.214,
+      0.216,
+      0.218
+    ],
+    "histories_per_cell": 10000,
+    "seed_salt": 909304,
+    "workers": 64,
+    "bp_max_iterations": 40,
+    "bp_tolerance": 1e-08
+  },
+  "storage_contract": "Persist sufficient statistics only: attempted, terminal physical winding, decoder failures, decoder unavailable, BP convergence counts, and paired discordance counts. No trajectory rows, physical error lists, public records, corrections, or posterior arrays are persisted.",
+  "reuse_contract": "Existing R6AE aggregate counts may be retained as historical anchors only when the cell, channel, score, decoder, and history denominator match; they are never concatenated with this prospective seed stream.",
+  "claim_boundary": "Dense first-stage finite-size crossing diagnostic only; no threshold claim until adjacent-size differences and uncertainty support it.",
+  "output": "results/r6al-dense-crossing-scan-2026-09-09.json"
+}
