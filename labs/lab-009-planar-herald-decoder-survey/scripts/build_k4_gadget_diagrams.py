@@ -5,6 +5,7 @@ import hashlib
 import itertools
 import json
 from pathlib import Path
+import sys
 
 import matplotlib
 matplotlib.use('Agg')
@@ -15,6 +16,10 @@ from matplotlib.text import Text
 import numpy as np
 
 LAB = Path(__file__).resolve().parents[1]
+REPO = LAB.parents[1]
+sys.path.insert(0, str(REPO/'src'))
+from herald_decoder._planar import face_cycles, pfaffian_orientation
+
 BLUE, ORANGE, PURPLE = '#1477b5', '#bd661d', '#8454ac'
 GREEN, INK, GRAY = '#19845b', '#203142', '#c5cbd1'
 PORTS = np.array([[0., 1.], [-np.sqrt(3)/2, -.5], [np.sqrt(3)/2, -.5]])
@@ -70,8 +75,8 @@ def construction():
         node(axes[0], end)
         label(axes[0], *(1.1*p + np.array([.21, 0.])), rf'$z_{i+1},\ \rho_{i+1}$')
     node(axes[0], CENTER, r'$v$', radius=.085)
-    label(axes[0], 0, -.99, r'Local site factor $f_v^r(z_1,z_2,z_3)$', fontsize=12)
-    label(axes[0], 0, -1.35, r'Even entries: $(f_{000},f_{011},f_{101},f_{110})$', fontsize=11)
+    label(axes[0], 0, -.99, r'Local site factor $\phi_v^r(z_1,z_2,z_3)$', fontsize=12)
+    label(axes[0], 0, -1.35, r'Even entries: $(\phi_{000},\phi_{011},\phi_{101},\phi_{110})$', fontsize=11)
     axes[1].add_patch(Circle(CENTER, 1.08, fill=False, ec=GRAY, ls=':', lw=1.5))
     topology(axes[1])
     for i, p in enumerate(PORTS):
@@ -80,17 +85,18 @@ def construction():
         label(axes[1], *(p + np.array([-.23 if i != 2 else .23, .055])), rf'$p_{i+1}$', bbox=None)
         label(axes[1], *(1.60*p + np.array([.16 if i == 0 else 0, -.13 if i else 0])), rf'$\rho_{i+1}$', color=BLUE)
     node(axes[1], CENTER, r'$c$')
-    for x, y, text in [(0, .50, r'$f_{011}$'),
-                       (-.43, -.25, r'$f_{101}$'), (.43, -.25, r'$f_{110}$')]:
+    for x, y, text in [(0, .50, r'$W_{c1}$'),
+                       (-.43, -.25, r'$W_{c2}$'), (.43, -.25, r'$W_{c3}$')]:
         label(axes[1], x, y, text, color=ORANGE, fontsize=11)
     for x, y, text in [(-.58, .33, r'$W_{12}$'), (.58, .33, r'$W_{13}$'), (0, -.65, r'$W_{23}$')]:
         label(axes[1], x, y, text, color=PURPLE)
-    label(axes[1], 0, -1.25, r'$f_{011}W_{23}+f_{101}W_{13}+f_{110}W_{12}=f_{000}$', fontsize=11)
+    label(axes[1], 0, -1.13, r'$W_{c1}=\phi_{011},\ W_{c2}=\phi_{101},\ W_{c3}=\phi_{110}$', fontsize=10)
+    label(axes[1], 0, -1.48, r'$W_{c1}W_{23}+W_{c2}W_{13}+W_{c3}W_{12}=\phi_{000}$', fontsize=10)
     fig.add_artist(FancyArrowPatch((.47, .55), (.535, .55), transform=fig.transFigure,
                                   arrowstyle='-|>', mutation_scale=20, color=INK, lw=1.5))
     fig.legend(handles=[Line2D([], [], color=BLUE, lw=3, label='External wire: edge prior'),
-                        Line2D([], [], color=ORANGE, lw=3, label='Spoke: site entry'),
-                        Line2D([], [], color=PURPLE, lw=3, label='Triangle: site ratio')],
+                        Line2D([], [], color=ORANGE, lw=3, label='Spoke weight W_ci'),
+                        Line2D([], [], color=PURPLE, lw=3, label='Triangle weight W_ij')],
                loc='lower center', ncol=3, frameon=False, fontsize=11)
     fig.subplots_adjust(top=.87, bottom=.12, left=.03, right=.97, wspace=.12)
     return fig
@@ -151,11 +157,11 @@ def solution_family_checks():
 def matching_cases():
     fig, axes = plt.subplots(2, 2, figsize=(10.5, 9.0))
     signature = herald_signature('000', 0, Fraction(3, 5))
-    values = [r'$0.4\times2.5=1=f_{000}$',
-              r'$0.4=f_{011}$', r'$0.4=f_{101}$', r'$0.4=f_{110}$']
+    values = [r'$0.4\times2.5=1=\phi_{000}$',
+              r'$0.4=\phi_{011}$', r'$0.4=\phi_{101}$', r'$0.4=\phi_{110}$']
     xyz = np.vstack([PORTS, CENTER])
     for ax, (bits, edges), value, weight in zip(axes.flat, MATCHINGS.items(), values, signature):
-        setup(ax, rf'$z={bits}$: $f_{{{bits}}}={float(weight):g}$', ylim=(-1.72, 1.85))
+        setup(ax, rf'$z={bits}$: $\phi_{{{bits}}}={float(weight):g}$', ylim=(-1.72, 1.85))
         topology(ax, zero_triangles=True)
         for i, p in enumerate(PORTS):
             selected = bits[i] == '1'
@@ -168,15 +174,15 @@ def matching_cases():
         for i, j in edges:
             segment(ax, xyz[i], xyz[j], GREEN, width=5, zorder=3)
         node(ax, CENTER, r'$c$')
-        for x, y, text in [(.19, .52, r'$0.4$'),
-                           (-.49, -.14, r'$0.4$'), (.49, -.14, r'$0.4$')]:
+        for x, y, text in [(0, .72, r'$W_{c1}=0.4$'),
+                           (-.97, -.16, r'$W_{c2}=0.4$'), (.97, -.16, r'$W_{c3}=0.4$')]:
             label(ax, x, y, text, fontsize=12)
-        label(ax, 0, -.78, r'$f_{000}/f_{011}=2.5$', fontsize=11)
-        label(ax, -.58, .35, '0', fontsize=10, color='#89929b')
-        label(ax, .58, .35, '0', fontsize=10, color='#89929b')
+        label(ax, 0, -.78, r'$W_{23}=2.5$', fontsize=11)
+        label(ax, -.97, .40, r'$W_{12}=0$', fontsize=10, color='#89929b')
+        label(ax, .97, .40, r'$W_{13}=0$', fontsize=10, color='#89929b')
         label(ax, 0, -1.46, 'Internal weight: '+value, fontsize=12)
     fig.suptitle(r'Herald-channel example: $q=0.6,\ h_v=0,\ r_{\partial v}=000$'+'\n'+
-                 r'$f_{000}=1,\quad f_{011}=f_{101}=f_{110}=0.4$',
+                 r'$\phi_{000}=1,\quad \phi_{011}=\phi_{101}=\phi_{110}=0.4$',
                  fontsize=15, fontweight='bold', y=.975)
     fig.legend(handles=[Line2D([], [], color=GREEN, lw=4, label='Selected internal edge'),
                         Line2D([], [], color=BLUE, lw=4, label='Selected external wire'),
@@ -214,8 +220,8 @@ def gluing():
         node(ax, center)
         label(ax, center[0], -.23, r'$c_u$' if sign == 1 else r'$c_v$', fontsize=11, bbox=None)
         label(ax, center[0]-.44*sign, 0, r'$W_{23}^{(u)}$' if sign == 1 else r'$W_{23}^{(v)}$', color=PURPLE, fontsize=11)
-        label(ax, center[0]+.43*sign, 0, r'$f_{u,011}^r$' if sign == 1 else r'$f_{v,011}^r$', color=ORANGE, fontsize=11)
-        label(ax, center[0], -1.05, r'Site signature $f_u^r$' if sign == 1 else r'Site signature $f_v^r$', fontsize=12)
+        label(ax, center[0]+.43*sign, 0, r'$W_{c1}^{(u)}$' if sign == 1 else r'$W_{c1}^{(v)}$', color=ORANGE, fontsize=11)
+        label(ax, center[0], -1.05, r'Site signature $\phi_u^r$' if sign == 1 else r'Site signature $\phi_v^r$', fontsize=12)
     segment(ax, pl[0], pr[0], BLUE, width=3.7)
     label(ax, 0, .30, r'One shared wire, weight $\rho_e$', color=BLUE, fontsize=13)
     label(ax, pl[0, 0]+.14, -.23, r'$p_{u,e}$', fontsize=11, bbox=None)
@@ -223,6 +229,77 @@ def gluing():
     label(ax, 0, -.64, r'$K_{p_{u,e},p_{v,e}}=\kappa_e\rho_e$', color=BLUE, fontsize=13)
     label(ax, 0, -1.40, 'Rows of K index ports and centers; orientation signs are assigned globally.', fontsize=12)
     fig.subplots_adjust(left=.03, right=.97, top=.86, bottom=.03)
+    return fig
+
+
+ORIENTATION_EDGES = np.array([(0, 1), (1, 2), (2, 0), (3, 0), (3, 1), (3, 2)])
+
+
+def orientation_checks():
+    """Check the illustrated arrows, odd vertex count and repeated bridge walks."""
+    xyz = np.vstack([PORTS, CENTER])
+    fixtures = [
+        ('isolated-K4', xyz, ORIENTATION_EDGES),
+        ('odd-size-triangle', PORTS, ORIENTATION_EDGES[:3]),
+        ('K4-with-two-bridges', np.vstack([xyz, [-.13, .30], [1.17, -.55]]),
+         np.vstack([ORIENTATION_EDGES, [3, 4], [2, 5]])),
+    ]
+    checked = []
+    for name, positions, edges in fixtures:
+        signs = pfaffian_orientation(positions, edges)
+        _, cycles, areas = face_cycles(positions, edges)
+        arrows = {tuple(edge if sign > 0 else edge[::-1]) for edge, sign in zip(edges, signs)}
+        counts, repetitions = [], []
+        for cycle in cycles:
+            # face_cycles keeps the face on the left; reverse each occurrence.
+            walk = [(int(edges[h//2, h%2]), int(edges[h//2, 1-h%2])) for h in cycle]
+            counts.append(sum((v, u) in arrows for u, v in walk))
+            repetitions.append(len(cycle)-len(set(cycle//2)))
+        assert all(count % 2 == 1 for count, area in zip(counts, areas) if area > 0)
+        outer = int(np.flatnonzero(areas < 0)[0])
+        assert counts[outer] % 2 == (len(positions)-1) % 2
+        if name == 'isolated-K4':
+            assert signs.tolist() == [1]*6
+            assert [count for count, area in zip(counts, areas) if area > 0] == [1]*3
+            K = np.zeros((4, 4), dtype=int)
+            for (i, j), sign in zip(edges, signs):
+                K[i, j] = sign; K[j, i] = -sign
+            coefficients = [int(K[0, 1]*K[2, 3]), -int(K[0, 2]*K[1, 3]),
+                            int(K[0, 3]*K[1, 2])]
+            assert coefficients == [-1]*3
+        if name == 'K4-with-two-bridges':
+            assert any(repeated > 0 for repeated, area in zip(repetitions, areas) if area > 0)
+        checked.append({'fixture': name, 'vertices': len(positions), 'edges': edges.tolist(),
+                        'signs_relative_to_stored_edges': signs.tolist(),
+                        'bounded_face_clockwise_counts': [count for count, area in zip(counts, areas) if area > 0],
+                        'outer_face_on_right_agreement_count': counts[outer],
+                        'repeated_boundary_edge_occurrences': repetitions,
+                        **({'pfaffian_matching_coefficients': coefficients} if name == 'isolated-K4' else {})})
+    return checked
+
+
+def orientation():
+    fig, ax = plt.subplots(figsize=(8.5, 6.9))
+    setup(ax, r'An isolated $K_4$: every bounded face is clockwise odd',
+          xlim=(-1.45, 1.45), ylim=(-1.04, 1.42))
+    xyz = np.vstack([PORTS, CENTER])
+    for i, j in ORIENTATION_EDGES:
+        color = ORANGE if i == 3 else PURPLE
+        ax.add_patch(FancyArrowPatch(xyz[i], xyz[j], arrowstyle='-|>',
+                                    mutation_scale=23, shrinkA=10, shrinkB=10,
+                                    color=color, lw=2.8, zorder=2))
+    for i, p in enumerate(PORTS):
+        node(ax, p, radius=.052)
+        offset = [0, .16] if i == 0 else [-.13 if i == 1 else .13, -.14]
+        label(ax, *(p+offset), rf'$p_{i+1}$', fontsize=13, bbox=None)
+    node(ax, CENTER, radius=.052)
+    label(ax, 0, -.12, r'$c$', fontsize=13, bbox=None)
+    for face in [(3, 0, 1), (3, 0, 2), (3, 1, 2)]:
+        midpoint = xyz[list(face)].mean(axis=0)
+        label(ax, *midpoint, '1 cw', fontsize=12, color=GREEN,
+              bbox={'facecolor': '#ecf7f0', 'edgecolor': 'none', 'pad': 3})
+    label(ax, 0, -.86, 'cw = arrows agreeing with a clockwise face walk', fontsize=11)
+    fig.subplots_adjust(left=.04, right=.96, top=.87, bottom=.045)
     return fig
 
 
@@ -245,13 +322,15 @@ def main():
         assert coverage == [1]*4, (bits, coverage)
         assert product == expected[bits]
         checks.append({'relative_bits': bits, 'selected_internal_edges': edges,
-                       'auxiliary_node_coverage': coverage, 'site_entry': f'f_{bits}',
+                       'auxiliary_node_coverage': coverage, 'site_entry': 'phi_'+bits,
                        'physical_validation_weight': str(product)})
     outputs = []
+    checked_orientations = orientation_checks()
     (LAB/'figures').mkdir(exist_ok=True)
     for name, build in [('k4-gadget-construction', construction),
                         ('k4-gadget-matchings', matching_cases),
-                        ('k4-gadget-gluing', gluing)]:
+                        ('k4-gadget-gluing', gluing),
+                        ('k4-gadget-orientation', orientation)]:
         fig = build()
         # The wiki embeds figures at 80% of its text column, so use readable labels there.
         for item in fig.findobj(match=Text):
@@ -269,18 +348,21 @@ def main():
                'generator_source_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
                'partition_fixture': str(fixture_path.relative_to(LAB)),
                'partition_fixture_sha256': hashlib.sha256(fixture_path.read_bytes()).hexdigest(),
-               'illustration': 'Herald-channel likelihoods, labeled by f_xxx and their values; pivot f_011>0',
+               'illustration': 'Site entries phi_beta; all internal edges labeled W_ci or W_ij; pivot phi_011>0',
                'physical_validation_record': {'reference': '000', 'herald': 0, 'q': '3/5',
                                                'site_weights': [str(value) for value in signature]},
-               'site_entry_order': ['f_000', 'f_011', 'f_101', 'f_110'],
-               'notation': {'physical_edge': 'w_e(x_e)', 'physical_site': 'f_v(x_incident)',
-                            'relative_site': 'f_v^r(z_incident)', 'relative_prior_ratio': 'rho_e',
+               'site_entry_order': ['phi_000', 'phi_011', 'phi_101', 'phi_110'],
+               'notation': {'physical_edge': 'w_e(x_e)', 'physical_site': 'phi_v(x_incident)',
+                            'relative_site': 'phi_v^r(z_incident)', 'relative_prior_ratio': 'rho_e',
                             'auxiliary_edge': 'W_ij'},
                'matching_checks': checks, 'solution_family_checks': solution_family_checks(),
+               'orientation_checks': checked_orientations,
+               'orientation_source': 'src/herald_decoder/_planar.py',
+               'orientation_source_sha256': hashlib.sha256((REPO/'src/herald_decoder/_planar.py').read_bytes()).hexdigest(),
                'no_K4_solution_for_positive_000_only': True, 'figures': outputs,
                'semantics': {'external_occupation': 'z_i=1 covers port p_i externally',
                              'displayed_signature_weights': 'internal only; external priors multiply once per wire',
-                             'orientation': 'undirected topology shown; global Kasteleyn signs omitted',
+                             'orientation': 'first three figures are undirected; fourth is an isolated K4 orientation, not the glued global orientation',
                              'zero_edges': 'two triangle edges have zero weight only in the numerical example'},
                'scope': 'Explanatory schematics; no new benchmark samples or production geometry support.'}
     (LAB/'results/k4-gadget-diagrams.json').write_text(json.dumps(receipt, indent=2)+'\n')

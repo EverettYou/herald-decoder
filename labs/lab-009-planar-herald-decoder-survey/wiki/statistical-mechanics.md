@@ -36,7 +36,7 @@ Current for the registered finite-size model, not a thermodynamic threshold proo
 Choose a syndrome-compatible reference $r$ using visible information only. Write $x=r\oplus z$, so $Hz=0$. At a degree-three vertex the allowed $z$ patterns are $000,011,101,110$; at degree two they are $00,11$. Define
 
 $$
-f_v^r(z_{\partial v})=\phi_q\left(h_v,\sum_{e\ni v}(r_e\oplus z_e)\right).
+\phi_v^r(z_{\partial v})=\phi_q\left(h_v,\sum_{e\ni v}(r_e\oplus z_e)\right).
 $$
 
 After dropping the common reference prior, an occupied relative edge carries
@@ -45,7 +45,7 @@ $$
 \rho_e=\left(\frac{p}{1-p}\right)^{1-2r_e}.
 $$
 
-Then $Z_a$ is a sum of $\prod_e\rho_e^{z_e}\prod_v f_v^r(z_{\partial v})$ over even subgraphs with $\ell(z)=a\oplus\ell(r)$. This uses the same notation as the [planar-ML derivation](planar-ml.md): $f_v$ is the physical site function, $f_v^r$ is that function after the reference change, and $\rho_e$ is the ratio of physical edge weights. Boundary-to-boundary paths as well as face cycles belong to $\ker H$; a construction using only interior cycles loses boundary degrees of freedom. The [boundary rail](planar-ml.md) handles those paths explicitly. Changing $r$ permutes relative configurations and leaves the absolute posterior unchanged.
+Then $Z_a$ is a sum of $\prod_e\rho_e^{z_e}\prod_v \phi_v^r(z_{\partial v})$ over even subgraphs with $\ell(z)=a\oplus\ell(r)$. This uses the same notation as the [planar-ML derivation](planar-ml.md): $\phi_v$ is the physical site function, $\phi_v^r$ is that function after the reference change, and $\rho_e$ is the ratio of physical edge weights. Boundary-to-boundary paths as well as face cycles belong to $\ker H$; a construction using only interior cycles loses boundary degrees of freedom. The [boundary rail](planar-ml.md) handles those paths explicitly. Changing $r$ permutes relative configurations and leaves the absolute posterior unchanged.
 
 The [expanded planar-ML derivation](planar-ml.md) now follows the full conversion: each vertex function becomes internal gadget-edge weights, the auxiliary graph defines $K$, and its weighted matching sum equals a Pfaffian/Grassmann Gaussian integral. It also explains the normalization constants and why planarity alone does not suffice.
 

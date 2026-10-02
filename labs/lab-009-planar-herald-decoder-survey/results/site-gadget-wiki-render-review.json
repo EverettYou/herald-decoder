@@ -1,8 +1,8 @@
 {
   "status": "passed",
-  "verified_at": "2026-10-02T04:27:52.771Z",
-  "wiki_source_sha256": "96f1728337d5b7321a1837b42cf686b8e5f1c3f90ccb6f60398839283fab6c4f",
-  "diagram_receipt_sha256": "614eb60a966871b47d697d44e7950c0cad49e3f0660d3b806220e1e83440110f",
+  "verified_at": "2026-10-02T04:59:22.501Z",
+  "wiki_source_sha256": "db6a490a07934da47428378786ab8f0a508ed2b2bae8b636d9f65bc3e4c99dda",
+  "diagram_receipt_sha256": "74dc38bd25feac69c1c4fd1953946c0532728fff9b61e8febe90239257ddeeab",
   "local_partition_check": "results/site-gadget-partition-review.json",
   "checks": [
     {
@@ -16,9 +16,12 @@
       "screenshot": "results/verification/pfaffian-site-review-0.png",
       "complete_K4_explanation_visible": true,
       "nonnegative_solution_family_visible": true,
+      "kasteleyn_rule_algorithm_existence_and_example_visible": true,
       "theory_screenshots": [
         "results/verification/k4-notation-surface-0.png",
-        "results/verification/k4-solution-family-surface-0.png"
+        "results/verification/k4-solution-family-surface-0.png",
+        "results/verification/k4-orientation-rule-surface-0.png",
+        "results/verification/k4-orientation-existence-surface-0.png"
       ],
       "diagrams": [
         {
@@ -35,7 +38,7 @@
           "loaded": true,
           "width": 1890,
           "height": 1620,
-          "alt": "Four panels reproduce the physical herald likelihoods f_000=1 and f_011=f_101=f_110=0.4 for q=0.6, herald zero and reference 000.",
+          "alt": "Four panels reproduce the physical herald likelihoods \\phi_000=1 and \\phi_011=\\phi_101=\\phi_110=0.4 for q=0.6, herald zero and reference 000.",
           "screenshot": "results/verification/k4-gadget-matchings-surface-0.png",
           "vector_links_visible": true
         },
@@ -46,6 +49,15 @@
           "height": 1098,
           "alt": "Two original neighboring sites are expanded into planar K4 gadgets connected by one shared wire carrying the original edge ratio.",
           "screenshot": "results/verification/k4-gadget-gluing-surface-0.png",
+          "vector_links_visible": true
+        },
+        {
+          "src": "http://127.0.0.1:8010/lab-assets/lab-009-planar-herald-decoder-survey/figures/k4-gadget-orientation.png",
+          "loaded": true,
+          "width": 1530,
+          "height": 1242,
+          "alt": "An isolated planar K4 with counterclockwise outer triangle arrows and outward spokes; each of its three bounded triangular faces has one clockwise arrow.",
+          "screenshot": "results/verification/k4-gadget-orientation-surface-0.png",
           "vector_links_visible": true
         }
       ]
@@ -61,9 +73,12 @@
       "screenshot": "results/verification/pfaffian-site-review-1.png",
       "complete_K4_explanation_visible": true,
       "nonnegative_solution_family_visible": true,
+      "kasteleyn_rule_algorithm_existence_and_example_visible": true,
       "theory_screenshots": [
         "results/verification/k4-notation-surface-1.png",
-        "results/verification/k4-solution-family-surface-1.png"
+        "results/verification/k4-solution-family-surface-1.png",
+        "results/verification/k4-orientation-rule-surface-1.png",
+        "results/verification/k4-orientation-existence-surface-1.png"
       ],
       "diagrams": [
         {
@@ -80,7 +95,7 @@
           "loaded": true,
           "width": 1890,
           "height": 1620,
-          "alt": "Four panels reproduce the physical herald likelihoods f_000=1 and f_011=f_101=f_110=0.4 for q=0.6, herald zero and reference 000.",
+          "alt": "Four panels reproduce the physical herald likelihoods \\phi_000=1 and \\phi_011=\\phi_101=\\phi_110=0.4 for q=0.6, herald zero and reference 000.",
           "screenshot": "results/verification/k4-gadget-matchings-surface-1.png",
           "vector_links_visible": true
         },
@@ -92,6 +107,15 @@
           "alt": "Two original neighboring sites are expanded into planar K4 gadgets connected by one shared wire carrying the original edge ratio.",
           "screenshot": "results/verification/k4-gadget-gluing-surface-1.png",
           "vector_links_visible": true
+        },
+        {
+          "src": "http://127.0.0.1:8010/lab-assets/lab-009-planar-herald-decoder-survey/figures/k4-gadget-orientation.png",
+          "loaded": true,
+          "width": 1530,
+          "height": 1242,
+          "alt": "An isolated planar K4 with counterclockwise outer triangle arrows and outward spokes; each of its three bounded triangular faces has one clockwise arrow.",
+          "screenshot": "results/verification/k4-gadget-orientation-surface-1.png",
+          "vector_links_visible": true
         }
       ]
     }
@@ -99,48 +123,61 @@
   "downloads": [
     {
       "url": "http://127.0.0.1:8010/lab-assets/lab-009-planar-herald-decoder-survey/figures/k4-gadget-construction.png",
-      "sha256": "1fb19c7d1cea9f20feab2a1c0b5d926d31556abe9d52c8ef95fc2e86f8d95af5"
+      "sha256": "af1053a21451936013f5a0d9a117a9bd5157550cd9db2cee8ce5bf2a223547d1"
     },
     {
       "url": "http://127.0.0.1:8010/lab-assets/lab-009-planar-herald-decoder-survey/figures/k4-gadget-construction.svg",
-      "sha256": "3afcd1546b4b22ebd1867a1b3b2ba6ca2f81aa0024b36aedafbcb855e5159a61"
+      "sha256": "18e27b795de7cf9b46d23ce20fec9c251a47767fdfe086c19e13c558d1b90776"
     },
     {
       "url": "http://127.0.0.1:8010/lab-assets/lab-009-planar-herald-decoder-survey/figures/k4-gadget-construction.pdf",
-      "sha256": "26fa56c133cebc418c9e1b2e21ace5b9feee98293b2167f31fe9421a3102e6cc"
+      "sha256": "93e36eb006da343015190d6b5a7bc08e1c77fc02560fb20f0440f9c746d3a6be"
     },
     {
       "url": "http://127.0.0.1:8010/lab-assets/lab-009-planar-herald-decoder-survey/figures/k4-gadget-matchings.png",
-      "sha256": "8af56863965ce16a27cde1d0b54893ae25bec5d690d51de92c1e444930d8a69c"
+      "sha256": "dc180d73d366b6efab031a327f6ef7ca2d876814938660de6afdb4cddc192eea"
     },
     {
       "url": "http://127.0.0.1:8010/lab-assets/lab-009-planar-herald-decoder-survey/figures/k4-gadget-matchings.svg",
-      "sha256": "2ecf2e1cfa996b52f781f8934bf7ddbea26706615c73a012a1cdfe473e260998"
+      "sha256": "9fd757a75e045288b7af9ca24d09a56d14706436b91f31075a182dc3390685a5"
     },
     {
       "url": "http://127.0.0.1:8010/lab-assets/lab-009-planar-herald-decoder-survey/figures/k4-gadget-matchings.pdf",
-      "sha256": "56a9c19fa061f33b815bc99d6d48a379cc357eb0a13d406f322dd3d1181bd0bc"
+      "sha256": "3edb0a742c92081c3dedfb1dd3d8f8d2c483d6a045aaef77dcd4fbdb6fc2cb0c"
     },
     {
       "url": "http://127.0.0.1:8010/lab-assets/lab-009-planar-herald-decoder-survey/figures/k4-gadget-gluing.png",
-      "sha256": "f88c971a432953a91345aee4eca90008ad92c719668f71a12da6db00ccf18f81"
+      "sha256": "9743601c829166371baa10dfd8550186c694a015c40e3b2dbb07a3ca09fdd1bf"
     },
     {
       "url": "http://127.0.0.1:8010/lab-assets/lab-009-planar-herald-decoder-survey/figures/k4-gadget-gluing.svg",
-      "sha256": "1a4758368c24016fba8e78947c4ba9f3ef41657b1a9815f7eac66960bef6faf4"
+      "sha256": "068e6ff78bf0f355ed9bf55e07263ac71dc7f26959d05edd5dfe743af6bc1991"
     },
     {
       "url": "http://127.0.0.1:8010/lab-assets/lab-009-planar-herald-decoder-survey/figures/k4-gadget-gluing.pdf",
-      "sha256": "ce102d272e8a6bd09f0f957bf679c5ec05b90e42fbcfcc9d830f94693f4045bd"
+      "sha256": "179c83d753f952fe22f1f833a38a43b87eb737e3e9a9bae6194c4872a2f62a58"
+    },
+    {
+      "url": "http://127.0.0.1:8010/lab-assets/lab-009-planar-herald-decoder-survey/figures/k4-gadget-orientation.png",
+      "sha256": "2b17f66c3392d4494d74b8b0229013ded3785d11beb3e820ed357cb114897d53"
+    },
+    {
+      "url": "http://127.0.0.1:8010/lab-assets/lab-009-planar-herald-decoder-survey/figures/k4-gadget-orientation.svg",
+      "sha256": "f8fb315bf4503587dbd529cd41a9897a415dfc5b45896013aa2fcbe70073436f"
+    },
+    {
+      "url": "http://127.0.0.1:8010/lab-assets/lab-009-planar-herald-decoder-survey/figures/k4-gadget-orientation.pdf",
+      "sha256": "a7431d6255e5e275a18ba842aa26c48286ff2c674cb358f6c9983098561d47d3"
     }
   ],
   "browser_errors": [],
   "physical_signature_label_check": {
     "all_four_site_entries_and_values_explicit_in_panel_titles": true,
     "first_diagram_identified_as_symbolic": true,
-    "triangle_ratio_and_pivot_condition_visible": true,
+    "all_six_gadget_edges_use_W_labels": true,
+    "physical_site_uses_phi": true,
     "herald_parameters_visible": true,
     "arbitrary_tuple_removed": true
   },
-  "scope": "Theory explanation only; active phase campaign state and production decoder code untouched."
+  "scope": "Theory explanation only; physical site phi, gadget edge W notation unified; production decoder code untouched."
 }

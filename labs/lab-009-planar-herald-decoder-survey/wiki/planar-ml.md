@@ -23,7 +23,7 @@ The Pfaffian acts on an expanded auxiliary matching graph: original edge weights
 
 The [general validation](../results/validation.json) and [generic-factor check](../results/planar-factor-contract-validation.json) exercise the implementation within their stated finite-size scopes. The [site-to-Pfaffian check](../results/site-gadget-partition-review.json) additionally checks absolute partition sums and matching observables.
 
-The [diagram receipt](../results/k4-gadget-diagrams.json) checks that every illustrated matching covers each auxiliary node exactly once and reproduces the numerical site's four even entries. It also enumerates all eight port patterns for 12 choices from the solution family, including zero coefficients and nonzero free triangle edges. The three schematics below are available as PNG, SVG and PDF.
+The [diagram receipt](../results/k4-gadget-diagrams.json) checks that every illustrated matching covers each auxiliary node exactly once and reproduces the numerical site's four even entries. It also enumerates all eight port patterns for 12 choices from the solution family, including zero coefficients and nonzero free triangle edges. The orientation example checks the production face algorithm, including an odd-size graph and repeated bridge occurrences. The four schematics below are available as PNG, SVG and PDF.
 
 ## Status
 
@@ -36,27 +36,28 @@ Current with explicit geometry and floating-point limits; no all-size numerical 
 
 ## The original edge-spin partition function
 
-Let the original graph be $G=(V,E)$, with a binary variable $x_e\in\{0,1\}$ on each edge. Throughout this page, **$w_e$ denotes an original edge weight, $f_v$ a site function, and $W$ an auxiliary matching-edge weight**. A site function depends on several incident edge variables; it introduces neither an independent vertex spin nor a configuration-independent constant.
+Let the original graph be $G=(V,E)$, with a binary variable $x_e\in\{0,1\}$ on each edge. Throughout this page, **$w_e$ denotes an original edge weight, $\phi_v$ a site function, and $W$ an auxiliary matching-edge weight**. A site function depends on several incident edge variables; it introduces neither an independent vertex spin nor a configuration-independent constant.
 
 | Symbol | Meaning |
 | --- | --- |
 | $w_e(x_e)$ | Original physical edge Boltzmann weight |
-| $f_v(x_{\partial v})$ | Original physical site Boltzmann weight |
-| $f_v^r(z_{\partial v})$ | The same site function evaluated at $x=r\oplus z$ |
+| $\phi_v(x_{\partial v})$ | Original physical site Boltzmann weight |
+| $\phi_v^r(z_{\partial v})$ | The same site function evaluated at $x=r\oplus z$ |
 | $\rho_e=w_e(1-r_e)/w_e(r_e)$ | Ratio derived from the original edge weight; an occupied relative wire carries this ratio |
-| $W_{ij}$ | Weight of an edge between auxiliary matching nodes $i,j$ |
+| $W_{ci}=W_{c,p_i}$ | Auxiliary spoke weight inside one gadget |
+| $W_{ij}=W_{p_i,p_j}$ (within one gadget) | Auxiliary triangle-edge weight; globally $W_{ab}$ denotes any auxiliary edge |
 | $K_{ij}=\kappa_{ij}W_{ij}$ | The oriented, antisymmetric matrix entry |
 
-Thus $\rho_e$ is a derived ratio, and $W$ belongs to the expanded graph. Neither is an additional physical likelihood. Spoke weights will be written directly as entries of $f_v^r$; no separate spoke-weight notation is needed.
+Thus $\rho_e$ is a derived ratio, and $W$ belongs to the expanded graph. Neither is an additional physical likelihood. All internal gadget edges are labeled by their auxiliary weights: $W_{ci}$ for spokes and $W_{ij}$ for triangle edges. The equalities below relate these weights to the physical site entries $\phi_\beta$; the symbols serve different roles.
 
 Given the exact syndrome $s$, the original discrete partition function is
 
 $$
 Z(s)=\sum_{x\in\{0,1\}^{E}}1\{Hx=s\}
-\prod_e w_e(x_e)\prod_{v\in D}f_v(x_{\partial v}).
+\prod_e w_e(x_e)\prod_{v\in D}\phi_v(x_{\partial v}).
 $$
 
-In this project, $w_e(0)=1-p$, $w_e(1)=p$, and $f_v(x_{\partial v})=\phi_q(h_v,\sum_{e\ni v}x_e)$. Interpreting $-\log w_e$ and $-\log f_v$ as energies with inverse temperature absorbed gives the statistical-mechanics formulation. Logical ML additionally imposes $\ell(x)=a$ to compute $Z_0$ and $Z_1$ separately.
+In this project, $w_e(0)=1-p$, $w_e(1)=p$, and $\phi_v(x_{\partial v})=\phi_q(h_v,\sum_{e\ni v}x_e)$. Interpreting $-\log w_e$ and $-\log \phi_v$ as energies with inverse temperature absorbed gives the statistical-mechanics formulation. Logical ML additionally imposes $\ell(x)=a$ to compute $Z_0$ and $Z_1$ separately.
 
 For a general model, this sum can be evaluated by enumeration, variable elimination, or tensor-network contraction. **Planarity of the original graph alone does not turn the partition function of arbitrary vertex interactions into a Pfaffian.** The additional structure used here is explained below.
 
@@ -67,19 +68,19 @@ Choose a reference $r$ using only the visible record, with $Hr=s$, and write $x=
 $$
 C_0=\prod_e w_e(r_e),\quad
 \rho_e=\frac{w_e(1-r_e)}{w_e(r_e)},\quad
-f_v^r(z_{\partial v})=f_v(r_{\partial v}\oplus z_{\partial v}).
+\phi_v^r(z_{\partial v})=\phi_v(r_{\partial v}\oplus z_{\partial v}).
 $$
 
 Then
 
 $$
-Z(s)=C_0\sum_{z:Hz=0}\prod_e \rho_e^{z_e}\prod_{v\in D}f_v^r(z_{\partial v}).
+Z(s)=C_0\sum_{z:Hz=0}\prod_e \rho_e^{z_e}\prod_{v\in D}\phi_v^r(z_{\partial v}).
 $$
 
-The Bernoulli prior gives $\rho_e=(p/(1-p))^{1-2r_e}$. This change of variables retains the site function. For one degree-three site, abbreviate $f_\beta:=f_v^r(\beta)$, suppressing only the fixed site and reference labels. The four allowed entries are
+The Bernoulli prior gives $\rho_e=(p/(1-p))^{1-2r_e}$. This change of variables retains the site function. For one degree-three site, abbreviate $\phi_\beta:=\phi_v^r(\beta)$, suppressing only the fixed site and reference labels. The four allowed entries are
 
 $$
-(f_{000},f_{011},f_{101},f_{110}).
+(\phi_{000},\phi_{011},\phi_{101},\phi_{110}).
 $$
 
 Deterministic priors and hard zeros require support restrictions or dedicated branches; division by zero is invalid.
@@ -91,8 +92,8 @@ The model has a planar embedding, binary edge variables, exact parity, and measu
 At four legs, parity must be supplemented by identities such as
 
 $$
-f_{0000}f_{1111}-f_{1100}f_{0011}
-+f_{1010}f_{0101}-f_{1001}f_{0110}=0.
+\phi_{0000}\phi_{1111}-\phi_{1100}\phi_{0011}
++\phi_{1010}\phi_{0101}-\phi_{1001}\phi_{0110}=0.
 $$
 
 General degree-four site factors do not satisfy this identity. This is why the current source solver does not claim square-lattice planar ML. **Planarity handles global pairing signs; matchgate identities ensure that each local site tensor can be represented by a matching gadget.**
@@ -111,7 +112,7 @@ $$
 
 ![An original trivalent site becomes a planar K4 gadget with three boundary ports, one center, three spokes and three triangle edges.](../figures/k4-gadget-construction.png)
 
-*Construction and weights.* This first diagram is symbolic; it does not assign numerical site weights. Blue wires retain the original edge-prior ratios $\rho_i$. Orange spokes and purple triangle edges encode the site function $f_v^r$. All six internal $K_4$ edges are drawn. The dotted disk marks the local replacement region. Here $W_{ij}$ on a triangle edge abbreviates $W_{p_i,p_j}$ within this one gadget. These are undirected schematics; Kasteleyn signs are assigned to the complete expanded graph later. [SVG](../figures/k4-gadget-construction.svg) · [PDF](../figures/k4-gadget-construction.pdf).
+*Construction and weights.* This first diagram is symbolic; it does not assign numerical site weights. Blue wires retain the original edge-prior ratios $\rho_i$. Orange spokes $W_{c1},W_{c2},W_{c3}$ and purple triangle edges $W_{12},W_{13},W_{23}$ encode the site function $\phi_v^r$. All six internal $K_4$ edges are drawn. The dotted disk marks the local replacement region. Here $W_{ij}$ on a triangle edge abbreviates $W_{p_i,p_j}$ within this one gadget. These are undirected schematics; Kasteleyn signs are assigned to the complete expanded graph later. [SVG](../figures/k4-gadget-construction.svg) · [PDF](../figures/k4-gadget-construction.pdf).
 
 Let $z_i=1$ mean that the perfect matching uses external wire $i$. That wire has already covered $p_i$, so the internal matching must not cover it again. Removing an external node in the literature is the equivalent operation for computing a local signature; the node remains present in the global graph.
 
@@ -128,76 +129,76 @@ For this local calculation, write $W_{ci}:=W_{c,p_i}$ and $W_{ij}:=W_{p_i,p_j}$ 
 The last three even patterns therefore **fix** the spoke weights:
 
 $$
-W_{c1}=f_{011},\qquad W_{c2}=f_{101},\qquad W_{c3}=f_{110}.
+W_{c1}=\phi_{011},\qquad W_{c2}=\phi_{101},\qquad W_{c3}=\phi_{110}.
 $$
 
 The remaining condition on the three triangle weights is
 
 $$
-f_{011}W_{23}+f_{101}W_{13}+f_{110}W_{12}=f_{000}.
+\phi_{011}W_{23}+\phi_{101}W_{13}+\phi_{110}W_{12}=\phi_{000}.
 $$
 
-**The $f$ entries are inputs, not adjustable gadget parameters.** First evaluate the observed site's physical function at $r\oplus000$, $r\oplus011$, $r\oplus101$, and $r\oplus110$. This supplies the four $f$ values. Then choose triangle weights $W$ satisfying the displayed equation. Different choices of $W$ can represent exactly the same site function.
+**The $\phi$ entries are inputs, not adjustable gadget parameters.** First evaluate the observed site's physical function at $r\oplus000$, $r\oplus011$, $r\oplus101$, and $r\oplus110$. This supplies the four $\phi$ values. Then choose triangle weights $W$ satisfying the displayed equation. Different choices of $W$ can represent exactly the same site function.
 
 For the project's herald channel, this evaluation is explicit. With $n_\beta=\sum_{i=1}^3(r_i\oplus\beta_i)$,
 
 $$
-f_\beta=
+\phi_\beta=
 \begin{cases}
 q\,1\{n_\beta\ge2\},&h_v=1,\\
 1-q\,1\{n_\beta\ge2\},&h_v=0.
 \end{cases}
 $$
 
-For $r_{\partial v}=000$ and $h_v=0$, these expressions give $f_{000}=1$ and $f_{011}=f_{101}=f_{110}=1-q$. The four-panel example below uses $q=0.6$. No likelihood is fitted or selected by the gadget construction.
+For $r_{\partial v}=000$ and $h_v=0$, these expressions give $\phi_{000}=1$ and $\phi_{011}=\phi_{101}=\phi_{110}=1-q$. The four-panel example below uses $q=0.6$. No likelihood is fitted or selected by the gadget construction.
 
 ### Existence and the full nonnegative solution family
 
-Assume finite, nonnegative physical weights. **A solution exists whenever at least one of $f_{011},f_{101},f_{110}$ is positive.** For example, if $f_{011}>0$, the choice $(W_{23},W_{13},W_{12})=(f_{000}/f_{011},0,0)$ already proves existence.
+Assume finite, nonnegative physical weights. **A solution exists whenever at least one of $\phi_{011},\phi_{101},\phi_{110}$ is positive.** For example, if $\phi_{011}>0$, the choice $(W_{23},W_{13},W_{12})=(\phi_{000}/\phi_{011},0,0)$ already proves existence.
 
 When all three coefficients are positive, the complete nonnegative solution family is
 
 $$
 (W_{23},W_{13},W_{12})=
-f_{000}\left(\frac{\alpha_1}{f_{011}},
-\frac{\alpha_2}{f_{101}},\frac{\alpha_3}{f_{110}}\right),
+\phi_{000}\left(\frac{\alpha_1}{\phi_{011}},
+\frac{\alpha_2}{\phi_{101}},\frac{\alpha_3}{\phi_{110}}\right),
 \qquad \alpha_i\ge0,\quad \alpha_1+\alpha_2+\alpha_3=1.
 $$
 
-For $f_{000}>0$, this is exhaustive: any solution defines $\alpha_1=f_{011}W_{23}/f_{000}$, $\alpha_2=f_{101}W_{13}/f_{000}$, and $\alpha_3=f_{110}W_{12}/f_{000}$. These parameters allocate the total $f_{000}$ among the three possible internal matchings. The solution set is a triangle with vertices
+For $\phi_{000}>0$, this is exhaustive: any solution defines $\alpha_1=\phi_{011}W_{23}/\phi_{000}$, $\alpha_2=\phi_{101}W_{13}/\phi_{000}$, and $\alpha_3=\phi_{110}W_{12}/\phi_{000}$. These parameters allocate the total $\phi_{000}$ among the three possible internal matchings. The solution set is a triangle with vertices
 
 $$
 (W_{23},W_{13},W_{12})=
-(f_{000}/f_{011},0,0),\quad
-(0,f_{000}/f_{101},0),\quad
-(0,0,f_{000}/f_{110}).
+(\phi_{000}/\phi_{011},0,0),\quad
+(0,\phi_{000}/\phi_{101},0),\quad
+(0,0,\phi_{000}/\phi_{110}).
 $$
 
-If one or two coefficients vanish, keep the same formula only for the positive coefficients and require the corresponding $\alpha$ values to sum to one. For instance, when $f_{011}=0$, set $\alpha_1=0$, **do not evaluate the first quotient**, and let $W_{23}$ be any nonnegative number; apply the analogous rule to the other two coefficients. A zero coefficient makes its opposite triangle edge irrelevant to every local signature entry. Setting such free edges to zero is the simplest choice. This gives the full family with zero coefficients as well.
+If one or two coefficients vanish, keep the same formula only for the positive coefficients and require the corresponding $\alpha$ values to sum to one. For instance, when $\phi_{011}=0$, set $\alpha_1=0$, **do not evaluate the first quotient**, and let $W_{23}$ be any nonnegative number; apply the analogous rule to the other two coefficients. A zero coefficient makes its opposite triangle edge irrelevant to every local signature entry. Setting such free edges to zero is the simplest choice. This gives the full family with zero coefficients as well.
 
-If $f_{000}=0$ and at least one coefficient is positive, every triangle edge opposite a positive coefficient must have weight zero. Edges opposite zero coefficients remain arbitrary and nonnegative. The formula above yields these solutions, although its $\alpha$ values are then redundant.
+If $\phi_{000}=0$ and at least one coefficient is positive, every triangle edge opposite a positive coefficient must have weight zero. Edges opposite zero coefficients remain arbitrary and nonnegative. The formula above yields these solutions, although its $\alpha$ values are then redundant.
 
-If all three coefficients vanish, the equation reduces to $0=f_{000}$. When $f_{000}=0$, every signature entry vanishes and there is no supported local configuration. When $f_{000}>0$, **this four-node $K_4$ construction has no solution**: all spokes are forced to zero, so no internal perfect matching can have positive weight. A larger local gadget or the forced-wire construction below handles that case. Parity suffices for some matchgate representation at arity three; it does not guarantee that this particular four-node template works in every zero-support case.
+If all three coefficients vanish, the equation reduces to $0=\phi_{000}$. When $\phi_{000}=0$, every signature entry vanishes and there is no supported local configuration. When $\phi_{000}>0$, **this four-node $K_4$ construction has no solution**: all spokes are forced to zero, so no internal perfect matching can have positive weight. A larger local gadget or the forced-wire construction below handles that case. Parity suffices for some matchgate representation at arity three; it does not guarantee that this particular four-node template works in every zero-support case.
 
-The simplest implementation choice, when $f_{011}>0$, is the first vertex of the solution triangle: set $W_{23}=f_{000}/f_{011}$ and $W_{13}=W_{12}=0$. Otherwise choose a different positive coefficient. Zero edge weights specialize the $K_4$ template; the subgraph of positive-weight edges need not itself be complete.
+The simplest implementation choice, when $\phi_{011}>0$, is the first vertex of the solution triangle: set $W_{23}=\phi_{000}/\phi_{011}$ and $W_{13}=W_{12}=0$. Otherwise choose a different positive coefficient. Zero edge weights specialize the $K_4$ template; the subgraph of positive-weight edges need not itself be complete.
 
 ### Herald-channel example in site-function notation
 
-The [four-panel figure below](../figures/k4-gadget-matchings.png) uses the physical herald record $q=0.6$, $h_v=0$, $r_{\partial v}=000$. Its site entries are $(f_{000},f_{011},f_{101},f_{110})=(1,0.4,0.4,0.4)$. Choose the pivot $f_{011}>0$, giving three spoke weights of $0.4$ and triangle weights $(W_{23},W_{13},W_{12})=(2.5,0,0)$. The internal matching for $000$ has weight $0.4\times2.5=1=f_{000}$; the other even patterns each leave a single spoke of weight $0.4$. Each panel labels its site entry as $f_{xxx}$ together with its physical value.
+The [four-panel figure below](../figures/k4-gadget-matchings.png) uses the physical herald record $q=0.6$, $h_v=0$, $r_{\partial v}=000$. Its site entries are $(\phi_{000},\phi_{011},\phi_{101},\phi_{110})=(1,0.4,0.4,0.4)$. Choose the pivot $\phi_{011}>0$, giving three spoke weights of $0.4$ and triangle weights $(W_{23},W_{13},W_{12})=(2.5,0,0)$. The internal matching for $000$ has weight $0.4\times2.5=1=\phi_{000}$; the other even patterns each leave a single spoke of weight $0.4$. Each panel labels its site entry as $\phi_{xxx}$ together with its physical value, and each internal edge by its $W$ symbol and numerical weight.
 
-![Four panels reproduce the physical herald likelihoods f_000=1 and f_011=f_101=f_110=0.4 for q=0.6, herald zero and reference 000.](../figures/k4-gadget-matchings.png)
+![Four panels reproduce the physical herald likelihoods \phi_000=1 and \phi_011=\phi_101=\phi_110=0.4 for q=0.6, herald zero and reference 000.](../figures/k4-gadget-matchings.png)
 
-*Four local matching cases.* Each panel states its site entry: $f_{000}=1$, $f_{011}=f_{101}=f_{110}=0.4$. Green edges are the selected internal matching; solid blue wires cover the blue ports externally, giving $z_i=1$. Every port and the center is covered exactly once. Dashed triangle edges have zero weight for this pivot choice; dotted external wires are unoccupied. The triangle weight $2.5$ is an auxiliary ratio $f_{000}/f_{011}$; its product with the spoke weight $0.4$ gives the likelihood $1$. The displayed products are **site weights only**: occupied external wires contribute their $\rho_i$ separately in the global matching sum. Odd relative parity leaves an odd number of internal nodes and contributes zero. [SVG](../figures/k4-gadget-matchings.svg) · [PDF](../figures/k4-gadget-matchings.pdf).
+*Four local matching cases.* Each panel states its site entry: $\phi_{000}=1$, $\phi_{011}=\phi_{101}=\phi_{110}=0.4$. Internal edges retain the labels $W_{ci}$ or $W_{ij}$, including zero weights. Green edges are the selected internal matching; solid blue wires cover the blue ports externally, giving $z_i=1$. Every port and the center is covered exactly once. Dashed triangle edges have zero weight for this pivot choice; dotted external wires are unoccupied. The triangle weight $2.5$ is an auxiliary ratio $\phi_{000}/\phi_{011}$; its product with the spoke weight $0.4$ gives the likelihood $1$. The displayed products are **site weights only**: occupied external wires contribute their $\rho_i$ separately in the global matching sum. Odd relative parity leaves an odd number of internal nodes and contributes zero. [SVG](../figures/k4-gadget-matchings.svg) · [PDF](../figures/k4-gadget-matchings.pdf).
 
 ### Zero-support branches and normalization
 
-If only $f_{000}>0$, a strictly local gadget is still possible: attach one private leaf to each port and give the three internal edges weights $f_{000},1,1$. With no external wire occupied, there is a unique matching of weight $f_{000}$. Occupying any external wire leaves a private leaf unmatched, so every other signature entry is zero. This six-node gadget is not $K_4$.
+If only $\phi_{000}>0$, a strictly local gadget is still possible: attach one private leaf to each port and give the three internal edges weights $\phi_{000},1,1$. With no external wire occupied, there is a unique matching of weight $\phi_{000}$. Occupying any external wire leaves a private leaf unmatched, so every other signature entry is zero. This six-node gadget is not $K_4$.
 
-To retain a fixed topology, the current implementation uses an equivalent global construction: forbid occupancy of all relative wires incident to that site, use an internal gadget with total matching weight one, and retain $f_{000}$ in the overall constant. Here the site's hard constraint also enters the external wires through zero weights. Ratios with zero denominators are invalid. If all allowed entries vanish, the site has no local support.
+To retain a fixed topology, the current implementation uses an equivalent global construction: forbid occupancy of all relative wires incident to that site, use an internal gadget with total matching weight one, and retain $\phi_{000}$ in the overall constant. Here the site's hard constraint also enters the external wires through zero weights. Ratios with zero denominators are invalid. If all allowed entries vanish, the site has no local support.
 
-A degree-two site allows only $00,11$. One internal port-to-port edge of weight $f_{00}/f_{11}$ produces the signature $(f_{00}/f_{11},1)$; restoring the original weight requires multiplication by $f_{11}$. If $f_{11}=0$, use the branch that forces the wires to be unoccupied.
+A degree-two site allows only $00,11$. One internal port-to-port edge of weight $\phi_{00}/\phi_{11}$ produces the signature $(\phi_{00}/\phi_{11},1)$; restoring the original weight requires multiplication by $\phi_{11}$. If $\phi_{11}=0$, use the branch that forces the wires to be unoccupied.
 
-The implementation divides degree-three signatures by their maximum entry to improve numerical scaling. Write the normalized signature as $\widehat f_v=f_v^r/\lambda_v$. With a forced-wire branch, $\widehat f_v$ denotes the effective signature of the gadget together with its wire-support restrictions. The constant $\lambda_v$ is independent of the configuration and cancels from logical probabilities; it must be restored when computing the **absolute partition function**. The diagrams use unnormalized weights so that their local products equal the physical $f$ entries directly.
+The implementation divides degree-three signatures by their maximum entry to improve numerical scaling. Write the normalized signature as $\widehat \phi_v=\phi_v^r/\lambda_v$. With a forced-wire branch, $\widehat \phi_v$ denotes the effective signature of the gadget together with its wire-support restrictions. The constant $\lambda_v$ is independent of the configuration and cancels from logical probabilities; it must be restored when computing the **absolute partition function**. The diagrams use unnormalized weights so that their local products equal the physical $\phi$ entries directly.
 
 ## Exactly what the matrix K contains
 
@@ -223,23 +224,103 @@ Here $\kappa_{ij}=\pm1$ comes from a Kasteleyn orientation of the entire expande
 | Auxiliary edge | Source of its weight |
 | --- | --- |
 | External wire corresponding to an original edge | Original edge prior ratio $\rho_e$; a forced-wire branch may also set it to zero |
-| Spokes $cp_1,cp_2,cp_3$ | Site entries $f_{011},f_{101},f_{110}$, or their normalized values |
+| Spokes $cp_1,cp_2,cp_3$ | Site entries $\phi_{011},\phi_{101},\phi_{110}$, or their normalized values |
 | Triangle edges $p_1p_2,p_1p_3,p_2p_3$ | Any nonnegative solution $W$ of the local matching equation above |
 | Boundary-rail wires and gadgets | Unit weights encoding boundary parity |
 
-For the displayed pivot, $K$ contains spoke entries with magnitudes $f_{011},f_{101},f_{110}$ and a triangle entry with magnitude $f_{000}/f_{011}$. **These entries are where the vertex weight enters the matrix.** Filling only the original graph's adjacency matrix with edge priors would omit the site likelihood.
+For the displayed pivot, $K$ contains spoke entries with magnitudes $\phi_{011},\phi_{101},\phi_{110}$ and a triangle entry with magnitude $\phi_{000}/\phi_{011}$. **These entries are where the vertex weight enters the matrix.** Filling only the original graph's adjacency matrix with edge priors would omit the site likelihood.
 
-In the source code, <code>ParityGadgets.sites</code> identifies each site's spoke and triangle edges, and <code>posterior_from_factors</code> fills their weights using the normalized entries of $f_v^r$. It chooses the first positive spoke coefficient and puts the entire $f_{000}$ contribution on the opposite triangle edge. The array <code>gadgets.wire</code> receives $\rho_e$. All auxiliary edges then receive orientation signs before the sparse matrix $K$ is constructed. The production API remains restricted to the canonical honeycomb geometry; this mathematical explanation does not extend the API to arbitrary planar graphs.
+In the source code, <code>ParityGadgets.sites</code> identifies each site's spoke and triangle edges, and <code>posterior_from_factors</code> fills their weights using the normalized entries of $\phi_v^r$. It chooses the first positive spoke coefficient and puts the entire $\phi_{000}$ contribution on the opposite triangle edge. The array <code>gadgets.wire</code> receives $\rho_e$. All auxiliary edges then receive orientation signs before the sparse matrix $K$ is constructed. The production API remains restricted to the canonical honeycomb geometry; this mathematical explanation does not extend the API to arbitrary planar graphs.
+
+## Assigning a Kasteleyn orientation
+
+### The face rule and the signs in K
+
+Fix a planar embedding of the **complete expanded graph** $\widetilde G$, including gadget edges, connecting wires and the boundary rail. Orient each edge so that every bounded face has an **odd number of clockwise arrows**:
+
+$$
+n_{\rm cw}(F)\equiv1\pmod2.
+$$
+
+Walk around a bounded face clockwise, keeping the face on your right; count arrows agreeing with that walk. A triangle may have one or three such arrows. A square may also have one or three. Count boundary **occurrences**: a bridge is traversed twice in opposite directions and contributes one agreeing occurrence. Bipartiteness and even face length are unnecessary. This is the plane-graph rule in [Galluccio and Loebl, Theorem 1.7](https://www.combinatorics.org/ojs/index.php/eljc/article/download/v6i1r6/pdf).
+
+With the convention used here,
+
+$$
+K_{ij}=\begin{cases}+W_{ij},&i\longrightarrow j,\\-W_{ij},&j\longrightarrow i,\end{cases}
+\qquad K_{ji}=-K_{ij}.
+$$
+
+An arrow specifies a matrix sign, independently of the physical weights. Orienting isolated gadgets separately does not enforce the rule on faces formed between gadgets.
+
+### A constructive assignment procedure
+
+1. Enumerate the faces of the fixed embedding.
+2. Construct the dual graph: a dual vertex represents a face; a dual edge crosses a primal edge separating two faces. Ignore dual loops from bridges.
+3. Choose a dual spanning tree rooted at the outer face. Orient primal edges outside this tree arbitrarily.
+4. Process bounded faces from the tree's leaves toward its root. Each face has one remaining unassigned edge, crossing its parent edge. Direct it to make that face's clockwise count odd.
+5. Check every bounded face. The outer face needs no separate assignment.
+
+This construction is described in [Cimasoni, The geometry of dimer models, Section 3](https://www.unige.ch/~cimasoni/Berlin.pdf). The repository's <code>pfaffian_orientation</code> in [<code>_planar.py</code>](../../../src/herald_decoder/_planar.py) implements it. Its face walks are counterclockwise for bounded faces, so it counts arrows opposing those walks. Once face boundaries are available, the tree construction and assignment take $O(|\widetilde V|+|\widetilde E|)$ operations; extracting them from coordinates additionally sorts the incident rays.
+
+### When is assignment possible?
+
+**Every finite connected plane graph admits the bounded-face rule.** Disconnected graphs can be handled component by component. An even number of vertices is unnecessary for assigning these arrows; a perfect matching, however, requires an even number in each component. Even size alone does not ensure a matching or a positive partition sum.
+
+For a connected graph with $V$ vertices, $E$ edges and $F$ faces including the outer face, the outer parity is forced. Count agreeing arrows using face-on-the-right boundary walks, also for the outer face. Each edge contributes once across its two face occurrences, and Euler's relation gives
+
+$$
+n_{\rm cw}(F_{\rm outer})\equiv E-(F-1)\equiv V-1\pmod2.
+$$
+
+Thus imposing the odd rule on **all** faces is possible exactly when $V$ is even. For the outer face, a face-on-the-right walk runs geometrically counterclockwise around the enclosed graph; confusing this convention with the bounded-face walk reverses the interpretation. The production helper requires a connected planar embedding; component handling is a mathematical extension, not an additional API claim.
+
+### An explicit K4 example
+
+![An isolated planar K4 with counterclockwise outer triangle arrows and outward spokes; each of its three bounded triangular faces has one clockwise arrow.](../figures/k4-gadget-orientation.png)
+
+*One valid orientation of an isolated gadget.* Direct the outer triangle $p_1\to p_2\to p_3\to p_1$, and all spokes $c\to p_i$. Each bounded triangle has exactly one clockwise arrow, marked in the figure. The arrows remain valid when some weights are zero. This demonstrates the local rule; the glued decoder graph is oriented globally by the dual-tree procedure. [SVG](../figures/k4-gadget-orientation.svg) · [PDF](../figures/k4-gadget-orientation.pdf).
+
+For node order $(p_1,p_2,p_3,c)$, this example gives
+
+$$
+K_{\rm iso}=\begin{pmatrix}
+0&W_{12}&-W_{13}&-W_{c1}\\
+-W_{12}&0&W_{23}&-W_{c2}\\
+W_{13}&-W_{23}&0&-W_{c3}\\
+W_{c1}&W_{c2}&W_{c3}&0
+\end{pmatrix},
+$$
+
+$$
+\operatorname{Pf}K_{\rm iso}
+=-W_{12}W_{c3}-W_{13}W_{c2}-W_{c1}W_{23}
+=-\phi_{000}.
+$$
+
+All three internal matching terms have the same sign. The global minus sign is harmless: its absolute value is the no-external-occupation site weight.
+
+### Why the face rule suffices, and where it stops
+
+Two perfect matchings differ along disjoint even alternating cycles. Summing the face rule inside a simple cycle $C$, then using Euler's relation for its disk, yields
+
+$$
+n_{\rm cw}(C)\equiv1+V_{\rm int}(C)\pmod2.
+$$
+
+For an alternating cycle, interior vertices match among themselves, so $V_{\rm int}(C)$ is even. Changing the matching along $C$ therefore changes its Pfaffian coefficient by $(-1)^{n_{\rm cw}(C)+1}=+1$. This is why all matching terms share one sign; see the proof accompanying [Galluccio and Loebl, Theorem 1.7](https://www.combinatorics.org/ojs/index.php/eljc/article/download/v6i1r6/pdf).
+
+Planarity is sufficient, but some nonplanar graphs also admit a Pfaffian orientation. The general criterion requires every even cycle whose vertex deletion leaves a perfectly matchable graph to be oddly oriented. Other nonplanar graphs, including $K_{3,3}$, fail this criterion. On a torus, face checks leave noncontractible cycles uncontrolled; the general dimer formula uses four Pfaffians, or $4^g$ for genus $g$. See [Cimasoni, Sections 2–3](https://www.unige.ch/~cimasoni/Berlin.pdf). These global orientation conditions are separate from the local site-tensor matchgate conditions above.
 
 ## Why the entire partition sum is a Pfaffian
 
-For fixed external wire bits $z$, the internal matchings of each gadget can be summed independently, producing $\prod_v\widehat f_v(z_{\partial v})$. Summing over all wire choices then gives
+For fixed external wire bits $z$, the internal matchings of each gadget can be summed independently, producing $\prod_v\widehat \phi_v(z_{\partial v})$. Summing over all wire choices then gives
 
 $$
 Z_{\rm dimer}
 =\sum_{M\ {\rm perfect\ matching\ of}\ \widetilde G}
 \prod_{ij\in M}W_{ij}
-=\sum_{z:Hz=0}\prod_e \rho_e^{z_e}\prod_v\widehat f_v(z_{\partial v}).
+=\sum_{z:Hz=0}\prod_e \rho_e^{z_e}\prod_v\widehat \phi_v(z_{\partial v}).
 $$
 
 Rough boundaries require the parity rail described below. Its weights are one, so it introduces no additional physical likelihood. Hence
@@ -281,22 +362,22 @@ The free-fermion structure of a degree-three parity tensor is also visible local
 
 $$
 \mathcal F_v(\theta)
-=f_{000}+f_{110}\theta_1\theta_2+f_{101}\theta_1\theta_3+f_{011}\theta_2\theta_3.
+=\phi_{000}+\phi_{110}\theta_1\theta_2+\phi_{101}\theta_1\theta_3+\phi_{011}\theta_2\theta_3.
 $$
 
-When $f_{000}\ne0$,
+When $\phi_{000}\ne0$,
 
 $$
-\mathcal F_v(\theta)=f_{000}\exp\left(
-\frac{f_{110}}{f_{000}}\theta_1\theta_2+
-\frac{f_{101}}{f_{000}}\theta_1\theta_3+
-\frac{f_{011}}{f_{000}}\theta_2\theta_3
+\mathcal F_v(\theta)=\phi_{000}\exp\left(
+\frac{\phi_{110}}{\phi_{000}}\theta_1\theta_2+
+\frac{\phi_{101}}{\phi_{000}}\theta_1\theta_3+
+\frac{\phi_{011}}{\phi_{000}}\theta_2\theta_3
 \right).
 $$
 
 With three Grassmann variables, the product of any two quadratic terms repeats a variable, so all higher-order terms vanish. Thus any four even weights admit this local Gaussian expression. At four legs, the quadratic exponential produces a quartic term whose coefficient must obey the matchgate identity above. A general site interaction need not satisfy it and therefore does not automatically admit this Gaussian/Pfaffian algorithm.
 
-Direct contraction of site Grassmann functions also requires consistent leg ordering and edge-contraction signs. The local three-dimensional matrix above cannot simply serve as the global $K$; the implementation uses explicit gadgets and a global orientation to carry out these steps. When $f_{000}=0$, the expression containing $1/f_{000}$ is invalid; use a suitable gadget, pivot, or limiting construction.
+Direct contraction of site Grassmann functions also requires consistent leg ordering and edge-contraction signs. The local three-dimensional matrix above cannot simply serve as the global $K$; the implementation uses explicit gadgets and a global orientation to carry out these steps. When $\phi_{000}=0$, the expression containing $1/\phi_{000}$ is invalid; use a suitable gadget, pivot, or limiting construction.
 
 [Bravyi, Contraction of matchgate tensor networks](https://arxiv.org/abs/0801.2989), Sections 2.3, 3.3, and 4, develops Grassmann Gaussian integrals, Gaussian generating functions for matchgates, and contraction theory. This connects vertex-tensor models to edge-weight matching models.
 
@@ -329,7 +410,7 @@ The implementation therefore needs only one sparse LU factorization and one solv
 
 ## A small check of the weight-preserving conversion
 
-The [explanatory check](../results/site-gadget-partition-review.json) enumerates all eight local port patterns for four nonnegative test signatures, including zero entries and the private-leaf construction when only $f_{000}$ is positive. Eight closed planar four-vertex fixtures then compare all $2^6$ physical configurations, auxiliary perfect matchings, a recursive Pfaffian and an inverse-entry occupancy.
+The [explanatory check](../results/site-gadget-partition-review.json) enumerates all eight local port patterns for four nonnegative test signatures, including zero entries and the private-leaf construction when only $\phi_{000}$ is positive. Eight closed planar four-vertex fixtures then compare all $2^6$ physical configurations, auxiliary perfect matchings, a recursive Pfaffian and an inverse-entry occupancy.
 
 They check the absolute identity $Z=C_0|\operatorname{Pf}K|$ without dropping site factors or normalizing away a missing constant. Maximum relative partition error and absolute occupancy error are both $2.22\times10^{-16}$. This illustrates the reduction; it does not extend production geometry support or certify large-matrix numerical stability. Reproduce with <code>scripts/validate_site_gadget_partition.py</code>.
 

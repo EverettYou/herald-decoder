@@ -2096,10 +2096,11 @@ body.pdf-standalone-page .pdf-shell { height: calc(100vh - 44px); min-height: 0;
 
 .result-page-heading h1 {
   margin: 8px 0 7px;
-  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-size: 1.7rem;
+  overflow-wrap: anywhere;
 }
 
-.result-page-heading p {
+.result-page-heading p:not(.lab-overline) {
   max-width: 760px;
   margin: 0;
   color: #53635f;

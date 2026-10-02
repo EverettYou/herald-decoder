@@ -1,10 +1,10 @@
 {
   "status": "passed",
-  "generated_at": "2026-10-02T04:27:22.374789+00:00",
-  "generator_source_sha256": "68b44ddd3e11ec5f7f1bd0da2b484d734b31a730be5bd81a3924166940d4623f",
+  "generated_at": "2026-10-02T04:40:19.165904+00:00",
+  "generator_source_sha256": "36709c972fcfc7cd463367f873da48d094bcafd38ffbacfab2e4d3974ec838b1",
   "partition_fixture": "results/site-gadget-partition-review.json",
   "partition_fixture_sha256": "dff3a0e7ec8a77b8dde10ec4b99f67e38041a36fa09e3b27b7b06db21c9a59a0",
-  "illustration": "Herald-channel likelihoods, labeled by f_xxx and their values; pivot f_011>0",
+  "illustration": "Site entries phi_beta; all internal edges labeled W_ci or W_ij; pivot phi_011>0",
   "physical_validation_record": {
     "reference": "000",
     "herald": 0,
@@ -17,15 +17,15 @@
     ]
   },
   "site_entry_order": [
-    "f_000",
-    "f_011",
-    "f_101",
-    "f_110"
+    "phi_000",
+    "phi_011",
+    "phi_101",
+    "phi_110"
   ],
   "notation": {
     "physical_edge": "w_e(x_e)",
-    "physical_site": "f_v(x_incident)",
-    "relative_site": "f_v^r(z_incident)",
+    "physical_site": "phi_v(x_incident)",
+    "relative_site": "phi_v^r(z_incident)",
     "relative_prior_ratio": "rho_e",
     "auxiliary_edge": "W_ij"
   },
@@ -48,7 +48,7 @@
         1,
         1
       ],
-      "site_entry": "f_000",
+      "site_entry": "phi_000",
       "physical_validation_weight": "1"
     },
     {
@@ -65,7 +65,7 @@
         1,
         1
       ],
-      "site_entry": "f_011",
+      "site_entry": "phi_011",
       "physical_validation_weight": "2/5"
     },
     {
@@ -82,7 +82,7 @@
         1,
         1
       ],
-      "site_entry": "f_101",
+      "site_entry": "phi_101",
       "physical_validation_weight": "2/5"
     },
     {
@@ -99,7 +99,7 @@
         1,
         1
       ],
-      "site_entry": "f_110",
+      "site_entry": "phi_110",
       "physical_validation_weight": "2/5"
     }
   ],
@@ -299,6 +299,156 @@
       "all_eight_signatures_exact": true
     }
   ],
+  "orientation_checks": [
+    {
+      "fixture": "isolated-K4",
+      "vertices": 4,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "signs_relative_to_stored_edges": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "bounded_face_clockwise_counts": [
+        1,
+        1,
+        1
+      ],
+      "outer_face_on_right_agreement_count": 3,
+      "repeated_boundary_edge_occurrences": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pfaffian_matching_coefficients": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "fixture": "odd-size-triangle",
+      "vertices": 3,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "signs_relative_to_stored_edges": [
+        -1,
+        1,
+        1
+      ],
+      "bounded_face_clockwise_counts": [
+        1
+      ],
+      "outer_face_on_right_agreement_count": 2,
+      "repeated_boundary_edge_occurrences": [
+        0,
+        0
+      ]
+    },
+    {
+      "fixture": "K4-with-two-bridges",
+      "vertices": 6,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "signs_relative_to_stored_edges": [
+        -1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "bounded_face_clockwise_counts": [
+        3,
+        1,
+        1
+      ],
+      "outer_face_on_right_agreement_count": 3,
+      "repeated_boundary_edge_occurrences": [
+        1,
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "orientation_source": "src/herald_decoder/_planar.py",
+  "orientation_source_sha256": "1a6bd6d01e6d053f6a77296ecd7b0b79a13be70028d93fd554389397480aeb44",
   "no_K4_solution_for_positive_000_only": true,
   "figures": [
     {
@@ -306,15 +456,15 @@
       "files": [
         {
           "path": "figures/k4-gadget-construction.png",
-          "sha256": "1fb19c7d1cea9f20feab2a1c0b5d926d31556abe9d52c8ef95fc2e86f8d95af5"
+          "sha256": "af1053a21451936013f5a0d9a117a9bd5157550cd9db2cee8ce5bf2a223547d1"
         },
         {
           "path": "figures/k4-gadget-construction.svg",
-          "sha256": "3afcd1546b4b22ebd1867a1b3b2ba6ca2f81aa0024b36aedafbcb855e5159a61"
+          "sha256": "18e27b795de7cf9b46d23ce20fec9c251a47767fdfe086c19e13c558d1b90776"
         },
         {
           "path": "figures/k4-gadget-construction.pdf",
-          "sha256": "26fa56c133cebc418c9e1b2e21ace5b9feee98293b2167f31fe9421a3102e6cc"
+          "sha256": "93e36eb006da343015190d6b5a7bc08e1c77fc02560fb20f0440f9c746d3a6be"
         }
       ]
     },
@@ -323,15 +473,15 @@
       "files": [
         {
           "path": "figures/k4-gadget-matchings.png",
-          "sha256": "8af56863965ce16a27cde1d0b54893ae25bec5d690d51de92c1e444930d8a69c"
+          "sha256": "dc180d73d366b6efab031a327f6ef7ca2d876814938660de6afdb4cddc192eea"
         },
         {
           "path": "figures/k4-gadget-matchings.svg",
-          "sha256": "2ecf2e1cfa996b52f781f8934bf7ddbea26706615c73a012a1cdfe473e260998"
+          "sha256": "9fd757a75e045288b7af9ca24d09a56d14706436b91f31075a182dc3390685a5"
         },
         {
           "path": "figures/k4-gadget-matchings.pdf",
-          "sha256": "56a9c19fa061f33b815bc99d6d48a379cc357eb0a13d406f322dd3d1181bd0bc"
+          "sha256": "3edb0a742c92081c3dedfb1dd3d8f8d2c483d6a045aaef77dcd4fbdb6fc2cb0c"
         }
       ]
     },
@@ -340,15 +490,32 @@
       "files": [
         {
           "path": "figures/k4-gadget-gluing.png",
-          "sha256": "f88c971a432953a91345aee4eca90008ad92c719668f71a12da6db00ccf18f81"
+          "sha256": "9743601c829166371baa10dfd8550186c694a015c40e3b2dbb07a3ca09fdd1bf"
         },
         {
           "path": "figures/k4-gadget-gluing.svg",
-          "sha256": "1a4758368c24016fba8e78947c4ba9f3ef41657b1a9815f7eac66960bef6faf4"
+          "sha256": "068e6ff78bf0f355ed9bf55e07263ac71dc7f26959d05edd5dfe743af6bc1991"
         },
         {
           "path": "figures/k4-gadget-gluing.pdf",
-          "sha256": "ce102d272e8a6bd09f0f957bf679c5ec05b90e42fbcfcc9d830f94693f4045bd"
+          "sha256": "179c83d753f952fe22f1f833a38a43b87eb737e3e9a9bae6194c4872a2f62a58"
+        }
+      ]
+    },
+    {
+      "name": "k4-gadget-orientation",
+      "files": [
+        {
+          "path": "figures/k4-gadget-orientation.png",
+          "sha256": "2b17f66c3392d4494d74b8b0229013ded3785d11beb3e820ed357cb114897d53"
+        },
+        {
+          "path": "figures/k4-gadget-orientation.svg",
+          "sha256": "f8fb315bf4503587dbd529cd41a9897a415dfc5b45896013aa2fcbe70073436f"
+        },
+        {
+          "path": "figures/k4-gadget-orientation.pdf",
+          "sha256": "a7431d6255e5e275a18ba842aa26c48286ff2c674cb358f6c9983098561d47d3"
         }
       ]
     }
@@ -356,7 +523,7 @@
   "semantics": {
     "external_occupation": "z_i=1 covers port p_i externally",
     "displayed_signature_weights": "internal only; external priors multiply once per wire",
-    "orientation": "undirected topology shown; global Kasteleyn signs omitted",
+    "orientation": "first three figures are undirected; fourth is an isolated K4 orientation, not the glued global orientation",
     "zero_edges": "two triangle edges have zero weight only in the numerical example"
   },
   "scope": "Explanatory schematics; no new benchmark samples or production geometry support."
