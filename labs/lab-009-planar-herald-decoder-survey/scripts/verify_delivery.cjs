@@ -16,6 +16,15 @@ const read = name => JSON.parse(fs.readFileSync(path.join(folder, name), 'utf8')
   const receipt = { status: 'running', verified_at: new Date().toISOString(), base_url: base,
     report: {}, figures: [], wiki: [], documents: [], workbench: [], browser_errors: [] };
   const figures = read('results/figure-provenance.json');
+  const phase = read('results/phase-figure-provenance.json');
+  figures.figures.push(phase);
+  Object.assign(figures.input_sha256,phase.input_sha256);
+  Object.assign(figures.output_sha256,phase.output_sha256);
+  const phaseAnalysis=read('results/phase-analysis.json');
+  const phaseAudit=read('results/phase-vector-audit.json');
+  assert.equal(phaseAudit.status,'passed');
+  assert.equal(phaseAudit.saved_trial_vectors_checked,phaseAnalysis.new_independent_trials);
+  assert.equal(phaseAnalysis.numerical_failures,0);
   for (const [name, digest] of Object.entries({...figures.input_sha256, ...figures.output_sha256})) {
     assert.equal(sha(path.join(folder, name)), digest, `changed figure input/output: ${name}`);
   }
@@ -58,6 +67,10 @@ const read = name => JSON.parse(fs.readFileSync(path.join(folder, name), 'utf8')
   const report = await page.locator('#lab-document').innerText();
   assert.ok(report.includes('p,q in [0,1]'));
   assert.ok(report.includes('3,200 independent records'));
+  assert.ok(report.includes(phaseAnalysis.new_independent_trials.toLocaleString('en-US')+' independent records'));
+  assert.ok(report.includes('Full-domain decoding-phase diagram'));
+  assert.ok(report.includes('pilot records'));
+  assert.ok(report.includes('drift'));
   const imageUrls = await page.locator('#lab-document img').evaluateAll(imgs=>imgs.map(i=>i.src));
   assert.equal(imageUrls.length, figures.figures.length);
   for (const f of figures.figures) assert.ok(imageUrls.some(url=>url.endsWith(f.files[0])));
@@ -66,6 +79,8 @@ const read = name => JSON.parse(fs.readFileSync(path.join(folder, name), 'utf8')
   const captions = await page.locator('#lab-document em').allTextContents();
   assert.equal(captions.filter(t=>/^Figure L009\./.test(t)).length, figures.figures.length);
   await page.screenshot({path:path.join(qa,'report.png'),fullPage:true});
+  await page.getByRole('heading',{name:'L009.5 Full-domain decoding-phase diagram'}).scrollIntoViewIfNeeded();
+  await page.screenshot({path:path.join(qa,'phase-report-visible.png')});
   receipt.report = {url:page.url(), all_current_images_loaded:true, image_count:figures.figures.length, captions_verified:true,
     full_domain_visible:true, superseded_images_absent:true, sha256:sha(path.join(folder,'REPORT.md')),
     screenshot:'results/verification/report.png', registry_ids:expected, stage:payload.lab.stage};
@@ -88,7 +103,7 @@ const read = name => JSON.parse(fs.readFileSync(path.join(folder, name), 'utf8')
       const bytes = await response.body();
       assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),figures.output_sha256[vector]);
     }
-    if (['warm-runtime'].includes(f.id)) await page.screenshot({path:path.join(qa,`${f.id}-page.png`),fullPage:true});
+    if (['warm-runtime','exact-planar-phase-diagram'].includes(f.id)) await page.screenshot({path:path.join(qa,`${f.id}-page.png`),fullPage:true});
     receipt.figures.push({id:f.id,url:page.url(),image_loaded:true,caption_matches:true,svg_pdf_hashes_match:true,inputs:f.inputs});
   }
   const wikiApi = await json(`/api/labs/${lab}/wiki?page=index`);
@@ -96,12 +111,24 @@ const read = name => JSON.parse(fs.readFileSync(path.join(folder, name), 'utf8')
     await visit(`/lab-wiki?lab=${lab}&page=${encodeURIComponent(id)}`, '#local-wiki-document');
     assert.ok((await page.locator('#local-wiki-document').innerText()).length > 100);
     assert.equal(await page.locator('#local-wiki-document .katex-error').count(),0,`wiki math: ${id}`);
+    if(id==='phase-diagram'){
+      await page.waitForFunction(()=>[...document.querySelectorAll('#local-wiki-document img')].every(i=>i.complete&&i.naturalWidth>0));
+      assert.equal(await page.locator('#local-wiki-document img').count(),1);
+      const body=await page.locator('#local-wiki-document').innerText();
+      for(const text of ['decodable phase','non-decodable phase','bootstrap','L24 / L32'])assert.ok(body.includes(text),text);
+      await page.screenshot({path:path.join(qa,'phase-wiki.png'),fullPage:true});
+    }
     if (id==='planar-ml') await page.screenshot({path:path.join(qa,'planar-wiki.png'),fullPage:true});
     receipt.wiki.push({page:id,url:page.url(),content_visible:true,math_errors:0});
   }
   await visit('/document?path=src%2Fherald_decoder%2FREADME.md','.project-document-preview');
   assert.ok((await page.locator('.project-document-preview').innerText()).includes('make_decoder'));
   receipt.source_readme={url:page.url(),api_visible:true};
+  await visit(`/document?path=${encodeURIComponent('labs/'+lab+'/wiki/statistical-mechanics.md')}`,'.project-document-preview');
+  assert.ok((await page.locator('.project-document-preview').innerText()).includes('Measured full-domain transition'));
+  assert.ok(await page.locator('.project-document-preview a').filter({hasText:'exact-planar phase diagram'}).count());
+  assert.equal(await page.locator('.project-document-preview .katex-error').count(),0);
+  receipt.statistical_mechanics_document={url:page.url(),phase_link_visible:true,math_errors:0};
   await visit(`/document?path=${encodeURIComponent('labs/'+lab+'/data/README.md')}`,'.project-document-preview');
   assert.equal(await page.locator('.project-document-preview a[href$=".svg"]').count(),figures.figures.reduce((n,f)=>n+f.files.filter(x=>x.endsWith('.svg')).length,0));
   assert.equal(await page.locator('.project-document-preview a[href$=".pdf"]').count(),figures.figures.reduce((n,f)=>n+f.files.filter(x=>x.endsWith('.pdf')).length,0));

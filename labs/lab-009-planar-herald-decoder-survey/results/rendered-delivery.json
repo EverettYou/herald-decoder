@@ -1,19 +1,20 @@
 {
   "status": "passed",
-  "verified_at": "2026-10-02T00:57:25.650Z",
+  "verified_at": "2026-10-02T04:18:30.994Z",
   "base_url": "http://127.0.0.1:8010",
   "report": {
     "url": "http://127.0.0.1:8010/lab?id=lab-009-planar-herald-decoder-survey",
     "all_current_images_loaded": true,
-    "image_count": 4,
+    "image_count": 5,
     "captions_verified": true,
     "full_domain_visible": true,
     "superseded_images_absent": true,
-    "sha256": "ac556dbaa7b375c262d5344b10e569e866404879874a228dc444fe9ae3a05d95",
+    "sha256": "e694ffa9ce802b1038739270ca9c024b2b5182d72427c3b34c974ac039904c49",
     "screenshot": "results/verification/report.png",
     "registry_ids": [
       "approximation-diagnostics",
       "decoder-workbench",
+      "exact-planar-phase-diagram",
       "fresh-conditional-regret",
       "fresh-matched-ler",
       "local-wiki",
@@ -65,6 +66,19 @@
       "inputs": [
         "results/validation.json"
       ]
+    },
+    {
+      "id": "exact-planar-phase-diagram",
+      "url": "http://127.0.0.1:8010/lab-result?lab=lab-009-planar-herald-decoder-survey&result=exact-planar-phase-diagram",
+      "image_loaded": true,
+      "caption_matches": true,
+      "svg_pdf_hashes_match": true,
+      "inputs": [
+        "results/phase-analysis.json",
+        "results/phase-method-validation.json",
+        "data/phase-risk-cells.csv",
+        "manifests/phase-diagram.json"
+      ]
     }
   ],
   "wiki": [
@@ -101,6 +115,12 @@
     {
       "page": "model",
       "url": "http://127.0.0.1:8010/lab-wiki?lab=lab-009-planar-herald-decoder-survey&page=model",
+      "content_visible": true,
+      "math_errors": 0
+    },
+    {
+      "page": "phase-diagram",
+      "url": "http://127.0.0.1:8010/lab-wiki?lab=lab-009-planar-herald-decoder-survey&page=phase-diagram",
       "content_visible": true,
       "math_errors": 0
     },
@@ -149,6 +169,26 @@
     {
       "path": "src/herald_decoder/README.md",
       "url": "http://127.0.0.1:8010/document?path=src%2Fherald_decoder%2FREADME.md",
+      "readable": true
+    },
+    {
+      "path": "labs/lab-009-planar-herald-decoder-survey/data/phase-risk-cells.csv",
+      "url": "http://127.0.0.1:8010/document?path=labs%2Flab-009-planar-herald-decoder-survey%2Fdata%2Fphase-risk-cells.csv",
+      "readable": true
+    },
+    {
+      "path": "labs/lab-009-planar-herald-decoder-survey/results/phase-analysis.json",
+      "url": "http://127.0.0.1:8010/document?path=labs%2Flab-009-planar-herald-decoder-survey%2Fresults%2Fphase-analysis.json",
+      "readable": true
+    },
+    {
+      "path": "labs/lab-009-planar-herald-decoder-survey/results/phase-figure-provenance.json",
+      "url": "http://127.0.0.1:8010/document?path=labs%2Flab-009-planar-herald-decoder-survey%2Fresults%2Fphase-figure-provenance.json",
+      "readable": true
+    },
+    {
+      "path": "labs/lab-009-planar-herald-decoder-survey/wiki/phase-diagram.md",
+      "url": "http://127.0.0.1:8010/document?path=labs%2Flab-009-planar-herald-decoder-survey%2Fwiki%2Fphase-diagram.md",
       "readable": true
     },
     {
@@ -233,14 +273,19 @@
   ],
   "browser_errors": [],
   "figure_hashes": {
-    "inputs": 4,
-    "outputs": 12,
+    "inputs": 8,
+    "outputs": 15,
     "all_match": true
   },
   "scientific_vector_audit": "results/survey-analysis.json",
   "source_readme": {
     "url": "http://127.0.0.1:8010/document?path=src%2Fherald_decoder%2FREADME.md",
     "api_visible": true
+  },
+  "statistical_mechanics_document": {
+    "url": "http://127.0.0.1:8010/document?path=labs%2Flab-009-planar-herald-decoder-survey%2Fwiki%2Fstatistical-mechanics.md",
+    "phase_link_visible": true,
+    "math_errors": 0
   },
   "vector_guide": {
     "url": "http://127.0.0.1:8010/document?path=labs%2Flab-009-planar-herald-decoder-survey%2Fdata%2FREADME.md",

@@ -1,0 +1,137 @@
+{
+  "id": "exact-planar-full-domain-phase-diagram",
+  "status": "complete",
+  "model": "canonical honeycomb retained edges; IID Bernoulli(p), s=Hx mod2, h=1{detector count>=2} Bernoulli(q), unmeasured rough tips",
+  "p_domain": [
+    0,
+    1
+  ],
+  "q_domain": [
+    0,
+    1
+  ],
+  "method": "exact planar logical-sector Bayes inference; visible MAP reference; sparse LU numerical gates",
+  "risk_estimator": "unconditional mean min(P0,P1); sampled-record standard error; never approximate-decoder risk",
+  "sizes": [
+    8,
+    16,
+    24
+  ],
+  "p_grid": [
+    0.0,
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.5,
+    0.55,
+    0.6,
+    0.65,
+    0.7,
+    0.75,
+    0.8,
+    0.85,
+    0.9,
+    0.95,
+    1.0
+  ],
+  "q_grid": [
+    0,
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.85,
+    0.9,
+    0.95,
+    1
+  ],
+  "initial_shots_per_cell": 256,
+  "resources": {
+    "workers": 6,
+    "blas_threads_per_worker": 1
+  },
+  "refinement": "Independently extend transition neighborhoods and larger-size checks after broad-grid analysis. Retain all observed roots; do not force one threshold, symmetry or monotonicity in p.",
+  "acceptance": [
+    "Matched-input exact posterior and geometry-cache validation; measured method speed comparison",
+    "Full-square independent measurements; deterministic endpoints labeled analytic, failures retained and gated",
+    "Three-size risk maps plus size-difference evidence and sampled crossing uncertainty; unresolved regions explicit",
+    "Independent larger-size transition checks; size drift separate from sampling uncertainty",
+    "PNG/SVG/PDF, data and provenance, report embed, active registry, actual rendered page and downloads verified"
+  ],
+  "not_claimed": [
+    "Rigorous thermodynamic phase classification from finite patches",
+    "Universal exponent or forced symmetric topology"
+  ],
+  "created": "2026-10-02T01:16:54.738480+00:00",
+  "method_validation": "results/phase-method-validation.json",
+  "runner_preflight": "passed after auxiliary NumPy parity coercion fix",
+  "selected_implementation": "scripts/phase_runtime.py:SweepPlanar",
+  "refinement_design": {
+    "target_records_per_transition_cell": 768,
+    "sizes": [
+      8,
+      16,
+      24,
+      32
+    ],
+    "p_points": "Quarter-interval subdivisions of every broad-grid crossing bracket, union over first two size pairs",
+    "closure_cuts": [
+      0.86,
+      0.875,
+      0.89
+    ],
+    "closure_p_values": [
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75
+    ],
+    "closure_target_records": 512,
+    "confirmation_rule": "For refined pilot cells, exclude the original first 256 records from crossing means/bootstrap. New p,q cells and L32 have fresh streams. Pilot-only cells are explicitly distinguishable.",
+    "uncertainty": "iid confirmation-record bootstrap within a local p window; failure to locate root is reported; no thermodynamic or simultaneous coverage claim"
+  },
+  "broad_grid_receipt": "results/phase-broad-grid.json",
+  "refinement_jobs": 624,
+  "expected_additional_trials": 414720,
+  "guard_job_count": 63,
+  "guard_additional_trials": 56064,
+  "guard_design": "manifests/phase-guard-checks.json",
+  "actual_trials": 660480,
+  "actual_cells": 1341,
+  "numerical_failures": 0,
+  "method_gate": "passed",
+  "vector_audit": "results/phase-vector-audit.json",
+  "analysis": "results/phase-analysis.json",
+  "crossing_candidates": 84,
+  "stable_crossing_windows": 66,
+  "completed": "2026-10-02T04:17:41.352537+00:00",
+  "delivered_sizes": [
+    8,
+    16,
+    24,
+    32
+  ],
+  "delivery_receipt": "results/phase-delivery-verification.json",
+  "acceptance_results": {
+    "matched_method": "passed",
+    "full_square_measurement": "passed",
+    "independent_larger_size_confirmation": "passed",
+    "all_saved_vectors_and_oracle": "passed",
+    "rendered_report_registry_wiki_vector_exports": "passed"
+  }
+}

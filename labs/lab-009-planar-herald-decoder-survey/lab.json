@@ -12,8 +12,8 @@
     "lab-007-decoding-statistical-mechanics"
   ],
   "summary": "Survey and reusable integration of configuration MAP, planar logical ML, transfer and controlled MPS on the classical herald channel over p,q in [0,1].",
-  "current_focus": "Integrated decoder survey, independent validation and matched full-domain pilot are delivered.",
-  "next_action": "Reuse the standard methods and retained matched vectors; new physical channels or phase sweeps require a separate contract.",
+  "current_focus": "Full-domain exact-planar phase diagram delivered with independent confirmation, size drift and explicit unresolved regions.",
+  "next_action": "No pending work for this campaign; higher-precision thermodynamic convergence or a physical-channel extension needs a separately scoped study.",
   "motivation": "Separate intrinsic logical recovery from posterior-inference and matching losses.",
   "question": "Which methods can become reusable standard decoders, and what do matched performance and runtime establish?",
   "report_contract": {
@@ -21,6 +21,15 @@
     "max_evidence_links": 24
   },
   "results": [
+    {
+      "id": "exact-planar-phase-diagram",
+      "kind": "figure",
+      "format": "image",
+      "title": "Exact planar full-domain decoding-phase diagram",
+      "summary": "Fresh full-domain exact logical-ML evidence. Left: L24 mean conditional Bayes risk, linear display interpolation; dots sampled cells. Middle: L24\u2212L8 pointwise 95% size-trend evidence plus near-maximal finite-size risk plateaus and exact uniform syndrome-only nonrecovery point (gray unresolved), dotted analytic sufficient-recovery bound; between-node coloring interpolates the display score clipped at \u00b16. Right: crossing intervals for L8/16, L16/24, L24/32. Single stable candidates use local-window bootstrap95; overlapping or unstable candidate intervals are merged into envelopes marked \u00d7, not pooled confidence intervals or distinct physical transitions. All raw crossing candidates remain in the analysis. Statistical uncertainty does not include lattice-size drift or interpolation bias. No complement folding or forced single threshold.",
+      "path": "figures/exact-planar-phase-diagram.png",
+      "presentation": "page"
+    },
     {
       "id": "planar-decoder-validation",
       "kind": "data",
@@ -116,7 +125,7 @@
       "kind": "figure",
       "format": "image",
       "title": "Warmed per-shot decoder latency",
-      "summary": "Pooled equal-size fresh eight-cell mix:1600 timings/method/size, one CPU thread; excludes graph setup and independent first call. Median and p95, no claim of native or asymptotic speed.",
+      "summary": "Pooled equal-size fresh eight-cell mix:1600 timings/method/size, one CPU thread; excludes graph setup and independent first call. Median and p95. BP is belief matching (synchronous cap40), not standalone BP; no claim of native or asymptotic speed.",
       "path": "figures/warm-runtime.png",
       "presentation": "page"
     },
@@ -146,6 +155,24 @@
       "summary": "Promoted methods, validation scope, cohort counts, runtime and scientific limits.",
       "path": "results/survey-summary.json",
       "presentation": "result"
+    },
+    {
+      "id": "phase-analysis",
+      "kind": "data",
+      "format": "json",
+      "title": "Finite-size crossing analysis and uncertainty",
+      "summary": "Fresh exact-sector full-domain measurements; finite-size interpretation and declared scope.",
+      "path": "results/phase-analysis.json",
+      "presentation": "download"
+    },
+    {
+      "id": "phase-vector-audit",
+      "kind": "data",
+      "format": "json",
+      "title": "Independent phase data and posterior audit",
+      "summary": "Fresh exact-sector full-domain measurements; finite-size interpretation and declared scope.",
+      "path": "results/phase-vector-audit.json",
+      "presentation": "download"
     }
   ],
   "frontier": [],
@@ -154,9 +181,11 @@
     "Four reusable methods integrated; finite-penalty Kac\u2013Ward retained as research code.",
     "Independent oracle, reference/edge relabeling, full-prior endpoints and batch/support gates passed.",
     "3,200 matched records retain observed inputs, outputs and per-method timing.",
-    "Four current figure pages, method wiki, report and full-prior workbench pass browser verification."
+    "Five current figure pages, method wiki, report and full-prior workbench pass browser verification.",
+    "660,480 independent exact-sector records across L=8,16,24,32; full observation-vector and oracle audits passed.",
+    "Full-domain phase figure, crossing uncertainty, report, wiki, active registry and vector exports verified in the dashboard."
   ],
   "blockers": [],
   "promotion_candidates": [],
-  "phase": "Survey complete"
+  "phase": "Full-domain phase diagram"
 }

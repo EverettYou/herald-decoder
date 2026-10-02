@@ -1,0 +1,21 @@
+{
+  "status": "engineering_preflight_rejected_and_corrected",
+  "reason": "NumPy unsigned scalar bitwise coercion in auxiliary realized-failure score; exact inference method gate unaffected",
+  "records": 24,
+  "errors": [
+    {
+      "record": 0,
+      "error": "TypeError: ufunc 'bitwise_and' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''"
+    },
+    {
+      "record": 0,
+      "error": "TypeError: ufunc 'bitwise_and' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''"
+    },
+    {
+      "record": 0,
+      "error": "TypeError: ufunc 'bitwise_and' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''"
+    }
+  ],
+  "fix": "Convert sum to Python int before bitwise parity",
+  "scientific_trials_accepted": 0
+}

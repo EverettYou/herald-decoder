@@ -1,0 +1,28 @@
+{
+  "status": "generated",
+  "id": "exact-planar-phase-diagram",
+  "files": [
+    "figures/exact-planar-phase-diagram.png",
+    "figures/exact-planar-phase-diagram.svg",
+    "figures/exact-planar-phase-diagram.pdf"
+  ],
+  "inputs": [
+    "results/phase-analysis.json",
+    "results/phase-method-validation.json",
+    "data/phase-risk-cells.csv",
+    "manifests/phase-diagram.json"
+  ],
+  "semantics": "Fresh full-domain exact logical-ML evidence. Left: L24 mean conditional Bayes risk, linear display interpolation; dots sampled cells. Middle: L24\u2212L8 pointwise 95% size-trend evidence plus near-maximal finite-size risk plateaus and exact uniform syndrome-only nonrecovery point (gray unresolved), dotted analytic sufficient-recovery bound; between-node coloring interpolates the display score clipped at \u00b16. Right: crossing intervals for L8/16, L16/24, L24/32. Single stable candidates use local-window bootstrap95; overlapping or unstable candidate intervals are merged into envelopes marked \u00d7, not pooled confidence intervals or distinct physical transitions. All raw crossing candidates remain in the analysis. Statistical uncertainty does not include lattice-size drift or interpolation bias. No complement folding or forced single threshold.",
+  "input_sha256": {
+    "results/phase-analysis.json": "c400c38e57ba04fc9515265b542f7c685ca54061a73067ac0b686a571ca86dd8",
+    "results/phase-method-validation.json": "4bab9d7d891739920c46f29dcaf5e6597f36673b5d6673f587117cd61bb5bc74",
+    "data/phase-risk-cells.csv": "c4b62327fce9beeb642fe51d8e57840fb855d6e5a713a1d002401b7738e3cbf5",
+    "manifests/phase-diagram.json": "989260057cbe685333ee34089e9a3301f4d56aa51652f238e4b5f8147d987531"
+  },
+  "output_sha256": {
+    "figures/exact-planar-phase-diagram.png": "d421e232ed2ac466ae59e7393884f1b5df11f0953f48f9cd8d59897919fd8909",
+    "figures/exact-planar-phase-diagram.svg": "c85961f50afc0153f9e36120534595943da6ed209b4a4507028b054d6eb6b1de",
+    "figures/exact-planar-phase-diagram.pdf": "c0b4e6f99556139e8c988aac6d48f52dfa2f98e06c5cc5c132b7ae25f870592e"
+  },
+  "source_sha256": "e8a0fbfa818eb427a2e251ad0c324d808f6fe5f8059b32a3e0f7391ca5452fc0"
+}

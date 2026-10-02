@@ -16,3 +16,11 @@ Load numeric arrays with `numpy.load(path, allow_pickle=False)`. No binary cache
 | warm-runtime | [SVG](../figures/warm-runtime.svg) | [PDF](../figures/warm-runtime.pdf) |
 | approximation-diagnostics | [SVG](../figures/approximation-diagnostics.svg) | [PDF](../figures/approximation-diagnostics.pdf) |
 
+
+## Full-domain phase sweep
+
+`phase-risk-cells.csv` contains independently measured risk/SE for each lattice size and p,q cell. `phase-sweep/*.npz` retains packed errors, syndromes, heralds, exact risk, absolute sector probability, realized failure bits, solve residuals and seconds; use `allow_pickle=False` and unpack only the known graph dimensions. Per-cell JSON gives seeds, record counts, source hashes and confirmation cutoffs. Pilot records used to choose refinement windows are excluded from primary crossing inference at refined original cells.
+
+| Figure | SVG | PDF |
+| --- | --- | --- |
+| Full-domain phase diagram | [SVG](../figures/exact-planar-phase-diagram.svg) | [PDF](../figures/exact-planar-phase-diagram.pdf) |

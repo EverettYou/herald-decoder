@@ -36,20 +36,22 @@ Current for the registered finite-size model, not a thermodynamic threshold proo
 Choose a syndrome-compatible reference $r$ using visible information only. Write $x=r\oplus z$, so $Hz=0$. At a degree-three vertex the allowed $z$ patterns are $000,011,101,110$; at degree two they are $00,11$. Define
 
 $$
-g_v(z_{\partial v})=\phi_q\left(h_v,\sum_{e\ni v}(r_e\oplus z_e)\right).
+f_v^r(z_{\partial v})=\phi_q\left(h_v,\sum_{e\ni v}(r_e\oplus z_e)\right).
 $$
 
 After dropping the common reference prior, an occupied relative edge carries
 
 $$
-t_e=\left(\frac{p}{1-p}\right)^{1-2r_e}.
+\rho_e=\left(\frac{p}{1-p}\right)^{1-2r_e}.
 $$
 
-Then $Z_a$ is a sum of $\prod_e t_e^{z_e}\prod_v g_v(z_{\partial v})$ over even subgraphs with $\ell(z)=a\oplus\ell(r)$. Boundary-to-boundary paths as well as face cycles belong to $\ker H$; a construction using only interior cycles loses boundary degrees of freedom. The [boundary rail](planar-ml.md) handles those paths explicitly. Changing $r$ permutes relative configurations and leaves the absolute posterior unchanged.
+Then $Z_a$ is a sum of $\prod_e\rho_e^{z_e}\prod_v f_v^r(z_{\partial v})$ over even subgraphs with $\ell(z)=a\oplus\ell(r)$. This uses the same notation as the [planar-ML derivation](planar-ml.md): $f_v$ is the physical site function, $f_v^r$ is that function after the reference change, and $\rho_e$ is the ratio of physical edge weights. Boundary-to-boundary paths as well as face cycles belong to $\ker H$; a construction using only interior cycles loses boundary degrees of freedom. The [boundary rail](planar-ml.md) handles those paths explicitly. Changing $r$ permutes relative configurations and leaves the absolute posterior unchanged.
+
+The [expanded planar-ML derivation](planar-ml.md) now follows the full conversion: each vertex function becomes internal gadget-edge weights, the auxiliary graph defines $K$, and its weighted matching sum equals a Pfaffian/Grassmann Gaussian integral. It also explains the normalization constants and why planarity alone does not suffice.
 
 ## Face-spin picture and free fermions
 
-On a planar completion, even subgraphs are domain walls of dual face spins, up to the selected boundary sector. Domain-wall edge factors can be written as signed Ising couplings $J_e=-\tfrac12\log t_e$ when weights are strictly positive. The degree-three even site tensor can be factored into leg weights when all four entries are positive; this gives another pairwise formulation on a decorated graph. Zero entries are hard constraints and may require a matchgate gadget or a limit. A generic high-valence site tensor need not be pairwise Ising or free fermionic.
+On a planar completion, even subgraphs are domain walls of dual face spins, up to the selected boundary sector. Domain-wall edge factors can be written as signed Ising couplings $J_e=-\tfrac12\log\rho_e$ when weights are strictly positive. The degree-three even site tensor can be factored into leg weights when all four entries are positive; this gives another pairwise formulation on a decorated graph. Zero entries are hard constraints and may require a matchgate gadget or a limit. A generic high-valence site tensor need not be pairwise Ising or free fermionic.
 
 Here “trivalent” means degree three. “Transfer” means a sweep contraction; there is no traveling-wave assumption. The useful solvable structure is parity plus planar matchgate signatures. “Free fermion” describes the algebra obeyed by those signatures. FKT means Fisher–Kasteleyn–Temperley, the planar dimer/Pfaffian method; it is not an additional statistical assumption called “f-regular.” The [matchgate page](planar-ml.md) states the local identity and constructive reduction; [Kac–Ward](kac-ward.md) gives an alternative determinant representation.
 
@@ -80,3 +82,7 @@ $$
 This is a sufficient region, not the numerical phase boundary. At $q=1$, compatible counts force ambiguity paths to alternate; a fixed path has probability at most $2^{1-m}$ and $\rho\le\mu/2<1$ across the full $0\le p\le1$. Thus a count-compatible recovery method, and hence optimal logical ML, succeeds asymptotically on the entire perfect-herald edge. It does not imply unique finite-patch recovery. The proof assumes this binary channel, bounded-degree planar honeycomb geometry, the stated rough boundaries and actual MAP/count-compatible inference; it is not a theorem for unconverged BP or the quantum spacetime problem.
 
 The symmetric form of this sufficient upper bound is not an equality for Bayes risk or a symmetry of the phase boundary. At interior q, independently computed full-prior risks need not be symmetric.
+
+## Measured full-domain transition
+
+The [exact-planar phase diagram](phase-diagram.md) samples the complete p,q square, with confirmation-record crossings, successive lattice-size comparisons, statistical uncertainty and unresolved regions. The sufficient bound above is plotted separately from measured transition estimates.

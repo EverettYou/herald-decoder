@@ -1,22 +1,37 @@
 {
   "status": "passed",
-  "verified_at": "2026-10-02T00:56:33.051792+00:00",
-  "contract": "PLAN.md",
+  "verified_at": "2026-10-02T04:18:30.994Z",
+  "contract": "manifests/phase-diagram.json",
   "rendered_receipt": "results/rendered-delivery.json",
-  "scientific_receipt": "results/survey-analysis.json",
+  "scientific_receipts": [
+    "results/phase-method-validation.json",
+    "results/phase-vector-audit.json",
+    "results/phase-analysis.json"
+  ],
+  "independent_records": 660480,
+  "size_parameter_cells": 1341,
+  "numerical_failures": 0,
   "links_verified_separately": {
-    "input_output_hashes": true,
-    "four_current_report_embeds_and_captions": true,
+    "current_input_output_hashes": true,
+    "five_current_report_images_and_captions": true,
     "active_registry": true,
-    "four_figure_pages_and_vector_downloads": true,
-    "eleven_method_wiki_pages": true,
-    "twelve_report_document_links": true,
-    "four_workbench_cases": true
+    "figure_pages_and_hashed_svg_pdf_downloads": true,
+    "twelve_local_wiki_pages": true,
+    "sixteen_report_document_links": true,
+    "statistical_mechanics_document_phase_link": true,
+    "four_workbench_cases": true,
+    "completed_lab_metadata": true
   },
+  "visual_review": [
+    "results/verification/exact-planar-phase-diagram-page.png",
+    "results/verification/phase-report-visible.png"
+  ],
+  "limits": "Finite-size crossing uncertainty and size drift are distinguished; unresolved envelopes retained; no certified thermodynamic boundary.",
+  "survey_scientific_receipt": "results/survey-analysis.json",
   "regressions": {
     "decoder_tests": 8,
     "dashboard_tests": 8,
     "status": "passed"
   },
-  "scope": "Independent decoder implementations, retained matched records and current rendered surfaces. No new scientific trials acquired."
+  "scope": "Matched decoder survey and fresh exact-sector phase campaign; current user-facing report, registry, wiki, figures and downloads."
 }

@@ -36,3 +36,11 @@ The supplemental generic-factor contract check at `results/planar-factor-contrac
 
 All seven registered acceptance items are delivered: local method theory, four reusable package methods, independent oracle and regression checks, matched numeric vectors, matched performance/efficiency, four PNG/SVG/PDF figures, and the rendered system surfaces. The final receipts are `results/survey-analysis.json`, `results/rendered-delivery.json` and `results/delivery-verification.json`. The 3,200 shared trials retain their measured inputs and outputs. Kac–Ward remains research code; finite-chi MPS is approximate. No heavy campaign or new full-domain threshold is claimed. This acceptance supersedes the earlier partial validation checkpoint.
 
+
+## Full-domain phase-diagram reproduction — complete
+
+The user authorized a new phase sweep on 2026-10-01, superseding the earlier no-sweep scope restriction for this deliverable. The contract is `manifests/phase-diagram.json`. Select and measure the most reliable efficient sector-inference method, independently sample the full p,q square, refine all observed crossing branches, separate statistical uncertainty from lattice-size drift, and deliver the figure/data/report/registry/rendered-page chain. Finite-size evidence and unresolved regions must remain explicit.
+
+## Phase-diagram acceptance
+
+The registered broad grid, independent crossing confirmation, size-32 checks and bounded closing-region guards are complete: 660,480 independent records across 1,341 size/parameter cells, zero numerical failures. Matched method checks, independent whole-error enumeration, all retained observation/score vectors and source replay passed. Five report figures, twelve wiki pages, sixteen document links, all figure vector downloads and four workbench cases passed actual-dashboard verification. Receipts: `results/phase-analysis.json`, `results/phase-vector-audit.json`, `results/rendered-delivery.json`, `results/phase-delivery-verification.json`. Crossings are finite-size estimates; unresolved candidate envelopes and systematic size drift remain explicit. No thermodynamic certification is claimed.

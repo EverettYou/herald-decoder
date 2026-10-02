@@ -32,7 +32,10 @@
     "results/survey-analysis.json",
     "results/benchmark.json",
     "results/figure-provenance.json",
-    "results/data-provenance.json"
+    "results/data-provenance.json",
+    "results/phase-analysis.json",
+    "results/phase-vector-audit.json",
+    "results/phase-figure-provenance.json"
   ],
   "limitations": [
     "No full-domain thermodynamic phase boundary established.",
@@ -40,5 +43,21 @@
     "No quantum spacetime or generic hidden-orientation decoding claim."
   ],
   "delivery_verification": "results/delivery-verification.json",
-  "current_figure_count": 4
+  "current_figure_count": 5,
+  "new_threshold_fits_scope": "The original 3200-record decoder benchmark performed no threshold fits; the separate phase campaign reports finite-size crossing windows.",
+  "phase_campaign": {
+    "independent_records": 660480,
+    "cells": 1341,
+    "sizes": [
+      8,
+      16,
+      24,
+      32
+    ],
+    "numerical_failures": 0,
+    "method": "exact planar logical-sector Bayes inference",
+    "analysis": "results/phase-analysis.json",
+    "vector_audit": "results/phase-vector-audit.json",
+    "thermodynamic_boundary_certified": false
+  }
 }

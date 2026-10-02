@@ -82,9 +82,9 @@ def main():
         ax.bar(x,med,color=[METHOD_COLORS[r['method']]for r in rr],width=.65,alpha=.85)
         ax.errorbar(x,med,yerr=[np.zeros(len(rr)),np.maximum(hi-med,0)],fmt='none',capsize=4,color='#333')
         for i,(m,h)in enumerate(zip(med,hi)):ax.text(i,h*1.09,f'{m:.2f}',ha='center',fontsize=9)
-        ax.set(yscale='log',ylabel='Warmed decode time (ms / shot)',title=f'L={L}: median, upper whisker = p95');ax.set_xticks(x);ax.set_xticklabels(['BP','Config.\nMAP','Planar\nML','Exact\ntransfer','MPS\nχ=16']);ax.grid(axis='y',alpha=.15)
+        ax.set(yscale='log',ylabel='Warmed decode time (ms / shot)',title=f'L={L}: median, upper whisker = p95');ax.set_xticks(x);ax.set_xticklabels(['BP + LLR\nmatching','Config.\nMAP','Planar\nML','Exact\ntransfer','MPS\nχ=16']);ax.grid(axis='y',alpha=.15)
     save(fig,'warm-runtime',['data/warm-runtime-summary.csv','results/benchmark.json'],
-         'Pooled equal-size fresh eight-cell mix:1600 timings/method/size, one CPU thread; excludes graph setup and independent first call. Median and p95, no claim of native or asymptotic speed.')
+         'Pooled equal-size fresh eight-cell mix:1600 timings/method/size, one CPU thread; excludes graph setup and independent first call. Median and p95. BP is belief matching (synchronous cap40), not standalone BP; no claim of native or asymptotic speed.')
 
     val=json.loads((LAB/'results/validation.json').read_text())
     fig,axes=plt.subplots(1,2,figsize=(11,4),layout='constrained')

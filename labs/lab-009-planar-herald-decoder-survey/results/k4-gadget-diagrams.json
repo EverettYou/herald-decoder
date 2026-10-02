@@ -1,0 +1,363 @@
+{
+  "status": "passed",
+  "generated_at": "2026-10-02T04:27:22.374789+00:00",
+  "generator_source_sha256": "68b44ddd3e11ec5f7f1bd0da2b484d734b31a730be5bd81a3924166940d4623f",
+  "partition_fixture": "results/site-gadget-partition-review.json",
+  "partition_fixture_sha256": "dff3a0e7ec8a77b8dde10ec4b99f67e38041a36fa09e3b27b7b06db21c9a59a0",
+  "illustration": "Herald-channel likelihoods, labeled by f_xxx and their values; pivot f_011>0",
+  "physical_validation_record": {
+    "reference": "000",
+    "herald": 0,
+    "q": "3/5",
+    "site_weights": [
+      "1",
+      "2/5",
+      "2/5",
+      "2/5"
+    ]
+  },
+  "site_entry_order": [
+    "f_000",
+    "f_011",
+    "f_101",
+    "f_110"
+  ],
+  "notation": {
+    "physical_edge": "w_e(x_e)",
+    "physical_site": "f_v(x_incident)",
+    "relative_site": "f_v^r(z_incident)",
+    "relative_prior_ratio": "rho_e",
+    "auxiliary_edge": "W_ij"
+  },
+  "matching_checks": [
+    {
+      "relative_bits": "000",
+      "selected_internal_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "auxiliary_node_coverage": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "site_entry": "f_000",
+      "physical_validation_weight": "1"
+    },
+    {
+      "relative_bits": "011",
+      "selected_internal_edges": [
+        [
+          0,
+          3
+        ]
+      ],
+      "auxiliary_node_coverage": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "site_entry": "f_011",
+      "physical_validation_weight": "2/5"
+    },
+    {
+      "relative_bits": "101",
+      "selected_internal_edges": [
+        [
+          1,
+          3
+        ]
+      ],
+      "auxiliary_node_coverage": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "site_entry": "f_101",
+      "physical_validation_weight": "2/5"
+    },
+    {
+      "relative_bits": "110",
+      "selected_internal_edges": [
+        [
+          2,
+          3
+        ]
+      ],
+      "auxiliary_node_coverage": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "site_entry": "f_110",
+      "physical_validation_weight": "2/5"
+    }
+  ],
+  "solution_family_checks": [
+    {
+      "reference": "000",
+      "herald": 0,
+      "q": "3/5",
+      "site_weights": [
+        "1",
+        "2/5",
+        "2/5",
+        "2/5"
+      ],
+      "allocation": {
+        "1": "1",
+        "2": "0",
+        "3": "0"
+      },
+      "all_eight_signatures_exact": true
+    },
+    {
+      "reference": "000",
+      "herald": 0,
+      "q": "3/5",
+      "site_weights": [
+        "1",
+        "2/5",
+        "2/5",
+        "2/5"
+      ],
+      "allocation": {
+        "1": "0",
+        "2": "1",
+        "3": "0"
+      },
+      "all_eight_signatures_exact": true
+    },
+    {
+      "reference": "000",
+      "herald": 0,
+      "q": "3/5",
+      "site_weights": [
+        "1",
+        "2/5",
+        "2/5",
+        "2/5"
+      ],
+      "allocation": {
+        "1": "0",
+        "2": "0",
+        "3": "1"
+      },
+      "all_eight_signatures_exact": true
+    },
+    {
+      "reference": "000",
+      "herald": 0,
+      "q": "3/5",
+      "site_weights": [
+        "1",
+        "2/5",
+        "2/5",
+        "2/5"
+      ],
+      "allocation": {
+        "1": "1/3",
+        "2": "1/3",
+        "3": "1/3"
+      },
+      "all_eight_signatures_exact": true
+    },
+    {
+      "reference": "011",
+      "herald": 1,
+      "q": "3/5",
+      "site_weights": [
+        "3/5",
+        "0",
+        "3/5",
+        "3/5"
+      ],
+      "allocation": {
+        "2": "1",
+        "3": "0"
+      },
+      "all_eight_signatures_exact": true
+    },
+    {
+      "reference": "011",
+      "herald": 1,
+      "q": "3/5",
+      "site_weights": [
+        "3/5",
+        "0",
+        "3/5",
+        "3/5"
+      ],
+      "allocation": {
+        "2": "0",
+        "3": "1"
+      },
+      "all_eight_signatures_exact": true
+    },
+    {
+      "reference": "011",
+      "herald": 1,
+      "q": "3/5",
+      "site_weights": [
+        "3/5",
+        "0",
+        "3/5",
+        "3/5"
+      ],
+      "allocation": {
+        "2": "1/2",
+        "3": "1/2"
+      },
+      "all_eight_signatures_exact": true
+    },
+    {
+      "reference": "011",
+      "herald": 0,
+      "q": "1",
+      "site_weights": [
+        "0",
+        "1",
+        "0",
+        "0"
+      ],
+      "allocation": {
+        "1": "1"
+      },
+      "all_eight_signatures_exact": true
+    },
+    {
+      "reference": "011",
+      "herald": 0,
+      "q": "1",
+      "site_weights": [
+        "0",
+        "1",
+        "0",
+        "0"
+      ],
+      "allocation": {
+        "1": "1"
+      },
+      "all_eight_signatures_exact": true
+    },
+    {
+      "reference": "001",
+      "herald": 0,
+      "q": "1",
+      "site_weights": [
+        "1",
+        "1",
+        "1",
+        "0"
+      ],
+      "allocation": {
+        "1": "1",
+        "2": "0"
+      },
+      "all_eight_signatures_exact": true
+    },
+    {
+      "reference": "001",
+      "herald": 0,
+      "q": "1",
+      "site_weights": [
+        "1",
+        "1",
+        "1",
+        "0"
+      ],
+      "allocation": {
+        "1": "0",
+        "2": "1"
+      },
+      "all_eight_signatures_exact": true
+    },
+    {
+      "reference": "001",
+      "herald": 0,
+      "q": "1",
+      "site_weights": [
+        "1",
+        "1",
+        "1",
+        "0"
+      ],
+      "allocation": {
+        "1": "1/2",
+        "2": "1/2"
+      },
+      "all_eight_signatures_exact": true
+    }
+  ],
+  "no_K4_solution_for_positive_000_only": true,
+  "figures": [
+    {
+      "name": "k4-gadget-construction",
+      "files": [
+        {
+          "path": "figures/k4-gadget-construction.png",
+          "sha256": "1fb19c7d1cea9f20feab2a1c0b5d926d31556abe9d52c8ef95fc2e86f8d95af5"
+        },
+        {
+          "path": "figures/k4-gadget-construction.svg",
+          "sha256": "3afcd1546b4b22ebd1867a1b3b2ba6ca2f81aa0024b36aedafbcb855e5159a61"
+        },
+        {
+          "path": "figures/k4-gadget-construction.pdf",
+          "sha256": "26fa56c133cebc418c9e1b2e21ace5b9feee98293b2167f31fe9421a3102e6cc"
+        }
+      ]
+    },
+    {
+      "name": "k4-gadget-matchings",
+      "files": [
+        {
+          "path": "figures/k4-gadget-matchings.png",
+          "sha256": "8af56863965ce16a27cde1d0b54893ae25bec5d690d51de92c1e444930d8a69c"
+        },
+        {
+          "path": "figures/k4-gadget-matchings.svg",
+          "sha256": "2ecf2e1cfa996b52f781f8934bf7ddbea26706615c73a012a1cdfe473e260998"
+        },
+        {
+          "path": "figures/k4-gadget-matchings.pdf",
+          "sha256": "56a9c19fa061f33b815bc99d6d48a379cc357eb0a13d406f322dd3d1181bd0bc"
+        }
+      ]
+    },
+    {
+      "name": "k4-gadget-gluing",
+      "files": [
+        {
+          "path": "figures/k4-gadget-gluing.png",
+          "sha256": "f88c971a432953a91345aee4eca90008ad92c719668f71a12da6db00ccf18f81"
+        },
+        {
+          "path": "figures/k4-gadget-gluing.svg",
+          "sha256": "1a4758368c24016fba8e78947c4ba9f3ef41657b1a9815f7eac66960bef6faf4"
+        },
+        {
+          "path": "figures/k4-gadget-gluing.pdf",
+          "sha256": "ce102d272e8a6bd09f0f957bf679c5ec05b90e42fbcfcc9d830f94693f4045bd"
+        }
+      ]
+    }
+  ],
+  "semantics": {
+    "external_occupation": "z_i=1 covers port p_i externally",
+    "displayed_signature_weights": "internal only; external priors multiply once per wire",
+    "orientation": "undirected topology shown; global Kasteleyn signs omitted",
+    "zero_edges": "two triangle edges have zero weight only in the numerical example"
+  },
+  "scope": "Explanatory schematics; no new benchmark samples or production geometry support."
+}

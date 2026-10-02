@@ -29,3 +29,5 @@ The [report](../REPORT.md) is the evidence synthesis. [Source API documentation]
 - [[records/index|Detailed research records]]
 
 - [Survey integration record](records/survey-integration.md): acceptance receipts and delivery chain.
+
+- [Full-domain decoding-phase diagram](phase-diagram.md): independent full-square sampling, confirmation-record crossings, size drift and unresolved regions.

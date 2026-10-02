@@ -1,0 +1,206 @@
+{
+  "status": "completed_read_only_evidence_audit",
+  "attempt_metadata": [
+    {
+      "family": "anthropic__claude-fable-5-1",
+      "run": "run_01",
+      "meta_elapsed_minutes": 170.76046898333334,
+      "qualification": "Metadata elapsed is agent start-to-finish, not decoder CPU time."
+    },
+    {
+      "family": "anthropic__claude-fable-5-1",
+      "run": "run_02",
+      "meta_elapsed_minutes": 155.16142183333335,
+      "qualification": "Metadata elapsed is agent start-to-finish, not decoder CPU time."
+    },
+    {
+      "family": "anthropic__claude-fable-5-1",
+      "run": "run_03",
+      "meta_elapsed_minutes": 91.59162751666666,
+      "qualification": "Metadata elapsed is agent start-to-finish, not decoder CPU time."
+    },
+    {
+      "family": "anthropic__claude-opus-5-5",
+      "run": "run_01",
+      "meta_elapsed_minutes": 164.56845046666666,
+      "qualification": "Metadata elapsed is agent start-to-finish, not decoder CPU time."
+    },
+    {
+      "family": "anthropic__claude-opus-5-5",
+      "run": "run_02",
+      "meta_elapsed_minutes": 156.30147068333332,
+      "qualification": "Metadata elapsed is agent start-to-finish, not decoder CPU time."
+    },
+    {
+      "family": "anthropic__claude-opus-5-5",
+      "run": "run_03",
+      "meta_elapsed_minutes": 151.02350131666665,
+      "qualification": "Metadata elapsed is agent start-to-finish, not decoder CPU time."
+    },
+    {
+      "family": "openai__gpt-6-astra",
+      "run": "run_01",
+      "meta_elapsed_minutes": 69.33625839999999,
+      "qualification": "Metadata elapsed is agent start-to-finish, not decoder CPU time."
+    },
+    {
+      "family": "openai__gpt-6-astra",
+      "run": "run_02",
+      "meta_elapsed_minutes": 68.46193588333334,
+      "qualification": "Metadata elapsed is agent start-to-finish, not decoder CPU time."
+    },
+    {
+      "family": "openai__gpt-6-astra",
+      "run": "run_03",
+      "meta_elapsed_minutes": 66.8817589,
+      "qualification": "Metadata elapsed is agent start-to-finish, not decoder CPU time."
+    }
+  ],
+  "lab003": {
+    "active_b14_parameter_cells": 231,
+    "active_b14_decoder_evaluations": 786000,
+    "shots_per_size_cell_histogram": {
+      "1000": 657,
+      "2000": 19,
+      "500": 8,
+      "1500": 12,
+      "5000": 6,
+      "3000": 13
+    },
+    "size_sets": {
+      "(7, 9, 11)": 220,
+      "(5, 7, 9, 11, 13)": 11
+    },
+    "qualification": "Counts describe the displayed B14 evidence, not all historical project work; nested p inputs are correlated across cells.",
+    "specific_historical_runtime": {
+      "decoder": {
+        "damping": 0.25,
+        "matching_projection": "posterior_llr",
+        "max_iterations": 80,
+        "name": "HeraldAwareBpMatchingDecoder",
+        "p_h": 0.0,
+        "p_m": 0.0,
+        "recurrence_mode": "damping",
+        "residual_priority_buffer_reuse": false,
+        "residual_priority_cached_products": false,
+        "residual_priority_order": "stable_sort",
+        "update_schedule": "residual_priority",
+        "use_numba": true
+      },
+      "p": 0.16,
+      "q": 0.2,
+      "summaries": [
+        {
+          "L": 5,
+          "bp_convergence_rate": 0.928,
+          "decoder": "herald_residual_priority_bp_llr_mwpm",
+          "detectors": 48,
+          "edges": 74,
+          "lattice": "honeycomb",
+          "logical_error_ci95": [
+            0.16357810661426447,
+            0.2330574923863593
+          ],
+          "logical_error_rate": 0.196,
+          "logical_errors": 98,
+          "mean_bp_iterations": 48.426,
+          "mean_bp_max_message_delta": 1.048132388342393e-06,
+          "mean_decode_ms": 11.462907560053281,
+          "p": 0.16,
+          "q": 0.2,
+          "shots": 500,
+          "syndrome_faithful_shots": 500,
+          "syndrome_fidelity_rate": 1.0
+        },
+        {
+          "L": 13,
+          "bp_convergence_rate": 0.104,
+          "decoder": "herald_residual_priority_bp_llr_mwpm",
+          "detectors": 336,
+          "edges": 506,
+          "lattice": "honeycomb",
+          "logical_error_ci95": [
+            0.0961592783150937,
+            0.15360472307383977
+          ],
+          "logical_error_rate": 0.122,
+          "logical_errors": 61,
+          "mean_bp_iterations": 79.312,
+          "mean_bp_max_message_delta": 0.00010986046971953869,
+          "mean_decode_ms": 42.725585898035206,
+          "p": 0.16,
+          "q": 0.2,
+          "shots": 500,
+          "syndrome_faithful_shots": 500,
+          "syndrome_fidelity_rate": 1.0
+        }
+      ]
+    }
+  },
+  "astra02": {
+    "aggregate_trials": 2706054,
+    "size_parameter_cells": 1300,
+    "production_worker_cpu_hours": 5.408716340020832,
+    "sum_stage_wall_minutes": 57.002233123468855,
+    "qualification": "Summed stage wall time is not a concurrency-adjusted end-to-end duration; different hardware/noise cohorts prevent a controlled speed ratio.",
+    "sizes": [
+      8,
+      16,
+      24,
+      32,
+      48,
+      64
+    ]
+  },
+  "opus02": {
+    "raw_stage_trials": 5449100,
+    "raw_summed_chunk_wall_hours": 14.956907884942162,
+    "variance_diagnostic": {
+      "selection": "Cells with mean conditional risk in (0.1,0.4); observed Bernoulli failure variance divided by sample variance of conditional risk.",
+      "cells": 992,
+      "median": 7.0896441401453645,
+      "range": [
+        4.461353437878831,
+        25.006398530639537
+      ],
+      "qualification": "Empirical within-method diagnostic; not a universal gain, controlled BP comparison, or independent certification of the downloaded solver."
+    }
+  },
+  "findings": [
+    "Five attempts use configuration MAP as principal decoder; three Opus attempts use planar sector inference; Fable03 uses transfer/MPS with truncation qualifications.",
+    "Lab003 residual-priority cap80 runtime is not Lab009 synchronous cap40 runtime.",
+    "Runs combine larger size leverage, targeted transition sampling, up to eight workers, and finite-size fits/interpolated regions.",
+    "Posterior conditional averaging demonstrably reduces variance for the recorded Opus02 inference outputs.",
+    "Most plots cover only p<=0.5; they do not establish the corrected full p,q in [0,1] phase topology."
+  ],
+  "limits": [
+    "No downloaded instructions or code were executed.",
+    "No new experiments performed.",
+    "No matched-machine throughput comparison or complete correctness certification of nine attempts is claimed.",
+    "Lab003 total overnight wall-time allocation among experiments, engineering, analysis and idle periods was not reconstructed."
+  ],
+  "input_sha256": {
+    "/Users/home/Downloads/runs/anthropic__claude-fable-5-1/run_01/meta.json": "c3f6ae9d513d74b23ab73c67b3e9ce14d3feec779a74a223aed500ad46266cc0",
+    "/Users/home/Downloads/runs/anthropic__claude-fable-5-1/run_02/meta.json": "cfbeda117f0b5d98e6ab6e7688fbf1417e8ae955cc74fdfb886d1db7cee21eb2",
+    "/Users/home/Downloads/runs/anthropic__claude-fable-5-1/run_03/meta.json": "de48f72baaa1f0b884fbcbc8b5c7d7f90b47eaf9e976388dcf7911cfce6f0ac4",
+    "/Users/home/Downloads/runs/anthropic__claude-opus-5-5/run_01/meta.json": "b4f6aeb9b70073d7111045af3fb2e94ae69497e016497d859ba64ce013fae2ce",
+    "/Users/home/Downloads/runs/anthropic__claude-opus-5-5/run_02/meta.json": "080f815a4ebc1cc2d9c93e13539a20826cd5ba1ce1580d6b18af0d3fa066e02b",
+    "/Users/home/Downloads/runs/anthropic__claude-opus-5-5/run_03/meta.json": "4a4df081df8180bc3f6765e5137245830307328b96c968fa063932deabf880e2",
+    "/Users/home/Downloads/runs/openai__gpt-6-astra/run_01/meta.json": "f57d6a0c4bc9a53dc4e8af14f66ee4e4fba89b5b072579eb44019362f548d794",
+    "/Users/home/Downloads/runs/openai__gpt-6-astra/run_02/meta.json": "38aabfc82da7be77b167d261fef34423cae7403480e063b3b500b9ad30872835",
+    "/Users/home/Downloads/runs/openai__gpt-6-astra/run_03/meta.json": "d38ef32e26b853fe2fbed8a4351718170ab8bda7aa6e9c95212a16e1ef41c01d",
+    "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase-b14-honeycomb-continuous-log-odds-map-2026-08-28.json": "e41be160b471cc5820a8a19b90cd3fad6ed8ed581c2c4c0587652f5e7e918fdf",
+    "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase-b14-honeycomb-distance-l5-l13-q020-p016-2026-08-28.json": "0ee153e143e6b51269fc513faefc3b7230eeec17f467c51f1907aef09811afa8",
+    "/Users/home/Downloads/runs/openai__gpt-6-astra/run_02/data/ler_aggregated.csv": "c59a5d9af2e39e71416d7fe4d643f3c54d6ee944acfea333a3a905d91a3d49de",
+    "/Users/home/Downloads/runs/openai__gpt-6-astra/run_02/data/survey_resources.json": "b2496857453dfbc62313dabcc2ddf29a001219b3c265cbf4d39f9c377aae33a1",
+    "/Users/home/Downloads/runs/openai__gpt-6-astra/run_02/data/boundary_resources.json": "24b63c1fba2a1a01b70d4eaf87718714f326f816eb1d30229c05ccdd2f45ef12",
+    "/Users/home/Downloads/runs/openai__gpt-6-astra/run_02/data/large_resources.json": "27fd52c28efc656dc889f2d7b96a455fdfd6e639fc51d393aea63ff20ac117a2",
+    "/Users/home/Downloads/runs/openai__gpt-6-astra/run_02/data/interior_resources.json": "71a760f670874c655d7340aef337546c20844af404a126cf767e7ebef94ab683",
+    "/Users/home/Downloads/runs/openai__gpt-6-astra/run_02/data/approach_resources.json": "54e68fdc24e4a647238a126f2e33560a19d453983b963faecbccd10d8210a2d0",
+    "/Users/home/Downloads/runs/anthropic__claude-opus-5-5/run_02/data/stage1_coarse.jsonl": "c63816b1253b584d854c26e7d39f8b9cb8fb1a85f76374fa1d7511ce4bf6bd77",
+    "/Users/home/Downloads/runs/anthropic__claude-opus-5-5/run_02/data/stage1b_vertical.jsonl": "a77fbf5b40fe1397f05a039baa6607bd31086ce66ecc43258ee0c0a7456dcb19",
+    "/Users/home/Downloads/runs/anthropic__claude-opus-5-5/run_02/data/stage2_cuts.jsonl": "00cdc3975c167fdf02bbaa1bb497169ff1df5a0c138619a08a18f872e8fb1c90",
+    "/Users/home/Downloads/runs/anthropic__claude-opus-5-5/run_02/data/stage3_L96.jsonl": "6f9911c206e34f953ba872c9d7e9a2d12af19466aac04bf5d99e837fc23419aa",
+    "/Users/home/Downloads/runs/anthropic__claude-opus-5-5/run_02/data/stage3_deep.jsonl": "9cd532eb4e8cea9e3f2193a025a123d91a0b6be7904aeea8c059d0afefacd45b"
+  }
+}

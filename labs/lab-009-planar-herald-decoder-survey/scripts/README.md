@@ -15,3 +15,22 @@ The separate `build_full_prior_report.py` belongs to the bounded full-prior corr
 
 Regression command: `PYTHONPATH=src .venv/bin/python -m unittest discover -s src/herald_decoder/tests -v`. Dashboard tests and rendered delivery verification are recorded in `results/delivery-verification.json` when the complete lab passes its delivery gate. Runtime/source receipts have explicit tested scope.
 
+
+The reader-facing vertex-weight/Pfaffian derivation is checked independently by `validate_site_gadget_partition.py`: four local signatures and eight small closed planar fixtures compare literal physical partition sums, auxiliary matching sums, Pfaffians and inverse-matrix edge probabilities. This check acquires no Monte Carlo samples and does not expand the production geometry API.
+The exact document and Local Wiki rendering check is `verify_site_gadget_wiki.cjs`; its receipt is `results/site-gadget-wiki-render-review.json`.
+
+Run `MPLCONFIGDIR=/tmp/lab009-mpl .venv/bin/python labs/lab-009-planar-herald-decoder-survey/scripts/build_k4_gadget_diagrams.py` from the repository root to rebuild the three explanatory K4 schematics in PNG/SVG/PDF. The generator checks each illustrated matching against the existing local partition fixture and writes `results/k4-gadget-diagrams.json`; it is separate from the survey and phase-diagram figure pipelines.
+
+## Full-domain phase diagram
+
+1. `validate_phase_method.py`: matched cached/vectorized planar posterior and speed gate, with independent transfer checks.
+2. `run_phase_sweep.py --workers 6`: resume the registered three-size full-square grid.
+3. `analyze_phase_sweep.py --refine`: freeze selected refinement jobs; archive the broad grid receipt before refinement. `archive_phase_pilot.py` preserves the original record prefixes with independently checked risk/count summaries.
+4. `run_phase_sweep.py --jobs labs/lab-009-planar-herald-decoder-survey/manifests/phase-refinement-jobs.json --workers 6`: acquire independent confirmation records and size-32 checks.
+5. `select_phase_guard_checks.py`, followed by `run_phase_sweep.py --jobs labs/lab-009-planar-herald-decoder-survey/manifests/phase-guard-jobs.json --workers 6`: execute the bounded adjacent-bracket and closing-region checks, preserving the declared stopping rule.
+6. `audit_phase_vectors.py`: verify every retained observation/score vector, whole-error oracle and source replays.
+7. `analyze_phase_sweep.py`: confirmation-only crossing bootstraps, full-domain size-trend evidence and tabular risk data.
+8. `build_phase_diagram.py`, then `publish_phase_diagram.py`: PNG/SVG/PDF, provenance, main report, wiki and active registry.
+9. `verify_delivery.cjs`: verify the complete rendered delivery chain.
+
+The measurement method is exact planar sector summation with unchanged numerical gates. `phase_runtime.py` caches canonical incidence and vectorizes identical local weights. This support work is frozen after the matched-input promotion gate.
