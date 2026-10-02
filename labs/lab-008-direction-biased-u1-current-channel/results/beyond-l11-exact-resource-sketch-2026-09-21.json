@@ -1,0 +1,92 @@
+{
+  "id": "lab008-beyond-l11-exact-resource-sketch-2026-09-21",
+  "status": "complete",
+  "generated_at": "2026-09-21T13:44:17.140139+00:00",
+  "operation": "metadata-only CurrentOracle._sketch; no transition construction, sampling, inference, or bootstrap",
+  "profiles": {
+    "11": {
+      "size": 11,
+      "vertices": 121,
+      "edges": 200,
+      "measured_vertices": 99,
+      "base": 3,
+      "orders": {
+        "detector_order": {
+          "candidate_transitions": 43578135,
+          "maximum_frontier": 10,
+          "ungrouped_transition_bytes_lower_proxy": 1220187780
+        },
+        "row_major": {
+          "candidate_transitions": 43578135,
+          "maximum_frontier": 10,
+          "ungrouped_transition_bytes_lower_proxy": 1220187780
+        },
+        "column_major": {
+          "candidate_transitions": 331618995,
+          "maximum_frontier": 12,
+          "ungrouped_transition_bytes_lower_proxy": 9285331860
+        }
+      },
+      "selected_order": "detector_order",
+      "selected": {
+        "candidate_transitions": 43578135,
+        "maximum_frontier": 10,
+        "ungrouped_transition_bytes_lower_proxy": 1220187780
+      }
+    },
+    "13": {
+      "size": 13,
+      "vertices": 169,
+      "edges": 288,
+      "measured_vertices": 143,
+      "base": 3,
+      "orders": {
+        "detector_order": {
+          "candidate_transitions": 583522191,
+          "maximum_frontier": 12,
+          "ungrouped_transition_bytes_lower_proxy": 16338621348
+        },
+        "row_major": {
+          "candidate_transitions": 583522191,
+          "maximum_frontier": 12,
+          "ungrouped_transition_bytes_lower_proxy": 16338621348
+        },
+        "column_major": {
+          "candidate_transitions": 4591650051,
+          "maximum_frontier": 14,
+          "ungrouped_transition_bytes_lower_proxy": 128566201428
+        }
+      },
+      "selected_order": "detector_order",
+      "selected": {
+        "candidate_transitions": 583522191,
+        "maximum_frontier": 12,
+        "ungrouped_transition_bytes_lower_proxy": 16338621348
+      }
+    }
+  },
+  "registered_exact_caps": {
+    "candidate_transitions": 50000000,
+    "peak_memory_bytes": 8589934592
+  },
+  "control": {
+    "l11_registered_candidate_transitions": 43578135,
+    "l11_sketch_matches_registered_preflight": true
+  },
+  "decision": {
+    "l13_transition_cap_pass": false,
+    "l13_ungrouped_array_lower_proxy_memory_cap_pass": false,
+    "exact_l13_production_armed": false,
+    "reason": "L13 exceeds the registered exact transition cap; the lower memory proxy excludes grouped copies, charge partitions, forward/backward arrays, and interpreter overhead."
+  },
+  "source_hashes": {
+    "script": "7da1456b5a4e0aa1a744dfa3ecd37285a937815d1d026890b80159ac1c927546",
+    "current_oracle": "241916aa389193b7b62a3ea2de7f4267086dfcca60760ee514e27100f40fa6ee",
+    "lattice_model": "b87a5feba27675e26970360d730324b7d3740e4dc0492b4dc478e510f140c9e7"
+  },
+  "counters": {
+    "new_physical_records": 0,
+    "posterior_evaluations": 0,
+    "bootstrap_replicates": 0
+  }
+}

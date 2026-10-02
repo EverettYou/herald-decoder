@@ -1,0 +1,41 @@
+{
+  "id": "partition-oracle-synthesis-2026-09-19",
+  "status": "complete",
+  "registered_at": "2026-09-19T09:14:53Z",
+  "question": "What part of the L=5 square LER curve is controlled by the auxiliary-partition prediction, and where do existing exact-posterior Monte Carlo anchors leave the analytic curve unresolved?",
+  "claim_boundary": "Synthesis of existing evidence only. No new physical samples, decoder run, fit, interpolation, threshold, phase boundary, monotonicity claim, or numerical pooling of deterministic certificates with Monte Carlo intervals.",
+  "inputs": [
+    "results/current-activity-expansion-2026-09-18.json",
+    "results/adaptive-charge-branch-bound-2026-09-19.json",
+    "results/square-mechanism-2026-09-18-analysis.json",
+    "results/size-bias-distributions-2026-09-18.json"
+  ],
+  "selection": {
+    "geometry": "canonical square",
+    "size": 5,
+    "biases": [0.5, 0.75, 0.97, 1.0],
+    "certified_p": [0.02, 0.05, 0.08],
+    "oracle_p": [0.1, 0.3, 0.46],
+    "oracle_rule": "Use exact conditional Bayes risks averaged over independent physical records with the registered pointwise bootstrap 95% interval; q=.97 is available only at p=.30.",
+    "certificate_rule": "Use k=4 activity lower/upper bounds at p=.02,.05. At p=.08 retain activity bounds for q=.5,.75 and replace only the upper bound for promoted q=.97,1 cells with the B=1024 adaptive bound.",
+    "leading_term_rule": "Show the preregistered dilute leading monomial only at the three certified p values as a separate marker, never as a connected curve."
+  },
+  "presentation": {
+    "figure": "figures/partition-oracle-evidence-boundary.png",
+    "panels": "one panel per q, common log-LER scale, no connecting lines",
+    "unresolved_region": "Shade p>=.08 in q=.5,.75 panels and label it analytic prediction unresolved; sampled exact-posterior anchors remain descriptive evidence, not a fitted continuation.",
+    "minimum_font_points": 13
+  },
+  "acceptance": [
+    "Every displayed value is copied from a frozen input and identified as deterministic certificate, dilute leading term, or exact-posterior Monte Carlo estimate.",
+    "The figure contains no fitted or interpolated curve and visually separates certificates from Monte Carlo intervals.",
+    "The fair/intermediate p>=.08 analytic region is explicitly unresolved; near-directed p=.08 uses only promoted bounds.",
+    "Machine-readable synthesis records source hashes, integrity checks, selected values, and claim limits.",
+    "The exact PNG is embedded in REPORT.md and exposed once in lab.json; report and Wiki lints pass and the rendered PNG is visually inspected."
+  ],
+  "stop_rule": "Stop after one evidence-boundary synthesis. Do not collect more samples or reopen contraction priorities in this transition.",
+  "completed_at": "2026-09-19T09:14:53Z",
+  "result": "results/partition-oracle-synthesis-2026-09-19.json",
+  "figure": "figures/partition-oracle-evidence-boundary.png",
+  "decision": "The controlled prediction is certified through p=.05 for all registered q and narrowed at p=.08 only for q=.97,1. Fair/intermediate p>=.08 remains analytically unresolved; existing exact-posterior anchors are not a fitted continuation."
+}

@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "manifest": "labs/lab-008-direction-biased-u1-current-channel/manifests/direction-biased-u1-checks-2026-09-18.json",
+  "arithmetic": "fractions.Fraction; exhaustive enumeration, no sampling uncertainty",
+  "cycle_partition_sums": [
+    {
+      "p": "1/3",
+      "bias_q": "1/2",
+      "Z_Q0_cycle4": "43/216"
+    },
+    {
+      "p": "1/3",
+      "bias_q": "3/4",
+      "Z_Q0_cycle4": "2089/10368"
+    },
+    {
+      "p": "1/3",
+      "bias_q": "1",
+      "Z_Q0_cycle4": "17/81"
+    }
+  ],
+  "gauge_tests": {
+    "open_tree": "always exact: solve vertex potentials recursively",
+    "square_gradient_plaquette_circulation_in_units_of_h": 0,
+    "periodic_ring_holonomy_in_units_of_h": 4,
+    "criterion": "A_e=h s_e is removable by a single-valued vertex shift iff its signed circulation is zero on every graph cycle."
+  },
+  "conclusions": [
+    "Bias changes a zero-charge cycle partition sum whenever the bias one-form has nonzero holonomy.",
+    "The q=1 directed endpoint is a singular h=log(q/(1-q))/2 -> infinity limit, not an ordinary finite complex gauge transform.",
+    "Finite motifs establish the gauge obstruction but do not determine a thermodynamic transition or decoder threshold."
+  ]
+}

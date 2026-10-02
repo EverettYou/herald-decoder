@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "L": 5,
+      "deterministic_cases": [
+        {
+          "actual_parity": 0,
+          "case": "zero_cut",
+          "inferred_parity": 0,
+          "pinned_interface_sum": -1,
+          "strip_charge_sum": -1
+        },
+        {
+          "actual_parity": 1,
+          "case": "one_cut",
+          "inferred_parity": 1,
+          "pinned_interface_sum": -1,
+          "strip_charge_sum": -2
+        }
+      ],
+      "event_probability_p_0_3": {
+        "0.5": 2.9192926025390612e-12,
+        "0.9": 2.2876792454960967e-15
+      },
+      "fixed_edges": 14,
+      "fixed_minus_currents": 7,
+      "fixed_plus_currents": 7,
+      "gate": "pass",
+      "pinned_interface_edges": 5,
+      "saturated_bulk_vertices": 5
+    },
+    {
+      "L": 7,
+      "deterministic_cases": [
+        {
+          "actual_parity": 0,
+          "case": "zero_cut",
+          "inferred_parity": 0,
+          "pinned_interface_sum": -1,
+          "strip_charge_sum": -1
+        },
+        {
+          "actual_parity": 1,
+          "case": "one_cut",
+          "inferred_parity": 1,
+          "pinned_interface_sum": -1,
+          "strip_charge_sum": -2
+        }
+      ],
+      "event_probability_p_0_3": {
+        "0.5": 3.325256730079648e-17,
+        "0.9": 1.2157665459056904e-21
+      },
+      "fixed_edges": 20,
+      "fixed_minus_currents": 10,
+      "fixed_plus_currents": 10,
+      "gate": "pass",
+      "pinned_interface_edges": 7,
+      "saturated_bulk_vertices": 7
+    },
+    {
+      "L": 11,
+      "deterministic_cases": [
+        {
+          "actual_parity": 0,
+          "case": "zero_cut",
+          "inferred_parity": 0,
+          "pinned_interface_sum": -1,
+          "strip_charge_sum": -1
+        },
+        {
+          "actual_parity": 1,
+          "case": "one_cut",
+          "inferred_parity": 1,
+          "pinned_interface_sum": -1,
+          "strip_charge_sum": -2
+        }
+      ],
+      "event_probability_p_0_3": {
+        "0.5": 4.314398832739887e-27,
+        "0.9": 3.433683820292501e-34
+      },
+      "fixed_edges": 32,
+      "fixed_minus_currents": 16,
+      "fixed_plus_currents": 16,
+      "gate": "pass",
+      "pinned_interface_edges": 11,
+      "saturated_bulk_vertices": 11
+    }
+  ],
+  "claim_boundary": "This is a pointwise conditional obstruction and exponentially small physical-average lower bound, not a size-uniform estimate of typical bulk records, a p=.30 phase, or a threshold.",
+  "id": "lab008-h12-saturated-bulk-joint-record-witness-2026-09-23",
+  "lattice_source_sha256": "b87a5feba27675e26970360d730324b7d3740e4dc0492b4dc478e510f140c9e7",
+  "manifest_sha256": "00b62fd06bc568529a07595349e28870fb7fffce3d8d5174937dde54332bb0ba",
+  "sampling": {
+    "bootstrap_replicates": 0,
+    "new_physical_samples": 0,
+    "new_system_sizes": 0
+  },
+  "source_manifest": "../manifests/h12-saturated-bulk-joint-record-witness-2026-09-23.json",
+  "status": "passed_all_size_proof_geometry_controls",
+  "theorem": "For every L>=4, 0<p<1 and finite bias, the alternating saturated charges on the last bulk column have positive probability, pin all interface currents, and make the complete public strip charge sum determine cut-current parity exactly. Thus conditional full-record contrast is one on this rare bulk event. Its probability is at least [p min(q,1-q)]^(3L-1) for uniform finite q."
+}

@@ -1,0 +1,149 @@
+{
+  "cap_failure": null,
+  "claim_boundary": "Integrity-only production checkpoint. No paired interval, schedule advantage, herald benefit, threshold, scaling, or fault-tolerance claim is evaluated here.",
+  "counters": {
+    "bootstrap_replicates": 0,
+    "production_arm_evaluations": 2176,
+    "production_histories_generated": 272
+  },
+  "event_resolution_gate": {
+    "clean_herald_schedule": {
+      "histories_with_nonempty_detector_event": 128,
+      "online_arm_histories_with_invocation": {
+        "heralded/fixed_delay_1": 8,
+        "heralded/immediate": 8,
+        "heralded/jit_lyons_brown": 7,
+        "syndrome_only/fixed_delay_1": 8,
+        "syndrome_only/immediate": 8,
+        "syndrome_only/jit_lyons_brown": 7
+      },
+      "passed": false
+    },
+    "joint_readout_noise": {
+      "histories_with_nonempty_detector_event": 128,
+      "online_arm_histories_with_invocation": {
+        "heralded/fixed_delay_1": 10,
+        "heralded/immediate": 10,
+        "heralded/jit_lyons_brown": 9,
+        "syndrome_only/fixed_delay_1": 10,
+        "syndrome_only/immediate": 10,
+        "syndrome_only/jit_lyons_brown": 9
+      },
+      "passed": true
+    }
+  },
+  "failed_closed_rows": {
+    "clean_herald_schedule": {
+      "count": 960,
+      "of_rows": 1024,
+      "reasons": [
+        "schedule_matrix_ValueError:periodic D4 flux syndrome must have even cardinality"
+      ]
+    },
+    "joint_readout_noise": {
+      "count": 944,
+      "of_rows": 1024,
+      "reasons": [
+        "schedule_matrix_ValueError:periodic D4 flux syndrome must have even cardinality"
+      ]
+    },
+    "interpretation": "Interface-coverage diagnostic only: the static periodic inner decoder cannot consume most valid instantaneous noisy syndromes. These rows remain unconditional failures, but no logical-risk comparison is released because the event-resolution gate failed."
+  },
+  "integrity_failures": [
+    "clean_herald_schedule:noninformative_event_gate"
+  ],
+  "integrity_passed": false,
+  "manifest": "labs/lab-005-spacetime-jit-anyonic-decoding/manifests/j6-d4-matched-history-stochastic-pilot-2026-09-19.json",
+  "next_action": "Stop censored; do not bootstrap or interpret performance.",
+  "phase": "J6 production integrity",
+  "preflight": "labs/lab-005-spacetime-jit-anyonic-decoding/results/j6-d4-matched-history-pilot-preflight-2026-09-19.json",
+  "preflight_sha256": "978a41b203800ddabd243fda2f2a50dc4cf7787b36e2cd3821bc363311c36afb",
+  "production_release_passed": true,
+  "provenance": [
+    {
+      "actual_sha256": "ef94a1d4cc1820bfe2ef5a59350355ba8d6e9c4c9cbaea83969109977becc179",
+      "actual_status": "passed",
+      "expected_sha256": "ef94a1d4cc1820bfe2ef5a59350355ba8d6e9c4c9cbaea83969109977becc179",
+      "name": "j1_e4b_manifest",
+      "passed": true,
+      "path": "labs/lab-005-spacetime-jit-anyonic-decoding/manifests/j1-e4b-d4-translation-interface-matrix-2026-09-19.json",
+      "required_status": "passed"
+    },
+    {
+      "actual_sha256": "28e4c72ac9c774b8a6b669105a564512d7fc1fb08901a24b6364de3ec18dac89",
+      "actual_status": "passed",
+      "expected_sha256": "28e4c72ac9c774b8a6b669105a564512d7fc1fb08901a24b6364de3ec18dac89",
+      "name": "j1_e4b_result",
+      "passed": true,
+      "path": "labs/lab-005-spacetime-jit-anyonic-decoding/results/j1-e4b-d4-translation-interface-matrix-2026-09-19.json",
+      "required_status": "passed"
+    },
+    {
+      "actual_sha256": "0d0956a8c607f9545507182406afad8cf63fe0c4a4a32c34717de924001575d8",
+      "expected_sha256": "0d0956a8c607f9545507182406afad8cf63fe0c4a4a32c34717de924001575d8",
+      "name": "scripts/d4_integrated_history.py",
+      "passed": true,
+      "path": "labs/lab-005-spacetime-jit-anyonic-decoding/scripts/d4_integrated_history.py"
+    },
+    {
+      "actual_sha256": "6b2509ed4619ff2a7e4610a2262874abb94fb961c384f7ca6d25407c8f05f8d4",
+      "expected_sha256": "6b2509ed4619ff2a7e4610a2262874abb94fb961c384f7ca6d25407c8f05f8d4",
+      "name": "scripts/generic_history.py",
+      "passed": true,
+      "path": "labs/lab-005-spacetime-jit-anyonic-decoding/scripts/generic_history.py"
+    },
+    {
+      "actual_sha256": "ee94606fa604d87694c9ca4408e291fe50c6e49b15e61382ee6c90983b2ec836",
+      "expected_sha256": "ee94606fa604d87694c9ca4408e291fe50c6e49b15e61382ee6c90983b2ec836",
+      "name": "scripts/baseline_harness.py",
+      "passed": true,
+      "path": "labs/lab-005-spacetime-jit-anyonic-decoding/scripts/baseline_harness.py"
+    },
+    {
+      "actual_sha256": "96e0b9bb923a481013064e5b7d7333ecc8eaab1c7fffb9bd7cbeb3aca8a862e4",
+      "expected_sha256": "96e0b9bb923a481013064e5b7d7333ecc8eaab1c7fffb9bd7cbeb3aca8a862e4",
+      "name": "scripts/d4_projector_instrument.py",
+      "passed": true,
+      "path": "labs/lab-005-spacetime-jit-anyonic-decoding/scripts/d4_projector_instrument.py"
+    },
+    {
+      "actual_sha256": "f9578a3d78bae4843099e8c28c5f73ee102b1c180cf1c3b2f46cb93e22bb49c4",
+      "expected_sha256": "f9578a3d78bae4843099e8c28c5f73ee102b1c180cf1c3b2f46cb93e22bb49c4",
+      "name": "scripts/d4_temporal_composition.py",
+      "passed": true,
+      "path": "labs/lab-005-spacetime-jit-anyonic-decoding/scripts/d4_temporal_composition.py"
+    },
+    {
+      "actual_sha256": "b52c231ac0755f53450d466a97d7d2be83126a35f5502bbc2773e684351f7259",
+      "expected_sha256": "b52c231ac0755f53450d466a97d7d2be83126a35f5502bbc2773e684351f7259",
+      "name": "scripts/d4_spatial_policy.py",
+      "passed": true,
+      "path": "labs/lab-005-spacetime-jit-anyonic-decoding/scripts/d4_spatial_policy.py"
+    },
+    {
+      "actual_sha256": "f02f4e483b03bcd399a93546741a96e8ce78eb746bb376a704275ca67830852e",
+      "expected_sha256": "f02f4e483b03bcd399a93546741a96e8ce78eb746bb376a704275ca67830852e",
+      "name": "scripts/persistent_clusters.py",
+      "passed": true,
+      "path": "labs/lab-005-spacetime-jit-anyonic-decoding/scripts/persistent_clusters.py"
+    },
+    {
+      "actual_sha256": "cb2ac932c2158dc41d621018b9e4bb921ccd07864486191ff70db34a69b168b5",
+      "expected_sha256": "cb2ac932c2158dc41d621018b9e4bb921ccd07864486191ff70db34a69b168b5",
+      "name": "scripts/lyons_absorber.py",
+      "passed": true,
+      "path": "labs/lab-005-spacetime-jit-anyonic-decoding/scripts/lyons_absorber.py"
+    }
+  ],
+  "provenance_passed": true,
+  "raw_rows": "labs/lab-005-spacetime-jit-anyonic-decoding/results/j6-d4-matched-history-pilot-rows-2026-09-19.jsonl",
+  "raw_rows_sha256": "9e120e1402f2cd5332ecbea1d15ded2979e8d0fe2165083eeb21794cbed22225",
+  "registration_manifest_sha256": "26b428951263346893d2e9d7d69497c73dceeb33ffac9cc08c680354a1454cd9",
+  "resource_use": {
+    "peak_rss_bytes": 92635136,
+    "raw_rows_bytes": 2428994,
+    "wall_clock_seconds": 5.065248207887635
+  },
+  "schema_version": 1,
+  "status": "censored"
+}

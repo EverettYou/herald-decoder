@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j8o-other-flux-representative-feasibility-2026-09-28",
+  "status": "registered_before_execution",
+  "question": "Do vacuum and one-local-fault first-flux representatives admit bounded exact first-public laws and informative structural omitted-error certificates under the inherited cap?",
+  "hypotheses": {
+    "feasible": "Both representative complete first records have positive exact base likelihood and their two 8,192-error sector priors and one-site omitted upper bounds close within the inherited budget.",
+    "censored": "A representative has incompatible first charge, excessive projector work, or a loose omitted bound; retain the negative feasibility result without expanding the budget."
+  },
+  "frozen_model": "R6AF ideal periodic L=2 D4 geometry/orbit, 36 IID red-X physical edges at p_X=1/10 and p_Z=0. The first observation is the J6O pre-action complete 24-bit flux/charge/vacuum record, signal-only with vacuum=1-charge. The two fixed relation-free public charge actions [0] and [1,30,32,34,35] remain reserved for later action-bound second-record tests; neither is run here. Physical error support remains private to generation/scoring and is never an action input. No histories, noisy readout, logical score, second public law, or policy is evaluated.",
+  "matrix": {
+    "base_error_edges_private": [[], [0]],
+    "first_public_charge": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    "first_public_vacuum": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+    "independent_unit": "One of 8,192 distinct private red-X supports per representative flux sector; exact rational enumeration with no stochastic uncertainty.",
+    "bound": "All eligible first-star projectors must pairwise commute. The complete all-zero charge record is contained in each one-site event. A deterministic negative site gives zero likelihood; otherwise a fair one-site marginal bounds likelihood by 1/2, or all deterministic positive sites by 1. For base joint mass A and prior-weighted omitted upper U, omitted posterior is at most U/(A+U).",
+    "integrity": "Pin inputs and runner, assert GF(2) rank 23/nullity 13, 8,192 unique physical errors in each distinct flux, flux different from J8I selected flux, eligible-site consistency, first-star commutation, exact IID normalization and prior partition, full-binary vacuum convention, positive exact base first likelihood, input hashes before/after, and term/CPU caps. Fail closed on mismatch."
+  },
+  "budget": {"max_cpu_seconds": 60, "max_total_terms": 65536, "max_errors_per_sector": 8192, "max_new_first_masses": 2, "max_new_second_laws": 0, "histories": 0, "schedule_arms": 0, "bootstraps": 0, "new_dependencies": 0},
+  "acceptance": ["Two distinct other-flux exact sector priors and representative complete first-record base laws with exact rational one-site omitted upper certificates", "No extrapolation from the two representatives to all other flux sectors or full-IID information/risk", "Zero second laws, histories, arms, bootstraps and new dependencies"],
+  "stop_rule": "Stop after the two representative sectors or first integrity/CPU/65,536-term failure. A loose certificate is a negative feasibility result; do not add sectors, fit a crossing/threshold, or infer information/risk.",
+  "runner": "scripts/run_j8o_other_flux_representative_feasibility.py",
+  "runner_sha256_before_execution": "81ed958403c38d8a0ab256d675586cb2d5f6a9065008bb92d8cd9c4da11948cc",
+  "pinned_inputs": {
+    "results/j6l-periodic-kagome-incidence-2026-09-24.json": "c3eee28f083b7f3a4dd82a3e4f8a7d3ec29aa19af92bbc3ab4588129d855c4ab",
+    "results/j6m-periodic-operator-ground-orbit-2026-09-24.json": "55bfe46d34c9a8356e828351b0d415ed550312ed315c4c1bda7a51508ef1b932",
+    "results/j8j-full-prior-coverage-feasibility-verified-2026-09-27.json": "1f780fcdb4e0388609e55b9e99cd82ffdecafa3efce0c3f328cb2f0d36f038df",
+    "results/j8n-four-record-channel-coverage-2026-09-27.json": "f293d5afc6b63827f63ac79a54faec87e110b98fe1019a272efc312f088c7d06",
+    "results/j8i-all-support-complete-second-laws-verified-2026-09-27.json": "40418c7174aaa5438580a58c1da44886eb778c9e2c9ffe43a42c5014fd44dc3a",
+    "scripts/run_j6n_sequential_local_projector_moments.py": "0ac5c45dfb899c9a5ac6cabe36e1300cde03054f053d94db1ee2a4bbd8dcb05f",
+    "scripts/run_j6o_full_binary_sequential_public_record.py": "c3c0dc32b30576f22d7838cee059139bcd22dc0cda07c8add34bd4b6d6ac95ca",
+    "scripts/run_j6w_loop_and_three_block_ideal_projector_matrix.py": "e6c38aa226b6fb6722cdd000b5692533f64aad3c4f48a02c8e7d07f6ca32cce9",
+    "scripts/run_j6x_full_first_dephasing_new_third.py": "45576b8de57ca5007cc8fd969f1094dad924a1a85550dc0dadf00e5f65f346ad",
+    "scripts/run_j7a_postselected_next_first_limiting_fixtures.py": "f3521fca0714d6fe88c4ec9493af235bd6f8919b0a9013092c09052a59ad24af"
+  },
+  "planned_result": "results/j8o-other-flux-representative-feasibility-2026-09-28.json"
+}

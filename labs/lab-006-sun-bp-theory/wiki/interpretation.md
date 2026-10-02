@@ -11,7 +11,10 @@ updated: 2026-09-09
 Lab 006 establishes a practical-decoder contrast between the self-conjugate
 SU(2) fundamental and the complex U(1)/SU(3) charge or fundamental. It does not
 establish the thermodynamic existence, absence, or universality of a threshold.
-The mechanism and statistical-mechanics questions pass to Lab 007.
+Lab 007 owns the general statistical-mechanics formulation. The new
+direction-biased U(1) theory and its LER predictions are owned by
+[Lab 008](../../lab-008-direction-biased-u1-current-channel/PLAN.md), whose
+experimental parent is Lab 006 and method dependency is Lab 007.
 
 ## Evidence
 
@@ -64,3 +67,4 @@ current paired replay checks do not retroactively supply them. See the current
 - [Directed rate evidence](ler-curves.md)
 - [Paired orientation evidence](hidden-orientation.md)
 - [Lab 007 theory plan](../../lab-007-decoding-statistical-mechanics/PLAN.md)
+- [Lab 008 direction-biased U(1) theory](../../lab-008-direction-biased-u1-current-channel/PLAN.md)

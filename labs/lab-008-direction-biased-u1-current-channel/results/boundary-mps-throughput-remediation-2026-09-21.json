@@ -1,0 +1,424 @@
+{
+  "id": "lab008-boundary-mps-throughput-remediation-2026-09-21",
+  "status": "rejected",
+  "candidate": "dense frontier update with identical local tensors and chi, TT-SVD only at completed lattice-row boundaries",
+  "gates": {
+    "all_24_frozen_evaluations_complete": true,
+    "maximum_sector_replay_error_le_1e-10": false,
+    "minimum_matrix_projection_le_7200_seconds": true,
+    "conservative_memory_le_8_gib": true,
+    "production_histories_zero": true
+  },
+  "maximum_sector_replay_error": 0.0010058592153799895,
+  "l13_mean_seconds": {
+    "chi16_left-to-right": 4.71913104209428,
+    "chi16_right-to-left": 3.393142235931009,
+    "chi32_left-to-right": 4.587003208231181,
+    "chi32_right-to-left": 3.1227080553459623
+  },
+  "minimum_matrix_projected_worker_seconds": 7035.249864421785,
+  "minimum_matrix_projected_four_worker_wall_seconds": 1758.8124661054462,
+  "measured_matrix_wall_seconds": 18.354880082886666,
+  "conservative_main_plus_worker_peak_gib": 0.9545440673828125,
+  "results": [
+    {
+      "kind": "L11-control",
+      "id": "square-L11-p30-q90-boundary-tail:index287",
+      "L": 11,
+      "q": 0.9,
+      "rows": [
+        {
+          "direction": "left-to-right",
+          "chi": 16,
+          "sectors": [
+            0.561484675410587,
+            0.4385153245894131
+          ],
+          "baseline_sectors": [
+            0.5615404170588251,
+            0.438459582941175
+          ],
+          "maximum_sector_replay_error": 5.574164823812788e-05,
+          "seconds": 0.28610487515106797
+        },
+        {
+          "direction": "left-to-right",
+          "chi": 32,
+          "sectors": [
+            0.5614846726764824,
+            0.43851532732351767
+          ],
+          "baseline_sectors": [
+            0.5614845704067442,
+            0.43851542959325596
+          ],
+          "maximum_sector_replay_error": 1.022697382890847e-07,
+          "seconds": 0.2961825826205313
+        },
+        {
+          "direction": "right-to-left",
+          "chi": 16,
+          "sectors": [
+            0.5614837700908619,
+            0.438516229909138
+          ],
+          "baseline_sectors": [
+            0.56154105557039,
+            0.4384589444296101
+          ],
+          "maximum_sector_replay_error": 5.7285479528101924e-05,
+          "seconds": 0.23282800009474158
+        },
+        {
+          "direction": "right-to-left",
+          "chi": 32,
+          "sectors": [
+            0.5614846726692017,
+            0.4385153273307983
+          ],
+          "baseline_sectors": [
+            0.56148477847254,
+            0.43851522152746
+          ],
+          "maximum_sector_replay_error": 1.058033383127821e-07,
+          "seconds": 0.3058937918394804
+        }
+      ],
+      "worker_peak_gib": 0.1196136474609375
+    },
+    {
+      "kind": "L11-control",
+      "id": "square-L11-p30-q94-boundary-tail:index18",
+      "L": 11,
+      "q": 0.94,
+      "rows": [
+        {
+          "direction": "left-to-right",
+          "chi": 16,
+          "sectors": [
+            0.5613489701984776,
+            0.43865102980152243
+          ],
+          "baseline_sectors": [
+            0.5612377745739124,
+            0.4387622254260876
+          ],
+          "maximum_sector_replay_error": 0.00011119562456518572,
+          "seconds": 0.2879492496140301
+        },
+        {
+          "direction": "left-to-right",
+          "chi": 32,
+          "sectors": [
+            0.5613489704943653,
+            0.43865102950563484
+          ],
+          "baseline_sectors": [
+            0.5613489226402997,
+            0.4386510773597004
+          ],
+          "maximum_sector_replay_error": 4.785406559904004e-08,
+          "seconds": 0.3004910838790238
+        },
+        {
+          "direction": "right-to-left",
+          "chi": 16,
+          "sectors": [
+            0.5613488270680052,
+            0.43865117293199496
+          ],
+          "baseline_sectors": [
+            0.5612850448889527,
+            0.43871495511104724
+          ],
+          "maximum_sector_replay_error": 6.378217905245176e-05,
+          "seconds": 0.2440419578924775
+        },
+        {
+          "direction": "right-to-left",
+          "chi": 32,
+          "sectors": [
+            0.5613489704825187,
+            0.43865102951748125
+          ],
+          "baseline_sectors": [
+            0.5613488721922786,
+            0.4386511278077215
+          ],
+          "maximum_sector_replay_error": 9.829024022467436e-08,
+          "seconds": 0.29474012507125735
+        }
+      ],
+      "worker_peak_gib": 0.119110107421875
+    },
+    {
+      "kind": "L11-control",
+      "id": "square-L11-p30-q97-boundary-tail:index291",
+      "L": 11,
+      "q": 0.97,
+      "rows": [
+        {
+          "direction": "left-to-right",
+          "chi": 16,
+          "sectors": [
+            0.4071669069318585,
+            0.5928330930681416
+          ],
+          "baseline_sectors": [
+            0.4071642722240013,
+            0.5928357277759987
+          ],
+          "maximum_sector_replay_error": 2.634707857163132e-06,
+          "seconds": 0.2920380840077996
+        },
+        {
+          "direction": "left-to-right",
+          "chi": 32,
+          "sectors": [
+            0.40716690712256215,
+            0.5928330928774378
+          ],
+          "baseline_sectors": [
+            0.4071668915765788,
+            0.5928331084234212
+          ],
+          "maximum_sector_replay_error": 1.554598338948665e-08,
+          "seconds": 0.3002739157527685
+        },
+        {
+          "direction": "right-to-left",
+          "chi": 16,
+          "sectors": [
+            0.4071671207493465,
+            0.5928328792506535
+          ],
+          "baseline_sectors": [
+            0.40713932207669196,
+            0.592860677923308
+          ],
+          "maximum_sector_replay_error": 2.779867265456648e-05,
+          "seconds": 0.24359162477776408
+        },
+        {
+          "direction": "right-to-left",
+          "chi": 32,
+          "sectors": [
+            0.40716690712252496,
+            0.5928330928774751
+          ],
+          "baseline_sectors": [
+            0.4071671327601122,
+            0.5928328672398878
+          ],
+          "maximum_sector_replay_error": 2.2563758728111338e-07,
+          "seconds": 0.3057727082632482
+        }
+      ],
+      "worker_peak_gib": 0.11956787109375
+    },
+    {
+      "kind": "L13-frozen-preflight",
+      "id": "seeded-q90",
+      "L": 13,
+      "q": 0.9,
+      "rows": [
+        {
+          "direction": "left-to-right",
+          "chi": 16,
+          "sectors": [
+            0.021501272402181765,
+            0.9784987275978182
+          ],
+          "baseline_sectors": [
+            0.021606863495793667,
+            0.9783931365042063
+          ],
+          "maximum_sector_replay_error": 0.00010559109361190158,
+          "seconds": 3.994560834020376
+        },
+        {
+          "direction": "left-to-right",
+          "chi": 32,
+          "sectors": [
+            0.021501222940779805,
+            0.9784987770592202
+          ],
+          "baseline_sectors": [
+            0.021503018212433635,
+            0.9784969817875663
+          ],
+          "maximum_sector_replay_error": 1.795271653892705e-06,
+          "seconds": 4.885392332915217
+        },
+        {
+          "direction": "right-to-left",
+          "chi": 16,
+          "sectors": [
+            0.02150161340799565,
+            0.9784983865920044
+          ],
+          "baseline_sectors": [
+            0.02174987380379702,
+            0.978250126196203
+          ],
+          "maximum_sector_replay_error": 0.0002482603958013918,
+          "seconds": 3.0310637918300927
+        },
+        {
+          "direction": "right-to-left",
+          "chi": 32,
+          "sectors": [
+            0.02150122037720605,
+            0.978498779622794
+          ],
+          "baseline_sectors": [
+            0.02150477178623672,
+            0.9784952282137632
+          ],
+          "maximum_sector_replay_error": 3.551409030744246e-06,
+          "seconds": 3.7749459170736372
+        }
+      ],
+      "worker_peak_gib": 0.1608123779296875
+    },
+    {
+      "kind": "L13-frozen-preflight",
+      "id": "zero-q94",
+      "L": 13,
+      "q": 0.94,
+      "rows": [
+        {
+          "direction": "left-to-right",
+          "chi": 16,
+          "sectors": [
+            0.9645533076526641,
+            0.03544669234733598
+          ],
+          "baseline_sectors": [
+            0.9645536461810119,
+            0.03544635381898805
+          ],
+          "maximum_sector_replay_error": 3.385283479304113e-07,
+          "seconds": 5.440876124892384
+        },
+        {
+          "direction": "left-to-right",
+          "chi": 32,
+          "sectors": [
+            0.964553307645868,
+            0.035446692354132045
+          ],
+          "baseline_sectors": [
+            0.9645533063045142,
+            0.03544669369548581
+          ],
+          "maximum_sector_replay_error": 1.3413538058060226e-09,
+          "seconds": 4.718401374761015
+        },
+        {
+          "direction": "right-to-left",
+          "chi": 16,
+          "sectors": [
+            0.964553368210737,
+            0.03544663178926299
+          ],
+          "baseline_sectors": [
+            0.9645542183954647,
+            0.035445781604535355
+          ],
+          "maximum_sector_replay_error": 8.501847277297969e-07,
+          "seconds": 3.6397541658952832
+        },
+        {
+          "direction": "right-to-left",
+          "chi": 32,
+          "sectors": [
+            0.964553307650806,
+            0.035446692349193905
+          ],
+          "baseline_sectors": [
+            0.9645533098244383,
+            0.035446690175561714
+          ],
+          "maximum_sector_replay_error": 2.1736322741716663e-09,
+          "seconds": 2.4257964161224663
+        }
+      ],
+      "worker_peak_gib": 0.1607818603515625
+    },
+    {
+      "kind": "L13-frozen-preflight",
+      "id": "seeded-q97",
+      "L": 13,
+      "q": 0.97,
+      "rows": [
+        {
+          "direction": "left-to-right",
+          "chi": 16,
+          "sectors": [
+            0.8936374854706653,
+            0.10636251452933464
+          ],
+          "baseline_sectors": [
+            0.8933197381184981,
+            0.10668026188150194
+          ],
+          "maximum_sector_replay_error": 0.00031774735216730243,
+          "seconds": 4.721956167370081
+        },
+        {
+          "direction": "left-to-right",
+          "chi": 32,
+          "sectors": [
+            0.8936374851561264,
+            0.1063625148438736
+          ],
+          "baseline_sectors": [
+            0.8936340839814719,
+            0.1063659160185281
+          ],
+          "maximum_sector_replay_error": 3.401174654499295e-06,
+          "seconds": 4.157215917017311
+        },
+        {
+          "direction": "right-to-left",
+          "chi": 16,
+          "sectors": [
+            0.8936339716896229,
+            0.10636602831037706
+          ],
+          "baseline_sectors": [
+            0.8946398309050029,
+            0.10536016909499715
+          ],
+          "maximum_sector_replay_error": 0.0010058592153799895,
+          "seconds": 3.5086087500676513
+        },
+        {
+          "direction": "right-to-left",
+          "chi": 32,
+          "sectors": [
+            0.8936374869276179,
+            0.10636251307238212
+          ],
+          "baseline_sectors": [
+            0.8936349560615096,
+            0.10636504393849051
+          ],
+          "maximum_sector_replay_error": 2.5308661083939255e-06,
+          "seconds": 3.1673818328417838
+        }
+      ],
+      "worker_peak_gib": 0.162078857421875
+    }
+  ],
+  "production_histories_generated": 0,
+  "bootstrap_replicates": 0,
+  "source_hashes": {
+    "runner": "689b62fa117d3452c7f91c4a27adeed525547a8e122d5cf9dde6b08f4a987357",
+    "implementation": "e474e7e6d9a8621fc41c7c57809b89e29c39fbe0f10f17a3a77930a7ce7422dd",
+    "L11_baseline": "f6ed4bd27c29e5733b0964cd00913d9d1624d9accbe8eadd3f30deae6089d075",
+    "L13_baseline": "199fad026f60c1e9dca6ecd876910d0089ac1c94e1af29f63cfbdc15698be791"
+  },
+  "decision": "Promote only if both semantic replay and unchanged-matrix throughput gates pass; otherwise retain the vertex schedule and keep production unarmed."
+}

@@ -1,0 +1,54 @@
+{
+  "id": "lab008-midpoint-residual-transport-multiplicity-2026-09-22",
+  "status": "complete_counterfamily",
+  "sampling": false,
+  "theorem": {
+    "statement": "For every canonical square size L>=3, the maximum inverse multiplicity of the frozen shortest/left-to-right/lexicographic residual-path map is at least L.",
+    "construction": {
+      "target": "j_star equals 1 on every horizontal edge and 0 on every vertical edge, so every horizontal residual edge points right-to-left.",
+      "preimages": "For each row r, toggle the L-1 horizontal edges of row r in j_star to obtain the distinct state j_r.",
+      "selector": "In j_r, row r is a left-to-right residual crossing of the minimum possible length L-1. Other rows remain right-to-left crossings of the same length, so the frozen direction tie-break selects row r before every right-to-left candidate.",
+      "common_image": "T(j_r) toggles row r and returns j_star for every r. Hence j_star has at least L distinct preimages."
+    },
+    "consequence": "No L-independent inverse-multiplicity bound exists for the frozen deterministic transport, including at p=1/2 where action weights are flat."
+  },
+  "verification": {
+    "sizes": [3, 4],
+    "new_sizes": 0,
+    "rows": [
+      {
+        "L": 3,
+        "target": 219,
+        "candidate_preimages": 3,
+        "distinct_preimages": 3,
+        "inverse_multiplicity_lower_bound": 3,
+        "construction_failures": 0,
+        "selector_failures": 0,
+        "common_image_failures": 0,
+        "charge_failures": 0,
+        "logical_flip_failures": 0
+      },
+      {
+        "L": 4,
+        "target": 241003,
+        "candidate_preimages": 4,
+        "distinct_preimages": 4,
+        "inverse_multiplicity_lower_bound": 4,
+        "construction_failures": 0,
+        "selector_failures": 0,
+        "common_image_failures": 0,
+        "charge_failures": 0,
+        "logical_flip_failures": 0
+      }
+    ]
+  },
+  "interpretation": {
+    "closed": "The frozen residual-path selector cannot be used as a bounded-to-one midpoint coupling.",
+    "not_closed": "The result does not rule out fractional mass transport, another selector, or vanishing/nonvanishing midpoint LER."
+  },
+  "provenance": {
+    "manifest": "../manifests/midpoint-residual-transport-multiplicity-2026-09-22.json",
+    "replay": "../scripts/verify_midpoint_residual_transport_multiplicity.py",
+    "parent_transport": "residual-directed-sector-transport-2026-09-22.json"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "claim_boundary": "Deterministic public-contract replay only. The old source body is unavailable, so this audit can establish public behavioral compatibility but cannot claim line-level or internal-algorithm equivalence.",
+  "old_source_body_available": false,
+  "frozen_old_hash": "c7b528d343abedb052e6bea7f5c29f65de2bab5dae96befa339763198bb17e9a",
+  "current_remediated_hash": "2ba3dd13feda42e4441ae0089be2403b5c75b626ae0a0542d4aa9089807472fd",
+  "current_hash_gate_passed": true,
+  "intervention": "In the pytest process only, require the old and current hashes to match their registered values, then replace exactly _POLICY_SOURCE_HASHES['d4_charge.py'] with the current hash. No source or manifest is mutated by the test plugin.",
+  "test_files": [
+    "labs/lab-005-spacetime-jit-anyonic-decoding/scripts/test_d4_spatial_policy.py",
+    "labs/lab-005-spacetime-jit-anyonic-decoding/scripts/test_d4_projector_instrument.py",
+    "labs/lab-005-spacetime-jit-anyonic-decoding/scripts/test_d4_temporal_composition.py",
+    "labs/lab-005-spacetime-jit-anyonic-decoding/scripts/test_e1_schedule_integration.py",
+    "labs/lab-004-d4-intrinsic-heralded-decoding/scripts/test_d4_charge.py",
+    "labs/lab-004-d4-intrinsic-heralded-decoding/scripts/test_r6af_two_stage_public_charge.py",
+    "labs/lab-004-d4-intrinsic-heralded-decoding/scripts/test_d4_sampler.py"
+  ],
+  "pytest_returncode": 0,
+  "pytest_stdout": "........................................................................ [ 93%]\n.....                                                                    [100%]\n77 passed in 1.89s",
+  "pytest_stderr": "/Users/home/.matplotlib is not a writable directory\nMatplotlib created a temporary cache directory at /var/folders/p0/60nthth972v3bmp7ryg091jw0000gn/T/matplotlib-s1ekg5na because there was an issue with the default path (/Users/home/.matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.",
+  "public_contract_compatible": true,
+  "internal_algorithm_equivalence_claimed": false,
+  "production_histories_generated": 0,
+  "performance_evaluations": 0,
+  "bootstrap_replicates": 0,
+  "next_action": "Update only the Lab 005 d4_charge.py frozen hash, then rerun the unchanged J1-E4B matrix.",
+  "source_sha256": {
+    "labs/lab-005-spacetime-jit-anyonic-decoding/scripts/run_j1_e4c_d4_charge_compatibility.py": "07f237fce1650084d42b8e01ffe8636f54727a7ec18b86fd03d574f61533f2c5",
+    "labs/lab-005-spacetime-jit-anyonic-decoding/scripts/j1_e4c_charge_hash_override.py": "b840c1d2eec77714074b161780ee2f423da1403acde67e50647f1f5d134a782a",
+    "labs/lab-005-spacetime-jit-anyonic-decoding/manifests/j1-e4c-d4-charge-semantic-compatibility-2026-09-19.json": "90da5ae093359fcd51cf88172ebf3018280e4f2606984797c5c1d38809db3ac5",
+    "labs/lab-004-d4-intrinsic-heralded-decoding/scripts/d4_charge.py": "2ba3dd13feda42e4441ae0089be2403b5c75b626ae0a0542d4aa9089807472fd"
+  }
+}

@@ -1,3 +1,7 @@
+## Scientific correction — 2026-10-01
+
+For the binary incomplete-herald channel, the research domain is **0 <= p <= 1, 0 <= q <= 1**. At interior q, error complementation does not give an observation-preserving p ↔ 1−p symmetry: a zero herald combines an ineligible event and a missed eligible event. Claims below that restrict the physical domain to half, enforce a horizontal boundary tangent at half, or infer an all-p ceiling from p≈0.5 are **withdrawn historical claims**, not current conclusions. B18's constrained guide is withdrawn; measured trial counts remain historical evidence. See [full-prior correction](/wiki?page=methods/binary-herald-full-prior-domain.md). The uniform-prior point p=0.5 remains special, but does not justify truncating the domain. Endpoint q=0 and q=1 symmetries require separate observation relabeling and do not establish interior-q symmetry.
+
 # Plan — Herald decoding threshold phase diagram
 
 ## Scientific objective
@@ -1900,7 +1904,7 @@ withdrawn B16 conditional-envelope width. Focused tests and the visual audit
 pass with zero new decoder runs or decodes. The active report now shows B17;
 B16 remains provenance only.
 
-### Phase B18 — p↔1-p symmetry and full fundamental-domain display
+### WITHDRAWN historical Phase B18 — incorrect complement symmetry
 
 **Researcher correction registered 2026-08-28.** The physical phase diagram
 obeys $q_c(p)=q_c(1-p)$. With p horizontal and q vertical, differentiability

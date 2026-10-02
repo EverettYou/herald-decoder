@@ -1,0 +1,63 @@
+{
+  "status": "complete",
+  "model": {
+    "p": [
+      0,
+      1
+    ],
+    "q": [
+      0,
+      1
+    ],
+    "geometry": "canonical honeycomb, exact syndrome, binary count-dependent herald, unmeasured rough tips"
+  },
+  "methods": {
+    "configuration_map": "standard: integer minimizers below half; literal floating objective above half with numerical qualification",
+    "planar_ml": "standard: algebraically exact sector sums, numerical gates and extreme-prior transfer fallback",
+    "transfer_ml": "standard: exact bounded-width binary contraction",
+    "mps_ml": "standard approximate: finite chi, convergence diagnostics",
+    "kac_ward": "research only: finite support penalty"
+  },
+  "fresh_trials": 3200,
+  "fresh_decoder_evaluations": 16000,
+  "fresh_cells": 16,
+  "invalid_corrections": 0,
+  "runtime_exceptions": 0,
+  "inherited_ml_trials": 5114000,
+  "inherited_ml_cells": 1430,
+  "reported_boundary_curves": 10,
+  "new_threshold_fits": 0,
+  "theory_index": "wiki/index.md",
+  "source_api": "../../src/herald_decoder/README.md",
+  "results": [
+    "results/validation.json",
+    "results/planar-factor-contract-validation.json",
+    "results/survey-analysis.json",
+    "results/benchmark.json",
+    "results/figure-provenance.json",
+    "results/data-provenance.json"
+  ],
+  "limitations": [
+    "No full-domain thermodynamic phase boundary established.",
+    "Floating-point, finite-chi and finite-penalty limits are distinguished.",
+    "No quantum spacetime or generic hidden-orientation decoding claim."
+  ],
+  "delivery_verification": "results/delivery-verification.json",
+  "run_evaluation": {
+    "page": "wiki/scicode2-run-evaluation.md",
+    "figure": "figures/scicode2-run-boundary-comparison.png",
+    "runs": 9,
+    "historical_task_p_domain": [
+      0,
+      0.5
+    ],
+    "current_physical_p_domain": [
+      0,
+      1
+    ],
+    "assessment": "All nine substantive; at least six strongly supported completion; independent audit, not calibrated pipeline correctness grading",
+    "delivery_status": "passed_rendered_delivery",
+    "result_url": "/lab-wiki?lab=lab-009-planar-herald-decoder-survey&page=scicode2-run-evaluation"
+  },
+  "current_figure_count": 9
+}

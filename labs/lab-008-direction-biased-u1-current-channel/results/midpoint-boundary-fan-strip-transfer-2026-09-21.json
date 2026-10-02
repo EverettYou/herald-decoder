@@ -1,0 +1,212 @@
+{
+  "status": "complete_embedded_controls_and_selector_transfer_state_obstruction",
+  "physical_parameters": {
+    "geometry": "width-three square strip",
+    "p": "1/2",
+    "q": "1"
+  },
+  "new_physical_record_samples": 0,
+  "decoder_runs": 0,
+  "embedded_model": {
+    "vertices": "three rows and W columns",
+    "rough_boundaries": "all x=0 and x=W-1 vertices are unmeasured left/right rough boundaries",
+    "measured_charges": "integer divergence at every vertex in the W-2 interior columns",
+    "edges": "all horizontal nearest-neighbor edges plus vertical edges only in interior columns",
+    "logical_cut": "the three horizontal edges entering the right rough boundary",
+    "selector": "shortest path first, then the frozen lexicographic y/edge order"
+  },
+  "direct_controls": [
+    {
+      "width_columns": 3,
+      "height_rows": 3,
+      "edges": 8,
+      "measured_charge_dimension": 3,
+      "simple_rough_to_rough_paths": 9,
+      "charge_fibers": 64,
+      "ambiguous_states": 238,
+      "physical_majority_domain_states": 126,
+      "exact_Bayes_numerator": 112,
+      "target_multiplicity_histogram": {
+        "1": 98,
+        "2": 14
+      },
+      "selector_second_moment": 154,
+      "kappa_exact": "11/9",
+      "maximum_multiplicity": 2,
+      "direct_risk_lower_bound_exact": "567/1408"
+    },
+    {
+      "width_columns": 4,
+      "height_rows": 3,
+      "edges": 13,
+      "measured_charge_dimension": 6,
+      "simple_rough_to_rough_paths": 29,
+      "charge_fibers": 2450,
+      "ambiguous_states": 6422,
+      "physical_majority_domain_states": 3926,
+      "exact_Bayes_numerator": 2496,
+      "target_multiplicity_histogram": {
+        "1": 1213,
+        "2": 802,
+        "3": 313,
+        "4": 30,
+        "5": 10
+      },
+      "selector_second_moment": 7968,
+      "kappa_exact": "3984/1963",
+      "maximum_multiplicity": 5,
+      "direct_risk_lower_bound_exact": "3853369/16318464"
+    }
+  ],
+  "charge_majority_transfer": {
+    "completed_widths": [
+      {
+        "width_columns": 3,
+        "interior_columns": 1,
+        "edges": 8,
+        "frontier_charge_prefix_states": 192,
+        "charge_fibers": 64,
+        "ambiguous_charge_fibers": 46,
+        "physical_majority_domain_states": 126,
+        "exact_Bayes_numerator": 112,
+        "ambiguous_states": 238,
+        "total_configurations": 256
+      },
+      {
+        "width_columns": 4,
+        "interior_columns": 2,
+        "edges": 13,
+        "frontier_charge_prefix_states": 5232,
+        "charge_fibers": 2450,
+        "ambiguous_charge_fibers": 1096,
+        "physical_majority_domain_states": 3926,
+        "exact_Bayes_numerator": 2496,
+        "ambiguous_states": 6422,
+        "total_configurations": 8192
+      },
+      {
+        "width_columns": 5,
+        "interior_columns": 3,
+        "edges": 18,
+        "frontier_charge_prefix_states": 144464,
+        "charge_fibers": 80182,
+        "ambiguous_charge_fibers": 22456,
+        "physical_majority_domain_states": 108978,
+        "exact_Bayes_numerator": 55496,
+        "ambiguous_states": 164474,
+        "total_configurations": 262144
+      }
+    ],
+    "cap_hit": {
+      "width_columns": 6,
+      "interior_columns": 4,
+      "states_observed_before_fail_closed": 2000001,
+      "registered_state_cap": 2000000
+    }
+  },
+  "selector_transfer_profile": [
+    {
+      "width_columns": 3,
+      "edges": 8,
+      "simple_paths": 9,
+      "ordered_path_pair_channels": 81,
+      "pair_channels_exceed_registered_cap": false
+    },
+    {
+      "width_columns": 4,
+      "edges": 13,
+      "simple_paths": 29,
+      "ordered_path_pair_channels": 841,
+      "pair_channels_exceed_registered_cap": false
+    },
+    {
+      "width_columns": 5,
+      "edges": 18,
+      "simple_paths": 95,
+      "ordered_path_pair_channels": 9025,
+      "pair_channels_exceed_registered_cap": false
+    },
+    {
+      "width_columns": 6,
+      "edges": 23,
+      "simple_paths": 313,
+      "ordered_path_pair_channels": 97969,
+      "pair_channels_exceed_registered_cap": false
+    },
+    {
+      "width_columns": 7,
+      "edges": 28,
+      "simple_paths": 1033,
+      "ordered_path_pair_channels": 1067089,
+      "pair_channels_exceed_registered_cap": false
+    },
+    {
+      "width_columns": 8,
+      "edges": 33,
+      "simple_paths": 3411,
+      "ordered_path_pair_channels": 11634921,
+      "pair_channels_exceed_registered_cap": true
+    },
+    {
+      "width_columns": 9,
+      "edges": 38,
+      "simple_paths": 11265,
+      "ordered_path_pair_channels": 126900225,
+      "pair_channels_exceed_registered_cap": true
+    },
+    {
+      "width_columns": 10,
+      "edges": 43,
+      "simple_paths": 37205,
+      "ordered_path_pair_channels": 1384212025,
+      "pair_channels_exceed_registered_cap": true
+    },
+    {
+      "width_columns": 11,
+      "edges": 48,
+      "simple_paths": 122879,
+      "ordered_path_pair_channels": 15099248641,
+      "pair_channels_exceed_registered_cap": true
+    },
+    {
+      "width_columns": 12,
+      "edges": 53,
+      "simple_paths": 405841,
+      "ordered_path_pair_channels": 164706917281,
+      "pair_channels_exceed_registered_cap": true
+    }
+  ],
+  "branch_matrix": {
+    "embedded_fan": {
+      "outcome": "fan_multiplicity_survives_first_full_square_strip_embedding",
+      "established": "The W=4, height-three strip includes all square-strip paths, full interior charge and the physical majority filter. It has A=3926, second moment 7968, kappa=3984/1963 and maximum multiplicity five.",
+      "boundary": "W=3 and W=4 are exact controls, not a growth rate or all-width obstruction."
+    },
+    "charge_majority_transfer": {
+      "outcome": "exact_denominator_reaches_W5_then_registered_state_cap_blocks_W6",
+      "established": "The column transfer replays all W3/W4 fibers and reaches W5 with 144464 prefix/frontier states, 80182 charge fibers, majority-domain denominator 108978 and Bayes numerator 55496.",
+      "obstruction": "The W6 transition was stopped as soon as it created 2000001 states, above the registered 2000000-state cap."
+    },
+    "selector_second_moment_transfer": {
+      "outcome": "full_charge_transfer_does_not_carry_the_nonlocal_selector_moment",
+      "established": "The exact second moment decomposes into ordered selected-path-pair channels. Simple-path counts and channel counts are profiled through W12.",
+      "obstruction": "Charge-prefix/frontier states merge configurations with different earlier-path availability. Retaining the ordered selector predicates with the charge-majority trie is an unresolved automaton; the uncompressed path-pair channel count exceeds two million at W8. No W5 selector second moment was evaluated."
+    }
+  },
+  "decision": {
+    "outcome": "embedded_fan_survives_finitely_but_registered_transfer_stops_at_selector_automaton_interface",
+    "established": "Outside square-strip paths and the physical majority filter do not destroy finite multiplicity at W4; the exact charge denominator is transferable one width farther.",
+    "not_established": "No fixed-width kappa rate, physical divergence obstruction, uniform kappa bound, midpoint noncorrectability or two-dimensional threshold is proved.",
+    "threshold_claim": "No threshold claim is promoted."
+  },
+  "precise_missing_interface": "Construct a reduced decision diagram or equivalent frontier automaton that carries, for every target, all earlier-path availability predicates needed by the shortest selector together with the full-charge majority-sector trie; validate it on W3/W4 before evaluating W5.",
+  "elapsed_seconds": 4.997375334147364,
+  "source_sha256": {
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/audit_midpoint_boundary_fan_strip_transfer.py": "3732343d698cac476ceb359f6053a6ff7a15219624b5af70d4c751bca417fb92",
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/audit_midpoint_boundary_fan_tail.py": "c20a7089c7b1d9f7351381faa08170cedbe4a1847c07c4a76fc36b713f46096c",
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/check_midpoint_switching_pairing.py": "4aec56ec9ef90d6d6d193f896d6f6c5be8bf1a6719bbe085df4acb9c81ac2e18",
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/current_oracle.py": "241916aa389193b7b62a3ea2de7f4267086dfcca60760ee514e27100f40fa6ee",
+    "labs/lab-008-direction-biased-u1-current-channel/manifests/midpoint-boundary-fan-strip-transfer-2026-09-21.json": "d6f6034a969fa9c75d90f532a0aababcf8cc4226f3b63fe8607646a8efad7949",
+    "labs/lab-008-direction-biased-u1-current-channel/results/midpoint-boundary-fan-tail-2026-09-21.json": "5782476c8f860a778a119c74ad59d136fa2bbdaef2316bfccb237acd327c13bb"
+  }
+}

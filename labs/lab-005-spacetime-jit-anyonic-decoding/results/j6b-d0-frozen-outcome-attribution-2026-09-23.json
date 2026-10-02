@@ -1,0 +1,855 @@
+{
+  "checks": {
+    "all_mass_balances_passed": true,
+    "histories": 272,
+    "online_contrasts": 14,
+    "rows": 2176,
+    "stochastic_arms": 16
+  },
+  "claim_boundary": "This is a post-hoc descriptive accounting of existing unconditional outcomes. It is not a new pointwise or simultaneous significance test, a conditional-on-scored LER estimand, causal mechanism identification, JIT superiority, threshold, or approval for a larger study.",
+  "contract_sha256": "b492c8626298865e36de18ac0611a3586e7f3753c572449bcad2105d0503e84c",
+  "frozen_inputs": {
+    "integrity": {
+      "path": "results/j6b-disjoint-temporal-handoff-analysis-2026-09-23.json",
+      "sha256": "9f9375df85b98bf2ccbdc9edc0e86512f67f9424fa1589bba3e9714e56309049"
+    },
+    "manifest": {
+      "path": "manifests/j6b-disjoint-temporal-handoff-pilot-2026-09-23.json",
+      "sha256": "8140182a4be0315a205936626c7ec727f765efe66047c02bbeac588097b7fdb2"
+    },
+    "paired_analysis": {
+      "path": "results/j6b-disjoint-temporal-handoff-paired-analysis-2026-09-23.json",
+      "sha256": "402074b139fafd103ee801e3139de3f1245a7bd3dcee88f976338a206df2657f"
+    },
+    "rows": {
+      "path": "results/j6b-disjoint-temporal-handoff-rows-2026-09-23.jsonl",
+      "sha256": "620c5db65231e5c112a497397aad168eefd7d284f1af362c52d512c6741fbefe"
+    }
+  },
+  "outcome_categories": [
+    "failed_closed",
+    "scored_failure",
+    "scored_success"
+  ],
+  "per_arm": [
+    {
+      "branch": "immediate",
+      "cell_id": "clean_herald_schedule",
+      "denominator": 128,
+      "failed_closed_reasons": {
+        "ValueError:unresolved_temporal_boundary_handoff": 58
+      },
+      "mode": "syndrome_only",
+      "outcome_counts": {
+        "failed_closed": 58,
+        "scored_failure": 62,
+        "scored_success": 8
+      },
+      "scored_failure_flag_counts_overlapping": {
+        "charge_winding": 19,
+        "physical_winding": 0,
+        "terminal_residual": 46,
+        "union_winding": 21
+      }
+    },
+    {
+      "branch": "fixed_delay_1",
+      "cell_id": "clean_herald_schedule",
+      "denominator": 128,
+      "failed_closed_reasons": {
+        "ValueError:unresolved_temporal_boundary_handoff": 56
+      },
+      "mode": "syndrome_only",
+      "outcome_counts": {
+        "failed_closed": 56,
+        "scored_failure": 59,
+        "scored_success": 13
+      },
+      "scored_failure_flag_counts_overlapping": {
+        "charge_winding": 20,
+        "physical_winding": 0,
+        "terminal_residual": 41,
+        "union_winding": 22
+      }
+    },
+    {
+      "branch": "jit_lyons_brown",
+      "cell_id": "clean_herald_schedule",
+      "denominator": 128,
+      "failed_closed_reasons": {
+        "ValueError:unresolved_temporal_boundary_handoff": 59
+      },
+      "mode": "syndrome_only",
+      "outcome_counts": {
+        "failed_closed": 59,
+        "scored_failure": 61,
+        "scored_success": 8
+      },
+      "scored_failure_flag_counts_overlapping": {
+        "charge_winding": 13,
+        "physical_winding": 0,
+        "terminal_residual": 57,
+        "union_winding": 7
+      }
+    },
+    {
+      "branch": "offline_full_history",
+      "cell_id": "clean_herald_schedule",
+      "denominator": 128,
+      "failed_closed_reasons": {
+        "ValueError:unresolved_temporal_boundary_handoff": 55
+      },
+      "mode": "syndrome_only",
+      "outcome_counts": {
+        "failed_closed": 55,
+        "scored_failure": 58,
+        "scored_success": 15
+      },
+      "scored_failure_flag_counts_overlapping": {
+        "charge_winding": 19,
+        "physical_winding": 0,
+        "terminal_residual": 35,
+        "union_winding": 24
+      }
+    },
+    {
+      "branch": "immediate",
+      "cell_id": "clean_herald_schedule",
+      "denominator": 128,
+      "failed_closed_reasons": {
+        "ValueError:unresolved_temporal_boundary_handoff": 58
+      },
+      "mode": "heralded",
+      "outcome_counts": {
+        "failed_closed": 58,
+        "scored_failure": 54,
+        "scored_success": 16
+      },
+      "scored_failure_flag_counts_overlapping": {
+        "charge_winding": 26,
+        "physical_winding": 0,
+        "terminal_residual": 46,
+        "union_winding": 9
+      }
+    },
+    {
+      "branch": "fixed_delay_1",
+      "cell_id": "clean_herald_schedule",
+      "denominator": 128,
+      "failed_closed_reasons": {
+        "ValueError:unresolved_temporal_boundary_handoff": 56
+      },
+      "mode": "heralded",
+      "outcome_counts": {
+        "failed_closed": 56,
+        "scored_failure": 53,
+        "scored_success": 19
+      },
+      "scored_failure_flag_counts_overlapping": {
+        "charge_winding": 21,
+        "physical_winding": 0,
+        "terminal_residual": 41,
+        "union_winding": 12
+      }
+    },
+    {
+      "branch": "jit_lyons_brown",
+      "cell_id": "clean_herald_schedule",
+      "denominator": 128,
+      "failed_closed_reasons": {
+        "ValueError:unresolved_temporal_boundary_handoff": 59
+      },
+      "mode": "heralded",
+      "outcome_counts": {
+        "failed_closed": 59,
+        "scored_failure": 60,
+        "scored_success": 9
+      },
+      "scored_failure_flag_counts_overlapping": {
+        "charge_winding": 11,
+        "physical_winding": 0,
+        "terminal_residual": 57,
+        "union_winding": 6
+      }
+    },
+    {
+      "branch": "offline_full_history",
+      "cell_id": "clean_herald_schedule",
+      "denominator": 128,
+      "failed_closed_reasons": {
+        "ValueError:unresolved_temporal_boundary_handoff": 55
+      },
+      "mode": "heralded",
+      "outcome_counts": {
+        "failed_closed": 55,
+        "scored_failure": 46,
+        "scored_success": 27
+      },
+      "scored_failure_flag_counts_overlapping": {
+        "charge_winding": 12,
+        "physical_winding": 0,
+        "terminal_residual": 35,
+        "union_winding": 12
+      }
+    },
+    {
+      "branch": "immediate",
+      "cell_id": "joint_readout_noise",
+      "denominator": 128,
+      "failed_closed_reasons": {
+        "ValueError:unresolved_temporal_boundary_handoff": 56
+      },
+      "mode": "syndrome_only",
+      "outcome_counts": {
+        "failed_closed": 56,
+        "scored_failure": 60,
+        "scored_success": 12
+      },
+      "scored_failure_flag_counts_overlapping": {
+        "charge_winding": 26,
+        "physical_winding": 0,
+        "terminal_residual": 56,
+        "union_winding": 14
+      }
+    },
+    {
+      "branch": "fixed_delay_1",
+      "cell_id": "joint_readout_noise",
+      "denominator": 128,
+      "failed_closed_reasons": {
+        "ValueError:unresolved_temporal_boundary_handoff": 59
+      },
+      "mode": "syndrome_only",
+      "outcome_counts": {
+        "failed_closed": 59,
+        "scored_failure": 62,
+        "scored_success": 7
+      },
+      "scored_failure_flag_counts_overlapping": {
+        "charge_winding": 27,
+        "physical_winding": 0,
+        "terminal_residual": 55,
+        "union_winding": 12
+      }
+    },
+    {
+      "branch": "jit_lyons_brown",
+      "cell_id": "joint_readout_noise",
+      "denominator": 128,
+      "failed_closed_reasons": {
+        "ValueError:unresolved_temporal_boundary_handoff": 57
+      },
+      "mode": "syndrome_only",
+      "outcome_counts": {
+        "failed_closed": 57,
+        "scored_failure": 68,
+        "scored_success": 3
+      },
+      "scored_failure_flag_counts_overlapping": {
+        "charge_winding": 13,
+        "physical_winding": 0,
+        "terminal_residual": 67,
+        "union_winding": 6
+      }
+    },
+    {
+      "branch": "offline_full_history",
+      "cell_id": "joint_readout_noise",
+      "denominator": 128,
+      "failed_closed_reasons": {
+        "ValueError:unresolved_temporal_boundary_handoff": 61
+      },
+      "mode": "syndrome_only",
+      "outcome_counts": {
+        "failed_closed": 61,
+        "scored_failure": 55,
+        "scored_success": 12
+      },
+      "scored_failure_flag_counts_overlapping": {
+        "charge_winding": 20,
+        "physical_winding": 0,
+        "terminal_residual": 47,
+        "union_winding": 10
+      }
+    },
+    {
+      "branch": "immediate",
+      "cell_id": "joint_readout_noise",
+      "denominator": 128,
+      "failed_closed_reasons": {
+        "ValueError:unresolved_temporal_boundary_handoff": 56
+      },
+      "mode": "heralded",
+      "outcome_counts": {
+        "failed_closed": 56,
+        "scored_failure": 69,
+        "scored_success": 3
+      },
+      "scored_failure_flag_counts_overlapping": {
+        "charge_winding": 30,
+        "physical_winding": 0,
+        "terminal_residual": 56,
+        "union_winding": 43
+      }
+    },
+    {
+      "branch": "fixed_delay_1",
+      "cell_id": "joint_readout_noise",
+      "denominator": 128,
+      "failed_closed_reasons": {
+        "ValueError:unresolved_temporal_boundary_handoff": 59
+      },
+      "mode": "heralded",
+      "outcome_counts": {
+        "failed_closed": 59,
+        "scored_failure": 67,
+        "scored_success": 2
+      },
+      "scored_failure_flag_counts_overlapping": {
+        "charge_winding": 29,
+        "physical_winding": 0,
+        "terminal_residual": 55,
+        "union_winding": 40
+      }
+    },
+    {
+      "branch": "jit_lyons_brown",
+      "cell_id": "joint_readout_noise",
+      "denominator": 128,
+      "failed_closed_reasons": {
+        "ValueError:unresolved_temporal_boundary_handoff": 57
+      },
+      "mode": "heralded",
+      "outcome_counts": {
+        "failed_closed": 57,
+        "scored_failure": 70,
+        "scored_success": 1
+      },
+      "scored_failure_flag_counts_overlapping": {
+        "charge_winding": 20,
+        "physical_winding": 0,
+        "terminal_residual": 67,
+        "union_winding": 20
+      }
+    },
+    {
+      "branch": "offline_full_history",
+      "cell_id": "joint_readout_noise",
+      "denominator": 128,
+      "failed_closed_reasons": {
+        "ValueError:unresolved_temporal_boundary_handoff": 61
+      },
+      "mode": "heralded",
+      "outcome_counts": {
+        "failed_closed": 61,
+        "scored_failure": 61,
+        "scored_success": 6
+      },
+      "scored_failure_flag_counts_overlapping": {
+        "charge_winding": 19,
+        "physical_winding": 0,
+        "terminal_residual": 47,
+        "union_winding": 25
+      }
+    }
+  ],
+  "per_registered_online_contrast": [
+    {
+      "cell_id": "clean_herald_schedule",
+      "denominator": 128,
+      "family": "schedule",
+      "left": {
+        "branch": "jit_lyons_brown",
+        "mode": "syndrome_only"
+      },
+      "left_minus_right_failed_closed_count": 1,
+      "left_minus_right_scored_failure_count": -1,
+      "left_minus_right_total_failure_count": 0,
+      "matched_outcome_table": {
+        "failed_closed": {
+          "failed_closed": 38,
+          "scored_failure": 20,
+          "scored_success": 1
+        },
+        "scored_failure": {
+          "failed_closed": 20,
+          "scored_failure": 36,
+          "scored_success": 5
+        },
+        "scored_success": {
+          "failed_closed": 0,
+          "scored_failure": 6,
+          "scored_success": 2
+        }
+      },
+      "original_point_difference": 0.0,
+      "original_proposal_trigger_met": false,
+      "right": {
+        "branch": "immediate",
+        "mode": "syndrome_only"
+      }
+    },
+    {
+      "cell_id": "clean_herald_schedule",
+      "denominator": 128,
+      "family": "schedule",
+      "left": {
+        "branch": "jit_lyons_brown",
+        "mode": "syndrome_only"
+      },
+      "left_minus_right_failed_closed_count": 3,
+      "left_minus_right_scored_failure_count": 2,
+      "left_minus_right_total_failure_count": 5,
+      "matched_outcome_table": {
+        "failed_closed": {
+          "failed_closed": 35,
+          "scored_failure": 23,
+          "scored_success": 1
+        },
+        "scored_failure": {
+          "failed_closed": 21,
+          "scored_failure": 33,
+          "scored_success": 7
+        },
+        "scored_success": {
+          "failed_closed": 0,
+          "scored_failure": 3,
+          "scored_success": 5
+        }
+      },
+      "original_point_difference": 0.0390625,
+      "original_proposal_trigger_met": false,
+      "right": {
+        "branch": "fixed_delay_1",
+        "mode": "syndrome_only"
+      }
+    },
+    {
+      "cell_id": "clean_herald_schedule",
+      "denominator": 128,
+      "family": "schedule",
+      "left": {
+        "branch": "jit_lyons_brown",
+        "mode": "heralded"
+      },
+      "left_minus_right_failed_closed_count": 1,
+      "left_minus_right_scored_failure_count": 6,
+      "left_minus_right_total_failure_count": 7,
+      "matched_outcome_table": {
+        "failed_closed": {
+          "failed_closed": 38,
+          "scored_failure": 17,
+          "scored_success": 4
+        },
+        "scored_failure": {
+          "failed_closed": 20,
+          "scored_failure": 31,
+          "scored_success": 9
+        },
+        "scored_success": {
+          "failed_closed": 0,
+          "scored_failure": 6,
+          "scored_success": 3
+        }
+      },
+      "original_point_difference": 0.0546875,
+      "original_proposal_trigger_met": false,
+      "right": {
+        "branch": "immediate",
+        "mode": "heralded"
+      }
+    },
+    {
+      "cell_id": "clean_herald_schedule",
+      "denominator": 128,
+      "family": "schedule",
+      "left": {
+        "branch": "jit_lyons_brown",
+        "mode": "heralded"
+      },
+      "left_minus_right_failed_closed_count": 3,
+      "left_minus_right_scored_failure_count": 7,
+      "left_minus_right_total_failure_count": 10,
+      "matched_outcome_table": {
+        "failed_closed": {
+          "failed_closed": 35,
+          "scored_failure": 21,
+          "scored_success": 3
+        },
+        "scored_failure": {
+          "failed_closed": 21,
+          "scored_failure": 30,
+          "scored_success": 9
+        },
+        "scored_success": {
+          "failed_closed": 0,
+          "scored_failure": 2,
+          "scored_success": 7
+        }
+      },
+      "original_point_difference": 0.078125,
+      "original_proposal_trigger_met": true,
+      "right": {
+        "branch": "fixed_delay_1",
+        "mode": "heralded"
+      }
+    },
+    {
+      "cell_id": "clean_herald_schedule",
+      "denominator": 128,
+      "family": "public_mode",
+      "left": {
+        "branch": "immediate",
+        "mode": "heralded"
+      },
+      "left_minus_right_failed_closed_count": 0,
+      "left_minus_right_scored_failure_count": -8,
+      "left_minus_right_total_failure_count": -8,
+      "matched_outcome_table": {
+        "failed_closed": {
+          "failed_closed": 58,
+          "scored_failure": 0,
+          "scored_success": 0
+        },
+        "scored_failure": {
+          "failed_closed": 0,
+          "scored_failure": 54,
+          "scored_success": 0
+        },
+        "scored_success": {
+          "failed_closed": 0,
+          "scored_failure": 8,
+          "scored_success": 8
+        }
+      },
+      "original_point_difference": -0.0625,
+      "original_proposal_trigger_met": true,
+      "right": {
+        "branch": "immediate",
+        "mode": "syndrome_only"
+      }
+    },
+    {
+      "cell_id": "clean_herald_schedule",
+      "denominator": 128,
+      "family": "public_mode",
+      "left": {
+        "branch": "fixed_delay_1",
+        "mode": "heralded"
+      },
+      "left_minus_right_failed_closed_count": 0,
+      "left_minus_right_scored_failure_count": -6,
+      "left_minus_right_total_failure_count": -6,
+      "matched_outcome_table": {
+        "failed_closed": {
+          "failed_closed": 56,
+          "scored_failure": 0,
+          "scored_success": 0
+        },
+        "scored_failure": {
+          "failed_closed": 0,
+          "scored_failure": 52,
+          "scored_success": 1
+        },
+        "scored_success": {
+          "failed_closed": 0,
+          "scored_failure": 7,
+          "scored_success": 12
+        }
+      },
+      "original_point_difference": -0.046875,
+      "original_proposal_trigger_met": false,
+      "right": {
+        "branch": "fixed_delay_1",
+        "mode": "syndrome_only"
+      }
+    },
+    {
+      "cell_id": "clean_herald_schedule",
+      "denominator": 128,
+      "family": "public_mode",
+      "left": {
+        "branch": "jit_lyons_brown",
+        "mode": "heralded"
+      },
+      "left_minus_right_failed_closed_count": 0,
+      "left_minus_right_scored_failure_count": -1,
+      "left_minus_right_total_failure_count": -1,
+      "matched_outcome_table": {
+        "failed_closed": {
+          "failed_closed": 59,
+          "scored_failure": 0,
+          "scored_success": 0
+        },
+        "scored_failure": {
+          "failed_closed": 0,
+          "scored_failure": 60,
+          "scored_success": 0
+        },
+        "scored_success": {
+          "failed_closed": 0,
+          "scored_failure": 1,
+          "scored_success": 8
+        }
+      },
+      "original_point_difference": -0.0078125,
+      "original_proposal_trigger_met": false,
+      "right": {
+        "branch": "jit_lyons_brown",
+        "mode": "syndrome_only"
+      }
+    },
+    {
+      "cell_id": "joint_readout_noise",
+      "denominator": 128,
+      "family": "schedule",
+      "left": {
+        "branch": "jit_lyons_brown",
+        "mode": "syndrome_only"
+      },
+      "left_minus_right_failed_closed_count": 1,
+      "left_minus_right_scored_failure_count": 8,
+      "left_minus_right_total_failure_count": 9,
+      "matched_outcome_table": {
+        "failed_closed": {
+          "failed_closed": 34,
+          "scored_failure": 18,
+          "scored_success": 5
+        },
+        "scored_failure": {
+          "failed_closed": 22,
+          "scored_failure": 41,
+          "scored_success": 5
+        },
+        "scored_success": {
+          "failed_closed": 0,
+          "scored_failure": 1,
+          "scored_success": 2
+        }
+      },
+      "original_point_difference": 0.0703125,
+      "original_proposal_trigger_met": true,
+      "right": {
+        "branch": "immediate",
+        "mode": "syndrome_only"
+      }
+    },
+    {
+      "cell_id": "joint_readout_noise",
+      "denominator": 128,
+      "family": "schedule",
+      "left": {
+        "branch": "jit_lyons_brown",
+        "mode": "syndrome_only"
+      },
+      "left_minus_right_failed_closed_count": -2,
+      "left_minus_right_scored_failure_count": 6,
+      "left_minus_right_total_failure_count": 4,
+      "matched_outcome_table": {
+        "failed_closed": {
+          "failed_closed": 38,
+          "scored_failure": 17,
+          "scored_success": 2
+        },
+        "scored_failure": {
+          "failed_closed": 21,
+          "scored_failure": 44,
+          "scored_success": 3
+        },
+        "scored_success": {
+          "failed_closed": 0,
+          "scored_failure": 1,
+          "scored_success": 2
+        }
+      },
+      "original_point_difference": 0.03125,
+      "original_proposal_trigger_met": false,
+      "right": {
+        "branch": "fixed_delay_1",
+        "mode": "syndrome_only"
+      }
+    },
+    {
+      "cell_id": "joint_readout_noise",
+      "denominator": 128,
+      "family": "schedule",
+      "left": {
+        "branch": "jit_lyons_brown",
+        "mode": "heralded"
+      },
+      "left_minus_right_failed_closed_count": 1,
+      "left_minus_right_scored_failure_count": 1,
+      "left_minus_right_total_failure_count": 2,
+      "matched_outcome_table": {
+        "failed_closed": {
+          "failed_closed": 34,
+          "scored_failure": 21,
+          "scored_success": 2
+        },
+        "scored_failure": {
+          "failed_closed": 22,
+          "scored_failure": 47,
+          "scored_success": 1
+        },
+        "scored_success": {
+          "failed_closed": 0,
+          "scored_failure": 1,
+          "scored_success": 0
+        }
+      },
+      "original_point_difference": 0.015625,
+      "original_proposal_trigger_met": false,
+      "right": {
+        "branch": "immediate",
+        "mode": "heralded"
+      }
+    },
+    {
+      "cell_id": "joint_readout_noise",
+      "denominator": 128,
+      "family": "schedule",
+      "left": {
+        "branch": "jit_lyons_brown",
+        "mode": "heralded"
+      },
+      "left_minus_right_failed_closed_count": -2,
+      "left_minus_right_scored_failure_count": 3,
+      "left_minus_right_total_failure_count": 1,
+      "matched_outcome_table": {
+        "failed_closed": {
+          "failed_closed": 38,
+          "scored_failure": 19,
+          "scored_success": 0
+        },
+        "scored_failure": {
+          "failed_closed": 21,
+          "scored_failure": 48,
+          "scored_success": 1
+        },
+        "scored_success": {
+          "failed_closed": 0,
+          "scored_failure": 0,
+          "scored_success": 1
+        }
+      },
+      "original_point_difference": 0.0078125,
+      "original_proposal_trigger_met": false,
+      "right": {
+        "branch": "fixed_delay_1",
+        "mode": "heralded"
+      }
+    },
+    {
+      "cell_id": "joint_readout_noise",
+      "denominator": 128,
+      "family": "public_mode",
+      "left": {
+        "branch": "immediate",
+        "mode": "heralded"
+      },
+      "left_minus_right_failed_closed_count": 0,
+      "left_minus_right_scored_failure_count": 9,
+      "left_minus_right_total_failure_count": 9,
+      "matched_outcome_table": {
+        "failed_closed": {
+          "failed_closed": 56,
+          "scored_failure": 0,
+          "scored_success": 0
+        },
+        "scored_failure": {
+          "failed_closed": 0,
+          "scored_failure": 59,
+          "scored_success": 10
+        },
+        "scored_success": {
+          "failed_closed": 0,
+          "scored_failure": 1,
+          "scored_success": 2
+        }
+      },
+      "original_point_difference": 0.0703125,
+      "original_proposal_trigger_met": true,
+      "right": {
+        "branch": "immediate",
+        "mode": "syndrome_only"
+      }
+    },
+    {
+      "cell_id": "joint_readout_noise",
+      "denominator": 128,
+      "family": "public_mode",
+      "left": {
+        "branch": "fixed_delay_1",
+        "mode": "heralded"
+      },
+      "left_minus_right_failed_closed_count": 0,
+      "left_minus_right_scored_failure_count": 5,
+      "left_minus_right_total_failure_count": 5,
+      "matched_outcome_table": {
+        "failed_closed": {
+          "failed_closed": 59,
+          "scored_failure": 0,
+          "scored_success": 0
+        },
+        "scored_failure": {
+          "failed_closed": 0,
+          "scored_failure": 62,
+          "scored_success": 5
+        },
+        "scored_success": {
+          "failed_closed": 0,
+          "scored_failure": 0,
+          "scored_success": 2
+        }
+      },
+      "original_point_difference": 0.0390625,
+      "original_proposal_trigger_met": false,
+      "right": {
+        "branch": "fixed_delay_1",
+        "mode": "syndrome_only"
+      }
+    },
+    {
+      "cell_id": "joint_readout_noise",
+      "denominator": 128,
+      "family": "public_mode",
+      "left": {
+        "branch": "jit_lyons_brown",
+        "mode": "heralded"
+      },
+      "left_minus_right_failed_closed_count": 0,
+      "left_minus_right_scored_failure_count": 2,
+      "left_minus_right_total_failure_count": 2,
+      "matched_outcome_table": {
+        "failed_closed": {
+          "failed_closed": 57,
+          "scored_failure": 0,
+          "scored_success": 0
+        },
+        "scored_failure": {
+          "failed_closed": 0,
+          "scored_failure": 68,
+          "scored_success": 2
+        },
+        "scored_success": {
+          "failed_closed": 0,
+          "scored_failure": 0,
+          "scored_success": 1
+        }
+      },
+      "original_point_difference": 0.015625,
+      "original_proposal_trigger_met": false,
+      "right": {
+        "branch": "jit_lyons_brown",
+        "mode": "syndrome_only"
+      }
+    }
+  ],
+  "resource_use": {
+    "cpu_seconds": 0.032618999999999995,
+    "output_bytes": 23974
+  },
+  "schema_version": 1,
+  "scope": "Existing J6B L=2 five-round matched histories; no new sampling, bootstrap, or risk test",
+  "status": "passed_descriptive_accounting_only"
+}

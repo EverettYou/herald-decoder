@@ -1,0 +1,32 @@
+{
+  "id": "lab008-sector-hellinger-remainder-2026-09-18",
+  "status": "complete_rejected",
+  "authorization": "Continue the partition-function explanation after rejecting the configuration-level positive pair relaxation.",
+  "question": "Can record-sector Hellinger information plus exact omitted parity mass tighten the certified L5,p=.08 LER interval?",
+  "design_role": "Cheapest prerequisite before a new connected-cluster construction. It preserves posterior sector competition instead of relaxing to configuration pairs.",
+  "frozen_model": "Same canonical square, ternary current prior, public interior integer charge, rough endpoints and logical parity as the completed activity contract.",
+  "method": {
+    "truncated_records": "Enumerate all currents with activity <=4 and retain Z0^(4)(Q),Z1^(4)(Q).",
+    "hellinger": "H_4=sum_Q sqrt(Z0^(4)(Q) Z1^(4)(Q)). Bayes LER is at most the full Hellinger coefficient.",
+    "exact_residual_parity": "For m logical-cut edges, the full odd-parity mass is [1-(1-2p)^m]/2. Subtract the truncated sector masses to obtain R0,R1 exactly.",
+    "remainder": "By sqrt((a+r)(b+s))<=sqrt(ab)+sqrt(as)+sqrt(br)+sqrt(rs) and Cauchy, H<=H_4+sqrt(A0 R1)+sqrt(A1 R0)+sqrt(R0 R1).",
+    "combined_interval": "Keep the activity lower bound and the minimum of 1/2, activity upper and the Hellinger-remainder upper."
+  },
+  "matrix": {
+    "exact_gate": {"L": 3, "activity": 8, "cells": [[0.1,0.5],[0.1,1.0],[0.3,0.75],[0.46,0.97]]},
+    "study": {"L": 5, "activity": 4, "p": [0.05,0.08], "q": [0.5,0.75,0.97,1.0]}
+  },
+  "acceptance": [
+    "Full L3 Hellinger coefficients upper-bound the frozen exact LER values; residual masses vanish within 1e-12.",
+    "Every L5 residual sector mass is nonnegative and reconstructs the exact logical-parity prior within 1e-10.",
+    "Promote the bound only in cells where it reduces the registered activity interval width by at least 10%. If no p=.08 cell passes, reject this remainder relaxation and move to a controlled connected-cluster feasibility contract.",
+    "No midpoint, threshold, phase, CFT or decoder claim."
+  ],
+  "budget": {"maximum_enumerated_configurations": 623650, "maximum_cells": 12, "no_sampling": true, "no_decoder_runs": true},
+  "stop_rule": "Stop after the frozen matrix. Do not increase k or size in response to failure.",
+  "registered_at": "2026-09-18 23:03:17 UTC",
+  "result": "results/sector-hellinger-remainder-2026-09-18.json",
+  "decision": "Reject the sector-Hellinger global remainder. It improves none of eight L5 cells; at p=.08 its bounds .42049,.40883,.37181,.35756 all exceed the activity bounds .13836,.12506,.11404,.10877.",
+  "completed_at": "2026-09-18 23:03:17 UTC",
+  "next_action": "Register a controlled connected-cluster feasibility test; do not increase activity order or reuse either failed global relaxation."
+}

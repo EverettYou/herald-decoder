@@ -1,0 +1,489 @@
+{
+  "status": "private_authoring_fixture_not_release_validated",
+  "candidate_distribution": false,
+  "source": "labs/lab-003-herald-threshold-phase-diagram/results/current-evidence.json",
+  "source_sha256": "78ab55079e9eeb624ae368d141684fda658d9a332763ccfa36f0bcca32a29096",
+  "reference_evidence_provenance": {
+    "honeycomb_finite_window_trend": {
+      "path": "results/phase-b14-honeycomb-continuous-log-odds-map-2026-08-28.json",
+      "sha256": "e41be160b471cc5820a8a19b90cd3fad6ed8ed581c2c4c0587652f5e7e918fdf"
+    },
+    "symmetry_constrained_boundary_guide": {
+      "path": "results/phase-b18-symmetry-constrained-guide-2026-08-28.json",
+      "sha256": "42cd8a24eced3168f6bdad4bc8680bd6a826c7cddf766f9ed33b0da4a3aaac9d"
+    },
+    "selected_ler_q0_q075_q1": {
+      "path": "results/final-selected-ler-curves-q0-q075-q1-square-honeycomb-2026-08-28.json",
+      "sha256": "3c01b6e427d32f3188b53ef69c6a2de6e5ec8ef95115641e493ba74c671e7934"
+    }
+  },
+  "selection_rule": {
+    "L": [
+      7,
+      9,
+      11
+    ],
+    "p": [
+      0.12,
+      0.24,
+      0.36,
+      0.45
+    ],
+    "q": [
+      0,
+      0.25,
+      0.5,
+      0.75,
+      1
+    ]
+  },
+  "performance_margin_proposed": 0.03,
+  "one_sided_delta_per_arm_per_gate": 0.0025,
+  "joint_coverage_lower_bound": 0.99,
+  "candidate_shots_per_cell_proposed": 2000,
+  "required_before_release": [
+    "Verify fixed-design raw provenance and independent RNG streams.",
+    "Replay reference under candidate API, geometry ordering, and full resource contract.",
+    "Calibrate practical performance margin and false-failure rate.",
+    "Build independent L2 posterior oracle and grader.",
+    "Pilot active scientist hours and frontier model success rate."
+  ],
+  "summary": {
+    "overall": {
+      "cells": 60,
+      "archived_mean_failure": 0.24786666666666665,
+      "reference_one_sided_radius_assuming_fixed_independent_trials": 0.007066036458008113,
+      "candidate_radius_at_2000_per_cell": 0.004996442295568911,
+      "combined_radius": 0.012062478753577023
+    },
+    "high_q": {
+      "cells": 24,
+      "archived_mean_failure": 0.103375,
+      "reference_one_sided_radius_assuming_fixed_independent_trials": 0.011172384618547181,
+      "candidate_radius_at_2000_per_cell": 0.007900068925798991,
+      "combined_radius": 0.019072453544346172
+    }
+  },
+  "cells": [
+    {
+      "L": 7,
+      "p": 0.12,
+      "q": 0.0,
+      "failures": 66,
+      "shots": 1000
+    },
+    {
+      "L": 9,
+      "p": 0.12,
+      "q": 0.0,
+      "failures": 57,
+      "shots": 1000
+    },
+    {
+      "L": 11,
+      "p": 0.12,
+      "q": 0.0,
+      "failures": 33,
+      "shots": 1000
+    },
+    {
+      "L": 7,
+      "p": 0.24,
+      "q": 0.0,
+      "failures": 426,
+      "shots": 1000
+    },
+    {
+      "L": 9,
+      "p": 0.24,
+      "q": 0.0,
+      "failures": 468,
+      "shots": 1000
+    },
+    {
+      "L": 11,
+      "p": 0.24,
+      "q": 0.0,
+      "failures": 481,
+      "shots": 1000
+    },
+    {
+      "L": 7,
+      "p": 0.36,
+      "q": 0.0,
+      "failures": 491,
+      "shots": 1000
+    },
+    {
+      "L": 9,
+      "p": 0.36,
+      "q": 0.0,
+      "failures": 488,
+      "shots": 1000
+    },
+    {
+      "L": 11,
+      "p": 0.36,
+      "q": 0.0,
+      "failures": 508,
+      "shots": 1000
+    },
+    {
+      "L": 7,
+      "p": 0.45,
+      "q": 0.0,
+      "failures": 498,
+      "shots": 1000
+    },
+    {
+      "L": 9,
+      "p": 0.45,
+      "q": 0.0,
+      "failures": 478,
+      "shots": 1000
+    },
+    {
+      "L": 11,
+      "p": 0.45,
+      "q": 0.0,
+      "failures": 512,
+      "shots": 1000
+    },
+    {
+      "L": 7,
+      "p": 0.12,
+      "q": 0.25,
+      "failures": 26,
+      "shots": 1000
+    },
+    {
+      "L": 9,
+      "p": 0.12,
+      "q": 0.25,
+      "failures": 30,
+      "shots": 1000
+    },
+    {
+      "L": 11,
+      "p": 0.12,
+      "q": 0.25,
+      "failures": 11,
+      "shots": 1000
+    },
+    {
+      "L": 7,
+      "p": 0.24,
+      "q": 0.25,
+      "failures": 365,
+      "shots": 1000
+    },
+    {
+      "L": 9,
+      "p": 0.24,
+      "q": 0.25,
+      "failures": 388,
+      "shots": 1000
+    },
+    {
+      "L": 11,
+      "p": 0.24,
+      "q": 0.25,
+      "failures": 400,
+      "shots": 1000
+    },
+    {
+      "L": 7,
+      "p": 0.36,
+      "q": 0.25,
+      "failures": 508,
+      "shots": 1000
+    },
+    {
+      "L": 9,
+      "p": 0.36,
+      "q": 0.25,
+      "failures": 510,
+      "shots": 1000
+    },
+    {
+      "L": 11,
+      "p": 0.36,
+      "q": 0.25,
+      "failures": 525,
+      "shots": 1000
+    },
+    {
+      "L": 7,
+      "p": 0.45,
+      "q": 0.25,
+      "failures": 483,
+      "shots": 1000
+    },
+    {
+      "L": 9,
+      "p": 0.45,
+      "q": 0.25,
+      "failures": 497,
+      "shots": 1000
+    },
+    {
+      "L": 11,
+      "p": 0.45,
+      "q": 0.25,
+      "failures": 496,
+      "shots": 1000
+    },
+    {
+      "L": 7,
+      "p": 0.12,
+      "q": 0.5,
+      "failures": 9,
+      "shots": 1000
+    },
+    {
+      "L": 9,
+      "p": 0.12,
+      "q": 0.5,
+      "failures": 8,
+      "shots": 1000
+    },
+    {
+      "L": 11,
+      "p": 0.12,
+      "q": 0.5,
+      "failures": 1,
+      "shots": 1000
+    },
+    {
+      "L": 7,
+      "p": 0.24,
+      "q": 0.5,
+      "failures": 249,
+      "shots": 1000
+    },
+    {
+      "L": 9,
+      "p": 0.24,
+      "q": 0.5,
+      "failures": 249,
+      "shots": 1000
+    },
+    {
+      "L": 11,
+      "p": 0.24,
+      "q": 0.5,
+      "failures": 285,
+      "shots": 1000
+    },
+    {
+      "L": 7,
+      "p": 0.36,
+      "q": 0.5,
+      "failures": 452,
+      "shots": 1000
+    },
+    {
+      "L": 9,
+      "p": 0.36,
+      "q": 0.5,
+      "failures": 468,
+      "shots": 1000
+    },
+    {
+      "L": 11,
+      "p": 0.36,
+      "q": 0.5,
+      "failures": 480,
+      "shots": 1000
+    },
+    {
+      "L": 7,
+      "p": 0.45,
+      "q": 0.5,
+      "failures": 486,
+      "shots": 1000
+    },
+    {
+      "L": 9,
+      "p": 0.45,
+      "q": 0.5,
+      "failures": 470,
+      "shots": 1000
+    },
+    {
+      "L": 11,
+      "p": 0.45,
+      "q": 0.5,
+      "failures": 489,
+      "shots": 1000
+    },
+    {
+      "L": 7,
+      "p": 0.12,
+      "q": 0.75,
+      "failures": 4,
+      "shots": 1000
+    },
+    {
+      "L": 9,
+      "p": 0.12,
+      "q": 0.75,
+      "failures": 2,
+      "shots": 1000
+    },
+    {
+      "L": 11,
+      "p": 0.12,
+      "q": 0.75,
+      "failures": 0,
+      "shots": 1000
+    },
+    {
+      "L": 7,
+      "p": 0.24,
+      "q": 0.75,
+      "failures": 102,
+      "shots": 1000
+    },
+    {
+      "L": 9,
+      "p": 0.24,
+      "q": 0.75,
+      "failures": 88,
+      "shots": 1000
+    },
+    {
+      "L": 11,
+      "p": 0.24,
+      "q": 0.75,
+      "failures": 66,
+      "shots": 1000
+    },
+    {
+      "L": 7,
+      "p": 0.36,
+      "q": 0.75,
+      "failures": 285,
+      "shots": 1000
+    },
+    {
+      "L": 9,
+      "p": 0.36,
+      "q": 0.75,
+      "failures": 289,
+      "shots": 1000
+    },
+    {
+      "L": 11,
+      "p": 0.36,
+      "q": 0.75,
+      "failures": 309,
+      "shots": 1000
+    },
+    {
+      "L": 7,
+      "p": 0.45,
+      "q": 0.75,
+      "failures": 395,
+      "shots": 1000
+    },
+    {
+      "L": 9,
+      "p": 0.45,
+      "q": 0.75,
+      "failures": 414,
+      "shots": 1000
+    },
+    {
+      "L": 11,
+      "p": 0.45,
+      "q": 0.75,
+      "failures": 421,
+      "shots": 1000
+    },
+    {
+      "L": 7,
+      "p": 0.12,
+      "q": 1.0,
+      "failures": 1,
+      "shots": 1000
+    },
+    {
+      "L": 9,
+      "p": 0.12,
+      "q": 1.0,
+      "failures": 0,
+      "shots": 1000
+    },
+    {
+      "L": 11,
+      "p": 0.12,
+      "q": 1.0,
+      "failures": 0,
+      "shots": 1000
+    },
+    {
+      "L": 7,
+      "p": 0.24,
+      "q": 1.0,
+      "failures": 9,
+      "shots": 1000
+    },
+    {
+      "L": 9,
+      "p": 0.24,
+      "q": 1.0,
+      "failures": 1,
+      "shots": 1000
+    },
+    {
+      "L": 11,
+      "p": 0.24,
+      "q": 1.0,
+      "failures": 0,
+      "shots": 1000
+    },
+    {
+      "L": 7,
+      "p": 0.36,
+      "q": 1.0,
+      "failures": 32,
+      "shots": 1000
+    },
+    {
+      "L": 9,
+      "p": 0.36,
+      "q": 1.0,
+      "failures": 8,
+      "shots": 1000
+    },
+    {
+      "L": 11,
+      "p": 0.36,
+      "q": 1.0,
+      "failures": 1,
+      "shots": 1000
+    },
+    {
+      "L": 7,
+      "p": 0.45,
+      "q": 1.0,
+      "failures": 35,
+      "shots": 1000
+    },
+    {
+      "L": 9,
+      "p": 0.45,
+      "q": 1.0,
+      "failures": 19,
+      "shots": 1000
+    },
+    {
+      "L": 11,
+      "p": 0.45,
+      "q": 1.0,
+      "failures": 0,
+      "shots": 1000
+    }
+  ]
+}

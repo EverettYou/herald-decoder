@@ -1,0 +1,37 @@
+{
+  "id": "lab008-square-midpoint-thermodynamics-2026-09-20",
+  "status": "complete",
+  "authorization": "Researcher's general thermodynamic-limit proof request; continue the existing autoresearch program.",
+  "question": "At p=1/2,q=1 on the canonical square, can residual-current geometry establish the L->infinity behavior of the physical logical-sector ratio?",
+  "earliest_gate": "Review primary literature on random orientations, bond percolation and planar crossing estimates before using an equivalence or critical result.",
+  "planned_steps": [
+    "Derive the residual oriented graph: a zero-current edge can be increased along its arrow, and an occupied edge can be decreased against it. Check whether opposite-sector support is exactly equivalent to a directed path between rough sides.",
+    "At the equal-weight midpoint, investigate which random-orientation connectivity results transfer to this exact geometry. Preserve the full physical record distribution.",
+    "Identify the missing posterior-balance lemma: a positive probability that both sectors are supported does not by itself lower-bound their smaller normalized weight. Do not equate a percolation crossing with Bayes failure.",
+    "Use all 256 directed L3 currents as an exact support/sector-count control. Any larger computation, new geometry or asymptotic lower-bound conjecture requires separate registration.",
+    "Deliver a proof, counterexample or sharply stated remaining obstruction; no fitted threshold, decoder sweep or unsupported CFT identification."
+  ],
+  "budget": {"max_full_support_edges":8,"max_runtime_seconds":120,"new_physical_record_samples":0},
+  "predecessor": "thermodynamic-limits-2026-09-20.json",
+  "not_yet_run": false,
+  "priority_update": "Researcher explicitly prioritizes decoding transitions and correction thresholds. Bulk-pressure existence and speculative CFT are supporting tools only.",
+  "threshold_target": "At fixed q define the initial correctable threshold as the supremum of p0 for which every 0<=p<p0 has optimal LER tending to zero. Do not assume monotonicity over the full p interval; p=1 has known activity parity.",
+  "primary_sources_reviewed": [
+    {"url":"https://arxiv.org/pdf/0905.2881","use":"Linusson Lemma 2.1, reproducing McDiarmid: uniform random orientation out-cluster equals p=1/2 bond-percolation cluster in distribution. Prove the seed-set extension explicitly by exploration."},
+    {"url":"https://doi.org/10.2307/1426466","use":"McDiarmid 1981 original provenance; no posterior-sector inference theorem is supplied by this source."},
+    {"url":"https://www.ihes.fr/~duminil/publi/2017percolation.pdf","use":"Theorem 4.6 critical bond RSW supplies nonvanishing square-box crossing probability. The removed rough-side vertical edges do not affect the crossing event. No conformal-invariance claim is needed."}
+  ],
+  "registered_finite_controls": [
+    "All 256 original directed square L3 currents; exact record-sector counts, residual left/right reachability, and support equivalence.",
+    "All 256 independent p=1/2 bond configurations on the same L3 graph; compare the complete seed-set cluster distributions, not just crossing probabilities.",
+    "Exact ambiguous-record posterior risks and a counterexample, if present, to treating every ambiguous record as an equal-sector tie.",
+    "No size extrapolation or inference that the bond threshold 1/2 is a decoding threshold."
+  ],
+  "planned_result":"results/square-midpoint-thermodynamics-2026-09-20.json",
+  "planned_note":"wiki/decoding-thresholds.md",
+  "completed":"2026-09-20",
+  "decision":"Proved residual support and the midpoint seed-set cluster law; RSW establishes nonvanishing ambiguity probability. Exact L3 posterior counts reject equal-sector balance. A size-independent lower bound on physical-record-averaged balance remains necessary for a nonzero limiting LER claim; no square threshold is promoted.",
+  "exact_control_summary":{"current_states":256,"bond_states":256,"records":64,"Bayes_LER":"7/16","ambiguous_record_probability":"119/128","conditional_average_balance":"8/17","asymmetric_ambiguous_records":14},
+  "delivery_audit":"results/decoding-thresholds-delivery-2026-09-20.json",
+  "next_contract":"manifests/posterior-balance-2026-09-20.json"
+}

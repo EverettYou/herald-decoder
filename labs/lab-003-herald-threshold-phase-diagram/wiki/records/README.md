@@ -5,6 +5,12 @@ updated: 2026-08-31
 record: true
 ---
 
+## Scientific correction — 2026-10-01
+
+For the binary incomplete-herald channel, the research domain is **0 <= p <= 1, 0 <= q <= 1**. At interior q, error complementation does not give an observation-preserving p ↔ 1−p symmetry: a zero herald combines an ineligible event and a missed eligible event. Claims below that restrict the physical domain to half, enforce a horizontal boundary tangent at half, or infer an all-p ceiling from p≈0.5 are **withdrawn historical claims**, not current conclusions. B18's constrained guide is withdrawn; measured trial counts remain historical evidence. See [full-prior correction](/wiki?page=methods/binary-herald-full-prior-domain.md). The uniform-prior point p=0.5 remains special, but does not justify truncating the domain. Endpoint q=0 and q=1 symmetries require separate observation relabeling and do not establish interior-q symmetry.
+
+
+
 ## Summary
 
 Preserved detailed research record. Its scientific interpretation is maintained in the topical Local Wiki pages.
@@ -35,15 +41,7 @@ its PNG are the six-panel selected LER artifact cited by `REPORT.md`: rows are
 $q=0,0.75,1$, columns are square and honeycomb. Each panel retains its own
 immutable cohort and is not a pooled fit or cross-geometry comparison.
 
-`phase-b18-symmetry-constrained-guide-2026-08-28.png` is the active Report map:
-the 231-cell honeycomb continuous posterior trend-evidence field, with one
-nondecreasing dashed visual guide satisfying dq/dp=0 at p=0.5 and a
-conservative finite-grid directional bracket/right-censoring region. The p
-axis shows the full [0,0.5] fundamental domain while leaving unsampled space
-blank. The region is not a confidence band for the guide or a thermodynamic
-boundary. B16 and B17 are retained only as withdrawn provenance. The B1--B18
-evidence and presentation history is explained
-in [`../notes/honeycomb-boundary-research-log.md`](../../notes/honeycomb-boundary-research-log.md).
+`phase-b19-full-prior-evidence-coverage-2026-10-01.png` is the active Report map: the 231 measured B14 honeycomb cells on p,q in [0,1], without an imposed guide. The unmeasured high-p joint grid is blank. B18 is withdrawn because its interior-q complement symmetry and horizontal tangent constraint are invalid. Earlier guide artifacts are historical provenance, not boundaries. The original fixed-q LER context remains separately labeled.
 
 `q075-square-honeycomb-selected-ler-2026-08-28.json` maps the latest
 5000-shot/cell $q=0.75$ square and honeycomb LER panels. The two panels use

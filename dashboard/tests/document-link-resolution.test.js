@@ -27,11 +27,15 @@ assert.equal(
 );
 assert.equal(resolveProjectHref('../../.env', 'labs/lab-002-herald-belief-matching/REPORT.md'), null);
 assert.equal(resolveProjectHref('https://example.org', 'labs/lab-002-herald-belief-matching/REPORT.md'), null);
+assert.equal(
+  resolveProjectHref('../../src/herald_decoder/README.md', 'labs/lab-009-planar-herald-decoder-survey/REPORT.md'),
+  '/document?path=src%2Fherald_decoder%2FREADME.md'
+);
 
 const appSource = require('node:fs').readFileSync(
-  path.join(__dirname, '..', 'frontend', 'js', 'app.js'),
+  path.join(__dirname, '..', 'frontend', 'js', 'document-page.js'),
   'utf8'
 );
-assert.match(appSource, /markdown\(p\.content,\{sourcePath:p\.path\}\)/);
+assert.match(appSource, /markdown\(file\.content,\s*\{\s*sourcePath:\s*file\.path\s*\}\)/);
 
 console.log('project document link resolution passed');

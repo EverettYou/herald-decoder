@@ -1,0 +1,33 @@
+{
+  "id":"lab008-midpoint-all-size-matching-theorem-2026-09-20",
+  "status":"complete_missing_restricted_orientation_NMP_theorem",
+  "not_yet_run":false,
+  "authorization":"Researcher prioritizes decoding phase transitions and correction thresholds in the continuing Lab 008 study.",
+  "question":"Does the canonical square fixed-charge single-path switching graph saturate the smaller logical sector at every size, and what separate probabilistic statement would turn that structure into a nonzero limiting Bayes-risk bound?",
+  "predecessor":"midpoint-fractional-switching-2026-09-20.json",
+  "claim_boundary":"An all-size matching theorem would identify the Bayes numerator combinatorially but would not by itself lower-bound its normalized density. Keep structural saturation and probabilistic nonvanishing as separate claims.",
+  "alternatives":[
+    "Prove all-size minority-sector saturation through a fixed-divergence flow/orientation exchange theorem, then isolate the independent matching-density lemma.",
+    "Find a canonical-square Hall counterexample or missing exchange condition, closing single-path saturation as an all-size identity.",
+    "Show reviewed combinatorial results do not cover this graph and record the precise unproved lemma without promoting a threshold claim."
+  ],
+  "planned_steps":[
+    "Search primary combinatorics literature for normalized matching, symmetric-chain, orientation-reversal, and fixed-divergence flow results whose hypotheses match this public graph.",
+    "Formalize the path-switching graph and test whether its connected components admit an order, exchange, or injection proof; use only the exact L3/L4 tables as controls.",
+    "Attempt the smallest proof/counterexample matrix covering all candidate mechanisms, and state separately the probabilistic lower bound still needed for positive normalized matching density.",
+    "Stop without a midpoint noncorrectability or threshold claim unless both the all-size structural statement and a size-uniform density bound are proved."
+  ],
+  "budget":{"new_physical_record_samples":0,"decoder_runs":0,"max_exhaustive_edges":18,"max_runtime_seconds":300,"new_external_dependencies":0},
+  "stop_rule":"Stop at an all-size proof, a canonical counterexample, or an explicit missing-lemma boundary after primary-source review. Do not enumerate L5, fit a two-size trend, or identify p=1/2 as a decoding threshold.",
+  "result":"results/midpoint-all-size-matching-theorem-2026-09-20.json",
+  "observed":{
+    "alpha_orientation_embedding":"Exact for every L3/L4 state after contracting all rough-boundary vertices to one outer root; fixed charge fixes all outdegrees.",
+    "normalized_transport":{"L3":"456/456","L4":"1253808/1253808"},
+    "restricted_graph_mismatch":{"L4_ambiguous_records_split_across_components":578,"L4_states_with_internal_directed_plaquette_move":86528},
+    "bounded_counterexample_matrix":{"single_edge_deletions":18,"double_edge_deletions":153,"Hall_gaps":0},
+    "primary_source_boundary":"Published planar alpha-orientation and circulation lattices include internal cycle or facial moves excluded from the opposite-rough-arc logical switching graph; no reviewed theorem supplies its normalized matching property.",
+    "missing_lemmas":"Restricted-graph normalized matching is structural; a positive size-uniform normalized minority-mass bound is independently required for midpoint noncorrectability."
+  },
+  "decision":"Stop at the explicit missing-theorem boundary. Promote exact finite normalized matching and robustness only; do not promote an all-size theorem, midpoint noncorrectability, or a decoding threshold.",
+  "planned_note":"wiki/decoding-thresholds.md"
+}

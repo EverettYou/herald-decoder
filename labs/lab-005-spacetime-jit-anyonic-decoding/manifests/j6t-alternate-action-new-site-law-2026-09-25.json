@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j6t-alternate-action-new-site-law-2026-09-25",
+  "status": "registered_before_exact_execution",
+  "question": "For the already fixed three-edge D4 chain, can any as-yet-untested in-support correction subset make genuinely new or changed second-site public charge depend on the first public record, rather than merely repeat an unchanged observable?",
+  "epistemic_role": "Finite exact action-subset falsification control on one ideal operator orbit; no adaptive path search, general transition kernel, or noisy JIT inference",
+  "source_basis": [
+    "Jing et al. 2025 Appendix A.2/A.4 source-local red-X and ordered post-flux projector semantics",
+    "J6L periodic incidence, J6M compact vacuum orbit, J6Q exact ordered Born projector law",
+    "J6R/J6S three-edge chain and structural repeat controls"
+  ],
+  "pinned_inputs": {
+    "jing_pdf_sha256": "7a17c3d3a743e3dec4266b64d0321a6af7a5eeacfab67e42b9ec77d30b65a2ac",
+    "j6l_result_sha256": "c3eee28f083b7f3a4dd82a3e4f8a7d3ec29aa19af92bbc3ab4588129d855c4ab",
+    "j6m_result_sha256": "55bfe46d34c9a8356e828351b0d415ed550312ed315c4c1bda7a51508ef1b932",
+    "j6q_result_sha256": "00994c73588fd30156f8b5628ef37d77ace171c5c1a7d5cfce4b68c4bb5bf890",
+    "j6r_result_sha256": "d6e87855b94f9cf32d90c7502c5dd2b74112b6217ca6433eec24826cde57c589",
+    "j6s_result_sha256": "aca93661c2ebd3e686efe570401a5f370ec13fac4ef6d898fa0220b826b2695e",
+    "frozen_integrated_history_sha256": "43d9d0d3e4771ccfc764f590f1843cda1e2a7fbce8dae96057710c413a0adb6e"
+  },
+  "physical_and_observation_contract": {
+    "geometry": "Same periodic L=2, 24 blue/green sites, 108 kagome qubits and J6M common +1 star/triangle orbit as J6S",
+    "private_physical_red_x_chain": [0, 4, 3],
+    "causal_order": "Private physical error, exact joint first flux-free star measurement, public correction subset, exact joint residual-flux-free second measurement in the postselected first sector",
+    "first_record": "Only full 24-bit public flux/charge/vacuum arrays; private physical support and operator identities excluded",
+    "second_record": "Only full 24-bit public flux/charge/vacuum arrays; no private error relation, site partition or hidden state in the record",
+    "noise": "No readout noise, physical stochastic histories, or additional physical faults"
+  },
+  "competing_outcomes": [
+    "At least one newly eligible second site has a changed marginal or joint new-site distribution across positive first records; this is a finite ideal-state transfer witness only.",
+    "New-site marginals are constant but a joint distribution including changed operators depends on first; this is a narrower changed-observable memory witness.",
+    "Any full-public first dependence is wholly explained by unchanged repeated operators, or no dependence occurs; the four-action matrix fails to find a new-site witness.",
+    "A branch exceeds the registered support/compute cap or fails an integrity gate; that branch is censored, not re-selected."
+  ],
+  "matrix": {
+    "physical_error": [0, 4, 3],
+    "public_action_subsets_not_in_j6r_j6s": [[3], [4], [0, 3], [4, 3]],
+    "first_random_sites_expected": [1, 2],
+    "maximum_nondeterministic_second_sites": 4,
+    "independent_unit": "One fixed exact state and physical chain; four deterministic action conditions share it, not Monte Carlo samples",
+    "new_site_definition": "Eligible for second star readout and not eligible in first readout; operator partition is private analysis metadata only",
+    "changed_site_definition": "Eligible at both times but the exact dressed star operator differs after the public action",
+    "repeat_site_definition": "Eligible at both times with exactly identical dressed star operator",
+    "comparison": "For each action compare full public second distributions and exact projected charge distributions on new-only and new-plus-changed site sets across all four positive first public records. Report site marginals and joint support separately."
+  },
+  "acceptance": [
+    "All seven input hashes, J6L chain incidence, same four first public records and unchanged frozen caller pass.",
+    "For all four action subsets, eligible sites equal residual flux-free sites and eligible stars commute in the actual flux sector; exact first and every conditional second law are nonnegative and normalize.",
+    "Each retained positive row contains only first and second full 24-bit public flux/charge/vacuum arrays plus probabilities; private operator/site partition stays outside the public record.",
+    "Full-public, new-only and new-plus-changed exact conditional distributions are compared at fixed action across all four first outcomes, with marginal-versus-joint interpretation and no adaptive geometry choice.",
+    "If any branch exceeds four nondeterministic second sites or 60 CPU seconds, fail closed/censor without raising the bound; zero histories, schedule arms, bootstraps, decoder/risk/threshold claims."
+  ],
+  "budget": {"max_cpu_seconds": 60, "new_dependencies": 0, "stochastic_histories": 0, "schedule_arm_evaluations": 0, "bootstrap_replicates": 0},
+  "stop_rule": "Fail closed on provenance/incidence drift, noncommuting eligible projectors, negative/unnormalized mass, public/private leakage, source/caller modification or budget overrun. A null four-action result does not prove global first-record independence. Do not expand to a new path, noisy history or five-round caller under this contract.",
+  "planned_result": "results/j6t-alternate-action-new-site-law-2026-09-25.json"
+}

@@ -38,6 +38,9 @@ def atomic_json(path: Path, payload: dict) -> None:
 
 
 def render(evidence: dict, analysis: dict, destination: Path) -> None:
+    raise ValueError("B18 rendering withdrawn: incomplete-herald complement symmetry is false")
+
+def _historical_render(evidence: dict, analysis: dict, destination: Path) -> None:
     import matplotlib.pyplot as plt
     import numpy as np
     from matplotlib.colors import LinearSegmentedColormap, TwoSlopeNorm
@@ -89,6 +92,7 @@ def render(evidence: dict, analysis: dict, destination: Path) -> None:
 
 
 def main() -> None:
+    raise ValueError("B18 rendering withdrawn: use the full-domain B19 coverage figure")
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--evidence", type=Path, default=DEFAULT_EVIDENCE)
     parser.add_argument("--analysis", type=Path, default=DEFAULT_ANALYSIS)

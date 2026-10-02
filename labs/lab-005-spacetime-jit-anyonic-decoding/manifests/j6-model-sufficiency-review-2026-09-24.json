@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j6-model-sufficiency-review-2026-09-24",
+  "status": "registered_before_audit",
+  "epistemic_role": "Model-sufficiency and identifiability audit, not a new performance experiment",
+  "question": "Can the frozen L=2 five-round D4 pilot distinguish the non-Abelian just-in-time hiding/ungauging mechanism from ordinary exogenous-fault timing and noisy-readout effects?",
+  "program_alignment": "Lab 005 fault tolerance. The published JIT motivation is to correct hidden or absorbed anyon content in time, while the frozen pilot showed near-saturated loss and overlapping timing/readout flags. This review tests whether the current causal model contains an action-to-future-hidden-state path before any new rate sweep.",
+  "research_basis": {
+    "primary_sources": [
+      {"url": "https://arxiv.org/html/2602.11258", "role": "Lyons–Brown: active correction, ungauging and revealing absorbed anyon content are part of the JIT mechanism; its theorem is for D(S3), not the project D4 pilot"},
+      {"url": "https://arxiv.org/html/2608.18512", "role": "Jing et al.: spacetime ILP/JIT with noisy syndrome is formulated, but numerical implementation and threshold proof are left open"}
+    ],
+    "prior_project_decision": "Discussion thread-009 authorizes a phenomenological/projector-level D4 translation, action-bound post-flux charge record and ground-state-relative score; it does not assert circuit-derived D4 feedback or a numerical threshold."
+  },
+  "frozen_inputs": {
+    "integrated_source": {"path": "scripts/d4_integrated_history.py", "sha256": "43d9d0d3e4771ccfc764f590f1843cda1e2a7fbce8dae96057710c413a0adb6e"},
+    "schedule_source": {"path": "scripts/e1_schedule_integration.py", "sha256": "d1ba0232aa06ffe95c8c0673f8ef6371785ace568368cc73e30ddbadfb9d0398"},
+    "d2_fixture": {"path": "results/j6b-d2-deterministic-residual-frame-trace-2026-09-23.json", "sha256": "a48168b4fa64a598d5af9687e412c5f04f13d8f35c917508f1b9a88460d5cd72"},
+    "d4_cohort_audit": {"path": "results/j6b-d4-frozen-cohort-overlap-audit-2026-09-24.json", "sha256": "ba88c78a0503ce325a6f233ea64bda2d34b04ab245b63f2b9019f28c2c0faecf"}
+  },
+  "competing_model_paths": [
+    "A: a schedule's causal action changes same-round action-conditioned E2 charge report and private score, but the future physical/hidden first-record path is generated exogenously and cannot depend on that action.",
+    "B: an action also changes the next hidden anyon/projector/absorber state or future public measurement law, enabling a counterfactual test of hidden-charge accumulation and revelation."
+  ],
+  "fixed_audit": [
+    "Inspect function signatures and typed dependency order for history generation, per-round hidden projector updates, causal schedule evaluation, action-conditioned E2 generation and terminal score; record exact source lines and whether any prior action enters the next-state or next-public-first-record update.",
+    "Use the already accepted five-history D2 fixture, without new sampling or rescore, to verify that at least one shared physical history has different public online correction paths while retaining one fixed physical history and first-record digest.",
+    "Reconcile with the D4 full-cohort audit's unchanged unconditional denominator and overlap result; do not call the overlapping flags causes or re-estimate risk."
+  ],
+  "acceptance": [
+    "Every frozen hash and result status matches; no new stochastic history, arm evaluation, bootstrap or risk test is created.",
+    "The source-level action-to-future-state dependency is classified separately from same-round action-to-E2 binding and from last-frame private scoring; a counterexample or uncertain path fails closed rather than asserting non-identifiability.",
+    "The conclusion distinguishes what the fixed pilot can test (causal timing under exogenous faults/readout) from what it cannot test (benefit of interrupting hidden non-Abelian charge accumulation or a circuit-level threshold).",
+    "The next gate prioritizes a tiny explicit action-feedback model/fixture before any new noise-rate sweep; it does not silently choose unprovided microscopic transition probabilities."
+  ],
+  "budget": {"new_stochastic_histories": 0, "new_arm_evaluations": 0, "new_bootstrap_replicates": 0, "max_cpu_seconds": 10, "new_external_dependencies": 0},
+  "stop_rule": "If any source/result hash or dependency classification is unresolved, record a censored review and keep the performance-extension branch frozen. Do not change existing J6/J6B artifacts, generate a replacement cohort, infer JIT superiority, or claim D4 circuit fault tolerance.",
+  "claim_boundary": "Structural model-identifiability review only: it can show an absent or present action-to-future path in the implemented phenomenological pilot, not establish the correct physical D4 feedback law, a causal performance effect, or a threshold.",
+  "planned_result": "results/j6-model-sufficiency-review-2026-09-24.json"
+}

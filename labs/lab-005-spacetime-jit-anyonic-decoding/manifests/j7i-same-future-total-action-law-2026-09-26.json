@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j7i-same-future-total-action-law-2026-09-26",
+  "status": "registered_before_exact_execution",
+  "question": "For the selected complete first record and fixed later physical-fault key, what is the exact total effect of changing the public red-X correction on the next complete public record, allowing final physical support to differ?",
+  "role": "Small finite ideal causal-model diagnostic, not a schedule-risk, decoder-performance, threshold, or general physical-channel study",
+  "source_basis": ["Jing Appendix A.2/A.4 ideal red-X/projector convention", "J6L/J6M periodic vacuum-orbit geometry", "J7F frozen positive first record", "J7G complete-public diagonal controls", "J7H additive-support identifiability boundary"],
+  "pinned_inputs": {
+    "jing_pdf_sha256": "7a17c3d3a743e3dec4266b64d0321a6af7a5eeacfab67e42b9ec77d30b65a2ac",
+    "j6l_result_sha256": "c3eee28f083b7f3a4dd82a3e4f8a7d3ec29aa19af92bbc3ab4588129d855c4ab",
+    "j6m_result_sha256": "55bfe46d34c9a8356e828351b0d415ed550312ed315c4c1bda7a51508ef1b932",
+    "j7f_result_sha256": "b939ec8bebe26f44b27f0caff328a37e1a0e22339d5dd43c78670235cf7157c4",
+    "j7g_result_sha256": "dfe4503a17aebebb355550373cb8744c7b6f550db810cde77e3bdd5166c79e26",
+    "j7h_result_sha256": "d53fe98de8c4764e08fe11f546f817aac30dd2d25dffbfc8b5c8f9ddcce815f2",
+    "frozen_integrated_history_sha256": "43d9d0d3e4771ccfc764f590f1843cda1e2a7fbce8dae96057710c413a0adb6e"
+  },
+  "model": {
+    "physical_state": "Same periodic L=2 J6M vacuum orbit, private initial red-X edges [0,4,3], exact chronological ideal star projectors, no readout noise",
+    "first_record": "The preselected J7F complete 24-site binary first public record with charge 0 at individually variable sites 1 and 2 and exact mass 1/4; it occurs before either action",
+    "intervention": "Set the relation-free public correction to [0] or [4] after the common first record. In each future-key column, hold the same private later red-X fault [0] or [4] across the two actions; no same-final-support conditioning or post-treatment matching",
+    "public_private_boundary": "Expose only full 24-site flux/charge/vacuum arrays, public action, and action/future-key-bound completion. Initial/future physical supports, operator masks, orbit and projector state remain private generation/scoring diagnostics, not decoder inputs",
+    "estimand": "Within each fixed later-fault key, rational total variation of the complete next-first public laws after marginalizing each action-conditioned complete second public law, conditional on the same selected first public record. This is a finite model total action effect, not its decomposition into information versus deterministic flux",
+    "independent_unit_uncertainty": "One exact finite orbit and one selected first record; rational Born masses and TV have no Monte Carlo interval or generalization claim"
+  },
+  "matrix": {
+    "initial_physical_red_edges_private": [0,4,3],
+    "first_variable_sites_private": [1,2],
+    "first_bits": [1,1],
+    "first_probability": "1/4",
+    "public_actions": [[0],[4]],
+    "matched_future_fault_keys_private": [[0],[4]],
+    "four_cells": "All two actions by two fixed future keys. The J7G [0]/[0] and [4]/[4] diagonal cells must replay exactly, including their action-conditioned second/next public laws; off-diagonal cells may have different final support and next flux",
+    "law": "Enumerate all positive complete second public records at the actual residual sector, all positive complete next-first public records at each resulting final sector, normalize at every prefix, marginalize the second law, and compare only actions within each common-future column",
+    "integrity": "Pin before/after; exact positive first mass and public arrays; sector eligibility; J7H final support/flux; J7G diagonal replay; public/private/action/future-key binding negatives; deterministic replay; no caller mutation"
+  },
+  "competing_outcomes": {
+    "flux_separated": "If fixed-future action pairs have different next flux, full-public TV is exactly 1 when both complete laws normalize; report as deterministic flux separation only, without assigning it to herald-charge information or risk benefit",
+    "overlapping_public_support": "If final supports differ but public flux overlaps, evaluate exact full-record TV and state that support-level difference does not itself establish public discrimination",
+    "censored": "Any source, first/second/next public law, binding, replay, compute, geometry, diagonal-control or model gate fails; no contrast claim or post-hoc budget enlargement"
+  },
+  "budget": {"max_cpu_seconds": 60, "max_ordered_moment_terms": 262144, "max_variable_second_sites": 3, "max_variable_next_sites": 4, "max_positive_second_rows": 16, "max_positive_next_rows": 64, "new_dependencies": 0, "stochastic_histories": 0, "schedule_arm_evaluations": 0, "bootstrap_replicates": 0},
+  "acceptance": ["Seven pins pass before/after and selected first complete record has exact mass 1/4", "All four action/future cells use the J7H support/flux ledger and have normalized complete second and next public laws", "Both J7G diagonal cells replay their exact public laws; five negative binding controls and deterministic result replay pass", "Within each common-future column compare action laws by exact rational full-public TV, explicitly distinguishing deterministic flux from charge/history information", "No noisy schedule, caller, decoder-risk, threshold, stochastic, bootstrap or general-channel claim"],
+  "stop_rule": "Stop on any pin, geometry, eligibility, Born, diagonal replay, binding or 60-CPU-second/term/site/row cap failure. Do not select another first record, expand geometry or future keys, invoke caller, collect noisy histories, or increase caps post-data.",
+  "planned_result": "results/j7i-same-future-total-action-law-2026-09-26.json"
+}

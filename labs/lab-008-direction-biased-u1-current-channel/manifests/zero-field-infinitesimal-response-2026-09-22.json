@@ -1,0 +1,40 @@
+{
+  "id": "lab008-zero-field-infinitesimal-response-2026-09-22",
+  "status": "complete_exact_response",
+  "registered_at": "2026-09-22",
+  "parent_contract": "thermodynamic-theory-reorientation-2026-09-22.json",
+  "question": "What exact finite-volume observables control the response of the undirected h=0 sector ensemble to an infinitesimal uniform link field at fixed total jump probability p?",
+  "claim_boundary": "This is an exact response identity and an existing-size algebra check. It does not establish differentiability after L tends to infinity, field relevance, a universality class, or a threshold.",
+  "frozen_model": {
+    "geometry": "canonical square with measured signed interior charges and unmeasured rough-boundary charges",
+    "current": "j_e in {0,+1,-1}",
+    "field_path": "w_h(0)=1-p and w_h(plus/minus 1)=p exp(plus/minus h)/(2 cosh h), so p is fixed",
+    "sector": "binary logical-cut activity parity",
+    "field_pattern": "uniform scalar h in the canonical stored-edge coordinates; reference reversal requires simultaneous field-pattern reversal",
+    "verification": "exact rational h=0 moments on the already used L=3 control at p=3/10 and p=1/2"
+  },
+  "registered_identities": {
+    "tilt": "Z_a(Q;h)=Z_a(Q;0) E_{0|Q,a}[exp(h J-N log cosh h)], with J=sum_e j_e and N=sum_e |j_e|.",
+    "gap_slope": "partial_h log[Z_0/Z_1] at zero equals E_0[J|Q]-E_1[J|Q].",
+    "gap_curvature": "partial_h^2 log[Z_0/Z_1] at zero equals Var_0(J|Q)-Var_1(J|Q)-E_0[N|Q]+E_1[N|Q].",
+    "risk_cusp": "For D_Q=Z_0-Z_1, R(h)=(1-sum_Q |D_Q(h)|)/2 and -R'(0+)=sum_{Q:D_Q(0)=0}|D'_Q(0)|/2; non-tied linear terms cancel under Q to -Q."
+  },
+  "competing_outcomes": {
+    "linear_cusp": "Some tied zero-field records have unequal sector current moments, so an infinitesimal field changes Bayes risk at order |h|.",
+    "quadratic_onset": "Every tied record has equal sector current moment, so the finite-volume Bayes response begins at order h^2 or higher.",
+    "recordwise_only": "Recordwise gap slopes are nonzero but cancel globally outside ties, leaving the risk onset governed by tied records."
+  },
+  "acceptance": {
+    "theorem": "Derive the fixed-p tilt, gap derivatives and one-sided Bayes-risk derivative without discarding charge or boundary factors.",
+    "verification": "Exact L3 rational sums satisfy normalization, reflection cancellation and the registered cusp identity at both p controls.",
+    "stop": "Stop after the identities and L3 replay. Do not add a system size, fit scaling or label the perturbation relevant/irrelevant."
+  },
+  "compute_budget": {
+    "new_physical_samples": 0,
+    "new_system_sizes": 0,
+    "new_bootstrap_replicates": 0,
+    "enumerated_existing_control_states_per_p": 6561
+  },
+  "result": "../results/zero-field-infinitesimal-response-2026-09-22.json",
+  "outcome": "The fixed-p field is an exact exponential tilt by signed current J and activity N. Finite-volume Bayes risk can have an even |h| cusp: on the existing L3 control its exact right-slope magnitudes are 151263/1000000 at p=3/10 and 3/64 at p=1/2. Thus symmetry does not imply quadratic response; thermodynamic field relevance requires size-uniform control of the sector-conditioned joint J,N cumulants and tied-record cusp mass."
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j6x-full-first-dephasing-new-third-2026-09-25",
+  "status": "registered_before_exact_execution",
+  "question": "Does measuring the complete first six-variable-site loop record change a later local charge law relative to the J6W selected-first instrument, and can a three-edge path yield first-conditioned information at a newly eligible third site after two actions?",
+  "role": "Two independent bounded exact ideal-state discriminators; neither is a full second/third public record, noisy D4 history, decoder risk or threshold",
+  "source_basis": ["Jing Appendix A.2/A.4 ordered flux-free charge projections and red-X correction", "J6L/J6M periodic L=2 operator support and one common vacuum orbit", "J6W local-only loop and three-block results and their explicit omitted-dephasing boundary"],
+  "pinned_inputs": {
+    "jing_pdf_sha256": "7a17c3d3a743e3dec4266b64d0321a6af7a5eeacfab67e42b9ec77d30b65a2ac",
+    "j6l_result_sha256": "c3eee28f083b7f3a4dd82a3e4f8a7d3ec29aa19af92bbc3ab4588129d855c4ab",
+    "j6m_result_sha256": "55bfe46d34c9a8356e828351b0d415ed550312ed315c4c1bda7a51508ef1b932",
+    "j6w_result_sha256": "6dfe19be6be8e99fbc560ada55f376ca26fd4a7dd416e62f74cbb46e082d26f1",
+    "frozen_integrated_history_sha256": "43d9d0d3e4771ccfc764f590f1843cda1e2a7fbce8dae96057710c413a0adb6e"
+  },
+  "common": {
+    "geometry_and_state": "Frozen J6L periodic L=2 graph and one J6M anyon-free orbit; private red-X error support, ideal projectors and no readout noise",
+    "timing": "Apply physical red-X; measure specified eligible first stars; apply first public red-X correction; measure specified eligible second stars; for the path branch apply a second public correction then measure one newly eligible third star.",
+    "public_private_boundary": "Only explicitly measured local outcomes count as records. Physical error support, operator masks and site-selection diagnostics remain private. The loop first block is complete over its six variable sites with all other eligible initial stars verified +1; its second block measures only one star. The path branch uses selected local blocks and is not a complete public history.",
+    "independent_unit": "One fixed exact orbit per geometry with counterfactual action branches and rational Born masses; no Monte Carlo uncertainty"
+  },
+  "matrix": {
+    "loop_full_first_dephasing": {"physical_red_edges": [0, 1, 32, 30, 34, 35], "first_rule": "Measure all eligible first stars; require exactly six non-deterministic ones, with all other eligible stars +1 on the prepared error state. Enumerate all 64 binary assignments, retain only positive outcomes.", "first_public_action": [0], "second_local_site": 17, "contrast": "For each first full record compute the exact conditional second-site-17 law; then aggregate over four omitted first bits conditional on selected first sites [0,1] and compare with J6W's two-site-only first instrument at the same action and second site. A difference is due to full-first measurement/dephasing in this fixture, not a full second record."},
+    "three_edge_new_third": {"physical_red_edges": [0, 4, 3], "first_rule": "Measure all eligible first stars; require at most two non-deterministic first sites and all other eligible first stars +1.", "first_public_action": [0], "second_rule": "Measure the two smallest eligible second sites with nonzero unconditional variance after first action; require exactly two.", "second_action_branches": {"correct_edge_3": [3], "correct_edge_4": [4]}, "third_rule": "Measure the smallest site newly eligible after the second action, requiring at least one and that the selected third operator differs from every selected first/second operator. Compare its exact conditional law across positive first records at fixed selected second record.", "negative_control": "Classify unchanged-operator repeats and zero/one positive-prefix cases as non-discriminating, never as novel feedback."}
+  },
+  "acceptance": ["All five pins, physical incidence and actual-sector eligibility/commutation pass", "The loop first six-site joint law is nonnegative and normalized and every positive full-first prefix has a normalized second-site conditional law, or the loop branch is explicitly censored before claiming a full-first result at the common CPU cap", "The three-edge first/second/third selected-star sequence retains ordered Born sandwiches; each positive prefix normalizes, and the chosen third site is newly eligible with a non-repeated operator, or that branch is explicitly censored", "Report full-first-versus-selected-first loop contrast and third-site first dependence separately with their local/full-record boundaries", "No stochastic histories, schedule-arm evaluations, bootstrap, five-round caller changes, full second/third public law, decoder comparison or threshold claim"],
+  "budget": {"max_cpu_seconds": 60, "new_dependencies": 0, "stochastic_histories": 0, "schedule_arm_evaluations": 0, "bootstrap_replicates": 0},
+  "stop_rule": "Run the cheaper three-edge branch first, then the loop branch. Fail closed on pin/incidence/commutation drift or negative/unnormalized mass. If selected-site structural gates or the 60-CPU-second common cap fail, mark only the affected branch censored and retain valid independent evidence; never widen the cap or change sites/actions post hoc.",
+  "planned_result": "results/j6x-full-first-dephasing-new-third-2026-09-25.json"
+}

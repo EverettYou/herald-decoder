@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j7q-direct-born-spotcheck-2026-09-27",
+  "status": "registered_before_direct_born_evaluation",
+  "question": "Do representative direct ordered-projector Born probabilities replay the algebraically reconstructed next-site probabilities in J7P, including both cross-round witness types and one deterministic repeat, without exceeding the prior exact-term ceiling?",
+  "role": "Independent computational-route spot-check of a finite ideal next-law derivation, not exhaustive re-evaluation of all next records or a risk/policy study",
+  "source_basis": ["J7P seven-pin algebraic complete next laws", "J7M exact full second public laws and frozen first record", "J7N fixed-future action/fault geometry", "J6W frozen ordered-projector probability expansion"],
+  "pinned_inputs": {
+    "j7p_result_sha256": "b378a20ff920b2a8c4a766310c5cc285671cc91a075711d60ad404bb7ec96567",
+    "j7m_result_sha256": "5b785f49539d013f8fda307b9c06da637bd5e88c0e9dccb9e6b88b341b90b8df",
+    "j7n_result_sha256": "d84fa6528a7065fdcc9e973c445c8a826f6d3f1ad08cf2a466543c292168c3ae",
+    "j7m_contract_sha256": "a1e4421c971e0d1fb0d94ac7665e1567644f9d17a5c5c3a93f87914a1bd4e055",
+    "j6l_result_sha256": "c3eee28f083b7f3a4dd82a3e4f8a7d3ec29aa19af92bbc3ab4588129d855c4ab",
+    "j6m_result_sha256": "55bfe46d34c9a8356e828351b0d415ed550312ed315c4c1bda7a51508ef1b932",
+    "operator_source_sha256": "0ac5c45dfb899c9a5ac6cabe36e1300cde03054f053d94db1ee2a4bbd8dcb05f",
+    "ordered_probability_source_sha256": "e6c38aa226b6fb6722cdd000b5692533f64aad3c4f48a02c8e7d07f6ca32cce9"
+  },
+  "model": {
+    "frozen_public_private_boundary": "Same ideal L=2 D4 vacuum orbit; private physical red-X error [0,4,3], selected complete first public record of mass 1/4, full-binary action-conditioned second public record, relation-free public correction and private later fault. Future fault and projector operators are not decoder-visible. No noisy data or policy action is introduced.",
+    "calculation": "For each frozen probe, select row index 0 of the pinned J7M action-conditioned second law (not chosen after computing next probabilities). Form the two first variable-star projectors with outcomes [+1,+1], all one or five second variable-star projectors with outcomes from that complete second record, and one selected next-site projector. Evaluate the ordered three-block Born joint mass directly by J6W's moment expansion. Divide by the independently pinned J7M first mass times second conditional probability. Compare to the J7P predicted next charge-0 conditional probability.",
+    "independent_unit_uncertainty": "Three deterministic exact-rational probes on one selected fixture; no stochastic uncertainty. Direct expansion is an independent computational route, not an independent physical model or exhaustive verification of the four full laws."
+  },
+  "matrix": {
+    "first_variable_sites_private": [1,2], "first_eigenvalues": [1,1],
+    "selected_second_row_index": 0,
+    "probes": [
+      {"public_action_red_edges": [0], "future_physical_red_edges_private": [0], "next_site_private": 1, "next_charge_bit": 0, "expected_conditional_probability": "1/2", "expected_ordered_terms": 128, "purpose": "fair witness after variable second site 0"},
+      {"public_action_red_edges": [0], "future_physical_red_edges_private": [0], "next_site_private": 2, "next_charge_bit": 0, "expected_conditional_probability": "1", "expected_ordered_terms": 128, "purpose": "deterministic same-site signed repeat"},
+      {"public_action_red_edges": [1,30,32,34,35], "future_physical_red_edges_private": [4], "next_site_private": 1, "next_charge_bit": 0, "expected_conditional_probability": "1/2", "expected_ordered_terms": 32768, "purpose": "fair witness after fixed-positive second site 2 in five-variable loop action"}
+    ],
+    "expected_total_ordered_terms": 33024,
+    "prior_exact_term_ceiling": 65536
+  },
+  "competing_outcomes": {
+    "replay": "All three exact conditional probabilities match the preregistered predictions, supporting—but not exhaustively proving—the algebraic reconstruction route.",
+    "mismatch": "Any probe disagrees; freeze J7P's full-law contrast from downstream promotion and investigate operator/order/full-measurement mismatch.",
+    "censored": "Any source, prefix, geometry, CPU or term cap fails; no replay claim or budget increase."
+  },
+  "budget": {"max_cpu_seconds": 60, "max_ordered_moment_terms": 33024, "max_probes": 3, "max_new_dependencies": 0, "stochastic_histories": 0, "schedule_arm_evaluations": 0, "bootstrap_replicates": 0},
+  "acceptance": ["Eight pins pass before and after and selected first/second prefixes replay exactly", "Three preselected probes cover variable-witness, fixed-witness and signed-repeat cases under both actions and both frozen future keys", "Each joint ordered probability is nonnegative and its exact conditional ratio matches its registered prediction", "Total moment terms do not exceed 33,024 or the prior 65,536 ceiling, CPU cap passes, and no full next law, noisy history, schedule arm, bootstrap or caller edit is made", "A replay is reported as a limited spot-check, not a replacement for all-prefix direct Born validation or a risk claim"],
+  "stop_rule": "Fail closed on any pin, prefix, term, CPU, geometry or probability mismatch. Do not adaptively add probes or increase the prior exact-term ceiling. Any mismatch suspends J7P's derived full-law use pending a separate remediation contract.",
+  "planned_result": "results/j7q-direct-born-spotcheck-2026-09-27.json"
+}

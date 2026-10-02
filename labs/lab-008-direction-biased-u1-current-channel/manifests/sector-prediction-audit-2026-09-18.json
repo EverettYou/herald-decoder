@@ -1,0 +1,26 @@
+{
+  "id": "lab008-sector-prediction-audit-2026-09-18",
+  "status": "complete",
+  "result": "results/sector-prediction-audit-2026-09-18.json",
+  "delivery_audit": "results/setup-delivery-2026-09-18.json",
+  "scope": "Research setup, migration, correction of gauge mapping, bounded exact validation, and a numerical evidence design; no production LER sweep.",
+  "parents": ["lab-006-sun-bp-theory"],
+  "method_dependency": "lab-007-decoding-statistical-mechanics",
+  "inputs": ["src/herald_decoder/lattice_model.py", "labs/lab-006-sun-bp-theory/results/a9-orientation-analysis.json"],
+  "geometries": ["square", "honeycomb"],
+  "canonical_sizes": [5, 7, 9, 11],
+  "finite_motifs": ["two-edge rough path", "gradient square cycle", "circulating square cycle"],
+  "p": "1/3",
+  "bias_q": ["0", "1/5", "1/2", "4/5", "1"],
+  "acceptance": [
+    "Exact rational joint-law normalization, reflection q <-> 1-q, and sector Bayes-risk identity on all motifs.",
+    "Statewise effective-prior identity at q=4/5, with exp(h)=2 and p_eff=2/7, for every motif state.",
+    "Compute an integer vertex-potential consistency test on the actual stored arrows at every canonical size; retain an explicit cycle witness if inconsistent.",
+    "Extract inherited U1 p=0.30 LER counts and BP diagnostics without rerunning or changing Lab 006.",
+    "Relocate all four original artifacts, synchronize ownership and active registry, and verify the new rendered report and notes."
+  ],
+  "budget": "At most 3*5*3^4 enumerated states plus eight linear-time geometry audits; no RNG, fitting, new Monte Carlo, or production decoder changes.",
+  "uncertainty": "Exact finite motifs have no sampling error; inherited 20,000-shot LER remains subject to its published Wilson intervals and finite-size limits.",
+  "stop": "Any algebraic mismatch or actual-arrow inconsistency rejects the corresponding mapping claim; do not paper over it with an XY or threshold label.",
+  "future_production": "Outlined in PLAN and numerical-evidence; not acquired under this bounded setup contract."
+}

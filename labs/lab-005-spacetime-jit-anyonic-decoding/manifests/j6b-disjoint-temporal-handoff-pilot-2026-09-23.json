@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j6b-disjoint-temporal-handoff-pilot-2026-09-23",
+  "status": "registered_preflight_required_no_sampling",
+  "registered_at": "2026-09-23",
+  "phase": "J6B replacement pilot",
+  "role": "Exploratory finite-size feasibility and resolution pilot, not a threshold or fault-tolerance claim",
+  "question": "Under the corrected causal temporal-boundary handoff, do matched D4 histories yield enough resolved physical actions to assess preliminary unconditional JIT-versus-baseline and heralded-versus-syndrome-only differences?",
+  "competing_outcomes": {
+    "resolved": "Every gate passes and at least one preregistered paired contrast is resolved at the fixed sample size; report it as a preliminary finite-pilot direction only.",
+    "null": "Integrity and event gates pass but no paired contrast clears the promotion trigger; report an unresolved finite pilot, not schedule equivalence.",
+    "censored": "Any provenance, causal, replay, action-binding, row, event-resolution, or resource gate fails; retain rows and report no risk direction."
+  },
+  "dependencies": {
+    "j6a_result": {"path": "results/j6a-causal-odd-syndrome-time-boundary-handoff-2026-09-22.json", "sha256": "436d36f558aaac108129870122672660317e686ae1b1e885157a22004b0b8749", "required_status": "passed"},
+    "j6b_r0_result": {"path": "results/j6b-r0-temporal-ledger-reconciliation-2026-09-23.json", "sha256": "1d2a8b19bf0ea11f7871b83728d148c8188520acb2734ecd1d567b98cbc2d821", "required_status": "passed"},
+    "j1_e4b_manifest": {"path": "manifests/j1-e4b-d4-translation-interface-matrix-2026-09-19.json", "sha256": "ef94a1d4cc1820bfe2ef5a59350355ba8d6e9c4c9cbaea83969109977becc179", "required_status": "passed"},
+    "j1_e4b_result": {"path": "results/j1-e4b-d4-translation-interface-matrix-2026-09-19.json", "sha256": "28e4c72ac9c774b8a6b669105a564512d7fc1fb08901a24b6364de3ec18dac89", "required_status": "passed"}
+  },
+  "legacy_j6_quarantine": {
+    "status": "closed_censored_noninformative",
+    "raw_rows": {"path": "results/j6-d4-matched-history-pilot-rows-2026-09-19.jsonl", "sha256": "9e120e1402f2cd5332ecbea1d15ded2979e8d0fe2165083eeb21794cbed22225"},
+    "analysis": {"path": "results/j6-d4-matched-history-pilot-analysis-2026-09-19.json", "sha256": "fa2bc6d7b7de69004d266557b1b885a0369fb3944d3dbcee94ee54fb6e6cfcf3"},
+    "rule": "Preserve both artifacts for provenance only. Never pool rows, compare numerical risks, rerun the old seed cohort, or reinterpret its censored outcome."
+  },
+  "frozen_source_sha256": {
+    "scripts/d4_integrated_history.py": "43d9d0d3e4771ccfc764f590f1843cda1e2a7fbce8dae96057710c413a0adb6e",
+    "scripts/generic_history.py": "6b2509ed4619ff2a7e4610a2262874abb94fb961c384f7ca6d25407c8f05f8d4",
+    "scripts/baseline_harness.py": "ee94606fa604d87694c9ca4408e291fe50c6e49b15e61382ee6c90983b2ec836",
+    "scripts/d4_projector_instrument.py": "96e0b9bb923a481013064e5b7d7333ecc8eaab1c7fffb9bd7cbeb3aca8a862e4",
+    "scripts/d4_temporal_composition.py": "f9578a3d78bae4843099e8c28c5f73ee102b1c180cf1c3b2f46cb93e22bb49c4",
+    "scripts/d4_spatial_policy.py": "40d966e9db072e7ecffa013b1a68aa92cf0d4360e280e968bca152c86632db80",
+    "scripts/e1_schedule_integration.py": "d1ba0232aa06ffe95c8c0673f8ef6371785ace568368cc73e30ddbadfb9d0398",
+    "scripts/persistent_clusters.py": "f02f4e483b03bcd399a93546741a96e8ce78eb746bb376a704275ca67830852e",
+    "scripts/lyons_absorber.py": "cb2ac932c2158dc41d621018b9e4bb921ccd07864486191ff70db34a69b168b5",
+    "../lab-004-d4-intrinsic-heralded-decoding/scripts/d4_charge.py": "2ba3dd13feda42e4441ae0089be2403b5c75b626ae0a0542d4aa9089807472fd"
+  },
+  "runtime": {"python": "3.13.2", "numpy": "1.26.4", "scipy": "1.17.1", "numba": "0.65.0", "pymatching": "2.4.0", "launcher": "run_research_python.sh", "new_dependencies": 0},
+  "physical_and_public_interface": {
+    "geometry": "Paper-normalized periodic D4 coloured honeycomb at L=2; five public readout rounds and four between-round hidden transitions.",
+    "hidden_channel": "The J6 phenomenological/projector-level vacuum, m_flux, e_charge transition and action-conditioned D4 post-flux instrument; no D(S3) circuit or perfect-measurement threshold is imported.",
+    "first_observation": "Signal-only full-binary adjacent-round syndrome detector record plus categorical none/blue/green herald readout. At each decision, online schedules receive only the causal public prefix; private support, pairings, winding and future rounds are inaccessible.",
+    "temporal_boundary": "A public odd full snapshot produces a digest-bound one-temporal-node-per-visible-endpoint defer ledger and no physical correction or second measurement. Duplicate same-round callbacks collapse only when their public signatures agree.",
+    "resolution": "Only a later causally available even full snapshot may supersede a pending defer through a real cumulative Pauli-frame D4 flux action; terminal unresolved or conflicting same-round handoffs fail closed.",
+    "second_observation": "After a real action only, draw the action-conditioned full-binary public charge/vacuum record using that history's second-exogenous key and bound action digest. Wrong-action or wrong-round substitutions fail closed.",
+    "charge_action": "The public blue/green charge recovery consumes only the full-binary second record and exposes no relation or support.",
+    "private_boundary": "Physical support, hidden relation, internal second-record sentinel, winding and residual truth are generation/scoring sidecars; no public policy or schedule can read them."
+  },
+  "matched_design": {
+    "independent_unit": "One master-seeded five-round physical/first-observation/second-exogenous history, evaluated once under every registered mode and schedule; uncertainty resamples whole histories.",
+    "key_rule": "For each new master seed, derive three domain-separated physical, first_observation, and second_exogenous keys using the frozen j6-matched-key-v1 protocol; all eight arms share those keys. The second public draw is conditional on each arm's own public flux action and therefore need not have an identical realized value across different actions.",
+    "schedules": ["immediate", "fixed_delay_1", "jit_lyons_brown", "offline_full_history"],
+    "modes": ["syndrome_only", "heralded"],
+    "offline_boundary": "Offline receives completed visible history and is a noncausal diagnostic, never an operational schedule comparator.",
+    "mode_difference": "Only access to the categorical herald record changes between syndrome_only and heralded; physical draws, readout noise, schedule definitions, spatial policy and scorer are matched.",
+    "cells": [
+      {"id": "zero_control", "rates": {"p_data": 0.0, "p_syndrome": 0.0, "p_fp": 0.0, "p_fn": 0.0, "p_confuse": 0.0}, "histories": 16, "role": "Replay and zero-noise integrity; excluded from effect contrasts."},
+      {"id": "clean_herald_schedule", "rates": {"p_data": 0.06, "p_syndrome": 0.06, "p_fp": 0.0, "p_fn": 0.0, "p_confuse": 0.0}, "histories": 128, "role": "Schedule contrast with noisy physical/syndrome process and clean categorical herald readout."},
+      {"id": "joint_readout_noise", "rates": {"p_data": 0.06, "p_syndrome": 0.06, "p_fp": 0.06, "p_fn": 0.06, "p_confuse": 0.06}, "histories": 128, "role": "Schedule and public-mode contrasts with noisy syndrome and herald readout."}
+    ],
+    "rate_rationale": "The two nonzero cells use a newly frozen moderate 0.06 rate, not J6's 0.05 selected cells. This is a new exploratory cohort; no numerical comparison or pooling with J6 is valid. Zero and clean-versus-noisy herald limits are retained to discriminate schedule from public-record effects.",
+    "seed_rule": "master_seed = 923240000 + 100000 * cell_index + history_index; cell_index is manifest order, history_index starts at zero. This interval is disjoint from J6's 905190000 + 100000 * cell_index + history_index seeds. No J6 row, event count, or selected history is carried forward.",
+    "total_histories": 272,
+    "total_arm_evaluations": 2176
+  },
+  "score_and_analysis": {
+    "primary_loss": "Unconditional Boolean union: logical_failure=true for any physical, post-correction union, or charge winding across completed actions, or terminal uncleared residual; every abort, timeout, malformed completion, unresolved handoff, or missing score is a failure.",
+    "denominator": "Exactly all registered independent histories in each cell for every one of eight arms, regardless of event, invocation, completion, or convergence. No post-selection on resolved odd records.",
+    "primary_contrasts": ["Within each mode and stochastic cell, paired JIT minus immediate and JIT minus fixed-delay-1 risk", "Within each online schedule and stochastic cell, paired heralded minus syndrome_only risk"],
+    "diagnostics": ["Odd-snapshot and terminal-unresolved handoff counts per arm", "Distinct histories with a later even physical action after an odd defer", "Any physical action, failed-closed reason, false/late commit, latency and active-volume/work counters", "Explicitly noncausal offline gap"],
+    "uncertainty": "Pointwise 95% Wilson intervals for arm risks; pointwise 95% percentile intervals from exactly 2000 fixed-seed nonparametric bootstrap resamples of whole matched histories per registered paired contrast, using bootstrap seed 923242000. No simultaneous coverage claim.",
+    "promotion_trigger": "Only if every gate passes and at least one preregistered online paired logical-risk contrast has absolute difference >=0.05 with its pointwise paired interval excluding zero may a larger study be proposed. This is not a superiority claim.",
+    "null_rule": "If no trigger passes, report unresolved or negative finite-pilot evidence without adaptive rates, extra histories, or favorable-contrast selection."
+  },
+  "separate_preflight_required": [
+    "Before generating any stochastic history, verify every dependency status/digest, every frozen model-source digest, runtime version, and the new production runner digest recorded in the preflight result; a missing or changed runner fails closed.",
+    "Deterministic zero, odd-then-even, persistent-odd, same-round conflict, all four schedules/two modes, replay and public-prefix tests must pass through the integrated entry point; at most 32 synthetic histories and 256 arm evaluations.",
+    "Verify normalization, matched physical/first/second-exogenous keys, causality, future/truth-sidecar exclusion, action-conditioned second-record binding and relation-free charge action.",
+    "Verify exactly one terminal denominator-included Boolean-union row per arm/history, including every abort and unresolved defer; zero-control must have zero spurious logical failures.",
+    "No pilot rows or bootstrap replicates may be produced by preflight; its machine-readable pass is the sole release for the fixed cohort."
+  ],
+  "production_integrity_and_resolution_gates": [
+    "All eight rows exist for every one of 272 histories, with shared within-history physical/first-observation/second-exogenous keys and valid per-action public completion bindings.",
+    "Zero-control cell passes zero-noise logical and bit-identical replay checks in every arm.",
+    "Each stochastic cell has at least 16 histories with a nonempty detector event and each online mode/schedule has at least 8 distinct histories with a real physical action, not merely a defer callback.",
+    "Across the two stochastic cells, each public mode has at least 8 distinct histories in which an odd defer is followed by a later even physical action; also report the unconditional unresolved-defer denominator and abort reasons. If this mechanism-resolution gate fails, censor all paired-risk interpretation rather than expanding the cohort.",
+    "Any source/runtime/key mismatch, hidden-field leak, future-prefix read, wrong-action second record, missing row, replay mismatch, or compute cap violation censors the entire pilot."
+  ],
+  "compute_budget": {
+    "registration_tick": {"new_stochastic_histories": 0, "schedule_arm_evaluations": 0, "bootstrap_replicates": 0},
+    "preflight": {"max_deterministic_synthetic_histories": 32, "max_arm_evaluations": 256, "new_stochastic_histories": 0},
+    "pilot": {"histories": 272, "arm_evaluations": 2176, "adaptive_extension": 0},
+    "uncertainty": {"whole_history_bootstrap_replicates_per_registered_contrast": 2000, "only_after_all_integrity_and_resolution_gates": true},
+    "hard_caps": {"cpu_minutes": 10, "resident_memory_gib": 2, "combined_raw_and_analysis_mib": 50}
+  },
+  "fixed_stop_rule": "Stop after the exact 272-history cohort and integrity/resolution analysis. On any failed gate retain all generated rows, label the pilot censored, run zero bootstraps and make no paired direction claim. Never replenish a low-event cell, change rates, or reinterpret or pool J6; any further pilot needs a separate new contract.",
+  "claim_boundary": "Only finite L=2, five-round, phenomenological/projector-level feasibility and preliminary paired directions after every gate passes; no threshold, crossing, scaling, universal JIT advantage, exact D(S3) reproduction or hardware-realistic D4 circuit claim.",
+  "planned_outputs": {
+    "runner": "scripts/run_j6b_disjoint_temporal_handoff_pilot.py",
+    "preflight": "results/j6b-disjoint-temporal-handoff-preflight-2026-09-23.json",
+    "raw_rows": "results/j6b-disjoint-temporal-handoff-rows-2026-09-23.jsonl",
+    "analysis": "results/j6b-disjoint-temporal-handoff-analysis-2026-09-23.json",
+    "record": "wiki/records/j6b-disjoint-temporal-handoff-pilot-2026-09-23.md"
+  },
+  "registration_counters": {"production_histories_generated": 0, "schedule_arm_evaluations": 0, "bootstrap_replicates": 0},
+  "next_operation": "Implement the separate fail-closed preflight and runner, freeze its digest in the preflight result, and run only deterministic preflight. Production remains unarmed until every registered gate passes."
+}

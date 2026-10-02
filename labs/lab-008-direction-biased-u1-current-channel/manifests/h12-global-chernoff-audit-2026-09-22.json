@@ -1,0 +1,18 @@
+{
+  "id": "lab008-h12-global-chernoff-audit-2026-09-22",
+  "status": "closed_inconclusive_for_h12",
+  "parent_contract": "thermodynamic-theory-reorientation-2026-09-22.json",
+  "question": "Can optimizing a single global Chernoff exponent and retaining path direction make the existing nonbacktracking path-sum route bound the physical H12 contrast at p=.30 and finite h?",
+  "role": "Smallest deterministic falsification of a candidate H12 estimate outside the certified wedges; no physical data acquisition.",
+  "hypotheses": [
+    "A direction-weighted nonbacktracking transfer has spectral radius below one for some 0<s<1 and finite h, giving a summable physical-record path bound.",
+    "Its spectral radius is at least one for all 0<s<1 and finite h at p=.30, so this entire fixed-global-exponent path-sum route is inconclusive there."
+  ],
+  "frozen_model": "Canonical square U(1) current channel, a=1-p, b=pq, c=p(1-q), q=(1+tanh h)/2; physical measured Q and true H12 Bayes contrast remain the estimand.",
+  "registered_method": "For a unit path shift use Chernoff factors u_s=a^(1-s)b^s+c^(1-s)a^s and v_s=a^(1-s)c^s+b^(1-s)a^s. Form the four-direction nonbacktracking transfer T_ij=w_j unless j reverses i, with w=(u_s,u_s,v_s,v_s). Prove or refute an analytic lower bound on rho(T), and check p=.30 at q=.5,.75,.97,1 and s=.25,.5,.75. The q=1 endpoint is a mathematical limiting control, not a finite-h claim.",
+  "acceptance": "Exact inequality with independently checked arithmetic and explicit scope. If rho>=1, close only the fixed-global-Chernoff nonbacktracking summability shortcut, not H12 correctability, optimized path-dependent exponents, or phase boundaries.",
+  "budget": {"new_sizes": 0, "stochastic_samples": 0, "bootstrap_replicates": 0, "external_dependencies": 0, "deterministic_cells": 12},
+  "stop_rule": "Stop after the analytic inequality and registered 12-cell arithmetic. Keep the p=.30 H12 target open regardless of method outcome.",
+  "result": "../results/h12-global-chernoff-audit-2026-09-22.json",
+  "decision": "The fixed-global-exponent nonbacktracking certificate cannot be summable at p=.30 for any finite h; rho is minimized by s=1/2 and is at least 1.374772708487 even at q=1. This is a method obstruction, not an H12 phase result."
+}

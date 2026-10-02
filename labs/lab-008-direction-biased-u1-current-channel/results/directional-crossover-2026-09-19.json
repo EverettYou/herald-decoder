@@ -1,0 +1,309 @@
+{
+  "status": "passed",
+  "scope": "Fixed-size p->0 asymptotics for 1-q=lambda*p^alpha; no finite-p fit or threshold.",
+  "exponent_checks": [
+    {
+      "L": 3,
+      "alpha": "1/2",
+      "states": 45,
+      "charge_records": 27,
+      "exponent_exact": "3/2",
+      "predicted_exponent": "3/2",
+      "leading_records": 6,
+      "critical_coefficients": []
+    },
+    {
+      "L": 3,
+      "alpha": "1",
+      "states": 45,
+      "charge_records": 27,
+      "exponent_exact": "2",
+      "predicted_exponent": "2",
+      "leading_records": 12,
+      "critical_coefficients": [
+        {
+          "lambda": 0.25,
+          "coefficient_exact": "8",
+          "predicted_exact": "8"
+        },
+        {
+          "lambda": 0.5,
+          "coefficient_exact": "10",
+          "predicted_exact": "10"
+        },
+        {
+          "lambda": 1.0,
+          "coefficient_exact": "14",
+          "predicted_exact": "14"
+        },
+        {
+          "lambda": 2.0,
+          "coefficient_exact": "20",
+          "predicted_exact": "20"
+        },
+        {
+          "lambda": 4.0,
+          "coefficient_exact": "32",
+          "predicted_exact": "32"
+        }
+      ]
+    },
+    {
+      "L": 3,
+      "alpha": "2",
+      "states": 37,
+      "charge_records": 27,
+      "exponent_exact": "2",
+      "predicted_exponent": "2",
+      "leading_records": 4,
+      "critical_coefficients": []
+    },
+    {
+      "L": 3,
+      "alpha": "3",
+      "states": 37,
+      "charge_records": 27,
+      "exponent_exact": "2",
+      "predicted_exponent": "2",
+      "leading_records": 4,
+      "critical_coefficients": []
+    },
+    {
+      "L": 4,
+      "alpha": "1/2",
+      "states": 1465,
+      "charge_records": 1013,
+      "exponent_exact": "2",
+      "predicted_exponent": "2",
+      "leading_records": 12,
+      "critical_coefficients": []
+    },
+    {
+      "L": 4,
+      "alpha": "1",
+      "states": 1312,
+      "charge_records": 932,
+      "exponent_exact": "2",
+      "predicted_exponent": "2",
+      "leading_records": 12,
+      "critical_coefficients": []
+    },
+    {
+      "L": 4,
+      "alpha": "2",
+      "states": 1006,
+      "charge_records": 827,
+      "exponent_exact": "3",
+      "predicted_exponent": "3",
+      "leading_records": 35,
+      "critical_coefficients": [
+        {
+          "lambda": 0.25,
+          "coefficient_exact": "49/2",
+          "predicted_exact": "49/2"
+        },
+        {
+          "lambda": 0.5,
+          "coefficient_exact": "29",
+          "predicted_exact": "29"
+        },
+        {
+          "lambda": 1.0,
+          "coefficient_exact": "38",
+          "predicted_exact": "38"
+        },
+        {
+          "lambda": 2.0,
+          "coefficient_exact": "50",
+          "predicted_exact": "50"
+        },
+        {
+          "lambda": 4.0,
+          "coefficient_exact": "74",
+          "predicted_exact": "74"
+        }
+      ]
+    },
+    {
+      "L": 4,
+      "alpha": "3",
+      "states": 988,
+      "charge_records": 827,
+      "exponent_exact": "3",
+      "predicted_exponent": "3",
+      "leading_records": 17,
+      "critical_coefficients": []
+    },
+    {
+      "L": 5,
+      "alpha": "1/2",
+      "states": 72729,
+      "charge_records": 56603,
+      "exponent_exact": "3",
+      "predicted_exponent": "3",
+      "leading_records": 138,
+      "critical_coefficients": []
+    },
+    {
+      "L": 5,
+      "alpha": "1",
+      "states": 57849,
+      "charge_records": 46713,
+      "exponent_exact": "3",
+      "predicted_exponent": "3",
+      "leading_records": 52,
+      "critical_coefficients": []
+    },
+    {
+      "L": 5,
+      "alpha": "2",
+      "states": 42473,
+      "charge_records": 35111,
+      "exponent_exact": "3",
+      "predicted_exponent": "3",
+      "leading_records": 20,
+      "critical_coefficients": []
+    },
+    {
+      "L": 5,
+      "alpha": "3",
+      "states": 41481,
+      "charge_records": 34731,
+      "exponent_exact": "4",
+      "predicted_exponent": "4",
+      "leading_records": 98,
+      "critical_coefficients": [
+        {
+          "lambda": 0.25,
+          "coefficient_exact": "78",
+          "predicted_exact": "78"
+        },
+        {
+          "lambda": 0.5,
+          "coefficient_exact": "86",
+          "predicted_exact": "86"
+        },
+        {
+          "lambda": 1.0,
+          "coefficient_exact": "102",
+          "predicted_exact": "102"
+        },
+        {
+          "lambda": 2.0,
+          "coefficient_exact": "122",
+          "predicted_exact": "122"
+        },
+        {
+          "lambda": 4.0,
+          "coefficient_exact": "162",
+          "predicted_exact": "162"
+        }
+      ]
+    }
+  ],
+  "critical_coefficient_checks": 15,
+  "finite_L3_control": {
+    "states": 6561,
+    "records": 357,
+    "cells": [
+      {
+        "p": 0.005,
+        "q": 0.99875,
+        "lambda": 0.25,
+        "Bayes_LER_exact": "42441837005641739322377985464105960791/214748364800000000000000000000000000000000",
+        "Bayes_LER": 0.0001976352045575238,
+        "risk_over_p2": 7.905408182300951,
+        "limiting_coefficient": 8.0,
+        "relative_asymptotic_error": 0.0118239772123811
+      },
+      {
+        "p": 0.005,
+        "q": 0.995,
+        "lambda": 1.0,
+        "Bayes_LER_exact": "112888809478987010805592879520959/327680000000000000000000000000000000",
+        "Bayes_LER": 0.00034450930627132265,
+        "risk_over_p2": 13.780372250852906,
+        "limiting_coefficient": 14.0,
+        "relative_asymptotic_error": 0.01568769636764953
+      },
+      {
+        "p": 0.005,
+        "q": 0.98,
+        "lambda": 4.0,
+        "Bayes_LER_exact": "3912860883834274976185549489/5000000000000000000000000000000",
+        "Bayes_LER": 0.000782572176766855,
+        "risk_over_p2": 31.3028870706742,
+        "limiting_coefficient": 32.0,
+        "relative_asymptotic_error": 0.021784779041431255
+      },
+      {
+        "p": 0.01,
+        "q": 0.9975,
+        "lambda": 0.25,
+        "Bayes_LER_exact": "2559714276415996125813218202500391/3276800000000000000000000000000000000",
+        "Bayes_LER": 0.0007811628040820301,
+        "risk_over_p2": 7.811628040820301,
+        "limiting_coefficient": 8.0,
+        "relative_asymptotic_error": 0.023546494897462415
+      },
+      {
+        "p": 0.01,
+        "q": 0.99,
+        "lambda": 1.0,
+        "Bayes_LER_exact": "6780788013692023923564880479/5000000000000000000000000000000",
+        "Bayes_LER": 0.0013561576027384047,
+        "risk_over_p2": 13.561576027384048,
+        "limiting_coefficient": 14.0,
+        "relative_asymptotic_error": 0.03131599804399658
+      },
+      {
+        "p": 0.01,
+        "q": 0.96,
+        "lambda": 4.0,
+        "Bayes_LER_exact": "29194215569906741472843/9536743164062500000000000",
+        "Bayes_LER": 0.003061235378543053,
+        "risk_over_p2": 30.612353785430532,
+        "limiting_coefficient": 32.0,
+        "relative_asymptotic_error": 0.04336394420529589
+      },
+      {
+        "p": 0.02,
+        "q": 0.995,
+        "lambda": 0.25,
+        "Bayes_LER_exact": "152529512428107092486972630191/50000000000000000000000000000000",
+        "Bayes_LER": 0.003050590248562142,
+        "risk_over_p2": 7.626475621405355,
+        "limiting_coefficient": 8.0,
+        "relative_asymptotic_error": 0.04669054732433067
+      },
+      {
+        "p": 0.02,
+        "q": 0.98,
+        "lambda": 1.0,
+        "Bayes_LER_exact": "400603542539282692782739/76293945312500000000000000",
+        "Bayes_LER": 0.005250790752770886,
+        "risk_over_p2": 13.126976881927215,
+        "limiting_coefficient": 14.0,
+        "relative_asymptotic_error": 0.06235879414805605
+      },
+      {
+        "p": 0.02,
+        "q": 0.92,
+        "lambda": 4.0,
+        "Bayes_LER_exact": "3487510880348121831229/298023223876953125000000",
+        "Bayes_LER": 0.011702144668390119,
+        "risk_over_p2": 29.255361670975297,
+        "limiting_coefficient": 32.0,
+        "relative_asymptotic_error": 0.08576994778202195
+      }
+    ]
+  },
+  "new_physical_record_samples": 0,
+  "elapsed_seconds": 4.385639542015269,
+  "source_sha256": {
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/check_directional_crossover.py": "a404b67d01b15a00b3e9b5501f90bdc15ff8f3c6bab55e3dddbff99d21a72423",
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/current_oracle.py": "241916aa389193b7b62a3ea2de7f4267086dfcca60760ee514e27100f40fa6ee",
+    "labs/lab-008-direction-biased-u1-current-channel/wiki/partition-function-ler.md": "99e9f7ca5c04d16bfac484ae98c1422669e21662287cec714fe216182dcb5ea3",
+    "src/herald_decoder/lattice_model.py": "b87a5feba27675e26970360d730324b7d3740e4dc0492b4dc478e510f140c9e7"
+  }
+}

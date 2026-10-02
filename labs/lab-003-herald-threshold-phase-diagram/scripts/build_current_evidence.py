@@ -2,7 +2,7 @@
 """Build the single current, research-facing Lab 003 evidence bundle.
 
 Phase files remain provenance inputs.  This bundle is the compact data record
-promoted alongside the current collaborator-facing B18 figure.
+promoted alongside the current collaborator-facing B19 coverage figure.
 """
 
 from __future__ import annotations
@@ -16,7 +16,7 @@ LAB = Path(__file__).resolve().parents[1]
 RESULTS = LAB / "results"
 SOURCES = {
     "honeycomb_finite_window_trend": "phase-b14-honeycomb-continuous-log-odds-map-2026-08-28.json",
-    "symmetry_constrained_boundary_guide": "phase-b18-symmetry-constrained-guide-2026-08-28.json",
+    "full_prior_coverage": "phase-b19-full-prior-evidence-coverage-2026-10-01.json",
     "selected_ler_q0_q075_q1": "final-selected-ler-curves-q0-q075-q1-square-honeycomb-2026-08-28.json",
 }
 OUTPUT = RESULTS / "current-evidence.json"
@@ -37,10 +37,7 @@ def main() -> None:
         "schema_version": 1,
         "status": "current_lab003_evidence",
         "evidence_boundary": (
-            "The B14-current finite-window honeycomb trend evidence, the B18 "
-            "p<->1-p symmetry-constrained visual guide and unchanged finite-grid directional bracket/censoring region, and selected "
-            "non-pooled LER context panels. This is not a threshold fit or "
-            "thermodynamic phase claim."
+            "B14 measured finite-window honeycomb trend evidence, corrected B19 full-prior coverage and selected non-pooled LER context. B18 is withdrawn: incomplete heralds lack general complement symmetry. The p>0.5 joint grid remains unmeasured; no mirrored cells, constrained guide or thermodynamic threshold claim."
         ),
         "provenance": provenance,
         "evidence": payloads,

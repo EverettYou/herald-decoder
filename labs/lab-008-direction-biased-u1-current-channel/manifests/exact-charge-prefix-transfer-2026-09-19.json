@@ -1,0 +1,30 @@
+{
+  "id": "lab008-exact-charge-prefix-transfer-2026-09-19",
+  "status": "complete_capped_no_improvement",
+  "correction": "The promoted cumulant representation is controlled, but the physical edge kernel K is already exactly finite harmonic (0,+1,-1). Approximating exp(P_N) would add harmonics without addressing the hard l1 norm over charge records. The next prerequisite is therefore an exact coarse-charge contraction using K itself.",
+  "question": "Can nested exact charge-prefix observations tighten the L5,p=.08 Bayes-LER upper bound while keeping the record state space bounded?",
+  "frozen_model": "Canonical open square, exact ternary physical prior, full logical parity and rough endpoints. Marginalize unselected public charges and retain selected charges exactly; more observed charges can only reduce Bayes risk.",
+  "method": {
+    "transfer": "Assign each exact physical edge current once in a frontier contraction. Track frontier currents, logical parity and a tuple of selected detector charges.",
+    "bound": "For selected detector set S, LER_full<=sum_{Q_S} min[Z0(Q_S),Z1(Q_S)]. This is an exact information-monotonic upper bound, not a kernel approximation.",
+    "selection": "Use nested suffixes of the minimum-width elimination order so added observations are deterministic and resource growth is measured before earlier charges are retained.",
+    "baseline": "Compare with the completed k=4 activity interval."
+  },
+  "matrix": {
+    "exact_gate": {"L": 3, "selected_counts": [0,1,3], "cells": [[0.1,0.5],[0.1,1.0],[0.3,0.75],[0.46,0.97]]},
+    "study": {"L": 5, "selected_counts": [0,1,3,5,7,9,12,15], "p": [0.05,0.08], "q": [0.5,0.75,0.97,1.0]}
+  },
+  "acceptance": [
+    "All transfer masses normalize to one, nested coarse risks are nonincreasing, and full L3 observation reproduces frozen exact LER within 1e-12.",
+    "Promote a selected-count level only where its upper bound reduces the activity interval width by at least 10%; report resource states and exact selected vertices.",
+    "Fail closed at two million transfer states. If the cap is reached, mark that and do not infer the unrun larger subset.",
+    "Retain the Wiener result as a representation theorem, but do not spend compute on finite-harmonic K_N unless exact-K charge contraction first shows information value."
+  ],
+  "budget": {"maximum_transfer_states": 2000000, "maximum_cells": 12, "no_sampling": true, "no_decoder_runs": true},
+  "stop_rule": "Stop at the first registered selected count that exceeds the state cap, or after all 15 L5 detectors. No size extension.",
+  "registered_at": "2026-09-19 01:25:05 UTC",
+  "result": "results/exact-charge-prefix-transfer-2026-09-19.json",
+  "decision": "Do not promote the nested suffix contraction. Observing 7 of 15 L5 charges requires 1,646,646 peak states and still improves no p=.08 activity interval; the registered 9-charge run exceeds the two-million-state cap at 5,461,398 states.",
+  "completed_at": "2026-09-19 01:25:05 UTC",
+  "next_action": "Develop a scalable l1 tensor/decision-diagram contraction or a certified branch-and-bound over charge records. Do not approximate the already exact finite-harmonic edge kernel or enlarge the capped prefix matrix."
+}

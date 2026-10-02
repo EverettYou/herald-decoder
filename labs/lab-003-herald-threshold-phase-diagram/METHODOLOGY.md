@@ -1,3 +1,7 @@
+## Scientific correction — 2026-10-01
+
+For the binary incomplete-herald channel, the research domain is **0 <= p <= 1, 0 <= q <= 1**. At interior q, error complementation does not give an observation-preserving p ↔ 1−p symmetry: a zero herald combines an ineligible event and a missed eligible event. Claims below that restrict the physical domain to half, enforce a horizontal boundary tangent at half, or infer an all-p ceiling from p≈0.5 are **withdrawn historical claims**, not current conclusions. B18's constrained guide is withdrawn; measured trial counts remain historical evidence. See [full-prior correction](/wiki?page=methods/binary-herald-full-prior-domain.md). The uniform-prior point p=0.5 remains special, but does not justify truncating the domain. Endpoint q=0 and q=1 symmetries require separate observation relabeling and do not establish interior-q symmetry.
+
 # Methodology note — scaling claims for logical error rate
 
 ## Correction recorded on 2026-08-28
@@ -99,21 +103,11 @@ contour confidence set. A genuine contour credible region would require a
 registered joint latent-surface model with seed-cluster dependence and
 calibrated joint coverage.
 
-## Symmetry constraint on the guide — Phase B18
+## Full-prior domain and withdrawn B18 constraint
 
-The physical phase diagram is taken to obey $q_c(p)=q_c(1-p)$ after the known
-configuration-complement syndrome/logical relabeling. On the plotted
-fundamental domain $0\le p\le0.5$, a differentiable guide must therefore obey
+The incomplete binary-herald channel does not have a general observation-preserving p↔1−p symmetry for 0<q<1. B18's half-domain assumption, symmetric boundary, and imposed dq_c/dp=0 at p=0.5 are withdrawn. See the [full-prior correction](/wiki?page=methods/binary-herald-full-prior-domain.md) for the observation-level explanation and complete L=2 counterexample.
 
-\[
-\left.\frac{dq_c}{dp}\right|_{p=0.5}=0.
-\]
-
-B18 enforces this exactly with a parametric cubic Bezier whose last two q
-controls coincide at $q_c$ while its last two p controls remain distinct. This
-is a structural constraint on the visual guide, not new cellwise evidence.
-The evidence raster is shown only over its measured p-cell support inside a
-full $[0,0.5]$ axis; unmeasured low-p space is not extrapolated.
+The physical domain is [0,1]×[0,1]. The uniform prior at p=0.5 remains special, but it is not a symmetry boundary. B19 displays measured B14 cells without a guide on the full physical domain and leaves unmeasured space blank. No reflected cells, single-valued p_c(q), p monotonicity, or all-p herald ceiling are assumed. A new full-domain threshold requires independently sampled high-p data and a justified finite-size inference.
 
 ## Proof obligations before another phase claim
 

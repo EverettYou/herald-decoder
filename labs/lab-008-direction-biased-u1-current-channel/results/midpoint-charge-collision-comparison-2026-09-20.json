@@ -1,0 +1,119 @@
+{
+  "status": "complete_existing_theorems_do_not_give_dimension_free_conversion",
+  "physical_parameters": {
+    "geometry": "square",
+    "p": "1/2",
+    "q": "1"
+  },
+  "new_physical_record_samples": 0,
+  "decoder_runs": 0,
+  "exact_controls": [
+    {
+      "L": 3,
+      "edges": 8,
+      "measured_charge_dimension": 3,
+      "charge_records": 64,
+      "same_charge_collision_probability_exact": "29/1024",
+      "opposite_sector_same_charge_overlap_exact": "57/4096",
+      "collision_conditioned_opposite_sector_probability_exact": "57/116",
+      "maximum_record_count": 14,
+      "maximum_record_probability_exact": "7/128",
+      "collision_to_maximum_record_probability_exact": "29/56",
+      "Gaussian_density_benchmark_2_to_minus_d_over_2": 0.3535533905932738,
+      "coordinate_line_log_concavity": {
+        "tested_neighbor_triples": 88,
+        "violations": 0,
+        "first_violation": []
+      },
+      "logical_cut_length": 3,
+      "bitwise_complement_sector_action": "swaps_logical_sector"
+    },
+    {
+      "L": 4,
+      "edges": 18,
+      "measured_charge_dimension": 8,
+      "charge_records": 44494,
+      "same_charge_collision_probability_exact": "653081/8589934592",
+      "opposite_sector_same_charge_overlap_exact": "78363/2147483648",
+      "collision_conditioned_opposite_sector_probability_exact": "313452/653081",
+      "maximum_record_count": 135,
+      "maximum_record_probability_exact": "135/262144",
+      "collision_to_maximum_record_probability_exact": "653081/4423680",
+      "Gaussian_density_benchmark_2_to_minus_d_over_2": 0.0625,
+      "coordinate_line_log_concavity": {
+        "tested_neighbor_triples": 125616,
+        "violations": 0,
+        "first_violation": []
+      },
+      "logical_cut_length": 4,
+      "bitwise_complement_sector_action": "preserves_logical_sector"
+    }
+  ],
+  "branch_matrix": {
+    "local_limit_or_anti_concentration": {
+      "outcome": "existing_results_do_not_supply_the_required_growing_dimension_atom_comparison",
+      "established": [
+        "Classical lattice local-limit theorems control sums in fixed dimension or under hypotheses not verified uniformly for this growing divergence vector.",
+        "The reviewed decomposable-vector CLT controls convex-set probabilities, not individual lattice atoms or collision probability in a dimension that grows with L.",
+        "The reviewed graph-orientation asymptotic requires average degree at least n^(1/3+epsilon) plus strong mixing and therefore excludes the bounded-degree square family."
+      ],
+      "structural_warning": "For a d-dimensional Gaussian density, integral(f^2)/max(f)=2^(-d/2). Since the measured-charge dimension grows with L, even ideal Gaussian regularity predicts exponential dimension loss rather than a positive constant lower bound on C_L/p_max,L."
+    },
+    "collision_weighted_sector_balance": {
+      "outcome": "no_structural_lower_bound_on_Psi_L",
+      "established": "Exact Psi_L controls are positive at L3/L4 but are not a trend. Bitwise complement swaps sector for the odd L3 logical cut and preserves it for the even L4 cut, while also changing the charge record in general.",
+      "compatible_countermodel": "Two equal-mass records with sector counts (1,M) and (M,1), exchanged by a complement-style involution, both satisfy normalized matching but have Psi=2M/(M+1)^2 -> 0."
+    },
+    "compatible_obstruction": {
+      "outcome": "coordinate_log_concavity_does_not_make_the_conversion_dimension_free",
+      "established": "Every coordinate-neighbor triple of the exact total-charge counts is log-concave at L3/L4.",
+      "obstruction": "Product log-concave and Gaussian laws still have C/p_max decaying as c^d. Total-count log-concavity also says nothing about how the two logical sectors split inside a charge fiber."
+    }
+  },
+  "finite_control_interpretation": {
+    "observed": "C_L/p_max,L is 29/56 at L3 and 653081/4423680 at L4; Psi_L is 57/116 and 313452/653081.",
+    "boundary": "These two exact sizes validate identities and theorem hypotheses only; they are not used as a fitted trend."
+  },
+  "primary_source_applicability": [
+    {
+      "source": "Mitalauskas and Statulevicius, Local limit theorem and asymptotic expansion for sums of independent lattice random variables (1966)",
+      "url": "https://doi.org/10.15388/LMJ.1966.19754",
+      "supported": "classical local-limit control for independent lattice sums",
+      "missing": "a dimension-uniform atom estimate for the dependent growing-dimensional divergence record"
+    },
+    {
+      "source": "Fang, A multivariate CLT for bounded decomposable random vectors with the best known rate (2014)",
+      "url": "https://arxiv.org/abs/1408.0508",
+      "supported": "normal approximation for bounded decomposable random vectors over convex sets",
+      "missing": "lattice-atom and collision estimates with controlled growing dimension and covariance conditioning"
+    },
+    {
+      "source": "Isaev, Iyer and McKay, Asymptotic enumeration of orientations of a graph as a function of the out-degree sequence (2020)",
+      "url": "https://doi.org/10.37236/8929",
+      "supported": "asymptotic orientation counts under dense-degree and mixing hypotheses",
+      "missing": "the average-degree hypothesis fails for the bounded-degree square lattice"
+    }
+  ],
+  "precise_remaining_target": {
+    "direct_form": "Control E_{Q~p}[r_Q] directly under the physical charge law, without collision reweighting.",
+    "why_not_more_collision_work": "A high-dimensional local limit would naturally lose a factor comparable to 2^(-d/2), while NMP, complement symmetry and finite coordinate log-concavity do not control the sector split.",
+    "candidate_routes": [
+      "a renormalized charge-preserving logical switch whose congestion is averaged directly under the physical law",
+      "a multiscale martingale or conditional-entropy decomposition that retains the full boundary charge record",
+      "a compatible physical obstruction family if neither direct route is possible"
+    ]
+  },
+  "decision": {
+    "outcome": "close_collision_conversion_route_at_registered_scope",
+    "established": "No reviewed theorem or tested structural property yields the required dimension-free collision-to-physical comparison or a positive lower bound on collision-weighted sector balance.",
+    "not_established": "The failure of this proof route does not show that physical midpoint Bayes risk vanishes or that midpoint is correctable.",
+    "threshold_claim": "No square midpoint noncorrectability or decoding-threshold claim is promoted."
+  },
+  "source_sha256": {
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/audit_midpoint_charge_collision_comparison.py": "a6504410e2f42597b61b0f7dc60be3c11988fc90a79d3803516ee3589363f36b",
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/current_oracle.py": "241916aa389193b7b62a3ea2de7f4267086dfcca60760ee514e27100f40fa6ee",
+    "labs/lab-008-direction-biased-u1-current-channel/manifests/midpoint-charge-collision-comparison-2026-09-20.json": "824f277c0ad96510583c2e2ae16c1015e4e5ac720bcedb3c7ddcbfeca4c28211",
+    "labs/lab-008-direction-biased-u1-current-channel/results/midpoint-averaged-charge-balance-2026-09-20.json": "3d0db17c8ebdb555e707a8d623fea043971be839e06990c4bdb668a993a39666",
+    "labs/lab-008-direction-biased-u1-current-channel/results/midpoint-charge-fiber-balance-theorem-2026-09-20.json": "597fe71d5c7d9b49b8919b48c75e9543731fc227add038ffb7c61cf2241ed4a5"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id":"lab008-midpoint-fractional-switching-2026-09-20",
+  "status":"complete_finite_saturation_missing_uniform_theorem",
+  "not_yet_run":false,
+  "authorization":"Researcher prioritizes decoding phase transitions and correction thresholds in the continuing Lab 008 study.",
+  "question":"Can fractional matching or mass transport on the charge-matched single-path switching graph avoid deterministic-selector collisions and yield a size-uniform midpoint paired mass?",
+  "predecessor":"midpoint-switching-pairing-2026-09-20.json",
+  "earliest_gate":"Keep vertices as original binary currents and edges as one charge-preserving residual rough-to-rough path flip. Fractional weights must be symmetric across the flip and may not use hidden information beyond the current configuration used in the proof.",
+  "alternatives":[
+    "Prove a size-uniform fractional capacity on a positive-probability RSW event, yielding a nonzero midpoint Bayes LER.",
+    "Show exact path-switching graphs have an intrinsic Hall/capacity deficit, closing single-path mass transport as a lower-bound route.",
+    "Show finite path-switching matchings are adequate but the asymptotic step requires a separately stated crossing-cluster or arm-event tail theorem."
+  ],
+  "planned_steps":[
+    "Build the exact bipartite graph within each physical charge record, connecting opposite sectors only when one simple residual rough-to-rough path flip maps the currents.",
+    "Compute exact integral maximum matching and a symmetric fractional-flow certificate on L3 and L4; compare covered pairs with the Bayes numerator and the extremal-selector stable subset.",
+    "Audit whether path count, crossing-cluster count, or an arm event controls the required capacities; ordinary crossing probability alone is insufficient.",
+    "Stop without a threshold claim unless a size-uniform analytic probability/capacity bound is proved."
+  ],
+  "budget":{"max_full_support_edges":18,"max_runtime_seconds":300,"new_physical_record_samples":0,"decoder_runs":0},
+  "stop_rule":"Stop at a finite Hall/capacity obstruction, exact saturation plus an explicit missing asymptotic theorem, or a proved size-uniform paired-mass bound. Do not expand beyond L4 or replace an analytic bound with two-size extrapolation.",
+  "result":"results/midpoint-fractional-switching-2026-09-20.json",
+  "observed":{
+    "L3":{"unique_edges":352,"maximum_matching":112,"bayes_numerator":112,"finite_Bayes_LER":"7/16"},
+    "L4":{"unique_edges":580608,"maximum_matching":94792,"bayes_numerator":94792,"finite_Bayes_LER":"11849/32768"},
+    "integral_fractional_relation":"the integral matching is an optimal symmetric fractional certificate by bipartite matching-polytope integrality",
+    "dual_certificate":"the union of each charge record's smaller sector is a vertex cover of the same size",
+    "decision":"exact finite saturation; no all-size Hall theorem or size-uniform matching-density bound"
+  },
+  "planned_note":"wiki/decoding-thresholds.md"
+}

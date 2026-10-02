@@ -1,0 +1,109 @@
+{
+  "status": "superseded_user_reported_missing_original_run_evaluation",
+  "verified_at": "2026-10-01T20:21:45.504317+00:00",
+  "contract": "PLAN.md",
+  "rendered_receipt": "results/rendered-delivery.json",
+  "scientific_receipt": "results/survey-analysis.json",
+  "links_verified_separately": {
+    "current_inputs_and_24_generated_outputs_sha256": true,
+    "eight_current_report_embeds_and_captions": true,
+    "active_registry_11_results_no_superseded_pages": true,
+    "eight_figure_pages_and_vector_downloads": true,
+    "eleven_local_wiki_pages_and_math_rendering": true,
+    "source_readme_api_and_17_report_document_links": true,
+    "four_low_high_endpoint_workbench_records": true,
+    "complete_stage_and_summary_rendered": true
+  },
+  "visual_review": {
+    "all_eight_png_figures": true,
+    "rendered_boundary_runtime_workbench_screenshots": true,
+    "ranges_units_labels_uncertainty_and_captions": true
+  },
+  "relevant_regressions": [
+    {
+      "name": "decoder_source_eight_tests",
+      "command": [
+        "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "src/herald_decoder/tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "output": "test_batch_empty_shape_caps_and_random_ties (test_sector_decoders.SectorDecoderTests.test_batch_empty_shape_caps_and_random_ties) ... ok\ntest_deterministic_high_prior_support (test_sector_decoders.SectorDecoderTests.test_deterministic_high_prior_support) ... ok\ntest_generic_factors_and_reference_invariance (test_sector_decoders.SectorDecoderTests.test_generic_factors_and_reference_invariance) ... ok\ntest_geometry_label_is_not_a_proof (test_sector_decoders.SectorDecoderTests.test_geometry_label_is_not_a_proof) ... ok\ntest_literal_weighted_oracle_and_endpoints (test_sector_decoders.SectorDecoderTests.test_literal_weighted_oracle_and_endpoints) ... ok\ntest_perfect_herald_counts_and_signed_costs (test_sector_decoders.SectorDecoderTests.test_perfect_herald_counts_and_signed_costs) ... ok\ntest_square_transfer_and_bp_factory_compatibility (test_sector_decoders.SectorDecoderTests.test_square_transfer_and_bp_factory_compatibility) ... ok\ntest_su2_full_irrep_local_factor (test_sector_decoders.SectorDecoderTests.test_su2_full_irrep_local_factor) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.224s\n\nOK"
+    },
+    {
+      "name": "read_only_source_documents_five_tests",
+      "command": [
+        "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/.venv/bin/python",
+        "-m",
+        "unittest",
+        "dashboard.tests.test_document_viewer",
+        "-v"
+      ],
+      "exit_code": 0,
+      "output": "test_integrated_decoder_source_is_readable (dashboard.tests.test_document_viewer.ProjectDocumentViewerTests.test_integrated_decoder_source_is_readable) ... ok\ntest_lab_markdown_uses_the_generic_document_reader (dashboard.tests.test_document_viewer.ProjectDocumentViewerTests.test_lab_markdown_uses_the_generic_document_reader) ... ok\ntest_payload_is_scoped_and_readable (dashboard.tests.test_document_viewer.ProjectDocumentViewerTests.test_payload_is_scoped_and_readable) ... ok\ntest_payload_rejects_paths_outside_the_read_only_roots (dashboard.tests.test_document_viewer.ProjectDocumentViewerTests.test_payload_rejects_paths_outside_the_read_only_roots) ... ok\ntest_wiki_document_uses_the_wiki_reader (dashboard.tests.test_document_viewer.ProjectDocumentViewerTests.test_wiki_document_uses_the_wiki_reader) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.001s\n\nOK"
+    },
+    {
+      "name": "document_link_resolution",
+      "command": [
+        "/Users/home/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "dashboard/tests/document-link-resolution.test.js"
+      ],
+      "exit_code": 0,
+      "output": "project document link resolution passed"
+    },
+    {
+      "name": "scoped_report_wiki_206_formulas",
+      "command": [
+        "/Users/home/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-009-planar-herald-decoder-survey/scripts/verify_wiki_math.cjs"
+      ],
+      "exit_code": 0,
+      "output": "{\"status\":\"passed\",\"scope\":\"Lab009 report and all local wiki pages\",\"formulas\":206}"
+    },
+    {
+      "name": "report_contract",
+      "command": [
+        "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/.venv/bin/python",
+        "skills/organize-lab/scripts/lab_report_lint.py",
+        "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-009-planar-herald-decoder-survey"
+      ],
+      "exit_code": 0,
+      "output": "Lab report lint passed."
+    },
+    {
+      "name": "local_wiki_contract",
+      "command": [
+        "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/.venv/bin/python",
+        "skills/organize-lab/scripts/lab_wiki_lint.py",
+        "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-009-planar-herald-decoder-survey"
+      ],
+      "exit_code": 0,
+      "output": "Local Wiki lint passed."
+    }
+  ],
+  "broader_suite_limitations": [
+    {
+      "check": "dashboard/tests/rich-text-math.test.js",
+      "status": "fails_outside_lab009",
+      "first_failure": "wiki/questions/program-level-scientific-roadmap.md contains unmarked mathematical notation",
+      "scope": "global repository Markdown; scoped Lab009 formulas and all rendered method pages pass"
+    },
+    {
+      "check": "historical project tests",
+      "status": "known_manifest_dependency_limits",
+      "receipt": "results/full-prior-project-correction-audit.json",
+      "scope": "not an assertion that the entire repository suite passes"
+    }
+  ],
+  "final_closure": {
+    "receipt_document_rendered": true,
+    "url": "http://127.0.0.1:8010/document?path=labs%2Flab-009-planar-herald-decoder-survey%2Fresults%2Fdelivery-verification.json",
+    "catalog_stage": "complete",
+    "plan_acceptance_visible": true
+  },
+  "superseded_reason": "User did not see the original nine-run evaluation and named-run figure in Lab009; prior eight-figure survey delivery does not verify this requested content."
+}

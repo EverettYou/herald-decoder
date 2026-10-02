@@ -1,0 +1,232 @@
+{
+  "id": "lab008-l13-boundary-mps-acquisition-2026-09-21",
+  "status": "stopped_by_user_theory_reorientation",
+  "execution_authorized": false,
+  "stopped_at": "2026-09-22",
+  "stop_reason": "The researcher explicitly stopped further finite-size acquisition and requested a thermodynamic theory, hypotheses, and proof program. Do not run the L13 preflight, production, or MPS optimization under this contract. Completed validation remains valid provenance.",
+  "registered_at": "2026-09-21",
+  "not_yet_run": true,
+  "authorization": "Continuation of the researcher-authorized boundary-focused intrinsic-decoding study after the separately registered boundary-MPS validation passed.",
+  "predecessor": "beyond-l11-mps-validation-2026-09-21.json",
+  "program_alignment": {
+    "central_question": "Does the full-charge optimal posterior keep hardening beyond L=11 in the directed boundary window, or does low-gap mass approach a finite-size floor?",
+    "scientific_layer": "decoder-independent intrinsic recoverability and transition diagnostics",
+    "epistemic_role": "claim-bounded finite-size acquisition, not a threshold or thermodynamic study",
+    "information_value": "One new size directly tests the direction of the registered fixed-gap observables after exact frontier tables became infeasible and the approximate posterior was independently validated."
+  },
+  "question": "At p=0.30 and q in {0.90,0.94,0.97}, do L13 Bayes risk, fixed-gap CDFs, gap quantiles and low-gap risk shares continue the L7--L11 outward motion, flatten, or show tail takeover?",
+  "competing_outcomes": {
+    "continued_contraction": "R_L and C_L(1) decrease from L11 to L13 while the median and lower-quartile gap move outward, with B_L(1) not increasing.",
+    "finite_size_plateau": "L13-minus-L11 contrasts are unresolved or near zero jointly across risk, CDF and gap quantiles.",
+    "low_gap_tail_takeover": "Typical gaps move outward and C_L(1) falls, but B_L(1) increases, concentrating remaining risk in low-gap records.",
+    "censored": "Resource, integrity, precision or numerical-sensitivity gates fail; no mechanism interpretation is promoted."
+  },
+  "claim_boundary": "This contract may report one finite-size L13 extension and its registered L11 contrasts. It cannot estimate qc, fit a crossing or threshold, infer an exponent/universality/BKT class, establish a thermodynamic phase, or add L15 or any new p/q value.",
+  "research_basis": {
+    "primary_method_source": "bravyi2014-surface-code-mld",
+    "validated_method_result": "../results/boundary-mps-validation-2026-09-21.json",
+    "validated_method_sha256": "f6ed4bd27c29e5733b0964cd00913d9d1624d9accbe8eadd3f30deae6089d075",
+    "validated_cohort_sha256": "420a073126948e673f4dbbbc229b97cd3664685e1ef3225f740f9e8f026b2a9d",
+    "implementation_sha256": "efb41d01b9e3e46957affafaa576bf0d30a771add3bc4bb728c78bad3b3f58d9",
+    "lattice_model_sha256": "b87a5feba27675e26970360d730324b7d3740e4dc0492b4dc478e510f140c9e7",
+    "method_boundary": "The source provides an MPS contraction template; accuracy for this ternary-current posterior is supplied only by the completed L5/L7 exact-ceiling and L9/L11 recordwise validation.",
+    "promoted_row_method_result": "../results/row-boundary-mps-fresh-validation-2026-09-22.json",
+    "promoted_row_method_sha256": "58c5a874bdca4b6a986703d7785187c636ef08ed0ca16cd2215fbf75c74ed50b"
+  },
+  "physical_contract": {
+    "lattice": "square",
+    "size": 13,
+    "stored_arrow_geometry": true,
+    "rough_boundaries": true,
+    "physical_error_rate": 0.3,
+    "bias_values": [
+      0.9,
+      0.94,
+      0.97
+    ],
+    "observation": "full physical charge record Q only",
+    "hidden_information": "physical current, activity mask, orientation uniforms and true logical sector are unavailable to the posterior evaluator",
+    "target": "normalized two-logical-sector posterior Z0(Q),Z1(Q), Bayes risk and absolute posterior gap",
+    "independent_unit": "one independently generated L13 physical current and its full measured charge record"
+  },
+  "inference_contract": {
+    "primary": {
+      "bond_dimension": 16,
+      "sweep": "left-to-right"
+    },
+    "sensitivity": {
+      "bond_dimensions": [
+        16,
+        32
+      ],
+      "sweeps": [
+        "left-to-right",
+        "right-to-left"
+      ]
+    },
+    "sensitivity_indices": "sample_index modulo 8 equals 0; fixed before generation and evaluated for every q",
+    "no_adaptive_chi_selection": true,
+    "posterior_interface": "charge, p, q and public lattice geometry only",
+    "truncation_schedule": "row"
+  },
+  "matched_sampling": {
+    "stream_seed": 2026092113,
+    "coupling": "For every sample_index, q=.90,.94,.97 share the same activity uniforms and orientation uniforms; q changes only the registered orientation threshold.",
+    "across_size_relation": "L13 is independent of the completed L11 streams; L13-minus-L11 contrasts use independent two-sample uncertainty and are never called paired.",
+    "record_key": "L13 stream seed, sample index and q; every current/charge hash must be unique within its cell and replayable from the frozen stream."
+  },
+  "acquisition": {
+    "batch_records_per_cell": 128,
+    "minimum_records_per_cell": 384,
+    "maximum_records_per_cell": 768,
+    "synchronized_stop": "Generate a common full batch for all three q values and stop only when every cell passes both precision targets or all reach the hard cap.",
+    "precision_targets": {
+      "C_L_1_Wilson_95_half_width_max": 0.04,
+      "Bayes_risk_record_bootstrap_95_half_width_max": 0.025
+    }
+  },
+  "observables": {
+    "primary": [
+      "Bayes risk R_L",
+      "C_L(1)=Pr(abs(DeltaF)<=1)",
+      "B_L(1)=risk share from abs(DeltaF)<=1"
+    ],
+    "secondary": [
+      "median and lower quartile of abs(DeltaF)",
+      "C_L(a) for a in {0.5,2,4}",
+      "B_L(a) for a in {0.5,2,4}",
+      "conditional logical entropy"
+    ],
+    "prohibited": [
+      "threshold fit",
+      "crossing fit",
+      "critical q",
+      "critical exponent",
+      "universality class",
+      "BKT classification"
+    ]
+  },
+  "uncertainty": {
+    "bootstrap_unit": "physical record",
+    "bootstrap_replicates": 4000,
+    "interval_level": 0.95,
+    "L13_within_q": "ordinary record bootstrap",
+    "L13_q_contrasts": "matched sample-index bootstrap over the shared latent stream",
+    "L13_minus_L11": "independent two-sample record bootstrap using the completed L11 cells",
+    "multiplicity": "pointwise intervals; no simultaneous-coverage claim"
+  },
+  "numerical_sensitivity_gates": {
+    "minimum_sensitivity_records_per_cell": 48,
+    "comparisons": "On the fixed modulo-8 subset, compare chi16 versus chi32 within each sweep and left versus right at chi32.",
+    "per_cell_p95_absolute_gap_difference_max": 0.05,
+    "per_cell_p95_absolute_risk_difference_max": 0.005,
+    "per_cell_fixed_gap_CDF_difference_max": 0.02,
+    "per_cell_low_gap_risk_share_difference_max": 0.02,
+    "failure_action": "Censor all L13 scientific estimates; do not increase chi, relax gates, select records post hoc or promote one sweep."
+  },
+  "preflight_gate": {
+    "required_before_production": true,
+    "operation": "Without production histories, evaluate zero-current and deterministic seeded L13 charge records at chi16/chi32 in both sweeps; verify charge-only inputs, normalization, nonnegativity, risk-gap, sector-swap, action blindness, replay and registered resource caps.",
+    "maximum_candidate_evaluations": 12,
+    "maximum_runtime_seconds": 1200,
+    "maximum_peak_memory_gib": 8,
+    "production_histories_before_pass": 0,
+    "failure_action": "Close censored and do not generate production histories."
+  },
+  "integrity_gates": [
+    "Every posterior is finite, nonnegative and normalized; record risk equals 1/(1+exp(abs(DeltaF))) to 1e-10.",
+    "The evaluator receives no current, activity/orientation uniform or true-sector field.",
+    "All record keys and charge hashes replay from the frozen stream and no record is reused across q as an independent unit.",
+    "The preflight, numerical-sensitivity, record-count, precision/censoring, runtime and memory gates are reported before mechanism interpretation."
+  ],
+  "analysis_rule": {
+    "matrix": "Append L13 estimates to the completed q=.90/.94/.97 L7/L9/L11 summaries without pooling raw records across sizes.",
+    "mechanism_assessment": "Report all primary and secondary observables together; no single trend or selected q may decide the mechanism.",
+    "promotion_rule": "Only if preflight, production integrity and all numerical-sensitivity gates pass may the analysis state which finite-size mechanism is favored through L13."
+  },
+  "budget": {
+    "maximum_new_physical_records": 2304,
+    "maximum_primary_posterior_evaluations": 2304,
+    "maximum_sensitivity_posterior_evaluations": 864,
+    "maximum_preflight_candidate_evaluations": 12,
+    "maximum_production_runtime_seconds": 7200,
+    "maximum_peak_memory_gib": 8,
+    "maximum_bootstrap_replicates": 4000,
+    "worker_processes_max": 4,
+    "new_external_dependencies": 0
+  },
+  "outputs": {
+    "preflight": "../results/l13-boundary-mps-preflight-2026-09-21.json",
+    "cells": "../results/l13-boundary-mps-cells/",
+    "progress": "../results/l13-boundary-mps-acquisition-progress-2026-09-21.json",
+    "analysis": "../results/l13-boundary-mps-analysis-2026-09-21.json",
+    "figure": "../figures/posterior-gap-boundary-tail-L13.png"
+  },
+  "acceptance_criteria": [
+    "The zero-history L13 preflight passes all public-interface, numerical identity, replay and resource gates before production is armed.",
+    "All three q cells share the frozen latent stream, reach 384 records and either all pass both precision targets or synchronously stop at 768 with censoring explicit.",
+    "At least 48 fixed sensitivity records per cell pass every chi and sweep gate before any L13 mechanism statement.",
+    "The complete L7/L9/L11/L13 summary reports risk, fixed-gap CDFs, gap quantiles and low-gap risk shares with the registered independent/matched uncertainty and no threshold claim.",
+    "The machine-readable outputs, Local Wiki evidence boundary, concise report statement, active registry and rendered delivery surface agree."
+  ],
+  "stop_rule": "Run the zero-history preflight first. If it passes, acquire only the three synchronized L13 cells in 128-record batches and stop at joint precision or the hard cap. Do not add sizes, p/q points, chi values, records beyond cap, decoder comparisons, threshold fits or thermodynamic interpretations.",
+  "preflight_outcome": {
+    "identity_and_registered_resource_gates_pass": true,
+    "raw_result": "../results/l13-boundary-mps-preflight-2026-09-21.json",
+    "raw_result_sha256": "199fad026f60c1e9dca6ecd876910d0089ac1c94e1af29f63cfbdc15698be791",
+    "candidate_evaluations": 12,
+    "runtime_seconds": 1146.524937957991,
+    "conservative_main_plus_worker_peak_gib": 0.7096710205078125,
+    "production_histories_generated": 0,
+    "all_registered_preflight_gates_pass": true,
+    "raw_production_armed_flag": true
+  },
+  "post_registration_change_log": [
+    {
+      "trigger": "The first L13 timing evidence exposed that the registered 12-evaluation preflight cap did not imply feasibility of the minimum production matrix.",
+      "audit": "../results/l13-boundary-mps-throughput-audit-2026-09-21.json",
+      "effect": "Production arming is withdrawn before any histories. The physical, observation, inference, sampling, sensitivity and scientific analysis contracts are unchanged.",
+      "remediation": "A semantics-preserving implementation must replay the 12 posteriors to 1e-10 and project the unchanged minimum matrix within 7200 seconds on four workers.",
+      "production_armed": false
+    },
+    {
+      "trigger": "Semantics-preserving throughput remediation matrix",
+      "candidates": [
+        {
+          "name": "row-boundary TT-SVD",
+          "result": "../results/boundary-mps-throughput-remediation-2026-09-21.json",
+          "outcome": "rejected_under_semantic-replay_gate",
+          "maximum_sector_replay_error": 0.0010058592153799895,
+          "projected_four_worker_wall_seconds": 1758.8124661054462
+        },
+        {
+          "name": "per-vertex PROPACK top-chi SVD",
+          "result": "../results/boundary-mps-throughput-remediation-propack-2026-09-21.json",
+          "outcome": "rejected_numerical_instability"
+        }
+      ],
+      "effect": "Neither candidate is an engineering-equivalent replacement. Production remains unarmed with zero histories.",
+      "next_gate": "Treat the fast row-boundary schedule only as a new approximate method and preregister a fresh unused exact-control validation before it can replace the validated vertex schedule."
+    },
+    {
+      "trigger": "Registration of the row-boundary schedule as a scientifically distinct approximation",
+      "contract": "row-boundary-mps-fresh-validation-2026-09-22.json",
+      "effect": "A single-use exact L9/L11 validation is frozen in advance: exclude all 96 prior validation records, select 48 fresh records, and test chi16/32 in both sweeps under exact gap, risk, cutoff and risk-share gates.",
+      "execution_status": "registered_not_run",
+      "production_armed": false,
+      "production_histories_generated": 0
+    }
+  ],
+  "active_remediation_contract": null,
+  "production_armed": false,
+  "production_blocker": "Researcher stopped the finite-size acquisition route on 2026-09-22. No further preflight or production without a new purpose explicitly tied to the theory program.",
+  "amendments": [
+    {
+      "date": "2026-09-22",
+      "trigger": "Fresh unused-record row validation passed all 192 evaluations and all 24 blocks.",
+      "change": "Promote row truncation only; preserve p/q/L, chi, sweeps, sampling, precision, sensitivity and resource caps.",
+      "next_gate": "Repeat twelve frozen zero-history L13 evaluations with row schedule.",
+      "production_histories_generated": 0
+    }
+  ]
+}

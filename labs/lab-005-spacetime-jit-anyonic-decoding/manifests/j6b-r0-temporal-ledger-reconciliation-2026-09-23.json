@@ -1,0 +1,66 @@
+{
+  "id": "lab005-j6b-r0-temporal-ledger-reconciliation-2026-09-23",
+  "status": "passed_deterministic_prerequisite_only",
+  "registered_at": "2026-09-23",
+  "phase": "J6B-R0 prerequisite",
+  "authorization": "A bounded deterministic correctness prerequisite to the eligible J6B replacement-pilot registration; no stochastic pilot or J6 reinterpretation is authorized here.",
+  "observed_counterexample": "With one public odd syndrome at round 1 followed by an even full snapshot at round 2, the E1 public callback emits defer_temporal_boundary then action, but evaluate_schedule_arm unconditionally fails the complete history on the earlier defer. The current caller therefore cannot realize the J6A later-request reconciliation semantics.",
+  "question": "Can the integrated caller treat a digest-bound temporal handoff as a no-physics deferral, supersede it only with a later causal full-snapshot spatial action, and retain persistent or conflicting handoffs as unconditional failures?",
+  "smallest_claim": "Four deterministic fixtures can validate the ledger-to-physical-action transition and denominator semantics; they cannot establish stochastic risk or fault tolerance.",
+  "frozen_model": {
+    "geometry": "Paper-normalized periodic D4 honeycomb L=2, five readout rounds, four hidden transitions.",
+    "public_input": "The already validated J6A E1 signal-only full-binary causal first record and digest-bound odd-snapshot handoff; no private or future field.",
+    "physical_action": "Only an even full-snapshot D4FluxActionV1 is a physical cumulative Pauli-frame estimate. A handoff has no post-flux second observation and no physical correction.",
+    "ledger_rule": "Canonical same-round duplicate handoffs collapse if their public snapshot and temporal labels agree. An earlier handoff may be superseded by a later causal even full-snapshot action. A terminal unresolved handoff or conflicting same-round snapshot fails closed.",
+    "loss_and_denominator": "Unconditional Boolean-union loss and exactly one row per mode/schedule/history remain unchanged; unresolved or malformed handoffs count as logical failure, never disappearing.",
+    "private_boundary": "Physical state, support, hidden relation, winding and logical truth are unavailable to public handoff and action construction; private scoring occurs only after a real action."
+  },
+  "fixture_matrix": [
+    {"id": "odd_then_even", "required": "Earlier defer produces no post-flux record or physical edge; a later full-snapshot even action supersedes it and the zero-physical deterministic history scores without a fabricated failure."},
+    {"id": "persistent_odd", "required": "A terminal odd handoff remains failed_closed, denominator_included and logical_failure=true."},
+    {"id": "same_round_duplicates_and_conflict", "required": "Identical public defer callbacks collapse; a conflicting same-round action or token fails closed."},
+    {"id": "whole_matrix_replay", "required": "All eight mode/schedule rows remain unconditional; replay and private-sidecar/future-only invariance remain intact on the deterministic fixture."}
+  ],
+  "allowed_source_changes": [
+    "scripts/d4_integrated_history.py",
+    "scripts/test_d4_integrated_history.py",
+    "scripts/test_j6b_r0_temporal_ledger.py",
+    "scripts/run_j6b_r0_temporal_ledger.py"
+  ],
+  "budget": {
+    "new_stochastic_histories": 0,
+    "production_schedule_arm_evaluations": 0,
+    "deterministic_fixture_cases": 4,
+    "deterministic_histories_max": 4,
+    "new_fixture_arm_evaluations_max": 32,
+    "existing_lab_regression_tests": 158,
+    "bootstrap_replicates": 0,
+    "runtime_seconds_max": 120,
+    "new_external_dependencies": 0
+  },
+  "acceptance": [
+    "All four fixtures pass through the E1 public callback and integrated unconditional caller.",
+    "Only non-handoff actions generate second records or physical corrections; canonical commit count excludes handoffs.",
+    "Persistent and conflicting handoffs remain unconditional failures; no hidden/future fields enter public actions.",
+    "All Lab 005 regression tests pass, and frozen J6 raw and analysis SHA-256 values remain unchanged."
+  ],
+  "stop_rule": "At the first fixture or regression failure, record the failing gate and keep J6B stochastic registration blocked. Passing R0 permits only the separate J6B pilot registration; it does not start histories or arm analysis.",
+  "planned_result": "results/j6b-r0-temporal-ledger-reconciliation-2026-09-23.json",
+  "registration_counters": {"fixtures_run": 0, "stochastic_histories": 0, "production_arm_evaluations": 0, "bootstrap_replicates": 0},
+  "post_execution_budget_scope_clarification": {
+    "date": "2026-09-23",
+    "trigger": "The original budget and acceptance list both required the 158-test Lab regression suite but did not explicitly separate its repeated deterministic tests from the 32-arm new-fixture cap.",
+    "interpretation": "The 32-arm cap applies to the four newly registered R0 fixtures (22 deterministic arm evaluations by fixture expansion). The separately required 158-test existing Lab regression suite is a source-compatibility gate under the same 120-second runtime cap, not production arm sampling.",
+    "scope_or_result_change": "None: no stochastic history, production arm, bootstrap, fixture, acceptance gate, or runtime cap was added after seeing results."
+  },
+  "execution": {
+    "result": "results/j6b-r0-temporal-ledger-reconciliation-2026-09-23.json",
+    "status": "passed",
+    "fixtures_passed": 4,
+    "lab_regressions_passed": 158,
+    "stochastic_histories": 0,
+    "production_arm_evaluations": 0,
+    "bootstrap_replicates": 0,
+    "claim_boundary": "Deterministic no-physics deferral and later even full-snapshot supersession only; no schedule-risk or fault-tolerance evidence."
+  }
+}

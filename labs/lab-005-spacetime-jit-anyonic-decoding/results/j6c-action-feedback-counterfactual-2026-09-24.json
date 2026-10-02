@@ -1,0 +1,156 @@
+{
+  "cells": [
+    {
+      "arm": "defer",
+      "kernel": {
+        "e_charge": 0,
+        "m_flux": 1,
+        "vacuum": 0
+      },
+      "model": "no_feedback_null",
+      "private_diagnostic": {
+        "boolean_union_failure": true,
+        "hidden_state_digest": "e0b6d8d5afc2e6d2a4dbecfa0697ab6bc2c4cdafc7b866dd8d0243bea32f3555",
+        "relative_winding": false,
+        "terminal_label": "m_flux",
+        "terminal_nonvacuum": true
+      },
+      "public": {
+        "round0_action": "defer",
+        "round0_action_digest": "eb9d0b4c62eb4422df8504c3bb951e6d09257fbb578bb5db77766994593ada77",
+        "round0_first_record": [
+          1,
+          1
+        ],
+        "round0_second_record": null,
+        "round1_first_record": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "arm": "commit",
+      "kernel": {
+        "e_charge": 0,
+        "m_flux": 1,
+        "vacuum": 0
+      },
+      "model": "no_feedback_null",
+      "private_diagnostic": {
+        "boolean_union_failure": true,
+        "hidden_state_digest": "e0b6d8d5afc2e6d2a4dbecfa0697ab6bc2c4cdafc7b866dd8d0243bea32f3555",
+        "relative_winding": false,
+        "terminal_label": "m_flux",
+        "terminal_nonvacuum": true
+      },
+      "public": {
+        "round0_action": "commit",
+        "round0_action_digest": "a86e5aa2ae4bf0874c6c1384c6c79bd33d44742b5d73cb2fec35c79d48f6927b",
+        "round0_first_record": [
+          1,
+          1
+        ],
+        "round0_second_record": {
+          "bound_action_digest": "a86e5aa2ae4bf0874c6c1384c6c79bd33d44742b5d73cb2fec35c79d48f6927b",
+          "charge_vacuum_bits": [
+            0,
+            1
+          ],
+          "round": 0
+        },
+        "round1_first_record": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "arm": "defer",
+      "kernel": {
+        "e_charge": 0,
+        "m_flux": 1,
+        "vacuum": 0
+      },
+      "model": "action_feedback_fixture",
+      "private_diagnostic": {
+        "boolean_union_failure": true,
+        "hidden_state_digest": "a6ee9d209868eb1272538decc257549f0769461aba2de335455392e8608b140e",
+        "relative_winding": false,
+        "terminal_label": "m_flux",
+        "terminal_nonvacuum": true
+      },
+      "public": {
+        "round0_action": "defer",
+        "round0_action_digest": "eb9d0b4c62eb4422df8504c3bb951e6d09257fbb578bb5db77766994593ada77",
+        "round0_first_record": [
+          1,
+          1
+        ],
+        "round0_second_record": null,
+        "round1_first_record": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "arm": "commit",
+      "kernel": {
+        "e_charge": 0,
+        "m_flux": 0,
+        "vacuum": 1
+      },
+      "model": "action_feedback_fixture",
+      "private_diagnostic": {
+        "boolean_union_failure": false,
+        "hidden_state_digest": "ecf0d3296cbc2e97c7c20fe9afc39269f6379f38e512cb1d2c1b5aa31751426d",
+        "relative_winding": false,
+        "terminal_label": "vacuum",
+        "terminal_nonvacuum": false
+      },
+      "public": {
+        "round0_action": "commit",
+        "round0_action_digest": "a86e5aa2ae4bf0874c6c1384c6c79bd33d44742b5d73cb2fec35c79d48f6927b",
+        "round0_first_record": [
+          1,
+          1
+        ],
+        "round0_second_record": {
+          "bound_action_digest": "a86e5aa2ae4bf0874c6c1384c6c79bd33d44742b5d73cb2fec35c79d48f6927b",
+          "charge_vacuum_bits": [
+            0,
+            1
+          ],
+          "round": 0
+        },
+        "round1_first_record": [
+          0,
+          0
+        ]
+      }
+    }
+  ],
+  "checks": {
+    "action_bound_full_binary_E2_and_wrong_digest_rejection": true,
+    "categorical_kernel_normalized": true,
+    "exact_replay": true,
+    "fixture_action_to_future_path_present": true,
+    "four_registered_cells": true,
+    "future_only_perturbation_preserves_prior_action_and_E2": true,
+    "null_action_to_future_path_absent": true,
+    "private_boolean_union_and_public_nonleak": true,
+    "round0_public_and_policy_causal": true,
+    "three_matched_exogenous_keys": true
+  },
+  "claim_boundary": "A pass validates only interface capacity for an action-to-future-state path under stipulated deterministic fixtures. The physically correct D4 action-conditioned kernel and schedule benefit remain unresolved.",
+  "contract_sha256": "dcc9d3d976e167ad02248af57b00b4343abe6d5179932e54596bfac9905d0d99",
+  "cpu_seconds": 0.000958,
+  "new_bootstrap_replicates": 0,
+  "new_performance_arm_evaluations": 0,
+  "new_stochastic_histories": 0,
+  "reason": null,
+  "runner_sha256": "aad9468a2695f803e1597b6ffcf82f60b01a69950c8c75593310adcea90b27e8",
+  "schema_version": 1,
+  "status": "passed_deterministic_interface_only"
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j7o-witness-projector-reduction-2026-09-26",
+  "status": "registered_before_algebraic_audit",
+  "question": "Does the single second/next anticommuting witness in each J7N cell admit an exact conditional one-site next-charge law without enumerating the full next public distribution?",
+  "role": "Bounded algebraic reduction prerequisite; no complete next law, information gain, risk, policy, or noisy-schedule claim",
+  "source_basis": [
+    "J7M complete full-binary second public laws at one selected first record",
+    "J7N fixed-future four-cell flux, eligibility, and unique anticommuting witness",
+    "J6L/J6M paper-normalized periodic projector geometry and vacuum orbit",
+    "J6N/J7D frozen conjugated-star and commutator algebra"
+  ],
+  "pinned_inputs": {
+    "j7n_result_sha256": "d84fa6528a7065fdcc9e973c445c8a826f6d3f1ad08cf2a466543c292168c3ae",
+    "j7m_result_sha256": "5b785f49539d013f8fda307b9c06da637bd5e88c0e9dccb9e6b88b341b90b8df",
+    "j6l_result_sha256": "c3eee28f083b7f3a4dd82a3e4f8a7d3ec29aa19af92bbc3ab4588129d855c4ab",
+    "j6m_result_sha256": "55bfe46d34c9a8356e828351b0d415ed550312ed315c4c1bda7a51508ef1b932",
+    "operator_source_sha256": "0ac5c45dfb899c9a5ac6cabe36e1300cde03054f053d94db1ee2a4bbd8dcb05f",
+    "commutation_source_sha256": "498333d68ba7d955b8be52614ec18292119446323e0ece22af73872938045ba6"
+  },
+  "model": {
+    "physical_and_public_boundary": "Same ideal L=2 D4 vacuum orbit, private initial red-X error [0,4,3], selected positive full-binary first record, relation-free public actions [0] and [1,30,32,34,35], complete action-conditioned second record, and matched private later-fault keys [0] and [4] as J7N. Private errors, future faults, supports, operators, and proofs are not decoder inputs.",
+    "algebra": "Each eligible full-binary second-star measurement is a Hermitian involution A with projector P_a=(I+aA)/2, a in {+1,-1}; each eligible next witness B is likewise an involution. If same-round second projectors commute and AB=-BA, then P_a B P_a=0. For every positive complete second prefix, P(next witness outcome +1 | prefix)=P(-1 | prefix)=1/2, regardless of first-state amplitudes. This says nothing about other next sites or their joint law.",
+    "uncertainty": "Exact symbolic identity checked against frozen bitmask operator algebra and all 34 positive second records; no stochastic uncertainty"
+  },
+  "matrix": {
+    "public_actions": [[0], [1, 30, 32, 34, 35]],
+    "matched_later_fault_keys_private": [[0], [4]],
+    "expected_unique_witnesses_by_future": {"[0]": [0, 1], "[4]": [2, 1]},
+    "expected_positive_second_prefixes_per_future": 34,
+    "branches": ["both public actions crossed with both frozen later faults", "all eligible second-star same-round pairs commute and witness operators square to identity", "all positive full-binary second prefixes include the measured second witness and yield symbolic fair next-site-1 conditional law"]
+  },
+  "competing_outcomes": {
+    "identity_valid": "Unique witness, commuting second block, involutions, and full second record all reconcile: next site 1 is exactly fair for every positive prefix in every cell; this only closes the one-site witness marginal.",
+    "identity_invalid": "Any operator, public-record, or source-pin gate fails; do not infer the next-site law.",
+    "joint_unresolved": "Even if the one-site identity holds, other next sites and correlations may differ across actions; no complete next-law or risk comparison is licensed."
+  },
+  "budget": {"max_cpu_seconds": 10, "max_action_future_cells": 4, "max_positive_prefix_checks": 68, "max_operator_pair_checks": 3000, "max_ordered_moment_terms": 0, "new_dependencies": 0, "stochastic_histories": 0, "schedule_arm_evaluations": 0, "bootstrap_replicates": 0},
+  "acceptance": ["Six source/result pins pass before and after", "All four fixed action/future cells replay J7N's unique witness and matched public flux", "Every eligible same-round second operator pair commutes and witness operators are Hermitian involutions in the frozen bitmask algebra", "All 68 positive action/future second-prefix checks retain complete public records, measured witness bits and positive mass", "The projector identity is explicitly applied only to next site 1, with exact 1/2 conditional probabilities; no Born moments, joint next law, stochastic work, policy arms, bootstrap or caller edit"],
+  "stop_rule": "Fail closed on any pin, geometry, commutation, involution, public-prefix, CPU, pair-count or prefix-count gate. No brute-force next joint law or budget increase in this tick.",
+  "planned_result": "results/j7o-witness-projector-reduction-2026-09-26.json"
+}

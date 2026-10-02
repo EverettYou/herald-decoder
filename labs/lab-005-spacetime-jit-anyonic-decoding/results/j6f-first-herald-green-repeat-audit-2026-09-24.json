@@ -1,0 +1,64 @@
+{
+  "affected_interface": "Lab 004 d4_pipeline.sample_postflux_charge_outcomes has no first herald argument; Lab 005 d4_integrated_history inherits it. Audit dependent results before any reuse.",
+  "bootstrap_replicates": 0,
+  "contract_sha256": "b5b280e7b9a3b5a9e78dfa7734328be93f8087cd50bbbe76a7579040d2daa498",
+  "cpu_seconds": 0.000892,
+  "decisive_counterexample": "First green charge bit 1 (p2=-1) has positive first-round support in J6E, but all its existing postflux records set green bit 0; Jing A.4 Eq. (A13) retains p2 at that green star after the matching correction.",
+  "exact_matrix": [
+    {
+      "existing_postflux_has_required_record": true,
+      "first_green_bit": 0,
+      "post_blue_common_bit": 0,
+      "source_required_active_charge_bits": {
+        "0": 0,
+        "1": 0,
+        "2": 0
+      }
+    },
+    {
+      "existing_postflux_has_required_record": true,
+      "first_green_bit": 0,
+      "post_blue_common_bit": 1,
+      "source_required_active_charge_bits": {
+        "0": 1,
+        "1": 0,
+        "2": 1
+      }
+    },
+    {
+      "existing_postflux_has_required_record": false,
+      "first_green_bit": 1,
+      "post_blue_common_bit": 0,
+      "source_required_active_charge_bits": {
+        "0": 0,
+        "1": 1,
+        "2": 0
+      }
+    },
+    {
+      "existing_postflux_has_required_record": false,
+      "first_green_bit": 1,
+      "post_blue_common_bit": 1,
+      "source_required_active_charge_bits": {
+        "0": 1,
+        "1": 1,
+        "2": 1
+      }
+    }
+  ],
+  "id": "lab005-j6f-first-herald-green-repeat-audit-2026-09-24",
+  "pinned_input_checks": {
+    "d4_pipeline": true,
+    "d4_postflux": true,
+    "j6e_result": true
+  },
+  "schedule_arm_evaluations": 0,
+  "schema_version": 1,
+  "scope": {
+    "invalid": "J6E source-bounded postflux support and any D4 physical-risk/performance interpretation relying on the unconditional singleton-even postflux sampler",
+    "still_valid_as_kinematic_or_structural_only": "Selected L=2 graph and flux-chain XOR identities, blue-pair parity, and ideal repeatability once the actual second projector outcome is fixed",
+    "unresolved": "Joint probabilities for general geometry, arbitrary action and faults; no universal D4 conditional channel is derived here"
+  },
+  "status": "passed_detected_source_semantic_mismatch",
+  "stochastic_histories": 0
+}

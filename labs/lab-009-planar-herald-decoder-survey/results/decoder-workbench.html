@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lab 009 — Decoder workbench</title>
+<style>
+:root{color-scheme:light; font-family:system-ui,sans-serif;color:#263a43;background:#f7f9fb}body{max-width:1100px;margin:auto;padding:24px}h1{font-size:26px;margin-bottom:8px}p{line-height:1.6}form{background:white;padding:20px;border:1px solid #dbe2e7;border-radius:12px;display:flex;gap:16px;flex-wrap:wrap;align-items:end}label{display:flex;flex-direction:column;gap:6px;font-size:14px}input,select,button{font:inherit;border:1px solid #b6c7ce;border-radius:6px;padding:8px}input{width:100px}button{background:#234f6a;color:white;cursor:pointer}fieldset{border:0;display:flex;flex-wrap:wrap;gap:12px;width:100%;padding:0}fieldset label{flex-direction:row;align-items:center}fieldset input{width:auto}#status{min-height:24px;margin:16px 0}#plot{background:white;border:1px solid #dbe2e7;border-radius:12px;width:100%;height:380px}table{width:100%;border-collapse:collapse;background:white;margin:20px 0;font-size:14px}th,td{padding:12px 8px;border-bottom:1px solid #dbe2e7;text-align:left}th{background:#edf3f6}.note{font-size:13px;color:#51646d}.error{color:#a2342c}.legend{display:flex;gap:22px;font-size:13px;flex-wrap:wrap}.red{color:#b54032}.blue{color:#245c99}.amber{color:#bd861f}.green{color:#20775b}
+</style>
+<h1>Decoder workbench</h1>
+<p>Compare standard decoders on one shared honeycomb observation. Every decoder sees the syndrome and herald record. A valid logical-sector correction can differ from the sampled error.</p>
+<form id="controls">
+<label>Linear size L<select id="L"><option>2</option><option>3</option><option>4</option><option selected>5</option><option>7</option><option>9</option></select></label>
+<label>Error probability p<input id="p" type="number" min="0" max="1" step="0.01" value="0.24" required></label>
+<label>Herald availability q<input id="q" type="number" min="0" max="1" step="0.05" value="0.5" required></label>
+<label>Sample seed<input id="seed" type="number" min="0" step="1" value="7" required></label>
+<button id="run" type="submit">Decode shared record</button>
+<fieldset><legend>Methods</legend>
+<label><input name="method" type="checkbox" value="bp_matching" checked>BP + matching</label>
+<label><input name="method" type="checkbox" value="configuration_map" checked>Configuration MAP</label>
+<label><input name="method" type="checkbox" value="planar_ml" checked>Planar ML</label>
+<label><input name="method" type="checkbox" value="transfer_ml" checked>Exact transfer</label>
+<label><input name="method" type="checkbox" value="mps_ml" checked>MPS (χ = 16)</label>
+</fieldset></form>
+<p id="status" aria-live="polite">Ready. Choose a seed and decode.</p>
+<svg id="plot" viewBox="0 0 1000 380" role="img" aria-label="Sampled error, detector syndrome and herald record"></svg>
+<div class="legend"><span class="red">Red edge: sampled error</span><span class="blue">Blue detector: odd syndrome</span><span class="amber">Amber ring: positive herald</span><span class="green">Dashed green: planar ML correction</span></div>
+<table><thead><tr><th>Method</th><th>Valid syndrome</th><th>Sector</th><th>Logical failure</th><th>P(sector 1)</th><th>Decode ms</th></tr></thead><tbody id="rows"></tbody></table>
+<p class="note">One observation is not a performance estimate. Times include first-call effects; the report contains warmed timing and matched failure statistics. MPS is approximate. BP at p = 0 or 1 keeps its legacy parameter restriction and reports an error. A correction need not itself reproduce the herald record.</p>
+<script>
+const $=id=>document.getElementById(id);const ns='http://www.w3.org/2000/svg';
+function element(tag,attrs){let e=document.createElementNS(ns,tag);for(let [k,v]of Object.entries(attrs))e.setAttribute(k,v);return e;}
+function render(d){const svg=$('plot');svg.replaceChildren();let xs=d.vertices.map(v=>v.x),ys=d.vertices.map(v=>v.y);let xmin=Math.min(...xs),ymin=Math.min(...ys),dx=Math.max(...xs)-xmin,dy=Math.max(...ys)-ymin;let scale=Math.min(900/dx,300/dy);const pos=d.vertices.map(v=>[50+(v.x-xmin)*scale,340-(v.y-ymin)*scale]);let correction=d.methods.find(r=>r.method==='planar_ml'&&!r.error)?.correction;
+d.edges.forEach(([u,v],i)=>{let [x1,y1]=pos[u],[x2,y2]=pos[v];svg.append(element('line',{x1,y1,x2,y2,stroke:d.error[i]?'#b54032':'#c9d3d8','stroke-width':d.error[i]?4:2}));if(correction?.[i])svg.append(element('line',{x1,y1,x2,y2,stroke:'#20775b','stroke-width':2,'stroke-dasharray':'5 4'}));});let det=new Map(d.detector_vertices.map((v,i)=>[v,i]));d.vertices.forEach((v,i)=>{let [cx,cy]=pos[i],j=det.get(i);if(j!==undefined&&d.herald[j])svg.append(element('circle',{cx,cy,r:8,fill:'none',stroke:'#bd861f','stroke-width':2}));svg.append(element('circle',{cx,cy,r:4,fill:j!==undefined?(d.syndrome[j]?'#245c99':'#eff3f5'):'#73848e',stroke:'#536873'}));});
+$('rows').replaceChildren();for(let r of d.methods){let tr=document.createElement('tr');let values=r.error?[r.label,r.error,'—','—','—','—']:[r.label,r.syndrome_valid?'Yes':'No',r.sector,r.failure?'Yes':'No',r.posterior?r.posterior[1].toFixed(6):'—',r.decode_ms.toFixed(2)];for(let value of values){let td=document.createElement('td');td.textContent=value;tr.append(td);}if(r.error)tr.className='error';$('rows').append(tr);}let odd=d.syndrome.reduce((a,b)=>a+b,0),herald=d.herald.reduce((a,b)=>a+b,0);$('status').textContent=`L = ${d.L}, p = ${d.p}, q = ${d.q}, seed = ${d.seed}: ${odd} odd detectors and ${herald} positive heralds. All methods used this record.`;
+}
+$('controls').addEventListener('submit',async e=>{e.preventDefault();let methods=[...document.querySelectorAll('input[name=method]:checked')].map(e=>e.value);if(!methods.length){$('status').textContent='Select at least one method.';return;}$('run').disabled=true;$('status').textContent='Decoding…';try{let response=await fetch('/api/labs/lab-009-planar-herald-decoder-survey/artifact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({L:Number($('L').value),p:Number($('p').value),q:Number($('q').value),seed:Number($('seed').value),methods})});let d=await response.json();if(!response.ok)throw Error(d.detail||response.statusText);render(d);}catch(err){$('status').textContent=err.message;}finally{$('run').disabled=false;}});
+</script></html>

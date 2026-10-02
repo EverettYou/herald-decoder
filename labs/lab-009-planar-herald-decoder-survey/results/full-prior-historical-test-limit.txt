@@ -1,0 +1,853 @@
+................................E....EE..EEE....E.EE.EEEE.....E..EEEEE..E.EE.E.E...EE.EE.EE...EE..E......E......E......EE..............EEEEEEEEE
+======================================================================
+ERROR: test_completed_registered_matrix (test_audit_slope_flow_gray_frontier.GrayFrontierAuditTests.test_completed_registered_matrix)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_audit_slope_flow_gray_frontier.py", line 15, in test_completed_registered_matrix
+    result = gray_frontier_audit.audit(gray_frontier_audit.DEFAULT_MANIFEST)
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/audit_slope_flow_gray_frontier.py", line 39, in audit
+    manifest = json.loads(manifest_path.read_text())
+                          ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-s1-honeycomb-slope-flow-gray-frontier-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_dispatch_emits_three_frozen_decoder_jobs (test_phase4_adaptive_p_confirmation.Phase4AdaptiveConfirmationTests.test_dispatch_emits_three_frozen_decoder_jobs)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_phase4_adaptive_p_confirmation.py", line 40, in test_dispatch_emits_three_frozen_decoder_jobs
+    manifest = analysis.load_manifest(MANIFEST)
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/analyze_phase2_scout.py", line 134, in load_manifest
+    manifest = json.loads(path.read_text())
+                          ~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase4-residual80-honeycomb-highq-adaptive-p-confirmation-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_manifest_uses_forty_fresh_trajectory_clusters (test_phase4_adaptive_p_confirmation.Phase4AdaptiveConfirmationTests.test_manifest_uses_forty_fresh_trajectory_clusters)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_phase4_adaptive_p_confirmation.py", line 27, in test_manifest_uses_forty_fresh_trajectory_clusters
+    manifest = analysis.load_manifest(MANIFEST)
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/analyze_phase2_scout.py", line 134, in load_manifest
+    manifest = json.loads(path.read_text())
+                          ~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase4-residual80-honeycomb-highq-adaptive-p-confirmation-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_dispatch_commands_preserve_primary_decoder (test_phase4_highq_l11_l13_scaling.Phase4ScalingManifestTests.test_dispatch_commands_preserve_primary_decoder)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_phase4_highq_l11_l13_scaling.py", line 38, in test_dispatch_commands_preserve_primary_decoder
+    manifest = analysis.load_manifest(MANIFEST)
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/analyze_phase2_scout.py", line 134, in load_manifest
+    manifest = json.loads(path.read_text())
+                          ~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase4-residual80-honeycomb-highq-l11-l13-scaling-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_registered_matrix_is_bounded_and_fresh (test_phase4_highq_l11_l13_scaling.Phase4ScalingManifestTests.test_registered_matrix_is_bounded_and_fresh)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_phase4_highq_l11_l13_scaling.py", line 27, in test_registered_matrix_is_bounded_and_fresh
+    manifest = analysis.load_manifest(MANIFEST)
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/analyze_phase2_scout.py", line 134, in load_manifest
+    manifest = json.loads(path.read_text())
+                          ~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase4-residual80-honeycomb-highq-l11-l13-scaling-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_dispatch_budget_and_source_gate (test_phase_b10_registration.PhaseB10Tests.test_dispatch_budget_and_source_gate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_phase_b10_registration.py", line 45, in test_dispatch_budget_and_source_gate
+    manifest = json.loads(SUB.DEFAULT_MANIFEST.read_text())
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-b10-honeycomb-measured-endpoints-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_manifest_is_no_new_data_and_no_render (test_phase_b11_three_layer.PhaseB11ThreeLayerTests.test_manifest_is_no_new_data_and_no_render)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_phase_b11_three_layer.py", line 42, in test_manifest_is_no_new_data_and_no_render
+    manifest = json.loads(MODULE.DEFAULT_MANIFEST.read_text())
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-b11-honeycomb-three-layer-reanalysis-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_classification_is_exhaustive_and_preserves_absolute_anchors (test_phase_b12_three_layer_map.PhaseB12ThreeLayerMapTests.test_classification_is_exhaustive_and_preserves_absolute_anchors)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_phase_b12_three_layer_map.py", line 26, in test_classification_is_exhaustive_and_preserves_absolute_anchors
+    manifest = json.loads(MODULE.DEFAULT_MANIFEST.read_text())
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-b12-honeycomb-three-layer-map-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_manifest_is_presentation_only_and_forbids_crossings (test_phase_b12_three_layer_map.PhaseB12ThreeLayerMapTests.test_manifest_is_presentation_only_and_forbids_crossings)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_phase_b12_three_layer_map.py", line 35, in test_manifest_is_presentation_only_and_forbids_crossings
+    manifest = json.loads(MODULE.DEFAULT_MANIFEST.read_text())
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-b12-honeycomb-three-layer-map-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_manifest_is_evidence_only (test_phase_b13_continuous_log_odds.PhaseB13ContinuousLogOddsTests.test_manifest_is_evidence_only)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_phase_b13_continuous_log_odds.py", line 22, in setUp
+    self.manifest = json.loads(MODULE.DEFAULT_MANIFEST.read_text())
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-b13-honeycomb-continuous-log-odds-map-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_merge_is_exhaustive_and_updates_exactly_four_cells (test_phase_b13_continuous_log_odds.PhaseB13ContinuousLogOddsTests.test_merge_is_exhaustive_and_updates_exactly_four_cells)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_phase_b13_continuous_log_odds.py", line 22, in setUp
+    self.manifest = json.loads(MODULE.DEFAULT_MANIFEST.read_text())
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-b13-honeycomb-continuous-log-odds-map-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_only_display_values_are_clipped_and_no_classification_is_emitted (test_phase_b13_continuous_log_odds.PhaseB13ContinuousLogOddsTests.test_only_display_values_are_clipped_and_no_classification_is_emitted)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_phase_b13_continuous_log_odds.py", line 22, in setUp
+    self.manifest = json.loads(MODULE.DEFAULT_MANIFEST.read_text())
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-b13-honeycomb-continuous-log-odds-map-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_probabilities_log_odds_and_censoring_are_preserved (test_phase_b13_continuous_log_odds.PhaseB13ContinuousLogOddsTests.test_probabilities_log_odds_and_censoring_are_preserved)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_phase_b13_continuous_log_odds.py", line 22, in setUp
+    self.manifest = json.loads(MODULE.DEFAULT_MANIFEST.read_text())
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-b13-honeycomb-continuous-log-odds-map-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_auditor_checks_exact_branch_rows_and_syndrome_fidelity (test_phase_b14_gates.PhaseB14GateTests.test_auditor_checks_exact_branch_rows_and_syndrome_fidelity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_phase_b14_gates.py", line 75, in test_auditor_checks_exact_branch_rows_and_syndrome_fidelity
+    manifest = json.loads(SUBMIT.DEFAULT_MANIFEST.read_text())
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-b14-honeycomb-two-branch-acquisition-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_dispatcher_freezes_eight_noncolliding_branch_jobs (test_phase_b14_gates.PhaseB14GateTests.test_dispatcher_freezes_eight_noncolliding_branch_jobs)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_phase_b14_gates.py", line 31, in test_dispatcher_freezes_eight_noncolliding_branch_jobs
+    manifest = json.loads(SUBMIT.DEFAULT_MANIFEST.read_text())
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-b14-honeycomb-two-branch-acquisition-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_source_and_output_conflicts_fail_closed (test_phase_b14_gates.PhaseB14GateTests.test_source_and_output_conflicts_fail_closed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_phase_b14_gates.py", line 43, in test_source_and_output_conflicts_fail_closed
+    manifest = json.loads(SUBMIT.DEFAULT_MANIFEST.read_text())
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-b14-honeycomb-two-branch-acquisition-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_phase_b15_boundary_comparison (unittest.loader._FailedTest.test_phase_b15_boundary_comparison)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_phase_b15_boundary_comparison
+Traceback (most recent call last):
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/unittest/loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/unittest/loader.py", line 339, in _get_module_from_name
+    __import__(name)
+    ~~~~~~~~~~^^^^^^
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_phase_b15_boundary_comparison.py", line 18, in <module>
+    SPEC.loader.exec_module(MODULE)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/analyze_phase_b15_boundary_comparison.py", line 16, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+
+
+======================================================================
+ERROR: setUpClass (test_phase_b16_strong_smooth_boundary.PhaseB16Tests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_phase_b16_strong_smooth_boundary.py", line 26, in setUpClass
+    cls.manifest = json.loads(MODULE.DEFAULT_MANIFEST.read_text())
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-b16-strong-smooth-boundary-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: setUpClass (test_phase_b17_resolution_aware_guide.PhaseB17Tests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_phase_b17_resolution_aware_guide.py", line 26, in setUpClass
+    cls.manifest = json.loads(MODULE.DEFAULT_MANIFEST.read_text())
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-b17-resolution-aware-guide-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_five_reuse_sources_are_audited (test_phase_b3_preflight.PhaseB3PreflightTests.test_five_reuse_sources_are_audited)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_phase_b3_preflight.py", line 31, in test_five_reuse_sources_are_audited
+    result = reuse.audit(reuse.DEFAULT_MANIFEST)
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/audit_phase_b3_reuse_sources.py", line 30, in audit
+    manifest = json.loads(manifest_path.read_text())
+                          ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-b3-honeycomb-frontier-reuse-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_one_job_matrix_and_budget (test_phase_b3_preflight.PhaseB3PreflightTests.test_one_job_matrix_and_budget)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_phase_b3_preflight.py", line 24, in test_one_job_matrix_and_budget
+    manifest = json.loads(submit.DEFAULT_MANIFEST.read_text())
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-b3-honeycomb-frontier-reuse-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_completion_audit_checks_all_3000_syndrome_faithful_rows (test_phase_b4_gates.PhaseB4GateTests.test_completion_audit_checks_all_3000_syndrome_faithful_rows)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_phase_b4_gates.py", line 27, in test_completion_audit_checks_all_3000_syndrome_faithful_rows
+    manifest = json.loads(submit.DEFAULT_MANIFEST.read_text())
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-b4-honeycomb-new-frontier-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_preflight_rejects_source_hash_drift (test_phase_b4_gates.PhaseB4GateTests.test_preflight_rejects_source_hash_drift)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_phase_b4_gates.py", line 59, in test_preflight_rejects_source_hash_drift
+    manifest = json.loads(submit.DEFAULT_MANIFEST.read_text())
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-b4-honeycomb-new-frontier-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_dispatcher_is_one_job_and_closed_after_recorded_completion (test_phase_b4_registration.PhaseB4RegistrationTests.test_dispatcher_is_one_job_and_closed_after_recorded_completion)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_phase_b4_registration.py", line 35, in test_dispatcher_is_one_job_and_closed_after_recorded_completion
+    manifest = json.loads(submit.DEFAULT_MANIFEST.read_text())
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-b4-honeycomb-new-frontier-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_completion_audit_checks_registered_rows (test_phase_b5_gates.PhaseB5GateTests.test_completion_audit_checks_registered_rows)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_phase_b5_gates.py", line 17, in test_completion_audit_checks_registered_rows
+    manifest=json.loads(submit.DEFAULT_MANIFEST.read_text());job=next(j for j in manifest["jobs"] if j["q"]==0.3)
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-b5-honeycomb-persistent-frontier-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_dispatcher_matrix_budget_and_source_drift_gate (test_phase_b5_gates.PhaseB5GateTests.test_dispatcher_matrix_budget_and_source_drift_gate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_phase_b5_gates.py", line 9, in test_dispatcher_matrix_budget_and_source_drift_gate
+    manifest=json.loads(submit.DEFAULT_MANIFEST.read_text())
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-b5-honeycomb-persistent-frontier-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_no_newly_exposed_or_compatible_unused_cells (test_phase_b5_registration.PhaseB5RegistrationTests.test_no_newly_exposed_or_compatible_unused_cells)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_phase_b5_registration.py", line 23, in test_no_newly_exposed_or_compatible_unused_cells
+    selection = module.build_selection(module.DEFAULT_MAP, module.DEFAULT_B3_SELECTION, module.DEFAULT_B3_ANALYSIS)
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/select_and_register_phase_b5_frontier.py", line 47, in build_selection
+    b3_selection = json.loads(b3_selection_path.read_text())
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase-b3-honeycomb-frontier-reuse-selection-2026-08-28.json'
+
+======================================================================
+ERROR: test_smallest_matrix_covers_all_five_persistent_cells (test_phase_b5_registration.PhaseB5RegistrationTests.test_smallest_matrix_covers_all_five_persistent_cells)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_phase_b5_registration.py", line 15, in test_smallest_matrix_covers_all_five_persistent_cells
+    selection = module.build_selection(module.DEFAULT_MAP, module.DEFAULT_B3_SELECTION, module.DEFAULT_B3_ANALYSIS)
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/select_and_register_phase_b5_frontier.py", line 47, in build_selection
+    b3_selection = json.loads(b3_selection_path.read_text())
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase-b3-honeycomb-frontier-reuse-selection-2026-08-28.json'
+
+======================================================================
+ERROR: test_completion_audit_checks_registered_rows (test_phase_b6_gates.PhaseB6GateTests.test_completion_audit_checks_registered_rows)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_phase_b6_gates.py", line 15, in test_completion_audit_checks_registered_rows
+    manifest=json.loads(submit.DEFAULT_MANIFEST.read_text());job=next(j for j in manifest["jobs"] if j["q"]==.55)
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-b6-honeycomb-four-cell-frontier-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_dispatcher_matrix_budget_and_source_drift_gate (test_phase_b6_gates.PhaseB6GateTests.test_dispatcher_matrix_budget_and_source_drift_gate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_phase_b6_gates.py", line 9, in test_dispatcher_matrix_budget_and_source_drift_gate
+    manifest=json.loads(submit.DEFAULT_MANIFEST.read_text())
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-b6-honeycomb-four-cell-frontier-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_inventory_has_no_compatible_unused_source (test_phase_b6_registration.PhaseB6RegistrationTests.test_inventory_has_no_compatible_unused_source)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_phase_b6_registration.py", line 23, in test_inventory_has_no_compatible_unused_source
+    selection = module.build_selection(module.DEFAULT_MAP, module.DEFAULT_B5_SELECTION, module.DEFAULT_B5_AUDIT)
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/select_and_register_phase_b6_frontier.py", line 69, in build_selection
+    b5_selection = json.loads(b5_selection_path.read_text())
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase-b5-honeycomb-persistent-frontier-selection-2026-08-28.json'
+
+======================================================================
+ERROR: test_smallest_matrix_covers_all_four_frontier_cells (test_phase_b6_registration.PhaseB6RegistrationTests.test_smallest_matrix_covers_all_four_frontier_cells)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_phase_b6_registration.py", line 15, in test_smallest_matrix_covers_all_four_frontier_cells
+    selection = module.build_selection(module.DEFAULT_MAP, module.DEFAULT_B5_SELECTION, module.DEFAULT_B5_AUDIT)
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/select_and_register_phase_b6_frontier.py", line 69, in build_selection
+    b5_selection = json.loads(b5_selection_path.read_text())
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase-b5-honeycomb-persistent-frontier-selection-2026-08-28.json'
+
+======================================================================
+ERROR: test_dispatch_budget_and_source_gate (test_phase_b7_gates.PhaseB7GateTests.test_dispatch_budget_and_source_gate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_phase_b7_gates.py", line 30, in test_dispatch_budget_and_source_gate
+    manifest = json.loads(SUBMIT.DEFAULT_MANIFEST.read_text())
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-b7-honeycomb-endpoint-followup-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_dispatch_budget_and_source_gate (test_phase_b8_gates.PhaseB8GateTests.test_dispatch_budget_and_source_gate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_phase_b8_gates.py", line 9, in test_dispatch_budget_and_source_gate
+    manifest=json.loads(SUB.DEFAULT_MANIFEST.read_text())
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-b8-honeycomb-raise-minimum-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_dispatch_budget_and_source_gate (test_phase_b9_gates.PhaseB9GateTests.test_dispatch_budget_and_source_gate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_phase_b9_gates.py", line 9, in test_dispatch_budget_and_source_gate
+    manifest=json.loads(SUB.DEFAULT_MANIFEST.read_text())
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-b9-honeycomb-measured-endpoints-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_changes_exactly_four_cells_and_preserves_every_other_payload (test_render_phase_b2_merged_map.PhaseB2MergedMapTests.test_changes_exactly_four_cells_and_preserves_every_other_payload)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_render_phase_b2_merged_map.py", line 18, in test_changes_exactly_four_cells_and_preserves_every_other_payload
+    update = json.loads((LAB / "results/phase-b2-honeycomb-gray-frontier-analysis-2026-08-28.json").read_text())
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase-b2-honeycomb-gray-frontier-analysis-2026-08-28.json'
+
+======================================================================
+ERROR: test_merged_classification_counts (test_render_phase_b2_merged_map.PhaseB2MergedMapTests.test_merged_classification_counts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_render_phase_b2_merged_map.py", line 29, in test_merged_classification_counts
+    update = json.loads((LAB / "results/phase-b2-honeycomb-gray-frontier-analysis-2026-08-28.json").read_text())
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/results/phase-b2-honeycomb-gray-frontier-analysis-2026-08-28.json'
+
+======================================================================
+ERROR: test_commands_do_not_rerun_existing_distances_or_skip_outputs (test_submit_phase_b1_l5_l13_sentinels.PhaseB1DispatcherTests.test_commands_do_not_rerun_existing_distances_or_skip_outputs)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_submit_phase_b1_l5_l13_sentinels.py", line 18, in setUp
+    self.manifest = json.loads(MANIFEST.read_text())
+                               ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-b1-honeycomb-l5-l13-sentinels-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_exact_registered_matrix (test_submit_phase_b1_l5_l13_sentinels.PhaseB1DispatcherTests.test_exact_registered_matrix)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_submit_phase_b1_l5_l13_sentinels.py", line 18, in setUp
+    self.manifest = json.loads(MANIFEST.read_text())
+                               ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-b1-honeycomb-l5-l13-sentinels-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_rejects_budget_drift (test_submit_phase_b1_l5_l13_sentinels.PhaseB1DispatcherTests.test_rejects_budget_drift)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_submit_phase_b1_l5_l13_sentinels.py", line 18, in setUp
+    self.manifest = json.loads(MANIFEST.read_text())
+                               ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-b1-honeycomb-l5-l13-sentinels-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_commands_are_job_specific_and_non_overwriting (test_submit_phase_b2_gray_frontier.PhaseB2DispatcherTests.test_commands_are_job_specific_and_non_overwriting)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_submit_phase_b2_gray_frontier.py", line 18, in setUp
+    self.manifest = json.loads(MANIFEST.read_text())
+                               ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-b2-honeycomb-gray-frontier-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_exact_registered_matrix_and_budget (test_submit_phase_b2_gray_frontier.PhaseB2DispatcherTests.test_exact_registered_matrix_and_budget)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_submit_phase_b2_gray_frontier.py", line 18, in setUp
+    self.manifest = json.loads(MANIFEST.read_text())
+                               ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-b2-honeycomb-gray-frontier-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_rejects_matrix_and_budget_drift (test_submit_phase_b2_gray_frontier.PhaseB2DispatcherTests.test_rejects_matrix_and_budget_drift)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_submit_phase_b2_gray_frontier.py", line 18, in setUp
+    self.manifest = json.loads(MANIFEST.read_text())
+                               ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-b2-honeycomb-gray-frontier-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_commands_preserve_branch_specific_sizes (test_submit_slope_flow_gray_frontier.GrayFrontierDispatcherTests.test_commands_preserve_branch_specific_sizes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_submit_slope_flow_gray_frontier.py", line 20, in setUp
+    self.manifest = json.loads(MANIFEST.read_text())
+                               ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-s1-honeycomb-slope-flow-gray-frontier-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_expands_exact_registered_budget (test_submit_slope_flow_gray_frontier.GrayFrontierDispatcherTests.test_expands_exact_registered_budget)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_submit_slope_flow_gray_frontier.py", line 20, in setUp
+    self.manifest = json.loads(MANIFEST.read_text())
+                               ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-s1-honeycomb-slope-flow-gray-frontier-manifest-2026-08-28.json'
+
+======================================================================
+ERROR: test_rejects_budget_drift (test_submit_slope_flow_gray_frontier.GrayFrontierDispatcherTests.test_rejects_budget_drift)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/scripts/test_submit_slope_flow_gray_frontier.py", line 20, in setUp
+    self.manifest = json.loads(MANIFEST.read_text())
+                               ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/home/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-003-herald-threshold-phase-diagram/phase-s1-honeycomb-slope-flow-gray-frontier-manifest-2026-08-28.json'
+
+----------------------------------------------------------------------
+Ran 142 tests in 8.781s
+
+FAILED (errors=46)

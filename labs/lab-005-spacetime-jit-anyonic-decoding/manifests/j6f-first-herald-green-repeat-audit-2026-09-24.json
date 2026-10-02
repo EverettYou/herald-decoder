@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j6f-first-herald-green-repeat-audit-2026-09-24",
+  "status": "registered_before_exact_execution",
+  "epistemic_role": "Zero-sampling source-semantic correction and downstream invalidation audit; not a new physical channel or schedule result",
+  "question": "Does the existing J6E/Lab 004 postflux support respect the retained first-green-star eigenvalue in Jing et al. Appendix A.2-A.4 for the two-red-edge path?",
+  "primary_source": "https://arxiv.org/html/2507.23765 Appendix A.2 Eq. (A6), A.4 Eqs. (A13)-(A14): after the matching red-X correction the green star remains p2 times its stabilizer; blue endpoints have common p",
+  "frozen_fixture": {
+    "lattice": "paper_periodic_honeycomb(2), 24 vertices, 36 red edges",
+    "physical_red_edges": [0, 4],
+    "matching_correction_red_edges": [0, 4],
+    "green_center": 1,
+    "blue_endpoints": [0, 2],
+    "first_green_charge_bit": "0 for p2=+1 vacuum, 1 for p2=-1 e-charge",
+    "post_green_charge_bit": "must equal first_green_charge_bit under the source's noiseless, no-intervening-fault correction sequence",
+    "post_blue_charge_bits": "must agree; do not infer probabilities or independence from parity alone"
+  },
+  "matrix": "Enumerate first green bit 0/1 and common post-blue bit 0/1; compare source-required post-green bit to each unconditional J6E postflux record and its possible conditional support.",
+  "pinned_inputs": {
+    "j6e_result_sha256": "874d13d9570b319d809d0e9c40814b6454fc9d6d38c5835230e3e201aba342e2",
+    "d4_postflux_sha256": "5435f1fcea89c9eccf369f8bfef44b23deea1ebe954b5e0f1dea5fce0cf12658",
+    "d4_pipeline_sha256": "5f5b1bcb2fd71ffc3bbbfe6ef21ac98f63eb48d15c036db76714587c82ed03e0"
+  },
+  "acceptance": [
+    "Pinned J6E result and Lab 004 source hashes match before inspection.",
+    "The four symbolic conditional cases implement p2-retention and common blue parity without inventing joint probabilities.",
+    "Any first-green=1 branch lacking post-green=1 support invalidates J6E's source-bounded support claim and marks dependent D4 physical-performance interpretation unsafe pending remediation.",
+    "Record the exact affected generator/interface and downstream classes; retain raw provenance; no stochastic histories, schedule arms, bootstraps, threshold or JIT claim."
+  ],
+  "budget": {"stochastic_histories": 0, "schedule_arm_evaluations": 0, "bootstrap_replicates": 0, "max_cpu_seconds": 10, "new_dependencies": 0},
+  "stop_rule": "Stop after the exact L=2 mismatch and impact boundary are recorded. Do not repair or rerun the production channel in this audit tick; register that as a separate gate.",
+  "planned_result": "results/j6f-first-herald-green-repeat-audit-2026-09-24.json"
+}

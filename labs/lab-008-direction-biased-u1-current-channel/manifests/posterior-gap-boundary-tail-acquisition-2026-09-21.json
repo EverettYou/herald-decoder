@@ -1,0 +1,136 @@
+{
+  "id": "lab008-posterior-gap-boundary-tail-acquisition-2026-09-21",
+  "status": "complete",
+  "completed_at": "2026-09-21",
+  "not_yet_run": false,
+  "preflight_completed": true,
+  "preflight_result": "../results/posterior-gap-boundary-tail-preflight-2026-09-21.json",
+  "preflight_outcome": {
+    "all_gates_pass": true,
+    "candidate_transitions": 43578135,
+    "maximum_frontier": 10,
+    "total_runtime_seconds": 11.480975499842316,
+    "peak_memory_gib": 0.90802001953125,
+    "production_histories_generated": 0,
+    "production_armed": true
+  },
+  "production_execution": {
+    "runner": "../scripts/acquire_posterior_gap_boundary_tail.py",
+    "result_directory": "../results/posterior-gap-boundary-tail-cells",
+    "progress_result": "../results/posterior-gap-boundary-tail-acquisition-progress-2026-09-21.json",
+    "stream_seed_by_size": {
+      "7": 202609217,
+      "9": 202609219,
+      "11": 2026092111
+    },
+    "bootstrap_seed": 2026092194,
+    "checkpoint_records": 128,
+    "runtime_stop_seconds": 7200,
+    "resume_policy": "regenerate the frozen per-size activity and orientation-uniform streams, verify every stored record hash, then continue at the next complete record",
+    "arm_time_claim_boundary": "Preflight passage arms only the five registered cells; production output remains non-evidence until integrity, precision/censoring and complete-matrix analysis pass."
+  },
+  "production_outcome": {
+    "status": "complete",
+    "new_physical_records": 2688,
+    "cell_record_counts": {
+      "square-L7-p30-q94-boundary-tail": 640,
+      "square-L9-p30-q94-boundary-tail": 512,
+      "square-L11-p30-q90-boundary-tail": 640,
+      "square-L11-p30-q94-boundary-tail": 512,
+      "square-L11-p30-q97-boundary-tail": 384
+    },
+    "all_cells_stopped_by": "precision_targets_passed",
+    "hard_cap_cells": 0,
+    "runtime_seconds": 852.1521987495944,
+    "peak_memory_gib": 1.3223724365234375,
+    "maximum_record_logistic_identity_error": 1.1102230246251565e-16,
+    "record_keys_unique": true,
+    "analysis_status": "complete",
+    "analysis_result": "../results/posterior-gap-boundary-tail-analysis-2026-09-21.json",
+    "figure": "../figures/posterior-gap-boundary-tail-matrix.png",
+    "decision": "finite-size outward gap motion across q=.90,.94,.97; no low-gap-tail takeover through L11; thermodynamic class unresolved"
+  },
+  "authorization": "Researcher requested boundary-focused data quality rather than uniform phase-map resampling and then authorized the larger decoder-independent transition question.",
+  "question": "At p=0.30, does the q=0.90--0.97 boundary window show persistent low-gap mass, outward-moving typical gaps, or a low-gap rare tail that dominates the remaining Bayes risk?",
+  "predecessor": "posterior-gap-order-parameter-synthesis-2026-09-21.json",
+  "claim_boundary": "This is a focused finite-size discrimination study. It may identify which posterior-gap mechanism warrants larger-scale study; it cannot estimate a threshold, critical q, exponent or universality class.",
+  "physical_contract": {
+    "lattice": "square",
+    "stored_arrow_geometry": true,
+    "rough_boundaries": true,
+    "physical_error_rate": 0.3,
+    "observation": "full physical charge record Q only",
+    "target": "exact two-logical-sector posterior Z0(Q), Z1(Q)",
+    "score": "ground-truth binary logical sector with exact Bayes risk",
+    "independent_unit": "one independently generated physical current and its charge record"
+  },
+  "matrix": {
+    "q_values": [0.9, 0.94, 0.97],
+    "sizes": [7, 9, 11],
+    "existing_cells_reused_without_numerical_pooling": [
+      {"q": 0.9, "L": 7, "records": 256},
+      {"q": 0.9, "L": 9, "records": 192},
+      {"q": 0.97, "L": 7, "records": 256},
+      {"q": 0.97, "L": 9, "records": 192}
+    ],
+    "new_cells": [
+      {"q": 0.9, "L": 11},
+      {"q": 0.94, "L": 7},
+      {"q": 0.94, "L": 9},
+      {"q": 0.94, "L": 11},
+      {"q": 0.97, "L": 11}
+    ],
+    "batch_records": 128,
+    "minimum_records_per_new_cell": 384,
+    "maximum_records_per_new_cell": 1024,
+    "precision_stop": "after a full batch, stop a cell only when both the Wilson 95% half-width for C_L(1) is at most 0.04 and the record-bootstrap 95% half-width for Bayes risk is at most 0.025"
+  },
+  "matched_sampling": {
+    "within_size_q_coupling": "use the same activity and orientation-uniform streams across q for newly generated cells at a common L",
+    "across_size_relation": "independent streams; never pair L contrasts",
+    "old_new_relation": "retain old cells as independent historical controls and do not label them paired with new q=0.94 or L=11 rows",
+    "bootstrap_unit": "physical record",
+    "bootstrap_replicates": 4000,
+    "intervals": "pointwise 95%; every finite-size mechanism decision must report all registered observables and cannot rely on one selected interval"
+  },
+  "observables": {
+    "primary": [
+      "Bayes risk R_L",
+      "C_L(1)=Pr(abs(DeltaF)<=1)",
+      "B_L(1)=risk share contributed by abs(DeltaF)<=1"
+    ],
+    "secondary": [
+      "median and lower quartile of abs(DeltaF)",
+      "C_L(a) for a in {0.5,2,4}",
+      "conditional logical entropy"
+    ],
+    "integrity": [
+      "per-record risk equals 1/(1+exp(abs(DeltaF)))",
+      "record counts and stream keys are unique",
+      "exact posterior normalization and sector-swap invariance pass"
+    ]
+  },
+  "preflight_gate": {
+    "required_before_sampling": true,
+    "operation": "construct and replay the exact L=11 q=0.94 oracle on deterministic synthetic and limiting records without generating production histories",
+    "maximum_runtime_seconds": 600,
+    "maximum_peak_memory_gib": 8,
+    "maximum_candidate_transitions": 50000000,
+    "failure_action": "censor the L=11 branch and stop; do not substitute an approximate posterior or broaden the matrix"
+  },
+  "budget": {
+    "maximum_new_physical_records": 5120,
+    "maximum_new_cells": 5,
+    "maximum_bootstrap_replicates_per_analysis": 4000,
+    "maximum_production_runtime_seconds": 7200,
+    "new_external_dependencies": 0
+  },
+  "acceptance_criteria": [
+    "The L=11 exact-oracle preflight passes every identity and resource cap before production is armed.",
+    "Every new cell reaches the registered minimum and either both precision targets or the hard maximum, with censoring reported rather than hidden.",
+    "The analysis reports R_L, C_L(a), gap quantiles and B_L(a) together, so a growing median cannot masquerade as vanishing risk.",
+    "The three competing finite-size mechanisms are assessed on the complete matrix; no threshold, crossing fit or BKT claim is made."
+  ],
+  "stop_rule": "Run the preflight first. If it passes, acquire only the five registered cells in batches and stop each cell at its precision rule or hard cap. Do not add p values, q values, sizes, approximations or decoder comparisons in this contract.",
+  "planned_note": "wiki/decoding-thresholds.md"
+}

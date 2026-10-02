@@ -1,0 +1,83 @@
+{
+  "model": "anthropic__claude-fable-5-1",
+  "run": "run_03",
+  "native_backend": true,
+  "geometry": [
+    {
+      "L": 2,
+      "vertices": true,
+      "edges": true,
+      "detectors": true,
+      "H": true,
+      "logical": true
+    },
+    {
+      "L": 3,
+      "vertices": true,
+      "edges": true,
+      "detectors": true,
+      "H": true,
+      "logical": true
+    },
+    {
+      "L": 4,
+      "vertices": true,
+      "edges": true,
+      "detectors": true,
+      "H": true,
+      "logical": true
+    }
+  ],
+  "tests": [
+    {
+      "p": 0.2,
+      "q": 0.5,
+      "records": 2304,
+      "invalid": 0,
+      "exact_L2_risk": 0.23177534239999892,
+      "optimal_L2_risk": 0.23177534239999892,
+      "nonoptimal_logical_records": 0,
+      "nonMAP_sector_records": 4
+    },
+    {
+      "p": 0.4,
+      "q": 0.9,
+      "records": 2304,
+      "invalid": 0,
+      "exact_L2_risk": 0.3352633224383695,
+      "optimal_L2_risk": 0.3352633224383695,
+      "nonoptimal_logical_records": 0,
+      "nonMAP_sector_records": 305
+    },
+    {
+      "p": 0.5,
+      "q": 0,
+      "records": 64,
+      "invalid": 0,
+      "exact_L2_risk": 0.5,
+      "optimal_L2_risk": 0.5,
+      "nonoptimal_logical_records": 0,
+      "nonMAP_sector_records": 0
+    },
+    {
+      "p": 0.5,
+      "q": 1,
+      "records": 956,
+      "invalid": 0,
+      "exact_L2_risk": 0.3359375,
+      "optimal_L2_risk": 0.3359375,
+      "nonoptimal_logical_records": 0,
+      "nonMAP_sector_records": 0
+    },
+    {
+      "p": 0,
+      "q": 0.5,
+      "records": 1,
+      "invalid": 0,
+      "exact_L2_risk": 0.0,
+      "optimal_L2_risk": 0.0,
+      "nonoptimal_logical_records": 0,
+      "nonMAP_sector_records": 0
+    }
+  ]
+}

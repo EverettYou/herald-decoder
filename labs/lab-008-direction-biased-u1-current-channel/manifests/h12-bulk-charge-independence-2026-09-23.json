@@ -1,0 +1,22 @@
+{
+  "id": "lab008-h12-bulk-charge-independence-2026-09-23",
+  "status": "complete_exact_all_size_lemma",
+  "parent": "thermodynamic-theory-reorientation-2026-09-22.json",
+  "question": "Can the exact charge-prefix affinity contract throughout the square bulk, before any charge adjacent to the logical cut is revealed?",
+  "scope": "Canonical square graph with independent ternary edge currents, physical signed charges, rough boundary vertices unmeasured, and right-boundary cut parity H. Fixed 0<p<1 and any finite link field or edge-wise orientation bias preserving edge independence. This is an all-size structural statement, not a thermodynamic phase classification.",
+  "competing_outcomes": {
+    "bulk_independent": "Bulk charge depends on edge currents disjoint from the logical cut, so its entire joint record is independent of H and prefix affinity is unchanged.",
+    "bulk_informative": "An incidence or measurement convention couples bulk charge to cut currents, invalidating the disjoint-edge argument."
+  },
+  "method": "Prove independence from disjoint edge sigma-algebras; verify canonical geometry at the already-used L=3,5,7,11 sizes and compare the exact L=3 initial affinity against the retained H12 result. No current enumeration or stochastic sampling.",
+  "observables": [
+    "number of measured bulk and cut-adjacent charge vertices",
+    "intersection of bulk incidence edges and logical cut edges",
+    "cut-edge endpoint class",
+    "initial sector affinity discrepancy against retained L=3 exact data"
+  ],
+  "compute_budget": {"new_physical_samples": 0, "new_system_sizes": 0, "bootstrap_replicates": 0, "geometry_checks": 4},
+  "acceptance": "Every checked geometry has zero bulk-cut incidence overlap; all cut edges touch exactly one measured strip vertex and one unmeasured rough vertex; retained L=3 F_0 matches sqrt(pi_0 pi_1) to 1e-12. Then record the all-size proof, Bayes-risk consequence, and limitation that cut-adjacent strip charges remain unresolved.",
+  "stop_rule": "Stop and fail closed on any geometry or retained-evidence mismatch. Do not infer a p=.30 phase or extrapolate the strip contraction.",
+  "literature_basis": "The product-current and physical signed-charge observation are the already registered Lab 006/007 model; this transition derives a model-specific conditional-independence corollary, not a borrowed threshold theorem."
+}

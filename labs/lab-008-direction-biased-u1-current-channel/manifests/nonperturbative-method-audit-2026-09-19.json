@@ -1,0 +1,30 @@
+{
+  "id": "nonperturbative-method-audit-2026-09-19",
+  "status": "complete",
+  "registered_at": "2026-09-19T10:28:54Z",
+  "completed_at": "2026-09-19T10:28:54Z",
+  "question": "Does an established non-perturbative positive-transfer, correlation-decay, zero-free, or tensor-network method directly yield a controlled fair/intermediate L5 LER curve beyond p=.05?",
+  "scope": "Primary-source and Local-Wiki method audit only; no sampling, fit, threshold, decoder run, or new contraction.",
+  "inputs": [
+    "wiki/partition-function-ler.md",
+    "wiki/replica-boundary-ratios.md",
+    "wiki/complex-weights-and-cft.md",
+    "results/partition-oracle-synthesis-2026-09-19.json"
+  ],
+  "candidate_families": [
+    "polymer and algorithmic Pirogov-Sinai expansion",
+    "strong-spatial-mixing and zero-free approximate counting",
+    "certified positive multi-spin marginal polytopes",
+    "MPS or generic tensor-network contraction",
+    "physical even-moment hierarchy of the logical twist ratio"
+  ],
+  "acceptance": [
+    "State the exact LER target and why a scalar partition-function approximation is or is not sufficient.",
+    "For every candidate, identify the theorem assumptions, the first failed interface condition, and whether a bounded feasibility test remains meaningful.",
+    "Use primary papers and separate established results from project-specific inference.",
+    "Select at most one smallest target-preserving feasibility test; do not authorize a production curve or a fit."
+  ],
+  "stop_rule": "Stop if no existing theorem directly controls the public-record l1 norm. Preserve the unresolved analytic band and register only the cheapest diagnostic of the remaining target-preserving route.",
+  "result": "results/nonperturbative-method-audit-2026-09-19.json",
+  "decision": "No reviewed scalar partition, correlation-decay, positive-polytope, or MPS theorem directly controls the LER public-record l1 norm under the hard charge constraints. The physical even-moment hierarchy is the only reviewed route that preserves the estimand; its smallest next test is a no-new-sampling moment-degree feasibility matrix."
+}

@@ -1,0 +1,49 @@
+{
+  "model": "openai__gpt-6-astra",
+  "run": "run_02",
+  "native_backend": true,
+  "geometry": [
+    {
+      "L": 2,
+      "vertices": true,
+      "edges": true,
+      "detectors": true,
+      "H": true,
+      "logical": true
+    },
+    {
+      "L": 3,
+      "vertices": true,
+      "edges": true,
+      "detectors": true,
+      "H": true,
+      "logical": true
+    },
+    {
+      "L": 4,
+      "vertices": true,
+      "edges": true,
+      "detectors": true,
+      "H": true,
+      "logical": true
+    }
+  ],
+  "tests": [
+    {
+      "L": 3,
+      "observations": 15,
+      "coset_size": 1024,
+      "invalid": 0,
+      "nonoptimal_logical": 1,
+      "nonMAP_sector": 0
+    },
+    {
+      "L": 4,
+      "observations": 8,
+      "coset_size": 131072,
+      "invalid": 0,
+      "nonoptimal_logical": 2,
+      "nonMAP_sector": 0
+    }
+  ]
+}

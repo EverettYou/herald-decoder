@@ -2,6 +2,8 @@
 
 Run `../run_server.sh`, then open `http://127.0.0.1:8010`. The launcher provides `start`, `status`, `restart`, `stop`, and `logs`; automatically takes over an earlier Herald Decoder process on port 8010; and requires explicit `--takeover` before replacing an unrelated process. Port 8010 is fixed for this project. It always starts through `../run_research_python.sh`, so the live Lab 002 artifact uses the same fail-closed accelerated runtime as numerical research runs.
 
+For a dashboard that must survive terminal, Codex-session, and ordinary process cleanup, run `../run_server.sh install-service` once. It installs the project-specific macOS LaunchAgent `com.herald-decoder.dashboard`, starts it at login, and restarts it after an unexpected exit. Thereafter `start`, `status`, and `stop` recognise the persistent service; `uninstall-service` removes it deliberately.
+
 Supervising tools that need to retain the process in their own terminal use `../run_server.sh foreground`; this follows the same ownership checks and remains part of the single launcher interface.
 
 The dashboard is a read-only project map. It reads canonical status from `project.json`, `references/references.json`, `labs/labs.json`, each lab's `lab.json`, and the shared Wiki Markdown. Edit those research artifacts rather than editing the displayed dashboard text.

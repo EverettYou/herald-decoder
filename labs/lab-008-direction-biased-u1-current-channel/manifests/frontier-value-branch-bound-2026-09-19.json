@@ -1,0 +1,30 @@
+{
+  "id": "lab008-frontier-value-branch-bound-2026-09-19",
+  "status": "complete_rejected",
+  "authorization": "Continue exactly one bounded alternative priority for unresolved L5,p=.08 q=.5,.75 while retaining the promoted near-directed results.",
+  "question": "Does prioritizing charge prefixes by their maximum frontier-reveal value, rather than current risk mass, tighten the fair/intermediate certified intervals at B<=1024?",
+  "frozen_model": "Same exact L5 charge-prefix decision diagram, elimination order, parity convolution, activity baseline and p=.08 as the completed adaptive contract.",
+  "priority": {
+    "parent_risk": "Bayes-risk contribution with the current charge prefix and exact convolution of unassigned logical parities.",
+    "frontier_genie_risk": "Sum of Bayes risks after additionally revealing the current frontier-current tuple, with the same remaining-parity convolution.",
+    "value_score": "parent_risk-frontier_genie_risk, an upper bound on how much future observations can reduce that prefix. Keep the B largest scores, breaking ties by parent risk then prefix.",
+    "validity": "Priority affects only which nodes are refined; every dropped node retains its exact coarse-information upper bound, so certification is unchanged."
+  },
+  "matrix": {
+    "exact_gate": {"L": 3, "p_q": [[0.1,0.5],[0.3,0.75]], "prefix_budgets": [4,10000]},
+    "study": {"L": 5, "p": 0.08, "q": [0.5,0.75], "prefix_budgets": [64,256,1024]}
+  },
+  "acceptance": [
+    "L3 no-prune values reproduce exact LER; every pruned value remains an upper bound.",
+    "At fixed B, compare against the completed risk-priority result. Promote only if the activity interval width is reduced by at least 10%; report whether the new priority itself improves the old upper bound.",
+    "Pre-prune states remain <=2,000,000 and B<=1024. Preserve prior q=.97,1 promoted bounds unchanged.",
+    "If neither q cell passes, close priority-only refinement and identify structured state merging as the remaining contraction branch."
+  ],
+  "budget": {"maximum_preprune_states": 2000000, "maximum_prefix_budget": 1024, "no_sampling": true, "no_decoder_runs": true},
+  "stop_rule": "Stop after the frozen two cells and three budgets. Do not test another priority in this contract.",
+  "registered_at": "2026-09-19 06:47:41 UTC",
+  "result": "results/frontier-value-branch-bound-2026-09-19.json",
+  "decision": "Close priority-only refinement for q=.5,.75. At B=1024 the frontier-value score reduces fair-channel width by only 2.61%, below gate, and is worse than risk priority at q=.75; no cell passes 10%.",
+  "completed_at": "2026-09-19 06:47:41 UTC",
+  "next_action": "Register one certified structured state-merge feasibility test for q=.5,.75 at B<=1024; preserve all promoted near-directed bounds and do not test another priority."
+}

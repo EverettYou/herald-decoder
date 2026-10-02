@@ -1,0 +1,43 @@
+{
+  "id": "physical-moment-feasibility-2026-09-19",
+  "status": "complete",
+  "registered_at": "2026-09-19T11:36:24Z",
+  "question": "Is the physical even-moment hierarchy low-order enough to provide useful fair/intermediate LER intervals before any replica-transfer implementation is attempted?",
+  "scope": "No-new-sampling feasibility diagnostic. Exact L3 tables and frozen L5 posterior records only; no analytic curve, fit, threshold, decoder comparison, or contraction tuning.",
+  "moment_degrees": [1, 2, 4, 8, 16, 32],
+  "exact_L3_grid": {
+    "p": [0.08, 0.1, 0.3],
+    "q": [0.5, 0.75, 0.97, 1.0]
+  },
+  "stored_L5_cells": [
+    "results/square-mechanism-cells/square-L5-p10-q50.json",
+    "results/square-mechanism-cells/square-L5-p10-q75.json",
+    "results/square-mechanism-cells/square-L5-p10-q100.json",
+    "results/square-mechanism-cells/square-L5-p30-q50.json",
+    "results/square-mechanism-cells/square-L5-p30-q75.json",
+    "results/size-bias-extension-cells/square-L5-p30-q97-extension.json",
+    "results/square-mechanism-cells/square-L5-p30-q100.json"
+  ],
+  "estimand": {
+    "lower": "S_N = (1/2) sum_{k=1}^N a_k E[(1-m^2)^k]",
+    "width": "C_N E[(1-m^2)^(N+1)], where C_N = binom(2N,N)/(2*4^N)",
+    "truth_check": "Each exact or empirical Bayes risk must lie inside its own moment interval at every N."
+  },
+  "uncertainty": {
+    "L3": "exact finite-record-law sum",
+    "L5": "pointwise nonparametric bootstrap 95% interval for the remainder width, resampling independent physical records",
+    "replicates": 4000,
+    "seed": 919113624
+  },
+  "primary_gate": {
+    "cells": "stored L5 q=.5,.75 at p=.10,.30",
+    "pass": "At N=32 every primary cell has point width <=.01 and bootstrap-95 upper width <=.0125.",
+    "interpretation": "Passing only establishes that low-order physical moments are a potentially useful compression target; it does not solve how to calculate them analytically."
+  },
+  "secondary_diagnostics": "Exact L3 and near-directed L5 cells diagnose bias and size dependence but cannot rescue a failed primary gate.",
+  "stop_rule": "If any primary cell fails, close moment compression and do not implement replica transfer. If all pass, retain exactly one future interface-design step for physical R-to-1 moments.",
+  "compute_budget": "Twelve exact L3 enumerations, seven frozen L5 files and 4000 bootstrap replicates per L5 cell; no new physical records.",
+  "result": "results/physical-moment-feasibility-2026-09-19.json",
+  "decision": "close_physical_moment_compression",
+  "completed_at": "2026-09-19T11:40:00Z"
+}

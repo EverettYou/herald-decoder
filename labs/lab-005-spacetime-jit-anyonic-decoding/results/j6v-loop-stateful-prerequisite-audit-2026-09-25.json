@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j6v-loop-stateful-prerequisite-audit-2026-09-25",
+  "status": "passed_two_prerequisite_diagnostics_stateful_kernel_absent",
+  "contract_sha256": "8d12388aead1efbe5bc61d28b9b34e0d16fce78ef6453a2120542d207d9f3bae",
+  "pinned_input_checks": {
+    "jing_pdf": true,
+    "j6l_result": true,
+    "j6m_result": true,
+    "j6q_runner": true,
+    "frozen_integrated_history": true
+  },
+  "simple_loop_geometry": {
+    "minimum_cycle_length": 6,
+    "canonical_red_edge_ids_private": [
+      0,
+      1,
+      32,
+      30,
+      34,
+      35
+    ],
+    "witness_red_edge_ids_private": [
+      0,
+      1,
+      32,
+      30,
+      34,
+      35
+    ],
+    "witness_vertices_private": [
+      "blue:0",
+      "green:17",
+      "blue:20",
+      "green:21",
+      "blue:22",
+      "green:1"
+    ],
+    "all_red_edges_deleted_once": 36,
+    "cycle_candidates_found": 36,
+    "unique_edges_and_vertices": true,
+    "all_witness_vertex_degrees_two": true,
+    "claim_boundary": "Graph incidence only; no flux, charge, Born law or winding class inferred"
+  },
+  "stateful_multiround_interface": {
+    "three_block_projector_signature_present": false,
+    "builder_accepts_prior_action": false,
+    "provider_updates_next_first_observation": false,
+    "provider_updates_hidden_projector_state": false,
+    "action_feedback_kernel_present": false,
+    "first_missing_interface": "ordered third projector block plus action-conditioned postselected state carried into next first observation",
+    "claim_boundary": "Pinned source/data-flow audit only; absence in this caller does not prove physical D4 feedback absent"
+  },
+  "counters": {
+    "stochastic_histories": 0,
+    "schedule_arm_evaluations": 0,
+    "bootstrap_replicates": 0
+  },
+  "cpu_seconds": 0.012576999999999998,
+  "next_gate": "Preregister a capped exact ideal simple-loop first/action/second law and a separate action-conditioned three-block projector-state propagation fixture before any numeric multi-round kernel or noisy schedule sampling"
+}

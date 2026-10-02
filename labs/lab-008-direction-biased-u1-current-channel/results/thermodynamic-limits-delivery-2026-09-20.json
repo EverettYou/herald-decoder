@@ -1,0 +1,65 @@
+{
+  "status": "passed",
+  "updated": "2026-09-20T08:28:46.843Z",
+  "surfaces": [
+    {
+      "name": "report",
+      "url": "http://127.0.0.1:8010/lab?id=lab-008-direction-biased-u1-current-channel",
+      "file": "REPORT.md",
+      "sha256": "938ccf1f9e8d6a04fcd10f77b0df0b83aacaee31fa438071726117114b52325a",
+      "local_links": 17
+    },
+    {
+      "name": "thermodynamic-wiki",
+      "url": "http://127.0.0.1:8010/lab-wiki?lab=lab-008-direction-biased-u1-current-channel&page=thermodynamic-limits",
+      "file": "wiki/thermodynamic-limits.md",
+      "sha256": "748073f641d0c2411efd9948d0ed5ddebdbfae3848b883da500abb96f7ac6341",
+      "local_links": 9
+    },
+    {
+      "name": "thermodynamic-document",
+      "url": "http://127.0.0.1:8010/document?path=labs%2Flab-008-direction-biased-u1-current-channel%2Fwiki%2Fthermodynamic-limits.md",
+      "file": "wiki/thermodynamic-limits.md",
+      "sha256": "748073f641d0c2411efd9948d0ed5ddebdbfae3848b883da500abb96f7ac6341",
+      "local_links": 9
+    },
+    {
+      "name": "current-user-document",
+      "url": "http://127.0.0.1:8010/document?path=labs%2Flab-008-direction-biased-u1-current-channel%2Fwiki%2Fcomplex-weights-and-cft.md",
+      "file": "wiki/complex-weights-and-cft.md",
+      "sha256": "77e6d84124be72436cbdcdc7cc7862f8149139f28c291153f6e257be5d04d89c",
+      "local_links": 15
+    }
+  ],
+  "page_errors": [],
+  "file_sha256": {
+    "PLAN.md": "de8b8e4971c60cf90706b199dfb1363dd527752569847105067cbcce7cdbe4a3",
+    "REPORT.md": "938ccf1f9e8d6a04fcd10f77b0df0b83aacaee31fa438071726117114b52325a",
+    "lab.json": "55a7d7f0cbe9bac3393dc8438c210baf4ac53536e6759a9ec749f61ad7554672",
+    "wiki/index.md": "47c6b06d0f537fcbfee3b0d423ceb08a24ad230aa154d736aa8b3c015188c4f8",
+    "wiki/thermodynamic-limits.md": "748073f641d0c2411efd9948d0ed5ddebdbfae3848b883da500abb96f7ac6341",
+    "wiki/complex-weights-and-cft.md": "77e6d84124be72436cbdcdc7cc7862f8149139f28c291153f6e257be5d04d89c",
+    "scripts/check_thermodynamic_limits.py": "839636f78f0f48715fc6e2b736f37ea87fd898479763e2ac87f9dbc4b442f1af",
+    "scripts/verify_thermodynamic_delivery.cjs": "749f38f28d6716305a85a12419b30be4a33c49f4dc933520280404abda7bd9b7",
+    "results/thermodynamic-limits-2026-09-20.json": "60933a0334a3c2cd4e0eae3c20b4cccbb9a3ce7fb8c12b6f808614c539fffcfe",
+    "manifests/thermodynamic-limits-2026-09-20.json": "ae874294c96004d9fa406ac8ccb84ee8c66183ce1d736e0f14cd7a7fdd6a3578",
+    "manifests/square-midpoint-thermodynamics-2026-09-20.json": "0f454d490e907dc5db3ca0ad131caa5dbf940c7129418a7c938bcaa25b2055dd"
+  },
+  "screenshots": ".tmp/lab008-thermodynamic-delivery",
+  "scope": "Sufficient thermodynamic correctability, robust all-p honeycomb window, gap/entropy characterization and averaged bulk-density existence. No general square criticality or physical CFT claimed.",
+  "visual_review": {
+    "surfaces": [
+      "report",
+      "thermodynamic-wiki",
+      "thermodynamic-document",
+      "current-user-document"
+    ],
+    "detail_screenshots": [
+      "report-theorem.png",
+      "honeycomb-window.png",
+      "gap-criterion.png",
+      "bulk-density.png"
+    ],
+    "checked": "Read the rendered theorem, strict bias window, all-p supremum, convexity/high-p join, scope, gap criterion and bulk-density limitations. Formulas are legible and unclipped; links and result inputs match the active registry. No square threshold or physical CFT is asserted."
+  }
+}

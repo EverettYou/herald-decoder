@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j6b-d2-deterministic-residual-frame-trace-2026-09-23",
+  "status": "registered_before_fixture_execution",
+  "epistemic_role": "Bounded deterministic interface diagnosis following frozen J6B-D1; not a new stochastic or risk study",
+  "question": "Does the integrated public schedule-to-action path's terminal-residual flag equal an independently recomputed boundary of the final hidden physical chain XOR the latest committed public full-snapshot Pauli-frame estimate, and how do late faults and readout-only flips differ?",
+  "program_alignment": "Lab 005 fault-tolerance prerequisite: establish which public decision and private scoring semantics can explain the D1 high-residual pattern before considering more sampling.",
+  "research_basis": "Existing D4 projector-level five-round L=2 channel, J6B public E1/E2 interface, and unchanged Boolean-union private score. No new physical channel, scorer, schedule, external method or dependency.",
+  "competing_explanations": [
+    "A late physical fault after the final effective commit leaves a genuine terminal residual even when earlier actions were correct.",
+    "A readout-only flip can create a public action or defer without a matching physical fault, yielding a different residual or fail-closed path.",
+    "The frame/scorer implementation disagrees with the independently recomputed final-chain identity, indicating a correctness defect rather than evidence for either physical explanation."
+  ],
+  "frozen_inputs": {
+    "scripts/d4_integrated_history.py": "43d9d0d3e4771ccfc764f590f1843cda1e2a7fbce8dae96057710c413a0adb6e",
+    "scripts/e1_schedule_integration.py": "d1ba0232aa06ffe95c8c0673f8ef6371785ace568368cc73e30ddbadfb9d0398",
+    "scripts/d4_spatial_policy.py": "40d966e9db072e7ecffa013b1a68aa92cf0d4360e280e968bca152c86632db80",
+    "results/j6b-disjoint-temporal-handoff-rows-2026-09-23.jsonl": "620c5db65231e5c112a497397aad168eefd7d284f1af362c52d512c6741fbefe",
+    "results/j6b-d1-scored-mask-timing-audit-2026-09-23.json": "8d19cb6f384e53db6530fc9dabe18ad09e55e074575ce84c57b15c7c4db1eebf"
+  },
+  "fixed_channel_and_geometry": "Paper-normalized periodic D4 honeycomb L=2, five readout rounds, four physical transitions; p_data=p_syndrome=p_fp=p_fn=p_confuse=0 except one explicitly supplied deterministic syndrome-readout bit. Existing first-observation seeds (10,11,12,13,14), herald uniforms 0.5, and fixed SHA-256 keys derived from labels physical/first/second; no RNG history generation.",
+  "fixture_matrix": [
+    {"id": "zero", "transition_faults": [], "syndrome_readout_flips": []},
+    {"id": "early_edge_0", "transition_faults": [[0, 0]], "syndrome_readout_flips": []},
+    {"id": "late_edge_0", "transition_faults": [[3, 0]], "syndrome_readout_flips": []},
+    {"id": "early_then_late_edge_0", "transition_faults": [[0, 0], [3, 0]], "syndrome_readout_flips": []},
+    {"id": "readout_only", "transition_faults": [], "syndrome_readout_flips": [[1, 0]]}
+  ],
+  "public_interface": "Use run_e1_policy_matrix on each causal first record, both syndrome_only and heralded modes and all immediate, fixed_delay_1, jit_lyons_brown and explicitly noncausal offline_full_history branches. An even full-snapshot flux action is an absolute cumulative frame; same-round duplicates collapse and the latest action supersedes earlier actions. An odd temporal-boundary handoff is no physical correction. Public second record is action-conditioned, full-binary and relation-free. Hidden physical chain and post-flux relation enter only the private generation/scoring audit.",
+  "score_and_denominator": "Keep evaluate_schedule_arm's unconditional one-row-per-mode/schedule/history Boolean union of physical winding, union winding, charge winding and terminal residual; failed-closed counts as loss. The independent residual oracle is boundary(final physical XOR latest public full-snapshot flux correction), with zero correction when no physical commit. Do not redefine this scorer or condition risk on scored rows.",
+  "integrity_and_acceptance": [
+    "All pinned source and frozen J6B/D1 hashes match before and after execution; exactly five supplied histories and 40 public arm evaluations are retained, including failed-closed rows.",
+    "For every scored row, independently recomputed terminal residual matches the row flag and logical_failure equals the four unchanged Boolean flags; commit rounds and latest public correction are self-consistent.",
+    "Every physical commit has an action-bound public second record with relation-free public charge action; no private support, relation, physical chain, winding or score field appears in the public request/completion dictionaries.",
+    "Early and early-plus-late histories have identical public requests/actions through round 3; a future fault cannot change an earlier causal decision. Replaying the full 40-arm matrix is byte-identical.",
+    "Classify late fault, readout flip, cancellation and early fault by observed row/status/commit trace without imposing an expected schedule ranking or causal attribution to the stochastic D1 cohort."
+  ],
+  "budget": {"fixed_histories": 5, "unique_public_arm_rows": 40, "maximum_public_arm_evaluations_including_replay": 80, "new_stochastic_histories": 0, "new_production_arm_evaluations": 0, "bootstrap_replicates": 0, "runtime_seconds_max": 120, "new_external_dependencies": 0},
+  "stop_rule": "Fail closed on any hash, public/private leakage, replay, prefix, frame identity or denominator mismatch. On a failed gate preserve a censored machine-readable result, do not change the source or rescore J6B in this tick. Passing only supports deterministic interface consistency or a localized counterexample, not a mechanism fraction, conditional risk, JIT benefit or threshold.",
+  "planned_result": "results/j6b-d2-deterministic-residual-frame-trace-2026-09-23.json"
+}

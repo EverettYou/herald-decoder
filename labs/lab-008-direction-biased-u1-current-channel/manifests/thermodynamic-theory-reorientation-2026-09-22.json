@@ -1,0 +1,209 @@
+{
+  "id": "lab008-thermodynamic-theory-reorientation-2026-09-22",
+  "status": "active_theory",
+  "registered_at": "2026-09-22",
+  "authorization": "Researcher explicitly redirects Lab 008 from increasing finite sizes to formulating and solving a general thermodynamic-limit theory of decoding.",
+  "question": "What thermodynamic theory describes the undirected zero-field decoding model, and how does the link field alter its logical-defect statistics and correctable region?",
+  "scope": "Two-dimensional undirected underlying graphs, fixed aspect ratio, signed integer charges observed and binary logical parity. The effective link field h is tunable: h=0 is the undirected model; q=(1+tanh h)/2 gives finite bias; h tending to infinity gives one-way noise. Fix p and h before L tends to infinity. Reference arrows are coordinates. Square and honeycomb claims remain distinct.",
+  "frozen_work": [
+    "L13 preflight and acquisition",
+    "larger-size or denser parameter sweeps",
+    "further contraction optimization",
+    "critical-point or exponent fits to the existing three-size matrix"
+  ],
+  "competing_hypotheses": {
+    "positive_interface_cost": "A diverging typical gap is accompanied by a size-uniform bound on its lower tail; exponential suppression requires quantitative tail control.",
+    "sublinear_correctability": "The gap diverges on a sublinear scale and LER vanishes without positive line tension.",
+    "persistent_ambiguity": "A positive physical probability retains a bounded gap, yielding a nonzero limiting risk lower bound."
+  },
+  "existing_data_role": "Exploratory constraints and exact local algebra checks only. The existing L7/L9/L11 trends select neither a thermodynamic class nor a rate function.",
+  "methods": [
+    "audit of order of limits and unsupported assumptions",
+    "exact planted-sector distribution identities",
+    "size-uniform conditional tail lemmas",
+    "exact two-region gluing with boundary flux retained",
+    "primary-literature assumption audit"
+  ],
+  "compute_budget": {
+    "new_physical_samples": 0,
+    "new_system_sizes": 0,
+    "new_bootstrap_replicates": 0
+  },
+  "acceptance": [
+    {
+      "id": "freeze",
+      "status": "complete",
+      "evidence": "l13-boundary-mps-acquisition-2026-09-21.json"
+    },
+    {
+      "id": "reframe",
+      "status": "complete",
+      "evidence": "../wiki/thermodynamic-decoding-theory.md"
+    },
+    {
+      "id": "derive",
+      "status": "complete",
+      "evidence": "../wiki/thermodynamic-decoding-theory.md"
+    },
+    {
+      "id": "zero_field_response",
+      "status": "complete_exact_finite_volume",
+      "evidence": [
+        "../wiki/thermodynamic-decoding-theory.md",
+        "../results/zero-field-infinitesimal-response-2026-09-22.json"
+      ],
+      "established": "At fixed p, the h deformation is an exact exponential tilt by signed bias current J and activity N. Recordwise gap slope/curvature and the Bayes-risk one-sided cusp are exact conditional-moment identities. Existing L3 rational controls show a nonzero finite-volume |h| cusp with zero algebra failures.",
+      "target": "Control the L dependence of the sector-conditioned joint cumulant-generating functions and the tied-record cusp mass. Finite-volume reflection symmetry alone does not classify field relevance."
+    },
+    {
+      "id": "zero_field_window",
+      "status": "complete_exact_bound_and_obstruction",
+      "evidence": [
+        "../wiki/thermodynamic-decoding-theory.md",
+        "../results/zero-field-field-window-bound-2026-09-22.json"
+      ],
+      "established": "For every graph and observation map, h_L sqrt(E_L)->0 makes the Bayes-risk change vanish; the zero-field cusp is at most sqrt(Ep)/2. For every fixed p>0,h!=0, the complete product current laws separate in TV exponentially, so full-law proximity cannot decide fixed-h thermodynamic response.",
+      "target": "Exploit the physical observation map. For the canonical pure-gradient square bias, reduce fixed-h sector response to unmeasured rough-boundary charge generating functions and seek a size-uniform boundary estimate."
+    },
+    {
+      "id": "pure_gradient_boundary_generator",
+      "status": "complete_exact_reduction_and_pointwise_counterfamily",
+      "evidence": [
+        "pure-gradient-rough-boundary-generator-2026-09-22.json",
+        "../results/pure-gradient-rough-boundary-generator-2026-09-22.json",
+        "../wiki/thermodynamic-decoding-theory.md"
+      ],
+      "established": "At fixed physical p, the pure-gradient field is exactly a zero-field p_eff channel with a rough-charge fugacity. The measured factor cancels in sector ratios. A same-Q straight-row family refutes any L-uniform pointwise rough-fugacity bound, but not an averaged sector estimate.",
+      "target": "Prove or disprove an averaged sector-conditioned rough-charge generating-function estimate for the physical record law, with p_eff versus p kept explicit."
+    },
+    {
+      "id": "rough_charge_physical_average_cancellation",
+      "status": "complete_exact_signed_average_no_go",
+      "evidence": [
+        "rough-charge-physical-average-cancellation-2026-09-22.json",
+        "../results/rough-charge-physical-average-cancellation-2026-09-22.json",
+        "../wiki/thermodynamic-decoding-theory.md"
+      ],
+      "established": "Averaging the boundary-only signed generator predicts asymptotically certain rough parity, whereas the true global logical parity contrast is (1-2p)^L and vanishes. The measured-charge factor cancels recordwise in sector ratios but cannot be removed from the physical record average; Bayes risk uses the Q-wise absolute contrast.",
+      "target": "Bound or counterexample the physical-record absolute sector contrast c^E sum_Q exp[hM(Q)] |F_0(Q)-F_1(Q)|; signed averaging and boundary-only averaging are closed shortcuts."
+    },
+    {
+      "id": "physical_absolute_certified_wedge",
+      "status": "complete_existing_theorem_corollary",
+      "evidence": [
+        "physical-absolute-contrast-certified-wedge-2026-09-22.json",
+        "../results/physical-absolute-contrast-certified-wedge-2026-09-22.json",
+        "../wiki/thermodynamic-decoding-theory.md"
+      ],
+      "established": "The prior physical connected-current and parity-only Peierls bounds imply an explicit square size-uniform lower bound on the exact H12 absolute contrast in strict low-p and high-p sufficient regions for every fixed h. This is a corollary, not a new threshold; the p=.30 moderate-p regime is untouched.",
+      "target": "For fixed finite h outside the certified wedges, seek a physical-record absolute-contrast estimate or admissible counterfamily. Keep the already proved sufficient region separate from any sharp boundary claim."
+    },
+    {
+      "id": "h12_global_chernoff_audit",
+      "status": "complete_method_obstruction_only",
+      "evidence": [
+        "h12-global-chernoff-audit-2026-09-22.json",
+        "../results/h12-global-chernoff-audit-2026-09-22.json",
+        "../wiki/thermodynamic-decoding-theory.md"
+      ],
+      "established": "A single global Chernoff exponent cannot make the direction-weighted nonbacktracking path transfer summable at p=.30 for any finite h; its exact optimum is the old half-Chernoff value. This is only a failed sufficient method.",
+      "target": "Seek a physical-record H12 estimate or admissible counterfamily by a different route; do not infer a phase from failure of the path bound."
+    },
+    {
+      "id": "h12_physical_charge_prefix_affinity",
+      "status": "complete_exact_interface_finite_control_only",
+      "evidence": [
+        "h12-physical-charge-prefix-affinity-2026-09-23.json",
+        "../results/h12-physical-charge-prefix-affinity-2026-09-23.json",
+        "../wiki/thermodynamic-decoding-theory.md"
+      ],
+      "established": "The actual signed-charge record gives an exact sequential sector-Hellinger chain and two-sided H12 interval. All 18 existing-size controls pass; fair-noise supported prefixes can have conditional affinity one, so a naive per-prefix uniform gap is not general.",
+      "target": "Control the accumulated physical affinity contraction at fixed p=.30 and finite h, or find another direct H12 estimate/counterfamily. Terminal affinity is an exact transform of the existing posterior-gap law, so reanalysis of old gap cohorts is not independent evidence; finite L=3 factors cannot be extrapolated."
+    },
+    {
+      "id": "h12_bulk_charge_independence",
+      "status": "complete_exact_all_size_lemma",
+      "evidence": [
+        "h12-bulk-charge-independence-2026-09-23.json",
+        "../results/h12-bulk-charge-independence-2026-09-23.json",
+        "../wiki/thermodynamic-decoding-theory.md"
+      ],
+      "established": "On the canonical square, every measured charge outside the L-vertex cut-adjacent strip depends on edges disjoint from the logical cut. Its entire bulk record is independent of H for all L and fixed-p independent-current bias fields; bulk-only prefixes cannot contract sector affinity. The retained exact L3 initial affinity and four existing-size incidence audits pass.",
+      "target": "Seek a size-uniform estimate or counterfamily for the O(L) cut-adjacent strip charges conditioned on the bulk record. Independence of the bulk alone does not settle their conditional sector information."
+    },
+    {
+      "id": "h12_unrevealed_cut_parity_mask",
+      "status": "complete_exact_all_size_partial_record_bound",
+      "evidence": [
+        "h12-unrevealed-cut-parity-mask-2026-09-23.json",
+        "../results/h12-unrevealed-cut-parity-mask-2026-09-23.json",
+        "../wiki/thermodynamic-decoding-theory.md"
+      ],
+      "established": "For any partial record containing all bulk charges and charges from strip subset T, the L-|T| unobserved cut activities remain independent Bernoulli(p). Their parity masks the conditional logical polarization by exactly (1-2p)^(L-|T|), giving physical contrast at most |1-2p|^(L-|T|). All 24 retained-L3 subset cells and four existing-size geometry gates pass.",
+      "target": "The full-record p=.30 H12 problem is concentrated in the final cut-adjacent strip information, where the masking bound becomes trivial. Seek a genuinely size-uniform full-strip estimate or counterfamily; do not infer a phase from the partial-record bound."
+    },
+    {
+      "id": "h12_strip_only_parity_erasure",
+      "status": "complete_exact_all_size_partial_record_bound",
+      "evidence": [
+        "h12-strip-only-parity-erasure-2026-09-23.json",
+        "../results/h12-strip-only-parity-erasure-2026-09-23.json",
+        "../wiki/thermodynamic-decoding-theory.md"
+      ],
+      "established": "With bulk charges hidden, the complete right strip alone has absolute logical contrast at most delta(p,q)^L, where delta=|a^2-b^2-c^2|+2a|b-c|+2bc<1 for a=1-p,b=pq,c=p(1-q). Revealing hidden vertical strip currents supplies the product proof oracle; three retained L3 exact cells and four existing-size geometry gates pass. This is an upper bound on a deliberately incomplete record only.",
+      "target": "The full-record information, if asymptotically useful, must arise from bulk-strip correlations rather than either marginal record alone. Freeze further partial-record refinements and address joint physical H12 directly at fixed p=.30 and finite h."
+    },
+    {
+      "id": "h12_saturated_bulk_joint_record_witness",
+      "status": "complete_exact_all_size_joint_record_counterfamily",
+      "evidence": [
+        "h12-saturated-bulk-joint-record-witness-2026-09-23.json",
+        "../results/h12-saturated-bulk-joint-record-witness-2026-09-23.json",
+        "../wiki/thermodynamic-decoding-theory.md"
+      ],
+      "established": "A positive-probability public bulk-charge saturation event pins the entire hidden interface; the full strip-charge sum then determines logical parity exactly. This refutes every uniform-in-bulk-record extension of the strip-only erasure bound. Its probability decays exponentially, so it does not classify p=.30.",
+      "target": "Seek an estimate or counterfamily for the PHYSICAL average over typical bulk records at fixed p=.30 and finite h; pointwise conditional strip contraction is closed as a route."
+    },
+    {
+      "id": "boundary_proof",
+      "status": "partial_exact_reduction",
+      "evidence": [
+        "../wiki/thermodynamic-decoding-theory.md",
+        "../results/interface-cancellation-information-bound-2026-09-22.json",
+        "../results/square-directed-interface-contour-calibration-2026-09-22.json",
+        "../results/straight-separator-interface-parity-2026-09-22.json",
+        "../results/parity-aligned-interface-matrix-2026-09-22.json",
+        "../results/residual-directed-sector-transport-2026-09-22.json",
+        "../results/midpoint-residual-transport-multiplicity-2026-09-22.json"
+      ],
+      "established": "Complete flux reveals H; one-hot quotienting preserves exact gluing; residual-directed path flips preserve binary support, Q and logical switching. Every such flip has exponentially growing two-sided action distortion at fixed p!=1/2 by the all-zero witness. At p=1/2, an all-size row counterfamily gives the frozen rule inverse multiplicity at least L, so that deterministic map is also not a uniform coupling.",
+      "target": "Return to selector-independent capacity: prove or disprove normalized matching for the restricted opposite-rough-arc root-cycle graph, or obtain an averaged physical posterior-balance estimate. Do not tune another deterministic path order or reuse bounded-distortion residual-path coupling."
+    }
+  ],
+  "claim_boundary": "Exact identities and conditional theorems must be separated from unproved assumptions about this lattice. A reformulation is not a solved transition, a line-tension limit, or a new threshold.",
+  "completed_analysis": "Existing-data role and order-of-limits audit; exact zero-field fixed-p response, conditional gap derivatives and Bayes-risk cusp; universal h_L sqrt(E_L)->0 stability and fixed-h full-law separation; exact planted-gap identity, tail criterion, gluing and cancellation; inherited H12 certified wedges; global-Chernoff method obstruction; physical charge-prefix affinity chain with 18 exact existing-size controls; all-size bulk independence, unrevealed-cut parity masking, strip-only parity erasure, and a rare saturated-bulk JOINT-record counterfamily to pointwise conditional erasure, with geometry and retained exact controls; interface-TV/information bounds and directed-endpoint transport obstructions. No new physical data.",
+  "latest_theory_result": "../results/h12-saturated-bulk-joint-record-witness-2026-09-23.json",
+  "model_clarification": {
+    "date": "2026-09-22",
+    "user_confirmed_observation": "No preferred edge direction at zero field, but signed integer charge is always retained.",
+    "field_definition": "h=(1/2)log(q/(1-q)); q=(1+tanh h)/2.",
+    "fixed_jump_rate": true,
+    "charge_alphabet": "Edge current j in {0,+1,-1}; measured charge Q=D_M j in the integers.",
+    "activity_term": "tau(p,h)=log(2(1-p)cosh(h)/p); holding tau fixed would change p.",
+    "reference_invariance": "D -> DS, j -> Sj, h -> Sh leaves physical sector weights unchanged.",
+    "reflection_symmetry": "R_L(p,h)=R_L(p,-h) for a fixed bias pattern; no monotonicity or smoothness assumption.",
+    "evidence": "../wiki/thermodynamic-decoding-theory.md"
+  },
+  "next_theory_priority": "Outside the inherited certified wedges, seek a size-uniform estimate or admissible counterfamily for the PHYSICAL average over typical joint bulk-plus-strip records at fixed p=.30 and finite h. A rare saturated-bulk event has perfect conditional decoding, so uniform-in-bulk-record strip erasure is false but does not settle the average. Freeze further marginal/partial-record refinements and finite-data transforms; no size acquisition or threshold fit.",
+  "h12_joint_method_gate_2026_09_23": {
+    "status": "source_assumption_audit_only_no_phase_result",
+    "proof_obligation": "Control the physical bulk-conditioned strip contrast sum_b P(Q_B=b) A(Q_S|Q_B=b) uniformly in L, or give an admissible full-record counterfamily at fixed p=.30 and finite h.",
+    "closed_shortcuts": [
+      "Do not transfer Gaussian toric full-charge winding stiffness or an annealed R=2 replica weight to the bounded ternary rough-boundary partial-charge channel without a separate physical-law theorem.",
+      "Do not retune the global Peierls/path-counting Chernoff exponent at p=.30; the registered H14 optimization already fails its sufficient summability test.",
+      "Do not promote a marginal or incomplete-strip bound to the joint-record phase."
+    ],
+    "evidence": "../wiki/thermodynamic-decoding-theory.md"
+  },
+  "endpoint_branch_scope": "The existing boundary_proof acceptance item and transport counterfamilies concern the directed endpoint; retain them as a branch rather than identifying them with the full field-dependent theory."
+}

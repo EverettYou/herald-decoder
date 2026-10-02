@@ -1,0 +1,19 @@
+{
+  "id": "lab008-h12-saturated-bulk-joint-record-witness-2026-09-23",
+  "status": "complete_exact_all_size_joint_record_counterfamily",
+  "registered_at": "2026-09-23",
+  "parent": "thermodynamic-theory-reorientation-2026-09-22.json",
+  "question": "Can a positive-probability physical bulk-charge record make the complete cut-adjacent strip perfectly reveal logical parity, refuting a bulk-record-uniform extension of the strip-only erasure bound?",
+  "scope": "Canonical open-rough square with ternary independent currents, 0<p<1 and finite link field so every current sign has positive probability. All-size proof for L>=4; geometry controls only at previously used L=5,7,11. The full decoder sees signed charges only, never edge currents.",
+  "competing_outcomes": {
+    "saturated_witness": "Alternating maximum-magnitude charges on the last bulk column pin every horizontal interface current. Summed strip charge then fixes the sum and parity of the cut currents, so conditional logical contrast equals one on a positive-probability bulk event.",
+    "failed_witness": "The proposed saturation signs conflict on a shared edge, fail to pin an interface current, or do not fix cut parity from the public strip charges."
+  },
+  "method": "Set Q_(L-3,y)=(-1)^y deg(L-3,y) for every row. Check shared-edge consistency and pinning. Sum the L strip-charge equations to cancel internal vertical currents, obtaining sum(cut j)=sum(interface j)-sum(strip Q). Since j mod 2 equals |j| mod 2 for ternary currents, H is determined. Verify only the existing L=5,7,11 geometries with zero-cut and one-cut deterministic configurations; no probability sampling or exact decoder production.",
+  "physical_event_probability": "The saturation event fixes 2L horizontal and L-1 vertical currents. For a uniform finite q in (0,1), its probability is at least [p min(q,1-q)]^(3L-1)>0; at q=1/2 it is exactly (p/2)^(3L-1). The event is exponentially rare and cannot settle the physical average or thermodynamic phase.",
+  "compute_budget": {"new_physical_samples": 0, "new_system_sizes": 0, "bootstrap_replicates": 0, "existing_size_geometry_checks": 3, "deterministic_configurations": 6, "maximum_runtime_seconds": 30},
+  "acceptance": "All existing-size checks pass; the event is attainable with positive weight at every finite h; the full public charge record determines H on that event; report only the pointwise conditional obstruction and its weak physical-average lower bound, not a p=.30 phase.",
+  "stop_rule": "Fail closed on any graph-incidence, current-sign, charge-sum, public-information, or parity mismatch. Do not extrapolate this rare event to typical bulk records, finite-h relevance, or a threshold.",
+  "result": "../results/h12-saturated-bulk-joint-record-witness-2026-09-23.json",
+  "accepted_claim": "The public full record determines H exactly on a positive-probability but exponentially rare saturated-bulk event. Pointwise conditional strip erasure is false; physical-average p=.30 behavior remains open."
+}

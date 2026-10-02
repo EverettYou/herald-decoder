@@ -1,0 +1,33 @@
+{
+  "id": "lab008-pure-gradient-rough-boundary-generator-2026-09-22",
+  "status": "verified_exact_reduction_and_pointwise_counterfamily",
+  "contract": "../manifests/pure-gradient-rough-boundary-generator-2026-09-22.json",
+  "runner": "../scripts/verify_pure_gradient_boundary_generator.py",
+  "theorem": {
+    "domain": "Canonical square_graph(L), L>=3, 0<p<1, finite real h, signed interior charge Q and binary occupancy logical sector a.",
+    "p_effective": "p_eff=p/[p+(1-p)cosh(h)]",
+    "edge_normalization": "c=[p+(1-p)cosh(h)]/cosh(h)",
+    "charge_potential": "psi(x,y)=x+y; M(Q)=sum_{v interior} psi_v Q_v; B(Q_rough)=sum_{v rough} psi_v Q_v",
+    "identity": "Z_a(Q;p,h)=c^E exp[h M(Q)] sum_{Q_rough} exp[h B(Q_rough)] Z_a(Q,Q_rough;p_eff,0)",
+    "sector_ratio": "Z_0(Q;p,h)/Z_1(Q;p,h) is the ratio of the two rough-charge generating functions at p_eff; common c^E exp[h M(Q)] cancels.",
+    "proof": "For j=0, c(1-p_eff)=1-p; for j=+-1, c(p_eff/2)exp(hj)=p exp(hj)/(2cosh h). Multiply over edges and use sum_e j_e=sum_v psi_v Q_v by incidence summation. Group exact weights by measured Q, rough Q and logical sector."
+  },
+  "counterfamily": {
+    "domain": "Every canonical square L>=3; fixed nonzero h; compare two admissible configurations with the same measured interior Q=0.",
+    "zero_current": "j_e=0 for all edges, B=0, logical sector 0.",
+    "row_current": "j_e=+1 on one complete left-to-right horizontal row, zero elsewhere; B=L-1, logical sector 1.",
+    "rough_fugacity_ratio": "exp[h(L-1)] relative to the zero current; the larger of the forward and inverse ratios is exp[|h|(L-1)].",
+    "conclusion": "No L-independent two-sided pointwise bound on rough-boundary fugacity exists for fixed h!=0 on the admitted current space, even at measured Q=0. This does not bound or separate the summed sector posteriors or Bayes risk."
+  },
+  "controls": {
+    "new_system_sizes": 0,
+    "new_physical_samples": 0,
+    "states_per_cell": 6561,
+    "p": 0.3,
+    "rows": [
+      {"L": 3, "h": 0.1, "p_eff": 0.29895279298819466, "c": 0.998506224685968, "charge_sector_cells": 682, "max_gradient_error": 0, "max_state_weight_error": 2.7755575615628914e-17, "max_charge_sector_error": 9.71445146547012e-17},
+      {"L": 3, "h": 0.5, "p_eff": 0.27539657262311235, "c": 0.9660456651910222, "charge_sector_cells": 682, "max_gradient_error": 0, "max_state_weight_error": 1.3877787807814457e-17, "max_charge_sector_error": 3.469446951953614e-17}
+    ]
+  },
+  "claim_boundary": "The identity is finite-volume exact. The counterfamily rejects only pointwise uniform rough-fugacity control; averaged sector-generating-function balance and fixed-h thermodynamic decoding remain open."
+}

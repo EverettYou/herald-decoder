@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j6l-periodic-kagome-incidence-2026-09-24",
+  "status": "registered_before_exact_execution",
+  "epistemic_role": "Exact combinatorial embedding of the source-local 12-qubit star into the paper-normalized periodic L=2 kagome incidence complex; no quantum state or sequential instrument",
+  "question": "Can the Lab 004 blue/green honeycomb be completed by its contractible hexagonal faces into the three-color kagome star and qubit incidence required by Jing A2 and Iqbal Fig. 2?",
+  "source_basis": [
+    "Jing et al. 2025 Appendix A.1 Eq. A2-A4 and Appendix C.1: red-X errors, blue/green honeycomb, nine stars per source unit cell",
+    "Iqbal et al. 2023 Fig. 2 and caption: kagome vertices are physical qubits, one 12-body star has six outer X qubits, six ring CZ factors and two three-body color triangles"
+  ],
+  "pinned_inputs": {
+    "jing_pdf_sha256": "7a17c3d3a743e3dec4266b64d0321a6af7a5eeacfab67e42b9ec77d30b65a2ac",
+    "iqbal_pdf_sha256": "87348ee1e7659c140a2f1005a7037a19ddbf65bba146717f8a4778e7830f946b",
+    "j6k_result_sha256": "32995759043380acc4076df05f085c0b3fbc1c6b84915bbec9dc17f5b250a02c",
+    "lab004_honeycomb_sha256": "0895892c00f1f629ec469d4f7b4e42fb8e83bc07666edbc3b8fc26a1f30eb869",
+    "lab004_cycle_catalog_sha256": "1a6d5c6114e639dc7dae9424ac86d4647662d2247bd19e5a72b4bc1307f3fa57"
+  },
+  "fixed_geometry": "paper_periodic_honeycomb(2): 24 blue/green star centers and 36 red-qubit edges; 12 contractible six-edge faces become red star centers. Physical kagome qubits are links between differently colored centers in the face-completed triangulation: BG red, BF green, GF blue.",
+  "matrix": {
+    "center_colors": ["blue", "green", "red"],
+    "red_edge_cases": ["every one of the 36 BG edges", "one fixed two-edge path through a blue/green center"],
+    "independent_unit": "the complete deterministic L=2 incidence complex; no stochastic samples"
+  },
+  "acceptance": [
+    "All pinned inputs match and the cycle catalog gives exactly 12 distinct contractible six-edge faces, with every BG edge in exactly two faces and every BG vertex in exactly three faces.",
+    "The completed complex contains 12 centers per color and 36 physical qubits per color, 108 total, matching nine stars and 27 qubits per paper unit cell at L=2.",
+    "Each of 36 stars has a unique six-site alternating-color inner ring, six outer qubits of its own color, six adjacent CZ pairs, and two disjoint three-body Z triangles. Each physical qubit is shared by exactly two star inner rings and two same-color star outer supports, with no duplicated qubit IDs.",
+    "The Lab 004 red-edge ID maps one-to-one to a red physical qubit incident on its blue and green endpoint stars; endpoint parity of all 36 one-edge errors and the fixed two-edge path is preserved.",
+    "Do not infer ground-space rank, inter-star projector compatibility, conditional E2, logical risk, or a physical five-round schedule from incidence checks."
+  ],
+  "budget": {"max_faces": 12, "max_stars": 36, "max_physical_qubits": 108, "max_cpu_seconds": 20, "new_dependencies": 0, "stochastic_histories": 0, "schedule_arm_evaluations": 0, "bootstrap_replicates": 0},
+  "stop_rule": "Fail closed if a pinned source changes, face/edge multiplicity is ambiguous, any ring cannot be uniquely ordered, source-normalized counts or overlap checks fail, or the red-edge identity cannot be preserved. A pass authorizes only a separately registered operator-state and sequential-measurement fixture.",
+  "planned_result": "results/j6l-periodic-kagome-incidence-2026-09-24.json"
+}

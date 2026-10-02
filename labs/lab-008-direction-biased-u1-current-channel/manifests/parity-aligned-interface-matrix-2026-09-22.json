@@ -1,0 +1,43 @@
+{
+  "id": "lab008-parity-aligned-interface-matrix-2026-09-22",
+  "status": "complete_mixed_outcome",
+  "registered_at": "2026-09-22",
+  "parent_contract": "thermodynamic-theory-reorientation-2026-09-22.json",
+  "question": "Can the deterministic logical parity be removed from complete straight-separator flux while preserving exact gluing and producing overlapping sector-conditioned residual interface laws?",
+  "claim_boundary": "This is a finite exact construction/obstruction test. Passing establishes a nontrivial aligned observable, not thermodynamic contraction, correctability, a threshold or a phase.",
+  "frozen_model": {
+    "geometry": "canonical square",
+    "channel": "q=1 binary currents",
+    "public_record": "all measured integer charges Q",
+    "logical_label": "absolute right-cut activity parity H",
+    "sizes": [3, 4],
+    "physical_p": [0.3, 0.5],
+    "separator_x": "floor((L-1)/2)",
+    "separator_anchors": "every vertex of the declared separator column",
+    "independent_unit": "complete exact binary-current state space; no sampling"
+  },
+  "candidate_matrix": {
+    "minimal_odd_shift": "For anchor s, e_s is the one-hot interface vector and bar_U_s=U-H e_s.",
+    "why_all_anchors": "Every l1-minimal odd translation is covered, preventing post-result anchor selection.",
+    "exact_gluing_test": "For sector h, substitute U=bar_U_s+h e_s in both regional factors and verify that summing bar_U_s reproduces the original Z_h exactly.",
+    "support_test": "For every ambiguous Q, compare supp(bar_pi_0^Q) and supp(bar_pi_1^Q).",
+    "weighted_test": "Compute aligned TV, aligned revealed Bayes risk, cancellation, and E[r(Q) bar_d_Q] exactly at each frozen p.",
+    "physical_transport_audit": "Record that sector-specific interface reindexing is not by itself a feasible, weight-preserving binary-current bijection; a fixed geometric path is rejected if it changes Q or its weight distortion grows with path length."
+  },
+  "acceptance": {
+    "integrity": "zero parity-normalization failures and exact reproduction of both sector weights for every Q, p and anchor",
+    "nontriviality": "at least one ambiguous Q has overlapping aligned supports and bar_d_Q<1",
+    "promotion": "promote only as an exact aligned observable if integrity and nontriviality pass; do not claim contraction unless its risk-weighted TV is bounded uniformly in L",
+    "rejection": "reject any interpretation as a physical sector-switching coupling if binary feasibility, Q preservation or action-weight control is absent"
+  },
+  "compute_budget": {
+    "new_physical_samples": 0,
+    "new_system_sizes": 0,
+    "bootstrap_replicates": 0,
+    "maximum_binary_states": 262400,
+    "maximum_parameter_cells": 14
+  },
+  "stop_rule": "Stop after all L3/L4 anchors and p values are evaluated. Do not add L, p or alternate shifts in response to the result.",
+  "result": "../results/parity-aligned-interface-matrix-2026-09-22.json",
+  "outcome": "Exact reindexing and nontrivial support overlap pass; interpretation as a physical coupling is rejected because fixed-path transport fails Q preservation and lacks size-uniform action distortion. No uniform contraction is established."
+}

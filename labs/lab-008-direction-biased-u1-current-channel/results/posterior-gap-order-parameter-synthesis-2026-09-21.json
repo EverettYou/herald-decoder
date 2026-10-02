@@ -1,0 +1,997 @@
+{
+  "status": "complete_order_parameter_identity_existing_data_insufficient_go_boundary_acquisition",
+  "accessed": "2026-09-21",
+  "new_physical_record_samples": 0,
+  "decoder_runs": 0,
+  "new_bootstrap_replicates": 0,
+  "existing_result_families_used": 5,
+  "scientific_role": "decoder-independent transition-observable synthesis",
+  "order_parameter": {
+    "signed_gap": "DeltaF(Q)=log[Z0(Q)/Z1(Q)]",
+    "absolute_gap": "G_L(Q)=abs(DeltaF(Q))",
+    "record_risk": "b(G)=1/(1+exp(G))",
+    "physical_Bayes_risk": "R_L=E_Q[b(G_L)]",
+    "correctability_equivalence": "R_L->0 if and only if G_L->infinity in physical-record probability",
+    "fixed_threshold_bounds": "C_L(a)/(1+exp(a)) <= R_L <= C_L(a)/2 + (1-C_L(a))/(1+exp(a)), where C_L(a)=Pr[G_L<=a]"
+  },
+  "discriminating_protocol": {
+    "typical_stiffness": {
+      "signature": "For every fixed a, C_L(a)->0; lower quantiles and the median of G_L move outward; R_L->0.",
+      "warning": "A growing median alone is insufficient because a shrinking low-gap tail can dominate R_L."
+    },
+    "finite_gap_phase": {
+      "signature": "There exist finite a and c>0 with liminf C_L(a)>=c, which forces liminf R_L>=c/(1+exp(a)).",
+      "warning": "Finite sizes with nonzero C_L(a) do not establish a positive limiting c."
+    },
+    "broad_rare_event_mixture": {
+      "signature": "Typical gap quantiles grow while B_L(a)=E[b(G_L) 1(G_L<=a)]/R_L approaches one for a fixed or slowly growing a.",
+      "warning": "This can coexist with R_L->0; it identifies the mechanism controlling the decay, not a separate noncorrectable phase by itself."
+    },
+    "required_observables": [
+      "Bayes risk R_L",
+      "CDF C_L(a) on a fixed a grid",
+      "median and lower quartile of abs(DeltaF)",
+      "risk-concentration fraction B_L(a)",
+      "conditional logical entropy as a cross-check"
+    ],
+    "independent_unit": "one physical current/charge record",
+    "uncertainty": "record-level intervals for every CDF, quantile, risk and risk-concentration observable; size contrasts use independent resampling and q contrasts may use only registered matched streams"
+  },
+  "existing_p030_square_rows": [
+    {
+      "id": "square-L5-p30-q50",
+      "L": 5,
+      "p": 0.3,
+      "q": 0.5,
+      "records": 512,
+      "Bayes_risk": 0.3778377104611573,
+      "Bayes_risk_interval95": [
+        0.37019005251534126,
+        0.38505844415812246
+      ],
+      "conditional_logical_entropy_bits": 0.9339243565669884,
+      "median_abs_DeltaF": 0.45410555498270133,
+      "lower_quartile_abs_DeltaF": 0.1966640963090549,
+      "infinite_gap_fraction": 0.0,
+      "threshold_diagnostics": {
+        "0.5": {
+          "low_gap_probability": 0.548828125,
+          "risk_share_from_low_gap_records": 0.6409332359295365,
+          "risk_lower_bound": 0.20720493736773216,
+          "risk_upper_bound": 0.44474979393041325
+        },
+        "1.0": {
+          "low_gap_probability": 0.876953125,
+          "risk_share_from_low_gap_records": 0.9280380768738147,
+          "risk_lower_bound": 0.23584901991235901,
+          "risk_upper_bound": 0.47156896395763614
+        },
+        "2.0": {
+          "low_gap_probability": 0.998046875,
+          "risk_share_from_low_gap_records": 0.9994353000649726,
+          "risk_lower_bound": 0.11897010381504311,
+          "risk_upper_bound": 0.49925625570707444
+        },
+        "4.0": {
+          "low_gap_probability": 1.0,
+          "risk_share_from_low_gap_records": 1.0,
+          "risk_lower_bound": 0.01798620996209156,
+          "risk_upper_bound": 0.5
+        }
+      },
+      "integrity": {
+        "raw_file": "labs/lab-008-direction-biased-u1-current-channel/results/square-mechanism-cells/square-L5-p30-q50.json",
+        "raw_sha256": "ee330b11812112538190688a09c166f234d64c2ac8d6f9eb845602d2d6abf9dd",
+        "maximum_record_logistic_identity_error": 1.1102230246251565e-16,
+        "finite_gap_records": 512
+      }
+    },
+    {
+      "id": "square-L7-p30-q50",
+      "L": 7,
+      "p": 0.3,
+      "q": 0.5,
+      "records": 512,
+      "Bayes_risk": 0.3557750558635634,
+      "Bayes_risk_interval95": [
+        0.3477069761526057,
+        0.36357593042961744
+      ],
+      "conditional_logical_entropy_bits": 0.9097028718920568,
+      "median_abs_DeltaF": 0.5424983587982714,
+      "lower_quartile_abs_DeltaF": 0.2632355892384846,
+      "infinite_gap_fraction": 0.0,
+      "threshold_diagnostics": {
+        "0.5": {
+          "low_gap_probability": 0.451171875,
+          "risk_share_from_low_gap_records": 0.556985597912896,
+          "risk_lower_bound": 0.17033573143041328,
+          "risk_upper_bound": 0.43279087486773216
+        },
+        "1.0": {
+          "low_gap_probability": 0.796875,
+          "risk_share_from_low_gap_records": 0.8797376057983407,
+          "risk_lower_bound": 0.21431269515421486,
+          "risk_upper_bound": 0.45306622621578024
+        },
+        "2.0": {
+          "low_gap_probability": 0.9921875,
+          "risk_share_from_low_gap_records": 0.997936122949875,
+          "risk_lower_bound": 0.11827164919381976,
+          "risk_upper_bound": 0.4970250228282978
+        },
+        "4.0": {
+          "low_gap_probability": 1.0,
+          "risk_share_from_low_gap_records": 1.0,
+          "risk_lower_bound": 0.01798620996209156,
+          "risk_upper_bound": 0.5
+        }
+      },
+      "integrity": {
+        "raw_file": "labs/lab-008-direction-biased-u1-current-channel/results/square-mechanism-cells/square-L7-p30-q50.json",
+        "raw_sha256": "477c2176a3635b8893ef5d3a774b576a5acf530ff1925affec7561a662e12c87",
+        "maximum_record_logistic_identity_error": 1.1102230246251565e-16,
+        "finite_gap_records": 512
+      }
+    },
+    {
+      "id": "square-L9-p30-q50-extension",
+      "L": 9,
+      "p": 0.3,
+      "q": 0.5,
+      "records": 192,
+      "Bayes_risk": 0.34300616169223314,
+      "Bayes_risk_interval95": [
+        0.3282639117842884,
+        0.357806629680185
+      ],
+      "conditional_logical_entropy_bits": 0.8905889588434239,
+      "median_abs_DeltaF": 0.5919807425639138,
+      "lower_quartile_abs_DeltaF": 0.2911113326407079,
+      "infinite_gap_fraction": 0.0,
+      "threshold_diagnostics": {
+        "0.5": {
+          "low_gap_probability": 0.4479166666666667,
+          "risk_share_from_low_gap_records": 0.5725036601975596,
+          "risk_lower_bound": 0.16910675789916932,
+          "risk_upper_bound": 0.43239224423230943
+        },
+        "1.0": {
+          "low_gap_probability": 0.7447916666666666,
+          "risk_share_from_low_gap_records": 0.8530353484388793,
+          "risk_lower_bound": 0.20030532945786095,
+          "risk_upper_bound": 0.4410319252454675
+        },
+        "2.0": {
+          "low_gap_probability": 0.984375,
+          "risk_share_from_low_gap_records": 0.9955706895211123,
+          "risk_lower_bound": 0.11734037636552197,
+          "risk_upper_bound": 0.4940500456565956
+        },
+        "4.0": {
+          "low_gap_probability": 1.0,
+          "risk_share_from_low_gap_records": 1.0,
+          "risk_lower_bound": 0.01798620996209156,
+          "risk_upper_bound": 0.5
+        }
+      },
+      "integrity": {
+        "raw_file": "labs/lab-008-direction-biased-u1-current-channel/results/size-bias-extension-cells/square-L9-p30-q50-extension.json",
+        "raw_sha256": "c309bd07d15a97129746299cbd1bc0c16c1b2e993d247522938f8d992aaf2196",
+        "maximum_record_logistic_identity_error": 1.1102230246251565e-16,
+        "finite_gap_records": 192
+      }
+    },
+    {
+      "id": "square-L5-p30-q75",
+      "L": 5,
+      "p": 0.3,
+      "q": 0.75,
+      "records": 512,
+      "Bayes_risk": 0.3483554754840551,
+      "Bayes_risk_interval95": [
+        0.3398686897375068,
+        0.3569425790559602
+      ],
+      "conditional_logical_entropy_bits": 0.8995379107395871,
+      "median_abs_DeltaF": 0.5808449339662534,
+      "lower_quartile_abs_DeltaF": 0.28481790712266425,
+      "infinite_gap_fraction": 0.0,
+      "threshold_diagnostics": {
+        "0.5": {
+          "low_gap_probability": 0.43359375,
+          "risk_share_from_low_gap_records": 0.5477695655012089,
+          "risk_lower_bound": 0.16369927436169587,
+          "risk_upper_bound": 0.43063826943644956
+        },
+        "1.0": {
+          "low_gap_probability": 0.775390625,
+          "risk_share_from_low_gap_records": 0.8688148901971801,
+          "risk_lower_bound": 0.2085346568044689,
+          "risk_upper_bound": 0.44810207706552624
+        },
+        "2.0": {
+          "low_gap_probability": 0.98828125,
+          "risk_share_from_low_gap_records": 0.9969606124540795,
+          "risk_lower_bound": 0.11780601277967086,
+          "risk_upper_bound": 0.4955375342424467
+        },
+        "4.0": {
+          "low_gap_probability": 1.0,
+          "risk_share_from_low_gap_records": 1.0,
+          "risk_lower_bound": 0.01798620996209156,
+          "risk_upper_bound": 0.5
+        }
+      },
+      "integrity": {
+        "raw_file": "labs/lab-008-direction-biased-u1-current-channel/results/square-mechanism-cells/square-L5-p30-q75.json",
+        "raw_sha256": "f9cc171d6ce309569f387f800ef627721a2948e3ec2820317a6e4fa45b4c5cec",
+        "maximum_record_logistic_identity_error": 1.1102230246251565e-16,
+        "finite_gap_records": 512
+      }
+    },
+    {
+      "id": "square-L7-p30-q75",
+      "L": 7,
+      "p": 0.3,
+      "q": 0.75,
+      "records": 512,
+      "Bayes_risk": 0.3274040572480502,
+      "Bayes_risk_interval95": [
+        0.31817331846562147,
+        0.33660693166405237
+      ],
+      "conditional_logical_entropy_bits": 0.8706910968651171,
+      "median_abs_DeltaF": 0.6616507072199702,
+      "lower_quartile_abs_DeltaF": 0.33501995808743007,
+      "infinite_gap_fraction": 0.0,
+      "threshold_diagnostics": {
+        "0.5": {
+          "low_gap_probability": 0.380859375,
+          "risk_share_from_low_gap_records": 0.5076109821018082,
+          "risk_lower_bound": 0.14378990315554366,
+          "risk_upper_bound": 0.4241804531426018
+        },
+        "1.0": {
+          "low_gap_probability": 0.701171875,
+          "risk_share_from_low_gap_records": 0.8277343987588446,
+          "risk_lower_bound": 0.18857416068716457,
+          "risk_upper_bound": 0.43095319818283057
+        },
+        "2.0": {
+          "low_gap_probability": 0.962890625,
+          "risk_share_from_low_gap_records": 0.9898596863564194,
+          "risk_lower_bound": 0.11477937608770304,
+          "risk_upper_bound": 0.4858688584344145
+        },
+        "4.0": {
+          "low_gap_probability": 1.0,
+          "risk_share_from_low_gap_records": 1.0,
+          "risk_lower_bound": 0.01798620996209156,
+          "risk_upper_bound": 0.5
+        }
+      },
+      "integrity": {
+        "raw_file": "labs/lab-008-direction-biased-u1-current-channel/results/square-mechanism-cells/square-L7-p30-q75.json",
+        "raw_sha256": "05be6e6d90f04007ae8100e77b042f2ba7c491c760eddcf1cbdc768cb3c0e51c",
+        "maximum_record_logistic_identity_error": 1.1102230246251565e-16,
+        "finite_gap_records": 512
+      }
+    },
+    {
+      "id": "square-L9-p30-q75-extension",
+      "L": 9,
+      "p": 0.3,
+      "q": 0.75,
+      "records": 192,
+      "Bayes_risk": 0.32341447709641175,
+      "Bayes_risk_interval95": [
+        0.3060904935222552,
+        0.33969347941496086
+      ],
+      "conditional_logical_entropy_bits": 0.8582364489825126,
+      "median_abs_DeltaF": 0.6934272109857625,
+      "lower_quartile_abs_DeltaF": 0.286613823137353,
+      "infinite_gap_fraction": 0.0,
+      "threshold_diagnostics": {
+        "0.5": {
+          "low_gap_probability": 0.3697916666666667,
+          "risk_share_from_low_gap_records": 0.511799303648291,
+          "risk_lower_bound": 0.1396113931493142,
+          "risk_upper_bound": 0.4228251089821645
+        },
+        "1.0": {
+          "low_gap_probability": 0.6822916666666666,
+          "risk_share_from_low_gap_records": 0.8233053968856332,
+          "risk_lower_bound": 0.18349649062223625,
+          "risk_upper_bound": 0.4265907640810922
+        },
+        "2.0": {
+          "low_gap_probability": 0.9322916666666666,
+          "risk_share_from_low_gap_records": 0.9802146785726032,
+          "risk_lower_bound": 0.11113189084353667,
+          "risk_upper_bound": 0.4742168645119142
+        },
+        "4.0": {
+          "low_gap_probability": 1.0,
+          "risk_share_from_low_gap_records": 1.0,
+          "risk_lower_bound": 0.01798620996209156,
+          "risk_upper_bound": 0.5
+        }
+      },
+      "integrity": {
+        "raw_file": "labs/lab-008-direction-biased-u1-current-channel/results/size-bias-extension-cells/square-L9-p30-q75-extension.json",
+        "raw_sha256": "930beb94ae94aad3691d6a0062f5daded4560c378a4aa11fad4618623052524d",
+        "maximum_record_logistic_identity_error": 1.1102230246251565e-16,
+        "finite_gap_records": 192
+      }
+    },
+    {
+      "id": "square-L5-p30-q90-extension",
+      "L": 5,
+      "p": 0.3,
+      "q": 0.9,
+      "records": 256,
+      "Bayes_risk": 0.30128392758872463,
+      "Bayes_risk_interval95": [
+        0.28659442391313067,
+        0.31650695372562987
+      ],
+      "conditional_logical_entropy_bits": 0.8277437837303769,
+      "median_abs_DeltaF": 0.7697952085857898,
+      "lower_quartile_abs_DeltaF": 0.3873408330870548,
+      "infinite_gap_fraction": 0.0,
+      "threshold_diagnostics": {
+        "0.5": {
+          "low_gap_probability": 0.32421875,
+          "risk_share_from_low_gap_records": 0.4681182150148604,
+          "risk_lower_bound": 0.12240576371189871,
+          "risk_upper_bound": 0.4172442800862467
+        },
+        "1.0": {
+          "low_gap_probability": 0.6171875,
+          "risk_share_from_low_gap_records": 0.7835396016101035,
+          "risk_lower_bound": 0.16598728350179387,
+          "risk_upper_bound": 0.4115478878682013
+        },
+        "2.0": {
+          "low_gap_probability": 0.90234375,
+          "risk_share_from_low_gap_records": 0.9722978691916792,
+          "risk_lower_bound": 0.10756201166839513,
+          "risk_upper_bound": 0.4628127853537224
+        },
+        "4.0": {
+          "low_gap_probability": 1.0,
+          "risk_share_from_low_gap_records": 1.0,
+          "risk_lower_bound": 0.01798620996209156,
+          "risk_upper_bound": 0.5
+        }
+      },
+      "integrity": {
+        "raw_file": "labs/lab-008-direction-biased-u1-current-channel/results/size-bias-extension-cells/square-L5-p30-q90-extension.json",
+        "raw_sha256": "a771ac5b88ce84bf864793506e4d1b52f224969586d17a6ef0dabc076ebb99ad",
+        "maximum_record_logistic_identity_error": 1.1102230246251565e-16,
+        "finite_gap_records": 256
+      }
+    },
+    {
+      "id": "square-L7-p30-q90-extension",
+      "L": 7,
+      "p": 0.3,
+      "q": 0.9,
+      "records": 256,
+      "Bayes_risk": 0.24937216823524672,
+      "Bayes_risk_interval95": [
+        0.23341132794995967,
+        0.2655193128403967
+      ],
+      "conditional_logical_entropy_bits": 0.7378556028851628,
+      "median_abs_DeltaF": 1.1826514527865646,
+      "lower_quartile_abs_DeltaF": 0.5658593057229414,
+      "infinite_gap_fraction": 0.0,
+      "threshold_diagnostics": {
+        "0.5": {
+          "low_gap_probability": 0.21484375,
+          "risk_share_from_low_gap_records": 0.3723453862404112,
+          "risk_lower_bound": 0.08111225306210156,
+          "risk_upper_bound": 0.4038502907360439
+        },
+        "1.0": {
+          "low_gap_probability": 0.45703125,
+          "risk_share_from_low_gap_records": 0.6882291046133618,
+          "risk_lower_bound": 0.12291463398550559,
+          "risk_upper_bound": 0.37454241238448954
+        },
+        "2.0": {
+          "low_gap_probability": 0.80078125,
+          "risk_share_from_low_gap_records": 0.9408594866819375,
+          "risk_lower_bound": 0.09545546490052383,
+          "risk_upper_bound": 0.4241380821215937
+        },
+        "4.0": {
+          "low_gap_probability": 0.99609375,
+          "risk_share_from_low_gap_records": 0.9998676470067883,
+          "risk_lower_bound": 0.017915951329427138,
+          "risk_upper_bound": 0.4981171336326644
+        }
+      },
+      "integrity": {
+        "raw_file": "labs/lab-008-direction-biased-u1-current-channel/results/size-bias-extension-cells/square-L7-p30-q90-extension.json",
+        "raw_sha256": "b730d7e21f1aa5c123bbed0eba8dee45eea5b719034180e8939368fe3f0c1bee",
+        "maximum_record_logistic_identity_error": 1.1102230246251565e-16,
+        "finite_gap_records": 256
+      }
+    },
+    {
+      "id": "square-L9-p30-q90-extension",
+      "L": 9,
+      "p": 0.3,
+      "q": 0.9,
+      "records": 192,
+      "Bayes_risk": 0.2449550838571719,
+      "Bayes_risk_interval95": [
+        0.2262542983512126,
+        0.2641573229085085
+      ],
+      "conditional_logical_entropy_bits": 0.7234669175556435,
+      "median_abs_DeltaF": 1.1899274830626032,
+      "lower_quartile_abs_DeltaF": 0.587789793587729,
+      "infinite_gap_fraction": 0.0,
+      "threshold_diagnostics": {
+        "0.5": {
+          "low_gap_probability": 0.20833333333333334,
+          "risk_share_from_low_gap_records": 0.3732477020470062,
+          "risk_lower_bound": 0.07865430599961364,
+          "risk_upper_bound": 0.40305302946519844
+        },
+        "1.0": {
+          "low_gap_probability": 0.4322916666666667,
+          "risk_share_from_low_gap_records": 0.6650288914791362,
+          "risk_lower_bound": 0.11626113527973748,
+          "risk_upper_bound": 0.368826119423591
+        },
+        "2.0": {
+          "low_gap_probability": 0.78125,
+          "risk_share_from_low_gap_records": 0.9448778343293837,
+          "risk_lower_bound": 0.09312728282977933,
+          "risk_upper_bound": 0.41670063919233824
+        },
+        "4.0": {
+          "low_gap_probability": 0.96875,
+          "risk_share_from_low_gap_records": 0.998307903152217,
+          "risk_lower_bound": 0.017424140900776198,
+          "risk_upper_bound": 0.48493706906131534
+        }
+      },
+      "integrity": {
+        "raw_file": "labs/lab-008-direction-biased-u1-current-channel/results/size-bias-extension-cells/square-L9-p30-q90-extension.json",
+        "raw_sha256": "6cef7f4c0280bb830a5b702f1a02c0fe2053dd42ea91ebe57184b201a8099c58",
+        "maximum_record_logistic_identity_error": 1.1102230246251565e-16,
+        "finite_gap_records": 192
+      }
+    },
+    {
+      "id": "square-L5-p30-q97-extension",
+      "L": 5,
+      "p": 0.3,
+      "q": 0.97,
+      "records": 256,
+      "Bayes_risk": 0.21641624255652045,
+      "Bayes_risk_interval95": [
+        0.20219337834196272,
+        0.23188823211409812
+      ],
+      "conditional_logical_entropy_bits": 0.6872325612432014,
+      "median_abs_DeltaF": 1.403631311502001,
+      "lower_quartile_abs_DeltaF": 0.852093395850485,
+      "infinite_gap_fraction": 0.0,
+      "threshold_diagnostics": {
+        "0.5": {
+          "low_gap_probability": 0.12109375,
+          "risk_share_from_low_gap_records": 0.2448302660812632,
+          "risk_lower_bound": 0.04571781536227542,
+          "risk_upper_bound": 0.39236972843587
+        },
+        "1.0": {
+          "low_gap_probability": 0.32421875,
+          "risk_share_from_low_gap_records": 0.5412542659029006,
+          "risk_lower_bound": 0.0871958514598031,
+          "risk_upper_bound": 0.34385494491019203
+        },
+        "2.0": {
+          "low_gap_probability": 0.765625,
+          "risk_share_from_low_gap_records": 0.9262417992160026,
+          "risk_lower_bound": 0.09126473717318376,
+          "risk_upper_bound": 0.4107506848489338
+        },
+        "4.0": {
+          "low_gap_probability": 0.98046875,
+          "risk_share_from_low_gap_records": 0.9991013020862969,
+          "risk_lower_bound": 0.017634916798769457,
+          "risk_upper_bound": 0.4905856681633221
+        }
+      },
+      "integrity": {
+        "raw_file": "labs/lab-008-direction-biased-u1-current-channel/results/size-bias-extension-cells/square-L5-p30-q97-extension.json",
+        "raw_sha256": "01b1c6538b43af2ef21a84708bf4437f950db4cfbdba4fd8a0abee76f0855ab9",
+        "maximum_record_logistic_identity_error": 1.1102230246251565e-16,
+        "finite_gap_records": 256
+      }
+    },
+    {
+      "id": "square-L7-p30-q97-extension",
+      "L": 7,
+      "p": 0.3,
+      "q": 0.97,
+      "records": 256,
+      "Bayes_risk": 0.19719260997872506,
+      "Bayes_risk_interval95": [
+        0.1790389643906096,
+        0.2151350488077783
+      ],
+      "conditional_logical_entropy_bits": 0.6136645184687411,
+      "median_abs_DeltaF": 1.7325022941604402,
+      "lower_quartile_abs_DeltaF": 0.7133960640424388,
+      "infinite_gap_fraction": 0.0,
+      "threshold_diagnostics": {
+        "0.5": {
+          "low_gap_probability": 0.171875,
+          "risk_share_from_low_gap_records": 0.3788006646970023,
+          "risk_lower_bound": 0.06488980244968125,
+          "risk_upper_bound": 0.3985883663484642
+        },
+        "1.0": {
+          "low_gap_probability": 0.328125,
+          "risk_share_from_low_gap_records": 0.6351408371375241,
+          "risk_lower_bound": 0.08824640388702966,
+          "risk_upper_bound": 0.34475751748296546
+        },
+        "2.0": {
+          "low_gap_probability": 0.6015625,
+          "risk_share_from_low_gap_records": 0.8831510238957962,
+          "risk_lower_bound": 0.07170800777893009,
+          "risk_upper_bound": 0.34827616424318747
+        },
+        "4.0": {
+          "low_gap_probability": 0.95703125,
+          "risk_share_from_low_gap_records": 0.9975991645051782,
+          "risk_lower_bound": 0.01721336500278294,
+          "risk_upper_bound": 0.4792884699593086
+        }
+      },
+      "integrity": {
+        "raw_file": "labs/lab-008-direction-biased-u1-current-channel/results/size-bias-extension-cells/square-L7-p30-q97-extension.json",
+        "raw_sha256": "14708e0d1ff3a02002c6b912dc7e8ca6558221c19ff90863d21440479a842d42",
+        "maximum_record_logistic_identity_error": 1.1102230246251565e-16,
+        "finite_gap_records": 256
+      }
+    },
+    {
+      "id": "square-L9-p30-q97-extension",
+      "L": 9,
+      "p": 0.3,
+      "q": 0.97,
+      "records": 192,
+      "Bayes_risk": 0.1560341549470008,
+      "Bayes_risk_interval95": [
+        0.135657750949341,
+        0.1759112597225988
+      ],
+      "conditional_logical_entropy_bits": 0.5160591024843103,
+      "median_abs_DeltaF": 2.1257972995332524,
+      "lower_quartile_abs_DeltaF": 1.0436085934285342,
+      "infinite_gap_fraction": 0.0,
+      "threshold_diagnostics": {
+        "0.5": {
+          "low_gap_probability": 0.11458333333333333,
+          "risk_share_from_low_gap_records": 0.3171110840427559,
+          "risk_lower_bound": 0.04325986829978749,
+          "risk_upper_bound": 0.3915724671650246
+        },
+        "1.0": {
+          "low_gap_probability": 0.23958333333333334,
+          "risk_share_from_low_gap_records": 0.5719801708089143,
+          "risk_lower_bound": 0.064433882203228,
+          "risk_upper_bound": 0.3242992058334338
+        },
+        "2.0": {
+          "low_gap_probability": 0.453125,
+          "risk_share_from_low_gap_records": 0.8236358200468651,
+          "risk_lower_bound": 0.054013824041272016,
+          "risk_upper_bound": 0.29175159798084555
+        },
+        "4.0": {
+          "low_gap_probability": 0.8802083333333334,
+          "risk_share_from_low_gap_records": 0.9942029047509963,
+          "risk_lower_bound": 0.01583161189371601,
+          "risk_upper_bound": 0.4422587647350422
+        }
+      },
+      "integrity": {
+        "raw_file": "labs/lab-008-direction-biased-u1-current-channel/results/size-bias-extension-cells/square-L9-p30-q97-extension.json",
+        "raw_sha256": "82ffff33c6855974e901f2c3d2ddb2110879cba3b29c198b90a56f3324ad8a99",
+        "maximum_record_logistic_identity_error": 1.1102230246251565e-16,
+        "finite_gap_records": 192
+      }
+    },
+    {
+      "id": "square-L5-p30-q100-extension",
+      "L": 5,
+      "p": 0.3,
+      "q": 1,
+      "records": 256,
+      "Bayes_risk": 0.15356040447787966,
+      "Bayes_risk_interval95": [
+        0.13740692668045165,
+        0.17001161319467273
+      ],
+      "conditional_logical_entropy_bits": 0.5141090170016421,
+      "median_abs_DeltaF": 2.050304809325605,
+      "lower_quartile_abs_DeltaF": 1.1384089862060633,
+      "infinite_gap_fraction": 0.0625,
+      "threshold_diagnostics": {
+        "0.5": {
+          "low_gap_probability": 0.09375,
+          "risk_share_from_low_gap_records": 0.2671387541272435,
+          "risk_lower_bound": 0.035394437699826135,
+          "risk_upper_bound": 0.3890212310983193
+        },
+        "1.0": {
+          "low_gap_probability": 0.21484375,
+          "risk_share_from_low_gap_records": 0.5159740148867489,
+          "risk_lower_bound": 0.05778038349745989,
+          "risk_upper_bound": 0.31858291287253526
+        },
+        "2.0": {
+          "low_gap_probability": 0.4921875,
+          "risk_share_from_low_gap_records": 0.8468958013196638,
+          "risk_lower_bound": 0.058670188182760985,
+          "risk_upper_bound": 0.3066264838393566
+        },
+        "4.0": {
+          "low_gap_probability": 0.83984375,
+          "risk_share_from_low_gap_records": 0.9924114233968634,
+          "risk_lower_bound": 0.015105606022850333,
+          "risk_upper_bound": 0.4228024789392412
+        }
+      },
+      "integrity": {
+        "raw_file": "labs/lab-008-direction-biased-u1-current-channel/results/size-bias-extension-cells/square-L5-p30-q100-extension.json",
+        "raw_sha256": "281eda09bcc50a113c48c27a6846effde36383050b96d2a7359422f39b1cd74b",
+        "maximum_record_logistic_identity_error": 1.1102230246251565e-16,
+        "finite_gap_records": 240
+      }
+    },
+    {
+      "id": "square-L7-p30-q100-extension",
+      "L": 7,
+      "p": 0.3,
+      "q": 1,
+      "records": 256,
+      "Bayes_risk": 0.09101449280577281,
+      "Bayes_risk_interval95": [
+        0.07676977760867447,
+        0.10557647692832102
+      ],
+      "conditional_logical_entropy_bits": 0.3411840496936086,
+      "median_abs_DeltaF": 3.2477815025369465,
+      "lower_quartile_abs_DeltaF": 1.933303606901203,
+      "infinite_gap_fraction": 0.0546875,
+      "threshold_diagnostics": {
+        "0.5": {
+          "low_gap_probability": 0.05078125,
+          "risk_share_from_low_gap_records": 0.2364215053775216,
+          "risk_lower_bound": 0.019171987087405824,
+          "risk_upper_bound": 0.3837593067107396
+        },
+        "1.0": {
+          "low_gap_probability": 0.10546875,
+          "risk_share_from_low_gap_records": 0.42886316317323514,
+          "risk_lower_bound": 0.028364915535116674,
+          "risk_upper_bound": 0.29331088083487844
+        },
+        "2.0": {
+          "low_gap_probability": 0.26953125,
+          "risk_share_from_low_gap_records": 0.7417567959673714,
+          "risk_lower_bound": 0.03212891257627387,
+          "risk_upper_bound": 0.22183963444584368
+        },
+        "4.0": {
+          "low_gap_probability": 0.69140625,
+          "risk_share_from_low_gap_records": 0.977839001164876,
+          "risk_lower_bound": 0.012435777981602367,
+          "risk_upper_bound": 0.3512535569804892
+        }
+      },
+      "integrity": {
+        "raw_file": "labs/lab-008-direction-biased-u1-current-channel/results/size-bias-extension-cells/square-L7-p30-q100-extension.json",
+        "raw_sha256": "99ef26eeebedcc14fbcd6d9e6f9ce3ef49a0a09d5ac64b3499a2ef84b316d86c",
+        "maximum_record_logistic_identity_error": 1.1102230246251565e-16,
+        "finite_gap_records": 242
+      }
+    },
+    {
+      "id": "square-L9-p30-q100-extension",
+      "L": 9,
+      "p": 0.3,
+      "q": 1,
+      "records": 192,
+      "Bayes_risk": 0.04598949863346411,
+      "Bayes_risk_interval95": [
+        0.03637856904524658,
+        0.056860565125004335
+      ],
+      "conditional_logical_entropy_bits": 0.20876347578137763,
+      "median_abs_DeltaF": 4.16313655079923,
+      "lower_quartile_abs_DeltaF": 2.9737183953031674,
+      "infinite_gap_fraction": 0.015625,
+      "threshold_diagnostics": {
+        "0.5": {
+          "low_gap_probability": 0.010416666666666666,
+          "risk_share_from_low_gap_records": 0.09067160925301575,
+          "risk_lower_bound": 0.003932715299980682,
+          "risk_upper_bound": 0.3788162868314981
+        },
+        "1.0": {
+          "low_gap_probability": 0.026041666666666668,
+          "risk_share_from_low_gap_records": 0.20090366379741934,
+          "risk_lower_bound": 0.007003682848176957,
+          "risk_upper_bound": 0.2749585718551515
+        },
+        "2.0": {
+          "low_gap_probability": 0.11458333333333333,
+          "risk_share_from_low_gap_records": 0.5407711998172731,
+          "risk_lower_bound": 0.013658668148367636,
+          "risk_upper_bound": 0.16283592054041657
+        },
+        "4.0": {
+          "low_gap_probability": 0.4791666666666667,
+          "risk_share_from_low_gap_records": 0.9296536824406019,
+          "risk_lower_bound": 0.008618392273502206,
+          "risk_upper_bound": 0.2489511510219227
+        }
+      },
+      "integrity": {
+        "raw_file": "labs/lab-008-direction-biased-u1-current-channel/results/size-bias-extension-cells/square-L9-p30-q100-extension.json",
+        "raw_sha256": "9f3a107172ecb567b03f6b31d3e4699828d43cda5038176765a9dcf233b9f341",
+        "maximum_record_logistic_identity_error": 5.551115123125783e-17,
+        "finite_gap_records": 189
+      }
+    }
+  ],
+  "existing_p030_square_trajectories": [
+    {
+      "q": 0.5,
+      "sizes": [
+        5,
+        7,
+        9
+      ],
+      "Bayes_risk": [
+        0.3778377104611573,
+        0.3557750558635634,
+        0.34300616169223314
+      ],
+      "median_abs_DeltaF": [
+        0.45410555498270133,
+        0.5424983587982714,
+        0.5919807425639138
+      ],
+      "low_gap_probability_at_1": [
+        0.876953125,
+        0.796875,
+        0.7447916666666666
+      ],
+      "risk_share_from_abs_gap_at_most_1": [
+        0.9280380768738147,
+        0.8797376057983407,
+        0.8530353484388793
+      ]
+    },
+    {
+      "q": 0.75,
+      "sizes": [
+        5,
+        7,
+        9
+      ],
+      "Bayes_risk": [
+        0.3483554754840551,
+        0.3274040572480502,
+        0.32341447709641175
+      ],
+      "median_abs_DeltaF": [
+        0.5808449339662534,
+        0.6616507072199702,
+        0.6934272109857625
+      ],
+      "low_gap_probability_at_1": [
+        0.775390625,
+        0.701171875,
+        0.6822916666666666
+      ],
+      "risk_share_from_abs_gap_at_most_1": [
+        0.8688148901971801,
+        0.8277343987588446,
+        0.8233053968856332
+      ]
+    },
+    {
+      "q": 0.9,
+      "sizes": [
+        5,
+        7,
+        9
+      ],
+      "Bayes_risk": [
+        0.30128392758872463,
+        0.24937216823524672,
+        0.2449550838571719
+      ],
+      "median_abs_DeltaF": [
+        0.7697952085857898,
+        1.1826514527865646,
+        1.1899274830626032
+      ],
+      "low_gap_probability_at_1": [
+        0.6171875,
+        0.45703125,
+        0.4322916666666667
+      ],
+      "risk_share_from_abs_gap_at_most_1": [
+        0.7835396016101035,
+        0.6882291046133618,
+        0.6650288914791362
+      ]
+    },
+    {
+      "q": 0.97,
+      "sizes": [
+        5,
+        7,
+        9
+      ],
+      "Bayes_risk": [
+        0.21641624255652045,
+        0.19719260997872506,
+        0.1560341549470008
+      ],
+      "median_abs_DeltaF": [
+        1.403631311502001,
+        1.7325022941604402,
+        2.1257972995332524
+      ],
+      "low_gap_probability_at_1": [
+        0.32421875,
+        0.328125,
+        0.23958333333333334
+      ],
+      "risk_share_from_abs_gap_at_most_1": [
+        0.5412542659029006,
+        0.6351408371375241,
+        0.5719801708089143
+      ]
+    },
+    {
+      "q": 1,
+      "sizes": [
+        5,
+        7,
+        9
+      ],
+      "Bayes_risk": [
+        0.15356040447787966,
+        0.09101449280577281,
+        0.04598949863346411
+      ],
+      "median_abs_DeltaF": [
+        2.050304809325605,
+        3.2477815025369465,
+        4.16313655079923
+      ],
+      "low_gap_probability_at_1": [
+        0.21484375,
+        0.10546875,
+        0.026041666666666668
+      ],
+      "risk_share_from_abs_gap_at_most_1": [
+        0.5159740148867489,
+        0.42886316317323514,
+        0.20090366379741934
+      ]
+    }
+  ],
+  "finite_evidence_assessment": {
+    "q_0.50": "Large low-gap mass and Bayes risk persist over L=5,7,9; typical stiffness is not supported on these sizes, but a finite-gap thermodynamic phase is not established.",
+    "q_0.75": "Risk and low-gap mass change only modestly; the sampled sizes do not discriminate persistent finite gaps from slow crossover.",
+    "q_0.90": "L7-to-L9 risk and C_L(1) are nearly flat within existing uncertainty, so the branch remains unresolved rather than classified.",
+    "q_0.97": "Median gaps move outward and L9 risk is lower, but C_L(1) remains substantial; typical stiffness and rare-tail control are not separated.",
+    "q_1.00": "Risk and C_L(1) fall strongly and the median gap moves beyond four by L9, giving finite-size stiffness evidence only; no square asymptotic phase is claimed.",
+    "global_decision": "The existing three-size design cannot discriminate the three registered asymptotic alternatives. Means or slopes alone would be misleading; fixed-gap CDF and risk-concentration scaling are required."
+  },
+  "go_no_go": {
+    "decision": "GO_REGISTER_ONLY",
+    "reason": "The q=0.90 and q=0.97 trajectories bracket qualitatively different finite-size behavior at p=0.30, but no larger size or interior q=0.94 trajectory exists.",
+    "smallest_future_matrix": {
+      "fixed_physical_error_rate": 0.3,
+      "q_values": [
+        0.9,
+        0.94,
+        0.97
+      ],
+      "sizes": [
+        7,
+        9,
+        11
+      ],
+      "reuse_existing_without_pooling": [
+        {
+          "q": 0.9,
+          "sizes": [
+            7,
+            9
+          ]
+        },
+        {
+          "q": 0.97,
+          "sizes": [
+            7,
+            9
+          ]
+        }
+      ],
+      "new_cells": [
+        {
+          "q": 0.9,
+          "L": 11
+        },
+        {
+          "q": 0.94,
+          "L": 7
+        },
+        {
+          "q": 0.94,
+          "L": 9
+        },
+        {
+          "q": 0.94,
+          "L": 11
+        },
+        {
+          "q": 0.97,
+          "L": 11
+        }
+      ],
+      "purpose": "separate persistent low-gap mass from outward-moving typical gaps and quantify whether low-gap records dominate the remaining Bayes risk"
+    },
+    "sampling_status": "not_started"
+  },
+  "claim_boundary": {
+    "established": "The posterior-gap distribution is an exact decoder-independent order parameter for optimal correctability, and the listed observables form a discriminating protocol.",
+    "not_established": "No square threshold, critical q, scaling exponent, BKT universality class or thermodynamic phase is inferred from L=5,7,9.",
+    "selector_dependency": "none"
+  },
+  "source_sha256": {
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/synthesize_posterior_gap_order_parameter.py": "fd0bfac86c5745cd6857bbf9a00c7d4f2ef98bbea39744351fd6eccb1af117e3",
+    "labs/lab-008-direction-biased-u1-current-channel/results/size-bias-distributions-2026-09-18.json": "7c9ad00cbef92e48ce360463f61710b6d37c10ba7cb2b58242269615579eda86",
+    "labs/lab-008-direction-biased-u1-current-channel/results/thermodynamic-limits-2026-09-20.json": "60933a0334a3c2cd4e0eae3c20b4cccbb9a3ce7fb8c12b6f808614c539fffcfe",
+    "labs/lab-008-direction-biased-u1-current-channel/results/replica-boundary-theory-2026-09-18.json": "479b6f8630cfa116aa7c20031fb7494adf8572d4acf39474eea9dab1ccc84fc2",
+    "labs/lab-008-direction-biased-u1-current-channel/results/square-midpoint-thermodynamics-2026-09-20.json": "77d46c83b845c667f923098cbd052fcc209ac61a806913678421ccbb54593128",
+    "labs/lab-008-direction-biased-u1-current-channel/results/midpoint-alternative-theorem-interface-audit-2026-09-21.json": "3ac9c0c6eb485201b3a201242b0bf2556955b09f86c608a42e1352635d20a89f",
+    "labs/lab-008-direction-biased-u1-current-channel/results/square-mechanism-cells/square-L5-p30-q50.json": "ee330b11812112538190688a09c166f234d64c2ac8d6f9eb845602d2d6abf9dd",
+    "labs/lab-008-direction-biased-u1-current-channel/results/square-mechanism-cells/square-L7-p30-q50.json": "477c2176a3635b8893ef5d3a774b576a5acf530ff1925affec7561a662e12c87",
+    "labs/lab-008-direction-biased-u1-current-channel/results/size-bias-extension-cells/square-L9-p30-q50-extension.json": "c309bd07d15a97129746299cbd1bc0c16c1b2e993d247522938f8d992aaf2196",
+    "labs/lab-008-direction-biased-u1-current-channel/results/square-mechanism-cells/square-L5-p30-q75.json": "f9cc171d6ce309569f387f800ef627721a2948e3ec2820317a6e4fa45b4c5cec",
+    "labs/lab-008-direction-biased-u1-current-channel/results/square-mechanism-cells/square-L7-p30-q75.json": "05be6e6d90f04007ae8100e77b042f2ba7c491c760eddcf1cbdc768cb3c0e51c",
+    "labs/lab-008-direction-biased-u1-current-channel/results/size-bias-extension-cells/square-L9-p30-q75-extension.json": "930beb94ae94aad3691d6a0062f5daded4560c378a4aa11fad4618623052524d",
+    "labs/lab-008-direction-biased-u1-current-channel/results/size-bias-extension-cells/square-L5-p30-q90-extension.json": "a771ac5b88ce84bf864793506e4d1b52f224969586d17a6ef0dabc076ebb99ad",
+    "labs/lab-008-direction-biased-u1-current-channel/results/size-bias-extension-cells/square-L7-p30-q90-extension.json": "b730d7e21f1aa5c123bbed0eba8dee45eea5b719034180e8939368fe3f0c1bee",
+    "labs/lab-008-direction-biased-u1-current-channel/results/size-bias-extension-cells/square-L9-p30-q90-extension.json": "6cef7f4c0280bb830a5b702f1a02c0fe2053dd42ea91ebe57184b201a8099c58",
+    "labs/lab-008-direction-biased-u1-current-channel/results/size-bias-extension-cells/square-L5-p30-q97-extension.json": "01b1c6538b43af2ef21a84708bf4437f950db4cfbdba4fd8a0abee76f0855ab9",
+    "labs/lab-008-direction-biased-u1-current-channel/results/size-bias-extension-cells/square-L7-p30-q97-extension.json": "14708e0d1ff3a02002c6b912dc7e8ca6558221c19ff90863d21440479a842d42",
+    "labs/lab-008-direction-biased-u1-current-channel/results/size-bias-extension-cells/square-L9-p30-q97-extension.json": "82ffff33c6855974e901f2c3d2ddb2110879cba3b29c198b90a56f3324ad8a99",
+    "labs/lab-008-direction-biased-u1-current-channel/results/size-bias-extension-cells/square-L5-p30-q100-extension.json": "281eda09bcc50a113c48c27a6846effde36383050b96d2a7359422f39b1cd74b",
+    "labs/lab-008-direction-biased-u1-current-channel/results/size-bias-extension-cells/square-L7-p30-q100-extension.json": "99ef26eeebedcc14fbcd6d9e6f9ce3ef49a0a09d5ac64b3499a2ef84b316d86c",
+    "labs/lab-008-direction-biased-u1-current-channel/results/size-bias-extension-cells/square-L9-p30-q100-extension.json": "9f3a107172ecb567b03f6b31d3e4699828d43cda5038176765a9dcf233b9f341"
+  }
+}

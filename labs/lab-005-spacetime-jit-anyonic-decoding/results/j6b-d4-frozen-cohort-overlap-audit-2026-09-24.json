@@ -1,0 +1,168 @@
+{
+  "checks": {
+    "exact_replay_private_public_action_binding_and_d1_balance": true,
+    "jit_rows": 512,
+    "original_rows": 2176,
+    "selected_d3_jit_arms_checked": 16,
+    "stochastic_arm_rows": 2048,
+    "stochastic_histories": 256
+  },
+  "claim_boundary": "Full frozen-cohort descriptive overlap only, in the phenomenological L=2 five-round model; not an exclusive or causal mechanism ranking, conditional risk, schedule advantage, scaling or threshold.",
+  "contract_sha256": "be09947517a019e09fce397f900dbf7f6ca16f4f8f13497a136f43dc1210d61f",
+  "elapsed_seconds": 72.3145,
+  "flag_bit_order": [
+    "no_physical_commit",
+    "physical_transition_after_last_commit",
+    "last_commit_public_hidden_readout_mismatch",
+    "residual_immediately_after_last_commit"
+  ],
+  "new_bootstrap_replicates": 0,
+  "new_stochastic_seeds": 0,
+  "new_unique_production_arm_rows": 0,
+  "new_unique_production_histories": 0,
+  "per_cell_mode": [
+    {
+      "cell_id": "clean_herald_schedule",
+      "failure_flag_masks": {
+        "0000": 4,
+        "0011": 13,
+        "0100": 10,
+        "0111": 21,
+        "1000": 13
+      },
+      "last_commit_round": {
+        "1": 10,
+        "2": 12,
+        "3": 13,
+        "4": 21,
+        "none": 13
+      },
+      "mode": "syndrome_only",
+      "outcome_counts": {
+        "failed_closed": 59,
+        "scored_failure": 61,
+        "scored_success": 8
+      },
+      "scored_flag_masks": {
+        "0000": 11,
+        "0011": 13,
+        "0100": 11,
+        "0111": 21,
+        "1000": 13
+      },
+      "success_flag_masks": {
+        "0000": 7,
+        "0100": 1
+      },
+      "unconditional_denominator": 128
+    },
+    {
+      "cell_id": "clean_herald_schedule",
+      "failure_flag_masks": {
+        "0000": 3,
+        "0011": 13,
+        "0100": 10,
+        "0111": 21,
+        "1000": 13
+      },
+      "last_commit_round": {
+        "1": 10,
+        "2": 12,
+        "3": 13,
+        "4": 21,
+        "none": 13
+      },
+      "mode": "heralded",
+      "outcome_counts": {
+        "failed_closed": 59,
+        "scored_failure": 60,
+        "scored_success": 9
+      },
+      "scored_flag_masks": {
+        "0000": 11,
+        "0011": 13,
+        "0100": 11,
+        "0111": 21,
+        "1000": 13
+      },
+      "success_flag_masks": {
+        "0000": 8,
+        "0100": 1
+      },
+      "unconditional_denominator": 128
+    },
+    {
+      "cell_id": "joint_readout_noise",
+      "failure_flag_masks": {
+        "0000": 1,
+        "0011": 11,
+        "0100": 12,
+        "0111": 30,
+        "1000": 14
+      },
+      "last_commit_round": {
+        "1": 11,
+        "2": 17,
+        "3": 15,
+        "4": 14,
+        "none": 14
+      },
+      "mode": "syndrome_only",
+      "outcome_counts": {
+        "failed_closed": 57,
+        "scored_failure": 68,
+        "scored_success": 3
+      },
+      "scored_flag_masks": {
+        "0000": 4,
+        "0011": 11,
+        "0100": 12,
+        "0111": 30,
+        "1000": 14
+      },
+      "success_flag_masks": {
+        "0000": 3
+      },
+      "unconditional_denominator": 128
+    },
+    {
+      "cell_id": "joint_readout_noise",
+      "failure_flag_masks": {
+        "0000": 3,
+        "0011": 11,
+        "0100": 12,
+        "0111": 30,
+        "1000": 14
+      },
+      "last_commit_round": {
+        "1": 11,
+        "2": 17,
+        "3": 15,
+        "4": 14,
+        "none": 14
+      },
+      "mode": "heralded",
+      "outcome_counts": {
+        "failed_closed": 57,
+        "scored_failure": 70,
+        "scored_success": 1
+      },
+      "scored_flag_masks": {
+        "0000": 4,
+        "0011": 11,
+        "0100": 12,
+        "0111": 30,
+        "1000": 14
+      },
+      "success_flag_masks": {
+        "0000": 1
+      },
+      "unconditional_denominator": 128
+    }
+  ],
+  "reason": null,
+  "replayed_existing_arm_rows": 2048,
+  "replayed_existing_histories": 256,
+  "schema_version": 1,
+  "status": "passed_frozen_cohort_descriptive_overlap_only"
+}

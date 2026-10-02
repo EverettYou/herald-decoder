@@ -1,0 +1,110 @@
+{
+  "id": "lab008-beyond-l11-mps-validation-2026-09-21",
+  "status": "complete",
+  "completed_at": "2026-09-21",
+  "registered_at": "2026-09-21",
+  "predecessor": "posterior-gap-boundary-tail-acquisition-2026-09-21.json",
+  "question": "Can a positive boundary-MPS contraction approximate each record's two logical-sector posterior accurately enough to study fixed-gap CDF contraction beyond L=11?",
+  "orientation_result": "../results/beyond-l11-exact-resource-sketch-2026-09-21.json",
+  "orientation_decision": "Exact L13 is not armed: the best registered order requires 583522191 candidate transitions and a 15.22 GiB ungrouped transition-array lower proxy, versus caps of 50000000 transitions and 8 GiB.",
+  "method_basis": {
+    "family": "positive column boundary contraction represented as an MPS with SVD truncation",
+    "primary_source": "bravyi2014-surface-code-mld",
+    "source_pdf_sha256": "680350fe181befac1ae962a363a01a00cf6dfb4e074592ec2037e2d55ae66db0",
+    "adaptation": "Replace binary Pauli tensors by the frozen ternary-current edge prior, measured-charge projectors, and a logical-parity leg; contract both sector masses Z0(Q),Z1(Q) before normalization.",
+    "claim_boundary": "Bravyi et al. supplies an algorithmic template and O(n chi^3) scaling, not an accuracy theorem for this U(1) current posterior. Accuracy must be calibrated record-by-record against CurrentOracle."
+  },
+  "frozen_physical_contract": {
+    "lattice": "square",
+    "stored_arrow_geometry": true,
+    "rough_boundaries": true,
+    "physical_error_rate": 0.3,
+    "bias_values": [0.9, 0.94, 0.97],
+    "observation": "full physical charge record Q only",
+    "target": "normalized exact two-sector posterior and absolute posterior gap G=abs(log(Z0/Z1))",
+    "independent_unit": "one stored, independently generated physical record",
+    "no_new_histories_in_validation": true
+  },
+  "validation_matrix": {
+    "exact_control_sizes": [9, 11],
+    "bias_values": [0.9, 0.94, 0.97],
+    "records_per_cell": 16,
+    "selection": "Within each completed cell, sort by exact G, divide into eight equal-probability rank strata, and select two deterministic source indices per stratum; freeze 8 development and 8 held-out records before evaluating candidates.",
+    "bond_dimensions": [16, 32, 64, 128],
+    "sweep_directions": ["left-to-right", "right-to-left"],
+    "approximate_evaluations": 768,
+    "small_exact_tensorization_controls": [5, 7]
+  },
+  "gates": {
+    "tensorization": "With truncation disabled on deterministic L5/L7 records, both sector masses match CurrentOracle to relative error at most 1e-10.",
+    "positivity": "Every sector mass is finite and nonnegative; normalization is positive; risk-gap and sector-swap identities pass to 1e-10.",
+    "heldout_gap": "For one chi <=128, in both sweep directions and every L/q cell, median abs gap error <=0.10 and 95th-percentile abs gap error <=0.25.",
+    "heldout_risk": "For the same chi, every cell has 95th-percentile absolute record-risk error <=0.01.",
+    "heldout_cdf": "For a in {0.5,1,2,4}, every cell's absolute C_L(a) error and B_L(a) error are <=0.02.",
+    "order_sensitivity": "The two sweep directions must independently pass; agreement is reported and never substituted for exact-error calibration.",
+    "replay": "All selected source record keys, exact posteriors, tensor inputs, candidate outputs and source hashes replay exactly."
+  },
+  "paired_uncertainty": {
+    "pairing": "Candidate and exact posterior use the same frozen physical record; chi and sweep comparisons remain paired within record.",
+    "development_use": "Development records may debug implementation and choose the smallest passing chi.",
+    "heldout_use": "Acceptance is decided once on held-out records with exact per-record errors; no bootstrap or population inference is used in this validation contract."
+  },
+  "budget": {
+    "maximum_new_physical_records": 0,
+    "maximum_approximate_posterior_evaluations": 768,
+    "maximum_bond_dimension": 128,
+    "maximum_runtime_seconds": 3600,
+    "maximum_peak_memory_gib": 8,
+    "new_external_dependencies": 0,
+    "bootstrap_replicates": 0
+  },
+  "acceptance_criteria": [
+    "The exact-resource sketch replays the L11 control and documents why exact L13 is out of the registered caps.",
+    "The positive tensorization passes exact small-size, anti-leak, positivity, normalization, sector-swap and replay gates.",
+    "One common chi <=128 passes every held-out per-record and aggregate gate in both sweep directions across all six exact-control cells.",
+    "Only a passing common chi may be proposed in a separate L13 production contract; this validation makes no thermodynamic, threshold, crossing or phase claim."
+  ],
+  "stop_rule": "Implement and validate only this matrix. If no common chi <=128 passes, close the boundary-MPS route at this cap without increasing chi, relaxing gates, generating L13 histories, or substituting approximate evidence. If it passes, stop and separately preregister any L13 production acquisition.",
+  "not_yet_run": false,
+  "tensorization_preflight": {
+    "status": "complete",
+    "result": "../results/boundary-mps-tensorization-gates-2026-09-21.json",
+    "sizes": [5, 7],
+    "deterministic_records": 10,
+    "candidate_evaluations": 20,
+    "maximum_sector_error": 3.5388358909926865e-14,
+    "all_gates_pass": true,
+    "production_matrix_armed": true,
+    "claim_boundary": "Finite-chi accuracy remains untested; no L13 history or scientific inference is armed by this preflight."
+  },
+  "validation_outcome": {
+    "status": "complete",
+    "cohort": "../results/boundary-mps-validation-cohort-2026-09-21.json",
+    "result": "../results/boundary-mps-validation-2026-09-21.json",
+    "frozen_records": 96,
+    "development_records": 48,
+    "heldout_records": 48,
+    "candidate_evaluations": 768,
+    "common_passing_chi": [16, 32, 64, 128],
+    "smallest_common_passing_chi": 16,
+    "chi16_worst_heldout_metrics_over_all_cells_and_sweeps": {
+      "median_absolute_gap_error": 0.0011812219962857862,
+      "p95_absolute_gap_error": 0.0038776794705750006,
+      "p95_absolute_risk_error": 0.0003836954374375242,
+      "maximum_fixed_gap_cdf_error": 0.0,
+      "maximum_low_gap_risk_share_error": 0.00027347658210852277
+    },
+    "cumulative_wall_seconds": 1859.2956478330307,
+    "new_physical_records": 0,
+    "bootstrap_replicates": 0,
+    "l13_histories": 0,
+    "decision": "The boundary-MPS route passes at chi=16 on every registered exact-control cell and sweep. Stop this contract; any L13 production requires a separate preregistration with chi sensitivity and no threshold claim."
+  },
+  "counters": {
+    "new_physical_records": 0,
+    "approximate_posterior_evaluations": 768,
+    "exact_ceiling_candidate_evaluations": 20,
+    "bootstrap_replicates": 0,
+    "l13_histories": 0
+  }
+}

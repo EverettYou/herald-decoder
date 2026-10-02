@@ -12,3 +12,10 @@ test('Wiki landing places search under its header without a duplicate research-p
   assert.ok(search > header);
   assert.doesNotMatch(app, /Open research program/);
 });
+
+test('Wiki lint refreshes asynchronously without blocking the landing payload', () => {
+  assert.match(app, /id="wiki-lint-status"/);
+  assert.match(app, /d\.lint\.refreshing/);
+  assert.match(app, /api\('\/api\/wiki\/lint'\)/);
+  assert.match(app, /Checking in background/);
+});

@@ -1,0 +1,167 @@
+{
+  "status": "generated",
+  "figures": [
+    {
+      "id": "survey-boundaries",
+      "files": [
+        "figures/survey-boundaries.png",
+        "figures/survey-boundaries.svg",
+        "figures/survey-boundaries.pdf"
+      ],
+      "inputs": [
+        "data/reported-boundaries.csv",
+        "data/inherited/repository-measured-trends.json"
+      ],
+      "semantics": "Measured finite-window trends versus separate reported restricted-domain estimates; no mirrored high-p values, no new fits or pooled CI."
+    },
+    {
+      "id": "inherited-ml-curves",
+      "files": [
+        "figures/inherited-ml-curves.png",
+        "figures/inherited-ml-curves.svg",
+        "figures/inherited-ml-curves.pdf"
+      ],
+      "inputs": [
+        "data/inherited-ml-cells.csv"
+      ],
+      "semantics": "First three panels: unconditional Rao\u2013Blackwell mean \u00b11.96 sample SE, not binomial counts. Fourth: direct failure counts; zero counts are 95% one-sided exact upper limits, never plotted as zero risk."
+    },
+    {
+      "id": "inherited-crossing-drift",
+      "files": [
+        "figures/inherited-crossing-drift.png",
+        "figures/inherited-crossing-drift.svg",
+        "figures/inherited-crossing-drift.pdf"
+      ],
+      "inputs": [
+        "data/inherited-crossings.csv",
+        "data/inherited/anthropic__claude-opus-5-5_run_03_thresholds.json"
+      ],
+      "semantics": "Inherited crossing errors use the source convention; shaded working ranges combine fit/size sensitivity and are not rigorous confidence bands."
+    },
+    {
+      "id": "fresh-matched-ler",
+      "files": [
+        "figures/fresh-matched-ler.png",
+        "figures/fresh-matched-ler.svg",
+        "figures/fresh-matched-ler.pdf"
+      ],
+      "inputs": [
+        "results/benchmark.json",
+        "data/fresh-matched-vectors.npz"
+      ],
+      "semantics": "Fresh 200 shared unconditional records per cell, Wilson95 intervals. Planar and transfer failure counts coincide; MPS \u03c716 approximate. High-p records independently sampled; no reflection or interpolation."
+    },
+    {
+      "id": "fresh-conditional-regret",
+      "files": [
+        "figures/fresh-conditional-regret.png",
+        "figures/fresh-conditional-regret.svg",
+        "figures/fresh-conditional-regret.pdf"
+      ],
+      "inputs": [
+        "results/benchmark.json",
+        "data/fresh-matched-vectors.npz"
+      ],
+      "semantics": "Selected sector expected loss minus exact planar conditional Bayes risk, averaged over 200 records. Error bars \u00b11.96 sample SE. Exact reference zero; MPS posterior agreement is cohort-specific."
+    },
+    {
+      "id": "warm-runtime",
+      "files": [
+        "figures/warm-runtime.png",
+        "figures/warm-runtime.svg",
+        "figures/warm-runtime.pdf"
+      ],
+      "inputs": [
+        "data/warm-runtime-summary.csv",
+        "results/benchmark.json"
+      ],
+      "semantics": "Pooled equal-size fresh eight-cell mix:1600 timings/method/size, one CPU thread; excludes graph setup and independent first call. Median and p95, no claim of native or asymptotic speed."
+    },
+    {
+      "id": "inherited-matched-differences",
+      "files": [
+        "figures/inherited-matched-differences.png",
+        "figures/inherited-matched-differences.svg",
+        "figures/inherited-matched-differences.pdf"
+      ],
+      "inputs": [
+        "data/inherited/audit_matched_comparison.json",
+        "data/inherited/audit_matched_failure_flags.json"
+      ],
+      "semantics": "Separate inherited 500-record cells; residual-priority80 BP and distinct implementations. Error bars \u00b11.96 paired SE, pointwise only. Not pooled with the fresh synchronous40 cohort."
+    },
+    {
+      "id": "approximation-diagnostics",
+      "files": [
+        "figures/approximation-diagnostics.png",
+        "figures/approximation-diagnostics.svg",
+        "figures/approximation-diagnostics.pdf"
+      ],
+      "inputs": [
+        "results/validation.json"
+      ],
+      "semantics": "Maximum sampled posterior differences, not rigorous risk bounds. MPS finitechi and KacWard finitepenalty remain approximations. Plot floor1e-17 for zero/roundoff differences; no production threshold inferred."
+    },
+    {
+      "id": "scicode2-run-boundary-comparison",
+      "files": [
+        "figures/scicode2-run-boundary-comparison.png",
+        "figures/scicode2-run-boundary-comparison.pdf"
+      ],
+      "inputs": [
+        "data/inherited/audit_REPORT.md",
+        "data/inherited/audit_reported_boundaries.json",
+        "data/inherited/audit_run_inventory.json",
+        "data/inherited/repository-measured-trends.json"
+      ],
+      "semantics": "Original nine-run evaluation: 231 measured repository BP trend cells and ten separate named-run boundary estimates for the historical p\u22641/2 task. Lines connect reported estimates; no new fits, pooled confidence intervals, mirrored high-p evidence or B18 guide.",
+      "origin": "byte-identical PNG/PDF snapshot of original independent assessment"
+    }
+  ],
+  "input_sha256": {
+    "data/fresh-matched-vectors.npz": "bc88a4fd17c41da219453ac4c3f027233d368f871fad3f9f2b7ab3ffa93c7284",
+    "data/inherited-crossings.csv": "ee1db1cd1811cd421bcaa9f54e83f7a2039c1efabb2e0fddfee095a48f254453",
+    "data/inherited-ml-cells.csv": "dd6a3695726ac6a6d31bcebcf3459197a04744f658f2a416d8b30df124fa3f9f",
+    "data/inherited/anthropic__claude-opus-5-5_run_03_thresholds.json": "8218e684b48e799f57774eda86f127d3208a796ad932e1b8dddd528f9f12b63b",
+    "data/inherited/audit_matched_comparison.json": "8f5313544cbb7877f9ebb17ac134c00d65325906ec606f95d3e0ba272cc0b401",
+    "data/inherited/audit_matched_failure_flags.json": "ade0503e607b881e9613f0de0851a3999fac6f442853b4f0e53580374fe785fd",
+    "data/inherited/repository-measured-trends.json": "e41be160b471cc5820a8a19b90cd3fad6ed8ed581c2c4c0587652f5e7e918fdf",
+    "data/reported-boundaries.csv": "44e248192a406e9a0d5280616d4c030a90e010cbfe7f4abcb8591e509a140cda",
+    "data/warm-runtime-summary.csv": "e9318898367b3a18a0beebdf7379345ea36fb3955083e591c304dec4b6a80ef1",
+    "results/benchmark.json": "f446a379f32887451383bd66544f2721b84c34f71d885b05c3435a2b3851de44",
+    "results/validation.json": "b1f98f52b183c98d0b20bf5aeab31f1f466d1e3c67553101e2e4e55a54be7c1f",
+    "data/inherited/audit_REPORT.md": "d151c8e9edad47eb65e758aeda451c089aab3abcf07dee3600af63ef292aa3b2",
+    "data/inherited/audit_reported_boundaries.json": "5f7d6ca768bdd8b6fb70bab74031c07d4fe80d5d82a1618733de935bae533784",
+    "data/inherited/audit_run_inventory.json": "cc4a11afde0581982069442447d1ba8f4d093ee43c11203ac9ebc6c703d32e00"
+  },
+  "output_sha256": {
+    "figures/survey-boundaries.png": "3d60913fda3ca4270dc3eff278f01666217848ca8b92269f5451f31e8e00bee2",
+    "figures/survey-boundaries.svg": "6af28fbdd5f9419f8ddc98862250c91bb3fa093873317920445c47bf74267ed6",
+    "figures/survey-boundaries.pdf": "66df1359037a7451c49bf3019ef452734d1833f14df3df7e73320e39cec0616b",
+    "figures/inherited-ml-curves.png": "f6436b165e8bdd99207b632e1c64706db6d922f845092260248ded416a5c05e0",
+    "figures/inherited-ml-curves.svg": "c1db4c117cb609e7e2e0b057430f6f967acfb7c7ba38a74acfd25947ad613762",
+    "figures/inherited-ml-curves.pdf": "136b9ef1fc5b22ced12ad3bfdec7ea24ad874f70cce927479818227689c9095a",
+    "figures/inherited-crossing-drift.png": "79929deae613d593b24ffaa2be7c771f99a148ff9db09effe7ec315b9babaf2c",
+    "figures/inherited-crossing-drift.svg": "0640c0ef2e3f4526cfdb8d7729811327761a44791f6e95269462260c7c48fa2e",
+    "figures/inherited-crossing-drift.pdf": "eb26809e4b68b9c4b8f476c68848b38a67b482c65d70b1e530c8e195bb3a759a",
+    "figures/fresh-matched-ler.png": "831dc695bd37c018f38f097e4d889547f95f5fe709a95de97227174e01ba0295",
+    "figures/fresh-matched-ler.svg": "4c1000968c4d3d4fd6a147fadc3fe85e98159b8d0184149aecaa75138b50a502",
+    "figures/fresh-matched-ler.pdf": "da9c451467b8ad954227b51f1268fd0ef5fb8666cbc9c36ffc6955091f73e898",
+    "figures/fresh-conditional-regret.png": "d187579540e2e0ba06915d01ae088ddc020ca75b7fa7d9b272558e1d751fb01c",
+    "figures/fresh-conditional-regret.svg": "e6aa43910850c50deea98890040d432762afbce323de67a7c3e8df766e9c53a0",
+    "figures/fresh-conditional-regret.pdf": "7b60da6fcd3255aecf282df211c0cd511543042a0bff215dce174c20a388210b",
+    "figures/warm-runtime.png": "e41728b421211426124af479e3ff4c815259e74ec3e9cd0c18aaa75bcb18f26e",
+    "figures/warm-runtime.svg": "7a7aaf34421d1c60c32eff2b7b7fbd77f62306c77bd4e81dad35a6847d6d6d01",
+    "figures/warm-runtime.pdf": "3ca7546da623b5a5b616cab000e721436ebaecf2caed167440e2dd1946ebc8bd",
+    "figures/inherited-matched-differences.png": "d837cdd883ab1b2b4ec3eebec6d92c137f97d467bc8514800a6dd760b39e6abc",
+    "figures/inherited-matched-differences.svg": "fb73ed8dcaa0b3c9ca92c0d6b15ff1fc7bf2a94e408c28389dc584de7bd3eb5c",
+    "figures/inherited-matched-differences.pdf": "b591dc463e80cd3383b96f6aa890cea50386fc525561ba68ce4b943062d6d636",
+    "figures/approximation-diagnostics.png": "41ffc62adc97c9525d3a311f0db73d83619cdba1c993a0d05cca55a54d019e35",
+    "figures/approximation-diagnostics.svg": "2c04a5a4c4b5e2fd80013643a5bfd74a527ae00bbaceffcd604a13027e4cf99e",
+    "figures/approximation-diagnostics.pdf": "f21bed303c2c47cbac5e71bafc666fc025954f4b0c5af1703d34eaeafc3f6dea",
+    "figures/scicode2-run-boundary-comparison.png": "8a03e26d10649c2f2b16c7b00c065cc6fc88742cd170f15c5cb005ecb2d00559",
+    "figures/scicode2-run-boundary-comparison.pdf": "fe8ad60c5697d10be1bc86ce2cf4872815545060fe7f3963e13ec2e211dd77b3"
+  },
+  "new_threshold_fits": 0
+}

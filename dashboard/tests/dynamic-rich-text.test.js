@@ -6,6 +6,7 @@ const frontendRoot = path.join(__dirname, '..', 'frontend');
 const app = fs.readFileSync(path.join(frontendRoot, 'js', 'app.js'), 'utf8');
 const graph = fs.readFileSync(path.join(frontendRoot, 'js', 'graph.js'), 'utf8');
 const labPage = fs.readFileSync(path.join(frontendRoot, 'js', 'lab-page.js'), 'utf8');
+const wikiPage = fs.readFileSync(path.join(frontendRoot, 'js', 'wiki-page.js'), 'utf8');
 const discussionPage = fs.readFileSync(path.join(frontendRoot, 'js', 'discussion-page.js'), 'utf8');
 const index = fs.readFileSync(path.join(frontendRoot, 'index.html'), 'utf8');
 const style = fs.readFileSync(path.join(frontendRoot, 'css', 'style.css'), 'utf8');
@@ -13,14 +14,13 @@ const interfaceStyle = fs.readFileSync(path.join(frontendRoot, 'css', 'interface
 
 [
   'markdown(p.homepage_intro)',
-  'markdown(i.summary',
-  'markdown(i.project_relevance',
-  'markdown(p.preview)',
+  'markdown(item.summary',
   'markdown(item.current_focus)',
-  'markdown(item.next_action)',
-  'markdown(p.content,{sourcePath:p.path})',
-  'markdown(m.content)'
-].forEach(pattern => assert.ok(app.includes(pattern), `Missing rich-text route: ${pattern}`));
+  'markdown(item.next_action)'
+].forEach(pattern => assert.ok(app.includes(pattern), `Missing app rich-text route: ${pattern}`));
+
+assert.ok(wikiPage.includes('markdown(page.content, { sourcePath: page.path })'), 'Wiki content must use the shared rich-text renderer');
+assert.ok(discussionPage.includes('markdown(message.content)'), 'Discussion messages must use the shared rich-text renderer');
 
 [
   'markdown(lab.summary)',
@@ -33,7 +33,6 @@ const interfaceStyle = fs.readFileSync(path.join(frontendRoot, 'css', 'interface
   'markdown(source.content, { sourcePath: source.path })'
 ].forEach(pattern => assert.ok(labPage.includes(pattern), `Missing Lab rich-text route: ${pattern}`));
 
-assert.ok(discussionPage.includes('markdown(message.content)'), 'Discussion messages must use the shared rich-text renderer');
 assert.ok(index.includes('/js/document-page.js'), 'The project document viewer must load before the app router');
 
 assert.ok(graph.includes('rich.block(node.summary)'), 'Graph summaries must use the shared rich-text renderer');

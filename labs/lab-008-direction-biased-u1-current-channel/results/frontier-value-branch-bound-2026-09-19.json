@@ -1,0 +1,1122 @@
+{
+  "status": "passed",
+  "scope": "Exact frontier-value priority comparison at fixed B; no sampling or decoder.",
+  "gates": [
+    [
+      {
+        "L": 3,
+        "p": 0.1,
+        "q": 0.5,
+        "prefix_budget": 4,
+        "upper": 0.24042737250000001,
+        "peak_preprune_states": 144,
+        "finalized_upper": 0.183098646875,
+        "surviving_records": 4,
+        "profile": [
+          {
+            "vertex": 1,
+            "preprune_states": 24,
+            "active_states": 16,
+            "prefixes": 7,
+            "kept": 4,
+            "max_value_score": 7.999999999999674e-05,
+            "finalized_upper": 0.13945499999999994
+          },
+          {
+            "vertex": 4,
+            "preprune_states": 144,
+            "active_states": 24,
+            "prefixes": 34,
+            "kept": 4,
+            "max_value_score": 8.0500000000025e-06,
+            "finalized_upper": 0.17242681249999997
+          },
+          {
+            "vertex": 7,
+            "preprune_states": 56,
+            "active_states": 8,
+            "prefixes": 28,
+            "kept": 4,
+            "max_value_score": 0.0,
+            "finalized_upper": 0.183098646875
+          }
+        ],
+        "exact_LER": 0.23427949999999997,
+        "gap": 0.00614787250000004
+      },
+      {
+        "L": 3,
+        "p": 0.1,
+        "q": 0.5,
+        "prefix_budget": 10000,
+        "upper": 0.23427949999999986,
+        "peak_preprune_states": 682,
+        "finalized_upper": 0.0,
+        "surviving_records": 357,
+        "profile": [
+          {
+            "vertex": 1,
+            "preprune_states": 24,
+            "active_states": 24,
+            "prefixes": 7,
+            "kept": 7,
+            "max_value_score": 7.999999999999674e-05,
+            "finalized_upper": 0.0
+          },
+          {
+            "vertex": 4,
+            "preprune_states": 234,
+            "active_states": 234,
+            "prefixes": 57,
+            "kept": 57,
+            "max_value_score": 7.245000000000168e-05,
+            "finalized_upper": 0.0
+          },
+          {
+            "vertex": 7,
+            "preprune_states": 682,
+            "active_states": 682,
+            "prefixes": 357,
+            "kept": 357,
+            "max_value_score": 0.0,
+            "finalized_upper": 0.0
+          }
+        ],
+        "exact_LER": 0.23427949999999997,
+        "gap": -1.1102230246251565e-16
+      }
+    ],
+    [
+      {
+        "L": 3,
+        "p": 0.3,
+        "q": 0.75,
+        "prefix_budget": 4,
+        "upper": 0.41550062755416844,
+        "peak_preprune_states": 153,
+        "finalized_upper": 0.3532803600791929,
+        "surviving_records": 4,
+        "profile": [
+          {
+            "vertex": 1,
+            "preprune_states": 24,
+            "active_states": 19,
+            "prefixes": 7,
+            "kept": 4,
+            "max_value_score": 0.011962500000000015,
+            "finalized_upper": 0.028822499999999994
+          },
+          {
+            "vertex": 4,
+            "preprune_states": 153,
+            "active_states": 24,
+            "prefixes": 35,
+            "kept": 4,
+            "max_value_score": 0.010123525781249983,
+            "finalized_upper": 0.28139391364746075
+          },
+          {
+            "vertex": 7,
+            "preprune_states": 56,
+            "active_states": 8,
+            "prefixes": 28,
+            "kept": 4,
+            "max_value_score": 0.0,
+            "finalized_upper": 0.3532803600791929
+          }
+        ],
+        "exact_LER": 0.3865665182025144,
+        "gap": 0.028934109351654025
+      },
+      {
+        "L": 3,
+        "p": 0.3,
+        "q": 0.75,
+        "prefix_budget": 10000,
+        "upper": 0.3865665182025149,
+        "peak_preprune_states": 682,
+        "finalized_upper": 0.0,
+        "surviving_records": 357,
+        "profile": [
+          {
+            "vertex": 1,
+            "preprune_states": 24,
+            "active_states": 24,
+            "prefixes": 7,
+            "kept": 7,
+            "max_value_score": 0.011962500000000015,
+            "finalized_upper": 0.0
+          },
+          {
+            "vertex": 4,
+            "preprune_states": 234,
+            "active_states": 234,
+            "prefixes": 57,
+            "kept": 57,
+            "max_value_score": 0.010123525781249983,
+            "finalized_upper": 0.0
+          },
+          {
+            "vertex": 7,
+            "preprune_states": 682,
+            "active_states": 682,
+            "prefixes": 357,
+            "kept": 357,
+            "max_value_score": 0.0,
+            "finalized_upper": 0.0
+          }
+        ],
+        "exact_LER": 0.3865665182025144,
+        "gap": 4.996003610813204e-16
+      }
+    ]
+  ],
+  "studies": [
+    {
+      "q": 0.5,
+      "runs": [
+        {
+          "L": 5,
+          "p": 0.08,
+          "q": 0.5,
+          "prefix_budget": 64,
+          "upper": 0.19870515613821654,
+          "peak_preprune_states": 51840,
+          "finalized_upper": 0.19764631587793888,
+          "surviving_records": 64,
+          "profile": [
+            {
+              "vertex": 1,
+              "preprune_states": 27,
+              "active_states": 27,
+              "prefixes": 7,
+              "kept": 7,
+              "max_value_score": 8.326672684688674e-17,
+              "finalized_upper": 0.0
+            },
+            {
+              "vertex": 2,
+              "preprune_states": 243,
+              "active_states": 243,
+              "prefixes": 43,
+              "kept": 43,
+              "max_value_score": 1.6653345369377348e-16,
+              "finalized_upper": 0.0
+            },
+            {
+              "vertex": 3,
+              "preprune_states": 2160,
+              "active_states": 1319,
+              "prefixes": 259,
+              "kept": 64,
+              "max_value_score": 0.012078542805371193,
+              "finalized_upper": 0.0010392785044404968
+            },
+            {
+              "vertex": 6,
+              "preprune_states": 23229,
+              "active_states": 5699,
+              "prefixes": 561,
+              "kept": 64,
+              "max_value_score": 0.009495724734940597,
+              "finalized_upper": 0.031411864890122196
+            },
+            {
+              "vertex": 7,
+              "preprune_states": 31590,
+              "active_states": 6914,
+              "prefixes": 576,
+              "kept": 64,
+              "max_value_score": 0.008007958782360299,
+              "finalized_upper": 0.08115664962000552
+            },
+            {
+              "vertex": 8,
+              "preprune_states": 19179,
+              "active_states": 3347,
+              "prefixes": 574,
+              "kept": 64,
+              "max_value_score": 0.00837275021782241,
+              "finalized_upper": 0.09703630432087688
+            },
+            {
+              "vertex": 11,
+              "preprune_states": 50751,
+              "active_states": 9652,
+              "prefixes": 576,
+              "kept": 64,
+              "max_value_score": 0.0065810335597614,
+              "finalized_upper": 0.1330437836398269
+            },
+            {
+              "vertex": 12,
+              "preprune_states": 49302,
+              "active_states": 9713,
+              "prefixes": 576,
+              "kept": 64,
+              "max_value_score": 0.005352146808441555,
+              "finalized_upper": 0.15192956921883213
+            },
+            {
+              "vertex": 13,
+              "preprune_states": 23391,
+              "active_states": 3456,
+              "prefixes": 576,
+              "kept": 64,
+              "max_value_score": 0.005572324068752316,
+              "finalized_upper": 0.15974279743892741
+            },
+            {
+              "vertex": 16,
+              "preprune_states": 51840,
+              "active_states": 9846,
+              "prefixes": 576,
+              "kept": 64,
+              "max_value_score": 0.00437984205871478,
+              "finalized_upper": 0.17793232426602051
+            },
+            {
+              "vertex": 17,
+              "preprune_states": 50274,
+              "active_states": 9810,
+              "prefixes": 576,
+              "kept": 64,
+              "max_value_score": 0.003555630559980951,
+              "finalized_upper": 0.18620272984517158
+            },
+            {
+              "vertex": 18,
+              "preprune_states": 23634,
+              "active_states": 3456,
+              "prefixes": 576,
+              "kept": 64,
+              "max_value_score": 0.00370217827716212,
+              "finalized_upper": 0.18979318906446688
+            },
+            {
+              "vertex": 21,
+              "preprune_states": 17280,
+              "active_states": 3456,
+              "prefixes": 448,
+              "kept": 64,
+              "max_value_score": 0.003138998593529126,
+              "finalized_upper": 0.1946542450180081
+            },
+            {
+              "vertex": 22,
+              "preprune_states": 5760,
+              "active_states": 1152,
+              "prefixes": 448,
+              "kept": 64,
+              "max_value_score": 0.0027630557263641706,
+              "finalized_upper": 0.1975924824964596
+            },
+            {
+              "vertex": 23,
+              "preprune_states": 896,
+              "active_states": 128,
+              "prefixes": 448,
+              "kept": 64,
+              "max_value_score": 0.0,
+              "finalized_upper": 0.19764631587793888
+            }
+          ],
+          "risk_priority_upper": 0.1994328710889136,
+          "priority_upper_improvement": 0.000727714950697067,
+          "activity_lower": 0.0298675549102412,
+          "activity_upper": 0.13835664113378413,
+          "combined_upper": 0.13835664113378413,
+          "relative_width_reduction": 0.0,
+          "promoted": false
+        },
+        {
+          "L": 5,
+          "p": 0.08,
+          "q": 0.5,
+          "prefix_budget": 256,
+          "upper": 0.16993162476673201,
+          "peak_preprune_states": 207270,
+          "finalized_upper": 0.167975410427527,
+          "surviving_records": 256,
+          "profile": [
+            {
+              "vertex": 1,
+              "preprune_states": 27,
+              "active_states": 27,
+              "prefixes": 7,
+              "kept": 7,
+              "max_value_score": 8.326672684688674e-17,
+              "finalized_upper": 0.0
+            },
+            {
+              "vertex": 2,
+              "preprune_states": 243,
+              "active_states": 243,
+              "prefixes": 43,
+              "kept": 43,
+              "max_value_score": 1.6653345369377348e-16,
+              "finalized_upper": 0.0
+            },
+            {
+              "vertex": 3,
+              "preprune_states": 2160,
+              "active_states": 2144,
+              "prefixes": 259,
+              "kept": 256,
+              "max_value_score": 0.012078542805371193,
+              "finalized_upper": 2.284194471136461e-06
+            },
+            {
+              "vertex": 6,
+              "preprune_states": 40482,
+              "active_states": 16778,
+              "prefixes": 2048,
+              "kept": 256,
+              "max_value_score": 0.009495724734940597,
+              "finalized_upper": 0.0016457673986184423
+            },
+            {
+              "vertex": 7,
+              "preprune_states": 100539,
+              "active_states": 24519,
+              "prefixes": 2214,
+              "kept": 256,
+              "max_value_score": 0.008007958782360299,
+              "finalized_upper": 0.020710194073630797
+            },
+            {
+              "vertex": 8,
+              "preprune_states": 72597,
+              "active_states": 13151,
+              "prefixes": 2246,
+              "kept": 256,
+              "max_value_score": 0.00837275021782241,
+              "finalized_upper": 0.037826255479078884
+            },
+            {
+              "vertex": 11,
+              "preprune_states": 199971,
+              "active_states": 38137,
+              "prefixes": 2304,
+              "kept": 256,
+              "max_value_score": 0.0065810335597614,
+              "finalized_upper": 0.07009974235410626
+            },
+            {
+              "vertex": 12,
+              "preprune_states": 195372,
+              "active_states": 37888,
+              "prefixes": 2304,
+              "kept": 256,
+              "max_value_score": 0.005352146808441555,
+              "finalized_upper": 0.10171310186174556
+            },
+            {
+              "vertex": 13,
+              "preprune_states": 92364,
+              "active_states": 13814,
+              "prefixes": 2304,
+              "kept": 256,
+              "max_value_score": 0.005572324068752316,
+              "finalized_upper": 0.11065460629405527
+            },
+            {
+              "vertex": 16,
+              "preprune_states": 207270,
+              "active_states": 38700,
+              "prefixes": 2304,
+              "kept": 256,
+              "max_value_score": 0.00437984205871478,
+              "finalized_upper": 0.1303371093686313
+            },
+            {
+              "vertex": 17,
+              "preprune_states": 199044,
+              "active_states": 38934,
+              "prefixes": 2304,
+              "kept": 256,
+              "max_value_score": 0.003555630559980951,
+              "finalized_upper": 0.15194960269847424
+            },
+            {
+              "vertex": 18,
+              "preprune_states": 94230,
+              "active_states": 13820,
+              "prefixes": 2304,
+              "kept": 256,
+              "max_value_score": 0.00370217827716212,
+              "finalized_upper": 0.156981313397305
+            },
+            {
+              "vertex": 21,
+              "preprune_states": 69108,
+              "active_states": 13752,
+              "prefixes": 1792,
+              "kept": 256,
+              "max_value_score": 0.003138998593529126,
+              "finalized_upper": 0.16419853524911732
+            },
+            {
+              "vertex": 22,
+              "preprune_states": 22968,
+              "active_states": 4608,
+              "prefixes": 1788,
+              "kept": 256,
+              "max_value_score": 0.0027630557263641706,
+              "finalized_upper": 0.16784977896684902
+            },
+            {
+              "vertex": 23,
+              "preprune_states": 3584,
+              "active_states": 512,
+              "prefixes": 1792,
+              "kept": 256,
+              "max_value_score": 0.0,
+              "finalized_upper": 0.167975410427527
+            }
+          ],
+          "risk_priority_upper": 0.1601209641467821,
+          "priority_upper_improvement": -0.009810660619949924,
+          "activity_lower": 0.0298675549102412,
+          "activity_upper": 0.13835664113378413,
+          "combined_upper": 0.13835664113378413,
+          "relative_width_reduction": 0.0,
+          "promoted": false
+        },
+        {
+          "L": 5,
+          "p": 0.08,
+          "q": 0.5,
+          "prefix_budget": 1024,
+          "upper": 0.1355294225482573,
+          "peak_preprune_states": 827496,
+          "finalized_upper": 0.1323469129948746,
+          "surviving_records": 1024,
+          "profile": [
+            {
+              "vertex": 1,
+              "preprune_states": 27,
+              "active_states": 27,
+              "prefixes": 7,
+              "kept": 7,
+              "max_value_score": 8.326672684688674e-17,
+              "finalized_upper": 0.0
+            },
+            {
+              "vertex": 2,
+              "preprune_states": 243,
+              "active_states": 243,
+              "prefixes": 43,
+              "kept": 43,
+              "max_value_score": 1.6653345369377348e-16,
+              "finalized_upper": 0.0
+            },
+            {
+              "vertex": 3,
+              "preprune_states": 2160,
+              "active_states": 2160,
+              "prefixes": 259,
+              "kept": 259,
+              "max_value_score": 0.012078542805371193,
+              "finalized_upper": 0.0
+            },
+            {
+              "vertex": 6,
+              "preprune_states": 40824,
+              "active_states": 34102,
+              "prefixes": 2073,
+              "kept": 1024,
+              "max_value_score": 0.009495724734940597,
+              "finalized_upper": 6.661315352675139e-05
+            },
+            {
+              "vertex": 7,
+              "preprune_states": 231732,
+              "active_states": 78842,
+              "prefixes": 7857,
+              "kept": 1024,
+              "max_value_score": 0.008007958782360299,
+              "finalized_upper": 0.001353366320751142
+            },
+            {
+              "vertex": 8,
+              "preprune_states": 255264,
+              "active_states": 50552,
+              "prefixes": 8775,
+              "kept": 1024,
+              "max_value_score": 0.00837275021782241,
+              "finalized_upper": 0.00749748968614704
+            },
+            {
+              "vertex": 11,
+              "preprune_states": 775242,
+              "active_states": 146154,
+              "prefixes": 9214,
+              "kept": 1024,
+              "max_value_score": 0.0065810335597614,
+              "finalized_upper": 0.03195694916109341
+            },
+            {
+              "vertex": 12,
+              "preprune_states": 759483,
+              "active_states": 150248,
+              "prefixes": 9216,
+              "kept": 1024,
+              "max_value_score": 0.005352146808441555,
+              "finalized_upper": 0.05437244315306855
+            },
+            {
+              "vertex": 13,
+              "preprune_states": 367656,
+              "active_states": 55144,
+              "prefixes": 9214,
+              "kept": 1024,
+              "max_value_score": 0.005572324068752316,
+              "finalized_upper": 0.06933487343941294
+            },
+            {
+              "vertex": 16,
+              "preprune_states": 827496,
+              "active_states": 160444,
+              "prefixes": 9216,
+              "kept": 1024,
+              "max_value_score": 0.00437984205871478,
+              "finalized_upper": 0.09397908169918961
+            },
+            {
+              "vertex": 17,
+              "preprune_states": 812628,
+              "active_states": 156834,
+              "prefixes": 9216,
+              "kept": 1024,
+              "max_value_score": 0.003555630559980951,
+              "finalized_upper": 0.11155450279122768
+            },
+            {
+              "vertex": 18,
+              "preprune_states": 377958,
+              "active_states": 55212,
+              "prefixes": 9216,
+              "kept": 1024,
+              "max_value_score": 0.00370217827716212,
+              "finalized_upper": 0.11825263875805815
+            },
+            {
+              "vertex": 21,
+              "preprune_states": 276084,
+              "active_states": 55152,
+              "prefixes": 7168,
+              "kept": 1024,
+              "max_value_score": 0.003138998593529126,
+              "finalized_upper": 0.12565272166403754
+            },
+            {
+              "vertex": 22,
+              "preprune_states": 92016,
+              "active_states": 18432,
+              "prefixes": 7160,
+              "kept": 1024,
+              "max_value_score": 0.0027630557263641706,
+              "finalized_upper": 0.13211827693033276
+            },
+            {
+              "vertex": 23,
+              "preprune_states": 14336,
+              "active_states": 2048,
+              "prefixes": 7168,
+              "kept": 1024,
+              "max_value_score": 0.0,
+              "finalized_upper": 0.1323469129948746
+            }
+          ],
+          "risk_priority_upper": 0.14143317751913626,
+          "priority_upper_improvement": 0.005903754970878944,
+          "activity_lower": 0.0298675549102412,
+          "activity_upper": 0.13835664113378413,
+          "combined_upper": 0.1355294225482573,
+          "relative_width_reduction": 0.026059935463935036,
+          "promoted": false
+        }
+      ]
+    },
+    {
+      "q": 0.75,
+      "runs": [
+        {
+          "L": 5,
+          "p": 0.08,
+          "q": 0.75,
+          "prefix_budget": 64,
+          "upper": 0.19613055891616665,
+          "peak_preprune_states": 51804,
+          "finalized_upper": 0.1957346917417478,
+          "surviving_records": 64,
+          "profile": [
+            {
+              "vertex": 1,
+              "preprune_states": 27,
+              "active_states": 27,
+              "prefixes": 7,
+              "kept": 7,
+              "max_value_score": 3.469446951953614e-18,
+              "finalized_upper": 0.0
+            },
+            {
+              "vertex": 2,
+              "preprune_states": 243,
+              "active_states": 243,
+              "prefixes": 43,
+              "kept": 43,
+              "max_value_score": 1.734723475976807e-18,
+              "finalized_upper": 0.0
+            },
+            {
+              "vertex": 3,
+              "preprune_states": 2160,
+              "active_states": 1290,
+              "prefixes": 259,
+              "kept": 64,
+              "max_value_score": 0.018191697073919322,
+              "finalized_upper": 0.0012710971001593265
+            },
+            {
+              "vertex": 6,
+              "preprune_states": 22716,
+              "active_states": 5663,
+              "prefixes": 560,
+              "kept": 64,
+              "max_value_score": 0.014286266140579259,
+              "finalized_upper": 0.031074825175954213
+            },
+            {
+              "vertex": 7,
+              "preprune_states": 31401,
+              "active_states": 6868,
+              "prefixes": 575,
+              "kept": 64,
+              "max_value_score": 0.012033843112744493,
+              "finalized_upper": 0.0848031069797543
+            },
+            {
+              "vertex": 8,
+              "preprune_states": 19134,
+              "active_states": 3307,
+              "prefixes": 573,
+              "kept": 64,
+              "max_value_score": 0.01234906712238706,
+              "finalized_upper": 0.09582475002195776
+            },
+            {
+              "vertex": 11,
+              "preprune_states": 50247,
+              "active_states": 9634,
+              "prefixes": 576,
+              "kept": 64,
+              "max_value_score": 0.009695522435261214,
+              "finalized_upper": 0.1271064347518423
+            },
+            {
+              "vertex": 12,
+              "preprune_states": 49158,
+              "active_states": 9659,
+              "prefixes": 576,
+              "kept": 64,
+              "max_value_score": 0.00801822528149327,
+              "finalized_upper": 0.15779568582986567
+            },
+            {
+              "vertex": 13,
+              "preprune_states": 23262,
+              "active_states": 3452,
+              "prefixes": 576,
+              "kept": 64,
+              "max_value_score": 0.008206945713758856,
+              "finalized_upper": 0.167516515755122
+            },
+            {
+              "vertex": 16,
+              "preprune_states": 51804,
+              "active_states": 9900,
+              "prefixes": 576,
+              "kept": 64,
+              "max_value_score": 0.006441739350265239,
+              "finalized_upper": 0.17306474846432152
+            },
+            {
+              "vertex": 17,
+              "preprune_states": 50436,
+              "active_states": 9846,
+              "prefixes": 576,
+              "kept": 64,
+              "max_value_score": 0.005326241219919082,
+              "finalized_upper": 0.18388018495660124
+            },
+            {
+              "vertex": 18,
+              "preprune_states": 23670,
+              "active_states": 3456,
+              "prefixes": 576,
+              "kept": 64,
+              "max_value_score": 0.00545165421238796,
+              "finalized_upper": 0.18935939428964998
+            },
+            {
+              "vertex": 21,
+              "preprune_states": 17280,
+              "active_states": 3456,
+              "prefixes": 448,
+              "kept": 64,
+              "max_value_score": 0.004614978440744986,
+              "finalized_upper": 0.1928816181450588
+            },
+            {
+              "vertex": 22,
+              "preprune_states": 5760,
+              "active_states": 1152,
+              "prefixes": 448,
+              "kept": 64,
+              "max_value_score": 0.0041405621208713515,
+              "finalized_upper": 0.19570010296391754
+            },
+            {
+              "vertex": 23,
+              "preprune_states": 896,
+              "active_states": 128,
+              "prefixes": 448,
+              "kept": 64,
+              "max_value_score": 0.0,
+              "finalized_upper": 0.1957346917417478
+            }
+          ],
+          "risk_priority_upper": 0.1823290765517626,
+          "priority_upper_improvement": -0.013801482364404066,
+          "activity_lower": 0.01657508482987356,
+          "activity_upper": 0.12506417105341647,
+          "combined_upper": 0.12506417105341647,
+          "relative_width_reduction": 0.0,
+          "promoted": false
+        },
+        {
+          "L": 5,
+          "p": 0.08,
+          "q": 0.75,
+          "prefix_budget": 256,
+          "upper": 0.1575677628513969,
+          "peak_preprune_states": 207261,
+          "finalized_upper": 0.15656102030732186,
+          "surviving_records": 256,
+          "profile": [
+            {
+              "vertex": 1,
+              "preprune_states": 27,
+              "active_states": 27,
+              "prefixes": 7,
+              "kept": 7,
+              "max_value_score": 3.469446951953614e-18,
+              "finalized_upper": 0.0
+            },
+            {
+              "vertex": 2,
+              "preprune_states": 243,
+              "active_states": 243,
+              "prefixes": 43,
+              "kept": 43,
+              "max_value_score": 1.734723475976807e-18,
+              "finalized_upper": 0.0
+            },
+            {
+              "vertex": 3,
+              "preprune_states": 2160,
+              "active_states": 2139,
+              "prefixes": 259,
+              "kept": 256,
+              "max_value_score": 0.018191697073919322,
+              "finalized_upper": 4.489058241325302e-05
+            },
+            {
+              "vertex": 6,
+              "preprune_states": 40437,
+              "active_states": 16996,
+              "prefixes": 2047,
+              "kept": 256,
+              "max_value_score": 0.014286266140579259,
+              "finalized_upper": 0.001326271724172953
+            },
+            {
+              "vertex": 7,
+              "preprune_states": 101457,
+              "active_states": 24504,
+              "prefixes": 2219,
+              "kept": 256,
+              "max_value_score": 0.012033843112744493,
+              "finalized_upper": 0.020451708509334733
+            },
+            {
+              "vertex": 8,
+              "preprune_states": 72435,
+              "active_states": 13112,
+              "prefixes": 2255,
+              "kept": 256,
+              "max_value_score": 0.01234906712238706,
+              "finalized_upper": 0.03456542137876737
+            },
+            {
+              "vertex": 11,
+              "preprune_states": 199386,
+              "active_states": 38312,
+              "prefixes": 2304,
+              "kept": 256,
+              "max_value_score": 0.009695522435261214,
+              "finalized_upper": 0.0691288652002878
+            },
+            {
+              "vertex": 12,
+              "preprune_states": 195570,
+              "active_states": 38238,
+              "prefixes": 2304,
+              "kept": 256,
+              "max_value_score": 0.00801822528149327,
+              "finalized_upper": 0.09319974274597599
+            },
+            {
+              "vertex": 13,
+              "preprune_states": 92727,
+              "active_states": 13813,
+              "prefixes": 2304,
+              "kept": 256,
+              "max_value_score": 0.008206945713758856,
+              "finalized_upper": 0.10473884423796499
+            },
+            {
+              "vertex": 16,
+              "preprune_states": 207261,
+              "active_states": 39380,
+              "prefixes": 2304,
+              "kept": 256,
+              "max_value_score": 0.006441739350265239,
+              "finalized_upper": 0.12068746676192252
+            },
+            {
+              "vertex": 17,
+              "preprune_states": 201060,
+              "active_states": 39059,
+              "prefixes": 2304,
+              "kept": 256,
+              "max_value_score": 0.005326241219919082,
+              "finalized_upper": 0.14230061237954875
+            },
+            {
+              "vertex": 18,
+              "preprune_states": 94353,
+              "active_states": 13820,
+              "prefixes": 2304,
+              "kept": 256,
+              "max_value_score": 0.00545165421238796,
+              "finalized_upper": 0.14758149729375308
+            },
+            {
+              "vertex": 21,
+              "preprune_states": 69108,
+              "active_states": 13806,
+              "prefixes": 1792,
+              "kept": 256,
+              "max_value_score": 0.004614978440744986,
+              "finalized_upper": 0.15274378053683113
+            },
+            {
+              "vertex": 22,
+              "preprune_states": 23022,
+              "active_states": 4602,
+              "prefixes": 1791,
+              "kept": 256,
+              "max_value_score": 0.0041405621208713515,
+              "finalized_upper": 0.15648868282484388
+            },
+            {
+              "vertex": 23,
+              "preprune_states": 3582,
+              "active_states": 512,
+              "prefixes": 1791,
+              "kept": 256,
+              "max_value_score": 0.0,
+              "finalized_upper": 0.15656102030732186
+            }
+          ],
+          "risk_priority_upper": 0.15263777954635518,
+          "priority_upper_improvement": -0.004929983305041713,
+          "activity_lower": 0.01657508482987356,
+          "activity_upper": 0.12506417105341647,
+          "combined_upper": 0.12506417105341647,
+          "relative_width_reduction": 0.0,
+          "promoted": false
+        },
+        {
+          "L": 5,
+          "p": 0.08,
+          "q": 0.75,
+          "prefix_budget": 1024,
+          "upper": 0.12616809740985097,
+          "peak_preprune_states": 827460,
+          "finalized_upper": 0.12378635778112082,
+          "surviving_records": 1024,
+          "profile": [
+            {
+              "vertex": 1,
+              "preprune_states": 27,
+              "active_states": 27,
+              "prefixes": 7,
+              "kept": 7,
+              "max_value_score": 3.469446951953614e-18,
+              "finalized_upper": 0.0
+            },
+            {
+              "vertex": 2,
+              "preprune_states": 243,
+              "active_states": 243,
+              "prefixes": 43,
+              "kept": 43,
+              "max_value_score": 1.734723475976807e-18,
+              "finalized_upper": 0.0
+            },
+            {
+              "vertex": 3,
+              "preprune_states": 2160,
+              "active_states": 2160,
+              "prefixes": 259,
+              "kept": 259,
+              "max_value_score": 0.018191697073919322,
+              "finalized_upper": 0.0
+            },
+            {
+              "vertex": 6,
+              "preprune_states": 40824,
+              "active_states": 34322,
+              "prefixes": 2073,
+              "kept": 1024,
+              "max_value_score": 0.014286266140579259,
+              "finalized_upper": 8.863191183379295e-05
+            },
+            {
+              "vertex": 7,
+              "preprune_states": 233316,
+              "active_states": 78091,
+              "prefixes": 7875,
+              "kept": 1024,
+              "max_value_score": 0.012033843112744493,
+              "finalized_upper": 0.0011752087726311106
+            },
+            {
+              "vertex": 8,
+              "preprune_states": 254262,
+              "active_states": 50020,
+              "prefixes": 8769,
+              "kept": 1024,
+              "max_value_score": 0.01234906712238706,
+              "finalized_upper": 0.008561541107343626
+            },
+            {
+              "vertex": 11,
+              "preprune_states": 766944,
+              "active_states": 148389,
+              "prefixes": 9214,
+              "kept": 1024,
+              "max_value_score": 0.009695522435261214,
+              "finalized_upper": 0.02711542631759692
+            },
+            {
+              "vertex": 12,
+              "preprune_states": 765225,
+              "active_states": 150800,
+              "prefixes": 9215,
+              "kept": 1024,
+              "max_value_score": 0.00801822528149327,
+              "finalized_upper": 0.052945169164646054
+            },
+            {
+              "vertex": 13,
+              "preprune_states": 367947,
+              "active_states": 55126,
+              "prefixes": 9214,
+              "kept": 1024,
+              "max_value_score": 0.008206945713758856,
+              "finalized_upper": 0.06693240252192584
+            },
+            {
+              "vertex": 16,
+              "preprune_states": 827460,
+              "active_states": 158470,
+              "prefixes": 9216,
+              "kept": 1024,
+              "max_value_score": 0.006441739350265239,
+              "finalized_upper": 0.08536779811455728
+            },
+            {
+              "vertex": 17,
+              "preprune_states": 806850,
+              "active_states": 156358,
+              "prefixes": 9216,
+              "kept": 1024,
+              "max_value_score": 0.005326241219919082,
+              "finalized_upper": 0.10389880182127495
+            },
+            {
+              "vertex": 18,
+              "preprune_states": 377478,
+              "active_states": 55212,
+              "prefixes": 9215,
+              "kept": 1024,
+              "max_value_score": 0.00545165421238796,
+              "finalized_upper": 0.11053150272772234
+            },
+            {
+              "vertex": 21,
+              "preprune_states": 276084,
+              "active_states": 55122,
+              "prefixes": 7168,
+              "kept": 1024,
+              "max_value_score": 0.004614978440744986,
+              "finalized_upper": 0.11765843957112078
+            },
+            {
+              "vertex": 22,
+              "preprune_states": 91974,
+              "active_states": 18390,
+              "prefixes": 7161,
+              "kept": 1024,
+              "max_value_score": 0.0041405621208713515,
+              "finalized_upper": 0.12363244391926649
+            },
+            {
+              "vertex": 23,
+              "preprune_states": 14322,
+              "active_states": 2048,
+              "prefixes": 7161,
+              "kept": 1024,
+              "max_value_score": 0.0,
+              "finalized_upper": 0.12378635778112082
+            }
+          ],
+          "risk_priority_upper": 0.11958288368856529,
+          "priority_upper_improvement": -0.0065852137212856765,
+          "activity_lower": 0.01657508482987356,
+          "activity_upper": 0.12506417105341647,
+          "combined_upper": 0.12506417105341647,
+          "relative_width_reduction": 0.0,
+          "promoted": false
+        }
+      ]
+    }
+  ],
+  "decision": "close_priority_only_branch",
+  "promoted": [],
+  "next_method": "Priority-only refinement is closed; the remaining bounded branch is certified structured state merging.",
+  "source_sha256": {
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/run_frontier_value_branch_bound.py": "7d038b93c547c15618a18b8776bb2e648b3d991fa1217db1abaf738e4ad73a74",
+    "labs/lab-008-direction-biased-u1-current-channel/manifests/frontier-value-branch-bound-2026-09-19.json": "48290b0a9ff683fc30226327a4344a228cb014bdfa7d655f94aa9c299c3aca0e",
+    "labs/lab-008-direction-biased-u1-current-channel/results/adaptive-charge-branch-bound-2026-09-19.json": "7a13ff42e5700d677ec81df7509bc8f3feee4d2f1e7e72e92ce32cc09e24b431",
+    "labs/lab-008-direction-biased-u1-current-channel/results/current-activity-expansion-2026-09-18.json": "866cc079cc52411126a12d83330c917c49ee89262c09b530da0c3e0bdebd7ab9",
+    "labs/lab-008-direction-biased-u1-current-channel/results/replica-boundary-theory-2026-09-18.json": "479b6f8630cfa116aa7c20031fb7494adf8572d4acf39474eea9dab1ccc84fc2",
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/current_oracle.py": "241916aa389193b7b62a3ea2de7f4267086dfcca60760ee514e27100f40fa6ee",
+    "src/herald_decoder/lattice_model.py": "b87a5feba27675e26970360d730324b7d3740e4dc0492b4dc478e510f140c9e7"
+  }
+}

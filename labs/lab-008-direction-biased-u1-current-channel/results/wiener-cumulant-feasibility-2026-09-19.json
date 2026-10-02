@@ -1,0 +1,651 @@
+{
+  "status": "passed",
+  "scope": "Uniform Wiener connected-cumulant error budget; representation only, L5 coefficient contraction not yet executed.",
+  "derivation": {
+    "z": "p/(1-p)",
+    "r_N": "sum_{n>N} z^n/n",
+    "full_error": "exp(E*r_N)-1",
+    "LER_error": "[exp(E*r_N)-1]/2"
+  },
+  "cells": [
+    {
+      "p": 0.05,
+      "z": 0.052631578947368425,
+      "E": 32,
+      "budgets": [
+        {
+          "N": 1,
+          "log_remainder_bound": 0.0014356423229073476,
+          "full_Wiener_error_bound": 0.04701216877024847,
+          "absolute_LER_error_bound": 0.023506084385124235,
+          "scalar_grid_max_error": 0.0014356423229073961,
+          "aligned_product_grid_max_error": 0.04375533225185846
+        },
+        {
+          "N": 2,
+          "log_remainder_bound": 5.060077166080951e-05,
+          "full_Wiener_error_bound": 0.001620536345307002,
+          "absolute_LER_error_bound": 0.000810268172653501,
+          "scalar_grid_max_error": 5.060077166085808e-05,
+          "aligned_product_grid_max_error": 0.001495104941049763
+        },
+        {
+          "N": 3,
+          "log_remainder_bound": 2.002822494268086e-06,
+          "full_Wiener_error_bound": 6.409237364500245e-05,
+          "absolute_LER_error_bound": 3.2046186822501226e-05,
+          "scalar_grid_max_error": 2.0028224943097195e-06,
+          "aligned_product_grid_max_error": 5.8912382880915715e-05
+        },
+        {
+          "N": 4,
+          "log_remainder_bound": 8.448239558617177e-08,
+          "full_Wiener_error_bound": 2.7034403130456735e-06,
+          "absolute_LER_error_bound": 1.3517201565228368e-06,
+          "scalar_grid_max_error": 8.448239562780513e-08,
+          "aligned_product_grid_max_error": 2.4762324772886757e-06
+        },
+        {
+          "N": 5,
+          "log_remainder_bound": 3.7101809055584134e-09,
+          "full_Wiener_error_bound": 1.18725796025776e-07,
+          "absolute_LER_error_bound": 5.9362898012888e-08,
+          "scalar_grid_max_error": 3.710180947191777e-09,
+          "aligned_product_grid_max_error": 1.0847533249425112e-07
+        },
+        {
+          "N": 6,
+          "log_remainder_bound": 1.675399124989596e-10,
+          "full_Wiener_error_bound": 5.361277214338354e-09,
+          "absolute_LER_error_bound": 2.680638607169177e-09,
+          "scalar_grid_max_error": 1.6753995413232303e-10,
+          "aligned_product_grid_max_error": 4.8891850568111295e-09
+        },
+        {
+          "N": 8,
+          "log_remainder_bound": 3.6146086124233534e-13,
+          "full_Wiener_error_bound": 1.1566747559821626e-11,
+          "absolute_LER_error_bound": 5.783373779910813e-12,
+          "scalar_grid_max_error": 3.615094334996627e-13,
+          "aligned_product_grid_max_error": 1.0522289461120638e-11
+        },
+        {
+          "N": 10,
+          "log_remainder_bound": 8.187894806610529e-16,
+          "full_Wiener_error_bound": 2.6201263381154038e-14,
+          "absolute_LER_error_bound": 1.3100631690577019e-14,
+          "scalar_grid_max_error": 8.683977859016394e-16,
+          "aligned_product_grid_max_error": 2.7904760810077447e-14
+        },
+        {
+          "N": 12,
+          "log_remainder_bound": 0.0,
+          "full_Wiener_error_bound": 0.0,
+          "absolute_LER_error_bound": 0.0,
+          "scalar_grid_max_error": 1.1807593843811162e-16,
+          "aligned_product_grid_max_error": 4.921295239025272e-15
+        },
+        {
+          "N": 16,
+          "log_remainder_bound": 0.0,
+          "full_Wiener_error_bound": 0.0,
+          "absolute_LER_error_bound": 0.0,
+          "scalar_grid_max_error": 1.1807593843811162e-16,
+          "aligned_product_grid_max_error": 4.9164205652118054e-15
+        },
+        {
+          "N": 24,
+          "log_remainder_bound": 0.0,
+          "full_Wiener_error_bound": 0.0,
+          "absolute_LER_error_bound": 0.0,
+          "scalar_grid_max_error": 1.1807593843811162e-16,
+          "aligned_product_grid_max_error": 4.9164205652118054e-15
+        },
+        {
+          "N": 32,
+          "log_remainder_bound": 0.0,
+          "full_Wiener_error_bound": 0.0,
+          "absolute_LER_error_bound": 0.0,
+          "scalar_grid_max_error": 1.1807593843811162e-16,
+          "aligned_product_grid_max_error": 4.9164205652118054e-15
+        },
+        {
+          "N": 48,
+          "log_remainder_bound": 0.0,
+          "full_Wiener_error_bound": 0.0,
+          "absolute_LER_error_bound": 0.0,
+          "scalar_grid_max_error": 1.1807593843811162e-16,
+          "aligned_product_grid_max_error": 4.9164205652118054e-15
+        },
+        {
+          "N": 64,
+          "log_remainder_bound": 0.0,
+          "full_Wiener_error_bound": 0.0,
+          "absolute_LER_error_bound": 0.0,
+          "scalar_grid_max_error": 1.1807593843811162e-16,
+          "aligned_product_grid_max_error": 4.9164205652118054e-15
+        }
+      ],
+      "minimum_N_for_LER_error": {
+        "0.01": 2,
+        "0.001": 2,
+        "0.0001": 3
+      },
+      "promoted_at_1e-3": true
+    },
+    {
+      "p": 0.08,
+      "z": 0.08695652173913043,
+      "E": 32,
+      "budgets": [
+        {
+          "N": 1,
+          "log_remainder_bound": 0.0040152564665962565,
+          "full_Wiener_error_bound": 0.13710801121899696,
+          "absolute_LER_error_bound": 0.06855400560949848,
+          "scalar_grid_max_error": 0.004015256466596201,
+          "aligned_product_grid_max_error": 0.12119738681552805
+        },
+        {
+          "N": 2,
+          "log_remainder_bound": 0.00023453813011233005,
+          "full_Wiener_error_bound": 0.007533454920267943,
+          "absolute_LER_error_bound": 0.0037667274601339714,
+          "scalar_grid_max_error": 0.00023453813011227453,
+          "aligned_product_grid_max_error": 0.006564138463126867
+        },
+        {
+          "N": 3,
+          "log_remainder_bound": 1.5366052634996352e-05,
+          "full_Wiener_error_bound": 0.0004918345953106078,
+          "absolute_LER_error_bound": 0.0002459172976553039,
+          "scalar_grid_max_error": 1.536605263494084e-05,
+          "aligned_product_grid_max_error": 0.0004278208035564113
+        },
+        {
+          "N": 4,
+          "log_remainder_bound": 1.0722214951741638e-06,
+          "full_Wiener_error_bound": 3.4311676477679995e-05,
+          "absolute_LER_error_bound": 1.7155838238839998e-05,
+          "scalar_grid_max_error": 1.0722214951186526e-06,
+          "aligned_product_grid_max_error": 2.9672841897365743e-05
+        },
+        {
+          "N": 5,
+          "log_remainder_bound": 7.786802456999364e-08,
+          "full_Wiener_error_bound": 2.4917798907181515e-06,
+          "absolute_LER_error_bound": 1.2458899453590757e-06,
+          "scalar_grid_max_error": 7.786802452836028e-08,
+          "aligned_product_grid_max_error": 2.1460312167320694e-06
+        },
+        {
+          "N": 6,
+          "log_remainder_bound": 5.813425255074556e-09,
+          "full_Wiener_error_bound": 1.8602962546589443e-07,
+          "absolute_LER_error_bound": 9.301481273294721e-08,
+          "scalar_grid_max_error": 5.813425213441192e-09,
+          "aligned_product_grid_max_error": 1.5971825129135198e-07
+        },
+        {
+          "N": 8,
+          "log_remainder_bound": 3.4268893278621704e-11,
+          "full_Wiener_error_bound": 1.0966045855171653e-09,
+          "absolute_LER_error_bound": 5.483022927585826e-10,
+          "scalar_grid_max_error": 3.426885164525828e-11,
+          "aligned_product_grid_max_error": 9.374022669206283e-10
+        },
+        {
+          "N": 10,
+          "log_remainder_bound": 2.123301534595612e-13,
+          "full_Wiener_error_bound": 6.794564910729041e-12,
+          "absolute_LER_error_bound": 3.3972824553645204e-12,
+          "scalar_grid_max_error": 2.1236270744602967e-13,
+          "aligned_product_grid_max_error": 5.791924491010721e-12
+        },
+        {
+          "N": 12,
+          "log_remainder_bound": 1.3600232051658168e-15,
+          "full_Wiener_error_bound": 4.352074256530708e-14,
+          "absolute_LER_error_bound": 2.176037128265354e-14,
+          "scalar_grid_max_error": 1.4232383986942434e-15,
+          "aligned_product_grid_max_error": 4.058645586866438e-14
+        },
+        {
+          "N": 16,
+          "log_remainder_bound": 0.0,
+          "full_Wiener_error_bound": 0.0,
+          "absolute_LER_error_bound": 0.0,
+          "scalar_grid_max_error": 1.2491213638023616e-16,
+          "aligned_product_grid_max_error": 5.443561161991477e-15
+        },
+        {
+          "N": 24,
+          "log_remainder_bound": 0.0,
+          "full_Wiener_error_bound": 0.0,
+          "absolute_LER_error_bound": 0.0,
+          "scalar_grid_max_error": 1.2491213638023616e-16,
+          "aligned_product_grid_max_error": 5.443561161991477e-15
+        },
+        {
+          "N": 32,
+          "log_remainder_bound": 0.0,
+          "full_Wiener_error_bound": 0.0,
+          "absolute_LER_error_bound": 0.0,
+          "scalar_grid_max_error": 1.2491213638023616e-16,
+          "aligned_product_grid_max_error": 5.443561161991477e-15
+        },
+        {
+          "N": 48,
+          "log_remainder_bound": 0.0,
+          "full_Wiener_error_bound": 0.0,
+          "absolute_LER_error_bound": 0.0,
+          "scalar_grid_max_error": 1.2491213638023616e-16,
+          "aligned_product_grid_max_error": 5.443561161991477e-15
+        },
+        {
+          "N": 64,
+          "log_remainder_bound": 0.0,
+          "full_Wiener_error_bound": 0.0,
+          "absolute_LER_error_bound": 0.0,
+          "scalar_grid_max_error": 1.2491213638023616e-16,
+          "aligned_product_grid_max_error": 5.443561161991477e-15
+        }
+      ],
+      "minimum_N_for_LER_error": {
+        "0.01": 2,
+        "0.001": 3,
+        "0.0001": 4
+      },
+      "promoted_at_1e-3": true
+    },
+    {
+      "p": 0.1,
+      "z": 0.11111111111111112,
+      "E": 32,
+      "budgets": [
+        {
+          "N": 1,
+          "log_remainder_bound": 0.006671924545272351,
+          "full_Wiener_error_bound": 0.23800546106069773,
+          "absolute_LER_error_bound": 0.11900273053034886,
+          "scalar_grid_max_error": 0.006671924545272392,
+          "aligned_product_grid_max_error": 0.20203872713116033
+        },
+        {
+          "N": 2,
+          "log_remainder_bound": 0.0004990850390995116,
+          "full_Wiener_error_bound": 0.016098934865081897,
+          "absolute_LER_error_bound": 0.008049467432540949,
+          "scalar_grid_max_error": 0.0004990850390995533,
+          "aligned_product_grid_max_error": 0.013420934946370866
+        },
+        {
+          "N": 3,
+          "log_remainder_bound": 4.183766827189905e-05,
+          "full_Wiener_error_bound": 0.0013397019847094834,
+          "absolute_LER_error_bound": 0.0006698509923547417,
+          "scalar_grid_max_error": 4.183766827194069e-05,
+          "aligned_product_grid_max_error": 0.001120733727272727
+        },
+        {
+          "N": 4,
+          "log_remainder_bound": 3.733720702919774e-06,
+          "full_Wiener_error_bound": 0.00011948620040089392,
+          "absolute_LER_error_bound": 5.974310020044696e-05,
+          "scalar_grid_max_error": 3.733720702975285e-06,
+          "aligned_product_grid_max_error": 9.921522598566046e-05
+        },
+        {
+          "N": 5,
+          "log_remainder_bound": 3.467031412379695e-07,
+          "full_Wiener_error_bound": 1.1094562063813516e-05,
+          "absolute_LER_error_bound": 5.547281031906758e-06,
+          "scalar_grid_max_error": 3.467031412934807e-07,
+          "aligned_product_grid_max_error": 9.164455825549922e-06
+        },
+        {
+          "N": 6,
+          "log_remainder_bound": 3.3090404041868915e-08,
+          "full_Wiener_error_bound": 1.058893489967121e-06,
+          "absolute_LER_error_bound": 5.294467449835605e-07,
+          "scalar_grid_max_error": 3.3090404097380066e-08,
+          "aligned_product_grid_max_error": 8.71193378659818e-07
+        },
+        {
+          "N": 8,
+          "log_remainder_bound": 3.18702675361493e-10,
+          "full_Wiener_error_bound": 1.019848566357233e-08,
+          "absolute_LER_error_bound": 5.099242831786165e-09,
+          "scalar_grid_max_error": 3.187027169948564e-10,
+          "aligned_product_grid_max_error": 8.34389901616106e-09
+        },
+        {
+          "N": 10,
+          "log_remainder_bound": 3.2257529980483923e-12,
+          "full_Wiener_error_bound": 1.0322409594287617e-10,
+          "absolute_LER_error_bound": 5.161204797143808e-11,
+          "scalar_grid_max_error": 3.2257946314118158e-12,
+          "aligned_product_grid_max_error": 8.413991725575443e-11
+        },
+        {
+          "N": 12,
+          "log_remainder_bound": 3.375077994860476e-14,
+          "full_Wiener_error_bound": 1.0800249583559355e-12,
+          "absolute_LER_error_bound": 5.400124791779678e-13,
+          "scalar_grid_max_error": 3.379978532366662e-14,
+          "aligned_product_grid_max_error": 8.794076578055865e-13
+        },
+        {
+          "N": 16,
+          "log_remainder_bound": 1.3877787807814457e-17,
+          "full_Wiener_error_bound": 4.440892098500627e-16,
+          "absolute_LER_error_bound": 2.2204460492503136e-16,
+          "scalar_grid_max_error": 1.3878871967638605e-16,
+          "aligned_product_grid_max_error": 4.56731047845901e-15
+        },
+        {
+          "N": 24,
+          "log_remainder_bound": 0.0,
+          "full_Wiener_error_bound": 0.0,
+          "absolute_LER_error_bound": 0.0,
+          "scalar_grid_max_error": 1.3880227048335013e-16,
+          "aligned_product_grid_max_error": 4.564083509149711e-15
+        },
+        {
+          "N": 32,
+          "log_remainder_bound": 0.0,
+          "full_Wiener_error_bound": 0.0,
+          "absolute_LER_error_bound": 0.0,
+          "scalar_grid_max_error": 1.3880227048335013e-16,
+          "aligned_product_grid_max_error": 4.564083509149711e-15
+        },
+        {
+          "N": 48,
+          "log_remainder_bound": 0.0,
+          "full_Wiener_error_bound": 0.0,
+          "absolute_LER_error_bound": 0.0,
+          "scalar_grid_max_error": 1.3880227048335013e-16,
+          "aligned_product_grid_max_error": 4.564083509149711e-15
+        },
+        {
+          "N": 64,
+          "log_remainder_bound": 0.0,
+          "full_Wiener_error_bound": 0.0,
+          "absolute_LER_error_bound": 0.0,
+          "scalar_grid_max_error": 1.3880227048335013e-16,
+          "aligned_product_grid_max_error": 4.564083509149711e-15
+        }
+      ],
+      "minimum_N_for_LER_error": {
+        "0.01": 2,
+        "0.001": 3,
+        "0.0001": 4
+      },
+      "promoted_at_1e-3": true
+    },
+    {
+      "p": 0.3,
+      "z": 0.4285714285714286,
+      "E": 32,
+      "budgets": [
+        {
+          "N": 1,
+          "log_remainder_bound": 0.13104435936399417,
+          "full_Wiener_error_bound": 65.2489423127163,
+          "absolute_LER_error_bound": 32.62447115635815,
+          "scalar_grid_max_error": 0.13104435936399417,
+          "aligned_product_grid_max_error": 8.981042145278964
+        },
+        {
+          "N": 2,
+          "log_remainder_bound": 0.039207624670116625,
+          "full_Wiener_error_bound": 2.5065897691231416,
+          "absolute_LER_error_bound": 1.2532948845615708,
+          "scalar_grid_max_error": 0.039207624670116625,
+          "aligned_product_grid_max_error": 0.4716984294388632
+        },
+        {
+          "N": 3,
+          "log_remainder_bound": 0.012968557614723042,
+          "full_Wiener_error_bound": 0.5143614177564462,
+          "absolute_LER_error_bound": 0.2571807088782231,
+          "scalar_grid_max_error": 0.012968557614723042,
+          "aligned_product_grid_max_error": 0.22331225599100046
+        },
+        {
+          "N": 4,
+          "log_remainder_bound": 0.004534571775489327,
+          "full_Wiener_error_bound": 0.15616246012440077,
+          "absolute_LER_error_bound": 0.07808123006220039,
+          "scalar_grid_max_error": 0.004534571775489438,
+          "aligned_product_grid_max_error": 0.06604348816396133
+        },
+        {
+          "N": 5,
+          "log_remainder_bound": 0.0016429194877520814,
+          "full_Wiener_error_bound": 0.05397994624807348,
+          "absolute_LER_error_bound": 0.02698997312403674,
+          "scalar_grid_max_error": 0.0016429194877521924,
+          "aligned_product_grid_max_error": 0.0245028496200691
+        },
+        {
+          "N": 6,
+          "log_remainder_bound": 0.0006101865278459462,
+          "full_Wiener_error_bound": 0.019717847458524097,
+          "absolute_LER_error_bound": 0.009858923729262049,
+          "scalar_grid_max_error": 0.0006101865278460572,
+          "aligned_product_grid_max_error": 0.008801026766584563
+        },
+        {
+          "N": 8,
+          "log_remainder_bound": 8.855100217908252e-05,
+          "full_Wiener_error_bound": 0.0028376505998660997,
+          "absolute_LER_error_bound": 0.0014188252999330498,
+          "scalar_grid_max_error": 8.855100217919354e-05,
+          "aligned_product_grid_max_error": 0.0012517745979530037
+        },
+        {
+          "N": 10,
+          "log_remainder_bound": 1.3450971025563696e-05,
+          "full_Wiener_error_bound": 0.00043052372156475156,
+          "absolute_LER_error_bound": 0.00021526186078237578,
+          "scalar_grid_max_error": 1.3450971025674718e-05,
+          "aligned_product_grid_max_error": 0.00018720467282062891
+        },
+        {
+          "N": 12,
+          "log_remainder_bound": 2.106891763942187e-06,
+          "full_Wiener_error_bound": 6.742280926159519e-05,
+          "absolute_LER_error_bound": 3.3711404630797594e-05,
+          "scalar_grid_max_error": 2.1068917641642315e-06,
+          "aligned_product_grid_max_error": 2.89864156802766e-05
+        },
+        {
+          "N": 16,
+          "log_remainder_bound": 5.4934077731161324e-08,
+          "full_Wiener_error_bound": 1.7578920324875505e-06,
+          "absolute_LER_error_bound": 8.789460162437753e-07,
+          "scalar_grid_max_error": 5.493407795320593e-08,
+          "aligned_product_grid_max_error": 7.440595100050018e-07
+        },
+        {
+          "N": 24,
+          "log_remainder_bound": 4.301603517831154e-11,
+          "full_Wiener_error_bound": 1.3765131266533634e-09,
+          "absolute_LER_error_bound": 6.882565633266817e-10,
+          "scalar_grid_max_error": 4.3016146200614e-11,
+          "aligned_product_grid_max_error": 5.727727181437103e-10
+        },
+        {
+          "N": 32,
+          "log_remainder_bound": 3.730349362740526e-14,
+          "full_Wiener_error_bound": 1.1937117960776808e-12,
+          "absolute_LER_error_bound": 5.968558980388404e-13,
+          "scalar_grid_max_error": 3.763990516437416e-14,
+          "aligned_product_grid_max_error": 4.976056838436118e-13
+        },
+        {
+          "N": 48,
+          "log_remainder_bound": 0.0,
+          "full_Wiener_error_bound": 0.0,
+          "absolute_LER_error_bound": 0.0,
+          "scalar_grid_max_error": 6.661338147750939e-16,
+          "aligned_product_grid_max_error": 1.0247935865112457e-14
+        },
+        {
+          "N": 64,
+          "log_remainder_bound": 0.0,
+          "full_Wiener_error_bound": 0.0,
+          "absolute_LER_error_bound": 0.0,
+          "scalar_grid_max_error": 6.661338147750939e-16,
+          "aligned_product_grid_max_error": 1.0247935865112457e-14
+        }
+      ],
+      "minimum_N_for_LER_error": {
+        "0.01": 6,
+        "0.001": 10,
+        "0.0001": 12
+      },
+      "promoted_at_1e-3": true
+    },
+    {
+      "p": 0.46,
+      "z": 0.8518518518518519,
+      "E": 32,
+      "budgets": [
+        {
+          "N": 1,
+          "log_remainder_bound": 1.0576906530325867,
+          "full_Wiener_error_bound": 500235896975902.8,
+          "absolute_LER_error_bound": 250117948487951.4,
+          "scalar_grid_max_error": 1.0576906530325867,
+          "aligned_product_grid_max_error": 1883.2832666775507
+        },
+        {
+          "N": 2,
+          "log_remainder_bound": 0.6948648642808719,
+          "full_Wiener_error_bound": 4537652554.358713,
+          "absolute_LER_error_bound": 2268826277.1793566,
+          "scalar_grid_max_error": 0.6948648642808719,
+          "aligned_product_grid_max_error": 0.9829076185220877
+        },
+        {
+          "N": 3,
+          "log_remainder_bound": 0.4888156509157007,
+          "full_Wiener_error_bound": 6212665.993718803,
+          "absolute_LER_error_bound": 3106332.9968594015,
+          "scalar_grid_max_error": 0.4888156509157007,
+          "aligned_product_grid_max_error": 11.484056938645118
+        },
+        {
+          "N": 4,
+          "log_remainder_bound": 0.3571730979323968,
+          "full_Wiener_error_bound": 91998.56555913368,
+          "absolute_LER_error_bound": 45999.28277956684,
+          "scalar_grid_max_error": 0.3571730979323968,
+          "aligned_product_grid_max_error": 0.8151312768039845
+        },
+        {
+          "N": 5,
+          "log_remainder_bound": 0.2674611358993304,
+          "full_Wiener_error_bound": 5211.194987349627,
+          "absolute_LER_error_bound": 2605.5974936748134,
+          "scalar_grid_max_error": 0.2674611358993304,
+          "aligned_product_grid_max_error": 2.2630863313411442
+        },
+        {
+          "N": 6,
+          "log_remainder_bound": 0.20377671840672162,
+          "full_Wiener_error_bound": 678.1588104979961,
+          "absolute_LER_error_bound": 339.07940524899806,
+          "scalar_grid_max_error": 0.20377671840672162,
+          "aligned_product_grid_max_error": 0.5748137134691479
+        },
+        {
+          "N": 8,
+          "log_remainder_bound": 0.12261746148749597,
+          "full_Wiener_error_bound": 49.590244820578356,
+          "absolute_LER_error_bound": 24.795122410289178,
+          "scalar_grid_max_error": 0.12261746148749597,
+          "aligned_product_grid_max_error": 0.3789484369389752
+        },
+        {
+          "N": 10,
+          "log_remainder_bound": 0.07625262290199775,
+          "full_Wiener_error_bound": 10.474003748375681,
+          "absolute_LER_error_bound": 5.237001874187841,
+          "scalar_grid_max_error": 0.07625262290199775,
+          "aligned_product_grid_max_error": 0.24450651032513615
+        },
+        {
+          "N": 12,
+          "log_remainder_bound": 0.048503905869165864,
+          "full_Wiener_error_bound": 3.7214926443446226,
+          "absolute_LER_error_bound": 1.8607463221723113,
+          "scalar_grid_max_error": 0.04850390586916564,
+          "aligned_product_grid_max_error": 0.15728001034253902
+        },
+        {
+          "N": 16,
+          "log_remainder_bound": 0.020546824402214003,
+          "full_Wiener_error_bound": 0.9299582699024708,
+          "absolute_LER_error_bound": 0.4649791349512354,
+          "scalar_grid_max_error": 0.02054682440221356,
+          "aligned_product_grid_max_error": 0.06607646542964196
+        },
+        {
+          "N": 24,
+          "log_remainder_bound": 0.004115643610003383,
+          "full_Wiener_error_bound": 0.1407667174655115,
+          "absolute_LER_error_bound": 0.07038335873275575,
+          "scalar_grid_max_error": 0.004115643610003161,
+          "aligned_product_grid_max_error": 0.012700480925663338
+        },
+        {
+          "N": 32,
+          "log_remainder_bound": 0.0008955504901395628,
+          "full_Wiener_error_bound": 0.02907219597126042,
+          "absolute_LER_error_bound": 0.01453609798563021,
+          "scalar_grid_max_error": 0.0008955504901391187,
+          "aligned_product_grid_max_error": 0.002669676726132053
+        },
+        {
+          "N": 48,
+          "log_remainder_bound": 4.82510889481258e-05,
+          "full_Wiener_error_bound": 0.0015452274818880082,
+          "absolute_LER_error_bound": 0.0007726137409440041,
+          "scalar_grid_max_error": 4.8251088947459664e-05,
+          "aligned_product_grid_max_error": 0.00013778688308407894
+        },
+        {
+          "N": 64,
+          "log_remainder_bound": 2.858727017773788e-06,
+          "full_Wiener_error_bound": 9.148344892427718e-05,
+          "absolute_LER_error_bound": 4.574172446213859e-05,
+          "scalar_grid_max_error": 2.858727017107654e-06,
+          "aligned_product_grid_max_error": 7.96804646119309e-06
+        }
+      ],
+      "minimum_N_for_LER_error": {
+        "0.01": 48,
+        "0.001": 48,
+        "0.0001": 64
+      },
+      "promoted_at_1e-3": true
+    }
+  ],
+  "scalar_grid_bound_slack": 6.661338147750939e-16,
+  "product_grid_bound_slack": 1.0247935865112457e-14,
+  "decision": "promote_finite_harmonic_evaluation",
+  "next_method": "Construct a finite-harmonic approximation to exp(P_N) with its own Wiener tail, then contract the twisted charge coefficients and report LER_N plus the combined certified error.",
+  "claims_prohibited": [
+    "No L5 LER value has been computed by this feasibility test.",
+    "No threshold or continuum claim."
+  ],
+  "source_sha256": {
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/check_wiener_cumulant_feasibility.py": "9d42fac11e6a095a4d995231d49064fe937668ebb529076f91413b8f520312d2",
+    "labs/lab-008-direction-biased-u1-current-channel/manifests/wiener-cumulant-feasibility-2026-09-19.json": "9ed8bd4a5ab8d69b40b7afe52ca1b71c88bcd453d516df64292e0aea7d49894a",
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/current_oracle.py": "241916aa389193b7b62a3ea2de7f4267086dfcca60760ee514e27100f40fa6ee",
+    "src/herald_decoder/lattice_model.py": "b87a5feba27675e26970360d730324b7d3740e4dc0492b4dc478e510f140c9e7"
+  }
+}

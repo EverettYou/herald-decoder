@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j7b-future-fault-next-first-and-caller-gate-2026-09-25",
+  "status": "registered_before_exact_execution",
+  "question": "On the pinned two-edge D4 path, what complete next-first public law follows one nonzero future red-X fault after action and postselection, and does the frozen five-round caller accept that stateful law?",
+  "role": "One fixed-state exact physical-instrument discriminator plus independent read-only caller gate; not noisy production history, schedule performance or a general D4 density channel",
+  "program_alignment": "Lab 005 physical-observation and fault-tolerance prerequisites: test whether future public charge depends on postselected history rather than only the current net red-X support before evaluating JIT schedules.",
+  "source_basis": ["Jing Appendix A.2/A.4 source red-X and ideal charge projectors", "J6M periodic vacuum orbit", "J6O complete two-block fixed-path law", "J7A no-new-fault next-first limiting control"],
+  "pinned_inputs": {
+    "jing_pdf_sha256": "7a17c3d3a743e3dec4266b64d0321a6af7a5eeacfab67e42b9ec77d30b65a2ac",
+    "j6l_result_sha256": "c3eee28f083b7f3a4dd82a3e4f8a7d3ec29aa19af92bbc3ab4588129d855c4ab",
+    "j6m_result_sha256": "55bfe46d34c9a8356e828351b0d415ed550312ed315c4c1bda7a51508ef1b932",
+    "j6o_result_sha256": "3c08da92958c80c3e2958d4a250352e66437c05e3735cf110feeead5603fb31f",
+    "j7a_result_sha256": "72b8f85540c5e67c6bb2bffd2895b0a062ea36bc05c3c29a5bd9bb3846ef570f",
+    "frozen_integrated_history_sha256": "43d9d0d3e4771ccfc764f590f1843cda1e2a7fbce8dae96057710c413a0adb6e"
+  },
+  "model": {
+    "geometry_and_preparation": "Periodic L=2, 108 physical qubits, pinned J6M common all-star/all-triangle +1 orbit; one private initial red-X support [0,4], no logical-sector assignment",
+    "ordered_timing": "Prepare vacuum; apply private initial red X on [0,4]; measure complete eligible first 24-site binary flux/charge/vacuum record; take one public action defer [], partial [0], or matched [0,4]; if corrected measure complete eligible action-conditioned second public record; then apply exactly one new private physical red-X fault on edge 0; measure complete eligible next first record with no intervening correction or readout noise",
+    "private_state": "Carry ordered first/second projector outcomes, initial red-X mask, correction mask and future-fault mask privately; the next projector is X_(E xor A xor F) A_s X_(E xor A xor F). Never replace the postselected state with a freshly prepared vacuum orbit after the action.",
+    "public_boundary": "Only trial/prefix/action/future-key digests, public action IDs, and full 24-site binary flux/charge/vacuum arrays are decoder-visible; physical supports, projector operators, orbit and token are private. Defer has no second record.",
+    "matched_keys": "One fixed trial ID; same private initial physical and first-observation keys for all actions; two enumerated second-exogenous bits for each correction; one fixed future-fault key and edge for every prefix. Keys are deterministic counterfactual labels, not Monte Carlo randomness.",
+    "independent_unit_and_uncertainty": "One fixed exact vacuum orbit and geometry; all probabilities are exact rational Born masses, with no independent stochastic samples, confidence interval or bootstrap. Geometry and sector generalization remain unresolved."
+  },
+  "matrix": {
+    "physical_red_edges_private": [0,4],
+    "future_fault_red_edges_private": [0],
+    "actions": {"defer": [], "partial": [0], "matched": [0,4]},
+    "expected_positive_first_second_prefixes": 10,
+    "full_public_next_first": "At each positive pinned J6O prefix, check actual-sector flux/eligibility and commuting eligible projectors. Use exact ordered first/second/next-first Born contractions; classify every next eligible site's conditional charge, then enumerate the joint law over all non-deterministic sites, not a selected-site surrogate. Require exact normalization and 24-site public arrays.",
+    "counterfactual_discriminator": "Compare defer+future-edge-0 with partial+no-future J7A after marginalizing partial second results at each matched first record. Both have the same final red-X support [4]. Record exact total variation of their complete next public charge laws; nonzero would show history dependence in this finite fixture, zero is a bounded negative result. This is not an isolated causal effect of correction because the measurement histories differ.",
+    "no_fault_control": "Check that the J7A no-future limiting result remains pinned and unchanged; no-future probabilities are read from it, not recomputed or pooled with future-fault production rows.",
+    "caller_gate": "Independently audit the pinned five-round history builder and evaluator: next first observations and hidden states are precomputed before action, and the evaluator uses the phenomenological second provider; report whether an action-bound private postselected-state/future-fault callback is accepted. Do not modify or invoke the frozen caller."
+  },
+  "competing_explanations": {
+    "current_support_only": "After conditioning on the same final red-X support, the complete next-first law is unchanged by earlier postselection in this fixed fixture.",
+    "history_sensitive_state": "At the same final red-X support, the complete next-first law differs because earlier measurement/correction leaves a distinct postselected quantum state.",
+    "censor": "If a complete next-first law exceeds the frozen variable-site, term, row or CPU cap, retain only validated one-site diagnostics and make no support-versus-history claim."
+  },
+  "acceptance": ["All six source/result/caller hashes pass before and after the matrix", "All 10 positive pinned first/second prefixes preserve their exact J6O masses, and all three action branches close a normalized complete next-first law or are explicitly censored at a registered cap", "Full 24-site flux/charge/vacuum public records are sector-correct; no private support or projector enters public output; exact replay and negative action/prefix/future-key checks pass", "The matched-final-support discriminator reports exact rational total variation only if both complete laws exist; the independent caller gate reports integration status without changing the frozen caller", "Zero stochastic histories, schedule arms, bootstrap replicates and new dependencies; no noisy JIT, general D4 kernel or threshold claim"],
+  "budget": {"max_cpu_seconds": 60, "max_variable_next_sites": 4, "max_ordered_moment_terms": 262144, "max_positive_next_rows": 128, "new_dependencies": 0, "stochastic_histories": 0, "schedule_arm_evaluations": 0, "bootstrap_replicates": 0},
+  "stop_rule": "Run source pins and caller audit, then the physical future-fault exact matrix at fixed edge/action grid. Fail closed on source, sector, commutation, normalization, public/private, binding or replay drift. Censor the affected physical branch at any frozen complexity cap; do not widen sites, change future edge, infer a numeric general kernel or start schedule sampling. A caller gap does not block independent exact fixture analysis.",
+  "planned_result": "results/j7b-future-fault-next-first-and-caller-gate-2026-09-25.json"
+}

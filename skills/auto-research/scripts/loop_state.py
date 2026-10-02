@@ -75,6 +75,12 @@ def main():
     action = commands.add_parser("record-action")
     action.add_argument("project"); action.add_argument("action"); action.add_argument("--quiet", action="store_true")
     action.add_argument("--acceptance-item"); action.add_argument("--next-item")
+    frontier = commands.add_parser("update-frontier-job")
+    frontier.add_argument("project"); frontier.add_argument("job_id")
+    frontier.add_argument("--status", required=True)
+    frontier.add_argument("--next-operation", required=True)
+    frontier.add_argument("--lab-result")
+    frontier.add_argument("--lab-next-operation")
     args = parser.parse_args()
     path, state = read(args.project)
     if args.command == "init":
@@ -82,7 +88,11 @@ def main():
     elif args.command == "set-status": state["status"] = args.status
     elif args.command == "set-pending-human": state["pending_human_thread_id"] = args.thread_id
     elif args.command == "set-contract":
-        state["active_deliverable_contract"] = contract_path(args.project, args.contract)
+        next_contract = contract_path(args.project, args.contract)
+        previous_contract = state.get("active_deliverable_contract")
+        if previous_contract != next_contract:
+            state["previous_active_deliverable_contract"] = previous_contract
+        state["active_deliverable_contract"] = next_contract
         state["last_acceptance_item"] = None
         state["next_acceptance_item"] = args.next_item
     elif args.command == "clear-contract":
@@ -96,6 +106,22 @@ def main():
         if args.next_item is not None:
             state["next_acceptance_item"] = args.next_item
         state["quiet_supervisor_ticks"] = state.get("quiet_supervisor_ticks", 0) + 1 if args.quiet else 0
+    elif args.command == "update-frontier-job":
+        matches = [
+            (frontier, job)
+            for frontier in state.get("other_research_frontiers", [])
+            for job in frontier.get("registered_jobs", [])
+            if job.get("id") == args.job_id
+        ]
+        if len(matches) != 1:
+            raise ValueError(f"expected one frontier job for {args.job_id}, found {len(matches)}")
+        owning_frontier, job = matches[0]
+        job["status"] = args.status
+        job["next_operation"] = args.next_operation
+        if args.lab_result is not None:
+            owning_frontier["last_result"] = args.lab_result
+        if args.lab_next_operation is not None:
+            owning_frontier["next_operation"] = args.lab_next_operation
     if args.command != "status":
         state["updated"] = now(); write(path, state)
     print(json.dumps(state, indent=2))

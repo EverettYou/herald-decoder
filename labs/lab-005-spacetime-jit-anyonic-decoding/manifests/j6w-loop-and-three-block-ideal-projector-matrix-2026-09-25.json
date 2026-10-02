@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j6w-loop-and-three-block-ideal-projector-matrix-2026-09-25",
+  "status": "registered_before_exact_execution",
+  "question": "Do bounded exact ideal local projector laws on the shortest red-edge loop and an ordered three-block action sequence pass physical-sector and normalization gates, and does the third-block conditional law differ after the second correction?",
+  "epistemic_role": "Two independent finite L=2 ideal projector fixtures; no full public loop law, general D4 transition kernel, noisy history or schedule claim",
+  "source_basis": ["Jing Appendix A.2/A.4 red-X strings, flux-free star projectors and post-flux correction order", "J6L periodic incidence and J6M one common +1 vacuum orbit", "J6N/J6Q ordered exact Born moments", "J6V shortest graph loop and absent five-round state-feedback interface"],
+  "pinned_inputs": {
+    "jing_pdf_sha256": "7a17c3d3a743e3dec4266b64d0321a6af7a5eeacfab67e42b9ec77d30b65a2ac",
+    "j6l_result_sha256": "c3eee28f083b7f3a4dd82a3e4f8a7d3ec29aa19af92bbc3ab4588129d855c4ab",
+    "j6m_result_sha256": "55bfe46d34c9a8356e828351b0d415ed550312ed315c4c1bda7a51508ef1b932",
+    "j6v_result_sha256": "6a40babf09bee9cb9162084d68d44a3407e71d534309edc26b9eee0569d625be",
+    "frozen_integrated_history_sha256": "43d9d0d3e4771ccfc764f590f1843cda1e2a7fbce8dae96057710c413a0adb6e"
+  },
+  "common_contract": {
+    "geometry_and_state": "J6L periodic L=2 red/blue/green embedding and the single J6M anyon-free +1 orbit; no logical-sector averaging",
+    "operator_order": "State -> private red-X error -> project only the selected eligible first stars -> public red-X correction -> project only the selected eligible second stars; the three-block branch adds a second public red-X correction and selected eligible third stars. Projector products retain Born sandwich order.",
+    "observations": "Local selected-star instrument only. Unselected eligible stars are not measured or marginalized from a full measurement; their omitted dephasing may change later probabilities. Physical support and local operator identities are private diagnostics, not a decoder-visible full record.",
+    "independent_unit": "One fixed exact state per physical geometry with counterfactual action branches; no Monte Carlo units or uncertainty interval"
+  },
+  "matrix": {
+    "loop": {"private_physical_red_edges": [0, 1, 32, 30, 34, 35], "actions": {"correct_edge_0": [0], "matched_all_six": [0, 1, 32, 30, 34, 35]}, "local_site_selection": "Smallest two eligible first sites with unconditional star mean zero; for each action, smallest two eligible second sites with unconditional star mean zero. If fewer than two in either block, use all available. Enumerate full joint outcomes only on these selected sites; leave every other site marginalized.", "full_public_censor_gate": "If more than four eligible first sites have nonzero variance, explicitly censor any full 24-site loop-law claim; do not increase cap or infer full law from the local projection."},
+    "three_block": {"private_physical_red_edges": [0, 4], "first_local_site": 1, "first_public_action_red_edges": [0], "second_local_site": 0, "third_action_branches": {"repeat_no_second_action": [], "complete_with_edge_4": [4]}, "third_local_sites": {"repeat_no_second_action": [0], "complete_with_edge_4": [0, 2]}, "comparison": "For every positive first/second local record compare normalized exact third conditional laws under the two registered second actions; distinguish unchanged-operator repeat from changed/new site evidence. Do not infer next-round noisy history probabilities."}
+  },
+  "acceptance": ["All five pins and J6V six-edge cycle witness match", "Every selected site is flux-free and every within-block selected pair commutes in its actual triangle sector", "Exact rational first and conditional later Born masses are nonnegative and normalized at every positive conditioning record, with all zero-mass outcomes retained as zero or explicitly omitted", "Loop local projection, full-public censor status and three-block ordered conditional laws are reported separately; no private support is published as a full public record", "No stochastic histories, schedule arms, bootstraps, five-round caller mutation, decoder comparison, threshold fit or general D4 feedback claim"],
+  "budget": {"max_cpu_seconds": 60, "new_dependencies": 0, "stochastic_histories": 0, "schedule_arm_evaluations": 0, "bootstrap_replicates": 0},
+  "stop_rule": "Fail closed on any input drift, unverified eligible commutation, negative/unnormalized Born mass, local-site selection mismatch or CPU cap. Censor only the full-loop-public-law claim if its predeclared first-site cap fails; retain separately valid local fixture evidence. Never adapt the physical edges, actions or measured site rule after seeing outcomes.",
+  "planned_result": "results/j6w-loop-and-three-block-ideal-projector-matrix-2026-09-25.json"
+}

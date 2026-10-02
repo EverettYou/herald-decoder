@@ -1,0 +1,46 @@
+{
+  "id": "lab008-interface-cancellation-information-bound-2026-09-22",
+  "status": "exact_conditional_theorem",
+  "date": "2026-09-22",
+  "question": "What physical-record quantity exactly controls the extra Bayes risk created by hiding the gluing interface flux?",
+  "setting": {
+    "public_record": "Q",
+    "logical_bit": "H in {0,1}",
+    "hidden_interface_flux": "U",
+    "sector_posterior": "p_h(Q)=P(H=h|Q)",
+    "sector_conditioned_interface_law": "pi_h^Q(u)=P(U=u|Q,H=h)",
+    "interface_distinguishability": "d_Q=TV(pi_0^Q,pi_1^Q)",
+    "conditional_information_nats": "I_Q=I(H;U|Q=q)"
+  },
+  "exact_identities": {
+    "coarse_risk": "r(Q)=min(p_0(Q),p_1(Q))",
+    "revealed_interface_risk": "r_U(Q)=sum_u min(p_0(Q)pi_0^Q(u),p_1(Q)pi_1^Q(u))",
+    "cancellation_value": "c(Q)=r(Q)-r_U(Q)=(E[|E[(-1)^H|Q,U]||Q]-|E[(-1)^H|Q]|)/2",
+    "physical_average": "E[c(Q)]=R(Q)-R(Q,U)"
+  },
+  "proved_bounds": {
+    "recordwise_total_variation": "0<=c(Q)<=r(Q)d_Q",
+    "exceptional_set": "If d_Q<=epsilon_L outside an event of physical probability delta_L, then E[c(Q)]<=epsilon_L R_L+delta_L/2.",
+    "recordwise_information": "c(Q)<=sqrt(r(Q) I_Q/[2(1-r(Q))])<=sqrt(r(Q) I_Q)",
+    "averaged_information": "E[c(Q)]<=sqrt(R_L I(H;U|Q))",
+    "generic_baseline": "E[c(Q)]<=R_L"
+  },
+  "proof_notes": [
+    "Assume p_0<=p_1. Then c/p_0=1-sum_u min(pi_0(u),(p_1/p_0)pi_1(u))<=1-sum_u min(pi_0(u),pi_1(u))=d_Q; the other ordering is symmetric.",
+    "Conditional mutual information is the posterior-weighted Jensen-Shannon divergence. Pinsker applied to each sector law and their mixture gives I_Q>=2p_0p_1 d_Q^2.",
+    "Cauchy-Schwarz over the physical Q law gives the averaged information bound. All logarithms in the information bound are natural."
+  ],
+  "sharpness_and_limits": {
+    "path_check": "The arbitrary-length path has disjoint sector-conditioned interface laws on its ambiguous record: d_Q=1, revealed risk zero, and c(Q)=r(Q), saturating the TV bound.",
+    "already_proved_regions": "Existing direct path bounds imply an exponential averaged cancellation bound through E[c]<=R_L. This is a consistency corollary, not a new threshold proof.",
+    "insufficient_generic_entropy": "The interface alphabet grows with boundary length, so H(U|Q)=O(L) alone makes the information bound vacuous. A useful theorem must prove risk-weighted sector-interface indistinguishability or small conditional information from the constrained two-dimensional measure.",
+    "unresolved": "No size-decaying bound on d_Q or I(H;U|Q) is proved in the unresolved square region."
+  },
+  "literature_boundary": "The result uses only elementary Bayes overlap, total variation, Pinsker and conditional mutual information. No Ising, independent-block, Gaussian-height or strong-mixing theorem is imported into the charge-conditioned current model.",
+  "compute": {
+    "new_physical_samples": 0,
+    "new_system_sizes": 0,
+    "bootstrap_replicates": 0
+  },
+  "decision": "Replace the vague averaged-cancellation target by the precise risk-weighted interface-distinguishability target E[r(Q)d_Q], with conditional mutual information as a sufficient surrogate. The next proof must establish decay of one of these quantities from the physical two-dimensional posterior, not from boundary alphabet size or approximate-branch agreement."
+}

@@ -1,0 +1,51 @@
+{
+  "model": "anthropic__claude-opus-5-5",
+  "run": "run_03",
+  "native_backend": true,
+  "geometry": [
+    {
+      "L": 2,
+      "vertices": true,
+      "edges": true,
+      "detectors": true,
+      "H": true,
+      "logical": true
+    },
+    {
+      "L": 3,
+      "vertices": true,
+      "edges": true,
+      "detectors": true,
+      "H": true,
+      "logical": true
+    },
+    {
+      "L": 4,
+      "vertices": true,
+      "edges": true,
+      "detectors": true,
+      "H": true,
+      "logical": true
+    }
+  ],
+  "tests": [
+    {
+      "L": 3,
+      "observations": 15,
+      "coset_size": 1024,
+      "invalid": 0,
+      "nonoptimal_logical": 0,
+      "nonMAP_sector": 1,
+      "max_posterior_abs_error": 2.1371793224034263e-15
+    },
+    {
+      "L": 4,
+      "observations": 8,
+      "coset_size": 131072,
+      "invalid": 0,
+      "nonoptimal_logical": 0,
+      "nonMAP_sector": 1,
+      "max_posterior_abs_error": 1.7175150190951172e-13
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "lab008-boundary-mps-throughput-remediation-propack-2026-09-21",
+  "status": "rejected_numerical_instability",
+  "candidate": "per-vertex TT-SVD with deterministic PROPACK top-chi solver and full-SVD fallback on rank-deficient steps",
+  "observed_failures": [
+    "PROPACK reported an invariant subspace of dimension 10 on a structured low-rank frontier before fallback was added.",
+    "With rank-deficiency fallback, a frozen evaluation reached zero or nonfinite record evidence before the 24-evaluation replay matrix completed."
+  ],
+  "gates": {
+    "all_24_frozen_evaluations_complete": false,
+    "maximum_sector_replay_error_le_1e-10": false,
+    "numerically_finite_every_step": false,
+    "production_histories_zero": true
+  },
+  "decision": "Reject. Do not promote PROPACK, do not arm L13 production and do not infer throughput from the incomplete matrix.",
+  "counters": {
+    "production_histories_generated": 0,
+    "bootstrap_replicates": 0,
+    "scientific_L13_records": 0
+  }
+}

@@ -145,3 +145,15 @@ extension of this formulation contract. The open scientific question is the
 controlled typical-record theory and its intrinsic-versus-algorithmic scaling.
 
 All six formulation gates are complete. No follow-on acquisition is running.
+
+## Direction-biased U(1) research transferred to Lab 008 — 2026-09-18
+
+The user proposed an edge channel with probabilities \(p q\) and
+\(p(1-q)\) in the assigned and opposite directions.  The registered bounded
+feasibility check derives its exact signed-current posterior and complex
+Fourier link factor, then distinguishes pure-gauge bias from cycle holonomy
+and rough-boundary effects. The initial exact cycle check and its note have
+moved to [Lab 008](../lab-008-direction-biased-u1-current-channel/PLAN.md),
+whose experimental parent is Lab 006. Lab 007 remains the completed general
+formulation and methods dependency. The initial script did not enumerate
+a path; the new Lab 008 audit supplies that missing check and the LER bridge.

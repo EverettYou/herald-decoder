@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j7l-alternative-same-flux-loop-screen-2026-09-26",
+  "status": "registered_before_exact_screen",
+  "question": "Does any other shortest, homologically trivial same-flux red-X correction loop pass the existing three-variable-site complete-second-law gate at the unchanged J7K physical error and first record?",
+  "role": "Finite exact action-design feasibility screen; no joint charge law, expected risk, policy performance or noisy schedule sampling",
+  "source_basis": ["J7K homologically trivial six-edge loop and five-site censor", "Lab 004 paper-normalized L=2 topology and ground-state-relative winding contract", "J6L/J6M periodic geometry and anyon-free orbit", "J7F frozen positive complete first record"],
+  "pinned_inputs": {
+    "j7k_result_sha256": "af596737a328347a6ffc1ae197401d5e6a072df813265f134407c5cc14f163b7",
+    "j6l_result_sha256": "c3eee28f083b7f3a4dd82a3e4f8a7d3ec29aa19af92bbc3ab4588129d855c4ab",
+    "j6m_result_sha256": "55bfe46d34c9a8356e828351b0d415ed550312ed315c4c1bda7a51508ef1b932",
+    "j7f_result_sha256": "b939ec8bebe26f44b27f0caff328a37e1a0e22339d5dd43c78670235cf7157c4",
+    "lab004_topology_source_sha256": "0895892c00f1f629ec469d4f7b4e42fb8e83bc07666edbc3b8fc26a1f30eb869",
+    "exact_source_sha256": "102a9ce140b9424873559834ecec6bb0ab0f950f1b62711a9140ffe119b744ac",
+    "frozen_integrated_history_sha256": "43d9d0d3e4771ccfc764f590f1843cda1e2a7fbce8dae96057710c413a0adb6e"
+  },
+  "model": {
+    "geometry": "Paper-normalized periodic L=2 honeycomb with 36 red edges; reconcile every red-edge ID and endpoints against J6L before using Lab 004 topology",
+    "fixed_physical_and_record": "Private red-X physical edges [0,4,3], complete first public charge bits [1,1] at variable sites [1,2], mass 1/4, and the J7K anyon-free orbit; no post-screen record selection",
+    "public_actions": "Baseline relation-free public correction [0]; each candidate is [0] symmetric-differenced with one simple, connected, nonbranching six-red-edge cycle. Future keys are unnecessary for this second-record feasibility screen; equal next flux follows from zero action-boundary difference and was checked for the J7K representative under fixed future keys.",
+    "hidden_boundary": "Private physical support, orbit state and exact conditional marginals are scoring/generation internals; candidate red-X action edge sets and their flux are public. Token whitelistability is not actual frozen-JIT policy emission.",
+    "estimand": "Count conditional nondeterministic eligible second-star sites per candidate under the same first record; pass only if count <=3. No complete joint second/next law and no action-effect magnitude is estimated.",
+    "independent_unit_uncertainty": "Exhaustive deterministic finite-topology screen, no stochastic sample unit or uncertainty interval"
+  },
+  "matrix": {
+    "cycle_enumeration": "Enumerate every unique edge-set of simple six-edge cycles by deterministic vertex/edge DFS; deduplicate by sorted six-edge tuple and sort lexicographically. Classify every cycle with Lab 004 winding analysis. Screen every homologically trivial cycle, including the prior J7K cycle as a replay control; nontrivial cycles are excluded from admissible candidate actions and counted.",
+    "baseline_public_action": [0],
+    "physical_red_edges_private": [0,4,3],
+    "first_variable_sites_private": [1,2],
+    "first_bits": [1,1],
+    "first_mass": "1/4",
+    "prior_j7k_cycle_sorted": [0,1,30,32,34,35],
+    "selection_rule": "If one or more candidates pass, identify the lexicographically first passing sorted loop edge tuple solely as a prospective full-law candidate; do not calculate that law in this screen. Report every candidate and pass/fail count, including prior loop.",
+    "branches": ["topology/unique shortest-cycle enumeration and homology", "all admissible equal-flux action/residual exact one-site second marginals", "J7K cycle and baseline replay controls"]
+  },
+  "competing_outcomes": {
+    "one_or_more_pass": "At least one homologically trivial six-edge same-flux candidate has <=3 variable second sites; a separately registered full-joint-law study may follow, without a policy or charge-benefit claim now",
+    "none_pass": "No shortest trivial same-flux candidate meets the frozen cap on this fixed physical/first-record case; this does not rule out longer loops, other errors/records, or a newly justified larger exact-law budget",
+    "censored": "Source/topology/replay/cycle-count/term/CPU/normalization gate fails; do not cherry-pick a subset or enlarge caps after observing output"
+  },
+  "budget": {
+    "max_cpu_seconds": 60,
+    "max_ordered_moment_terms": 65536,
+    "max_unique_six_edge_cycles": 64,
+    "max_eligible_second_sites_per_action": 24,
+    "max_variable_second_sites": 3,
+    "joint_second_or_next_law_evaluations": 0,
+    "new_dependencies": 0,
+    "stochastic_histories": 0,
+    "schedule_arm_evaluations": 0,
+    "bootstrap_replicates": 0
+  },
+  "acceptance": ["Seven pins pass before and after; all 36 red-edge IDs/endpoints reconcile", "Every unique simple six-edge cycle is counted/classified with the exact Lab 004 homology rule and no unreported candidate exclusions", "Each trivial cycle has zero public correction-boundary difference from baseline and exact conditional one-site marginals at every eligible second site; first-record mass is 1/4", "J7K prior cycle replays five variable sites and baseline replays one; all per-candidate outcomes are retained", "No joint charge law, risk score, policy-emission, noisy history, schedule arm, bootstrap, caller mutation or benefit claim"],
+  "stop_rule": "Fail closed on any pin, topology, enumeration, homology, replay, action-boundary, first-mass, eligibility, probability, CPU or term cap. Never select a subset after inspecting its marginals, increase the three-site cap, or promote one-site outcomes to a charge/risk law.",
+  "planned_result": "results/j7l-alternative-same-flux-loop-screen-2026-09-26.json"
+}

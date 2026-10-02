@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j6q-alternate-path-operator-law-matrix-2026-09-25",
+  "status": "registered_before_exact_execution",
+  "question": "Does the source-derived J6M operator state yield causal first/action/second public charge laws on topologically distinct red-X pairs beyond the single J6O shared-green path?",
+  "epistemic_role": "Exact alternate-path physical-law discrimination and generalization gate; not a general D4 kernel or noisy schedule study",
+  "source_basis": [
+    "Jing et al. 2025 Appendix A.1/A.2/A.4 source-derived star projectors and flux-gated charge measurements",
+    "J6L periodic incidence, J6M fixed compact vacuum orbit, J6O exact one-path full-binary public law, J6P fixed-path causal adapter"
+  ],
+  "pinned_inputs": {
+    "jing_pdf_sha256": "7a17c3d3a743e3dec4266b64d0321a6af7a5eeacfab67e42b9ec77d30b65a2ac",
+    "j6l_result_sha256": "c3eee28f083b7f3a4dd82a3e4f8a7d3ec29aa19af92bbc3ab4588129d855c4ab",
+    "j6m_result_sha256": "55bfe46d34c9a8356e828351b0d415ed550312ed315c4c1bda7a51508ef1b932",
+    "j6o_result_sha256": "3c08da92958c80c3e2958d4a250352e66437c05e3735cf110feeead5603fb31f",
+    "frozen_integrated_history_sha256": "43d9d0d3e4771ccfc764f590f1843cda1e2a7fbce8dae96057710c413a0adb6e"
+  },
+  "physical_and_observation_contract": {
+    "geometry": "same periodic L=2, 24 blue/green sites and 108 kagome qubits as J6O",
+    "initial_state": "same J6M compact positive-phase +1 star/triangle orbit from |0^108> in every cell",
+    "private_physical_red_x_pairs": {"shared_blue": [0, 1], "disjoint": [0, 3]},
+    "topological_selection": "J6L incidence: 0 and 1 share blue:0; 0 and 3 share no blue/green endpoint. J6O [0,4] shares green:1 and is pinned reference, not re-acquired.",
+    "causal_order": "prepare common orbit, apply private red-X pair, measure all flux-free first stars, then apply public red-X correction; measure all flux-free second stars only after a non-deferred action",
+    "actions_per_pair": {"defer": [], "partial": "the lower-numbered physical edge only", "matched": "both physical edges"},
+    "public_record": "only three complete 24-bit arrays flux/charge/vacuum with vacuum=1-charge and charge=0 at fluxful unmeasured sites; physical pair, operator masks, private state and pairing relation are diagnostics only",
+    "noise": "ideal projectors and exact Born probabilities; no readout noise, stochastic histories, or new faults"
+  },
+  "competing_outcomes": [
+    "The shared-blue path is a color-symmetry transfer of J6O while the disjoint pair has a different charge-support law; this would justify a geometry-indexed physical kernel only after further paths.",
+    "The first observation conditions the second law in at least one alternate geometry; this would show why the first-record-aware interface is physically necessary beyond digest binding.",
+    "Both laws coincide under a symmetry or the full-record support exceeds the exact bound; record either result without claiming generality."
+  ],
+  "matrix": {
+    "physical_pairs": [[0, 1], [0, 3]],
+    "actions_per_pair": ["defer", "partial", "matched"],
+    "first_outcomes": "enumerate every positive joint assignment of the first nondeterministic eligible stars, with deterministic eligible stars fixed",
+    "second_outcomes": "enumerate every positive joint assignment of the action-conditioned nondeterministic eligible stars, conditional on each first assignment; defer has no E2",
+    "independent_unit": "one exact fixed initial state with two independently specified physical-pair cases, not Monte Carlo shots",
+    "maximum_nondeterministic_first_sites": 3,
+    "maximum_nondeterministic_second_sites": 3
+  },
+  "method": "Use J6O's source-derived conjugated stars, J6M orbit moments and J6L incidence. Verify first and second eligible projector commutation in each actual residual triangle sector. Determine deterministic versus nondeterministic sites by exact moments. Calculate exact joint Born probabilities with all first projectors causally applied before the action and second projectors, never by conditioning a separately regenerated state. Enumerate at most three nondeterministic first and three second sites per branch; otherwise fail closed with only diagnostic counts. Compare the existing J6O path only as a pinned reference and do not pool paths or infer a population law.",
+  "acceptance": [
+    "All five pinned hashes and the distinct J6L endpoint-incidence classes match; the old five-round caller is byte-identical before and after.",
+    "Each pair/action branch has flux masks from physical XOR correction and eligible first/second stars exactly equal flux-free sites; all simultaneously eligible projectors commute on the actual triangle sector.",
+    "All enumerated first and conditional second Born masses are nonnegative, normalized and exactly rational; any support exceeding three nondeterministic first or second sites censors only that branch rather than manufacturing a full record.",
+    "Published public first/second records, if available, have exactly three 24-bit arrays and no private physical support, hidden state or pairing relation; defer has null E2. Compare color-transfer and disjoint support to the pinned J6O law without pooling or general-channel claims.",
+    "No stochastic histories, schedule arms, bootstrap replicates, decoder comparison or threshold fit. Passing only opens a later separately registered general-geometry adapter/kernel gate."
+  ],
+  "budget": {"max_cpu_seconds": 60, "new_dependencies": 0, "stochastic_histories": 0, "schedule_arm_evaluations": 0, "bootstrap_replicates": 0},
+  "stop_rule": "Fail closed on hash drift, incidence mismatch, noncommuting eligible projectors, unnormalized/negative exact law, >3 random sites in an enumerated first or second branch, public/private leakage or old-caller modification. Retain partial diagnostics as censored evidence, not a passed full law.",
+  "planned_result": "results/j6q-alternate-path-operator-law-matrix-2026-09-25.json"
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j9c-action-preserving-spatial-map-2026-09-28",
+  "status": "registered_before_execution",
+  "question": "Is there a nontrivial D4 spatial operator-geometry map preserving both frozen public charge actions that could justify reusing signed-character laws, and does any such map replay independently stored direct laws?",
+  "fork_classification": "The colored red-edge graph, face/qubit incidence, full star/CZ operator geometry and held-out complete-law replays form a prerequisite chain, not a human ranking choice. Enumerate all maps under the fixed action constraints, reject failed geometry, then test every mapped J8X law; no new Born work or expanded budget is needed.",
+  "hypotheses": {
+    "nontrivial_validated_map": "At least one nonidentity colored graph map preserves both action sets and full D4 star/CZ geometry, maps evaluated pairs to evaluated pairs, and replays their direct public laws after the induced public-site permutation.",
+    "no_nontrivial_map": "Only identity survives the action and full operator geometry constraints; no new-law reuse can be licensed by this restricted spatial-symmetry family.",
+    "law_failure": "A nontrivial full-geometry map exists but a mapped direct public law disagrees; reject signed-character law reuse for that map.",
+    "censored": "Enumeration exceeds the frozen CPU/node/map cap or geometry/source/action/identity-replay integrity fails; no partial symmetry claim is promoted."
+  },
+  "model_boundary": "R6AF ideal periodic L=2 D4 projector/fusion instrument at p_X=1/10, p_Z=0. Use only the J6L 24-site colored red-edge graph and 108-qubit full star/CZ geometry, the J9B frozen deterministic-first class, and the two fixed relation-free public actions [0] and [1,30,32,34,35]. Private errors are used only for analysis and held-out law matching, not for action choice.",
+  "matrix": {
+    "public_actions_red_edges": [[0], [1, 30, 32, 34, 35]],
+    "geometry_result": "results/j6l-periodic-kagome-incidence-2026-09-24.json",
+    "source_result": "results/j8x-deterministic-first-collision-census-2026-09-28.json",
+    "cells": "Enumerate all blue/green color-preserving 24-vertex red-edge graph automorphisms fixing red edge 0 and preserving the five-edge action as a set. For each, derive the red-edge and 12-face maps, then the bijective 108-physical-qubit map. Retain only maps preserving every outer-X support, every six-CZ pair set, and color-resolved triangle-Z support for all 36 stars. For each retained map, independently transform any of the 12 J8X private-error pairs that maps into the same frozen class and compare every corresponding full public flux/charge/vacuum law under both fixed actions; report matches and mismatches, not just candidate counts.",
+    "independent_unit": "One exact spatial map, with already-computed direct public laws as validation fixtures; no stochastic sampling uncertainty.",
+    "integrity": "Pin J6L geometry, J8X direct laws, J9B class result and runner hashes; enforce action binding, graph/face/qubit bijections, full operator geometry, identity control, full public-array permutation, exact rational law equality and zero new Born/history/arm/bootstrap work. A graph-only symmetry is a necessary condition, not an accepted operator or law symmetry."
+  },
+  "budget": {"max_cpu_seconds": 5, "max_backtracking_nodes": 10000, "max_graph_maps": 256, "new_born_terms": 0, "histories": 0, "schedule_arms": 0, "bootstraps": 0, "new_dependencies": 0},
+  "acceptance": ["All action-preserving colored graph maps are enumerated within the bound and filtered through face/qubit/full star-CZ geometry", "Every candidate that maps a frozen class pair to another receives exact full-public-law replay with matches/mismatches; identity passes", "Conclusions restricted to this action-preserving spatial-map family and already evaluated finite class; no uncomputed-law reuse, full-IID information/risk, noisy JIT, scaling or threshold claim"],
+  "stop_rule": "Stop after all bounded action-preserving colored graph maps and existing J8X direct-law validations, or first source/integrity/5-CPU-second/10,000-node/256-map cap. Do not relax action preservation, add sectors, evaluate new Born laws or expand compute.",
+  "runner": "scripts/run_j9c_action_preserving_spatial_map.py",
+  "runner_sha256_before_execution": "8d3abc665baf3b2bb0fcc951c940d5af83d0db1d9e7bff8dce1f45be90cb155f",
+  "pre_data_revision": "The first invocation stopped at the input-schema assertion before enumerating a map or writing a result: J6L's Lab-004 flux-boundary vertex labels are not kagome star-center labels. The runner now takes red-edge adjacency from the pinned physical-qubit star_endpoints; question, matrix, actions, budget and acceptance are unchanged. Withdrawn pre-data runner SHA: 951227e0edb28991f42622ddf545b56f48ca60339e523b51f376bc49735d2e5f.",
+  "pinned_inputs": {
+    "results/j8x-deterministic-first-collision-census-2026-09-28.json": "dc30573624220402bad8ba964a8e46dfd5a35c22960cf6925eb324eb82e5e9ee",
+    "results/j9b-cross-sector-character-census-2026-09-28.json": "d0605e1d0fda87c73cc5c9f3e942df4c913231a136a414237215122336a99575",
+    "results/j6l-periodic-kagome-incidence-2026-09-24.json": "c3eee28f083b7f3a4dd82a3e4f8a7d3ec29aa19af92bbc3ab4588129d855c4ab"
+  },
+  "planned_result": "results/j9c-action-preserving-spatial-map-2026-09-28.json"
+}

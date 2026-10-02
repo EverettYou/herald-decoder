@@ -1,0 +1,36 @@
+{
+  "id": "lab008-reverse-sector-response-2026-09-19",
+  "status": "passed",
+  "authorization": "Continuing Lab 008 autoresearch: explain LER from partition functions before phase classification or decoder engineering.",
+  "question": "Can a reverse-direction expansion at fixed, possibly moderate p approximate the physical LER with a uniform error bound while retaining logical-sector switches?",
+  "candidate": "Set epsilon=1-q. Construct the joint current law J_epsilon=P_0+epsilon*dP/depsilon|_0. Conditional on an occupied-edge set of size N, its no-reverse weight is 1-N*epsilon and each single-reverse weight is epsilon. It is positive and normalized for 0<=epsilon<=1/E. Keep the min of the two affine record-sector sums before summing records.",
+  "candidate_error_bound": "Prove total variation TV(P_epsilon,J_epsilon)=E*p*epsilon*[1-(1-p*epsilon)^(E-1)], and therefore |LER(P_epsilon)-LER(J_epsilon)|<=TV<=E*(E-1)*p^2*epsilon^2. This is a candidate until its derivation and exact controls pass.",
+  "planned_operations": [
+    "Derive the normalized joint-law expansion, exact TV expression and Bayes-risk stability bound, including newly accessible records and sector ties.",
+    "Derive the record-sector insertion operators and one-sided risk response. Do not average an approximate posterior under an inconsistent record law.",
+    "Validate exact rational full-support L3 sector sums at p=.05,.08,.10,.30,.46 and epsilon=.005,.01,.03; compare all errors to the bound without fitting.",
+    "Evaluate the error guarantee alone for E=32 at p=.08,.30 and epsilon=.005,.01,.03. Do not claim an L5 approximate LER until its full joint-sector functional is actually evaluated.",
+    "Register any subsequent L5 contraction separately after demonstrating a target-preserving evaluation with a bounded budget; keep earlier failed general compression routes closed.",
+    "Integrate the theorem or counterexample into topical Wiki, plan/report, lab metadata, registry, loop state and the exact rendered current document."
+  ],
+  "budget": {"max_full_support_edges":8,"max_runtime_seconds":120,"new_physical_record_samples":0},
+  "predecessor": "directional-crossover-2026-09-19.json",
+  "not_yet_run": false,
+  "completed_result": "results/reverse-sector-response-2026-09-19.json",
+  "completion": {
+    "joint_law_normalized": true,
+    "exact_TV_formula_proved_and_checked": true,
+    "Bayes_risk_stability_proved": true,
+    "full_support_L3_states": 6561,
+    "full_support_L3_records": 357,
+    "full_support_L3_cells": 15,
+    "newly_accessible_first_order_records_per_p": 96,
+    "new_records_with_both_sectors_per_p": 60,
+    "maximum_L3_absolute_LER_error": 0.0005930309824915645,
+    "maximum_L3_error_over_exact_TV": 0.22271800387618143,
+    "E32_guarantee_cells": 6,
+    "new_physical_record_samples": 0,
+    "L5_response_LER_evaluated": false
+  },
+  "next_operation": "Preregister, but do not yet execute, the smallest target-preserving L5 contraction of the full affine record-sector response at fixed p in the near-directed cells where the E=32 certificate is scientifically informative."
+}

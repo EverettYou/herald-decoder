@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-01",
+  "status": "completed_bounded_review",
+  "comparison": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/output/external-run-review/comparison.json",
+  "su2_transfer": "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/output/external-run-review/su2-transfer.json",
+  "source_hashes": {
+    "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/src/herald_decoder/herald_bp_decoder.py": "990af03ac4c99684e9e9dac6e5a8bb64d773015879c1638906f5fb592cdc6a43",
+    "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/src/herald_decoder/legacy_damped_bp_decoder.py": "a08ddf0b58e63bb2627c35cafbe570fe6a0ee8dc21bd4eaca720d6dbcbc5e182",
+    "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/src/herald_decoder/lattice_model.py": "b87a5feba27675e26970360d730324b7d3740e4dc0492b4dc478e510f140c9e7",
+    "/Users/home/Library/CloudStorage/Dropbox/Research/[CKXu]herald decoder/labs/lab-006-sun-bp-theory/scripts/numba_fusion_decoder.py": "d4f3e96c733ac129e779623949627b1118357af242dbd8b890adb24a4462da11",
+    "/Users/home/Downloads/runs/anthropic__claude-opus-5-5/run_03/src/heralded/decoder.py": "eedf49bc56b6664381a2177da7c7ea3208a999f3817e83751a65293c402db97c",
+    "/Users/home/Downloads/runs/anthropic__claude-opus-5-5/run_03/src/heralded/gadgets.py": "f6dbda5823907b4a5ac32dd37834c9ccd61247485de0fae39f757552db339039",
+    "/Users/home/Downloads/runs/prompt.md": "822fe2fd929a9b8822b5f706dec00c34d396d9696e69dde9ec600eeef26ed83f"
+  },
+  "replayed_external_tests": {
+    "exactness": {
+      "L2_trials": 300,
+      "L3_trials": 300,
+      "L4_trials": 60,
+      "max_error": 1.05e-14
+    },
+    "gauge": {
+      "L16": 6.96e-14,
+      "L32": 9.44e-15,
+      "L64": 2.11e-15
+    }
+  },
+  "limitations": [
+    "No full external Monte Carlo campaign rerun",
+    "500 trials per matched pilot cell; six diagnostic cells do not estimate thresholds",
+    "Threshold values in the comparison are externally reported finite-size estimates",
+    "SU2 transfer checked on small patches; no production fusion decoder integration or large-size validation",
+    "Active lab registry and existing scientific deliverables are unchanged"
+  ]
+}

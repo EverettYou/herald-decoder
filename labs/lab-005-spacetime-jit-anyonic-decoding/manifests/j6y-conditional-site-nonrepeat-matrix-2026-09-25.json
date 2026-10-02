@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j6y-conditional-site-nonrepeat-matrix-2026-09-25",
+  "status": "registered_before_exact_execution",
+  "question": "Can an actual first public outcome identify a non-repeated eligible second charge on the three-edge path, and is a non-repeated second charge informative after the complete six-variable-site loop first measurement?",
+  "role": "Two independent exact ideal-state local diagnostics; not a noisy D4 feedback kernel or full second public round",
+  "source_basis": ["Jing Appendix A.2/A.4 ordered flux-free charge projectors and red-X action", "J6L/J6M fixed periodic L=2 graph and common vacuum orbit", "J6X exact first law and its censored unconditional second-site gate"],
+  "pinned_inputs": {
+    "jing_pdf_sha256": "7a17c3d3a743e3dec4266b64d0321a6af7a5eeacfab67e42b9ec77d30b65a2ac",
+    "j6l_result_sha256": "c3eee28f083b7f3a4dd82a3e4f8a7d3ec29aa19af92bbc3ab4588129d855c4ab",
+    "j6m_result_sha256": "55bfe46d34c9a8356e828351b0d415ed550312ed315c4c1bda7a51508ef1b932",
+    "j6x_result_sha256": "31aa32526a5a30ea0ba092fba2e12b6d561fb81fcce53c45077fca5d3e4f30fe",
+    "frozen_integrated_history_sha256": "43d9d0d3e4771ccfc764f590f1843cda1e2a7fbce8dae96057710c413a0adb6e"
+  },
+  "common": {
+    "geometry_state": "Pinned J6L periodic L=2 and J6M anyon-free orbit; physical red-X error is private; ideal charge projectors only",
+    "public_timing": "Apply physical error; measure all eligible first stars (deterministic + stars verified); choose a local second star only after the actual first public bits; apply first red-X action before second charge; optional second red-X action before one new third charge on path",
+    "selection_boundary": "Site lookup is preregistered from the exact model and indexed only by measured first bits; runtime choices never inspect private hidden error or an unmeasured outcome. Site IDs and operator masks are retained as private diagnostic metadata.",
+    "independent_unit": "One fixed exact vacuum orbit and geometry per branch with rational counterfactual Born masses; no stochastic unit or Monte Carlo uncertainty"
+  },
+  "matrix": {
+    "loop": {
+      "private_physical_red_edges": [0, 1, 32, 30, 34, 35],
+      "first_rule": "Measure every eligible initial star; require six variable sites and every other eligible site deterministic +1; enumerate positive complete first records",
+      "first_public_action_red_edges": [0],
+      "second_rule": "For each positive first public record, choose the lowest-ID eligible second site whose action-conjugated operator is not equal to any of the six first operators; do not filter on its resulting probability. If none, censor that prefix.",
+      "analysis": "Exact normalized local second law, record site selection and compare across first prefixes only within the same selected site. No full second-round claim."
+    },
+    "three_edge_path": {
+      "private_physical_red_edges": [0, 4, 3],
+      "first_rule": "Measure all eligible initial stars; require at most two variable sites and deterministic +1 otherwise",
+      "first_public_action_red_edges": [0],
+      "second_rule": "For each positive first public record, compute exact conditional one-site charge probabilities for every eligible second star; choose the lowest-ID conditionally variable site whose operator differs from every first measured variable operator. If none, censor that prefix. This replaces J6X's invalid unconditional-variance filter; no two-site requirement.",
+      "second_action_branches": {"correct_edge_3": [3], "correct_edge_4": [4]},
+      "third_rule": "For each action, choose lowest-ID site newly eligible relative to second sector; require its operator differs from first and selected second operators, else censor that action/prefix. Compare third laws at fixed selected second site and bit, and record whether multiple first prefixes are comparable."
+    }
+  },
+  "acceptance": ["All five source pins, incidence, actual-sector eligibility and commutation pass", "Every positive first record and retained second/third conditional law is nonnegative and normalized exactly", "Prefix-conditioned selection uses public first bits only and each selected operator passes the registered nonrepeat test", "Each censored prefix/action is reported; no replacement site or post-hoc action", "No stochastic histories, schedule arms, bootstrap, five-round caller change, decoder comparison or threshold claim"],
+  "budget": {"max_cpu_seconds": 60, "new_dependencies": 0, "stochastic_histories": 0, "schedule_arm_evaluations": 0, "bootstrap_replicates": 0},
+  "stop_rule": "Run the path and loop independently under one CPU cap. Fail closed on pin/incidence/commutation or probability-normalization drift. If cap hits, mark only unfinished branch censored and do not enlarge or reinterpret it.",
+  "planned_result": "results/j6y-conditional-site-nonrepeat-matrix-2026-09-25.json"
+}

@@ -45,6 +45,9 @@ def bezier(control: np.ndarray, u: np.ndarray) -> np.ndarray:
 
 
 def fit_symmetry_constrained_guide(b17: dict) -> dict:
+    raise ValueError("B18 fit withdrawn: incomplete-herald complement symmetry is false")
+
+def _historical_fit_symmetry_constrained_guide(b17: dict) -> dict:
     start_p = float(b17["guide"]["derived_endpoints"]["start"][0])
     end_q = float(b17["guide"]["derived_endpoints"]["end"][1])
     target_q = np.asarray(b17["guide"]["fit_targets"]["q"], dtype=float)
@@ -82,6 +85,9 @@ def fit_symmetry_constrained_guide(b17: dict) -> dict:
 
 
 def analyze(evidence_path: Path, b17_path: Path, manifest_path: Path) -> dict:
+    raise ValueError("B18 withdrawn: incomplete-herald complement symmetry is false; use B19 coverage")
+
+def _historical_analyze(evidence_path: Path, b17_path: Path, manifest_path: Path) -> dict:
     evidence = json.loads(evidence_path.read_text())
     b17 = json.loads(b17_path.read_text())
     manifest = json.loads(manifest_path.read_text())

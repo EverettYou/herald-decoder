@@ -72,3 +72,37 @@ test('layout gets a weak aspect-ratio force rather than a geometric rescale', ()
   assert.match(source, /ASPECT_RATIO_DEAD_ZONE/);
   assert.match(source, /softAspectRatioForce\(nodes, state\.positions, state\.size, state\.alpha\)/);
 });
+
+test('layout cache restores known node positions and simulates only for new nodes', () => {
+  assert.match(source, /LAYOUT_CACHE_KEY/);
+  assert.match(source, /function restoredPositions/);
+  assert.match(source, /alpha: restored\.hasNewNodes \? \.42 : 0/);
+  assert.match(source, /scheduleLayoutSave\(\);/);
+  assert.match(source, /if \(state\.alpha > \.012\) simulate\(\);/);
+});
+
+test('layout cache preserves existing nodes while identifying only new nodes for incremental placement', () => {
+  const storage = new Map();
+  const cachedContext = { window: { localStorage: {
+    getItem: key => storage.get(key) || null,
+    setItem: (key, value) => storage.set(key, value),
+  } } };
+  vm.runInNewContext(source, cachedContext);
+  storage.set('herald-decoder:knowledge-graph-layout:v1', JSON.stringify({
+    version: 1,
+    fingerprint: 'old',
+    size: { width: 800, height: 520 },
+    nodes: { known: { x: 120, y: 210 } },
+  }));
+  const graph = { fingerprint: 'new', communities: [{ id: 0 }], nodes: [
+    { id: 'known', community: 0, type: 'concept' },
+    { id: 'new', community: 0, type: 'method' },
+  ] };
+  const restored = cachedContext.window.HeraldKnowledgeGraph.test.restoredPositions(graph, { width: 800, height: 520 });
+  assert.equal(restored.restored, 1);
+  assert.equal(restored.hasNewNodes, true);
+  assert.equal(restored.positions.known.x, 120);
+  assert.equal(restored.positions.known.y, 210);
+  assert.equal(restored.positions.known.anchored, true);
+  assert.ok(Number.isFinite(restored.positions.new.x));
+});

@@ -1,0 +1,637 @@
+{
+  "stage": "active",
+  "created": "2026-09-18",
+  "updated": "2026-09-23",
+  "parents": [
+    "lab-006-sun-bp-theory"
+  ],
+  "method_dependencies": [
+    "lab-007-decoding-statistical-mechanics"
+  ],
+  "summary": "Theory of direction-biased U(1) current noise: logical-sector predictions, arrow geometry and the origin of directed versus hidden-orientation LER curves.",
+  "current_focus": "Complementary partial-record bounds locate the full-record question in bulk-strip correlations. A rare saturated-bulk joint record makes logical parity exactly readable, rejecting uniform conditional strip erasure without settling the p=.30 physical average.",
+  "next_action": "Seek a size-uniform estimate or admissible counterfamily for the PHYSICALLY WEIGHTED typical bulk-conditioned strip law at fixed p=.30 and finite h. Freeze marginal/pointwise refinements; no new size acquisition or threshold fit.",
+  "question": "What is the thermodynamic decoding behavior of the undirected h=0 signed-charge U(1) model, and how does a continuously tunable link field change its correctable region at fixed total jump probability?",
+  "motivation": "Explain the directed versus hidden-orientation U(1) LER contrast observed in Lab 006 through logical-sector statistical mechanics and measured practical decoder loss.",
+  "delivery_audit": "results/physical-absolute-wedge-delivery-audit-2026-09-22.json",
+  "report_contract": {
+    "max_lines": 215,
+    "max_evidence_links": 14
+  },
+  "source_refs": [
+    "dennis2001-topological-quantum-memory",
+    "temkin2025-charge-informed-qec",
+    "bravyi2014-surface-code-mld"
+  ],
+  "results": [
+    {
+      "id": "h12-saturated-bulk-joint-record-witness",
+      "kind": "data",
+      "format": "json",
+      "title": "Rare public-record obstruction to pointwise strip erasure",
+      "summary": "Alternating saturated bulk charges pin the hidden interface, letting the complete public strip charges determine logical parity exactly. The event is exponentially rare, so the physical average and p=.30 thermodynamic phase remain open.",
+      "path": "results/h12-saturated-bulk-joint-record-witness-2026-09-23.json",
+      "presentation": "download"
+    },
+    {
+      "id": "physical-absolute-contrast-certified-wedge",
+      "kind": "data",
+      "format": "json",
+      "title": "Certified square wedge for physical absolute sector contrast",
+      "summary": "Prior physical current and parity path theorems imply an explicit H12 contrast bound and exponential correctability in strict low-p and high-p square regions at fixed h. This is a sufficient corollary, not a threshold or moderate-p result.",
+      "path": "results/physical-absolute-contrast-certified-wedge-2026-09-22.json",
+      "presentation": "download"
+    },
+    {
+      "id": "rough-charge-physical-average-cancellation",
+      "kind": "data",
+      "format": "json",
+      "title": "Measured-charge cancellation in physical parity averages",
+      "summary": "Unweighted boundary-only signed parity tends to certainty at fixed h!=0, but physical global parity contrast is (1-2p)^L and tends to zero. Bayes risk requires the Q-wise absolute contrast, which remains unbounded thermodynamically.",
+      "path": "results/rough-charge-physical-average-cancellation-2026-09-22.json",
+      "presentation": "download"
+    },
+    {
+      "id": "pure-gradient-rough-boundary-generator",
+      "kind": "data",
+      "format": "json",
+      "title": "Exact pure-gradient boundary generator and pointwise obstruction",
+      "summary": "At fixed physical p, sector response is exactly a rough-charge generating-function ratio at shifted p_eff. A same-Q straight-row family makes pointwise boundary-fugacity distortion exponential in L, without deciding summed posterior risk.",
+      "path": "results/pure-gradient-rough-boundary-generator-2026-09-22.json",
+      "presentation": "download"
+    },
+    {
+      "id": "zero-field-field-window-bound",
+      "kind": "data",
+      "format": "json",
+      "title": "Zero-field shrinking-window theorem and fixed-field obstruction",
+      "summary": "KL and data processing prove h_L sqrt(E_L)->0 is uniformly perturbative and bound the cusp by sqrt(Ep)/2; Hellinger affinity proves complete current laws separate for every fixed h!=0, closing full-law TV as a fixed-field route.",
+      "path": "results/zero-field-field-window-bound-2026-09-22.json",
+      "presentation": "download"
+    },
+    {
+      "id": "zero-field-infinitesimal-response",
+      "kind": "data",
+      "format": "json",
+      "title": "Exact zero-field infinitesimal response and cusp",
+      "summary": "At fixed p the field is an exact tilt by signed current and activity. Reflection cancels non-tied linear terms, while tied records produce a finite-volume |h| Bayes-risk cusp; exact L3 controls pass with no new sizes.",
+      "path": "results/zero-field-infinitesimal-response-2026-09-22.json",
+      "presentation": "download"
+    },
+    {
+      "id": "midpoint-residual-transport-multiplicity",
+      "kind": "data",
+      "format": "json",
+      "title": "All-size midpoint inverse-multiplicity counterfamily",
+      "summary": "For every L>=3, one all-horizontal-left target has at least L distinct row preimages under the frozen residual selector. This rejects its bounded-to-one midpoint coupling while leaving fractional transport and midpoint decodability open.",
+      "path": "results/midpoint-residual-transport-multiplicity-2026-09-22.json",
+      "presentation": "download"
+    },
+    {
+      "id": "residual-directed-sector-transport",
+      "kind": "data",
+      "format": "json",
+      "title": "Residual-directed sector transport obstruction",
+      "summary": "All structural gates pass on exhaustive L3/L4 states, but inverse multiplicity grows 3 to 8 and an all-zero witness proves exponential two-sided action distortion for any residual-path flip at fixed p!=1/2.",
+      "path": "results/residual-directed-sector-transport-2026-09-22.json",
+      "presentation": "download"
+    },
+    {
+      "id": "parity-aligned-interface-matrix",
+      "kind": "data",
+      "format": "json",
+      "title": "Exact parity-aligned interface matrix",
+      "summary": "All one-hot anchors preserve exact gluing and create finite support overlap, but risk-weighted aligned TV remains 72.3%-86.3% of risk. Fixed-path switching is rejected as a physical coupling because it fails Q preservation and uniform action control.",
+      "path": "results/parity-aligned-interface-matrix-2026-09-22.json",
+      "presentation": "download"
+    },
+    {
+      "id": "straight-separator-interface-parity",
+      "kind": "data",
+      "format": "json",
+      "title": "Straight-separator topological parity obstruction",
+      "summary": "On the canonical square, complete straight-separator flux and public charge determine logical parity. Thus d_Q=1, r_U=0 and E[r d]=R_L on ambiguous records; exhaustive L3/L4 replay has zero identity failures or support overlaps.",
+      "path": "results/straight-separator-interface-parity-2026-09-22.json",
+      "presentation": "download"
+    },
+    {
+      "id": "square-directed-interface-contour-calibration",
+      "kind": "data",
+      "format": "json",
+      "title": "Square q=1 interface-contour calibration",
+      "summary": "E[r(Q)d_Q] inherits the explicit old path bound for p<(3-sqrt(5))/6 but adds no threshold; at p=.30 the exact failed step is 3sqrt(p(1-p))=1.37477>1.",
+      "path": "results/square-directed-interface-contour-calibration-2026-09-22.json",
+      "presentation": "download"
+    },
+    {
+      "id": "interface-cancellation-information-bound",
+      "kind": "data",
+      "format": "json",
+      "title": "Exact interface-cancellation distinguishability theorem",
+      "summary": "Hiding interface flux adds c(Q)<=r(Q)d_Q risk, where d_Q is sector-conditioned interface TV; averaged cancellation is also bounded by sqrt(R_L I(H;U|Q)). The unresolved step is model-specific decay in two dimensions.",
+      "path": "results/interface-cancellation-information-bound-2026-09-22.json",
+      "presentation": "download"
+    },
+    {
+      "id": "row-boundary-mps-fresh-validation",
+      "kind": "data",
+      "format": "json",
+      "title": "Fresh exact validation of row-boundary contraction",
+      "summary": "All 192 evaluations on 48 unused records pass; worst-block p95 risk error is 2.80e-6. Approximation validation only; zero L13 histories.",
+      "path": "results/row-boundary-mps-fresh-validation-2026-09-22.json",
+      "presentation": "download"
+    },
+    {
+      "id": "boundary-mps-throughput-remediation",
+      "kind": "data",
+      "format": "json",
+      "title": "Boundary-MPS throughput remediation matrix",
+      "summary": "Row-boundary truncation meets throughput but fails 1e-10 replay at maximum sector error 0.001006; PROPACK is numerically unstable. Both candidates are rejected and L13 production remains unarmed.",
+      "path": "results/boundary-mps-throughput-remediation-2026-09-21.json",
+      "presentation": "download"
+    },
+    {
+      "id": "l13-boundary-mps-preflight",
+      "kind": "data",
+      "format": "json",
+      "title": "Zero-history L13 MPS preflight and throughput boundary",
+      "summary": "All 12 numerical/interface gates pass in 1146.5 seconds, but the unchanged minimum matrix projects to 89,337 ideal four-worker seconds; production is unarmed and no L13 histories exist.",
+      "path": "results/l13-boundary-mps-preflight-2026-09-21.json",
+      "presentation": "download"
+    },
+    {
+      "id": "boundary-mps-validation",
+      "kind": "data",
+      "format": "json",
+      "title": "Paired finite-bond boundary-MPS validation",
+      "summary": "All 768 evaluations on 96 frozen L9/L11 records pass; chi=16 is the smallest common passing bond dimension across six cells and both sweeps, with no new histories or L13 inference.",
+      "path": "results/boundary-mps-validation-2026-09-21.json",
+      "presentation": "download"
+    },
+    {
+      "id": "boundary-mps-tensorization-gates",
+      "kind": "data",
+      "format": "json",
+      "title": "Boundary-MPS exact tensorization gates",
+      "summary": "L5/L7 exact-ceiling controls pass in both sweep directions over 20 evaluations with maximum sector error 3.54e-14; finite-chi accuracy and L13 evidence remain unrun.",
+      "path": "results/boundary-mps-tensorization-gates-2026-09-21.json",
+      "presentation": "download"
+    },
+    {
+      "id": "beyond-l11-exact-resource-sketch",
+      "kind": "data",
+      "format": "json",
+      "title": "Exact L13 frontier-contraction resource sketch",
+      "summary": "The L11 control replays exactly; the best L13 order needs 583,522,191 candidate transitions and a 15.22 GiB ungrouped-array lower proxy, so exact L13 is not armed under the frozen caps.",
+      "path": "results/beyond-l11-exact-resource-sketch-2026-09-21.json",
+      "presentation": "download"
+    },
+    {
+      "id": "posterior-gap-boundary-tail-matrix",
+      "kind": "figure",
+      "format": "png",
+      "title": "Posterior-gap diagnostics near the directed boundary",
+      "summary": "At p=.30, risk and fixed low-gap mass decrease while median gaps increase from L7 to L11 for q=.90,.94,.97; low-gap records do not take an increasing share of risk. Pointwise bootstrap 95%; no threshold fit.",
+      "path": "figures/posterior-gap-boundary-tail-matrix.png",
+      "presentation": "result"
+    },
+    {
+      "id": "posterior-gap-boundary-tail-analysis",
+      "kind": "data",
+      "format": "json",
+      "title": "Complete boundary-tail mechanism analysis",
+      "summary": "Nine-cell joint analysis favors finite-size typical-gap motion, weakens a persistent plateau, and finds no rare-tail takeover through L11 while leaving the thermodynamic class unresolved.",
+      "path": "results/posterior-gap-boundary-tail-analysis-2026-09-21.json",
+      "presentation": "download"
+    },
+    {
+      "id": "posterior-gap-boundary-tail-acquisition-progress",
+      "kind": "data",
+      "format": "json",
+      "title": "Boundary-tail acquisition checkpoint",
+      "summary": "All five registered cells completed with 2,688 total records and passed both precision targets before the hard cap; the completed nine-cell analysis now consumes this acquisition evidence.",
+      "path": "results/posterior-gap-boundary-tail-acquisition-progress-2026-09-21.json",
+      "presentation": "download"
+    },
+    {
+      "id": "posterior-gap-boundary-tail-preflight",
+      "kind": "data",
+      "format": "json",
+      "title": "Exact L11 boundary-tail oracle preflight",
+      "summary": "The exact q=.94 oracle passes normalization, risk-gap, sector-swap, logical-record and replay gates at 43,578,135 candidate transitions, 11.48 seconds and 0.91 GiB peak RSS; production histories remain zero.",
+      "path": "results/posterior-gap-boundary-tail-preflight-2026-09-21.json",
+      "presentation": "download"
+    },
+    {
+      "id": "posterior-gap-order-parameter-synthesis",
+      "kind": "data",
+      "format": "json",
+      "title": "Posterior-gap order parameter and boundary-tail design",
+      "summary": "The exact identity R=E[(1+exp(abs(DeltaF)))^-1] yields a selector-free scaling protocol. Reanalysis of all 15 existing p=.30 square cells shows distinct finite-size patterns but cannot classify the thermodynamic regime; a five-cell boundary-focused successor is registered.",
+      "path": "results/posterior-gap-order-parameter-synthesis-2026-09-21.json",
+      "presentation": "download"
+    },
+    {
+      "id": "midpoint-alternative-theorem-interface-audit",
+      "kind": "data",
+      "format": "json",
+      "title": "Alternative theorem interfaces and selector-route decision",
+      "summary": "Nine primary sources across disjoint occurrence, random-cluster theory, planar orientation/flow, normalized matching and finite-width transfer each miss at least one required posterior-law hypothesis; the selector route is demoted without a threshold claim.",
+      "path": "results/midpoint-alternative-theorem-interface-audit-2026-09-21.json",
+      "presentation": "download"
+    },
+    {
+      "id": "midpoint-selector-rate-certificate",
+      "kind": "data",
+      "format": "json",
+      "title": "All-width selector-rate matrix and exact obstructions",
+      "summary": "No all-width rate certificate survives: the local transfer key is not selector-congruent, the zero-background family has zero physical majority weight, and the deterministic path cutoff is not uniformly summable.",
+      "path": "results/midpoint-selector-rate-certificate-2026-09-21.json",
+      "presentation": "download"
+    },
+    {
+      "id": "midpoint-selector-automaton-feasibility",
+      "kind": "data",
+      "format": "json",
+      "title": "Exact W=5 selector moment and reduced-map feasibility",
+      "summary": "Zero-mismatch reduced decision diagrams and an independent target accumulator replay W=3/W=4 and compute W=5: A=108978, S=336814, kappa=168407/54489, maximum multiplicity 12; no width rate follows.",
+      "path": "results/midpoint-selector-automaton-feasibility-2026-09-21.json",
+      "presentation": "download"
+    },
+    {
+      "id": "midpoint-boundary-fan-strip-transfer",
+      "kind": "data",
+      "format": "json",
+      "title": "Physical square-strip embedding and selector-transfer obstruction",
+      "summary": "Finite multiplicity survives at W=4; charge-majority transfer reaches W=5 and then hits the state cap, while a reduced nonlocal selector-availability automaton remains prerequisite to any W=5 second moment.",
+      "path": "results/midpoint-boundary-fan-strip-transfer-2026-09-21.json",
+      "presentation": "download"
+    },
+    {
+      "id": "midpoint-boundary-fan-tail",
+      "kind": "data",
+      "format": "json",
+      "title": "Boundary-fan tail, disjoint-occurrence interface and diamond templates",
+      "summary": "The exact tail identity and finite witness injection pass; BK/Reimer does not cover the conditioned two-state selector law, while one-to-four-diamond templates permit multiplicity growth without proving a physical square obstruction.",
+      "path": "results/midpoint-boundary-fan-tail-2026-09-21.json",
+      "presentation": "download"
+    },
+    {
+      "id": "midpoint-shortest-selector-geodesic-exchange",
+      "kind": "data",
+      "format": "json",
+      "title": "Shortest-selector exchange matrix and boundary-fan gap",
+      "summary": "All L3/L4 collision pairs pass virtual divergence/reconnection and physical checks, but usual closed geodesic exchange covers 0/14 and 4,170/64,844 pairs; finite high-multiplicity fans do not establish an all-size tail.",
+      "path": "results/midpoint-shortest-selector-geodesic-exchange-2026-09-20.json",
+      "presentation": "download"
+    },
+    {
+      "id": "midpoint-selector-second-moment-renormalization",
+      "kind": "data",
+      "format": "json",
+      "title": "Selector collision identity and common-domain order matrix",
+      "summary": "The preimage second moment equals diagonal mass plus twice the collision-pair count; shortest-first improves L3/L4 direct certificates, while mixed collision topology blocks a standard arm-event shortcut.",
+      "path": "results/midpoint-selector-second-moment-renormalization-2026-09-20.json",
+      "presentation": "download"
+    },
+    {
+      "id": "midpoint-direct-risk-renormalization",
+      "kind": "data",
+      "format": "json",
+      "title": "Direct physical-risk reduction and average selector congestion",
+      "summary": "Cauchy-Schwarz reduces midpoint risk directly to physical majority-domain mass divided by the selector preimage second moment; L3/L4 exact controls pass, while entropy chain rule and finite imbalance fibers do not close the limit.",
+      "path": "results/midpoint-direct-risk-renormalization-2026-09-20.json",
+      "presentation": "download"
+    },
+    {
+      "id": "midpoint-charge-collision-comparison",
+      "kind": "data",
+      "format": "json",
+      "title": "Collision-to-physical conversion theorem matrix",
+      "summary": "Existing local limits do not give growing-dimensional atom control; Gaussian dimensional loss, finite log-concavity and a complement-paired normalized-matching countermodel close the proxy route without a threshold claim.",
+      "path": "results/midpoint-charge-collision-comparison-2026-09-20.json",
+      "presentation": "download"
+    },
+    {
+      "id": "midpoint-averaged-charge-balance",
+      "kind": "data",
+      "format": "json",
+      "title": "Two-copy overlap, block gluing and the charge-law mismatch",
+      "summary": "Exact L3/L4 identities show that two-copy overlap uses collision weights p_Q^2; countermodels and the local-plaquette boundary leave a precise collision-to-physical charge-law lemma unresolved.",
+      "path": "results/midpoint-averaged-charge-balance-2026-09-20.json",
+      "presentation": "download"
+    },
+    {
+      "id": "midpoint-charge-fiber-balance-theorem",
+      "kind": "data",
+      "format": "json",
+      "title": "Finite charge-fiber balance controls and averaged-theorem boundary",
+      "summary": "Exact optimal switching congestion is 2/6 on L3/L4; L4 realizes 96 physical K_{1,6} fibers of mass 21/8192, while no uniform entropy or averaged-balance theorem is proved.",
+      "path": "results/midpoint-charge-fiber-balance-theorem-2026-09-20.json",
+      "presentation": "download"
+    },
+    {
+      "id": "midpoint-minority-mass-lower-bound",
+      "kind": "data",
+      "format": "json",
+      "title": "Crossing/NMP information obstruction and congestion lemma",
+      "summary": "Fixed spanning gadgets vanish, K_(1,M) proves crossing plus NMP insufficient, and a charge-preserving switching map with congestion C gives the exact sufficient bound R_L >= Pr(A_L)/(C+1).",
+      "path": "results/midpoint-minority-mass-lower-bound-2026-09-20.json",
+      "presentation": "download"
+    },
+    {
+      "id": "midpoint-all-size-matching-theorem",
+      "kind": "data",
+      "format": "json",
+      "title": "Orientation-lattice and normalized-matching boundary",
+      "summary": "Fixed charge embeds exactly into planar alpha-orientations and L3/L4 satisfy normalized matching; 171 edge-deletion controls retain saturation, while restricted-component fragmentation blocks direct use of published lattice theorems.",
+      "path": "results/midpoint-all-size-matching-theorem-2026-09-20.json",
+      "presentation": "download"
+    },
+    {
+      "id": "midpoint-fractional-switching",
+      "kind": "data",
+      "format": "json",
+      "title": "Exact full-graph switching capacity",
+      "summary": "Maximum L3/L4 single-path matching saturates each record's smaller sector and equals both the Bayes numerator and an explicit vertex-cover dual; the missing step is an all-size density theorem.",
+      "path": "results/midpoint-fractional-switching-2026-09-20.json",
+      "presentation": "download"
+    },
+    {
+      "id": "midpoint-switching-pairing",
+      "kind": "data",
+      "format": "json",
+      "title": "Midpoint residual-path switching and selector obstruction",
+      "summary": "Every simple crossing flip preserves charge and changes sector; extremal selectors collide on the full event, stable subsets give finite involutions, and standalone plaquettes never change logical parity.",
+      "path": "results/midpoint-switching-pairing-2026-09-20.json",
+      "presentation": "download"
+    },
+    {
+      "id": "posterior-polynomial-closure",
+      "kind": "data",
+      "format": "json",
+      "title": "Fixed-charge transfer and common-interlacing obstruction",
+      "summary": "Exhaustive L4 final polynomials and actual local sums pass real-root/interlacing diagnostics, while the exact pair t and 1+5t+t^2 rejects a global common-interlacing induction; no threshold claim follows.",
+      "path": "results/posterior-polynomial-closure-2026-09-20.json",
+      "presentation": "download"
+    },
+    {
+      "id": "posterior-balance-polynomial",
+      "kind": "data",
+      "format": "json",
+      "title": "Boundary-flux posterior polynomial and stability obstruction",
+      "summary": "Exact L3 parity projection, root and variance controls pass with zero new samples; reviewed stability closures do not cover fixed-divergence conditioning, so no all-size posterior-balance or threshold claim is promoted.",
+      "path": "results/posterior-balance-polynomial-2026-09-20.json",
+      "presentation": "download"
+    },
+    {
+      "id": "square-midpoint-thermodynamics",
+      "kind": "data",
+      "format": "json",
+      "title": "Directed square midpoint: support, percolation and posterior balance",
+      "summary": "Exact 256-current and 256-bond controls establish residual support and cluster-law equivalence; L3 risk is 7/16 and unequal sector weights reject exact balance. No decoding threshold is inferred.",
+      "path": "results/square-midpoint-thermodynamics-2026-09-20.json",
+      "presentation": "download"
+    },
+    {
+      "id": "thermodynamic-limits",
+      "kind": "data",
+      "format": "json",
+      "title": "Thermodynamic criteria and robust honeycomb correctability",
+      "summary": "Exact algebra and finite checks support an all-p open honeycomb bias interval, general sufficient criteria, sector-gap characterization and averaged entropy/free-energy-density limit.",
+      "path": "results/thermodynamic-limits-2026-09-20.json",
+      "presentation": "download"
+    },
+    {
+      "id": "l5-reverse-sector-contraction",
+      "kind": "data",
+      "format": "json",
+      "title": "Certified L5 reverse-sector contraction",
+      "summary": "Two registered near-directed cells complete without censoring but both deterministic interval-width gates fail; no physical L5 LER interval is promoted.",
+      "path": "results/l5-reverse-sector-contraction-2026-09-19.json",
+      "presentation": "download"
+    },
+    {
+      "id": "reverse-sector-response",
+      "kind": "data",
+      "format": "json",
+      "title": "Normalized fixed-p reverse-sector response",
+      "summary": "Exact joint-law response and total-variation LER certificate with 15 full-support L3 validations, newly accessible records and finite-epsilon sector switches; no L5 LER is claimed.",
+      "path": "results/reverse-sector-response-2026-09-19.json",
+      "presentation": "download"
+    },
+    {
+      "id": "directional-crossover",
+      "kind": "data",
+      "format": "json",
+      "title": "Exact directional crossover of the LER curve",
+      "summary": "Exact power-law approach exponents and boundary-layer coefficients from physical sector sums, with rational L3 controls.",
+      "path": "results/directional-crossover-2026-09-19.json",
+      "presentation": "download"
+    },
+    {
+      "id": "witness-union-floor",
+      "kind": "data",
+      "format": "json",
+      "title": "Limits of the logical-path witness envelope",
+      "summary": "Exact disjoint-strip floors show that all-order overlap correction of the unchanged witness union cannot yield a nontrivial fair L5 bound at p=.30.",
+      "path": "results/witness-union-floor-2026-09-19.json",
+      "presentation": "download"
+    },
+    {
+      "id": "connected-defect-overlap",
+      "kind": "data",
+      "format": "json",
+      "title": "Exact connected-witness overlap correction",
+      "summary": "A frozen L5 witness forest and exact positive bivariate two-path polynomials tighten every path bound and improve the strongest q=.75 certificates; 765 exhaustive L3 checks pass.",
+      "path": "results/connected-defect-overlap-2026-09-19.json",
+      "presentation": "download"
+    },
+    {
+      "id": "connected-current-defects",
+      "kind": "data",
+      "format": "json",
+      "title": "Connected-current LER theorem and exact patch curve",
+      "summary": "Exact witness checks, complete finite path partitions, a certified L3 directed polynomial, improved biased square bounds and honeycomb geometry checks supporting an all-p correctability theorem.",
+      "path": "results/connected-current-defects-2026-09-19.json",
+      "presentation": "download"
+    },
+    {
+      "id": "physical-moment-feasibility",
+      "kind": "data",
+      "format": "json",
+      "title": "Physical even-moment interval feasibility",
+      "summary": "Exact L3 and stored L5 intervals through N=32; p=.30 fair/intermediate cells fail the preregistered width gate, closing low-order moment compression.",
+      "path": "results/physical-moment-feasibility-2026-09-19.json",
+      "presentation": "download"
+    },
+    {
+      "id": "nonperturbative-method-audit",
+      "kind": "data",
+      "format": "json",
+      "title": "Non-perturbative method audit",
+      "summary": "Primary-source interface audit rejects scalar counting methods as direct LER certificates and selects one bounded physical-moment feasibility test.",
+      "path": "results/nonperturbative-method-audit-2026-09-19.json",
+      "presentation": "download"
+    },
+    {
+      "id": "partition-oracle-evidence-boundary",
+      "kind": "figure",
+      "format": "png",
+      "title": "Earlier partition certificates and oracle anchors",
+      "summary": "L5 deterministic certificates and exact-posterior Monte Carlo anchors are shown without fitting; fair/intermediate p>=.08 is explicitly unresolved.",
+      "path": "figures/partition-oracle-evidence-boundary.png",
+      "presentation": "result"
+    },
+    {
+      "id": "partition-oracle-synthesis",
+      "kind": "data",
+      "format": "json",
+      "title": "Partition prediction evidence-boundary synthesis",
+      "summary": "Frozen deterministic bounds, dilute terms and exact-posterior anchors with source hashes, integrity checks and no pooled inference.",
+      "path": "results/partition-oracle-synthesis-2026-09-19.json",
+      "presentation": "download"
+    },
+    {
+      "id": "posterior-bucket-merge",
+      "kind": "data",
+      "format": "json",
+      "title": "Certified posterior-bucket state merge",
+      "summary": "A 64-bin deterministic charge-history merge gives 8.11% fair-width reduction and none at q=.75, below the promotion gate; contraction refinements are closed.",
+      "path": "results/posterior-bucket-merge-2026-09-19.json",
+      "presentation": "download"
+    },
+    {
+      "id": "frontier-value-branch-bound",
+      "kind": "data",
+      "format": "json",
+      "title": "Frontier-value branch priority test",
+      "summary": "An information-value priority improves fair width by only 2.61% and worsens q=.75 versus risk priority, closing priority-only refinement.",
+      "path": "results/frontier-value-branch-bound-2026-09-19.json",
+      "presentation": "download"
+    },
+    {
+      "id": "adaptive-charge-branch-bound",
+      "kind": "data",
+      "format": "json",
+      "title": "Adaptive charge-prefix branch and bound",
+      "summary": "B=1024 exact decision diagram reduces certified p=.08 widths at q=.97 and 1; fair/intermediate cells fail the gate and B=4096 is capped.",
+      "path": "results/adaptive-charge-branch-bound-2026-09-19.json",
+      "presentation": "download"
+    },
+    {
+      "id": "exact-charge-prefix-transfer",
+      "kind": "data",
+      "format": "json",
+      "title": "Exact nested charge-prefix transfer",
+      "summary": "Exact physical-kernel coarse-charge bounds observe up to 7/15 L5 charges without tightening activity intervals; the 9-charge step exceeds the registered state cap.",
+      "path": "results/exact-charge-prefix-transfer-2026-09-19.json",
+      "presentation": "download"
+    },
+    {
+      "id": "wiener-cumulant-feasibility",
+      "kind": "data",
+      "format": "json",
+      "title": "Wiener connected-cumulant feasibility",
+      "summary": "Uniform Fourier-l1 error theorem and deterministic checks; promotes finite-harmonic evaluation with <=.001 LER representation error at p=.08 using N=3.",
+      "path": "results/wiener-cumulant-feasibility-2026-09-19.json",
+      "presentation": "download"
+    },
+    {
+      "id": "sector-hellinger-remainder",
+      "kind": "data",
+      "format": "json",
+      "title": "Sector-Hellinger remainder test",
+      "summary": "Exact omitted parity masses and truncated record-sector Hellinger information pass finite gates but improve none of eight L5 intervals and are rejected.",
+      "path": "results/sector-hellinger-remainder-2026-09-18.json",
+      "presentation": "download"
+    },
+    {
+      "id": "positive-defect-transfer",
+      "kind": "data",
+      "format": "json",
+      "title": "Positive two-current defect-transfer test",
+      "summary": "Exact positive pair transfer passes the L3 upper-bound gate but improves none of eight L5 activity intervals and is rejected as too loose.",
+      "path": "results/positive-defect-transfer-2026-09-18.json",
+      "presentation": "download"
+    },
+    {
+      "id": "current-activity-expansion",
+      "kind": "data",
+      "format": "json",
+      "title": "Certified direct current-activity expansion",
+      "summary": "Exact low-activity sector sums with a binomial omitted-mass bound; useful through p=.05 on L5 and rejects blind raw-support extension at p=.08.",
+      "path": "results/current-activity-expansion-2026-09-18.json",
+      "presentation": "download"
+    },
+    {
+      "id": "compact-replica-control",
+      "kind": "data",
+      "format": "json",
+      "title": "Compact-replica continuum control decision",
+      "summary": "Fail-closed rejection of bare stiffness matching and integer-replica continuation as quantitative physical calibration; retains the Gaussian annulus only as a conditional benchmark.",
+      "path": "results/compact-replica-control-2026-09-18.json",
+      "presentation": "download"
+    },
+    {
+      "id": "replica-boundary-theory",
+      "kind": "data",
+      "format": "json",
+      "title": "Replica identities, exact limits and conditional Gaussian calculation",
+      "summary": "Independent checks of physical LER bounds, replica integrals, the exact path rate and a solved candidate continuum model; no identified physical critical point.",
+      "path": "results/replica-boundary-theory-2026-09-18.json",
+      "presentation": "download"
+    },
+    {
+      "id": "square-sector-decoder-risk",
+      "kind": "figure",
+      "format": "png",
+      "title": "Square U(1): intrinsic risk and decoder loss",
+      "summary": "Three p values at L5,L7 separate exact Bayes, exact-marginal MWPM and parent BP-MWPM; bootstrap95.",
+      "path": "figures/square-sector-decoder-risk.png",
+      "presentation": "result"
+    },
+    {
+      "id": "honeycomb-arrow-control-risk",
+      "kind": "figure",
+      "format": "png",
+      "title": "Preferred arrows change the biased channel",
+      "summary": "Same honeycomb graph, stored versus bipartite directions; both bulk and boundary arrows change.",
+      "path": "figures/honeycomb-arrow-control-risk.png",
+      "presentation": "result"
+    },
+    {
+      "id": "square-size-bias-ambiguity",
+      "kind": "figure",
+      "format": "png",
+      "title": "Direction bias changes sector ambiguity",
+      "summary": "Square L=5,7,9 at p=.30 and q=.5 to 1; posterior risks and ambiguous-record fractions with uncertainty.",
+      "path": "figures/square-size-bias-ambiguity.png",
+      "presentation": "result"
+    },
+    {
+      "id": "sector-prediction-audit",
+      "kind": "data",
+      "format": "json",
+      "title": "Sector identities and canonical-arrow audit",
+      "summary": "Finite rational identities and eight actual lattice orientations; no new production LER curves.",
+      "path": "results/sector-prediction-audit-2026-09-18.json",
+      "presentation": "download"
+    },
+    {
+      "id": "direction-biased-u1-checks",
+      "kind": "data",
+      "format": "json",
+      "title": "Initial current-cycle checks",
+      "summary": "Migrated bounded cycle evidence from the initial channel note.",
+      "path": "results/direction-biased-u1-checks-2026-09-18.json",
+      "presentation": "download"
+    }
+  ],
+  "frontier": [
+    "Establish the zero-field undirected thermodynamic theory and determine the role of a finite link field; keep signed integer charge and fixed p throughout.",
+    "Preserve the unresolved directed-endpoint transport and posterior-balance question as a scoped branch; no field-independent phase conclusion follows from that branch."
+  ],
+  "active_contract": "manifests/thermodynamic-theory-reorientation-2026-09-22.json",
+  "completion_scope": "Finite-size acquisition stopped by researcher on 2026-09-22. Active deliverable is thermodynamic theory and explicit proof obligations, not size extrapolation."
+}

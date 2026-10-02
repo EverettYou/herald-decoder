@@ -1,0 +1,30 @@
+{
+  "id":"lab008-midpoint-charge-collision-comparison-2026-09-20",
+  "status":"complete",
+  "not_yet_run":false,
+  "authorization":"Researcher prioritizes decoding phase transitions and correction thresholds in the continuing Lab 008 study.",
+  "question":"Can the collision-size-biased charge law be compared uniformly with the physical charge law strongly enough to convert a two-copy opposite-sector overlap into a positive Bayes-risk lower bound?",
+  "predecessor":"midpoint-averaged-charge-balance-2026-09-20.json",
+  "claim_boundary":"The two-copy overlap identity is exact, but neither its normalized nor unnormalized form controls physical average risk without additional charge-law regularity. This contract tests only that missing comparison.",
+  "alternatives":[
+    "Use a local central-limit or anti-concentration theorem for the bounded divergence field to lower-bound C_L/p_max,L.",
+    "Prove a positive lower bound on the collision-weighted opposite-sector probability Psi_L by a symmetry, switching, or correlation argument.",
+    "Construct a compatible asymptotic probability model or physical obstruction showing that either required factor can vanish."
+  ],
+  "planned_steps":[
+    "Audit primary local-limit, log-concavity and anti-concentration results against the exact dependent divergence record and rough-boundary geometry.",
+    "Derive the weakest sufficient hypotheses for Psi_L and C_L/p_max,L and test every hypothesis on exact L3/L4 controls without extrapolation.",
+    "Stop at a proved conversion theorem, a compatible obstruction, or an explicit theorem-hypothesis gap."
+  ],
+  "observed_findings":[
+    "Reviewed local-limit and decomposable-vector normal approximations do not provide lattice-atom or collision estimates uniformly in the growing charge dimension; the reviewed orientation enumeration additionally assumes growing average degree and mixing absent on the square lattice.",
+    "For a d-dimensional Gaussian density, integral(f^2)/max(f)=2^(-d/2), so even ideal Gaussian regularity naturally loses exponentially in the charge dimension rather than proving a positive constant lower bound on C_L/p_max,L.",
+    "All 88 L3 and 125616 L4 coordinate-neighbor triples of total charge counts are log-concave, but product log-concave laws still exhibit the same dimensional loss and total counts do not control the logical-sector split.",
+    "Complement symmetry acts differently on odd and even logical cuts, and a complement-paired K_(1,M)/K_(M,1) normalized-matching model has collision-weighted opposite-sector probability 2M/(M+1)^2 tending to zero."
+  ],
+  "result":"../results/midpoint-charge-collision-comparison-2026-09-20.json",
+  "decision_boundary":"This closes only the collision-to-physical conversion route under the reviewed hypotheses. It neither proves vanishing physical risk nor establishes midpoint correctability, noncorrectability, or a square threshold.",
+  "budget":{"new_physical_record_samples":0,"decoder_runs":0,"max_exhaustive_edges":18,"max_runtime_seconds":300,"new_external_dependencies":0},
+  "stop_rule":"Do not enumerate L5, fit a trend, or claim midpoint noncorrectability. Stop after the complete bounded source/theorem matrix identifies whether the collision-to-physical comparison is provable with existing hypotheses.",
+  "planned_note":"wiki/decoding-thresholds.md"
+}

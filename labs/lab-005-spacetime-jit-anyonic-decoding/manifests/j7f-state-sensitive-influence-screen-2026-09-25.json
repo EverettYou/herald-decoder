@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j7f-state-sensitive-influence-screen-2026-09-25",
+  "status": "registered_before_exact_execution",
+  "question": "On each of five frozen J7D geometries, does a cross-round anticommuting second star encounter a nonzero next-star expectation in the actual postselected first-record state?",
+  "role": "Small exact state-sensitive necessary gate before larger complete-law comparison; no general no-go, caller integration or noisy schedule inference",
+  "source_basis": ["Jing Appendix A.2/A.4 ideal red-X and charge projectors", "J6L/J6M common triangle-vacuum orbit", "J7D actual-sector structural matrix", "J7E complete two-edge null control"],
+  "pinned_inputs": {
+    "jing_pdf_sha256": "7a17c3d3a743e3dec4266b64d0321a6af7a5eeacfab67e42b9ec77d30b65a2ac",
+    "j6l_result_sha256": "c3eee28f083b7f3a4dd82a3e4f8a7d3ec29aa19af92bbc3ab4588129d855c4ab",
+    "j6m_result_sha256": "55bfe46d34c9a8356e828351b0d415ed550312ed315c4c1bda7a51508ef1b932",
+    "j7d_result_sha256": "4ebd378584bef1a87eb0ea4f4ec40b9c0448a7e58327d82a67445b627ee4876a",
+    "j7e_result_sha256": "a5eaf7cfca8e9b55202a63236bdeeb922fa858f1f43bf1dd71773d8c69c9575d",
+    "frozen_integrated_history_sha256": "43d9d0d3e4771ccfc764f590f1843cda1e2a7fbce8dae96057710c413a0adb6e"
+  },
+  "model": {
+    "state": "The same fixed periodic L=2 108-qubit J6M common +1 star/triangle vacuum orbit, private red-X support, exact ideal projectors and no readout noise",
+    "first_record": "Complete 24-site flux/charge/vacuum first record. For each fixture use the predetermined record with every individually deterministic eligible eigenvalue fixed at its exact value and every individually random eligible eigenvalue +1; fail closed if its exact joint mass is zero",
+    "second_record": "Full actual-residual-sector eligible star block is measured and all its outcomes marginalized; do not substitute a selected-star instrument",
+    "next_record": "After the fixed private later red-X fault, test only the first J7D anticommuting next-star witness, not the complete next public joint law",
+    "dephasing_identity": "For the complete commuting second-star block, nonselective measurement maps a next-star Q to zero when any second star anticommutes with Q on the triangle-vacuum orbit, otherwise leaves Q unchanged. Exact first-postselected baseline mean is 2 P(first,+next)/P(first)-1. This is a one-site necessary influence gate, not a sufficient complete-record TV test",
+    "uncertainty": "Exact rational arithmetic on one fixed finite orbit; five geometries are distinct deterministic fixtures, not independent statistical replicates"
+  },
+  "matrix": {
+    "two_edge_path": {"physical": [0,4], "action": [0], "future": 0, "expected_witness": [0,1]},
+    "three_edge_chain": {"physical": [0,4,3], "action": [0], "future": 0, "expected_witness": [0,1]},
+    "four_edge_path": {"physical": [0,4,3,7], "action": [0], "future": 0, "expected_witness": [0,1]},
+    "four_edge_branch": {"physical": [0,4,3,5], "action": [0], "future": 0, "expected_witness": [0,1]},
+    "six_edge_loop": {"physical": [0,1,32,30,34,35], "action": [0], "future": 1, "expected_witness": [17,0]},
+    "selection": "Exactly one frozen structurally open branch and one first witness per topology; no adaptive replacement of first record, witness, history or cap",
+    "controls": ["Recompute full first/second/next actual-sector eligibility and J7D witness from pinned topology", "Check exact first mass and one-site next baseline on the complete first projector block", "Check dephasing identity directly on two-edge witness by summing both outcomes of its anticommuting second projector", "Preserve J7E two-edge complete-law exact TV=0 separately", "Pins and frozen caller byte-identical before/after"]
+  },
+  "competing_outcomes": {
+    "state_sensitive_opening": "Any selected witness has nonzero exact baseline mean and an anticommuting second operator, so its marginalized one-site next law changes relative to an unmeasured-second counterfactual; this prioritizes, but does not establish, a matched-history full-law contrast",
+    "selected_record_null": "All five selected-record baseline means are zero despite structural anticommutation; only this one-record/one-site matrix is null and alternate first records or joint correlations remain open",
+    "censored": "Any selected first record has zero mass, an input/source/control drift occurs or a compute cap is reached; do not substitute another record or infer null"
+  },
+  "budget": {"max_cpu_seconds": 60, "max_ordered_moment_terms": 262144, "max_fixtures": 5, "new_dependencies": 0, "stochastic_histories": 0, "schedule_arm_evaluations": 0, "bootstrap_replicates": 0},
+  "acceptance": ["Six pinned inputs pass before and after", "All five frozen fixture/witness branches receive exact positive first-record mass or a declared local censor", "Full actual-sector second set is used for the dephasing commutator gate; exact baseline is evaluated before any outcome claim", "The two-edge direct projector-sum and J7E null controls hold", "No complete next-law, caller integration or stochastic work is claimed"],
+  "stop_rule": "Stop at any pin, geometry, eligibility, first-mass, dephasing-control or budget failure. No adaptive first-record replacement, enlarged matrix, complete-law promotion or noisy sampling in this tick.",
+  "planned_result": "results/j7f-state-sensitive-influence-screen-2026-09-25.json"
+}

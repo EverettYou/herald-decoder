@@ -1,0 +1,129 @@
+{
+  "cells": [
+    {
+      "action_rows": [
+        {
+          "floor_bits_approx": 2.5078403011303182e-05,
+          "floor_bits_formula": "278128389443693511257285776231761/8000000000000000000000000000000000000/(2 ln 2)",
+          "pair_conditional_second_tv": "3/4",
+          "physical_prior_information_floor_numerator": "278128389443693511257285776231761/8000000000000000000000000000000000000",
+          "public_action_red_edges": [
+            0
+          ]
+        },
+        {
+          "floor_bits_approx": 2.5078403011303182e-05,
+          "floor_bits_formula": "278128389443693511257285776231761/8000000000000000000000000000000000000/(2 ln 2)",
+          "pair_conditional_second_tv": "3/4",
+          "physical_prior_information_floor_numerator": "278128389443693511257285776231761/8000000000000000000000000000000000000",
+          "public_action_red_edges": [
+            1,
+            30,
+            32,
+            34,
+            35
+          ]
+        }
+      ],
+      "first_flux_mask": 3591,
+      "first_likelihood_stratum": "1",
+      "selected_pair_joint_first_probability": "30903154382632612361920641803529/500000000000000000000000000000000000"
+    },
+    {
+      "action_rows": [
+        {
+          "floor_bits_approx": 0.0,
+          "floor_bits_formula": "0/(2 ln 2)",
+          "pair_conditional_second_tv": "0",
+          "physical_prior_information_floor_numerator": "0",
+          "public_action_red_edges": [
+            0
+          ]
+        },
+        {
+          "floor_bits_approx": 5.5729784469562636e-06,
+          "floor_bits_formula": "30903154382632612361920641803529/4000000000000000000000000000000000000/(2 ln 2)",
+          "pair_conditional_second_tv": "1/2",
+          "physical_prior_information_floor_numerator": "30903154382632612361920641803529/4000000000000000000000000000000000000",
+          "public_action_red_edges": [
+            1,
+            30,
+            32,
+            34,
+            35
+          ]
+        }
+      ],
+      "first_flux_mask": 3276802,
+      "first_likelihood_stratum": "1/2",
+      "selected_pair_joint_first_probability": "30903154382632612361920641803529/1000000000000000000000000000000000000"
+    },
+    {
+      "action_rows": [
+        {
+          "floor_bits_approx": 0.0,
+          "floor_bits_formula": "0/(2 ln 2)",
+          "pair_conditional_second_tv": "0",
+          "physical_prior_information_floor_numerator": "0",
+          "public_action_red_edges": [
+            0
+          ]
+        },
+        {
+          "floor_bits_approx": 0.0,
+          "floor_bits_formula": "0/(2 ln 2)",
+          "pair_conditional_second_tv": "0",
+          "physical_prior_information_floor_numerator": "0",
+          "public_action_red_edges": [
+            1,
+            30,
+            32,
+            34,
+            35
+          ]
+        }
+      ],
+      "first_flux_mask": 1048578,
+      "first_likelihood_stratum": "1/4",
+      "selected_pair_joint_first_probability": "30903154382632612361920641803529/2000000000000000000000000000000000000"
+    }
+  ],
+  "claim_boundary": "A strictly positive conservative lower bound on ideal two-stage physical-prior conditional mutual information about private E for either globally fixed public charge action at L=2,p_X=1/10. It uses only three preselected disjoint full first records and 12 known laws; omitted outcomes contribute nonnegative information. This does not identify the actual full-channel information, logical information/risk, adaptive JIT gain, noisy measurement behavior, scaling or threshold.",
+  "contract_sha256": "c5b3f5186d36931ff01793f295b41a83577118357bb699fba731c4cebef7fb35",
+  "counters": {
+    "bootstraps": 0,
+    "histories": 0,
+    "new_born_terms": 0,
+    "new_complete_second_laws": 0,
+    "replayed_complete_second_laws": 12,
+    "schedule_arms": 0
+  },
+  "cpu_seconds": 0.00887,
+  "derivation": "For disjoint selected first records o_i and fixed action a, I(E;O2|O1,a) is the physical-prior sum over o. At o_i, introduce B_i indicating membership in its selected equal-posterior private-error pair. Chain rule and nonnegativity give P(o_i) I(E;O2|o_i,a) >= P(E in pair_i,o_i) JS(P_i,Q_i). Binary Pinsker gives JS(P_i,Q_i) >= TV(P_i,Q_i)^2/(2 ln 2) bits. Summing these nonnegative contributions yields the floor without any omitted first or second law.",
+  "fixed_action_global_channel_floors": [
+    {
+      "conditional_mutual_information_floor_bits_approx": 2.5078403011303182e-05,
+      "conditional_mutual_information_floor_bits_formula": "278128389443693511257285776231761/8000000000000000000000000000000000000/(2 ln 2)",
+      "exact_coefficient": "278128389443693511257285776231761/8000000000000000000000000000000000000",
+      "public_action_red_edges": [
+        0
+      ]
+    },
+    {
+      "conditional_mutual_information_floor_bits_approx": 3.0651381458259445e-05,
+      "conditional_mutual_information_floor_bits_formula": "339934698208958735981127059838819/8000000000000000000000000000000000000/(2 ln 2)",
+      "exact_coefficient": "339934698208958735981127059838819/8000000000000000000000000000000000000",
+      "public_action_red_edges": [
+        1,
+        30,
+        32,
+        34,
+        35
+      ]
+    }
+  ],
+  "id": "lab005-j9h-physical-prior-information-floor-2026-10-01",
+  "runner_sha256": "1cbda1907c8609353fa47918e012cf7d28c01e27f79548c52ed03e3f003dee64",
+  "schema_version": 1,
+  "status": "physical_prior_information_floor_verified"
+}

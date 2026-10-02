@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j6h-l2-conditional-stabilizer-instrument-2026-09-24",
+  "status": "registered_before_exact_execution",
+  "epistemic_role": "Exact source-derived local conditional stabilizer instrument for one ideal L=2 two-red-edge path; not a general D4 density channel, production sampler, or schedule evaluation",
+  "question": "For the pinned short red-X path with first green measurement p2, what are the conditional post-correction blue/green charge probabilities and local stabilizer-state updates after a prescribed matching red-X action?",
+  "competing_explanations": {
+    "unconditioned_support_only": "J6E parity support is correct but does not determine conditional blue probabilities from the earlier herald.",
+    "source_stabilizer_instrument": "A6/A13/A14 and the stated anticommutation determine both blue outcomes to be equiprobable conditional on either p2, with green vacuum and an explicit replacement of the p2-weighted dressed stabilizer.",
+    "source_gap": "If the operator diagrams or anticommutation do not determine the conditional probabilities, retain support only and fail closed on a numerical kernel."
+  },
+  "source": "Jing et al., Intrinsic Heralding and Optimal Decoders for Non-Abelian Topological Order, https://arxiv.org/html/2507.23765, Appendix A.2 Eq. (A6) and A.4 Eqs. (A13)-(A14), local operator diagrams on PDF printed pages 11 and 13.",
+  "pinned_inputs": {
+    "paper_pdf_sha256": "7a17c3d3a743e3dec4266b64d0321a6af7a5eeacfab67e42b9ec77d30b65a2ac",
+    "j6e_result_sha256": "874d13d9570b319d809d0e9c40814b6454fc9d6d38c5835230e3e201aba342e2",
+    "j6g_result_sha256": "d9b53018589432f5a02f07faa932ad1b77b712487b2c1fb69d837e4696df9bee",
+    "d4_honeycomb_sha256": "0895892c00f1f629ec469d4f7b4e42fb8e83bc07666edbc3b8fc26a1f30eb869"
+  },
+  "fixed_physical_case": {
+    "lattice": "paper_periodic_honeycomb(2), 24 vertices, 36 red edges",
+    "physical_red_edges": [0, 4],
+    "first_green_vertex": 1,
+    "first_flux_blue_vertices": [0, 2],
+    "first_green_eigenvalue": "p2 in {+1,-1}, each 1/2 by A6; public charge bit (1-p2)/2",
+    "action": "externally prescribed matching red-X correction on [0,4], applied only after the first public measurement; defer is an E2-unavailable control",
+    "new_physical_faults_or_readout_noise": "none",
+    "postflux_eigenvalue": "p in {+1,-1} shared by blue vertices 0 and 2; green vertex 1 has +1 bare-star eigenvalue",
+    "public_record": "full-length binary flux and charge/vacuum arrays only; no physical support, stabilizer generator, p2 label beyond observed first charge bit, or private pairing field"
+  },
+  "source_stabilizer_transcription": [
+    "A13 after matching correction has blue-star product B0*B2=+1, bare green star G1=+1, p2-weighted red-Z-dressed green D1 with eigenvalue p2, and the displayed remaining Z-type generator.",
+    "The paper states that measuring either blue star anticommutes only with the third, dressed-green generator; thus the first blue outcome p is uniform conditional on p2 and replaces that generator.",
+    "A14 after blue measurement has B0=p, B2=p, G1=+1; its local measured-star stabilizers contain no p2 dependence. Do not claim the entire global density operator loses p2 information."
+  ],
+  "exact_matrix": "Enumerate p2=+1/-1 by p=+1/-1; freeze first and postflux public arrays, conditional probability, joint probability, and symbolic generator replacement for all four rows. Check defer has E2 unavailable. Compare the support projection with J6E/J6G.",
+  "analysis_rule": "Report a source-derived local conditional law and stabilizer update only. Distinguish exact source algebra from a separately implemented D4 lattice tableau. No general-geometry kernel, stochastic history, causal policy, physical schedule risk, LER or threshold claim.",
+  "acceptance": [
+    "All pinned hashes and the L=2 geometry match; A6/A13/A14 source transcription is explicitly audited.",
+    "The first p2 branches each have probability 1/2; the two blue p branches conditional on each p2 are 1/2 by anticommuting-generator measurement, giving four joint 1/4 rows.",
+    "A13-to-A14 generator replacement removes only the dressed p2 generator, retains bare green +1 and enforces equal blue signs; source-required postflux support agrees with J6E/J6G.",
+    "First and second public records are full binary, correction is action-bound, defer has no E2, and no private stabilizer/support field leaks into either public record.",
+    "Zero stochastic histories, schedule evaluations and bootstrap replicates; general D4 channel and five-round caller remain frozen."
+  ],
+  "budget": {"stochastic_histories": 0, "schedule_arm_evaluations": 0, "bootstrap_replicates": 0, "max_cpu_seconds": 15, "new_dependencies": 0},
+  "stop_rule": "Fail closed on source-operator ambiguity, pinned hash drift, normalization, support, action binding or public/private separation. Passing closes only the illustrated ideal L=2 local instrument and authorizes a separately registered generalization/adapter gate, not performance sampling.",
+  "planned_result": "results/j6h-l2-conditional-stabilizer-instrument-2026-09-24.json"
+}

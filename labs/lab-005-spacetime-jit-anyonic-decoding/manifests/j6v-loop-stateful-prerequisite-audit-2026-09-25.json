@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j6v-loop-stateful-prerequisite-audit-2026-09-25",
+  "status": "registered_before_diagnostics",
+  "question": "Are the next two independent ideal D4 prerequisites a realizable simple red-edge loop and an already stateful action-feedback interface, or must either branch stop before full-law/noisy sampling?",
+  "role": "Two-branch deterministic prerequisite audit, not a new measurement law or performance experiment",
+  "source_basis": ["Jing Appendix A.2/A.4 red-X strings and flux-free projectors", "J6L L=2 periodic edge incidence", "J6M fixed common vacuum orbit", "J6Q ordered two-record projector law", "Frozen phenomenological five-round caller"],
+  "pinned_inputs": {
+    "jing_pdf_sha256": "7a17c3d3a743e3dec4266b64d0321a6af7a5eeacfab67e42b9ec77d30b65a2ac",
+    "j6l_result_sha256": "c3eee28f083b7f3a4dd82a3e4f8a7d3ec29aa19af92bbc3ab4588129d855c4ab",
+    "j6m_result_sha256": "55bfe46d34c9a8356e828351b0d415ed550312ed315c4c1bda7a51508ef1b932",
+    "j6q_runner_sha256": "f78417ae64586f6940573faf6797af7de1682ba2815f67f7ed072b7080a94054",
+    "frozen_integrated_history_sha256": "43d9d0d3e4771ccfc764f590f1843cda1e2a7fbce8dae96057710c413a0adb6e"
+  },
+  "matrix": [
+    {"branch": "simple_loop_geometry", "method": "For every frozen red edge, find the shortest endpoint path with that edge deleted; these edge-deletion searches cover every cycle candidate for the global minimum. Report minimum length, a deterministic canonical witness edge tuple, edge uniqueness and vertex degree two. A graph-only result is not an exact charge law."},
+    {"branch": "stateful_multiround_interface", "method": "Audit the pinned public runner signatures and frozen history builder/provider for a third ordered projector block and propagation of a realized correction plus postselected state into the next physical/first observation. Mark present only if both are explicit; otherwise mark absent and identify the first missing interface."}
+  ],
+  "independent_unit": "One deterministic pinned L=2 graph and one pinned source-interface audit; no sampling units or uncertainty interval",
+  "acceptance": ["All five input hashes match", "The minimum cycle is verified by all-edge deletion shortest-path searches and degree-two closure", "The stateful verdict follows explicit signatures/data flow, not presumed physical dynamics", "No exact loop public law, 3-round D4 kernel, histories, arms, bootstrap, threshold or schedule claim is made"],
+  "budget": {"max_cpu_seconds": 60, "new_dependencies": 0, "stochastic_histories": 0, "schedule_arm_evaluations": 0, "bootstrap_replicates": 0},
+  "stop_rule": "Fail closed on hash drift, graph ambiguity, cycle nonclosure or unclear data flow. An absent stateful interface stops its dependent numeric kernel and noisy schedule work; the independent loop-geometry audit continues.",
+  "planned_result": "results/j6v-loop-stateful-prerequisite-audit-2026-09-25.json"
+}

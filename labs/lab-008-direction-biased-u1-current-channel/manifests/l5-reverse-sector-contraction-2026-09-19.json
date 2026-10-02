@@ -1,0 +1,158 @@
+{
+  "id": "lab008-l5-reverse-sector-contraction-2026-09-19",
+  "status": "completed_width_gates_failed",
+  "registered_at": "2026-09-19T21:40:26Z",
+  "authorization": "Continue the active Lab 008 partition-function program with the next bounded transition after the passed normalized reverse-sector response theorem.",
+  "program_alignment": {
+    "central_question": "How does the physical charge-sector partition function quantitatively determine the direction-biased U(1) logical error curve?",
+    "scientific_layer": "Intrinsic finite-patch partition contraction; no practical decoder, phase classification, threshold fit, or continuum identification.",
+    "epistemic_role": "A deterministic feasibility and claim-bearing finite-L5 evaluation of the already proved affine response model.",
+    "upstream_dependency": "manifests/reverse-sector-response-2026-09-19.json",
+    "downstream_consumer": "A physical-LER interval at two near-directed L5 cells, only if the contraction and theorem-error gates both pass.",
+    "information_value": "The predecessor theorem bounds approximation error but deliberately did not evaluate the L5 response LER. This contraction is the smallest calculation that can turn those bounds into finite-L5 physical-risk intervals."
+  },
+  "question": "Can a bounded, target-preserving contraction evaluate the complete affine record-sector response on the canonical L5 square tightly enough that contraction uncertainty does not exceed the proved physical-model error?",
+  "claim_boundary": {
+    "allowed_if_all_gates_pass": "For each registered finite L5 cell, report a certified interval for R(J_epsilon) and the corresponding interval for physical R(P_epsilon) widened by the exact total-variation certificate.",
+    "allowed_if_censored": "The registered contraction budget is insufficient at that cell; report its certified interval and resource profile without a point estimate.",
+    "prohibited": [
+      "No threshold, crossing, scaling, phase, CFT, thermodynamic, decoder, or optimal-algorithm claim.",
+      "No L5 physical LER point estimate from the total-variation bound alone.",
+      "No freezing of the q=1 minimizing sector before the affine sector pair is assembled.",
+      "No deletion of newly accessible records, sector ties, or finite-epsilon sector switches.",
+      "No fitted constant, Monte Carlo sampling, bootstrap replicate, or extension beyond the frozen cells."
+    ]
+  },
+  "frozen_physical_model": {
+    "geometry": "Canonical open L5 square from src/herald_decoder/lattice_model.py with 32 edges, 15 measured interior charges, inherited preferred arrows, rough unmeasured endpoints, and the inherited binary logical-cut parity.",
+    "edge_channel": "Independent physical currents j_e in {0,+1,-1} with probabilities (1-p,pq,p(1-q)); epsilon=1-q.",
+    "public_record": "The complete ordered vector of all 15 interior integer charges Q, with no coarsening in the target estimand.",
+    "hidden_variables": "Individual edge currents, reverse-edge location, occupied-edge count, and logical sector remain private except through Q.",
+    "target_law": "J_epsilon=P_0+epsilon*(dP_epsilon/depsilon)|_0. Given a directed occupied set of size N, its zero-reverse weight is 1-N*epsilon and each of its N single-reverse replacements has weight epsilon; configurations with two or more reverse edges have zero J weight.",
+    "positivity": "Both cells satisfy epsilon<=1/32, so all conditional J weights are nonnegative and the law is normalized.",
+    "estimand": "R_J(epsilon)=sum_Q min_h[A_h(Q)+epsilon*B_h(Q)], where A_h and B_h are the complete record-sector affine coefficients. The minimum is applied only after full-Q, full-sector aggregation.",
+    "physical_envelope": "If the contraction returns R_J in [l,u], then R(P_epsilon) is certified in [max(0,l-TV), min(1/2,u+TV)]."
+  },
+  "registered_matrix": {
+    "selection_rule": "For each of two distinct p regimes, choose the largest tested epsilon whose exact E=32 response error certificate is below 0.01. Smaller epsilons are dominated for discrimination; p=.30,epsilon=.03 is excluded because its certificate is 0.070391539.",
+    "cells": [
+      {
+        "L": 5,
+        "edge_count": 32,
+        "p": 0.08,
+        "epsilon": 0.03,
+        "q": 0.97,
+        "exact_TV_certificate": 0.005512912000257177,
+        "exact_TV_certificate_rational": "217446037546332771762340337436563569025292769000284186064680084916122287005050617563356428093091/39443045261050590270586428264139311483660321755451150238513946533203125000000000000000000000000000"
+      },
+      {
+        "L": 5,
+        "edge_count": 32,
+        "p": 0.3,
+        "epsilon": 0.01,
+        "q": 0.99,
+        "exact_TV_certificate": 0.008537650280863071,
+        "exact_TV_certificate_rational": "266801571276971003421015032512018476036419923979795715740174216436211784592166117662171494841/31250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      }
+    ],
+    "independent_sampling_unit": "Not applicable: this is a deterministic contraction over the complete registered finite graph; sampling count is zero.",
+    "sensitivity": "The two fixed cells separate a low-p/larger-epsilon regime from a moderate-p/smaller-epsilon regime without adding a sweep."
+  },
+  "registered_method": {
+    "representation": "A frontier decision diagram over the fixed minimum-width vertex order, with a two-layer zero/single-reverse automaton and an affine tangent semiring. Each live key retains frontier currents, emitted charge prefix, logical parity, reverse count, and the zero-reverse occupied-count coefficient needed to assemble A and B exactly.",
+    "target_preservation": "All descendants of a retained prefix are expanded with their exact affine sector pair. A prefix may be finalized only after its aggregate A_h+epsilon B_h is checked nonnegative for both sectors; its min over the two aggregate sectors is a certified upper bound by information monotonicity. Finalized prefixes contribute zero to the lower bound. Complete retained records contribute their exact min. Thus [resolved risk, resolved risk + finalized-prefix upper risks] encloses the full R_J.",
+    "priority": "At each emitted detector retain the B prefixes with largest certified unresolved risk width. Ties are broken lexicographically by the full integer charge prefix. This rule is frozen and does not use a hidden full record.",
+    "budgets": [1024, 4096],
+    "adaptive_stop": "Run B=1024 first for a cell. Skip B=4096 only if the registered interval-width gate is already met; otherwise run B=4096 once. No further budget is permitted.",
+    "exact_gate": "Replay all 15 predecessor L3 cells without pruning and reproduce every affine response risk within 1e-12, including new records and reported sector switches.",
+    "tiny_gate": "On a deterministic tiny square fixture, compare every affine (A_0,B_0,A_1,B_1) record tuple with direct zero/single-reverse enumeration, not only the final scalar risk.",
+    "planned_runner": "scripts/run_l5_reverse_sector_contraction.py",
+    "planned_result": "results/l5-reverse-sector-contraction-2026-09-19.json"
+  },
+  "verification_and_integrity": [
+    "Mass identities sum_Q,h A_h=1 and sum_Q,h B_h=0 must hold to 1e-12; every evaluated A_h+epsilon B_h and finalized prefix-sector mass must be >=-1e-14.",
+    "The independent direct insertion operator and tangent-semiring contraction must agree record by record on the tiny gate and in aggregate on L3.",
+    "The final interval must contain the exact L3 response risk at every replay cell, and interval widths must be nonincreasing from B=1024 to B=4096.",
+    "The runner must count newly accessible records, positive-mass ties, strict affine sector switches, resolved/finalized probability, peak pre-prune states, and all censored branches.",
+    "No sector minimum, sign truncation, posterior normalization, record deletion, or epsilon substitution may occur before the complete affine record-sector masses are assembled.",
+    "Source hashes, manifest hash, graph order, cell list, and deterministic tie-break rule must be emitted in the machine-readable result."
+  ],
+  "uncertainty": {
+    "contraction": "Deterministic certified enclosure [lower_J,upper_J]; no sampling or bootstrap uncertainty.",
+    "model": "Exact total-variation certificate from the predecessor theorem, applied after contraction as an additive physical-risk envelope.",
+    "acceptance_width": "For each cell, upper_J-lower_J must be no larger than that cell's exact TV certificate, so numerical contraction uncertainty does not dominate the physical approximation certificate."
+  },
+  "compute_budget": {
+    "maximum_cells": 2,
+    "maximum_prefix_budgets_per_cell": 2,
+    "maximum_preprune_states": 4000000,
+    "maximum_wall_seconds_total": 900,
+    "maximum_resident_memory_gib": 8,
+    "new_physical_record_samples": 0,
+    "bootstrap_replicates": 0,
+    "decoder_runs": 0
+  },
+  "acceptance": [
+    "All tiny and L3 exact gates, normalization, positivity, action-binding, replay, and source-integrity checks pass.",
+    "For a cell to yield a physical LER interval, its certified J interval width is <= its exact TV certificate and the physical interval is formed only by widening that J interval by the same certificate.",
+    "If a cell misses the width gate, exceeds four million pre-prune states, 900 total seconds, or 8 GiB, mark it censored and make no L5 point claim.",
+    "Report both registered cells, including negative or censored outcomes; do not substitute a smaller epsilon after seeing resource use."
+  ],
+  "stop_rule": "Stop after both cells either pass at the first sufficient registered budget or reach B=4096/the resource cap. Do not add sizes, rates, priorities, merges, sampling, or decoder comparisons in this study.",
+  "registration_tick": {
+    "sampling_performed": false,
+    "histories_generated": false,
+    "contractions_executed": false,
+    "bootstrap_replicates": 0,
+    "l5_LER_inferred": false
+  },
+  "gate_completion": {
+    "result": "results/l5-reverse-sector-contraction-gates-2026-09-19.json",
+    "status": "passed",
+    "tiny_direct_record_sector_gates": 2,
+    "L3_exact_replay_cells": 15,
+    "maximum_record_sector_coefficient_error": 2.220446049250313e-16,
+    "new_physical_record_samples": 0,
+    "bootstrap_replicates": 0,
+    "decoder_runs": 0,
+    "L5_contractions": 0,
+    "L5_LER_inferences": 0
+  },
+  "production_completion": {
+    "result": "results/l5-reverse-sector-contraction-2026-09-19.json",
+    "execution_contract_sha256": "6efe8c2b48604fa5e3bff0950d4c6deee5632059dfa81508e0770e4ace7ce441",
+    "elapsed_seconds": 448.9044778330717,
+    "censored_cells": 0,
+    "maximum_peak_preprune_states": 2532424,
+    "cells": [
+      {
+        "p": 0.08,
+        "q": 0.97,
+        "final_budget": 4096,
+        "J_interval": [0.005630672854458887, 0.06249842053252214],
+        "interval_width": 0.056867747678063255,
+        "width_over_TV_certificate": 10.315373739941863,
+        "width_gate_passed": false,
+        "diagnostic_physical_envelope_not_promoted": [0.00011776085420170997, 0.06801133253277931]
+      },
+      {
+        "p": 0.3,
+        "q": 0.99,
+        "final_budget": 4096,
+        "J_interval": [0.002849044530808178, 0.46609705211392854],
+        "interval_width": 0.46324800758312035,
+        "width_over_TV_certificate": 54.25942646321308,
+        "width_gate_passed": false,
+        "diagnostic_physical_envelope_not_promoted": [0.0, 0.4746347023947916]
+      }
+    ],
+    "decision": "Reject this contraction within the registered budgets. Neither cell may promote a physical LER interval, and B may not be enlarged under this contract."
+  },
+  "provenance_sha256": {
+    "results/reverse-sector-response-2026-09-19.json": "f4d8cd6fbfb4b296b5cb595aac5876e9d15d0696edd96d4aca23f1bc9ae1dcc1",
+    "results/adaptive-charge-branch-bound-2026-09-19.json": "7a13ff42e5700d677ec81df7509bc8f3feee4d2f1e7e72e92ce32cc09e24b431",
+    "scripts/current_oracle.py": "241916aa389193b7b62a3ea2de7f4267086dfcca60760ee514e27100f40fa6ee",
+    "../../src/herald_decoder/lattice_model.py": "b87a5feba27675e26970360d730324b7d3740e4dc0492b4dc478e510f140c9e7"
+  },
+  "next_operation": "Close the bounded L5 response-contraction branch. Reopen Lab 008 only with a new target-preserving theorem or separately registered thermodynamic study; otherwise resume the already registered Lab 005 J6 D4 interface prerequisite."
+}

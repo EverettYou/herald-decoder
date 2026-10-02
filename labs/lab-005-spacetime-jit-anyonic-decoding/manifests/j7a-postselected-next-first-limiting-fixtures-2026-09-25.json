@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j7a-postselected-next-first-limiting-fixtures-2026-09-25",
+  "status": "registered_before_exact_execution",
+  "question": "Can a private action-bound ordered-projector state token generate a causally valid next-round full-binary first record on two tiny exact D4 fixtures without leaking private support, and how does the no-new-fault repeat control constrain it?",
+  "role": "Deterministic ideal no-new-physical-fault limiting matrix only, not a production five-round sampler or evidence of hidden-charge feedback",
+  "source_basis": ["Jing Appendix A.2/A.4 ideal charge projectors and red-X correction", "J6L/J6M pinned periodic graph and vacuum orbit", "J6O fixed two-edge full first/second law", "J6Z complete six-edge-loop two-block public law and frozen caller gap"],
+  "pinned_inputs": {
+    "jing_pdf_sha256": "7a17c3d3a743e3dec4266b64d0321a6af7a5eeacfab67e42b9ec77d30b65a2ac",
+    "j6l_result_sha256": "c3eee28f083b7f3a4dd82a3e4f8a7d3ec29aa19af92bbc3ab4588129d855c4ab",
+    "j6m_result_sha256": "55bfe46d34c9a8356e828351b0d415ed550312ed315c4c1bda7a51508ef1b932",
+    "j6o_result_sha256": "3c08da92958c80c3e2958d4a250352e66437c05e3735cf110feeead5603fb31f",
+    "j6z_result_sha256": "1df6cd158ddcac39401449e07fc6fcfe0c84f77f56853b74930338268da0d7fe",
+    "frozen_integrated_history_sha256": "43d9d0d3e4771ccfc764f590f1843cda1e2a7fbce8dae96057710c413a0adb6e"
+  },
+  "common": {
+    "geometry_state": "Pinned periodic L=2 graph and one J6M common vacuum orbit; physical red-X support private, ideal source projectors, no measurement noise",
+    "timing": "Physical error; complete eligible first-star measurement; public red-X correction or defer; complete eligible action-conditioned second measurement when correction occurs; retain a private postselected projector-sequence state; zero new physical faults; measure complete eligible next-round first stars on the actual residual sector.",
+    "public_private": "Return only 24-site flux/charge/vacuum arrays, action edge IDs and causal digests. Private physical support, operator masks, projector sequence, orbit and postselected-state token never enter decoder-visible dictionaries. A second record is absent on defer.",
+    "matched_keys": "Use one fixed trial ID, geometry-specific physical and first-observation keys, and matched second-exogenous bit 0/1 for both two-edge action branches; keys serve deterministic counterfactual enumeration, not random sampling.",
+    "independent_unit": "One fixed exact orbit per geometry with rational Born masses and counterfactual action branches; no Monte Carlo uncertainty"
+  },
+  "matrix": {
+    "two_edge_path": {
+      "private_physical_red_edges": [0, 4],
+      "actions": {"defer": [], "partial": [0], "matched": [0, 4]},
+      "first_variable_site": 1,
+      "second_variable_sites_by_action": {"defer": [], "partial": [0], "matched": [0, 2]},
+      "positive_case_count": 10,
+      "next_first_rule": "With no new fault or second action, next first measures all eligible stars on the residual sector. Compute an independent ordered first/second/next-first projector law on every positive prefix; defer omits the second block. Require exact normalization and compare to complete J6O public records."
+    },
+    "six_edge_loop": {
+      "private_physical_red_edges": [0, 1, 32, 30, 34, 35],
+      "first_public_action_red_edges": [0],
+      "positive_case_count": 16,
+      "next_first_rule": "Use each complete J6Z first/second public prefix. With no new fault or further action, verify all eligible next-first projectors repeat the complete second record by projector idempotence and independently check at least one varying site by an ordered three-block moment."
+    },
+    "binding_controls": ["swapped_action_token", "tampered_first_record", "tampered_second_record", "stale_prefix_digest", "unsupported_action", "private_truth_field_injection", "cross_trial_token_reuse"]
+  },
+  "acceptance": ["All six pins and frozen caller source hash pass before and after evaluation", "Two-edge path positive cases and loop prefixes normalize exactly, have 24-site public arrays and reproduce pinned J6O/J6Z two-block laws", "Ordered three-block no-new-fault next-first law passes repeat control at all variable sites; deterministic eligible sites stay +1", "All seven anti-leak/action-binding controls reject, replay is exact and no private token is in public output", "Zero stochastic histories, schedule arm evaluations, bootstrap replicates, new dependencies or frozen-caller changes; no noisy/JIT/threshold claim"],
+  "budget": {"max_cpu_seconds": 60, "new_dependencies": 0, "stochastic_histories": 0, "schedule_arm_evaluations": 0, "bootstrap_replicates": 0},
+  "stop_rule": "Run path exact law first, then loop repeat fixture. Fail closed on pin, incidence, commutation, public/private, normalization, binding or replay drift; censor only an independent branch at the 60-CPU-second cap, never widen or change actions post hoc.",
+  "planned_result": "results/j7a-postselected-next-first-limiting-fixtures-2026-09-25.json"
+}

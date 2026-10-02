@@ -788,6 +788,153 @@
   width: 100%;
 }
 
+.wiki-page-shell {
+  width: min(100%, 1120px);
+  margin: 0 auto;
+}
+
+.wiki-searchbar.wiki-page-search {
+  position: relative;
+  display: block;
+  width: min(100%, 920px);
+  margin: 0 auto 24px;
+}
+
+.wiki-page-search-results {
+  position: absolute;
+  z-index: 40;
+  top: calc(100% + 7px);
+  left: 0;
+  width: 100%;
+  max-height: min(520px, 60vh);
+  overflow-y: auto;
+  border: 1px solid #cbd5d1;
+  border-radius: 9px;
+  background: #fff;
+  box-shadow: 0 14px 32px rgb(32 55 49 / 16%);
+}
+
+.wiki-page-search-result {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 11px;
+  padding: 11px 13px;
+  border-top: 1px solid #e6ebe8;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.wiki-page-search-result:first-child { border-top: 0; }
+.wiki-page-search-result:hover,
+.wiki-page-search-result:focus-visible { background: #f2f7f5; outline: none; }
+.wiki-page-search-result-icon {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 7px;
+  background: #e9f1ee;
+  color: var(--green);
+}
+.wiki-page-search-result-copy { min-width: 0; }
+.wiki-page-search-result-copy strong { display: block; }
+.wiki-page-search-result-copy strong {
+  overflow: hidden;
+  font-size: .9rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.wiki-page-search-result-type {
+  color: #74837f;
+  font-size: .66rem;
+  font-weight: 750;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+.wiki-page-search-status {
+  margin: 0;
+  padding: 15px;
+  color: var(--muted);
+  font-size: .8rem;
+}
+
+.search-control input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.document-panel.wiki-page-document {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 0 54px;
+  overflow: visible;
+}
+
+.wiki-page-meta {
+  padding: 20px clamp(22px, 4vw, 42px);
+  border-bottom: 1px solid var(--line);
+  border-radius: 10px 10px 0 0;
+  background: #f8faf9;
+}
+
+.wiki-page-path {
+  display: flex;
+  align-items: baseline;
+  gap: 13px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #e2e8e5;
+}
+.wiki-page-path span,
+.wiki-page-meta-label {
+  flex: 0 0 92px;
+  color: #778681;
+  font-size: .65rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.wiki-page-path code {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  color: #3d514b;
+  font-size: .72rem;
+}
+.wiki-page-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 12px;
+}
+.wiki-page-meta-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border: 1px solid #d8e1dd;
+  border-radius: 99px;
+  background: #fff;
+  color: #455b55;
+  font-size: .7rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.wiki-page-keywords .topic-row { margin: 0; }
+.wiki-page-reading {
+  width: min(calc(100% - 48px), 900px);
+  margin: 0 auto;
+  padding-top: 34px;
+}
+.wiki-page-reading > h1 { margin: 0 0 20px; font-size: 2.15rem; }
+.wiki-page-reading > h2 { margin: 42px 0 16px; padding: 25px 0 0; border-top: 1px solid #e1e6e3; font-size: 1.38rem; }
+.wiki-page-reading > h3 { margin: 28px 0 11px; }
+.wiki-page-reading > p { margin: 0 0 18px; }
+.wiki-page-reading > ul,
+.wiki-page-reading > ol { margin: 0 0 20px; padding-left: 1.45rem; }
+.wiki-page-reading > table,
+.wiki-page-reading > blockquote,
+.wiki-page-reading > pre { margin: 24px 0; }
+
 .wiki-landing-search {
   width: 100%;
   margin: 0 0 18px;
@@ -1256,6 +1403,29 @@ body.pdf-standalone-page .pdf-shell { height: calc(100vh - 44px); min-height: 0;
   .wiki-landing-results > a {
     grid-template-columns: 1fr;
     gap: 3px;
+  }
+
+  .wiki-page-search-result {
+    grid-template-columns: 34px minmax(0, 1fr);
+  }
+
+  .wiki-page-search-result-type {
+    display: none;
+  }
+
+  .wiki-page-meta-row,
+  .wiki-page-path {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .wiki-page-path span,
+  .wiki-page-meta-label {
+    flex-basis: 100%;
+  }
+
+  .wiki-page-reading {
+    width: min(calc(100% - 34px), 900px);
   }
 
   .knowledge-panel-head,

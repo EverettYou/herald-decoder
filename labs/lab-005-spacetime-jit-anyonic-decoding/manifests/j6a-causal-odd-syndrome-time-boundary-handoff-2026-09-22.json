@@ -1,0 +1,106 @@
+{
+  "id": "lab005-j6a-causal-odd-syndrome-time-boundary-handoff-2026-09-22",
+  "status": "passed_structural_matrix_only",
+  "registered_at": "2026-09-22",
+  "phase": "J6A",
+  "title": "Causal odd-syndrome/time-boundary handoff matrix",
+  "authorization": "Follow-up to the closed-censored J6 pilot. This registration addresses its localized public-interface domain gap only; it neither repairs nor reanalyzes J6.",
+  "program_alignment": {
+    "central_question": "Can a causal spacetime scheduler hand a valid odd instantaneous noisy syndrome to the spatial D4 decoder without inventing a spatial correction, reading future records, or exposing private truth?",
+    "scientific_layer": "Deterministic causal-interface validation",
+    "epistemic_role": "Prerequisite implementation gate for a future, separately registered replacement pilot",
+    "upstream_dependency": "J6 production closed censored after 272 histories and 2,176 unconditional rows; the static periodic spatial decoder rejected valid odd instantaneous measured syndromes.",
+    "downstream_consumer": "Only a new J6B pilot registration after every J6A gate passes.",
+    "information_value": "Distinguishes a causal admissible temporal-boundary representation from a hidden-truth completion or a post-hoc J6 data repair."
+  },
+  "question": "For a committed causal prefix whose instantaneous flux snapshot has odd parity solely because of readout noise, can the schedule emit a typed, digest-bound temporal-boundary handoff that makes the augmented decoder request admissible while preserving causal and truth-free behavior?",
+  "smallest_intended_claim": "A passing matrix establishes only that the registered public handoff interface is deterministic, causal, parity-accounted, and fail-closed on fixed fixtures. It does not establish logical performance, schedule advantage, a noise model, or a fault-tolerance result.",
+  "non_goals": [
+    "Do not modify, rescore, bootstrap, filter, or reinterpret any J6 production row.",
+    "Do not generate a stochastic history, run a schedule arm, or compare schedule/mode risk.",
+    "Do not pair an odd spatial endpoint to an arbitrary hidden or future spatial vertex.",
+    "Do not claim that the temporal-boundary bookkeeping is a microscopic D(S3) circuit derivation."
+  ],
+  "interface_contract": {
+    "public_input": "The scheduler consumes only the committed causal prefix, its visible syndrome detector/readout rows, declared decision round, mode, and existing public request digest.",
+    "public_output": "A versioned handoff object containing only a sorted odd-endpoint list, their decision-time temporal-boundary labels, the committed round, and a canonical digest bound to the causal prefix and request.",
+    "spatial_semantics": "The spatial decoder receives an augmented matching request. Each handed endpoint is paired to an explicit temporal boundary rather than to a fabricated spatial endpoint; the handoff itself is a defer/ledger action, not a physical spatial correction.",
+    "resolution_semantics": "A later causal detector/readout update may reconcile, supersede, or retain a temporal-boundary token only through a new digest-bound request; current requests are immutable.",
+    "private_boundary": "Hidden support, physical fault chain, post-action relation, logical sector, residual truth, future readout, and future detector events are unavailable to handoff construction and decoding."
+  },
+  "fixed_fixture_matrix": [
+    {"id": "even_identity", "case": "even instantaneous syndrome", "required_result": "No temporal-boundary token; existing spatial request/action remains byte-identical."},
+    {"id": "odd_readout_snapshot", "case": "one visible odd endpoint at the decision round", "required_result": "One typed temporal-boundary token; augmented endpoint parity is even; no fabricated spatial correction is emitted."},
+    {"id": "odd_two_round_reconciliation", "case": "odd snapshot followed by a causal visible partner/change", "required_result": "Later request reconciles through a new token/action digest without mutating the earlier request."},
+    {"id": "odd_persistence", "case": "odd snapshot remains through the terminal available prefix", "required_result": "Token remains explicitly unresolved and the public action is defer/fail-closed, never truth-completed."},
+    {"id": "causal_future_extension", "case": "append future visible rounds after an earlier decision", "required_result": "Earlier handoff object, request digest, and action are unchanged."},
+    {"id": "truth_sidecar_invariance", "case": "change only private support/fault/logical sidecar", "required_result": "All public handoff and decoder outputs are unchanged."},
+    {"id": "replay_and_vertex_permutation", "case": "repeat a fixture and relabel the periodic vertex consistently", "required_result": "Replay is bit-identical and the public object is equivariant under the declared relabelling."},
+    {"id": "malformed_or_unbound_token", "case": "missing prefix binding, bad round, duplicate endpoint, or unknown token", "required_result": "Reject before decoder execution and preserve the unconditional caller denominator semantics."}
+  ],
+  "acceptance_gates": [
+    "All eight fixed fixtures pass with no hidden/future field in any public request, digest, or action.",
+    "Every augmented request has even matching parity, while its physical spatial correction boundary equals only the non-handoff spatial component.",
+    "Odd endpoints are represented only by explicit temporal-boundary tokens and are never silently dropped or matched to an invented spatial vertex.",
+    "Earlier outputs remain invariant under future extension and private-sidecar changes; replay is bit-identical.",
+    "Malformed, stale, or duplicate handoffs fail closed before spatial decoding and emit a machine-readable reason.",
+    "The existing J6 raw rows and analysis SHA-256 values remain unchanged."
+  ],
+  "implementation_scope": {
+    "allowed_files": [
+      "scripts/d4_spatial_policy.py",
+      "scripts/d4_integrated_history.py",
+      "scripts/e1_schedule_integration.py",
+      "scripts/test_d4_spatial_policy.py",
+      "scripts/test_d4_integrated_history.py",
+      "scripts/test_e1_schedule_integration.py",
+      "scripts/test_j6a_causal_handoff.py",
+      "scripts/run_j6a_causal_handoff_matrix.py"
+    ],
+    "required_outputs": {
+      "runner": "scripts/run_j6a_causal_handoff_matrix.py",
+      "machine_readable_result": "results/j6a-causal-odd-syndrome-time-boundary-handoff-2026-09-22.json",
+      "record": "wiki/records/j6a-causal-odd-syndrome-time-boundary-handoff-2026-09-22.md"
+    }
+  },
+  "budget": {
+    "new_stochastic_histories": 0,
+    "schedule_arm_evaluations": 0,
+    "bootstrap_replicates": 0,
+    "deterministic_fixture_cases": 8,
+    "maximum_runtime_seconds": 120,
+    "maximum_peak_memory_mib": 512,
+    "new_external_dependencies": 0
+  },
+  "stop_rule": "Registration creates no fixture result or code change. On execution, run exactly the eight fixed deterministic fixtures. Stop on the first provenance, causality, parity-accounting, anti-leakage, replay, or malformed-input failure; write a censored result and keep J6B blocked. A pass permits only J6B registration, never reuse or amendment of J6.",
+  "follow_on": {
+    "job_id": "lab005-j6b-replacement-pilot-registration-2026-09-22",
+    "release_condition": "Every J6A acceptance gate passes in its durable machine-readable result.",
+    "prohibited_before_release": ["new stochastic histories", "new schedule arms", "bootstrap", "risk analysis", "J6 raw-row modification"]
+  },
+  "registration_counters": {
+    "deterministic_fixture_cases_run": 0,
+    "new_stochastic_histories": 0,
+    "schedule_arm_evaluations": 0,
+    "bootstrap_replicates": 0
+  },
+  "frozen_j6_artifact_sha256": {
+    "results/j6-d4-matched-history-pilot-rows-2026-09-19.jsonl": "9e120e1402f2cd5332ecbea1d15ded2979e8d0fe2165083eeb21794cbed22225",
+    "results/j6-d4-matched-history-pilot-analysis-2026-09-19.json": "fa2bc6d7b7de69004d266557b1b885a0369fb3944d3dbcee94ee54fb6e6cfcf3"
+  },
+  "pre_execution_source_scope_correction": {
+    "date": "2026-09-23",
+    "observed_failure": "The current D4SpatialCommitRequestV1.from_dict rejects a one-vertex odd public syndrome with ValueError: periodic D4 flux syndrome must have even cardinality. The scheduler's E1PolicyDecoder invokes typed_record_to_commit_request and decode_flux_action on that path before a handoff can exist.",
+    "registration_defect": "The original allowed-file set omitted scripts/e1_schedule_integration.py, the public scheduler entry point needed to route a causal temporal-boundary handoff; a helper-only test would not satisfy the registered end-to-end claim.",
+    "correction": "Add only the scheduler adapter and its existing test file to the allowed implementation scope. Keep the same eight fixtures, physical model, zero-history/evaluation/bootstrap budget, no external dependency, unconditional denominator, and no J6 row modifications.",
+    "release_gate": "The eight fixtures must exercise the actual scheduler-to-spatial public handoff path, not only a direct helper; odd records must not be silently converted to an even spatial syndrome. J6B remains blocked until this path and every original acceptance gate pass."
+  },
+  "execution_result": {
+    "date": "2026-09-23",
+    "path": "results/j6a-causal-odd-syndrome-time-boundary-handoff-2026-09-22.json",
+    "status": "passed",
+    "fixed_fixtures_passed": 8,
+    "full_lab_regression_tests_passed": 154,
+    "interpretation": "Digest-bound, all-defer temporal-boundary handoff is a structural public-interface pass only. No production histories, risk estimates, or schedule comparisons; persistent odd snapshots remain unresolved and fail closed."
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "status": "complete",
+  "scope": "Primary-source and Local-Wiki audit; no sampling, fit, threshold, decoder run, or new contraction.",
+  "target": {
+    "formula": "LER = (1 - sum_Q |A1(Q)|) / 2",
+    "requirement": "A method must certify the public-charge-record l1 norm after the signed logical twist is pushed forward; scalar partition-function accuracy alone is insufficient."
+  },
+  "candidates": [
+    {
+      "family": "algorithmic Pirogov-Sinai / polymer contours",
+      "primary_source": "https://arxiv.org/abs/1806.11548",
+      "established_target": "scalar partition functions and sampling from a convergent contour representation",
+      "failed_interface": "no convergent contour representation for the recordwise l1 functional",
+      "decision": "not_directly_applicable"
+    },
+    {
+      "family": "strong spatial mixing / zero-free counting",
+      "primary_source": "https://arxiv.org/abs/1906.01228",
+      "established_target": "model-specific scalar partition functions under spatial-mixing or zero-free conditions",
+      "failed_interface": "hard charge constraints and no control of sum_Q |A1(Q)|",
+      "decision": "not_directly_applicable"
+    },
+    {
+      "family": "certified positive multi-spin marginal polytopes",
+      "primary_source": "https://arxiv.org/abs/2609.12352",
+      "established_target": "positive-interaction marginals and scalar counting under a Birkhoff-contraction condition",
+      "failed_interface": "incidence delta factors contain zeros and the emitted-record l1 norm is not a local marginal",
+      "decision": "not_directly_applicable"
+    },
+    {
+      "family": "zero-free interpolation",
+      "primary_source": "https://arxiv.org/abs/1406.1771",
+      "established_target": "analytic scalar graph-homomorphism partition functions",
+      "failed_interface": "absolute value over exponentially many charge coefficients is not the scalar analytic target",
+      "decision": "not_directly_applicable"
+    },
+    {
+      "family": "MPS tensor-network contraction",
+      "primary_source": "https://arxiv.org/abs/1405.4883",
+      "established_target": "bond-dimension-controlled numerical approximation of fixed-record coset probabilities",
+      "failed_interface": "no certified global error for the sum of recordwise sector minima",
+      "decision": "heuristic_only"
+    },
+    {
+      "family": "generic output-distribution total variation",
+      "primary_source": "https://arxiv.org/abs/1804.06170",
+      "established_target": "complexity of l1 distance between labelled Markov-chain output laws",
+      "failed_interface": "not a reduction for this lattice, but demonstrates that tractable hidden propagation does not make output l1 tractable",
+      "decision": "hardness_warning"
+    },
+    {
+      "family": "physical even-moment hierarchy",
+      "primary_source": "project derivation in wiki/replica-boundary-ratios.md",
+      "established_target": "monotone certified bounds converging to the same LER functional",
+      "failed_interface": "physical R-to-1 record weighting is not supplied by the clean integer-replica R=2 model",
+      "decision": "retain_for_bounded_feasibility"
+    }
+  ],
+  "selected_next_test": {
+    "name": "physical moment degree-versus-width feasibility",
+    "new_sampling": false,
+    "inputs": "exact L3 sector tables and already stored L5 record-level posteriors",
+    "grid": {
+      "N": [1, 2, 4, 8, 16, 32],
+      "exact_L3": {
+        "p": [0.08, 0.1, 0.3],
+        "q": [0.5, 0.75, 0.97, 1.0]
+      },
+      "stored_L5_cells": [
+        [0.1, 0.5],
+        [0.1, 0.75],
+        [0.1, 1.0],
+        [0.3, 0.5],
+        [0.3, 0.75],
+        [0.3, 0.97],
+        [0.3, 1.0]
+      ]
+    },
+    "question": "Can a low-order physical moment hierarchy give a useful interval in the ambiguous fair/intermediate regime before any replica-transfer implementation is attempted?",
+    "claim_boundary": "Diagnostic only; empirical L5 moments cannot become an analytic curve.",
+    "stop_rule": "If the registered width gate fails by N=32, close moment compression rather than derive an expensive transfer for an insufficient statistic."
+  },
+  "decision": "No reviewed scalar partition, correlation-decay, positive-polytope, or MPS theorem directly controls the LER public-record l1 norm. Retain only the physical moment hierarchy for one bounded no-new-sampling feasibility matrix.",
+  "source_sha256": {
+    "labs/lab-008-direction-biased-u1-current-channel/manifests/nonperturbative-method-audit-2026-09-19.json": "f2ecf148388881d27cbfcf07452366539200a6d95e55992be2e07cfaef3d02d9",
+    "labs/lab-008-direction-biased-u1-current-channel/wiki/nonperturbative-method-audit.md": "f10c17f4d001c0e02833ecef03c151c244ac7d35407a86d59512f7144d48afe9",
+    "labs/lab-008-direction-biased-u1-current-channel/wiki/partition-function-ler.md": "172ce9e3f736e0baeea7b04babf39bdb3aebaeb548cc9a1ec823ca37bb9bbadf",
+    "labs/lab-008-direction-biased-u1-current-channel/wiki/replica-boundary-ratios.md": "77b810a05ff68e1ffc340ec87dace0d13a3065fa2d69e0eba2edf8e72b4e5c0f",
+    "labs/lab-008-direction-biased-u1-current-channel/results/partition-oracle-synthesis-2026-09-19.json": "1c3f829832adcb68a1a563a505876318953b26c951ce3a06b0a8ee6d4081cdfe"
+  }
+}

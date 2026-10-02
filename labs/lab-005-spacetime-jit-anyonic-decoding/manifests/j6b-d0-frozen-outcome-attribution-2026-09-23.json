@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j6b-d0-frozen-outcome-attribution-2026-09-23",
+  "status": "registered_before_diagnostic_no_new_sampling",
+  "role": "Post-hoc descriptive audit of the closed J6B finite pilot; not a new performance test",
+  "question": "Do the mixed pointwise J6B contrasts reflect changes in unconditional failed-closed frequency, scored logical failures, or both?",
+  "competing_explanations": [
+    "Near-ceiling loss is mainly unresolved temporal handoffs; triggered paired differences may be dominated by abort-frequency differences.",
+    "Scored logical failures after a completed action, rather than aborts, may dominate some or all paired differences.",
+    "Both components may move in different directions; a fixed cohort cannot identify a causal mechanism or a low-risk regime."
+  ],
+  "frozen_inputs": {
+    "manifest": {"path": "manifests/j6b-disjoint-temporal-handoff-pilot-2026-09-23.json", "sha256": "8140182a4be0315a205936626c7ec727f765efe66047c02bbeac588097b7fdb2"},
+    "rows": {"path": "results/j6b-disjoint-temporal-handoff-rows-2026-09-23.jsonl", "sha256": "620c5db65231e5c112a497397aad168eefd7d284f1af362c52d512c6741fbefe"},
+    "integrity": {"path": "results/j6b-disjoint-temporal-handoff-analysis-2026-09-23.json", "sha256": "9f9375df85b98bf2ccbdc9edc0e86512f67f9424fa1589bba3e9714e56309049", "required_status": "production_integrity_passed_bootstrap_pending"},
+    "paired_analysis": {"path": "results/j6b-disjoint-temporal-handoff-paired-analysis-2026-09-23.json", "sha256": "402074b139fafd103ee801e3139de3f1245a7bd3dcee88f976338a206df2657f", "required_status": "finite_pilot_trigger_met"}
+  },
+  "scope": {
+    "cells": ["clean_herald_schedule", "joint_readout_noise"],
+    "modes": ["syndrome_only", "heralded"],
+    "schedules": ["immediate", "fixed_delay_1", "jit_lyons_brown", "offline_full_history"],
+    "unit": "The original independent five-round matched history; exactly 128 histories per stochastic cell and exactly eight unconditional arm rows per history.",
+    "contrast_set": "All 14 preregistered online contrasts from the immutable J6B paired analysis; offline remains descriptive only.",
+    "outcome_partition": ["failed_closed", "scored_failure", "scored_success"],
+    "scored_failure_flags": ["physical_winding", "union_winding", "charge_winding", "terminal_residual"]
+  },
+  "diagnostic_matrix": [
+    "For every stochastic cell and all eight arms, count mutually exclusive outcome categories on the original unconditional n=128 denominator; retain failure reasons and overlapping scored-winding flags without post-selection.",
+    "For all 14 original online contrasts, tabulate the matched 3-by-3 outcome-category cross-tab and exact decomposition of left-minus-right unconditional failure-count difference into failed-closed and scored-failure differences.",
+    "Check that the decomposed unconditional difference equals the frozen paired point estimate exactly and that every category/cross-tab sums to n=128."
+  ],
+  "budget": {"new_histories": 0, "new_arm_evaluations": 0, "new_bootstrap_replicates": 0, "max_cpu_seconds": 60, "max_output_mib": 1},
+  "acceptance": "Input hashes, J6B integrity and paired status match; all rows and paired arms are complete; every per-arm and per-contrast denominator and exact decomposition closes. Otherwise stop without scientific interpretation.",
+  "claim_boundary": "This is a post-hoc descriptive accounting of existing unconditional outcomes. It is not a new pointwise or simultaneous significance test, a conditional-on-scored LER estimand, causal mechanism identification, JIT superiority, threshold, or approval for a larger study.",
+  "planned_output": "results/j6b-d0-frozen-outcome-attribution-2026-09-23.json",
+  "next_operation": "Run one read-only diagnostic on frozen J6B rows, integrate the result into Local Wiki and report, and choose the next separately registered scientific question."
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.herald-decoder.dashboard</string>
+  <key>ProgramArguments</key><array><string>__PROJECT_ROOT__/.venv/bin/python3</string><string>__PROJECT_ROOT__/dashboard/server.py</string></array>
+  <key>WorkingDirectory</key><string>__PROJECT_ROOT__</string>
+  <key>EnvironmentVariables</key><dict><key>HERALD_SERVER_LAUNCHED</key><string>1</string><key>HERALD_SERVER_PORT</key><string>8010</string><key>PYTHONPATH</key><string>__PROJECT_ROOT__/src:__PROJECT_ROOT__/.tmp/numba-runtime</string><key>MPLCONFIGDIR</key><string>__PROJECT_ROOT__/.tmp/matplotlib</string><key>NUMBA_CACHE_DIR</key><string>__PROJECT_ROOT__/.tmp/numba-cache</string><key>XDG_CACHE_HOME</key><string>__PROJECT_ROOT__/.tmp/cache</string></dict>
+  <key>RunAtLoad</key><true/>
+  <key>KeepAlive</key><true/>
+  <key>ThrottleInterval</key><integer>3</integer>
+  <key>StandardOutPath</key><string>__PROJECT_ROOT__/.tmp/launchd-dashboard.out.log</string>
+  <key>StandardErrorPath</key><string>__PROJECT_ROOT__/.tmp/launchd-dashboard.err.log</string>
+</dict>
+</plist>

@@ -1,0 +1,54 @@
+{
+  "claim_boundary": "The all-size independence is only for bulk charges before conditioning on the cut-adjacent strip. The full record may distinguish H through that strip; no p=.30 phase follows.",
+  "geometry_checks": [
+    {
+      "L": 3,
+      "bulk_charge_vertices": 0,
+      "bulk_incidence_cut_overlap": 0,
+      "cut_adjacent_charge_vertices": 3,
+      "cut_endpoint_gate": "pass",
+      "logical_cut_edges": 3
+    },
+    {
+      "L": 5,
+      "bulk_charge_vertices": 10,
+      "bulk_incidence_cut_overlap": 0,
+      "cut_adjacent_charge_vertices": 5,
+      "cut_endpoint_gate": "pass",
+      "logical_cut_edges": 5
+    },
+    {
+      "L": 7,
+      "bulk_charge_vertices": 28,
+      "bulk_incidence_cut_overlap": 0,
+      "cut_adjacent_charge_vertices": 7,
+      "cut_endpoint_gate": "pass",
+      "logical_cut_edges": 7
+    },
+    {
+      "L": 11,
+      "bulk_charge_vertices": 88,
+      "bulk_incidence_cut_overlap": 0,
+      "cut_adjacent_charge_vertices": 11,
+      "cut_endpoint_gate": "pass",
+      "logical_cut_edges": 11
+    }
+  ],
+  "id": "lab008-h12-bulk-charge-independence-2026-09-23",
+  "maximum_retained_L3_affinity_error": 1.3877787807814457e-15,
+  "retained_result_sha256": "a6c4dbb043c10a9cbadc1b4319ad66430d9f56834595f4be99a8ddab0d9a68dc",
+  "sampling": {
+    "bootstrap_replicates": 0,
+    "new_physical_samples": 0,
+    "new_system_sizes": 0
+  },
+  "sector_priors_at_p_0_3_L3": {
+    "initial_affinity": 0.498974949271003,
+    "pi0": 0.532,
+    "pi1": 0.46799999999999997
+  },
+  "source_manifest": "../manifests/h12-bulk-charge-independence-2026-09-23.json",
+  "source_sha256": "b87a5feba27675e26970360d730324b7d3740e4dc0492b4dc478e510f140c9e7",
+  "status": "passed_geometry_and_retained_exact_control",
+  "theorem": "Every charge at x<=L-3 is a function only of non-cut independent edge currents, while H is a function only of the L right-cut edge activities. Hence Q_bulk is independent of H at all L and all independent edge priors; any bulk-only prefix leaves sector affinity at sqrt(pi0*pi1)."
+}

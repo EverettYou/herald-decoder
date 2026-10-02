@@ -4,10 +4,21 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
+import ssl
 import tarfile
 from urllib.request import Request, urlopen
 
+try:
+    import certifi
+except ImportError:  # Fall back to the interpreter's configured trust store.
+    certifi = None
+
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def tls_context():
+    """Use an explicit CA bundle when the managed Python lacks macOS CA paths."""
+    return ssl.create_default_context(cafile=certifi.where() if certifi else None)
 
 
 def audit(restore=False, include_paper_sources=False):
@@ -32,7 +43,7 @@ def audit(restore=False, include_paper_sources=False):
                     if not url:
                         raise ValueError('No recorded download URL')
                     # Never switch to a current branch/version to satisfy a pinned snapshot.
-                    with urlopen(Request(url, headers={'User-Agent': 'HeraldDecoder-reference-restore/1.0'}), timeout=60) as response:
+                    with urlopen(Request(url, headers={'User-Agent': 'HeraldDecoder-reference-restore/1.0'}), timeout=60, context=tls_context()) as response:
                         body = response.read()
                     if hashlib.sha256(body).hexdigest() != expected:
                         raise ValueError('Downloaded checksum differs from provenance; not installed')

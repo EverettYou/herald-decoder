@@ -1,0 +1,59 @@
+{
+  "status": "verified",
+  "updated": "2026-09-19T20:39:29.371Z",
+  "surfaces": [
+    {
+      "name": "report",
+      "url": "http://127.0.0.1:8010/lab?id=lab-008-direction-biased-u1-current-channel",
+      "file": "REPORT.md",
+      "sha256": "2cf919ecf6e1eef35503381be2536e5751578aad7f4ebcfde603731dcd49cf25",
+      "local_links": 16
+    },
+    {
+      "name": "response-wiki",
+      "url": "http://127.0.0.1:8010/lab-wiki?lab=lab-008-direction-biased-u1-current-channel&page=reverse-sector-response",
+      "file": "wiki/reverse-sector-response.md",
+      "sha256": "22a886f4210c2c1367a7e6c83eb2ce86c2b5a47563f023df73fc3e394b66146a",
+      "local_links": 7
+    },
+    {
+      "name": "response-document",
+      "url": "http://127.0.0.1:8010/document?path=labs%2Flab-008-direction-biased-u1-current-channel%2Fwiki%2Freverse-sector-response.md",
+      "file": "wiki/reverse-sector-response.md",
+      "sha256": "22a886f4210c2c1367a7e6c83eb2ce86c2b5a47563f023df73fc3e394b66146a",
+      "local_links": 7
+    },
+    {
+      "name": "current-user-document",
+      "url": "http://127.0.0.1:8010/document?path=labs%2Flab-008-direction-biased-u1-current-channel%2Fwiki%2Fcomplex-weights-and-cft.md",
+      "file": "wiki/complex-weights-and-cft.md",
+      "sha256": "22486c7d9a8737600cc1911e63dfdfad3c02d7110db0fe14aaf3d5ac33cb2559",
+      "local_links": 14
+    }
+  ],
+  "page_errors": [],
+  "file_sha256": {
+    "PLAN.md": "0fd8b2f1c39c4c580877802cb2b0f7a153e3b800c90a0adb00603444b46c4d63",
+    "REPORT.md": "2cf919ecf6e1eef35503381be2536e5751578aad7f4ebcfde603731dcd49cf25",
+    "lab.json": "956961bdbfae427b917e74c081ceb4ad1b5c332445cee3502d808351e46aae50",
+    "wiki/index.md": "6d964ae9f70c7113acc9bb51561121e6c9625e76f1856d3bad3f9b24f4bfcbd7",
+    "wiki/directional-crossover.md": "5d49cb780905a7fea2c5bb6c7e23c26c2c79826b28f90ddbeaf2b32772cb921a",
+    "wiki/reverse-sector-response.md": "22a886f4210c2c1367a7e6c83eb2ce86c2b5a47563f023df73fc3e394b66146a",
+    "wiki/complex-weights-and-cft.md": "22486c7d9a8737600cc1911e63dfdfad3c02d7110db0fe14aaf3d5ac33cb2559",
+    "scripts/check_reverse_sector_response.py": "428ed31e6811b49db457e45fa4bb622d997f06467c191999ca38813f3fa4515c",
+    "results/reverse-sector-response-2026-09-19.json": "f4d8cd6fbfb4b296b5cb595aac5876e9d15d0696edd96d4aca23f1bc9ae1dcc1",
+    "manifests/reverse-sector-response-2026-09-19.json": "289e0a9c46c0a8cbe37a98338734f5872f78ac9d8415428579debe31934857d9",
+    "scripts/verify_reverse_sector_delivery.cjs": "be9ed57d55c61d09cfb41e6604b48a0b591f938ef3f8a45e4df15cfb0a1e872c"
+  },
+  "screenshots": ".tmp/lab008-reverse-sector-delivery",
+  "scope": "Normalized fixed-p reverse-sector response, exact TV/LER certificate and full-support L3 validation. No L5 response LER, threshold, fit or CFT claim.",
+  "visual_review": {
+    "status": "passed",
+    "checked_surfaces": [
+      "error-bound theorem",
+      "full-support L3 validation",
+      "current collaborator-facing CFT document"
+    ],
+    "findings": "Inline and display mathematics render legibly, scientific boundaries are visible, and no overflow or stale next-step language remains on the checked surfaces."
+  }
+}

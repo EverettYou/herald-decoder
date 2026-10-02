@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j6g-source-stabilizer-disambiguation-2026-09-24",
+  "status": "registered_before_exact_execution",
+  "epistemic_role": "Source-image transcription and exact retraction audit for J6F; local L=2 stabilizer fixture only, not a general D4 channel",
+  "question": "Does p2 in Jing Appendix A.4 Eq. (A13) multiply the second-round measured bare green star, as J6F assumed, or a distinct dressed stabilizer that is replaced by a blue-star measurement?",
+  "competing_readings": {
+    "j6f_reading": "p2 multiplies the bare green star, so post-green equals first-green",
+    "separate_stabilizers_reading": "A13 contains both a bare +1 green-star stabilizer and a separate p2-weighted dressed green stabilizer; A14 retains only the bare +1 green star after blue measurement"
+  },
+  "pinned_inputs": {
+    "paper_pdf_sha256": "7a17c3d3a743e3dec4266b64d0321a6af7a5eeacfab67e42b9ec77d30b65a2ac",
+    "j6e_result_sha256": "874d13d9570b319d809d0e9c40814b6454fc9d6d38c5835230e3e201aba342e2",
+    "j6f_result_sha256": "17e438208f169348879045660329be9eb4098dc07742b2f02f7814c29b27d679",
+    "d4_postflux_sha256": "5435f1fcea89c9eccf369f8bfef44b23deea1ebe954b5e0f1dea5fce0cf12658"
+  },
+  "source": "Jing et al., Intrinsic Heralding and Optimal Decoders for Non-Abelian Topological Order, https://arxiv.org/html/2507.23765, Appendix A.2 Eq. (A6) and Appendix A.4 Eqs. (A13)-(A14), PDF printed pages 11 and 13. Equation graphics must be inspected visually; HTML text alone omits operator diagrams.",
+  "source_transcription_to_check": [
+    "A13 has a bare green star 2 with +1 eigenvalue as its second displayed stabilizer.",
+    "A13 separately has p2 times a dressed green star 2 containing red-Z decoration as its third stabilizer.",
+    "The first blue-star measurement anti-commutes only with that third dressed stabilizer and replaces it.",
+    "A14 retains bare green star 2 with +1 eigenvalue and has equal blue-star eigenvalues p at stars 1 and 3."
+  ],
+  "exact_matrix": "First green bit 0/1 by common post-blue bit 0/1, with matching two-edge red-X correction on the pinned L=2 geometry; compare J6E and J6F asserted support to A14 bare green=0 and blue pair agreement.",
+  "acceptance": [
+    "All pinned hashes match and the two A13 green stabilizers are visibly distinct in the source PDF; A14 resolves the surviving bare operator.",
+    "The four source-required local postflux patterns all have green=0 and common blue bit 0/1; compare both earlier machine results without generating histories.",
+    "If the source shows separate bare/dressed green stabilizers, withdraw J6F's claimed contradiction, restore only the source-consistent narrow J6E support, and correct every active report, Local Wiki, registry and frontier claim that froze the sampler solely on J6F.",
+    "Retain unresolved arbitrary-geometry conditional probabilities and downstream physical-model validation; do not infer JIT, LER or threshold."
+  ],
+  "budget": {"stochastic_histories": 0, "schedule_arm_evaluations": 0, "bootstrap_replicates": 0, "max_cpu_seconds": 10, "new_dependencies": 0},
+  "stop_rule": "Fail closed if the PDF operator images cannot be read unambiguously or pinned inputs drift. Stop after correcting the false J6F invalidation and recording the remaining physical-instrument gate; do not change the Lab 004 production sampler this tick.",
+  "planned_result": "results/j6g-source-stabilizer-disambiguation-2026-09-24.json"
+}

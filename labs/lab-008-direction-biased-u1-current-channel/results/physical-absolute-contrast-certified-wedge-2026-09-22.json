@@ -1,0 +1,37 @@
+{
+  "id": "lab008-physical-absolute-contrast-certified-wedge-2026-09-22",
+  "status": "verified_exact_corollary_of_existing_path_bounds",
+  "contract": "../manifests/physical-absolute-contrast-certified-wedge-2026-09-22.json",
+  "runner": "../scripts/verify_physical_absolute_contrast_wedge.py",
+  "source_proofs": ["../wiki/thermodynamic-limits.md", "../wiki/connected-current-defects.md"],
+  "observable": "A_L(p,h)=c^E sum_Q exp[hM(Q)] |F_0(Q;h)-F_1(Q;h)|=1-2R_L(p,h), with physical p held fixed and p_eff used only inside F_a.",
+  "geometry": {"rough_vertices": "2L", "minimum_opposite_rough_path_length": "L-1", "simple_path_count": "at most (4/3)3^n from each starting vertex"},
+  "branches": {
+    "charge_aware": {
+      "conditions": "0<p<pcrit(h), finite real h; pcrit(h)=[1-sqrt(1-4/{9(1+sech h)})]/2. This low-p branch automatically satisfies p<=1/[1+1/(2cosh h)].",
+      "rho": "rho_c=3 sqrt[p(1-p)(1+sech h)]<1",
+      "bound": "A_L(p,h)>=max{0,1-[32L/(3(1-rho_c))] rho_c^(L-1)} for every L>=3.",
+      "proof": "The existing convex-current physical Bayes-risk bound gives R_L<=min{1/2, [16L/(3(1-rho_c))]rho_c^(L-1)}. Substitute the exact H12 identity A_L=1-2R_L; no unweighted or signed average is used."
+    },
+    "parity_only_complement": {
+      "conditions": "Any finite h and p with r=min(p,1-p) satisfying rho_b=6 sqrt[r(1-r)]<1; in particular p>(3+2sqrt2)/6 or p<(3-2sqrt2)/6.",
+      "rho": "rho_b=3 beta=6 sqrt[r(1-r)]",
+      "bound": "A_L(p,h)>=max{0,1-[32L/(3(1-rho_b))] rho_b^(L-1)} for every L>=3.",
+      "proof": "The measured signed charge determines binary syndrome. The old all-active complement reduces p>1/2 to Bernoulli r; a parity-only minimum-chain decoder has failure bounded by the existing Peierls path witness. Bayes with full charge is no worse. Apply H12."
+    }
+  },
+  "checks": {
+    "new_physical_samples": 0,
+    "new_system_sizes": 0,
+    "new_exact_enumeration": 0,
+    "h_zero_low_p_root": 0.059041448155901545,
+    "h_half_low_p_root": 0.06283648820515825,
+    "h_one_point_five_low_p_root": 0.08523193842278742,
+    "h_infinite_low_p_limit": 0.12732200375003502,
+    "high_p_parity_start": 0.9714045207910317,
+    "maximum_sech_and_root_algebra_error": 4.440892098500626e-16,
+    "p_eff_not_substituted_for_physical_p": true
+  },
+  "analysis": "This supplies a size-uniform physical absolute-contrast certificate in nonempty low-p and high-p square regions for every fixed h. It is a restatement of existing sufficient path theorems in the exact H12 observable, not a newly discovered threshold or a solution of the moderate-p square phase.",
+  "claim_boundary": "Strict sufficient regions only. At p=.30 and fair/intermediate bias these bounds do not apply; no critical point, universal exponent, line-tension limit or all-p square classification follows."
+}

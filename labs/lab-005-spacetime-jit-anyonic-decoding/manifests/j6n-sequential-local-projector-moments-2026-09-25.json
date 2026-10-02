@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j6n-sequential-local-projector-moments-2026-09-25",
+  "status": "registered_before_exact_execution",
+  "question": "On the same J6M periodic anyon-free orbit, does an actual first green-star projector followed by a prescribed red-X action give normalized, action-dependent second blue-star charge probabilities on flux-free sites?",
+  "epistemic_role": "Exact local sequential two-projector gate; not a full 24-site public E2 instrument or five-round schedule channel",
+  "source_basis": [
+    "Jing et al. 2025 Appendix A.1 Eqs. (A2)-(A4), A.2 Eqs. (A5)-(A6), A.4 Eqs. (A13)-(A14)",
+    "J6L exact periodic red-edge/star/triangle map and J6M compact common +1 state"
+  ],
+  "pinned_inputs": {
+    "jing_pdf_sha256": "7a17c3d3a743e3dec4266b64d0321a6af7a5eeacfab67e42b9ec77d30b65a2ac",
+    "j6l_result_sha256": "c3eee28f083b7f3a4dd82a3e4f8a7d3ec29aa19af92bbc3ab4588129d855c4ab",
+    "j6m_result_sha256": "55bfe46d34c9a8356e828351b0d415ed550312ed315c4c1bda7a51508ef1b932"
+  },
+  "fixed_case": {
+    "lattice": "J6L/J6M periodic L=2, 108 kagome qubits, one fixed compact anyon-free orbit from |0^108>",
+    "physical_red_error_edge_ids": [0, 4],
+    "first_measurement": "A_green:1 with outcomes +1/-1 after the physical red-X error, before any action",
+    "actions": {
+      "defer": [],
+      "partial": [0],
+      "matched": [0, 4]
+    },
+    "second_measurements": {
+      "partial": ["blue:0"],
+      "matched": ["blue:0", "blue:2"],
+      "defer": []
+    },
+    "second_measurement_rule": "Only measure A_s when both local triangle projectors are +1 after action; defer has no E2. Other stars and full public E2 are not generated.",
+    "new_physical_faults_or_readout_noise": "none"
+  },
+  "method": "Use P_a=(I+aA_green:1)/2 and exact joint Born weight <psi|E P_a C P_b C P_a E|psi> with E and C Pauli-X red-edge strings. Reduce each star conjugation by E or E XOR C to a signed Z mask times its source CZ-aware A_s. Since every A_s fixes the J6M state, an ordered product reduces to a signed diagonal Z mask. Its expectation is 1 iff that mask is orthogonal to the rank-33 orbit flip span, otherwise 0. Check all local triangle eigenvalues before publishing a second charge outcome. This analytic orbit-character calculation does not enumerate 2^33 amplitudes.",
+  "matrix": {
+    "first_outcomes": 2,
+    "actions": 3,
+    "second_sites": "zero for defer, one for partial, two for matched",
+    "independent_unit": "one deterministic exact periodic state and fixed physical error; no Monte Carlo units"
+  },
+  "acceptance": [
+    "Pinned PDF/J6L/J6M hashes match; physical edge IDs, star colors, triangle eigenvalues and J6M rank-33 orbit are reproduced exactly.",
+    "First green outcomes normalize and have the source A6 half/half limit; all eligible conditioned second-site rows are nonnegative and normalize separately for each first result.",
+    "Matched action reproduces the source A13/A14 blue-endpoint half/half marginals conditional on either first result, and the two endpoint outcomes satisfy their source parity relation.",
+    "Partial action is explicitly conditioned on the same actual first projector and reports only flux-free local second-site probabilities; defer has no E2. Never infer a full binary 24-site public record from local marginals.",
+    "No stochastic histories, schedule-arm evaluations, bootstrap replicates, risk contrast or threshold inference."
+  ],
+  "budget": {"max_cpu_seconds": 20, "new_dependencies": 0, "stochastic_histories": 0, "schedule_arm_evaluations": 0, "bootstrap_replicates": 0},
+  "stop_rule": "Fail closed if an eligibility, normalization, source limiting-law, action binding or exact expectation check fails. A pass authorizes a separately registered full-record joint law and first-record-aware public adapter, not five-round sampling.",
+  "planned_result": "results/j6n-sequential-local-projector-moments-2026-09-25.json"
+}

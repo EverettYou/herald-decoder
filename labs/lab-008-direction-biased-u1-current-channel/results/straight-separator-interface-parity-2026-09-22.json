@@ -1,0 +1,68 @@
+{
+  "id": "lab008-straight-separator-interface-parity-2026-09-22",
+  "status": "exact_topological_obstruction",
+  "date": "2026-09-22",
+  "question": "For the canonical q=1 square and a straight separator, do the two logical sectors induce overlapping laws of the complete interface flux U?",
+  "setting": {
+    "geometry": "canonical L by L square with unmeasured left and right rough boundaries",
+    "channel": "q=1 binary currents j_e in {0,1}; 0<p<1",
+    "separator": "measured column S={x=k}, 1<=k<=L-2",
+    "edge_partition": "A contains exactly the edges whose two endpoints have x<=k; B contains all other edges",
+    "interface_state": "U_v=(D_A j)_v for v in S",
+    "public_record": "Q=(D_M j) on every measured vertex",
+    "logical_bit": "absolute activity parity on the right rough-boundary cut; a Q-dependent reference relabeling changes only the known additive constant"
+  },
+  "exact_identity": {
+    "formula": "H = [sum_{v in M, x(v)>=k} Q_v + sum_{v in S} U_v] mod 2",
+    "proof": "Sum the B-edge divergence over all measured B vertices S union {k<x<L-1}. Every B edge between measured vertices cancels modulo two. The only uncancelled B edges are the right rough-boundary cut edges. On S, D_B j=Q-U; minus and plus coincide modulo two.",
+    "scope": "finite-graph topology; no probability, mixing, asymptotic or path-counting assumption"
+  },
+  "consequences": {
+    "sector_support": "For every public Q with both sectors supported, pi_0^Q and pi_1^Q occupy disjoint parity classes of U.",
+    "total_variation": "d_Q=TV(pi_0^Q,pi_1^Q)=1 on every ambiguous Q.",
+    "revealed_risk": "r_U(Q)=0",
+    "cancellation": "c(Q)=r(Q)",
+    "risk_weighted_tv": "r(Q)d_Q=r(Q) pointwise and E[r(Q)d_Q]=R_L exactly.",
+    "conditional_information": "I(H;U|Q)=H(H|Q), so the prior information bound is also an identity-level envelope rather than a contraction theorem."
+  },
+  "deterministic_replay": {
+    "script": "../scripts/check_interface_flux_topology.py",
+    "sampling": false,
+    "rows": [
+      {
+        "L": 3,
+        "edges": 8,
+        "separator_x": 1,
+        "separator_vertices": 3,
+        "binary_currents": 256,
+        "charge_records": 64,
+        "ambiguous_charge_records": 46,
+        "parity_identity_failures": 0,
+        "cross_sector_interface_support_overlaps": 0
+      },
+      {
+        "L": 4,
+        "edges": 18,
+        "separator_x": 1,
+        "separator_vertices": 4,
+        "binary_currents": 262144,
+        "charge_records": 44494,
+        "ambiguous_charge_records": 24638,
+        "parity_identity_failures": 0,
+        "cross_sector_interface_support_overlaps": 0
+      }
+    ]
+  },
+  "scientific_decision": {
+    "interface_tv_contraction_branch": "closed_for_complete_straight_separator_flux",
+    "reason": "The complete flux variable contains the logical bit as a deterministic parity. No model-specific estimate can make d_Q<1 on ambiguous records.",
+    "next_target": "If gluing is retained, first quotient or align the deterministic topological parity and compare the residual interface laws under an explicit sector-switching transport; otherwise return directly to a physical lower-tail or contour bound for the global sector ratio."
+  },
+  "claim_boundary": "This closes the proposed contraction route for the complete straight-separator flux U. It does not prove or disprove square correctability, construct a useful parity-aligned coupling, or locate a transition.",
+  "compute": {
+    "new_physical_samples": 0,
+    "new_system_sizes": 0,
+    "bootstrap_replicates": 0,
+    "deterministic_states_checked": 262400
+  }
+}
