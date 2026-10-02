@@ -1,0 +1,41 @@
+{
+  "id": "lab008-replica-boundary-theory-2026-09-18",
+  "status": "complete",
+  "result": "../results/replica-boundary-theory-2026-09-18.json",
+  "delivery": "../results/replica-delivery-2026-09-18.json",
+  "outcome": "Exact physical replica identities and bounds, long-path rate, square information bound and conditional Gaussian replica solution are derived and independently checked. The two theory notes, report and original user document pass live-browser checks. No physical 2D CFT or critical p has been identified.",
+  "question": "Which methods for complex-weight and nonunitary statistical mechanics can derive the physical LER ratio, and under what conditions could boundary CFT determine its critical behavior?",
+  "scope": "Primary-literature investigation, exact replica identities and LER bounds, an exactly soluble long-path limit, and a conditional BCFT calculation route. No asserted 2D CFT identification or fitted critical noise rate.",
+  "sources": [
+    "https://arxiv.org/abs/1807.11512",
+    "https://arxiv.org/abs/1808.04380",
+    "https://arxiv.org/abs/hep-th/0411189",
+    "https://arxiv.org/abs/1005.3468",
+    "https://arxiv.org/abs/cond-mat/0201137",
+    "https://arxiv.org/abs/2512.19523",
+    "https://arxiv.org/abs/2512.22119",
+    "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.54.1354"
+  ],
+  "predictions_and_checks": [
+    "Complex K alone does not imply a nonunitary or complex fixed point: the isolated convolution kernel is Hermitian with nonnegative Fourier eigenvalues.",
+    "The physical posterior moment M2=sum_Q A_pi(Q)^2/A_0(Q) gives (1-M2)/4 <= Bayes LER <= (1-M2)/2. Its asymptotic limit1 is equivalent to vanishing Bayes LER.",
+    "Integer-R replicated K integrals with two marked twists give sum_Q A_pi^2 A_0^(R-2); the physical moment requires R->1 under the finite-graph continuation, not simply R=2.",
+    "At R=2 the clean replicated edge weight is |K|^2 with explicit cos(phi),cos(2phi) harmonics. Verify this integral against charge-sector sums, while displaying its different record weighting.",
+    "Even replica moments reconstruct LER via a positive binomial series with a uniform truncation bound.",
+    "For a rough path at fixed p<.5, the exact long-path Bayes exponent is minus log min_s[a^s c^(1-s)+b^s a^(1-s)] for a=1-p,b=pq,c=p(1-q); directed limit treated separately."
+  ],
+  "finite_validation": {
+    "grid": {"p": [0.1,0.3,0.46], "q": [0.5,0.75,0.97,1.0]},
+    "kernel": "9-point convolution matrix and 257 angle points for the two-replica weight.",
+    "sector_moments": "Exhaustive square L3 charge records; no production decoder samples.",
+    "replica_integrals": "R2 square L3 and R3 two-edge rough path, 9-point exact Fourier quadrature per independent measured angle.",
+    "path_limit": "Exact log-domain path sums at d=32,128,512,2048 compared with the independently minimized Chernoff expression.",
+    "moment_series": "All 1001 values of |m| on [0,1], N=1,2,4,8; check exact lower and uniform-tail upper bounds.",
+    "tolerance": 1e-9,
+    "budget": "Deterministic bounded finite checks, no phase scan, estimated under60 seconds."
+  },
+  "theory_extension": "Derived during analysis, before its finite check: revealing all vertical currents leaves L independent rough paths, hence square Bayes LER >= [1-(1-2 LER_path) ^ L]/2. Validate against exact L3 sectors and tabulate at existing L5,7,9; no new production records.",
+  "conditional_gaussian_extension": "Derived during analysis: integer-R compactification is the A_(R-1) root lattice. For a stipulated Gaussian annulus, express marked ratios as integrals of shifted/unshifted theta kernels and define an explicit R->1 continuation; evaluate its LER series. Check R2,R3,R4 root-lattice sums, integral identities and series at A=.2,1,2pi,10. This is a solved candidate continuum model, NOT an established approximation or critical value for the actual square.",
+  "deliverables": ["wiki/complex-weights-and-cft.md", "wiki/replica-boundary-ratios.md", "results/replica-boundary-theory-2026-09-18.json", "current plan/report/metadata and rendered verification"],
+  "acceptance": "Distinguish proven lattice statements, exact limits, conditional continuum predictions, and unestablished universality. Preserve physical record weighting and boundary/score conventions. State why CFT data alone do not fix a nonuniversal p_c."
+}

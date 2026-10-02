@@ -1,0 +1,35 @@
+{
+  "id":"lab008-midpoint-switching-pairing-2026-09-20",
+  "status":"complete_selector_obstruction",
+  "not_yet_run":false,
+  "authorization":"Researcher prioritizes decoding phase transitions and correction thresholds in the continuing Lab 008 study.",
+  "question":"Can a positive-probability critical-crossing event support an injective, charge-preserving odd-parity switching map and thereby lower-bound the physical midpoint Bayes LER directly?",
+  "predecessor":"posterior-polynomial-closure-2026-09-20.json",
+  "earliest_gate":"Define the map on original binary current configurations. It must preserve the full measured charge Q, flip logical parity, preserve midpoint probability, and be injective or have a proved size-independent multiplicity bound.",
+  "alternatives":[
+    "Construct a canonical involution or bounded-multiplicity pairing on an RSW event of size-independent probability, proving a nonzero midpoint LER.",
+    "Show that every natural canonical-path switch loses injectivity or event invariance, identifying the exact combinatorial obstruction without inferring correctability.",
+    "Reduce the required pairing to a sharper multi-arm or local-gadget probability not supplied by ordinary RSW, preserving it as an explicit theorem prerequisite."
+  ],
+  "planned_steps":[
+    "Formulate the paired-mass inequality sum_Q min(N0,N1) >= number of disjoint cross-sector pairs, so the argument targets the physical record average rather than every record.",
+    "Test leftmost/rightmost residual-path and local plaquette switches for charge preservation, parity flip, involution/injectivity, and selector stability.",
+    "Use only the stored exact L3/L4 current tables to find collisions or verify a bounded finite motif; do not add sizes, samples, decoder runs, or threshold fits.",
+    "Connect any surviving event to an RSW or arm-event lower bound only after its hypotheses and boundary geometry are explicit."
+  ],
+  "budget":{"max_full_support_edges":18,"max_runtime_seconds":300,"new_physical_record_samples":0,"decoder_runs":0},
+  "stop_rule":"Stop at a proved pairing bound, the first exact collision/selector obstruction for each registered natural switch, or an explicit missing percolation event theorem. Do not substitute finite pairing fractions for an asymptotic threshold claim.",
+  "planned_note":"wiki/decoding-thresholds.md",
+  "result":"results/midpoint-switching-pairing-2026-09-20.json",
+  "outcome":"Every simple residual rough-to-rough path flip preserves full charge and flips logical parity. Lower/upper extremal selectors are noninjective on the full crossing event, though their selector-stable subsets form finite involutions. Standalone directed plaquette flips never change logical parity. Ordinary RSW does not lower-bound selector stability, so no asymptotic Bayes lower bound follows.",
+  "acceptance_gates":{
+    "L3_L4_path_charge_failures":0,
+    "L3_L4_path_parity_failures":0,
+    "lower_selector_full_event_injective":false,
+    "upper_selector_full_event_injective":false,
+    "stable_subset_involutions_verified":true,
+    "standalone_plaquette_sector_flip":false,
+    "new_physical_record_samples":0,
+    "threshold_claim_promoted":false
+  }
+}

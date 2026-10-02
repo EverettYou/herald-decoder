@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j6b-d4-frozen-cohort-overlap-audit-2026-09-24",
+  "status": "registered_before_replay",
+  "epistemic_role": "Read-only full frozen-cohort descriptive audit; no new sampling, risk estimate, causal attribution or model selection",
+  "question": "Across all original stochastic J6B JIT arms, how do no physical commit, later physical transition and last-commit public/hidden readout mismatch overlap, while keeping aborts in the unconditional denominator?",
+  "frozen_inputs": {
+    "j6b_manifest": {"path": "manifests/j6b-disjoint-temporal-handoff-pilot-2026-09-23.json", "sha256": "8140182a4be0315a205936626c7ec727f765efe66047c02bbeac588097b7fdb2"},
+    "j6b_rows": {"path": "results/j6b-disjoint-temporal-handoff-rows-2026-09-23.jsonl", "sha256": "620c5db65231e5c112a497397aad168eefd7d284f1af362c52d512c6741fbefe"},
+    "d1": {"path": "results/j6b-d1-scored-mask-timing-audit-2026-09-23.json", "sha256": "8d19cb6f384e53db6530fc9dabe18ad09e55e074575ce84c57b15c7c4db1eebf"},
+    "d3": {"path": "results/j6b-d3-selected-frozen-history-replay-2026-09-23.json", "sha256": "9d5f79f16b5c6224b9e7f945dbb5987da5006ffa09ce67c1277f77f6b50de20d"},
+    "integrated_source": {"path": "scripts/d4_integrated_history.py", "sha256": "43d9d0d3e4771ccfc764f590f1843cda1e2a7fbce8dae96057710c413a0adb6e"},
+    "e1_source": {"path": "scripts/e1_schedule_integration.py", "sha256": "d1ba0232aa06ffe95c8c0673f8ef6371785ace568368cc73e30ddbadfb9d0398"},
+    "spatial_source": {"path": "scripts/d4_spatial_policy.py", "sha256": "40d966e9db072e7ecffa013b1a68aa92cf0d4360e280e968bca152c86632db80"}
+  },
+  "scope": {
+    "cells": ["clean_herald_schedule", "joint_readout_noise"],
+    "history_indices_per_cell": "all original 0..127, exactly 256 independent pre-existing histories",
+    "raw_rows": "all 2176 original rows mass-balanced, including 128 zero-control rows; exact replay of 2048 stochastic rows, with the 512 JIT rows as descriptive target",
+    "modes": ["syndrome_only", "heralded"],
+    "branch": "jit_lyons_brown",
+    "seed_rule": "master_seed=923240000+100000*cell_index+history_index, cell indices from frozen J6B manifest",
+    "flags": ["no_physical_commit", "physical_transition_after_last_commit", "last_commit_public_hidden_readout_mismatch", "residual_immediately_after_last_commit"],
+    "flag_semantics": "Flags are overlapping observations on scored rows only; later transition and commit mismatch are not applicable after no commit. Failed-closed rows stay in the denominator and are tabulated separately. A physical transition after the last commit is any nonempty transition_edge_faults[last_commit_round:] in the frozen hidden history. Residual uses boundary(physical XOR latest committed full-snapshot correction).",
+    "loss": "Unchanged stored unconditional Boolean-union logical_failure; no rescore or conditional risk",
+    "uncertainty": "No new interval, bootstrap, significance test or risk inference; descriptive exact counts only"
+  },
+  "acceptance": [
+    "All frozen hashes match before and after; exactly 2176 complete raw rows, 256 stochastic histories and 2048 stochastic arm rows are present with no duplicates; zero controls retain their original rows.",
+    "Regenerated 256 existing histories match stored digest, physical, first-observation and second-exogenous keys; all 2048 stochastic arm rows exactly replay under the original public action-conditioned second-record interface, with private truth barred from public requests/actions.",
+    "For every scored JIT row, reconstructed commit rounds, bound public second-record digests and independent terminal residual equal the frozen row; failed-closed rows remain unconditional Boolean failures.",
+    "Each four-arm cell/mode cohort has 128 rows and its failed-closed/scored-failure/scored-success counts reconcile exactly to D1; overlap masks sum to scored rows. Selected D3 cases retain the same JIT flags. No exclusive mechanism or causal conclusion is drawn."
+  ],
+  "budget": {"existing_histories_replayed": 256, "existing_arm_rows_replayed": 2048, "new_stochastic_seeds": 0, "new_unique_production_histories": 0, "new_unique_production_arm_rows": 0, "new_bootstrap_replicates": 0, "max_wall_seconds": 180, "max_result_mib": 1, "new_external_dependencies": 0},
+  "stop_rule": "On any hash, provenance, replay, action-binding, private/public, mass-balance, time or output-cap failure, record a censored result and make no cohort interpretation. Do not adaptively add histories, change scorer, rerun J6/J6B risk analysis or promote selected flags to causes.",
+  "claim_boundary": "Full frozen-cohort descriptive overlap only, in the phenomenological L=2 five-round model; not an exclusive or causal mechanism ranking, conditional risk, schedule advantage, scaling or threshold.",
+  "planned_result": "results/j6b-d4-frozen-cohort-overlap-audit-2026-09-24.json"
+}

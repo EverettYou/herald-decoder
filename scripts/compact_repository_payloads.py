@@ -275,6 +275,12 @@ def verify_reference_sources() -> list[dict[str, Any]]:
     for path in sorted((REPO / "references").glob("*/source.tar*")):
         provenance_path = path.parent / "provenance.json"
         provenance = json.loads(provenance_path.read_text())
+        # Repository snapshots are runtime inputs for the dashboard's repo
+        # viewer.  They are reproducible, but deleting them makes every
+        # registered repository appear unavailable.  Only paper source
+        # archives are eligible for this storage compaction.
+        if provenance.get("kind") == "repository":
+            continue
         expected = provenance.get("sha256", {}).get(path.name)
         actual = sha256(path)
         urls = provenance.get("urls", {})
@@ -311,8 +317,8 @@ def main() -> None:
         "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(),
         "old_git_head": OLD_HEAD,
         "policy": {
-            "keep": ["reference PDFs", "compact Monte-Carlo counts", "figures", "scripts", ".env (local only)"],
-            "remove": ["per-trajectory payloads", "verified reproducible source archives", "ignored caches and temporary files"],
+            "keep": ["reference PDFs", "repository snapshots required by the repo viewer", "compact Monte-Carlo counts", "figures", "scripts", ".env (local only)"],
+            "remove": ["per-trajectory payloads", "verified reproducible paper source archives", "ignored caches and temporary files"],
             "batch_size": BATCH_SIZE,
         },
         "validated_removals": removals,

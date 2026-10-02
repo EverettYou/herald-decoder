@@ -1,0 +1,57 @@
+{
+  "id": "lab008-zero-field-infinitesimal-response-2026-09-22",
+  "status": "complete_exact_response",
+  "sampling": false,
+  "theorem": {
+    "fixed_p_tilt": "For J(j)=sum_e j_e and N(j)=sum_e |j_e|, Z_a(Q;h)=Z_a(Q;0) E_{0|Q,a}[exp(hJ-N log cosh h)]. This retains the h-dependent activity normalization required to keep p fixed.",
+    "gap_slope": "Delta'_Q(0)=E_0[J|Q]-E_1[J|Q].",
+    "gap_curvature": "Delta''_Q(0)=Var_0(J|Q)-Var_1(J|Q)-E_0[N|Q]+E_1[N|Q].",
+    "bayes_identity": "With D_Q(h)=Z_0(Q;h)-Z_1(Q;h), R_L(h)=(1-sum_Q |D_Q(h)|)/2.",
+    "one_sided_cusp": "Global reflection cancels every non-tied linear term. The exact finite-volume right derivative is R'_L(0+)=-sum_{Q:D_Q(0)=0}|D'_Q(0)|/2.",
+    "gradient_boundary": "When the edge field is A=d psi, J_A=sum_e A_e j_e equals the full charge pairing sum_v psi_v Q_v. Measured interior charges contribute a record-constant factor, but unmeasured rough-boundary charges remain summed and can change the sector ratio."
+  },
+  "thermodynamic_interpretation": {
+    "zero_field_ensemble": "The relevant h=0 observables are the sector-conditioned joint distribution and cumulants of signed field current J, activity N, and the tied-record mass; a clean XY label is neither needed nor established.",
+    "order_of_limits": "The exponent hJ-N log cosh h is extensive. Fixed h before L tends to infinity and h tending to zero at fixed L need not commute, so finite-volume evenness cannot classify field relevance.",
+    "criterion": "A thermodynamic response theorem needs size-uniform control of the conditional cumulant-generating functions and of sum over zero-field ties |D'_Q(0)|; neither follows from reflection symmetry alone.",
+    "claim_boundary": "The result is not a relevance exponent, critical theory, threshold, or monotonicity theorem."
+  },
+  "exact_existing_size_controls": [
+    {
+      "L": 3,
+      "p": "3/10",
+      "states": 6561,
+      "charge_records": 357,
+      "tied_records": 182,
+      "bayes_risk_exact": "882351/2000000",
+      "right_cusp_magnitude_exact": "151263/1000000",
+      "maximum_absolute_record_gap_slope_exact": "2",
+      "normalization_exact": "1",
+      "total_first_derivative_exact": "0",
+      "total_second_derivative_exact": "0",
+      "nontied_linear_cancellation_exact": "0",
+      "reflection_failures": 0
+    },
+    {
+      "L": 3,
+      "p": "1/2",
+      "states": 6561,
+      "charge_records": 357,
+      "tied_records": 182,
+      "bayes_risk_exact": "63/128",
+      "right_cusp_magnitude_exact": "3/64",
+      "maximum_absolute_record_gap_slope_exact": "2",
+      "normalization_exact": "1",
+      "total_first_derivative_exact": "0",
+      "total_second_derivative_exact": "0",
+      "nontied_linear_cancellation_exact": "0",
+      "reflection_failures": 0
+    }
+  ],
+  "provenance": {
+    "manifest": "../manifests/zero-field-infinitesimal-response-2026-09-22.json",
+    "replay": "../scripts/verify_zero_field_infinitesimal_response.py",
+    "new_sizes": 0,
+    "new_physical_samples": 0
+  }
+}

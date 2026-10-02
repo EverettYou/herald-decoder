@@ -1,0 +1,30 @@
+{
+  "id": "lab008-adaptive-charge-branch-bound-2026-09-19",
+  "status": "complete_partially_promoted",
+  "authorization": "Continue the exact all-record l1 contraction after uniform nested charge retention hit the state cap.",
+  "question": "Can an adaptive decision diagram refine only ambiguous charge prefixes and tighten the L5,p=.08 certified LER interval under the same state budget?",
+  "frozen_model": "Canonical L5 square, exact ternary current prior, every public charge emitted in the minimum-width elimination order, rough endpoints and exact logical parity.",
+  "method": {
+    "node_bound": "For each charge prefix, sum frontier weights by partial logical parity, then analytically convolve the parity of all unassigned logical-cut edges. min(Z0_prefix,Z1_prefix) is a valid upper bound on every refinement of that prefix.",
+    "adaptive_rule": "At each detector, retain the B prefixes with largest current Bayes-risk contribution and finalize all others at their certified coarse upper bound.",
+    "leaf_result": "The sum of finalized-prefix bounds plus exact risks of surviving full records is a deterministic upper bound on full-record LER.",
+    "baseline": "Combine with the completed k=4 activity lower/upper interval."
+  },
+  "matrix": {
+    "exact_gate": {"L": 3, "p_q": [[0.1,0.5],[0.3,0.75]], "prefix_budgets": [4,32,10000]},
+    "study": {"L": 5, "p": 0.08, "q": [0.5,0.75,0.97,1.0], "prefix_budgets": [64,256,1024,4096]}
+  },
+  "acceptance": [
+    "All no-prune L3 runs reproduce exact LER within 1e-12; every pruned run remains above exact LER and below the zero-charge-information prior risk.",
+    "Every finalized node includes the exact remaining logical-parity convolution; total represented plus finalized probability is one within 1e-10.",
+    "Promote a budget/cell only if it reduces the registered activity interval width by at least 10%. Report the deterministic selection rule, finalized prefixes and peak active states.",
+    "Fail closed at two million pre-prune states; do not increase budgets after the first cap."
+  ],
+  "budget": {"maximum_preprune_states": 2000000, "maximum_prefix_budget": 4096, "no_sampling": true, "no_decoder_runs": true},
+  "stop_rule": "Stop after the frozen budgets or first state-cap failure. No size, p or decoder extension.",
+  "registered_at": "2026-09-19 05:36:41 UTC",
+  "result": "results/adaptive-charge-branch-bound-2026-09-19.json",
+  "decision": "Promote the B=1024 adaptive decision diagram for L5,p=.08 at q=.97 and q=1: it reduces certified interval width by 24.95% and 30.69%. It does not meet the 10% gate at q=.5 or .75. All B=4096 runs exceed the registered pre-prune state cap and are censored.",
+  "completed_at": "2026-09-19 05:36:41 UTC",
+  "next_action": "Retain the promoted near-directed bounds. Register one bounded alternative branch priority or structured merge for q=.5,.75; do not increase B or interpret the censored B=4096 runs."
+}

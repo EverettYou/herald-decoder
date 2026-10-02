@@ -1,0 +1,267 @@
+{
+  "status": "complete",
+  "scope": "Existing-evidence synthesis for the L=5 square; no sampling, fit, interpolation, threshold or phase claim.",
+  "selection": {
+    "geometry": "canonical square",
+    "size": 5,
+    "biases": [
+      0.5,
+      0.75,
+      0.97,
+      1.0
+    ],
+    "certified_p": [
+      0.02,
+      0.05,
+      0.08
+    ],
+    "oracle_p": [
+      0.1,
+      0.3,
+      0.46
+    ],
+    "oracle_rule": "Use exact conditional Bayes risks averaged over independent physical records with the registered pointwise bootstrap 95% interval; q=.97 is available only at p=.30.",
+    "certificate_rule": "Use k=4 activity lower/upper bounds at p=.02,.05. At p=.08 retain activity bounds for q=.5,.75 and replace only the upper bound for promoted q=.97,1 cells with the B=1024 adaptive bound.",
+    "leading_term_rule": "Show the preregistered dilute leading monomial only at the three certified p values as a separate marker, never as a connected curve."
+  },
+  "certified_bounds": [
+    {
+      "p": 0.02,
+      "q": 0.5,
+      "lower": 0.003068922952460869,
+      "upper": 0.003479472041017957,
+      "leading": 0.003,
+      "upper_method": "activity_k4"
+    },
+    {
+      "p": 0.02,
+      "q": 0.75,
+      "lower": 0.001206352288938424,
+      "upper": 0.0016169013774955123,
+      "leading": 0.00075,
+      "upper_method": "activity_k4"
+    },
+    {
+      "p": 0.02,
+      "q": 0.97,
+      "lower": 0.0003839716538779124,
+      "upper": 0.0007945207424350008,
+      "leading": 1.080000000000002e-05,
+      "upper_method": "activity_k4"
+    },
+    {
+      "p": 0.02,
+      "q": 1.0,
+      "lower": 6.36133317064066e-06,
+      "upper": 0.00041691042172772906,
+      "leading": 1.12e-05,
+      "upper_method": "activity_k4"
+    },
+    {
+      "p": 0.05,
+      "q": 0.5,
+      "lower": 0.01648493339102285,
+      "upper": 0.03683883257348851,
+      "leading": 0.018750000000000003,
+      "upper_method": "activity_k4"
+    },
+    {
+      "p": 0.05,
+      "q": 0.75,
+      "lower": 0.008395602590819921,
+      "upper": 0.028749501773285585,
+      "leading": 0.004687500000000001,
+      "upper_method": "activity_k4"
+    },
+    {
+      "p": 0.05,
+      "q": 0.97,
+      "lower": 0.0029988564210193295,
+      "upper": 0.02335275560348499,
+      "leading": 6.750000000000014e-05,
+      "upper_method": "activity_k4"
+    },
+    {
+      "p": 0.05,
+      "q": 1.0,
+      "lower": 0.00010404926229920783,
+      "upper": 0.02045794844476487,
+      "leading": 0.00043750000000000006,
+      "upper_method": "activity_k4"
+    },
+    {
+      "p": 0.08,
+      "q": 0.5,
+      "lower": 0.0298675549102412,
+      "upper": 0.13835664113378413,
+      "leading": 0.048,
+      "upper_method": "activity_k4"
+    },
+    {
+      "p": 0.08,
+      "q": 0.75,
+      "lower": 0.01657508482987356,
+      "upper": 0.12506417105341647,
+      "leading": 0.012,
+      "upper_method": "activity_k4"
+    },
+    {
+      "p": 0.08,
+      "q": 0.97,
+      "lower": 0.005553899431351102,
+      "upper": 0.0869736168325865,
+      "leading": 0.00017280000000000032,
+      "upper_method": "adaptive_B1024"
+    },
+    {
+      "p": 0.08,
+      "q": 1.0,
+      "lower": 0.0002776624514377889,
+      "upper": 0.07547169965302959,
+      "leading": 0.0028672,
+      "upper_method": "adaptive_B1024"
+    }
+  ],
+  "oracle_anchors": [
+    {
+      "p": 0.1,
+      "q": 0.5,
+      "mean": 0.09057110389831326,
+      "interval": [
+        0.07148158016697613,
+        0.11106292685437633
+      ],
+      "shots": 192,
+      "interval_type": "pointwise bootstrap 95% over independent physical records"
+    },
+    {
+      "p": 0.3,
+      "q": 0.5,
+      "mean": 0.37783771046115733,
+      "interval": [
+        0.37019005251534126,
+        0.38505844415812246
+      ],
+      "shots": 512,
+      "interval_type": "pointwise bootstrap 95% over independent physical records"
+    },
+    {
+      "p": 0.46,
+      "q": 0.5,
+      "mean": 0.46086481067289214,
+      "interval": [
+        0.4564700476328261,
+        0.4651961556728582
+      ],
+      "shots": 192,
+      "interval_type": "pointwise bootstrap 95% over independent physical records"
+    },
+    {
+      "p": 0.1,
+      "q": 0.75,
+      "mean": 0.06390754836394363,
+      "interval": [
+        0.0501575396082497,
+        0.07929507450159001
+      ],
+      "shots": 192,
+      "interval_type": "pointwise bootstrap 95% over independent physical records"
+    },
+    {
+      "p": 0.3,
+      "q": 0.75,
+      "mean": 0.348355475484055,
+      "interval": [
+        0.3398686897375068,
+        0.3569425790559602
+      ],
+      "shots": 512,
+      "interval_type": "pointwise bootstrap 95% over independent physical records"
+    },
+    {
+      "p": 0.46,
+      "q": 0.75,
+      "mean": 0.44119880231211434,
+      "interval": [
+        0.4336835452153106,
+        0.44823327339639213
+      ],
+      "shots": 192,
+      "interval_type": "pointwise bootstrap 95% over independent physical records"
+    },
+    {
+      "p": 0.3,
+      "q": 0.97,
+      "mean": 0.2164162425565204,
+      "interval": [
+        0.20219337834196272,
+        0.23188823211409812
+      ],
+      "shots": 256,
+      "interval_type": "pointwise bootstrap 95% over independent physical records"
+    },
+    {
+      "p": 0.1,
+      "q": 1.0,
+      "mean": 0.005146370530045939,
+      "interval": [
+        0.0023538714608453333,
+        0.009660931122805338
+      ],
+      "shots": 192,
+      "interval_type": "pointwise bootstrap 95% over independent physical records"
+    },
+    {
+      "p": 0.3,
+      "q": 1.0,
+      "mean": 0.16173834046323465,
+      "interval": [
+        0.15027313989288904,
+        0.17281142595160429
+      ],
+      "shots": 512,
+      "interval_type": "pointwise bootstrap 95% over independent physical records"
+    },
+    {
+      "p": 0.46,
+      "q": 1.0,
+      "mean": 0.30923983128168886,
+      "interval": [
+        0.287690084296751,
+        0.3305377623174345
+      ],
+      "shots": 192,
+      "interval_type": "pointwise bootstrap 95% over independent physical records"
+    }
+  ],
+  "checks": {
+    "certificate_count": 12,
+    "oracle_anchor_count": 10,
+    "all_certificates_ordered": true,
+    "all_oracle_means_inside_intervals": true,
+    "promoted_p08_upper_q": [
+      0.97,
+      1.0
+    ],
+    "retained_activity_p08_upper_q": [
+      0.5,
+      0.75
+    ],
+    "fitted_or_interpolated_points": 0
+  },
+  "conclusions": [
+    "The controlled partition prediction is quantitatively certified through p=.05 for every registered q.",
+    "At p=.08, promoted B=1024 bounds narrow only q=.97 and q=1; fair q=.5 and intermediate q=.75 retain broad activity certificates.",
+    "Existing exact-posterior Monte Carlo anchors describe moderate p but do not supply an analytic continuation between the certified points.",
+    "The fair/intermediate analytic curve at p>=.08 remains unresolved; no crossing, threshold, monotonicity, or phase interpretation follows."
+  ],
+  "figure": "labs/lab-008-direction-biased-u1-current-channel/figures/partition-oracle-evidence-boundary.png",
+  "source_sha256": {
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/render_partition_oracle_synthesis.py": "b9c3169980fe00220af5d26d219e9237ea6bd1f1662d9b0def9dfac41e7521d0",
+    "labs/lab-008-direction-biased-u1-current-channel/manifests/partition-oracle-synthesis-2026-09-19.json": "ea84dc3951b398aada1087154282dae0c358fa9044c04ab620c52734ed091e63",
+    "labs/lab-008-direction-biased-u1-current-channel/results/current-activity-expansion-2026-09-18.json": "866cc079cc52411126a12d83330c917c49ee89262c09b530da0c3e0bdebd7ab9",
+    "labs/lab-008-direction-biased-u1-current-channel/results/adaptive-charge-branch-bound-2026-09-19.json": "7a13ff42e5700d677ec81df7509bc8f3feee4d2f1e7e72e92ce32cc09e24b431",
+    "labs/lab-008-direction-biased-u1-current-channel/results/square-mechanism-2026-09-18-analysis.json": "fbb49ed7cf496d292914f2b60b92269a019fa4e940293394e6d298944040fc08",
+    "labs/lab-008-direction-biased-u1-current-channel/results/size-bias-distributions-2026-09-18.json": "7c9ad00cbef92e48ce360463f61710b6d37c10ba7cb2b58242269615579eda86"
+  }
+}

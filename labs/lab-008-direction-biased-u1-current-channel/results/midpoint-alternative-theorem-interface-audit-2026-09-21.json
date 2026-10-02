@@ -1,0 +1,184 @@
+{
+  "status": "complete_no_hypothesis_complete_theorem_interface_selector_route_demoted",
+  "accessed": "2026-09-21",
+  "new_physical_record_samples": 0,
+  "decoder_runs": 0,
+  "primary_sources_reviewed": 9,
+  "required_interface": {
+    "law": "physical p=1/2 full-charge posterior with charge-fiber majority weighting",
+    "observable": "logical-sector balance or a valid proxy under the physical charge law",
+    "configuration_structure": "two preimage configurations may collide under a state-dependent shortest selector",
+    "moves": "only charge-preserving opposite-rough-arc logical flips count",
+    "limit": "a size-uniform statement for the two-dimensional square family"
+  },
+  "applicability_matrix": [
+    {
+      "family": "disjoint occurrence",
+      "source": "Reimer, Proof of the Van den Berg-Kesten Conjecture (2000)",
+      "url": "https://doi.org/10.1017/S0963548399004113",
+      "source_scope": "P(A square B) <= P(A)P(B) for disjoint occurrence in one product probability space",
+      "product_or_model_law_match": false,
+      "physical_majority_conditioning": false,
+      "two_configuration_sector_balance": false,
+      "logical_sector_action": false,
+      "size_uniformity_for_target": false,
+      "applicable": false,
+      "reason": "Selector collisions compare two preimages after conditioning on a common target and size-biasing the majority domain; this is neither one product configuration nor the unconditioned product law."
+    },
+    {
+      "family": "planar random-cluster crossing and arm estimates",
+      "source": "Duminil-Copin, Manolescu and Tassion, Planar random-cluster model: fractal properties of the critical phase (2020)",
+      "url": "https://arxiv.org/abs/2007.14707",
+      "source_scope": "Uniform quad crossings, arm-event estimates, quasi-multiplicativity and separation for planar FK q in [1,4)",
+      "product_or_model_law_match": true,
+      "physical_majority_conditioning": false,
+      "two_configuration_sector_balance": false,
+      "logical_sector_action": false,
+      "size_uniformity_for_target": false,
+      "applicable": false,
+      "reason": "The p=1/2 support cluster is Bernoulli percolation, but the posterior minority ratio is a nonmonotone full-charge conditional observable not controlled by crossing or arm probabilities."
+    },
+    {
+      "family": "critical percolation scaling and arm events",
+      "source": "Kesten, Scaling Relations for 2D-Percolation (1987)",
+      "url": "https://doi.org/10.1007/BF01205674",
+      "source_scope": "Critical and near-critical percolation scaling relations and specified arm-event estimates",
+      "product_or_model_law_match": true,
+      "physical_majority_conditioning": false,
+      "two_configuration_sector_balance": false,
+      "logical_sector_action": false,
+      "size_uniformity_for_target": false,
+      "applicable": false,
+      "reason": "Existing exact collision classes depend on two selector environments, full charge and mixed boundary/component topology rather than a prescribed arm event."
+    },
+    {
+      "family": "Ising random-current switching",
+      "source": "Aizenman, Duminil-Copin and Sidoravicius, Random Currents and Continuity of Ising Model's Spontaneous Magnetization (2015)",
+      "url": "https://arxiv.org/abs/1311.1937",
+      "source_scope": "Switching identities for integer Ising random-current measures with parity sources and Ising weights",
+      "product_or_model_law_match": false,
+      "physical_majority_conditioning": false,
+      "two_configuration_sector_balance": true,
+      "logical_sector_action": false,
+      "size_uniformity_for_target": false,
+      "applicable": false,
+      "reason": "The binary U(1) orientation channel with exact divergence records and majority conditioning is not the Ising random-current measure and no weight-preserving source switch is identified."
+    },
+    {
+      "family": "planar alpha-orientation lattice",
+      "source": "Felsner, Lattice Structures from Planar Graphs (2004)",
+      "url": "https://doi.org/10.37236/1768",
+      "source_scope": "Distributive lattice of all feasible planar alpha-orientations under directed-cycle reversals",
+      "product_or_model_law_match": true,
+      "physical_majority_conditioning": false,
+      "two_configuration_sector_balance": false,
+      "logical_sector_action": false,
+      "size_uniformity_for_target": false,
+      "applicable": false,
+      "reason": "The theorem uses the full cycle-reversal lattice, while the logical graph retains only opposite-rough-arc root cycles and omits internal and same-side moves."
+    },
+    {
+      "family": "orientation distributive lattice",
+      "source": "Propp, Lattice Structure for Orientations of Graphs",
+      "url": "https://arxiv.org/abs/math/0209005",
+      "source_scope": "Distributive lattice for orientations with fixed loop flow differences or fixed planar indegrees under local moves",
+      "product_or_model_law_match": true,
+      "physical_majority_conditioning": false,
+      "two_configuration_sector_balance": false,
+      "logical_sector_action": false,
+      "size_uniformity_for_target": false,
+      "applicable": false,
+      "reason": "Connectivity by all local moves does not imply matching or physical minority mass in the restricted logical-sector graph."
+    },
+    {
+      "family": "planar circulation lattice",
+      "source": "Khuller, Naor and Klein, The Lattice Structure of Flow in Planar Graphs (1993)",
+      "url": "https://doi.org/10.1137/0406038",
+      "source_scope": "Distributive lattice of integral planar circulations characterized through dual potentials and unidirectional cycles",
+      "product_or_model_law_match": true,
+      "physical_majority_conditioning": false,
+      "two_configuration_sector_balance": false,
+      "logical_sector_action": false,
+      "size_uniformity_for_target": false,
+      "applicable": false,
+      "reason": "The full circulation lattice includes moves absent from the logical graph and supplies no probability lower bound on sector minority mass."
+    },
+    {
+      "family": "normalized matching in random and pseudorandom graphs",
+      "source": "Balachandran and Kush, The Normalized Matching Property in Random and Pseudorandom Bipartite Graphs (2021)",
+      "url": "https://arxiv.org/abs/1908.02628",
+      "source_scope": "NMP thresholds for independent random bipartite graphs and near-NMP for Thomason-pseudorandom graphs after small deletions",
+      "product_or_model_law_match": false,
+      "physical_majority_conditioning": false,
+      "two_configuration_sector_balance": false,
+      "logical_sector_action": true,
+      "size_uniformity_for_target": false,
+      "applicable": false,
+      "reason": "The deterministic charge-conditioned switching graph has neither independent edges nor a proved Thomason discrepancy bound; NMP alone is already insufficient for physical minority mass."
+    },
+    {
+      "family": "finite-width transfer matrix",
+      "source": "Salas and Sokal, Transfer Matrices and Partition-Function Zeros for Antiferromagnetic Potts Models I (2000)",
+      "url": "https://arxiv.org/abs/cond-mat/0004330",
+      "source_scope": "Finite-dimensional transfer matrices for fixed transverse width and arbitrary strip length",
+      "product_or_model_law_match": false,
+      "physical_majority_conditioning": false,
+      "two_configuration_sector_balance": false,
+      "logical_sector_action": false,
+      "size_uniformity_for_target": false,
+      "applicable": false,
+      "reason": "A fixed-width spectral statement is not a two-dimensional width limit, and the W4 witness proves the ordinary charge/frontier key does not close the shortest-selector language."
+    }
+  ],
+  "exact_counterexamples_reused": [
+    {
+      "id": "two_environment_BK_failure",
+      "evidence": "results/midpoint-boundary-fan-tail-2026-09-21.json",
+      "excludes": "direct BK/Reimer application after target equality and majority size-bias conditioning"
+    },
+    {
+      "id": "K1M_NMP_information_countermodel",
+      "evidence": "results/midpoint-minority-mass-lower-bound-2026-09-20.json",
+      "excludes": "deducing physical minority mass from ambiguity plus normalized matching"
+    },
+    {
+      "id": "W4_local_selector_noncongruence",
+      "evidence": "results/midpoint-selector-rate-certificate-2026-09-21.json",
+      "excludes": "ordinary charge/frontier finite-state transfer for the shortest selector"
+    }
+  ],
+  "branch_matrix": {
+    "random_cluster_and_disjoint_occurrence": {
+      "outcome": "no_hypothesis_complete_posterior_balance_interface",
+      "reason": "The sources control product/FK connectivity or prescribed arms, not a full-charge-conditioned two-configuration sector ratio."
+    },
+    "planar_orientation_and_flow": {
+      "outcome": "no_hypothesis_complete_restricted_logical_graph_interface",
+      "reason": "The sources provide full distributive lattices or random/pseudorandom NMP, while the physical graph has restricted logical moves and requires a weighted minority-mass theorem."
+    },
+    "finite_width_spectral": {
+      "outcome": "valid_only_for_a_fixed_strip_after_a_closed_state_is_found",
+      "reason": "Fixed-width spectral theory neither supplies the missing selector state nor supports a two-dimensional threshold interpretation."
+    }
+  },
+  "decision": {
+    "outcome": "demote_selector_route_and_promote_decoder_independent_posterior_gap_question",
+    "established": "No reviewed primary theorem has all required hypotheses. Continuing larger selector enumerations would resolve a method artifact rather than the physical phase question.",
+    "next_scientific_question": "Use the physical logical-sector free-energy gap DeltaF=log(Z0/Z1), without a selector, as the order-parameter distribution and determine which scaling distinguishes correctable, finite-risk and BKT-like regimes.",
+    "not_established": "The absence of an applicable reviewed theorem is not a proof that no such theorem or new proof exists, and it does not classify the midpoint or threshold.",
+    "threshold_claim": "No threshold claim is promoted."
+  },
+  "local_evidence_boundary": [
+    "results/midpoint-boundary-fan-tail-2026-09-21.json",
+    "results/midpoint-minority-mass-lower-bound-2026-09-20.json",
+    "results/midpoint-all-size-matching-theorem-2026-09-20.json",
+    "results/midpoint-selector-rate-certificate-2026-09-21.json"
+  ],
+  "source_sha256": {
+    "labs/lab-008-direction-biased-u1-current-channel/manifests/midpoint-alternative-theorem-interface-audit-2026-09-21.json": "b40bd731cf9b2268343a715bf89b5721917242fb851b2b7ea7e39b6da61a1683",
+    "labs/lab-008-direction-biased-u1-current-channel/results/midpoint-boundary-fan-tail-2026-09-21.json": "5782476c8f860a778a119c74ad59d136fa2bbdaef2316bfccb237acd327c13bb",
+    "labs/lab-008-direction-biased-u1-current-channel/results/midpoint-minority-mass-lower-bound-2026-09-20.json": "ddc88b95bbde3f5495e8e2c13d2a27888be6f5639b06f2b133fc6d02f5a6ad9a",
+    "labs/lab-008-direction-biased-u1-current-channel/results/midpoint-all-size-matching-theorem-2026-09-20.json": "d6ac7f9a78e76559eaa079f59b4d9abeb8cba96ae0cf1ff5d36f52e3bc6879bf",
+    "labs/lab-008-direction-biased-u1-current-channel/results/midpoint-selector-rate-certificate-2026-09-21.json": "0c7886dcd6806681a79d8bf15117bc07cd914f45ba07bb927b77b75a6b166b7f"
+  }
+}

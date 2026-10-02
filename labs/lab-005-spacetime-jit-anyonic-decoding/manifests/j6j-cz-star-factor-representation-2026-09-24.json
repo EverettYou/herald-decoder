@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j6j-cz-star-factor-representation-2026-09-24",
+  "status": "registered_before_exact_execution",
+  "epistemic_role": "Exact three-qubit operator-representation prerequisite, not a D4 ground-state, full star, action-conditioned instrument, or schedule experiment",
+  "question": "Can the CZ factor displayed in Jing et al. Appendix A.1 Eq. (A2) be dropped while preserving even a local star-factor measurement law?",
+  "competing_models": {
+    "source_factor": "A = X_b CZ_{g,r}, one X factor and one disjoint CZ factor transcribed from a star-operator diagram; the complete star has further factors and is not simulated here.",
+    "pauli_truncation": "T = X_b, with the CZ factor omitted; this is an intentionally lossy diagnostic surrogate, not a proposed D4 model."
+  },
+  "source": "Jing et al., Intrinsic Heralding and Optimal Decoders for Non-Abelian Topological Order, Appendix A.1 Eq. (A2)-(A4), archived PDF printed page 10; https://arxiv.org/html/2507.23765",
+  "pinned_inputs": {
+    "paper_pdf_sha256": "7a17c3d3a743e3dec4266b64d0321a6af7a5eeacfab67e42b9ec77d30b65a2ac",
+    "j6i_result_sha256": "bc9e9ea7ca4440767351ee29c95dbfb821309c337721687b8ab5e3dabe687a13"
+  },
+  "exact_matrix": "For two qubit-label permutations, evaluate both A and T on |+,+,+> and |+,0,0>, with + on the X qubit. Use exact rational amplitudes/probabilities and all eight computational basis states. Check Hermiticity, involution, P_+ and P_- normalization, permutation covariance, and Pauli-character exclusion.",
+  "expected_limiting_cases": {
+    "coherent_input_source_P_plus": "3/4",
+    "coherent_input_truncated_P_plus": "1",
+    "z_fixed_control_both_P_plus": "1"
+  },
+  "analysis_rule": "A difference establishes only that the displayed CZ operator factor cannot be replaced by X alone for arbitrary local input states. It does not establish the distribution in the D4 ground space, a failure of the existing parity sampler, or a first-to-second conditional law.",
+  "acceptance": [
+    "Pinned source and J6I hashes match; the A2 graphic contains both X and CZ factors in the same star operator.",
+    "Both local operators square to identity and yield normalized two-outcome projectors on both exact input classes under both label permutations.",
+    "The coherent input distinguishes source factor from truncated Pauli, while the Z-fixed control agrees; the source factor's CZ phase is not a Pauli-Z linear character.",
+    "No full-star D4, lattice action, public record, histories, schedule arms, bootstrap replicates, performance or threshold result is claimed."
+  ],
+  "budget": {"stochastic_histories": 0, "schedule_arm_evaluations": 0, "bootstrap_replicates": 0, "max_cpu_seconds": 10, "new_dependencies": 0},
+  "stop_rule": "Fail closed on source-image ambiguity, hash drift, operator algebra, exact probability, permutation or normalization mismatch. A pass only selects a CZ-aware representation requirement for the next full lattice fixture.",
+  "planned_result": "results/j6j-cz-star-factor-representation-2026-09-24.json"
+}

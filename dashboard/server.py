@@ -241,6 +241,12 @@ def lab_payload(lab_id: str) -> dict:
             "language": str(item.get("language", "")),
             "path": str(candidate.relative_to(ROOT)),
             "asset_path": str(candidate.relative_to(folder)),
+            # Local Wiki documents use their supported reader; lab-assets is
+            # deliberately restricted to the figures/results directories.
+            "href": (
+                f"/lab-wiki?lab={quote(lab_id)}&page={quote(relative.with_suffix('').relative_to('wiki').as_posix())}"
+                if relative.parts[0] == "wiki" and candidate.suffix == ".md" else None
+            ),
             "size": candidate.stat().st_size,
         })
     threads = [thread for thread in discussion_payload()["threads"] if lab_id in thread.get("related_labs", [])]
@@ -291,7 +297,7 @@ def reference_archive(reference_id: str) -> Path:
 TEXT_EXTENSIONS = {".py", ".cc", ".cpp", ".c", ".h", ".hpp", ".js", ".ts", ".json", ".yml", ".yaml", ".toml", ".ini", ".cfg", ".txt", ".md", ".rst", ".cmake", ".bazel", ".bzl", ".sh", ".gitignore", ".clang-format", ".flake8"}
 CODE_EXTENSIONS = {".py", ".cc", ".cpp", ".c", ".h", ".hpp", ".js", ".ts", ".sh", ".cmake", ".bazel", ".bzl"}
 PROJECT_DOCUMENT_EXTENSIONS = TEXT_EXTENSIONS | {".csv"}
-PROJECT_DOCUMENT_ROOTS = {"labs", "wiki", "models"}
+PROJECT_DOCUMENT_ROOTS = {"labs", "wiki", "models", "src"}
 
 
 def project_document_path(raw_path: str) -> Path:
@@ -614,16 +620,13 @@ def unified_search_payload(query: str, scope: str, limit: int, refine: bool) -> 
     return local_search(query, scope=scope, documents=documents, limit=limit)
 
 
-def wiki_lint_status() -> dict:
-    """Run the deterministic Wiki check on demand and retain a timestamped health record."""
-    cache = ROOT / ".tmp" / "wiki-lint-status.json"
-    try:
-        cached = read_json(cache, {})
-        checked = datetime.fromisoformat(str(cached.get("checked_at", "")).replace("Z", "+00:00"))
-        if (datetime.now(UTC) - checked).total_seconds() < 300:
-            return cached
-    except (TypeError, ValueError):
-        pass
+_WIKI_LINT_REFRESH_LOCK = threading.Lock()
+_WIKI_LINT_REFRESHING = False
+
+
+def _run_wiki_lint(cache: Path) -> None:
+    """Run Wiki lint outside the request path and atomically publish its result."""
+    global _WIKI_LINT_REFRESHING
     command = [sys.executable, str(ROOT / "skills/wiki-lint/scripts/lint_wiki.py"), str(ROOT)]
     try:
         completed = subprocess.run(command, capture_output=True, text=True, timeout=30, check=False)
@@ -632,8 +635,52 @@ def wiki_lint_status() -> dict:
         record = {"checked_at": now(), "errors": int(match.group(1)) if match else None, "warnings": int(match.group(2)) if match else None, "state": "healthy" if match and completed.returncode == 0 else "needs-attention"}
     except (OSError, subprocess.TimeoutExpired):
         record = {"checked_at": now(), "errors": None, "warnings": None, "state": "unavailable"}
-    write_json(cache, record)
-    return record
+    try:
+        write_json(cache, record)
+    finally:
+        with _WIKI_LINT_REFRESH_LOCK:
+            _WIKI_LINT_REFRESHING = False
+
+
+def _schedule_wiki_lint_refresh(cache: Path) -> bool:
+    """Start at most one daemon lint worker and report whether one is active."""
+    global _WIKI_LINT_REFRESHING
+    with _WIKI_LINT_REFRESH_LOCK:
+        if _WIKI_LINT_REFRESHING:
+            return True
+        _WIKI_LINT_REFRESHING = True
+    threading.Thread(
+        target=_run_wiki_lint,
+        args=(cache,),
+        name="wiki-lint-refresh",
+        daemon=True,
+    ).start()
+    return True
+
+
+def wiki_lint_status() -> dict:
+    """Return immediately from cache and refresh stale Wiki lint in the background."""
+    cache = ROOT / ".tmp" / "wiki-lint-status.json"
+    cached = {}
+    try:
+        cached = read_json(cache, {}) or {}
+        checked = datetime.fromisoformat(str(cached.get("checked_at", "")).replace("Z", "+00:00"))
+        if (datetime.now(UTC) - checked).total_seconds() < 300:
+            return {**cached, "stale": False, "refreshing": False}
+    except (json.JSONDecodeError, OSError, TypeError, ValueError):
+        cached = {}
+
+    _schedule_wiki_lint_refresh(cache)
+    if cached:
+        return {**cached, "stale": True, "refreshing": True}
+    return {
+        "checked_at": None,
+        "errors": None,
+        "warnings": None,
+        "state": "checking",
+        "stale": True,
+        "refreshing": True,
+    }
 
 
 def wiki_index_payload() -> dict:
@@ -1293,6 +1340,8 @@ class Handler(SimpleHTTPRequestHandler):
             return self.send_json({"pages": pages, "graph": knowledge_graph(pages)})
         if path == "/api/wiki/index":
             return self.send_json(wiki_index_payload())
+        if path == "/api/wiki/lint":
+            return self.send_json(wiki_lint_status())
         if path == "/api/wiki/search":
             needle = query.get("q", [""])[0].lower().strip()
             if not needle or len(needle) > 500:
@@ -1342,6 +1391,14 @@ class Handler(SimpleHTTPRequestHandler):
             if method == "POST" and path == "/api/labs/lab-002-herald-belief-matching/artifact":
                 result = run_lab_function(
                     "lab-002-herald-belief-matching",
+                    "scripts/artifact_backend.py",
+                    "artifact_payload",
+                    body,
+                )
+                return self.send_json(result)
+            if method == "POST" and path == "/api/labs/lab-009-planar-herald-decoder-survey/artifact":
+                result = run_lab_function(
+                    "lab-009-planar-herald-decoder-survey",
                     "scripts/artifact_backend.py",
                     "artifact_payload",
                     body,

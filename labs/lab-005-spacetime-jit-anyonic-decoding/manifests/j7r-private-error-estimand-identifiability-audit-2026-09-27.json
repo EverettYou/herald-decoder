@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j7r-private-error-estimand-identifiability-audit-2026-09-27",
+  "status": "registered_before_audit",
+  "question": "Can the already computed selected-record action laws identify either information about an unknown private physical error or an unconditional paired logical-risk difference?",
+  "role": "Two-branch provenance and estimand preflight, not a new physical-error ensemble or policy evaluation",
+  "pinned_inputs": {
+    "j7m_contract_sha256": "a1e4421c971e0d1fb0d94ac7665e1567644f9d17a5c5c3a93f87914a1bd4e055",
+    "j7m_result_sha256": "5b785f49539d013f8fda307b9c06da637bd5e88c0e9dccb9e6b88b341b90b8df",
+    "j7p_result_sha256": "b378a20ff920b2a8c4a766310c5cc285671cc91a075711d60ad404bb7ec96567",
+    "j7q_result_sha256": "f229b4f00976764164c6f69d2a6c46542b60f8f3869cb258240873879bf16be8",
+    "j6_pilot_contract_sha256": "14d2895693a1fa37c11aba2ce4061fa34aaeb38f7e51c3e66fa655bc65f142e8"
+  },
+  "frozen_scope": {
+    "geometry": "J7M/J7P ideal periodic L=2 D4 vacuum orbit and private initial red-X error [0,4,3]",
+    "first_record": "One complete signal-only first public record of exact mass 1/4 conditional on that fixed private error",
+    "actions": [[0], [1,30,32,34,35]],
+    "later_faults": [[0], [4]],
+    "public_private_boundary": "Only full binary public records and relation-free declared correction are visible to an online policy; physical error, later fault, orbit and score remain private.",
+    "no_transfer": "J6's phenomenological five-round pilot and its risk rows are not an IID ideal-projector ensemble for J7. Its scoring and paired-unit definitions may inform a future contract, but its numerical rows cannot be pooled with J7."
+  },
+  "matrix": [
+    {
+      "branch": "private_error_information",
+      "test": "Count distinct positive-prior private initial errors represented at the same first public record under both public actions; check for a frozen prior and complete action-conditioned law for each error.",
+      "identifiable_only_if": "At least two private initial errors have positive weights under a declared prior, the same public first-record conditioning event and both complete action-conditioned public laws. A conditional mutual-information contrast must hold the prior and intervention fixed across arms."
+    },
+    {
+      "branch": "unconditional_paired_logical_risk",
+      "test": "Check for an explicitly frozen physical-error distribution, independent attempted-history denominator, matched physical/first-observation/second-exogenous keys, and private ground-state-relative Boolean-union score for both actions.",
+      "identifiable_only_if": "Every attempted history in the declared ensemble is retained, including terminal/invalid completions as failures, and both arms are scored on the same private physical draw. A two-error conditional toy is not full-channel unconditional risk without a quantified omitted-mass bound."
+    }
+  ],
+  "outcomes": {
+    "both_identified": "Only if every branch-specific requirement is present in pinned artifacts; otherwise prohibit information or risk promotion.",
+    "one_or_both_unidentified": "Record exactly which input or estimand field is missing; keep the J7P/J7Q finite ideal action-effect claim unchanged and register the next prerequisite separately.",
+    "censored": "A pin or source-integrity mismatch suspends this audit; do not infer from mutable artifacts."
+  },
+  "budget": {"max_cpu_seconds": 10, "max_source_artifacts": 5, "max_branches": 2, "ordered_moment_terms": 0, "new_physical_errors": 0, "stochastic_histories": 0, "schedule_arm_evaluations": 0, "bootstrap_replicates": 0, "new_dependencies": 0},
+  "acceptance": ["Verify all five SHA-256 pins", "Audit both registered branches on the same frozen source set", "Report positive support count and missing ensemble/score fields without treating later-fault keys as alternative initial errors", "Retain exact J7P/J7Q finite ideal scope and make no benefit, threshold or policy-emission claim"],
+  "stop_rule": "Stop after the two read-only branches. No adaptive error selection, Born expansion, history sampling, policy arm, bootstrap, budget increase or reinterpretation of J6 rows.",
+  "planned_result": "results/j7r-private-error-estimand-identifiability-audit-2026-09-27.json"
+}

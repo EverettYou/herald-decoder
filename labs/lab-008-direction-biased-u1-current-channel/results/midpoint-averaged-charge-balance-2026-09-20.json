@@ -1,0 +1,137 @@
+{
+  "status": "complete_overlap_and_block_routes_missing_global_average_lemma",
+  "physical_parameters": {
+    "geometry": "square",
+    "p": "1/2",
+    "q": "1"
+  },
+  "new_physical_record_samples": 0,
+  "decoder_runs": 0,
+  "exact_controls": [
+    {
+      "L": 3,
+      "edges": 8,
+      "charge_records": 64,
+      "exact_Bayes_risk": "7/16",
+      "magnetization_second_moment": 0.07889957264957265,
+      "posterior_variance_exact": "17243/74880",
+      "posterior_variance_risk_bounds_exact": [
+        "17243/74880",
+        "17243/37440"
+      ],
+      "same_charge_collision_probability_exact": "29/1024",
+      "opposite_sector_same_charge_overlap_exact": "57/4096",
+      "collision_conditioned_opposite_sector_probability_exact": "57/116",
+      "maximum_record_probability_exact": "7/128",
+      "collision_to_maximum_record_probability_exact": "29/56",
+      "overlap_lower_bound_on_risk_exact": "57/448",
+      "physical_mass_with_minority_ratio_at_least": {
+        "1/2": "17/32",
+        "1/3": "119/128",
+        "1/4": "119/128",
+        "1/8": "119/128",
+        "1/16": "119/128"
+      }
+    },
+    {
+      "L": 4,
+      "edges": 18,
+      "charge_records": 44494,
+      "exact_Bayes_risk": "11849/32768",
+      "magnetization_second_moment": 0.1613003619502651,
+      "posterior_variance_exact": "65851348468021276905096344768325049/314064036661078378264791667526860800",
+      "posterior_variance_risk_bounds_exact": [
+        "65851348468021276905096344768325049/314064036661078378264791667526860800",
+        "65851348468021276905096344768325049/157032018330539189132395833763430400"
+      ],
+      "same_charge_collision_probability_exact": "653081/8589934592",
+      "opposite_sector_same_charge_overlap_exact": "78363/2147483648",
+      "collision_conditioned_opposite_sector_probability_exact": "313452/653081",
+      "maximum_record_probability_exact": "135/262144",
+      "collision_to_maximum_record_probability_exact": "653081/4423680",
+      "overlap_lower_bound_on_risk_exact": "8707/245760",
+      "physical_mass_with_minority_ratio_at_least": {
+        "1/2": "1827/16384",
+        "1/3": "103503/131072",
+        "1/4": "113991/131072",
+        "1/8": "116411/131072",
+        "1/16": "116411/131072"
+      }
+    }
+  ],
+  "exact_identities": {
+    "physical_risk": "R_L=sum_Q p_Q r_Q",
+    "magnetization": "m_Q=(N0-N1)/(N0+N1), so (1-E[m_Q^2])/4=E[r_Q(1-r_Q)] and (1-E[m_Q^2])/4 <= R_L <= (1-E[m_Q^2])/2",
+    "two_copy_overlap": "O_L=Pr(Q1=Q2,H1!=H2)=sum_Q p_Q^2 2r_Q(1-r_Q)",
+    "collision_normalization": "C_L=Pr(Q1=Q2)=sum_Q p_Q^2 and Psi_L=O_L/C_L uses the collision-size-biased charge law, not the physical charge law p_Q",
+    "sufficient_conversion": "O_L <= 2 p_max,L R_L, hence R_L >= O_L/(2 p_max,L) = (Psi_L/2)(C_L/p_max,L)"
+  },
+  "branch_matrix": {
+    "two_copy_overlap": {
+      "outcome": "exact_observable_but_collision_bias_blocks_asymptotic_conversion",
+      "established": "The overlap, collision normalization, magnetization moment and Bayes risk are exactly related and exhaustively verified on L3/L4.",
+      "obstruction": "Neither unnormalized O_L nor normalized Psi_L alone lower-bounds the physical p_Q-weighted risk; explicit abstract probability models separate them.",
+      "missing_input": "A positive lower bound on both Psi_L and C_L/p_max,L, or another comparison between collision-size-biased and physical charge laws."
+    },
+    "multiscale_block": {
+      "outcome": "local_gluing_does_not_supply_logical_charge_balance",
+      "established": "A sector-changing charge-preserving move must contain an opposite-rough-side residual path; the exact L4 standalone plaquette audit has zero logical-parity flips.",
+      "obstruction": "RSW/FKG can glue increasing crossing events, but fixed-charge posterior balance and bounded switching congestion are neither increasing events nor consequences of crossing existence.",
+      "missing_input": "A positive-probability global event measurable under the physical current law on which the full-charge fiber admits size-uniform bounded congestion or minority ratio."
+    },
+    "direct_average_profile": {
+      "outcome": "finite_controls_only",
+      "established": "Exact physical masses above fixed minority-ratio cutoffs are reported for L3/L4.",
+      "boundary": "Two sizes are controls, not a trend or an asymptotic lower bound."
+    }
+  },
+  "countermodels": {
+    "unnormalized_overlap_can_vanish_at_maximal_risk": {
+      "construction": "N equiprobable charge records, each with balanced logical posterior",
+      "Bayes_risk": "1/2",
+      "same_charge_collision_probability": "1/N",
+      "opposite_sector_same_charge_overlap": "1/(2N) -> 0",
+      "collision_conditioned_opposite_probability": "1/2"
+    },
+    "normalized_overlap_can_stay_positive_while_risk_vanishes": {
+      "construction": "one balanced record of mass epsilon=1/n and n^3 deterministic records sharing mass 1-epsilon",
+      "Bayes_risk": "1/(2n) -> 0",
+      "opposite_sector_same_charge_overlap": "1/(2n^2)",
+      "same_charge_collision_probability": "1/n^2 + (1-1/n)^2/n^3",
+      "collision_conditioned_opposite_probability_limit": "1/2"
+    }
+  },
+  "primary_source_applicability": [
+    {
+      "source": "Lessa et al., Strong-to-Weak Spontaneous Symmetry Breaking in Mixed Quantum States (2024)",
+      "url": "https://arxiv.org/abs/2405.03639",
+      "supported": "nonlinear fidelity/Renyi observables can diagnose information hidden from one-copy averages",
+      "missing": "the general two-copy motivation does not identify the collision-size-biased charge law with this project's physical p_Q-weighted decoding risk"
+    },
+    {
+      "source": "Duminil-Copin, Introduction to Bernoulli percolation, Sections 2 and 4 (2018)",
+      "url": "https://www.ihes.fr/~duminil/publi/2017percolation.pdf",
+      "supported": "Harris-FKG and RSW control increasing connectivity and crossing events in Bernoulli percolation",
+      "missing": "charge-conditioned logical posterior balance is not an increasing percolation event, so these results do not provide the required fiber comparison"
+    }
+  ],
+  "precise_missing_lemma": {
+    "direct_form": "There exist eta,delta>0 independent of L such that physical probability at least delta lies on full-charge fibers with minority ratio at least eta.",
+    "two_copy_sufficient_form": "There exist c1,c2>0 independent of L such that Psi_L>=c1 and C_L/p_max,L>=c2.",
+    "block_sufficient_form": "There is a positive-probability multiscale event on which a charge-preserving logical switch has uniformly bounded congestion after conditioning on the full global charge record."
+  },
+  "decision": {
+    "outcome": "explicit_missing_collision_to_physical_charge_comparison",
+    "established": "The two-copy observable is exact but uses the wrong charge weighting by itself; local block gluing preserves connectivity information but does not supply logical charge-fiber balance.",
+    "not_established": "No positive size-uniform physical average balance, midpoint noncorrectability, or square decoding threshold is proved.",
+    "threshold_claim": "No square midpoint noncorrectability or decoding-threshold claim is promoted."
+  },
+  "source_sha256": {
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/audit_midpoint_averaged_charge_balance.py": "bfd4f80c9a909f2712a0c201f2c1c70789225d13e7bf7b4d987bc6f2a87675a0",
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/current_oracle.py": "241916aa389193b7b62a3ea2de7f4267086dfcca60760ee514e27100f40fa6ee",
+    "labs/lab-008-direction-biased-u1-current-channel/manifests/midpoint-averaged-charge-balance-2026-09-20.json": "cf6b09fc25a8672c93d947f544f818631d412468539f464c276621be873dbe11",
+    "labs/lab-008-direction-biased-u1-current-channel/results/midpoint-charge-fiber-balance-theorem-2026-09-20.json": "597fe71d5c7d9b49b8919b48c75e9543731fc227add038ffb7c61cf2241ed4a5",
+    "labs/lab-008-direction-biased-u1-current-channel/results/midpoint-minority-mass-lower-bound-2026-09-20.json": "ddc88b95bbde3f5495e8e2c13d2a27888be6f5639b06f2b133fc6d02f5a6ad9a",
+    "labs/lab-008-direction-biased-u1-current-channel/results/midpoint-switching-pairing-2026-09-20.json": "f9f08b6f7b6deec22daab94800873090f1d9ca5d2e6613d08f48346c31672974"
+  }
+}

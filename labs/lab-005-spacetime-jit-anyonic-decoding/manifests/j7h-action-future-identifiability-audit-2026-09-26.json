@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j7h-action-future-identifiability-audit-2026-09-26",
+  "status": "registered_before_deterministic_execution",
+  "question": "Can the J7G additive red-X model hold initial error, complete first record, future physical-fault key and final physical support all fixed while changing only the public correction action?",
+  "role": "Bounded identifiability prerequisite, not a new Born-law or schedule experiment",
+  "source_basis": ["Jing Appendix A.2/A.4 red-X and correction support convention", "J6L fixed red-edge identity", "J7G exact finite history contrast with branch-specific future faults", "J7D frozen branch support ledger"],
+  "pinned_inputs": {
+    "jing_pdf_sha256": "7a17c3d3a743e3dec4266b64d0321a6af7a5eeacfab67e42b9ec77d30b65a2ac",
+    "j6l_result_sha256": "c3eee28f083b7f3a4dd82a3e4f8a7d3ec29aa19af92bbc3ab4588129d855c4ab",
+    "j7d_result_sha256": "4ebd378584bef1a87eb0ea4f4ec40b9c0448a7e58327d82a67445b627ee4876a",
+    "j7g_result_sha256": "dfe4503a17aebebb355550373cb8744c7b6f550db810cde77e3bdd5166c79e26",
+    "frozen_integrated_history_sha256": "43d9d0d3e4771ccfc764f590f1843cda1e2a7fbce8dae96057710c413a0adb6e"
+  },
+  "model": {
+    "support_law": "Within the same fixed physical red-edge basis, final support S = E xor A xor F, with E the private initial red-X set, A the applied public red-X correction set and F the later private physical red-X fault set",
+    "first_boundary": "The J7G complete first public record is fixed before action; no first-measurement resampling, posterior conditioning or hidden relation oracle is introduced",
+    "physical_and_public": "A is public and relation-free; E and F are private exogenous keys; the audit may inspect them only as private model diagnostics. A different final support may have a different next public flux record, and the audit is not itself a complete Born law",
+    "proof_target": "For common E and F, S(A1)=S(A2) implies A1=A2 by xor cancellation. Thus a distinct-action same-future-key comparison cannot also match final physical support in this additive model. A same-final-support distinct-action comparison requires F1 xor F2 = A1 xor A2",
+    "independent_unit_uncertainty": "Finite deterministic algebraic audit; no stochastic sampling unit or uncertainty interval"
+  },
+  "matrix": {
+    "initial_physical_red_edges_private": [0,4,3],
+    "actions": [[0],[4]],
+    "future_fault_keys_private": [[0],[4]],
+    "primary_cells": "All four action by future-key cells with exact final support and public flux from the pinned periodic red-edge map",
+    "exhaustive_control": "All 8 correction subsets of [0,4,3] crossed with no future fault or one of the same three red edges: 32 cells, 112 distinct-action same-future comparisons; every such pair must have distinct final support",
+    "j7g_reproduction": "The [0]/[0] and [4]/[4] diagonal cells exactly reproduce J7G's matched final support [0,4,3]; their different future keys prevent action-only causal attribution",
+    "classify_forks": "Same-future-key distinct-action total effect may be defined only without matched final support; same-final-support history sensitivity may be defined only with branch-specific future faults. They are different estimands, not two rankings for a human to choose before the algebra is checked"
+  },
+  "competing_outcomes": {
+    "identifiability_boundary_confirmed": "All pins and 32-cell controls pass; record the impossibility of matching both F and final support for distinct A and route any subsequent causal action study to a separately registered same-future-key estimand without conditioning on final support",
+    "model_or_implementation_conflict": "Any xor cancellation, source mapping, J7G reproduction or pin fails; censor causal interpretation and do not silently revise J7G's finite ideal result",
+    "unresolved": "If public record equivalence differs from physical-support equivalence, retain this support-level proof only; no public-law or causal decoder benefit follows"
+  },
+  "budget": {"max_cpu_seconds": 10, "max_cells": 32, "max_pair_checks": 112, "new_dependencies": 0, "stochastic_histories": 0, "schedule_arm_evaluations": 0, "bootstrap_replicates": 0},
+  "acceptance": ["Five source/caller/result pins pass before and after", "All four primary cells reproduce their algebraic support and eligible public flux; J7G diagonal support recovers exactly", "All 32 control cells and 112 distinct-action same-future comparisons satisfy cancellation and distinct-final-support gates", "The record separates a same-future-key action estimand from a same-final-support history estimand and does not promote either to a performance claim", "No Born-law sampling, stochastic history, arm evaluation, bootstrap or caller mutation"],
+  "stop_rule": "Stop on any pin, support/flux, J7G reproduction, enumeration or 10-CPU-second cap failure. Do not fit a law, sample histories, extend geometry, invoke the frozen caller or claim action causality from J7G.",
+  "planned_result": "results/j7h-action-future-identifiability-audit-2026-09-26.json"
+}

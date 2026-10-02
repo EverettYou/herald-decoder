@@ -1,46 +1,19 @@
-# Lab 003 — Herald decoding phase diagram
+# Lab 003 — Herald decoding evidence and corrected domain
 
-## Overview
+## Scientific correction
 
-### L003.1 Motivation
+The physical binary-herald domain is **p,q in [0,1]**. For 0<q<1 there is no general p↔1−p symmetry of the visible record or optimal logical risk. B18's symmetry-constrained guide and its horizontal tangent at p=0.5 are withdrawn. The uniform-prior point remains special, but is not a domain boundary. See [model and counterexample](/wiki?page=methods/binary-herald-full-prior-domain.md).
 
-Characterize finite-size directional evidence across heralding parameters without overstating it as an asymptotic phase boundary.
+## Current evidence
 
-### L003.2 Background
+![Measured honeycomb finite-window trend coverage on the full physical domain](figures/phase-b19-full-prior-evidence-coverage-2026-10-01.png)
+*The inherited B14 trial counts and finite-window BP trend values are retained. Gray regions have no joint-grid measurements. No values are mirrored and no transition curve is imposed. This is evidence coverage, not a completed thermodynamic phase diagram.*
 
-The study pools fixed-window logical-error-rate curves and trend diagnostics over the registered grid.
+![Selected fixed-q LER context for square and honeycomb geometries](figures/final-selected-ler-curves-q0-q075-q1-square-honeycomb-2026-08-28.png)
+*Historical fixed-q cohorts retain their own size, geometry and decoder labels; they do not fill the unmeasured joint grid.*
 
-### L003.3 Question
+## Interpretation and follow-on
 
-Which regions show robust finite-window directional behavior under the measured protocol?
+Measured low-p finite-size behavior remains usable within its sampled protocol. Claims of an all-p herald ceiling based only on the half-domain scan are withdrawn. High-p recovery and transition topology need independent analysis; the boundary need not be a single-valued p_c(q). Approximate decoder behavior and optimal recoverability must be distinguished.
 
-### L003.4 Hypothesis
-
-Finite-size evidence can identify conservative directional regions while retaining uncertainty near crossings.
-
-## Evidence
-
-### L003.5 Finite-window map
-
-The current honeycomb evidence is a finite-window directional map, not a threshold estimate; its boundary is maintained in [finite-window trend evidence](wiki/overview.md).
-
-![Honeycomb finite-window trend-evidence map with the conservative directional region](figures/phase-b18-symmetry-constrained-guide-2026-08-28.png)
-*Figure L003.5 — the map summarizes the registered finite-window directional evidence, not an asymptotic threshold; data: [finite-window trend evidence](wiki/overview.md).* 
-
-| Established | Boundary |
-| --- | --- |
-| Conservative directional regions on the registered grid | No asymptotic threshold or sharp phase boundary |
-
-## Analysis
-
-### L003.6 Implications
-
-The map guides where adaptive sampling would be informative, but it does not justify extrapolation beyond its sampled sizes and grid; see [finite-window trend evidence](wiki/overview.md).
-
-### L003.7 Limitations
-
-Unresolved crossings and finite-size effects remain explicit in [finite-window trend evidence](wiki/overview.md).
-
-### L003.8 Next question
-
-Any new threshold estimate requires a separately registered adaptive sampling study.
+[Lab 009](/lab?id=lab-009-planar-herald-decoder-survey) now studies the full domain with endpoint checks, exact sector inference and independent high-p matched diagnostics. A converged full-domain phase diagram remains open. Historical B18 artifacts are retained only as withdrawn provenance.

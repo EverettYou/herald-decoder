@@ -1,0 +1,73 @@
+{
+  "id": "lab008-residual-directed-sector-transport-2026-09-22",
+  "status": "complete_rejected_as_uniform_coupling",
+  "date": "2026-09-22",
+  "manifest": "../manifests/residual-directed-sector-transport-2026-09-22.json",
+  "transport": {
+    "residual_orientation": "stored direction for j_e=0 and reversed direction for j_e=1",
+    "path_rule": "shortest length, left-to-right before right-to-left, then lexicographic edge and vertex sequences",
+    "action": "toggle every selected path edge"
+  },
+  "rows": [
+    {
+      "L": 3,
+      "edges": 8,
+      "states": 256,
+      "charge_records": 64,
+      "ambiguous_charge_records": 46,
+      "transport_domain_states": 238,
+      "domain_mismatch_failures": 0,
+      "binary_feasibility_failures": 0,
+      "charge_preservation_failures": 0,
+      "logical_flip_failures": 0,
+      "direction_counts": {"left_to_right": 162, "right_to_left": 76},
+      "path_length_histogram": {"2": 224, "3": 14},
+      "activity_change_histogram": {"-2": 76, "1": 7, "2": 148, "3": 7},
+      "maximum_absolute_activity_change": 3,
+      "maximum_inverse_multiplicity": 3,
+      "inverse_multiplicity_histogram": {"1": 156, "2": 14, "3": 18},
+      "involution_fraction": 0.6386554621848739,
+      "maximum_reciprocal_weight_distortion": {"p=.30": 12.7037037037037, "p=.50": 1.0},
+      "all_zero_selected_path_length": 2,
+      "all_zero_activity_change": 2
+    },
+    {
+      "L": 4,
+      "edges": 18,
+      "states": 262144,
+      "charge_records": 44494,
+      "ambiguous_charge_records": 24638,
+      "transport_domain_states": 232822,
+      "domain_mismatch_failures": 0,
+      "binary_feasibility_failures": 0,
+      "charge_preservation_failures": 0,
+      "logical_flip_failures": 0,
+      "direction_counts": {"left_to_right": 143594, "right_to_left": 89228},
+      "path_length_histogram": {"3": 179200, "4": 47508, "5": 5718, "6": 396},
+      "activity_change_histogram": {"-6": 99, "-5": 828, "-4": 8327, "-3": 70720, "-2": 8327, "-1": 828, "0": 198, "1": 1108, "2": 15427, "3": 110326, "4": 15427, "5": 1108, "6": 99},
+      "maximum_absolute_activity_change": 6,
+      "maximum_inverse_multiplicity": 8,
+      "inverse_multiplicity_histogram": {"1": 111774, "2": 34142, "3": 7362, "4": 4764, "5": 2104, "6": 124, "7": 42, "8": 8},
+      "involution_fraction": 0.6075027274054857,
+      "maximum_reciprocal_weight_distortion": {"p=.30": 161.38408779149512, "p=.50": 1.0},
+      "all_zero_selected_path_length": 3,
+      "all_zero_activity_change": 3
+    }
+  ],
+  "exact_obstruction": {
+    "statement": "For the all-zero current, every residual crossing consists only of 0-to-1 flips and has length at least L-1. Therefore any residual-crossing flip has reciprocal weight distortion at least max((p/(1-p))^(L-1),((1-p)/p)^(L-1)).",
+    "consequence": "No residual-path flip can have a size-uniform two-sided action-distortion bound at fixed p!=1/2, independent of path-selection rule.",
+    "midpoint_boundary": "At p=1/2 action distortion is exactly one, but a size-uniform inverse-multiplicity bound remains unproved; this deterministic rule has maxima 3 and 8 at L3 and L4."
+  },
+  "acceptance_outcome": {
+    "structural": "pass",
+    "multiplicity": "fail_unproved_and_finite_maximum_grows",
+    "action_p30": "fail_exact_asymptotic_obstruction",
+    "action_p50": "pass",
+    "promotion": "reject_as_uniform_coupling"
+  },
+  "decision": "Close size-uniform residual-path coupling away from p=1/2. At the midpoint, isolate inverse multiplicity as the only remaining gate for this transport class; do not tune the registered path order after the result.",
+  "claim_boundary": "The exact obstruction applies to two-sided bounded action distortion for residual-path flips. It does not rule out weighted many-to-one transport, a midpoint entropy argument, or a different global proof of decoding.",
+  "compute": {"new_physical_samples": 0, "new_system_sizes": 0, "bootstrap_replicates": 0, "deterministic_states": 262400},
+  "replay": "../scripts/run_residual_directed_sector_transport.py"
+}

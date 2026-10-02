@@ -1,0 +1,63 @@
+{
+  "status": "passed_live_api",
+  "visual_review": "The earlier layout screenshots remain the layout reference. For this text-only midpoint theorem update, the live document and lab APIs were reread after restart: the all-size row counterfamily, inverse-multiplicity lower bound, exact claim boundary, selector-independent next action and result registry are exposed, while the stopped finite-size scope remains explicit.",
+  "surfaces": [
+    {
+      "name": "report",
+      "url": "http://127.0.0.1:8010/lab?id=lab-008-direction-biased-u1-current-channel"
+    },
+    {
+      "name": "theory",
+      "url": "http://127.0.0.1:8010/document?path=labs%2Flab-008-direction-biased-u1-current-channel%2Fwiki%2Fthermodynamic-decoding-theory.md"
+    },
+    {
+      "name": "wiki",
+      "url": "http://127.0.0.1:8010/lab-wiki?lab=lab-008-direction-biased-u1-current-channel&page=thermodynamic-decoding-theory"
+    },
+    {
+      "name": "cft",
+      "url": "http://127.0.0.1:8010/document?path=labs%2Flab-008-direction-biased-u1-current-channel%2Fwiki%2Fcomplex-weights-and-cft.md"
+    }
+  ],
+  "page_errors": [],
+  "live_api_checks": [
+    {
+      "url": "http://127.0.0.1:8010/api/documents/file?path=labs%2Flab-008-direction-biased-u1-current-channel%2Fwiki%2Fthermodynamic-decoding-theory.md",
+      "status": 200,
+      "verified": ["all-size row counterfamily", "maximum inverse multiplicity at least L", "frozen-rule-only claim boundary", "selector-independent next gate"]
+    },
+    {
+      "url": "http://127.0.0.1:8010/api/labs/lab-008-direction-biased-u1-current-channel",
+      "status": 200,
+      "verified": ["current focus", "next action", "midpoint-residual-transport-multiplicity registry entry"]
+    }
+  ],
+  "file_sha256": {
+    "REPORT.md": "f42f18b88e2dec67f9550075c8a7f760767307c64db2354f1bb0d5cd92feeedf",
+    "PLAN.md": "8d0b92d9d424c58a8ee1a736d278cfc93ac6e449f59b63da04f85c6787b5da6b",
+    "lab.json": "d02129083e9567672d3a32b9f9e8ab7bb5660fecdcb4ceb6ad4cc9fed5754a67",
+    "wiki/thermodynamic-decoding-theory.md": "761b9619a58648c330d1251f7896c9cc9e3e964d570b056e11fc4786a4cd398d",
+    "wiki/decoding-thresholds.md": "258a1934857163ecb38b3d49c2982d867bac967e72a089a931a692ca610997dd",
+    "wiki/complex-weights-and-cft.md": "3917188c42b5dfb1d76af7399466bae434abc4eb57d878931767ec103107c348",
+    "manifests/thermodynamic-theory-reorientation-2026-09-22.json": "bf1aa3d777045263377e4e6cc895470f9b84dec57b34c1e56dbab30ad42b0f62",
+    "manifests/midpoint-residual-transport-multiplicity-2026-09-22.json": "3aa1dee0112fb7c27d3bbadb13e71ac900eac256c26e334b8fbc060c03a12690",
+    "manifests/residual-directed-sector-transport-2026-09-22.json": "5f1aa1e50786a86f806f9bcdc6a121190d37e61a498feb8d8b214f86333b83a0",
+    "manifests/parity-aligned-interface-matrix-2026-09-22.json": "c2c4d20ca2930d7b483e1d6cfe9055b759fd0cca43b790b0c945b026e58aaefe",
+    "manifests/l13-boundary-mps-acquisition-2026-09-21.json": "c06684aa45340500dbf5e2e355694e63fb9f23ee07d9025cf0d6a049b5ede24f",
+    "results/interface-cancellation-information-bound-2026-09-22.json": "b77eefc987a253ecb57ac98f74073b98da6f628573e95b338a49f12d69329929",
+    "results/square-directed-interface-contour-calibration-2026-09-22.json": "25b36366676749aeff8047e6625cd27eacca3ffeb843919c2976c5638e2cf645",
+    "results/straight-separator-interface-parity-2026-09-22.json": "69e9ffb114cc0a090de2b2f2a649ff9f875650a72b8b657cd0cdda3494cf0240",
+    "scripts/check_interface_flux_topology.py": "ac8990b41ce7e2ea4705c3d955eff097ece7451d1bcdb8c9429840908f21846e",
+    "results/parity-aligned-interface-matrix-2026-09-22.json": "b3c9f1bcad30005abf52a7af5565077a25f9d6bc452426e9f376f2ec75825fa3",
+    "scripts/run_parity_aligned_interface_matrix.py": "787ba6483fdc8498edb2d03a8409f8f08422074d1dfe1e4e28ff18d7c87e562a",
+    "results/residual-directed-sector-transport-2026-09-22.json": "7adf584b1c46a248505f01b934265683939a589cce01247bf719992a89fe5d63",
+    "scripts/run_residual_directed_sector_transport.py": "693ce322581df11b345244ae4b9b67e945974f33e67daaf0a9a3bbe74d304225",
+    "results/midpoint-residual-transport-multiplicity-2026-09-22.json": "b7a664f22c516d49f047db155c235cd9809dd8acf75cf78f654292ab3583d2f7",
+    "scripts/verify_midpoint_residual_transport_multiplicity.py": "102131702f7c2df0b9070519219ab020a80d1caf219cbed202816f68ea9fb627"
+  },
+  "registry_and_active_contract_match": true,
+  "l13_execution_authorized": false,
+  "new_physical_samples": 0,
+  "screenshots": ".tmp/lab008-theory-sept22",
+  "scope": "Researcher-directed theory reorientation; exact planted identities and gluing, the complete-flux parity obstruction, exponential residual-path action distortion away from p=1/2, and an all-size inverse-multiplicity counterfamily for the frozen midpoint selector, not a solved square threshold."
+}

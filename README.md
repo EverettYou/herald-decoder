@@ -73,8 +73,8 @@ For a fresh Linux server clone, create the repository-local pinned runtime:
 
 ```bash
 uv python install 3.13.2
-uv venv --python 3.13.2 .venv-research
-uv pip install --python .venv-research/bin/python -r requirements-research.txt
+uv venv --python 3.13.2 .venv
+uv pip install --python .venv/bin/python -r requirements-research.txt
 ./run_research_python.sh -c 'import numpy, numba, pymatching, scipy; print("research runtime ready")'
 ```
 
@@ -207,3 +207,5 @@ Before opening a GitHub pull request, avoid bundling generated caches, local vir
 - [Reference archive guide](references/README.md)
 - [Discussion guide](discussion/README.md)
 - [Skills overview](skills/README.md)
+
+[Scientific correction: full prior domain for binary herald decoding](wiki/methods/binary-herald-full-prior-domain.md)

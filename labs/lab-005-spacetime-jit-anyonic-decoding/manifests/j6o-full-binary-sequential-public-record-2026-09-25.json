@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j6o-full-binary-sequential-public-record-2026-09-25",
+  "status": "registered_before_exact_execution",
+  "question": "Does the J6N same-state sequential instrument determine a normalized, full-length 24-site public first and action-conditioned second record for the fixed two-red-edge D4 path, without inserting private support or parity-relation metadata?",
+  "epistemic_role": "Exact one-geometry full-binary public-record law and integrity gate, not a general noise-conditioned sampler or five-round schedule evaluation",
+  "source_basis": [
+    "Jing et al. 2025 Appendix A.1/A.2/A.4: quasi-stabilizer charge projectors, flux-gated star measurement, short-path first and post-correction source limits",
+    "J6L periodic edge/operator map, J6M compact common vacuum orbit, J6N ordered local Born moments"
+  ],
+  "pinned_inputs": {
+    "jing_pdf_sha256": "7a17c3d3a743e3dec4266b64d0321a6af7a5eeacfab67e42b9ec77d30b65a2ac",
+    "j6l_result_sha256": "c3eee28f083b7f3a4dd82a3e4f8a7d3ec29aa19af92bbc3ab4588129d855c4ab",
+    "j6m_result_sha256": "55bfe46d34c9a8356e828351b0d415ed550312ed315c4c1bda7a51508ef1b932",
+    "j6n_result_sha256": "f132909a5dbf52bb79863bcccda29c33acf7177343b8261a59896dbc9127849a"
+  },
+  "fixed_case": {
+    "periodic_geometry": "paper-normalized L=2: 24 blue/green honeycomb vertices, 36 red edges, 108 kagome qubits",
+    "same_initial_state": "J6M compact +1 star/triangle orbit from |0^108> for every branch",
+    "physical_red_x_error_edge_ids_private": [0, 4],
+    "first_measurement": "all flux-free blue/green stars after physical red-X error; green:1 measured first, with its actual outcome conditioning all later projectors",
+    "action_branches": {"defer": [], "partial": [0], "matched": [0, 4]},
+    "second_measurement": "all flux-free blue/green stars after the action; defer has no E2",
+    "public_record": "exactly three full-length binary arrays flux/charge/vacuum, each length 24; flux and charge are independent membership bits, vacuum is 1-charge under the existing J6H public convention; unmeasured flux sites have charge=0",
+    "public_action": "red-edge correction IDs only, with no physical-error support, inferred pairing relation, hidden state, or probability oracle",
+    "new_faults_or_readout_noise": "none"
+  },
+  "method": "Pin the same orbit and red-X error as J6N. For each of the 24 first sites and each non-deferred second site, use exact ordered Born moments to classify deterministic +/-, or nondeterministic charge conditional on the actual first green result. Check pairwise commutation for every simultaneously measured flux-free set using the J6M source commutator masks and residual triangle eigenvalues. If each conditioned set has at most two nondeterministic sites, compute their exact joint Born table; deterministic-site probabilities of one then prove the unique full-record support without enumerating 2^24 outcomes. If more than two sites remain nondeterministic, fail closed and retain only marginal diagnostics. Build only full binary public arrays; keep private error/state and derivation metadata outside them.",
+  "matrix": {
+    "physical_errors": [[0, 4]],
+    "first_green_outcomes": [1, -1],
+    "actions": ["defer", "partial", "matched"],
+    "first_sites": 24,
+    "second_sites_max": 24,
+    "nontrivial_joint_sites_max": 2,
+    "independent_unit": "one deterministic exact periodic state/error instance; no Monte Carlo sampling"
+  },
+  "acceptance": [
+    "All four pinned hashes, paper-normalized site order, edge IDs, operator supports, first/second flux masks and source star-eligibility rules match; all simultaneously measured eligible pairs commute on their actual triangle sector.",
+    "The first full 24-site binary record has only the source two-edge green:1 half/half charge branch and the blue endpoints fluxful; all other eligible first sites are deterministic. Both first rows normalize.",
+    "Every action-conditioned second eligible-site marginal is 0, 1/2 or 1 and each first-conditioned random-site joint table is nonnegative and normalized; at most two sites are random. The matched branch recovers the J6N/source ++/-- blue pair, and partial/defer branches retain their distinct flux/action semantics.",
+    "Every published public first and second record contains only 24-bit flux/charge/vacuum arrays with the frozen membership convention; action is separate, second is null on defer, and private edge/state/relation metadata never enters a public record. The first result is an actual Born projector, not a post hoc label.",
+    "No five-round histories, schedule arms, bootstrap replicates, decoder comparison, threshold or general D4 transition claim."
+  ],
+  "budget": {"max_cpu_seconds": 30, "new_dependencies": 0, "stochastic_histories": 0, "schedule_arm_evaluations": 0, "bootstrap_replicates": 0},
+  "stop_rule": "Fail closed on provenance drift, noncommuting eligible projectors, more than two random eligible sites in a conditioned branch, joint-normalization failure, source-limit mismatch, public/private leakage or action-binding/replay mismatch. Passing validates only this fixed geometry and authorizes a separately registered first-record-aware adapter gate; it does not release five-round sampling.",
+  "planned_result": "results/j6o-full-binary-sequential-public-record-2026-09-25.json"
+}

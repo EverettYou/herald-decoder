@@ -1,0 +1,467 @@
+{
+  "id": "lab008-boundary-mps-tensorization-gates-2026-09-21",
+  "status": "complete",
+  "generated_at": "2026-09-21T14:51:03.424832+00:00",
+  "contract": "../manifests/beyond-l11-mps-validation-2026-09-21.json",
+  "parameters": {
+    "p": 0.3,
+    "q": 0.94,
+    "sizes": [
+      5,
+      7
+    ],
+    "records_per_size": 5,
+    "sweeps": [
+      "left-to-right",
+      "right-to-left"
+    ],
+    "chi": null
+  },
+  "gates": {
+    "sector_error_le_1e-10": true,
+    "normalization_le_1e-10": true,
+    "risk_gap_identity_le_1e-10": true,
+    "nonnegative_sector_mass": true,
+    "both_sweeps_covered": true,
+    "sector_swap_invariance_le_1e-10": true,
+    "public_interface_is_charge_only": true,
+    "no_new_physical_records": true
+  },
+  "maximum_sector_error": 3.5388358909926865e-14,
+  "rows": [
+    {
+      "size": 5,
+      "record_id": "zero",
+      "direction": "left-to-right",
+      "charges_sha256": "0679246d6c4216de0daa08e5523fb2674db2b6599c3b72ff946b488a15290b62",
+      "reference_sectors": [
+        0.7252280409151721,
+        0.2747719590848279
+      ],
+      "candidate_sectors": [
+        0.7252280409151646,
+        0.2747719590848355
+      ],
+      "maximum_sector_error": 7.605027718682322e-15,
+      "risk_gap_identity_error": 0.0,
+      "normalization_error": 0.0,
+      "minimum_sector_mass": 0.2747719590848355,
+      "maximum_exact_bond": 9,
+      "sector_swap_risk_error": 0.0,
+      "sector_swap_abs_gap_error": 1.1102230246251565e-16
+    },
+    {
+      "size": 5,
+      "record_id": "zero",
+      "direction": "right-to-left",
+      "charges_sha256": "0679246d6c4216de0daa08e5523fb2674db2b6599c3b72ff946b488a15290b62",
+      "reference_sectors": [
+        0.7252280409151721,
+        0.2747719590848279
+      ],
+      "candidate_sectors": [
+        0.7252280409151719,
+        0.27477195908482815
+      ],
+      "maximum_sector_error": 2.7755575615628914e-16,
+      "risk_gap_identity_error": 0.0,
+      "normalization_error": 0.0,
+      "minimum_sector_mass": 0.27477195908482815,
+      "maximum_exact_bond": 9,
+      "sector_swap_risk_error": 0.0,
+      "sector_swap_abs_gap_error": 0.0
+    },
+    {
+      "size": 5,
+      "record_id": "seed-0",
+      "direction": "left-to-right",
+      "charges_sha256": "4f23d10ade519cde47017a47358fb92e0fb96daae8a93919e19dcad1ada58a4e",
+      "reference_sectors": [
+        0.8263849384938989,
+        0.17361506150610098
+      ],
+      "candidate_sectors": [
+        0.8263849384939094,
+        0.17361506150609074
+      ],
+      "maximum_sector_error": 1.0436096431476471e-14,
+      "risk_gap_identity_error": 2.7755575615628914e-17,
+      "normalization_error": 0.0,
+      "minimum_sector_mass": 0.17361506150609074,
+      "maximum_exact_bond": 9,
+      "sector_swap_risk_error": 0.0,
+      "sector_swap_abs_gap_error": 0.0
+    },
+    {
+      "size": 5,
+      "record_id": "seed-0",
+      "direction": "right-to-left",
+      "charges_sha256": "4f23d10ade519cde47017a47358fb92e0fb96daae8a93919e19dcad1ada58a4e",
+      "reference_sectors": [
+        0.8263849384938989,
+        0.17361506150610098
+      ],
+      "candidate_sectors": [
+        0.8263849384938984,
+        0.17361506150610168
+      ],
+      "maximum_sector_error": 6.938893903907228e-16,
+      "risk_gap_identity_error": 0.0,
+      "normalization_error": 0.0,
+      "minimum_sector_mass": 0.17361506150610168,
+      "maximum_exact_bond": 9,
+      "sector_swap_risk_error": 0.0,
+      "sector_swap_abs_gap_error": 0.0
+    },
+    {
+      "size": 5,
+      "record_id": "seed-1",
+      "direction": "left-to-right",
+      "charges_sha256": "b031005c9725727edf34553543aa41657879478a618f19a76acf8302e04c0127",
+      "reference_sectors": [
+        0.8229476250128127,
+        0.17705237498718734
+      ],
+      "candidate_sectors": [
+        0.8229476250128175,
+        0.17705237498718246
+      ],
+      "maximum_sector_error": 4.884981308350689e-15,
+      "risk_gap_identity_error": 0.0,
+      "normalization_error": 0.0,
+      "minimum_sector_mass": 0.17705237498718246,
+      "maximum_exact_bond": 9,
+      "sector_swap_risk_error": 0.0,
+      "sector_swap_abs_gap_error": 0.0
+    },
+    {
+      "size": 5,
+      "record_id": "seed-1",
+      "direction": "right-to-left",
+      "charges_sha256": "b031005c9725727edf34553543aa41657879478a618f19a76acf8302e04c0127",
+      "reference_sectors": [
+        0.8229476250128127,
+        0.17705237498718734
+      ],
+      "candidate_sectors": [
+        0.8229476250128109,
+        0.17705237498718912
+      ],
+      "maximum_sector_error": 1.7763568394002505e-15,
+      "risk_gap_identity_error": 2.7755575615628914e-17,
+      "normalization_error": 0.0,
+      "minimum_sector_mass": 0.17705237498718912,
+      "maximum_exact_bond": 9,
+      "sector_swap_risk_error": 0.0,
+      "sector_swap_abs_gap_error": 0.0
+    },
+    {
+      "size": 5,
+      "record_id": "seed-2",
+      "direction": "left-to-right",
+      "charges_sha256": "85795a7d8d96629af6b36033dd1d62b8a4b16887c1937f93face87dd6c71d5c0",
+      "reference_sectors": [
+        0.4877176076008004,
+        0.5122823923991997
+      ],
+      "candidate_sectors": [
+        0.4877176076008037,
+        0.5122823923991963
+      ],
+      "maximum_sector_error": 3.4416913763379853e-15,
+      "risk_gap_identity_error": 5.551115123125783e-17,
+      "normalization_error": 0.0,
+      "minimum_sector_mass": 0.4877176076008037,
+      "maximum_exact_bond": 9,
+      "sector_swap_risk_error": 0.0,
+      "sector_swap_abs_gap_error": 2.0816681711721685e-17
+    },
+    {
+      "size": 5,
+      "record_id": "seed-2",
+      "direction": "right-to-left",
+      "charges_sha256": "85795a7d8d96629af6b36033dd1d62b8a4b16887c1937f93face87dd6c71d5c0",
+      "reference_sectors": [
+        0.4877176076008004,
+        0.5122823923991997
+      ],
+      "candidate_sectors": [
+        0.48771760760080096,
+        0.512282392399199
+      ],
+      "maximum_sector_error": 6.661338147750939e-16,
+      "risk_gap_identity_error": 5.551115123125783e-17,
+      "normalization_error": 0.0,
+      "minimum_sector_mass": 0.48771760760080096,
+      "maximum_exact_bond": 9,
+      "sector_swap_risk_error": 0.0,
+      "sector_swap_abs_gap_error": 4.85722573273506e-17
+    },
+    {
+      "size": 5,
+      "record_id": "seed-3",
+      "direction": "left-to-right",
+      "charges_sha256": "f3f1fdb6c0ddf496c83ae801bf8b66ed707444d4e3dd35be3e0a5db5e522266d",
+      "reference_sectors": [
+        0.08246932021215041,
+        0.9175306797878496
+      ],
+      "candidate_sectors": [
+        0.08246932021215155,
+        0.9175306797878485
+      ],
+      "maximum_sector_error": 1.1379786002407855e-15,
+      "risk_gap_identity_error": 2.7755575615628914e-17,
+      "normalization_error": 0.0,
+      "minimum_sector_mass": 0.08246932021215155,
+      "maximum_exact_bond": 9,
+      "sector_swap_risk_error": 0.0,
+      "sector_swap_abs_gap_error": 4.440892098500626e-16
+    },
+    {
+      "size": 5,
+      "record_id": "seed-3",
+      "direction": "right-to-left",
+      "charges_sha256": "f3f1fdb6c0ddf496c83ae801bf8b66ed707444d4e3dd35be3e0a5db5e522266d",
+      "reference_sectors": [
+        0.08246932021215041,
+        0.9175306797878496
+      ],
+      "candidate_sectors": [
+        0.0824693202121684,
+        0.9175306797878316
+      ],
+      "maximum_sector_error": 1.799949078673535e-14,
+      "risk_gap_identity_error": 1.3877787807814457e-17,
+      "normalization_error": 0.0,
+      "minimum_sector_mass": 0.0824693202121684,
+      "maximum_exact_bond": 9,
+      "sector_swap_risk_error": 0.0,
+      "sector_swap_abs_gap_error": 0.0
+    },
+    {
+      "size": 7,
+      "record_id": "zero",
+      "direction": "left-to-right",
+      "charges_sha256": "82fcfd5215175da9e65ca7c4fb927a1fb0e61f09d54987c368e8e16ebd9c2969",
+      "reference_sectors": [
+        0.8171762172278553,
+        0.1828237827721448
+      ],
+      "candidate_sectors": [
+        0.8171762172278861,
+        0.18282378277211395
+      ],
+      "maximum_sector_error": 3.086420008457935e-14,
+      "risk_gap_identity_error": 5.551115123125783e-17,
+      "normalization_error": 0.0,
+      "minimum_sector_mass": 0.18282378277211395,
+      "maximum_exact_bond": 27,
+      "sector_swap_risk_error": 0.0,
+      "sector_swap_abs_gap_error": 2.220446049250313e-16
+    },
+    {
+      "size": 7,
+      "record_id": "zero",
+      "direction": "right-to-left",
+      "charges_sha256": "82fcfd5215175da9e65ca7c4fb927a1fb0e61f09d54987c368e8e16ebd9c2969",
+      "reference_sectors": [
+        0.8171762172278553,
+        0.1828237827721448
+      ],
+      "candidate_sectors": [
+        0.8171762172278733,
+        0.18282378277212674
+      ],
+      "maximum_sector_error": 1.8068879725774423e-14,
+      "risk_gap_identity_error": 0.0,
+      "normalization_error": 0.0,
+      "minimum_sector_mass": 0.18282378277212674,
+      "maximum_exact_bond": 27,
+      "sector_swap_risk_error": 0.0,
+      "sector_swap_abs_gap_error": 0.0
+    },
+    {
+      "size": 7,
+      "record_id": "seed-0",
+      "direction": "left-to-right",
+      "charges_sha256": "91c92da0bbf85a3577c6c99f0cf3107876ff05c86a4033049732d52356fb0940",
+      "reference_sectors": [
+        0.23158009826892603,
+        0.768419901731074
+      ],
+      "candidate_sectors": [
+        0.23158009826892195,
+        0.7684199017310781
+      ],
+      "maximum_sector_error": 4.107825191113079e-15,
+      "risk_gap_identity_error": 0.0,
+      "normalization_error": 0.0,
+      "minimum_sector_mass": 0.23158009826892195,
+      "maximum_exact_bond": 27,
+      "sector_swap_risk_error": 0.0,
+      "sector_swap_abs_gap_error": 0.0
+    },
+    {
+      "size": 7,
+      "record_id": "seed-0",
+      "direction": "right-to-left",
+      "charges_sha256": "91c92da0bbf85a3577c6c99f0cf3107876ff05c86a4033049732d52356fb0940",
+      "reference_sectors": [
+        0.23158009826892603,
+        0.768419901731074
+      ],
+      "candidate_sectors": [
+        0.23158009826890308,
+        0.768419901731097
+      ],
+      "maximum_sector_error": 2.298161660974074e-14,
+      "risk_gap_identity_error": 0.0,
+      "normalization_error": 0.0,
+      "minimum_sector_mass": 0.23158009826890308,
+      "maximum_exact_bond": 27,
+      "sector_swap_risk_error": 0.0,
+      "sector_swap_abs_gap_error": 0.0
+    },
+    {
+      "size": 7,
+      "record_id": "seed-1",
+      "direction": "left-to-right",
+      "charges_sha256": "4b818e038fcfed54dabeb9c309635b3f8f87cd30222f75f97e8c66221b4c1ffb",
+      "reference_sectors": [
+        0.6967126247979929,
+        0.30328737520200716
+      ],
+      "candidate_sectors": [
+        0.6967126247979859,
+        0.30328737520201404
+      ],
+      "maximum_sector_error": 6.994405055138486e-15,
+      "risk_gap_identity_error": 0.0,
+      "normalization_error": 0.0,
+      "minimum_sector_mass": 0.30328737520201404,
+      "maximum_exact_bond": 27,
+      "sector_swap_risk_error": 0.0,
+      "sector_swap_abs_gap_error": 0.0
+    },
+    {
+      "size": 7,
+      "record_id": "seed-1",
+      "direction": "right-to-left",
+      "charges_sha256": "4b818e038fcfed54dabeb9c309635b3f8f87cd30222f75f97e8c66221b4c1ffb",
+      "reference_sectors": [
+        0.6967126247979929,
+        0.30328737520200716
+      ],
+      "candidate_sectors": [
+        0.6967126247980009,
+        0.30328737520199905
+      ],
+      "maximum_sector_error": 8.104628079763643e-15,
+      "risk_gap_identity_error": 0.0,
+      "normalization_error": 0.0,
+      "minimum_sector_mass": 0.30328737520199905,
+      "maximum_exact_bond": 27,
+      "sector_swap_risk_error": 0.0,
+      "sector_swap_abs_gap_error": 0.0
+    },
+    {
+      "size": 7,
+      "record_id": "seed-2",
+      "direction": "left-to-right",
+      "charges_sha256": "fc48de1872ccf302e07cc53a68f2a52bc8c3ead4de1ec47b65aa4ec77e89088a",
+      "reference_sectors": [
+        0.8735259786847739,
+        0.12647402131522617
+      ],
+      "candidate_sectors": [
+        0.8735259786848092,
+        0.12647402131519078
+      ],
+      "maximum_sector_error": 3.5388358909926865e-14,
+      "risk_gap_identity_error": 0.0,
+      "normalization_error": 0.0,
+      "minimum_sector_mass": 0.12647402131519078,
+      "maximum_exact_bond": 27,
+      "sector_swap_risk_error": 0.0,
+      "sector_swap_abs_gap_error": 2.220446049250313e-16
+    },
+    {
+      "size": 7,
+      "record_id": "seed-2",
+      "direction": "right-to-left",
+      "charges_sha256": "fc48de1872ccf302e07cc53a68f2a52bc8c3ead4de1ec47b65aa4ec77e89088a",
+      "reference_sectors": [
+        0.8735259786847739,
+        0.12647402131522617
+      ],
+      "candidate_sectors": [
+        0.8735259786847956,
+        0.12647402131520435
+      ],
+      "maximum_sector_error": 2.1815882433884326e-14,
+      "risk_gap_identity_error": 0.0,
+      "normalization_error": 0.0,
+      "minimum_sector_mass": 0.12647402131520435,
+      "maximum_exact_bond": 27,
+      "sector_swap_risk_error": 0.0,
+      "sector_swap_abs_gap_error": 2.220446049250313e-16
+    },
+    {
+      "size": 7,
+      "record_id": "seed-3",
+      "direction": "left-to-right",
+      "charges_sha256": "91f7efb9e225a36bf86298e62ea372c94cb955975b542ba9988476f7e9043964",
+      "reference_sectors": [
+        0.9673109214728923,
+        0.03268907852710757
+      ],
+      "candidate_sectors": [
+        0.9673109214729187,
+        0.03268907852708128
+      ],
+      "maximum_sector_error": 2.6423307986078726e-14,
+      "risk_gap_identity_error": 6.938893903907228e-18,
+      "normalization_error": 0.0,
+      "minimum_sector_mass": 0.03268907852708128,
+      "maximum_exact_bond": 27,
+      "sector_swap_risk_error": 0.0,
+      "sector_swap_abs_gap_error": 4.440892098500626e-16
+    },
+    {
+      "size": 7,
+      "record_id": "seed-3",
+      "direction": "right-to-left",
+      "charges_sha256": "91f7efb9e225a36bf86298e62ea372c94cb955975b542ba9988476f7e9043964",
+      "reference_sectors": [
+        0.9673109214728923,
+        0.03268907852710757
+      ],
+      "candidate_sectors": [
+        0.9673109214729202,
+        0.03268907852707983
+      ],
+      "maximum_sector_error": 2.786659791809143e-14,
+      "risk_gap_identity_error": 6.938893903907228e-18,
+      "normalization_error": 0.0,
+      "minimum_sector_mass": 0.03268907852707983,
+      "maximum_exact_bond": 27,
+      "sector_swap_risk_error": 0.0,
+      "sector_swap_abs_gap_error": 0.0
+    }
+  ],
+  "counters": {
+    "new_physical_records": 0,
+    "exact_control_records": 10,
+    "candidate_evaluations": 20,
+    "bootstrap_replicates": 0,
+    "l13_histories": 0
+  },
+  "source_hashes": {
+    "implementation": "d501fee33dc812b6837791f1bcca314c8d795b3c6f4fba9836ba3fd3905fee16",
+    "runner": "9d441596cbcc914439a12d4eb35e155637b65bb2062bcbf19caca4f4da5eeb9f",
+    "current_oracle": "241916aa389193b7b62a3ea2de7f4267086dfcca60760ee514e27100f40fa6ee",
+    "lattice_model": "b87a5feba27675e26970360d730324b7d3740e4dc0492b4dc478e510f140c9e7"
+  },
+  "claim_boundary": "This validates exact tensorization and public charge-only inputs at L5/L7. It does not validate finite-chi accuracy, L13 evidence, a phase, or a threshold."
+}

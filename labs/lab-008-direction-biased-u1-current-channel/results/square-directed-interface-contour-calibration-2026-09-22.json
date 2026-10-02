@@ -1,0 +1,46 @@
+{
+  "id": "lab008-square-directed-interface-contour-calibration-2026-09-22",
+  "status": "exact_corollary_and_obstruction",
+  "date": "2026-09-22",
+  "question": "Does the new risk-weighted interface-distinguishability target yield a stronger square q=1 correctability region than the existing path theorem?",
+  "setting": {
+    "geometry": "canonical square patch",
+    "direction_bias": 1,
+    "shortest_rough_to_rough_path": "d_L=L-1",
+    "oriented_path_count": "at most 2L*3^(n-1) candidates of length n",
+    "edge_affinity": "gamma_1(p)=sqrt(p(1-p))",
+    "entropy_activity_ratio": "rho(p)=3*sqrt(p(1-p))"
+  },
+  "exact_contour_corollary": {
+    "scope": "0<p<(3-sqrt(5))/6",
+    "threshold_exact": "p_suff(1)=(3-sqrt(5))/6",
+    "threshold_decimal": 0.12732200375003502,
+    "bound": "0<=E[c(Q)]<=E[r(Q)d_Q]<=R_L<=min(1/2,(2L/3)*rho(p)^(L-1)/(1-rho(p)))",
+    "rate": "For fixed p in the strict region, the exponential factor is exp(-(L-1)kappa(p)) with kappa(p)=-log(rho(p))>0; the prefactor is 2L/[3(1-rho(p))].",
+    "derivation": [
+      "The exact interface theorem gives c(Q)<=r(Q)d_Q.",
+      "Total variation obeys 0<=d_Q<=1, hence r(Q)d_Q<=r(Q).",
+      "Averaging gives E[c(Q)]<=E[r(Q)d_Q]<=R_L.",
+      "The existing square q=1 path theorem bounds R_L by summing the oriented logical-path witnesses."
+    ]
+  },
+  "unresolved_point_obstruction": {
+    "p": 0.3,
+    "rho": 1.374772708486752,
+    "log_decay_rate_candidate": -0.31828841453577555,
+    "failed_step": "The witness sum requires sum_{n>=L-1} rho^n to be a convergent geometric series. At p=.30 rho>1, so this step provides neither decay nor a finite nontrivial bound.",
+    "interpretation": "Failure of this sufficient contour sum is not evidence of undecodability and does not locate a transition. The exact interface-TV inequality remains valid, but d_Q<=1 supplies no contraction beyond the already failed path envelope."
+  },
+  "scientific_decision": {
+    "new_correctable_region": false,
+    "new_threshold": false,
+    "role": "calibration and proof-obstruction isolation",
+    "next_theorem_needed": "Exploit a sector-conditioned property of the canonical square interface law that makes E[r(Q)d_Q] smaller than R_L on risk-carrying records; generic total variation, boundary entropy and the unconditional path union cannot do this."
+  },
+  "claim_boundary": "This result is an exact corollary in the already certified low-noise region. It neither estimates the actual square threshold nor extends the certificate toward p=.30.",
+  "compute": {
+    "new_physical_samples": 0,
+    "new_system_sizes": 0,
+    "bootstrap_replicates": 0
+  }
+}

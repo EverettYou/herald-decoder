@@ -1,0 +1,121 @@
+{
+  "status": "complete_recurrence_obstruction",
+  "physical_parameters": {
+    "geometry": "square",
+    "L": 4,
+    "p": "1/2",
+    "q": "1"
+  },
+  "new_physical_record_samples": 0,
+  "decoder_runs": 0,
+  "exhaustive_current_states": 262144,
+  "fixed_charge_records": 44494,
+  "recurrence": "C_(s+1,Q)(t)=C_(s,Q)(t)+t^ell_s C_(s,Q-d_s)(t)",
+  "recurrence_definitions": {
+    "d_s": "measured signed-incidence column of processed edge s",
+    "ell_s": "1 for a logical-cut edge and 0 otherwise",
+    "column_grouping": "left-to-right by the maximum x coordinate of each edge",
+    "edge_order": [
+      0,
+      2,
+      5,
+      7,
+      10,
+      12,
+      15,
+      1,
+      4,
+      6,
+      9,
+      11,
+      14,
+      16,
+      3,
+      8,
+      13,
+      17
+    ]
+  },
+  "transfer_validation": {
+    "matches_independent_exhaustive_table": true,
+    "actual_two_summand_pairs_tested": 34721,
+    "actual_pair_interlacing_failures": 0,
+    "final_real_nonpositive_root_failures": 0,
+    "scope": "finite canonical L4 diagnostic only"
+  },
+  "common_family_interlacing_counterexample": {
+    "meaning": "refutes the simplest induction requiring one common interlacing for the entire fixed-charge family",
+    "first_polynomial_coefficients": [
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "first_charge": [
+      1,
+      0,
+      0,
+      1,
+      -2,
+      1,
+      1,
+      -1
+    ],
+    "first_polynomial": "t",
+    "first_roots_exact": [
+      "0"
+    ],
+    "second_polynomial_coefficients": [
+      1,
+      5,
+      1,
+      0,
+      0
+    ],
+    "second_charge": [
+      -2,
+      1,
+      2,
+      0,
+      -1,
+      0,
+      1,
+      0
+    ],
+    "second_polynomial": "1+5t+t^2",
+    "second_roots_exact": [
+      "(-5-sqrt(21))/2",
+      "(-5+sqrt(21))/2"
+    ],
+    "why_no_interlacing": "the root 0 of t is not between the two strictly negative roots of 1+5t+t^2",
+    "claim_boundary": "not a counterexample to real-rootedness and not a threshold result"
+  },
+  "L4_posterior_control": {
+    "ambiguous_records": 24638,
+    "asymmetric_ambiguous_records": 18862,
+    "Bayes_LER_exact": "11849/32768",
+    "ambiguous_record_probability_exact": "116411/131072",
+    "conditional_posterior_balance_exact": "47396/116411",
+    "minimum_ambiguous_flux_variance_exact": "6/49",
+    "maximum_ambiguous_flux_variance_exact": "7/11"
+  },
+  "primary_hypothesis_audit": {
+    "source": "Borcea, Branden and Liggett, Negative dependence and the geometry of polynomials, JAMS 2009 / arXiv:0707.2340",
+    "url": "https://arxiv.org/abs/0707.2340",
+    "finding": "real-rootedness of a positive sum follows from suitable compatibility/interlacing hypotheses, but the full fixed-charge family fails a common interlacing and no theorem proving the observed structured local pairs for every L was found"
+  },
+  "decision": {
+    "outcome": "recurrence_obstruction_without_real_root_counterexample",
+    "established": "The exact transfer recurrence, exhaustive L4 table, final L4 real-rootedness, and every actual L4 local summand interlacing check pass.",
+    "obstruction": "The complete fixed-charge family is not a common-interlacing family, so the direct global compatibility induction is false.",
+    "not_established": "No all-size structured local-interlacing invariant and no size-uniform physical posterior-balance estimate are proved.",
+    "threshold_claim": "No square midpoint or decoding-threshold claim is promoted."
+  },
+  "elapsed_seconds": 2.020213457988575,
+  "source_sha256": {
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/check_posterior_polynomial_closure.py": "73e8e8c8ca36311c66be57f6e3e15e5d6cffe05383282fc51b1a8cf59459b39b",
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/current_oracle.py": "241916aa389193b7b62a3ea2de7f4267086dfcca60760ee514e27100f40fa6ee",
+    "labs/lab-008-direction-biased-u1-current-channel/manifests/posterior-polynomial-closure-2026-09-20.json": "ca18ae1df887cbb62452ec2743b157bc5ee9f7fd3d808d03fa76885bdc6c1556"
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "status": "complete_finite_saturation_missing_uniform_theorem",
+  "physical_parameters": {
+    "geometry": "square",
+    "p": "1/2",
+    "q": "1"
+  },
+  "new_physical_record_samples": 0,
+  "decoder_runs": 0,
+  "graph_definition": "within each full measured charge record, join opposite-sector binary currents iff one residual-directed simple rough-to-rough path flip maps them",
+  "optimization_definition": "unit-capacity bipartite maximum matching; symmetric fractional edge flow has the same optimum by bipartite matching-polytope integrality",
+  "size_audits": [
+    {
+      "L": 3,
+      "edges": 8,
+      "current_states": 256,
+      "charge_records": 64,
+      "ambiguous_charge_records": 46,
+      "simple_rough_to_rough_paths": 9,
+      "unique_switching_edges": 352,
+      "switching_edge_charge_failures": 0,
+      "switching_edge_parity_failures": 0,
+      "maximum_integral_matching_pairs": 112,
+      "bayes_numerator_sum_min_sector_counts": 112,
+      "record_saturation_failures": 0,
+      "finite_Bayes_LER_exact": "7/16",
+      "selector_stable_pairs": 86,
+      "additional_pairs_over_selector": 26,
+      "matching_fraction_of_bayes_numerator_exact": "1",
+      "fractional_certificate": {
+        "construction": "put symmetric weight one on each integral matching edge and zero elsewhere",
+        "total_weight": 112,
+        "maximum_vertex_load": 1,
+        "bipartite_integrality": true,
+        "fractional_optimum_equals_integral_optimum": true
+      },
+      "dual_vertex_cover": {
+        "construction": "within every charge record select all vertices of its smaller sector; choose sector zero on ties",
+        "size": 112,
+        "uncovered_switching_edges": 0,
+        "equals_matching_size": true
+      },
+      "component_audit": {
+        "all_components_including_isolates": 64,
+        "active_components": 46,
+        "isolated_states": 18,
+        "balanced_active_components": 32,
+        "unbalanced_active_components": 14,
+        "largest_active_component": 14,
+        "maximum_active_component_sector_imbalance": 1,
+        "sum_component_minority_sizes": 112,
+        "component_decomposition_gap_to_bayes_numerator": 0
+      },
+      "path_degree_audit": {
+        "active_states": 238,
+        "minimum_active_degree": 1,
+        "maximum_active_degree": 6,
+        "mean_active_degree_exact": "352/119",
+        "degree_histogram": {
+          "1": 32,
+          "2": 64,
+          "3": 48,
+          "4": 74,
+          "5": 16,
+          "6": 4
+        },
+        "interpretation": "positive degree is crossing existence; degree counts alone do not imply Hall expansion"
+      }
+    },
+    {
+      "L": 4,
+      "edges": 18,
+      "current_states": 262144,
+      "charge_records": 44494,
+      "ambiguous_charge_records": 24638,
+      "simple_rough_to_rough_paths": 80,
+      "unique_switching_edges": 580608,
+      "switching_edge_charge_failures": 0,
+      "switching_edge_parity_failures": 0,
+      "maximum_integral_matching_pairs": 94792,
+      "bayes_numerator_sum_min_sector_counts": 94792,
+      "record_saturation_failures": 0,
+      "finite_Bayes_LER_exact": "11849/32768",
+      "selector_stable_pairs": 56706,
+      "additional_pairs_over_selector": 38086,
+      "matching_fraction_of_bayes_numerator_exact": "1",
+      "fractional_certificate": {
+        "construction": "put symmetric weight one on each integral matching edge and zero elsewhere",
+        "total_weight": 94792,
+        "maximum_vertex_load": 1,
+        "bipartite_integrality": true,
+        "fractional_optimum_equals_integral_optimum": true
+      },
+      "dual_vertex_cover": {
+        "construction": "within every charge record select all vertices of its smaller sector; choose sector zero on ties",
+        "size": 94792,
+        "uncovered_switching_edges": 0,
+        "equals_matching_size": true
+      },
+      "component_audit": {
+        "all_components_including_isolates": 54546,
+        "active_components": 25224,
+        "isolated_states": 29322,
+        "balanced_active_components": 6130,
+        "unbalanced_active_components": 19094,
+        "largest_active_component": 135,
+        "maximum_active_component_sector_imbalance": 15,
+        "sum_component_minority_sizes": 94792,
+        "component_decomposition_gap_to_bayes_numerator": 0
+      },
+      "path_degree_audit": {
+        "active_states": 232822,
+        "minimum_active_degree": 1,
+        "maximum_active_degree": 30,
+        "mean_active_degree_exact": "580608/116411",
+        "degree_histogram": {
+          "1": 25352,
+          "2": 34712,
+          "3": 33344,
+          "4": 28442,
+          "5": 24856,
+          "6": 22536,
+          "7": 16492,
+          "8": 13714,
+          "9": 9116,
+          "10": 8584,
+          "11": 5756,
+          "12": 3268,
+          "13": 2208,
+          "14": 1860,
+          "15": 956,
+          "16": 686,
+          "17": 376,
+          "18": 252,
+          "19": 64,
+          "20": 108,
+          "21": 44,
+          "22": 36,
+          "23": 28,
+          "25": 12,
+          "26": 12,
+          "29": 4,
+          "30": 4
+        },
+        "interpretation": "positive degree is crossing existence; degree counts alone do not imply Hall expansion"
+      }
+    }
+  ],
+  "controller_audit": {
+    "path_count": "exact vertex degree; useful finite diagnostic but no degree-only lower bound supplies all-subset Hall expansion",
+    "crossing_existence": "equivalent to positive switching degree and therefore insufficient by itself to bound paired mass",
+    "crossing_cluster_or_arm_event": "a possible analytic route only if it yields size-uniform neighborhood capacity or a positive-density family of pairable components",
+    "required_asymptotic_statement": "a size-uniform lower bound on maximum matching density, or an explicit all-size injection/mass transport with bounded congestion"
+  },
+  "decision": {
+    "outcome": "exact_L3_L4_saturation_but_missing_asymptotic_capacity_theorem",
+    "established": "For every L3/L4 charge record, maximum single-path matching saturates the smaller logical sector. The matching equals the Bayes numerator and an explicit same-size vertex cover, so the integral and fractional optima are exact.",
+    "selector_comparison": "Removing the deterministic selector recovers 26 additional pairs at L3 and 38086 at L4 over the selector-stable construction.",
+    "finite_only": "The exact matching densities are 7/16 at L3 and 11849/32768 at L4. Two sizes and finite saturation do not bound the thermodynamic limit.",
+    "not_established": "No all-size Hall theorem, bounded-congestion mass transport, or size-uniform positive matching-density event has been proved.",
+    "threshold_claim": "No square midpoint noncorrectability or decoding-threshold claim is promoted."
+  },
+  "elapsed_seconds": 0.6435133339837193,
+  "source_sha256": {
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/check_midpoint_fractional_switching.py": "30ad8b26ac632231917d5ed16ef8e6717ad7607578fc3e29545b8ff41fb81c5f",
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/check_midpoint_switching_pairing.py": "4aec56ec9ef90d6d6d193f896d6f6c5be8bf1a6719bbe085df4acb9c81ac2e18",
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/current_oracle.py": "241916aa389193b7b62a3ea2de7f4267086dfcca60760ee514e27100f40fa6ee",
+    "labs/lab-008-direction-biased-u1-current-channel/manifests/midpoint-fractional-switching-2026-09-20.json": "6da54c00ff5d652a9688b0c6ae00a0f194b871c18c0bc021d4e6664d987f13eb",
+    "labs/lab-008-direction-biased-u1-current-channel/results/midpoint-switching-pairing-2026-09-20.json": "f9f08b6f7b6deec22daab94800873090f1d9ca5d2e6613d08f48346c31672974"
+  }
+}

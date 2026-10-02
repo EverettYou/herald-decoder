@@ -1,0 +1,183 @@
+{
+  "id": "lab008-row-boundary-mps-fresh-validation-2026-09-22",
+  "status": "complete_passed",
+  "registered_at": "2026-09-22",
+  "not_yet_run": false,
+  "predecessor": "l13-boundary-mps-acquisition-2026-09-21.json",
+  "authorization": "Continuation of the registered L13 throughput remediation after the fast row-boundary schedule failed engineering equivalence but remained a candidate scientifically calibrated approximation.",
+  "program_alignment": {
+    "central_question": "Can the full-charge intrinsic posterior be evaluated beyond L=11 without changing the registered physical record or sacrificing the accuracy needed for fixed-gap transition diagnostics?",
+    "scientific_layer": "decoder-independent intrinsic recoverability; numerical-method validation only",
+    "epistemic_role": "fresh exact-control falsification of a new approximation",
+    "upstream_dependencies": [
+      "completed exact L9/L11 full-charge records",
+      "validated positive boundary-MPS tensorization",
+      "rejected engineering-equivalence test of the row-boundary schedule"
+    ],
+    "downstream_consumer": "the still-unarmed L13 boundary acquisition",
+    "information_value": "The candidate already meets the frozen throughput cap. A fresh exact cohort can now decide whether its different truncation rule is scientifically accurate enough, without generating any L13 history."
+  },
+  "question": "On exact L9/L11 records that were never used in the prior boundary-MPS development or held-out sets, does row-boundary TT-SVD at chi 16 and 32 preserve sector posterior, gap, risk, fixed-gap classification and low-gap risk share within the accuracy required by the L13 contract?",
+  "smallest_intended_claim": "Pass permits only replacement of the L13 posterior engine by the registered row-boundary approximation; fail closes this candidate at the frozen bond dimensions and budget.",
+  "competing_outcomes": {
+    "validated": "Every chi, sweep, cell and observable passes the exact-error gates on the fresh cohort, while the frozen throughput evidence remains within 7200 seconds.",
+    "accuracy_failure": "Any exact-error, cutoff, risk-share, identity or sweep-specific gate fails; row-boundary truncation is rejected for L13 production.",
+    "censored": "A source hash, replay, anti-leak, completeness, runtime or memory gate fails; no accuracy or L13 conclusion is promoted."
+  },
+  "claim_boundary": "This is a numerical-method validation. It cannot add an L13 point, estimate a threshold or crossing, identify a phase or exponent, relax the existing L13 sampling/sensitivity design, or reinterpret the completed L7-L11 scientific evidence.",
+  "research_basis": {
+    "primary_method_source": "bravyi2014-surface-code-mld",
+    "source_role": "positive boundary-MPS contraction template only; it supplies no accuracy theorem for this ternary-current row-boundary adaptation",
+    "prior_vertex_validation": "../results/boundary-mps-validation-2026-09-21.json",
+    "prior_frozen_cohort": "../results/boundary-mps-validation-cohort-2026-09-21.json",
+    "prior_frozen_cohort_sha256": "420a073126948e673f4dbbbc229b97cd3664685e1ef3225f740f9e8f026b2a9d",
+    "throughput_result": "../results/boundary-mps-throughput-remediation-2026-09-21.json",
+    "throughput_result_sha256": "722755c3165e0c7d118ed506311ac1b9b07c7c474bd3a1ef3988989d4b148495",
+    "observed_projected_four_worker_seconds": 1758.8124661054462,
+    "implementation": "../scripts/boundary_mps_posterior.py",
+    "implementation_sha256": "efb41d01b9e3e46957affafaa576bf0d30a771add3bc4bb728c78bad3b3f58d9",
+    "literature_scope": "No new physical or inferential model is introduced. The candidate is an implementation-specific approximation, so fresh paired exact validation—not an additional literature analogy—is the decisive evidence."
+  },
+  "frozen_physical_and_observation_contract": {
+    "lattice": "square",
+    "sizes": [
+      9,
+      11
+    ],
+    "stored_arrow_geometry": true,
+    "rough_boundaries": true,
+    "physical_error_rate": 0.3,
+    "bias_values": [
+      0.9,
+      0.94,
+      0.97
+    ],
+    "observation": "full physical charge record Q only",
+    "hidden_information": "physical current, activity/orientation uniforms and true logical sector are unavailable to the candidate evaluator",
+    "exact_target": "stored CurrentOracle normalized two-sector posterior",
+    "independent_unit": "one previously generated exact physical record",
+    "new_physical_histories": 0
+  },
+  "immutable_exact_sources": [
+    {
+      "L": 9,
+      "q": 0.9,
+      "path": "../results/size-bias-extension-cells/square-L9-p30-q90-extension.json",
+      "sha256": "6cef7f4c0280bb830a5b702f1a02c0fe2053dd42ea91ebe57184b201a8099c58"
+    },
+    {
+      "L": 9,
+      "q": 0.94,
+      "path": "../results/posterior-gap-boundary-tail-cells/square-L9-p30-q94-boundary-tail.json",
+      "sha256": "60d7eccad5412c3655b9ae03afb0643eae49ce941a1d381cc9517385c9bd6f35"
+    },
+    {
+      "L": 9,
+      "q": 0.97,
+      "path": "../results/size-bias-extension-cells/square-L9-p30-q97-extension.json",
+      "sha256": "82ffff33c6855974e901f2c3d2ddb2110879cba3b29c198b90a56f3324ad8a99"
+    },
+    {
+      "L": 11,
+      "q": 0.9,
+      "path": "../results/posterior-gap-boundary-tail-cells/square-L11-p30-q90-boundary-tail.json",
+      "sha256": "82f9456a71368a34ab9071a1dad3b2c75f0e89d09c58f4d040030ef7179527db"
+    },
+    {
+      "L": 11,
+      "q": 0.94,
+      "path": "../results/posterior-gap-boundary-tail-cells/square-L11-p30-q94-boundary-tail.json",
+      "sha256": "98a789a1e766009a6a4688a75a3d8a5f5c169fde0c4c00bf2b60e1e1555f57b5"
+    },
+    {
+      "L": 11,
+      "q": 0.97,
+      "path": "../results/posterior-gap-boundary-tail-cells/square-L11-p30-q97-boundary-tail.json",
+      "sha256": "729b78b29b093aafca907e079ffaa12fa4871923949dc132febeaa8954b2bb97"
+    }
+  ],
+  "fresh_cohort": {
+    "records_per_cell": 8,
+    "total_records": 48,
+    "exclusion": "Exclude all 96 record keys in boundary-mps-validation-cohort-2026-09-21.json, including both development and held-out splits, before stratification.",
+    "record_key_rule": "Use stored record_key when present; otherwise use <source-file-stem>:index<sample_index>, exactly as in the prior cohort builder.",
+    "selection_rule": "Within each L/q cell, sort all remaining records by (absolute exact signed gap, sample_index), divide the ordered indices into eight contiguous numpy.array_split strata, and in each stratum select the record minimizing SHA256('row-boundary-fresh-v1|' + record_key), breaking an impossible digest tie by record_key.",
+    "freeze_before_evaluation": true,
+    "cohort_output": "../results/row-boundary-mps-fresh-validation-cohort-2026-09-22.json",
+    "reuse_of_prior_selected_records": 0
+  },
+  "candidate_matrix": {
+    "truncation_schedule": "dense frontier updates within a completed lattice row; deterministic full-SVD TT truncation only at row boundaries",
+    "bond_dimensions": [
+      16,
+      32
+    ],
+    "sweep_directions": [
+      "left-to-right",
+      "right-to-left"
+    ],
+    "candidate_evaluations": 192,
+    "pairing": "Every candidate is compared with the stored exact posterior for the same frozen physical record; chi and sweep branches remain paired within record.",
+    "no_development_split": "The candidate implementation and gates are frozen. All 48 records are a single-use confirmatory cohort; no debugging or parameter selection may consume them."
+  },
+  "validation_gates": {
+    "source_and_replay": "All six source hashes and the prior-cohort hash match; exactly 48 unique fresh record keys and charge hashes replay before candidate evaluation.",
+    "public_interface": "Candidate receives only Q, p, q, public lattice geometry, chi, sweep direction and the frozen row schedule.",
+    "identity": "Every sector mass is finite and nonnegative, normalization is positive, and risk equals 1/(1+exp(abs(DeltaF))) to 1e-10.",
+    "completeness": "All 192 registered evaluations complete; missing or nonfinite rows censor the study.",
+    "per_cell_sweep_chi_gap": "For every L/q/sweep/chi block of eight records, median absolute gap error <=0.02 and 95th-percentile absolute gap error <=0.05.",
+    "per_cell_sweep_chi_risk": "For every block, 95th-percentile absolute record-risk error <=0.005.",
+    "fixed_gap_cdf": "For a in {0.5,1,2,4}, every block has absolute exact-versus-candidate C_L(a) error <=0.02; with eight records this requires no cutoff misclassification.",
+    "low_gap_risk_share": "For the same cutoffs, every block has absolute exact-versus-candidate B_L(a) error <=0.02.",
+    "throughput": "The frozen remediation result must continue to project the unchanged L13 minimum primary+sensitivity matrix to <=7200 four-worker seconds.",
+    "memory": "Conservative main-plus-worker peak <=8 GiB.",
+    "all_branches": "Both chi values and both sweep directions must independently pass every cell; agreement between approximate branches cannot substitute for exact accuracy."
+  },
+  "uncertainty_and_analysis": {
+    "unit": "physical record",
+    "bootstrap_replicates": 0,
+    "reason": "This is a finite paired method-validation cohort with deterministic per-record and aggregate error gates, not a population estimate.",
+    "promotion_rule": "Promote only if every registered gate passes without parameter changes. Report the worst block for every metric, not only pooled averages.",
+    "failure_rule": "Any failed branch rejects row-boundary TT-SVD at chi 16/32 for the L13 contract; do not select a favorable sweep, raise chi, relax a cutoff or reuse the cohort for tuning."
+  },
+  "budget": {
+    "maximum_new_physical_records": 0,
+    "maximum_candidate_evaluations": 192,
+    "maximum_runtime_seconds": 1200,
+    "maximum_peak_memory_gib": 8,
+    "worker_processes_max": 4,
+    "new_external_dependencies": 0,
+    "bootstrap_replicates": 0,
+    "l13_histories": 0
+  },
+  "outputs": {
+    "cohort": "../results/row-boundary-mps-fresh-validation-cohort-2026-09-22.json",
+    "result": "../results/row-boundary-mps-fresh-validation-2026-09-22.json",
+    "runner": "../scripts/run_row_boundary_mps_fresh_validation.py"
+  },
+  "acceptance_criteria": [
+    "The fresh cohort is frozen from the six immutable exact sources after excluding every prior selected record, before any candidate evaluation.",
+    "All 192 charge-only paired evaluations complete within the registered runtime and memory caps and pass identity, replay and anti-leak gates.",
+    "Every chi/sweep/L/q block passes the exact gap, risk, fixed-gap CDF and low-gap risk-share gates.",
+    "A pass changes only the numerical method named by the existing L13 contract; a failure keeps L13 production unarmed, and neither outcome supplies L13 scientific evidence."
+  ],
+  "stop_rule": "This registration tick creates no cohort file, candidate evaluation, bootstrap replicate or L13 history. On the next authorized tick, freeze the cohort first and then run exactly this 192-evaluation matrix. Stop on any provenance or replay mismatch. After completion, either promote the candidate exactly as registered or reject it; do not tune on the fresh cohort.",
+  "execution_freeze": {
+    "cohort_sha256": "1df6e0347b919cf8e443cd953d3b32892cf33b323d958cc0c3d1f66e1d431bbd",
+    "runner_sha256": "31867ca5d48755f6d13ee205e834e2b0afa69083630124fde34466ebaa66e548",
+    "source_charge_replay_and_exclusion": "passed_before_candidate_evaluation",
+    "fresh_records": 48,
+    "reused_prior_records": 0
+  },
+  "decision": "Promote row-boundary TT-SVD as a distinct validated approximation; repeat the frozen zero-history L13 preflight with row schedule before production.",
+  "result": {
+    "path": "../results/row-boundary-mps-fresh-validation-2026-09-22.json",
+    "sha256": "58c5a874bdca4b6a986703d7785187c636ef08ed0ca16cd2215fbf75c74ed50b",
+    "evaluations": 192,
+    "all_24_blocks_pass": true,
+    "runtime_seconds": 30.509640999999647,
+    "conservative_peak_gib": 0.620758056640625,
+    "new_physical_histories": 0,
+    "l13_histories": 0
+  }
+}

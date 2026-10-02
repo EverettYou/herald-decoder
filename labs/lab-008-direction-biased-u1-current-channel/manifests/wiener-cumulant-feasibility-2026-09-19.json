@@ -1,0 +1,34 @@
+{
+  "id": "lab008-wiener-cumulant-feasibility-2026-09-19",
+  "status": "complete_promoted",
+  "authorization": "Continue the bounded connected-cluster feasibility branch after both global omitted-mass relaxations failed.",
+  "question": "Does the exact local current kernel admit a uniformly controlled connected-cumulant representation whose error controls the full LER functional in Fourier l1 norm?",
+  "frozen_model": "Same ternary edge kernel K(phi)=1-p+pq exp(i phi)+p(1-q) exp(-i phi), E=32 L5 square, logical twist and measured-charge Fourier projection.",
+  "method": {
+    "banach_space": "Multivariate Wiener algebra of absolutely summable Fourier coefficients; twists preserve its norm and charge projection/grouping is l1-contractive.",
+    "factorization": "K=(1-p)(1+z S), z=p/(1-p), S=q exp(i phi)+(1-q)exp(-i phi), with ||S||_A=1.",
+    "connected_cumulants": "P_N(x)=sum_{n=1}^N (-1)^(n+1)x^n/n approximates log(1+x). For p<1/2, ||R_N||_A<=r_N=sum_{n>N}z^n/n.",
+    "full_graph_bound": "For F=product_e K_e and F_N=(1-p)^E exp(sum_e P_N(zS_e)), ||F-F_N||_A<=exp(E r_N)-1 because ||F||_A=1.",
+    "LER_bound": "The same bound controls the twisted projected coefficient l1 error, hence |LER_N-LER|<=[exp(E r_N)-1]/2. This is a deterministic approximation error, not sampling uncertainty."
+  },
+  "matrix": {
+    "E": 32,
+    "p": [0.05,0.08,0.1,0.3,0.46],
+    "N": [1,2,3,4,5,6,8,10,12,16,24,32,48,64],
+    "target_absolute_LER_error": [0.01,0.001,0.0001],
+    "q": "bound is uniform for all q in [0,1]"
+  },
+  "acceptance": [
+    "Verify the scalar log remainder and product bound numerically on a deterministic phase grid while retaining the analytic Wiener proof as the claim basis.",
+    "Promote feasibility at a p value only if some registered N gives absolute LER error <=0.001. Record the smallest such N.",
+    "Distinguish representation control from evaluability: this contract does not claim LER_N has yet been contracted on L5.",
+    "No decoder, threshold, phase, CFT or fitted-curve claim."
+  ],
+  "budget": {"deterministic_scalar_phase_points_per_cell": 4097, "maximum_order": 64, "no_sampling": true, "no_decoder_runs": true},
+  "stop_rule": "Stop after the frozen error-budget matrix. If p=.08 is feasible, register finite-harmonic evaluation of F_N next; if not, reject this cumulant route at the registered accuracy.",
+  "registered_at": "2026-09-19 00:06:17 UTC",
+  "result": "results/wiener-cumulant-feasibility-2026-09-19.json",
+  "decision": "Promote the Wiener connected-cumulant representation to finite-harmonic evaluation. On the L5 E=32 square, the q-uniform absolute LER error is <=.001 at p=.08 with N=3, p=.10 with N=3 and p=.30 with N=10.",
+  "completed_at": "2026-09-19 00:06:17 UTC",
+  "next_action": "Register a finite-harmonic approximation to exp(P_N) with an additional certified Wiener tail, contract the twisted charge coefficients, and report LER_N with the combined deterministic error."
+}

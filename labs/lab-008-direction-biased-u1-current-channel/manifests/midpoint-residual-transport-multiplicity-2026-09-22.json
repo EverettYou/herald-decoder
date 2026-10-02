@@ -1,0 +1,39 @@
+{
+  "id": "lab008-midpoint-residual-transport-multiplicity-2026-09-22",
+  "status": "complete_counterfamily",
+  "registered_at": "2026-09-22",
+  "parent_contract": "thermodynamic-theory-reorientation-2026-09-22.json",
+  "question": "At p=1/2, does the frozen shortest/lexicographic residual-path map have an L-independent inverse-multiplicity bound?",
+  "claim_boundary": "This study concerns only the frozen deterministic map on the canonical q=1 square. A growing preimage family rejects that map as a bounded-to-one coupling, but does not reject fractional transport, another deterministic selector, or midpoint decodability.",
+  "frozen_model": {
+    "geometry": "canonical square of every integer size L>=3",
+    "channel": "q=1 at p=1/2",
+    "transport": "the already frozen shortest residual crossing, then left-to-right, edge-index and vertex lexicographic tie rule",
+    "target_image": "j_star has current 1 on every horizontal edge and 0 on every vertical edge",
+    "candidate_preimages": "for each row r, j_r is j_star with exactly that row's horizontal crossing toggled"
+  },
+  "competing_outcomes": {
+    "uniform_bound": "Every image has at most C preimages for one L-independent constant C.",
+    "counterfamily": "The single image j_star has at least L distinct preimages j_r, disproving every L-independent bound."
+  },
+  "proof_obligations": [
+    "Each row crossing is a residual left-to-right path of length L-1 in j_r.",
+    "Every rough-to-rough path has length at least L-1.",
+    "Although j_r has right-to-left row crossings of the same length, the frozen direction tie rule selects the left-to-right row r.",
+    "T(j_r)=j_star for all r, and the j_r are distinct."
+  ],
+  "verification": "Replay the construction only at the already audited L=3,4 controls; do not enumerate a new size.",
+  "acceptance": {
+    "counterfamily": "A proof valid for all L>=3 plus exact L3/L4 replay with zero construction, selector, image, charge, or logical failures.",
+    "uniform_bound": "An explicit L-independent bound proved for every image; finite L3/L4 maxima alone are insufficient."
+  },
+  "compute_budget": {
+    "new_physical_samples": 0,
+    "new_system_sizes": 0,
+    "new_bootstrap_replicates": 0,
+    "verification_sizes": [3, 4]
+  },
+  "stop_rule": "Stop once one analytic outcome is proved and replayed on L3/L4. Do not tune the selector or test L>=5.",
+  "result": "../results/midpoint-residual-transport-multiplicity-2026-09-22.json",
+  "outcome": "For every L>=3, the all-horizontal-left target j_star has at least L distinct row preimages under the frozen rule. Therefore maximum inverse multiplicity is at least L and no size-independent bound exists. Exact L3/L4 replay has zero failures."
+}

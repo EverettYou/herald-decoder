@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "phase": "J1-E4B",
+  "title": "D4 repeated-measurement translation interface matrix",
+  "registered_at": "2026-09-19T13:47:55Z",
+  "purpose": "Consolidate the already implemented D4 projector, remediated two-stage public interface, causal temporal composition and four-schedule shared-history fixtures before any stochastic schedule pilot.",
+  "scope": "Deterministic interface fixtures only. No production history generation, decoder performance comparison, bootstrap, threshold, crossing or fault-tolerance claim.",
+  "frozen_dependencies": {
+    "j1_e4_manifest": {
+      "path": "labs/lab-005-spacetime-jit-anyonic-decoding/manifests/j1-e4-d4-lyons-brown-translation-manifest-2026-08-29.json",
+      "sha256": "6db58efc743fdf54925414f6d1689ac07ccef36faf62f77fcdeb056ad0860a52"
+    },
+    "r6af_manifest": {
+      "path": "labs/lab-004-d4-intrinsic-heralded-decoding/manifests/r6af-two-stage-public-charge-reproduction-manifest-2026-09-01.json",
+      "sha256": "d808a3032f4e48233f09e8886cd0580799598d24f945d27d5f9e1617040b6ffc"
+    },
+    "r6af_preflight": {
+      "path": "labs/lab-004-d4-intrinsic-heralded-decoding/results/r6af-two-stage-public-charge-preflight-2026-09-01.json",
+      "sha256": "cd8d12cd3d920b6f933a7d78f1512d68904abb911d4cf0d0f8d72ca944367c81",
+      "required_status": "passed"
+    }
+  },
+  "gates": [
+    "All D4 hidden-to-public report rows and the registered categorical herald channel are normalized; perfect and zero-noise limits reproduce their deterministic records.",
+    "The second public record is action-conditioned, full binary, support-checked against its own action, and rejects wrong-action binding.",
+    "Public charge action consumes no private relation, support, effective-string, truth or sentinel field.",
+    "Every online temporal state and causal prefix excludes future and truth-sidecar fields.",
+    "Immediate, fixed-delay, JIT and offline branches consume one immutable visible-history digest while only offline is explicitly noncausal.",
+    "The same two public policy modes complete across all four schedules under matched timing and information budgets.",
+    "Nontrivial winding is an unconditional ground-state-relative logical failure; private scoring cannot mutate or precede a completed public transition.",
+    "Deterministic replay preserves every public request, action, completion state and registered key relation."
+  ],
+  "acceptance": "Every frozen hash and R6AF status matches; every gate group exits zero; no production histories, arm evaluations or performance samples are created.",
+  "stop_rule": "Fail closed on the first provenance mismatch or any failed gate. Preserve the matrix result and keep stochastic history generation and schedule-performance sampling blocked.",
+  "compute_budget": "At most eight deterministic pytest gate groups over existing fixtures; zero production histories and zero performance evaluations.",
+  "runner": "scripts/run_j1_e4b_translation_interface_matrix.py",
+  "result": "results/j1-e4b-d4-translation-interface-matrix-2026-09-19.json",
+  "outcome": {
+    "completed_gate_groups": 8,
+    "passed_fixtures": 20,
+    "source_hash_update": "Only the J1-E4C-audited d4_charge.py freeze was updated in the Lab 005 public adapter and its source contract, from c7b528d343abedb052e6bea7f5c29f65de2bab5dae96befa339763198bb17e9a to 2ba3dd13feda42e4441ae0089be2403b5c75b626ae0a0542d4aa9089807472fd.",
+    "production_histories_generated": 0,
+    "performance_evaluations": 0,
+    "bootstrap_replicates": 0,
+    "decision": "Release only registration of the smallest matched-history stochastic pilot. No stochastic history generation or schedule-performance sampling occurred in this transition."
+  }
+}

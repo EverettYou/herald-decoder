@@ -1,0 +1,210 @@
+{
+  "status": "complete_direct_reduction_missing_uniform_average_congestion",
+  "physical_parameters": {
+    "geometry": "square",
+    "p": "1/2",
+    "q": "1"
+  },
+  "new_physical_record_samples": 0,
+  "decoder_runs": 0,
+  "exact_controls": [
+    {
+      "L": 3,
+      "edges": 8,
+      "measured_charge_dimension": 3,
+      "simple_rough_to_rough_paths": 9,
+      "lower_extremal_selector": {
+        "ambiguous_states": 238,
+        "ambiguous_probability_exact": "119/128",
+        "majority_domain_states": 126,
+        "majority_domain_probability_exact": "63/128",
+        "preimage_multiplicity_second_moment": 220,
+        "effective_size_biased_multiplicity_exact": "110/63",
+        "maximum_multiplicity": 3,
+        "Cauchy_direct_risk_lower_bound_exact": "3969/14080",
+        "Cauchy_direct_risk_lower_bound": 0.2818892045454545,
+        "exact_Bayes_risk_exact": "7/16",
+        "certificate_fraction_of_exact_risk": 0.6443181818181818,
+        "missing_selector_states": 0
+      },
+      "upper_extremal_selector": {
+        "ambiguous_states": 238,
+        "ambiguous_probability_exact": "119/128",
+        "majority_domain_states": 126,
+        "majority_domain_probability_exact": "63/128",
+        "preimage_multiplicity_second_moment": 220,
+        "effective_size_biased_multiplicity_exact": "110/63",
+        "maximum_multiplicity": 3,
+        "Cauchy_direct_risk_lower_bound_exact": "3969/14080",
+        "Cauchy_direct_risk_lower_bound": 0.2818892045454545,
+        "exact_Bayes_risk_exact": "7/16",
+        "certificate_fraction_of_exact_risk": 0.6443181818181818,
+        "missing_selector_states": 0
+      },
+      "natural_charge_reveal": {
+        "charge_prefix_lengths": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "Bayes_risk_exact": [
+          "1/2",
+          "1/2",
+          "1/2",
+          "7/16"
+        ],
+        "conditional_logical_entropy_bits": [
+          1.0,
+          1.0,
+          1.0,
+          0.9234596706506673
+        ],
+        "conditional_mutual_information_increment_bits": [
+          0.0,
+          0.0,
+          0.07654032934933275
+        ],
+        "interpretation": "This fixed valid reveal order can concentrate all observed logical information in its final charge. Chain rule and martingale monotonicity alone therefore do not distribute a positive entropy floor across local reveals."
+      }
+    },
+    {
+      "L": 4,
+      "edges": 18,
+      "measured_charge_dimension": 8,
+      "simple_rough_to_rough_paths": 80,
+      "lower_extremal_selector": {
+        "ambiguous_states": 232822,
+        "ambiguous_probability_exact": "116411/131072",
+        "majority_domain_states": 138030,
+        "majority_domain_probability_exact": "69015/131072",
+        "preimage_multiplicity_second_moment": 457086,
+        "effective_size_biased_multiplicity_exact": "76181/23005",
+        "maximum_multiplicity": 16,
+        "Cauchy_direct_risk_lower_bound_exact": "1587690075/9985196032",
+        "Cauchy_direct_risk_lower_bound": 0.15900439710065373,
+        "exact_Bayes_risk_exact": "11849/32768",
+        "certificate_fraction_of_exact_risk": 0.4397211650092178,
+        "missing_selector_states": 0
+      },
+      "upper_extremal_selector": {
+        "ambiguous_states": 232822,
+        "ambiguous_probability_exact": "116411/131072",
+        "majority_domain_states": 138030,
+        "majority_domain_probability_exact": "69015/131072",
+        "preimage_multiplicity_second_moment": 457026,
+        "effective_size_biased_multiplicity_exact": "76171/23005",
+        "maximum_multiplicity": 16,
+        "Cauchy_direct_risk_lower_bound_exact": "1587690075/9983885312",
+        "Cauchy_direct_risk_lower_bound": 0.15902527176385897,
+        "exact_Bayes_risk_exact": "11849/32768",
+        "certificate_fraction_of_exact_risk": 0.4397788931688861,
+        "missing_selector_states": 0
+      },
+      "natural_charge_reveal": {
+        "charge_prefix_lengths": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "Bayes_risk_exact": [
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "11849/32768"
+        ],
+        "conditional_logical_entropy_bits": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.8514082240002299
+        ],
+        "conditional_mutual_information_increment_bits": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.14859177599977014
+        ],
+        "interpretation": "This fixed valid reveal order can concentrate all observed logical information in its final charge. Chain rule and martingale monotonicity alone therefore do not distribute a positive entropy floor across local reveals."
+      }
+    }
+  ],
+  "direct_average_congestion_lemma": {
+    "setup": "On every ambiguous full-charge fiber, choose its majority sector and apply one deterministic residual-crossing selector to every majority state. Let A_L be the number of such domain states and m_y the number of selected preimages of target state y.",
+    "inequality": "R_L >= A_L^2 / (2^E sum_y m_y^2) = (A_L/2^E)/kappa_L, where kappa_L=(sum_y m_y^2)/A_L.",
+    "proof": "Within each fiber, Cauchy-Schwarz gives a_Q^2 <= s_Q sum_y m_y^2, where a_Q and s_Q are majority and minority counts. Sum over fibers and apply Cauchy-Schwarz once more.",
+    "thermodynamic_sufficient_condition": "RSW supplies positive ambiguous mass and A_L is at least half that mass. A size-uniform upper bound on kappa_L for one full-record selector would therefore prove a positive physical Bayes-risk lower bound.",
+    "boundary": "The finite exact values of kappa_L are controls only; no size-uniform bound is proved."
+  },
+  "branch_matrix": {
+    "full_record_renormalized_switching": {
+      "outcome": "exact_direct_reduction_but_missing_uniform_second_moment_bound",
+      "progress": "Worst-case selector congestion is replaced by the physical-domain second moment of preimage multiplicity. The exact certificate is positive and substantially below the true risk at L3/L4.",
+      "missing_hypothesis": "A renormalization or arm-event theorem must bound kappa_L uniformly while retaining the entire external charge record. Ordinary RSW controls crossing existence but not selector-collision second moments after conditioning."
+    },
+    "conditional_entropy_martingale": {
+      "outcome": "chain_rule_is_exact_but_not_a_local_lower_bound",
+      "progress": "For the frozen natural charge order, exact conditional risk and entropy are reported after every prefix.",
+      "obstruction": "Conditional entropy decreases as charges are revealed, and the information increments can be concentrated in a late reveal. A lower bound for a partial record therefore does not lower-bound entropy after the full record; a new geometric upper bound on total information gain is required."
+    },
+    "compatible_physical_obstruction": {
+      "outcome": "finite_square_mechanism_exists_but_no_asymptotic_physical_family_is_constructed",
+      "progress": "Canonical L4 already contains 96 physical K_(1,6) fibers of total mass 21/8192, showing that large local imbalance is compatible with the square channel.",
+      "boundary": "Neither this finite family nor the abstract K_(1,M) model proves vanishing physical average risk. An asymptotic square-lattice family with controlled physical mass remains unconstructed."
+    }
+  },
+  "primary_source_applicability": [
+    {
+      "source": "O'Donnell, Saks, Schramm and Servedio, Every decision tree has an influential variable (2005)",
+      "url": "https://arxiv.org/abs/cs/0508071",
+      "supported": "OSSS bounds the variance of a product-space Boolean function by revealments times raw-coordinate influences.",
+      "missing": "It does not lower-bound logical entropy remaining after the many-to-one full integer-charge observation, nor control the selector-collision second moment."
+    },
+    {
+      "source": "Schramm and Steif, Quantitative noise sensitivity and exceptional times for percolation (2010)",
+      "url": "https://doi.org/10.4007/annals.2010.171.619",
+      "supported": "low-revealment algorithms control Fourier levels of percolation crossing events.",
+      "missing": "the full-charge posterior minority ratio and selector multiplicity are not crossing indicators or monotone events."
+    },
+    {
+      "source": "Aizenman, Duminil-Copin, Sidoravicius and Sly, Random currents and continuity of Ising model's spontaneous magnetization (2015)",
+      "url": "https://doi.org/10.1007/s00220-015-2462-2",
+      "supported": "the random-current switching lemma exactly exchanges source constraints under factorial current weights.",
+      "missing": "this project has bounded directed binary currents, a fixed full divergence record and a logical-parity split, so the Ising source-switching identity does not provide the required map or averaged congestion bound."
+    }
+  ],
+  "decision": {
+    "outcome": "promote_average_congestion_as_the_precise_direct_target",
+    "established": "A positive midpoint Bayes-risk lower bound follows from RSW plus a size-uniform bound on the physical-domain selector multiplicity second moment kappa_L. This reduction avoids collision reweighting and worst-case congestion.",
+    "not_established": "No reviewed theorem bounds kappa_L with the full charge record; the entropy chain rule alone and finite K_(1,6) fibers do not resolve the thermodynamic risk.",
+    "threshold_claim": "No square midpoint noncorrectability or decoding-threshold claim is promoted."
+  },
+  "source_sha256": {
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/audit_midpoint_direct_risk_renormalization.py": "a7baf9bd552b6d67d0054e68aeebe7dfaceae624547ff762628eaf8ddda978a7",
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/check_midpoint_switching_pairing.py": "4aec56ec9ef90d6d6d193f896d6f6c5be8bf1a6719bbe085df4acb9c81ac2e18",
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/current_oracle.py": "241916aa389193b7b62a3ea2de7f4267086dfcca60760ee514e27100f40fa6ee",
+    "labs/lab-008-direction-biased-u1-current-channel/manifests/midpoint-direct-risk-renormalization-2026-09-20.json": "91df5524c5b586d9943fb162f440601a60b64b9a7dccbc17f7f920f2ce27fddd",
+    "labs/lab-008-direction-biased-u1-current-channel/results/midpoint-switching-pairing-2026-09-20.json": "f9f08b6f7b6deec22daab94800873090f1d9ca5d2e6613d08f48346c31672974",
+    "labs/lab-008-direction-biased-u1-current-channel/results/midpoint-charge-fiber-balance-theorem-2026-09-20.json": "597fe71d5c7d9b49b8919b48c75e9543731fc227add038ffb7c61cf2241ed4a5"
+  }
+}

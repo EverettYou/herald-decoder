@@ -1,0 +1,119 @@
+{
+  "bootstrap_replicates": 0,
+  "contract_sha256": "afa7dbc6c169aff747b8276bd86dfdfe94d824a939b40aca84fa418ffdd7c7a6",
+  "id": "lab005-j6j-cz-star-factor-representation-2026-09-24",
+  "inference_boundary": "This is an isolated A2 X\u00b7CZ factor on arbitrary product inputs, not a complete kagome star or D4 ground-space state. The full physical path/correction joint law and first-record-aware adapter remain unvalidated.",
+  "operator_checks": {
+    "cz_phase_non_pauli_character": true,
+    "hermitian": true,
+    "involution": true,
+    "permutation_covariance": true,
+    "two_outcome_normalization": true
+  },
+  "pinned_input_checks": {
+    "j6i_result": true,
+    "paper_pdf": true
+  },
+  "rows": [
+    {
+      "P_minus": "1/4",
+      "P_plus": "3/4",
+      "expectation": "1/2",
+      "input": "coherent_plus",
+      "labels_b_g_r": [
+        0,
+        1,
+        2
+      ],
+      "model": "source_factor"
+    },
+    {
+      "P_minus": "0",
+      "P_plus": "1",
+      "expectation": "1",
+      "input": "z_fixed_control",
+      "labels_b_g_r": [
+        0,
+        1,
+        2
+      ],
+      "model": "source_factor"
+    },
+    {
+      "P_minus": "0",
+      "P_plus": "1",
+      "expectation": "1",
+      "input": "coherent_plus",
+      "labels_b_g_r": [
+        0,
+        1,
+        2
+      ],
+      "model": "pauli_truncation"
+    },
+    {
+      "P_minus": "0",
+      "P_plus": "1",
+      "expectation": "1",
+      "input": "z_fixed_control",
+      "labels_b_g_r": [
+        0,
+        1,
+        2
+      ],
+      "model": "pauli_truncation"
+    },
+    {
+      "P_minus": "1/4",
+      "P_plus": "3/4",
+      "expectation": "1/2",
+      "input": "coherent_plus",
+      "labels_b_g_r": [
+        2,
+        0,
+        1
+      ],
+      "model": "source_factor"
+    },
+    {
+      "P_minus": "0",
+      "P_plus": "1",
+      "expectation": "1",
+      "input": "z_fixed_control",
+      "labels_b_g_r": [
+        2,
+        0,
+        1
+      ],
+      "model": "source_factor"
+    },
+    {
+      "P_minus": "0",
+      "P_plus": "1",
+      "expectation": "1",
+      "input": "coherent_plus",
+      "labels_b_g_r": [
+        2,
+        0,
+        1
+      ],
+      "model": "pauli_truncation"
+    },
+    {
+      "P_minus": "0",
+      "P_plus": "1",
+      "expectation": "1",
+      "input": "z_fixed_control",
+      "labels_b_g_r": [
+        2,
+        0,
+        1
+      ],
+      "model": "pauli_truncation"
+    }
+  ],
+  "schedule_arm_evaluations": 0,
+  "schema_version": 1,
+  "status": "passed_exact_local_representation_gate_only",
+  "stochastic_histories": 0
+}

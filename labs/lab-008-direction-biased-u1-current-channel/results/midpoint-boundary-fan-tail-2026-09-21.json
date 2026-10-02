@@ -1,0 +1,241 @@
+{
+  "status": "complete_witness_injection_conditioning_gap_and_bounded_template",
+  "physical_parameters": {
+    "geometry": "square",
+    "p": "1/2",
+    "q": "1"
+  },
+  "new_physical_record_samples": 0,
+  "decoder_runs": 0,
+  "exact_controls": [
+    {
+      "L": 3,
+      "edges": 8,
+      "majority_domain_states": 126,
+      "multiplicity_histogram": {
+        "1": 98,
+        "2": 14
+      },
+      "tail_under_size_biased_majority_domain": {
+        "1": {
+          "preimage_states": 126,
+          "probability_exact": "1",
+          "probability": 1.0
+        },
+        "2": {
+          "preimage_states": 28,
+          "probability_exact": "2/9",
+          "probability": 0.2222222222222222
+        }
+      },
+      "tail_sum_exact": "11/9",
+      "kappa_exact": "11/9",
+      "tail_identity_replayed": true,
+      "two_environment_witness": {
+        "signature": "alternate rough endpoints + first virtual divergence + first virtual reconnection",
+        "ordered_alternate_preimages": 28,
+        "signature_multiplicity_histogram": {
+          "1": 28
+        },
+        "injective_on_exact_control": true,
+        "first_collision": null,
+        "boundary": "Finite injectivity does not bound the number or probability of signatures uniformly in L."
+      }
+    },
+    {
+      "L": 4,
+      "edges": 18,
+      "majority_domain_states": 138030,
+      "multiplicity_histogram": {
+        "1": 54288,
+        "2": 24556,
+        "3": 9034,
+        "4": 1310,
+        "5": 242,
+        "6": 120,
+        "7": 42,
+        "8": 8
+      },
+      "tail_under_size_biased_majority_domain": {
+        "1": {
+          "preimage_states": 138030,
+          "probability_exact": "1",
+          "probability": 1.0
+        },
+        "2": {
+          "preimage_states": 83742,
+          "probability_exact": "13957/23005",
+          "probability": 0.6066941969137144
+        },
+        "3": {
+          "preimage_states": 34630,
+          "probability_exact": "3463/13803",
+          "probability": 0.250887488227197
+        },
+        "4": {
+          "preimage_states": 7528,
+          "probability_exact": "3764/69015",
+          "probability": 0.0545388683619503
+        },
+        "5": {
+          "preimage_states": 2288,
+          "probability_exact": "1144/69015",
+          "probability": 0.0165761066434833
+        },
+        "6": {
+          "preimage_states": 1078,
+          "probability_exact": "539/69015",
+          "probability": 0.007809896399333478
+        },
+        "7": {
+          "preimage_states": 358,
+          "probability_exact": "179/69015",
+          "probability": 0.0025936390639716
+        },
+        "8": {
+          "preimage_states": 64,
+          "probability_exact": "32/69015",
+          "probability": 0.00046366731869883356
+        }
+      },
+      "tail_sum_exact": "3113/1605",
+      "kappa_exact": "3113/1605",
+      "tail_identity_replayed": true,
+      "two_environment_witness": {
+        "signature": "alternate rough endpoints + first virtual divergence + first virtual reconnection",
+        "ordered_alternate_preimages": 129688,
+        "signature_multiplicity_histogram": {
+          "1": 129688
+        },
+        "injective_on_exact_control": true,
+        "first_collision": null,
+        "boundary": "Finite injectivity does not bound the number or probability of signatures uniformly in L."
+      }
+    }
+  ],
+  "diamond_chain_templates": [
+    {
+      "diamonds": 1,
+      "edges": 4,
+      "rough_to_rough_paths": 2,
+      "target_multiplicity_histogram": {
+        "0": 4,
+        "1": 12
+      },
+      "maximum_multiplicity": 1,
+      "maximum_multiplicity_targets": 12,
+      "maximum_target_probability_under_uniform_target_exact": "3/4",
+      "maximum_event_first_moment_weight_exact": "3/4",
+      "domain_preimages": 12,
+      "selector_kappa_exact": "1",
+      "boundary": "This isolated diamond chain checks selector compatibility only. Embedding it in the full square requires suppressing outside earlier paths and restoring the physical majority-domain law."
+    },
+    {
+      "diamonds": 2,
+      "edges": 8,
+      "rough_to_rough_paths": 4,
+      "target_multiplicity_histogram": {
+        "0": 184,
+        "1": 50,
+        "2": 22
+      },
+      "maximum_multiplicity": 2,
+      "maximum_multiplicity_targets": 22,
+      "maximum_target_probability_under_uniform_target_exact": "11/128",
+      "maximum_event_first_moment_weight_exact": "11/64",
+      "domain_preimages": 94,
+      "selector_kappa_exact": "69/47",
+      "boundary": "This isolated diamond chain checks selector compatibility only. Embedding it in the full square requires suppressing outside earlier paths and restoring the physical majority-domain law."
+    },
+    {
+      "diamonds": 3,
+      "edges": 12,
+      "rough_to_rough_paths": 8,
+      "target_multiplicity_histogram": {
+        "0": 3664,
+        "1": 250,
+        "2": 150,
+        "4": 32
+      },
+      "maximum_multiplicity": 4,
+      "maximum_multiplicity_targets": 32,
+      "maximum_target_probability_under_uniform_target_exact": "1/128",
+      "maximum_event_first_moment_weight_exact": "1/32",
+      "domain_preimages": 678,
+      "selector_kappa_exact": "227/113",
+      "boundary": "This isolated diamond chain checks selector compatibility only. Embedding it in the full square requires suppressing outside earlier paths and restoring the physical majority-domain law."
+    },
+    {
+      "diamonds": 4,
+      "edges": 16,
+      "rough_to_rough_paths": 16,
+      "target_multiplicity_histogram": {
+        "0": 62944,
+        "1": 1250,
+        "2": 1000,
+        "4": 300,
+        "8": 42
+      },
+      "maximum_multiplicity": 8,
+      "maximum_multiplicity_targets": 42,
+      "maximum_target_probability_under_uniform_target_exact": "21/32768",
+      "maximum_event_first_moment_weight_exact": "21/4096",
+      "domain_preimages": 4786,
+      "selector_kappa_exact": "6369/2393",
+      "boundary": "This isolated diamond chain checks selector compatibility only. Embedding it in the full square requires suppressing outside earlier paths and restoring the physical majority-domain law."
+    }
+  ],
+  "branch_matrix": {
+    "two_environment_witness_injection": {
+      "outcome": "finite_injection_passes_but_uniform_signature_tail_is_open",
+      "established": "For every ordered alternate preimage at L3/L4, alternate rough endpoints plus first virtual divergence/reconnection uniquely identify the alternate path relative to the base preimage.",
+      "boundary": "The signature space grows with the boundary and bulk vertices. Exact injectivity alone gives no uniform count or probability tail."
+    },
+    "disjoint_occurrence_probability": {
+      "outcome": "BK_Reimer_product_measure_interface_fails_twice",
+      "established": "BK/Reimer bounds disjoint occurrence witnessed in one configuration under a product measure; Reimer allows arbitrary events but retains those two interfaces.",
+      "hypothesis_gap": "The alternate path is selected in a different preimage configuration, and kappa uses the majority-domain size-biased law. Lifting to two independent configurations still requires conditioning on their common selected target, which destroys the product law and induces collision weighting."
+    },
+    "nested_fan_comb_template": {
+      "outcome": "bounded_diamond_chain_is_selector_compatible_but_not_a_physical_square_obstruction",
+      "established": "One through four square-embeddable diamonds have 2^n candidate paths and exact maximum selector multiplicity 2^(n-1) on 4n edges.",
+      "boundary": "The isolated template omits all outside square paths and the physical majority-domain filter. Its finite uniform-target weights cannot be promoted into an all-size physical event or kappa divergence."
+    }
+  },
+  "primary_source_applicability": [
+    {
+      "source": "van den Berg and Kesten, Inequalities with applications to percolation and reliability (1985)",
+      "url": "https://doi.org/10.2307/3213860",
+      "supported": "BK bounds disjoint occurrence of increasing events in a finite product measure.",
+      "missing": "the majority-domain size-biased law and witnesses selected in two different configurations"
+    },
+    {
+      "source": "Reimer, Proof of the Van den Berg-Kesten Conjecture (2000)",
+      "url": "https://doi.org/10.1017/S0963548399004113",
+      "supported": "the disjoint-occurrence inequality extends to arbitrary events in a product probability space.",
+      "missing": "Reimer still requires product measure and disjoint reasons inside one configuration"
+    },
+    {
+      "source": "van den Berg and Jonasson, A BK inequality for randomly drawn subsets of fixed size (2012)",
+      "url": "https://arxiv.org/abs/1105.3862",
+      "supported": "a non-product BK extension holds for the special k-out-of-n law and increasing events.",
+      "missing": "the full-charge fiber-majority selector law is not a k-out-of-n measure"
+    }
+  ],
+  "precise_missing_lemma": "Under the physical majority-domain law, bound the probability that one selected target has at least r two-environment boundary-fan witnesses by a sequence g_r with sum_r g_r finite uniformly in L. Product-measure disjoint occurrence and finite witness injectivity do not supply this conditional tail.",
+  "decision": {
+    "outcome": "close_direct_BK_Reimer_shortcut_and_retain_conditional_tail_as_named_gap",
+    "established": "The exact tail identity, finite witness injection and bounded selector-compatible diamond templates isolate both the combinatorial and probabilistic interfaces.",
+    "not_established": "No uniform conditional fan tail, physical nested obstruction, uniform kappa bound, midpoint noncorrectability or square threshold is proved.",
+    "threshold_claim": "No threshold claim is promoted."
+  },
+  "elapsed_seconds": 6.378434499725699,
+  "source_sha256": {
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/audit_midpoint_boundary_fan_tail.py": "c20a7089c7b1d9f7351381faa08170cedbe4a1847c07c4a76fc36b713f46096c",
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/audit_midpoint_shortest_selector_exchange.py": "b9281e39a0aa6729662e0980f1e4ef19bb508088b380f69e97a441ff13a7749b",
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/audit_midpoint_selector_second_moment.py": "05a3eb6fcd3cba58eaad10c8a6c433b5de1c8140009512d8ad9cde569f1e6d66",
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/check_midpoint_switching_pairing.py": "4aec56ec9ef90d6d6d193f896d6f6c5be8bf1a6719bbe085df4acb9c81ac2e18",
+    "labs/lab-008-direction-biased-u1-current-channel/manifests/midpoint-boundary-fan-tail-2026-09-20.json": "221d61944e1e4cad422401bc28d2d6a31ff8c079f4ce04fdbe2e4a00fdfbcc16",
+    "labs/lab-008-direction-biased-u1-current-channel/results/midpoint-shortest-selector-geodesic-exchange-2026-09-20.json": "98a56df35c0799773bae3d8c61a7670365975503751086271c2df2188ef7ba0f"
+  }
+}

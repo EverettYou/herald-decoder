@@ -1,0 +1,142 @@
+{
+  "status": "complete_missing_restricted_orientation_NMP_theorem",
+  "physical_parameters": {
+    "geometry": "square",
+    "p": "1/2",
+    "q": "1"
+  },
+  "new_physical_record_samples": 0,
+  "decoder_runs": 0,
+  "canonical_size_audits": [
+    {
+      "L": 3,
+      "edges": 8,
+      "current_states": 256,
+      "charge_records": 64,
+      "orientation_embedding": {
+        "interpretation": "bit one orients an edge as stored and bit zero reverses it; after all rough vertices are contracted to the outer root, fixed measured charge fixes every vertex outdegree",
+        "interior_outdegree_formula": "outdeg(v)=degree(v)-stored_tail_count(v)-Q(v)",
+        "interior_formula_failures": 0,
+        "contracted_root_formula_failures": 0,
+        "alpha_orientation_embedding": true
+      },
+      "root_cycle_switches": {
+        "paths": 9,
+        "endpoint_failures": 0,
+        "directed_cycle_after_root_contraction_failures": 0,
+        "interpretation": "each registered path flip is a directed alpha-orientation cycle reversal through the contracted outer root"
+      },
+      "restricted_graph_fragmentation": {
+        "switching_components": 64,
+        "records_split_into_multiple_switching_components": 0,
+        "ambiguous_records_split_into_multiple_switching_components": 0,
+        "maximum_components_in_one_record": 1,
+        "maximum_components_in_one_ambiguous_record": 1
+      },
+      "normalized_transport": {
+        "transport_target": 456,
+        "transport_achieved": 456,
+        "deficit": 0,
+        "normalized_matching_property_all_charge_records": true,
+        "certificate_interpretation": "for a record with sector sizes n0,n1, integral transport gives every sector-zero vertex supply n1 and every sector-one vertex demand n0; division by n0*n1 gives uniform normalized marginals"
+      },
+      "internal_directed_plaquette_states": 0,
+      "lattice_cover_alignment": "false: internal directed-cycle reversals are valid alpha-orientation moves but preserve logical parity and are absent from the left-right root-cycle switching graph"
+    },
+    {
+      "L": 4,
+      "edges": 18,
+      "current_states": 262144,
+      "charge_records": 44494,
+      "orientation_embedding": {
+        "interpretation": "bit one orients an edge as stored and bit zero reverses it; after all rough vertices are contracted to the outer root, fixed measured charge fixes every vertex outdegree",
+        "interior_outdegree_formula": "outdeg(v)=degree(v)-stored_tail_count(v)-Q(v)",
+        "interior_formula_failures": 0,
+        "contracted_root_formula_failures": 0,
+        "alpha_orientation_embedding": true
+      },
+      "root_cycle_switches": {
+        "paths": 80,
+        "endpoint_failures": 0,
+        "directed_cycle_after_root_contraction_failures": 0,
+        "interpretation": "each registered path flip is a directed alpha-orientation cycle reversal through the contracted outer root"
+      },
+      "restricted_graph_fragmentation": {
+        "switching_components": 54546,
+        "records_split_into_multiple_switching_components": 7252,
+        "ambiguous_records_split_into_multiple_switching_components": 578,
+        "maximum_components_in_one_record": 5,
+        "maximum_components_in_one_ambiguous_record": 3
+      },
+      "normalized_transport": {
+        "transport_target": 1253808,
+        "transport_achieved": 1253808,
+        "deficit": 0,
+        "normalized_matching_property_all_charge_records": true,
+        "certificate_interpretation": "for a record with sector sizes n0,n1, integral transport gives every sector-zero vertex supply n1 and every sector-one vertex demand n0; division by n0*n1 gives uniform normalized marginals"
+      },
+      "internal_directed_plaquette_states": 86528,
+      "lattice_cover_alignment": "false: internal directed-cycle reversals are valid alpha-orientation moves but preserve logical parity and are absent from the left-right root-cycle switching graph"
+    }
+  ],
+  "counterexample_matrix": {
+    "base_graph": "canonical square L4",
+    "single_edge_deletions_tested": 18,
+    "double_edge_deletions_tested": 153,
+    "deletions_without_left_right_path": {
+      "single": 0,
+      "double": 0
+    },
+    "first_Hall_gap": null,
+    "minimum_matching_fraction_of_bayes_numerator_exact": "1",
+    "interpretation": "no counterexample occurs in this bounded perturbation matrix; this is robustness evidence, not an all-size proof"
+  },
+  "primary_source_applicability": [
+    {
+      "source": "Felsner, Lattice Structures from Planar Graphs (2004), Theorem 1",
+      "url": "https://doi.org/10.37236/1768",
+      "supported": "plane alpha-orientations with prescribed outdegrees form a distributive lattice under directed-cycle reversals",
+      "missing_for_this_problem": "the theorem uses the full alpha-orientation cycle-flip structure, not only root cycles whose pre-contraction endpoints lie on opposite rough arcs, and it does not assert normalized matching between this logical-parity split"
+    },
+    {
+      "source": "Propp, Lattice structure for orientations of graphs",
+      "url": "https://arxiv.org/abs/math/0209005",
+      "supported": "orientations with fixed indegrees in a plane embedding admit a distributive-lattice structure under local moves",
+      "missing_for_this_problem": "internal local moves preserve the logical sector and are excluded from the public switching graph; distributivity alone does not supply the required restricted Hall inequalities"
+    },
+    {
+      "source": "Balachandran and Kush, The Normalized Matching Property in Random and Pseudorandom Bipartite Graphs",
+      "url": "https://arxiv.org/abs/1908.02628",
+      "supported": "NMP is a scaled Hall condition, with results for independent random or Thomason-pseudorandom bipartite graphs",
+      "missing_for_this_problem": "the charge-conditioned switching graph is deterministic and highly dependent; no required pseudorandom edge-discrepancy hypothesis has been proved"
+    },
+    {
+      "source": "Khuller, Naor and Klein, The Lattice Structure of Flow in Planar Graphs",
+      "url": "https://doi.org/10.1137/0406038",
+      "supported": "bounded integral planar circulations admit a distributive lattice via dual potentials and facial augmentation",
+      "missing_for_this_problem": "the result does not give normalized matching for a logical-parity subgraph restricted to opposite-rough-boundary path augmentations"
+    }
+  ],
+  "precise_missing_lemma": {
+    "structural": "For every canonical square size and fixed interior charge, the bipartite graph of binary alpha-orientations joined only by directed root-cycle reversals connecting opposite rough arcs has the normalized matching property between logical sectors.",
+    "probabilistic": "The normalized total minority mass 2^{-E} sum_Q min(N0(Q),N1(Q)) has a positive size-uniform lower bound (or positive liminf).",
+    "separation": "the structural lemma identifies/saturates finite capacity; only the probabilistic lemma implies midpoint noncorrectability"
+  },
+  "decision": {
+    "outcome": "explicit_missing_theorem_boundary_after_primary_source_and_exact_matrix_audit",
+    "established": "Fixed charge embeds exactly into planar alpha-orientations, and every L3/L4 charge-record switching graph satisfies normalized matching. All 18 single-edge and 153 double-edge deletions of canonical L4 with a crossing retain minority-sector matching saturation.",
+    "theorem_mismatch": "Published orientation/flow lattice theorems include internal cycle or face moves that our logical switching graph excludes; L4 has 578 ambiguous charge records split across multiple restricted components and 86528 states with an internal plaquette move.",
+    "not_established": "No reviewed theorem proves normalized matching for the restricted opposite-rough-arc root-cycle graph, and no canonical all-size proof or counterexample is obtained.",
+    "threshold_claim": "No square midpoint noncorrectability or decoding-threshold claim is promoted."
+  },
+  "elapsed_seconds": 23.50116749992594,
+  "source_sha256": {
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/audit_midpoint_all_size_matching_theorem.py": "449fbca672fb7c591453f5cc28354631c4775332e67924a72dec626d02ed9ad9",
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/check_midpoint_fractional_switching.py": "30ad8b26ac632231917d5ed16ef8e6717ad7607578fc3e29545b8ff41fb81c5f",
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/check_midpoint_switching_pairing.py": "4aec56ec9ef90d6d6d193f896d6f6c5be8bf1a6719bbe085df4acb9c81ac2e18",
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/current_oracle.py": "241916aa389193b7b62a3ea2de7f4267086dfcca60760ee514e27100f40fa6ee",
+    "labs/lab-008-direction-biased-u1-current-channel/manifests/midpoint-all-size-matching-theorem-2026-09-20.json": "81e8831d96d4880e334b9ef3be3d3b661a4f3823e56e3a5dc86d451f6ccd57d3",
+    "labs/lab-008-direction-biased-u1-current-channel/results/midpoint-fractional-switching-2026-09-20.json": "b1ba0fb0da66c1533ddc5152c0ce2bdb271d1a808bce64fa5a3ac9d839334036",
+    "labs/lab-008-direction-biased-u1-current-channel/results/midpoint-switching-pairing-2026-09-20.json": "f9f08b6f7b6deec22daab94800873090f1d9ca5d2e6613d08f48346c31672974"
+  }
+}

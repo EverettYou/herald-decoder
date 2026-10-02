@@ -1,0 +1,27 @@
+{
+  "id": "lab008-connected-defect-overlap-2026-09-19",
+  "status": "complete",
+  "authorization": "Researcher's continuing instruction to derive LER from the statistical model and execute the plan sequentially.",
+  "question": "Can exact overlap probabilities tighten the connected-witness LER upper bound at fair/intermediate bias without restoring the exponentially large syndrome space?",
+  "basis": "The connected-current witness theorem preserves physical Bayes LER. Its simple union bound double-counts simultaneous paths and is loose in fair/moderate-noise cells.",
+  "completed_operation": "Proved the tree-subtraction upper bound, derived exact positive bivariate two-path current-count polynomials, passed exhaustive L3 shared-edge/tie checks, and evaluated the frozen L5 geometric forest.",
+  "result": "../results/connected-defect-overlap-2026-09-19.json",
+  "decision": "Promote the deterministic overlap correction. It improves the path bound in all four primary cells and the strongest certified upper bound at q=.75 for p=.05 and .08; it does not displace the activity upper bound at fair q=.5.",
+  "planned_scope": "Theory plus a single bounded deterministic implementation on the existing complete L5 path table. Freeze a geometric tree rule before computing its improvement; do not optimize repeatedly over failed priorities.",
+  "gates": [
+    "Exact finite-event proof of P(union E_i) <= sum P(E_i) - sum_tree P(E_i intersection E_j); retain the preceding physical-LER inequality.",
+    "Validate intersection probabilities against exhaustive L3 currents, including incompatible shared directions and exact likelihood ties.",
+    "Use frozen L5 p=.05,.08 and q=.5,.75 as primary cells, with no new physical-record sampling. Promote only if the bound improves the strongest existing certified upper bounds in at least one primary cell and report every cell.",
+    "Cap exact intersection evaluations at 10000 and runtime at 120 seconds; retain a valid partial forest if capped. No large phase scan or decoder tuning.",
+    "Report the theorem, finite bounds, limitations and exact rendered delivery."
+  ],
+  "observed_scope": {
+    "physical_record_samples": 0,
+    "L3_exhaustive_pair_cell_checks": 765,
+    "L5_signed_path_events": 3490,
+    "L5_forest_edges": 3488,
+    "exact_intersection_evaluations": 3488,
+    "runtime_seconds": 11.72
+  },
+  "predecessor": "connected-current-defects-2026-09-19.json"
+}

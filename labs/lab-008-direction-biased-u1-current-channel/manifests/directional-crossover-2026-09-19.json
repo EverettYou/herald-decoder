@@ -1,0 +1,63 @@
+{
+  "id": "lab008-directional-crossover-2026-09-19",
+  "status": "complete",
+  "authorization": "Researcher requests continued autoresearch to explain LER from physical sector partition functions; no new decoder scan.",
+  "basis": "The witness-union floor rules out any useful moderate-p fair L5 bound from evaluating that unchanged envelope. Return to the sector minimum itself. Earlier fixed-q asymptotics were explicitly nonuniform as q approaches one.",
+  "question": "For 1-q=lambda*p^alpha, what is the exact finite-square low-noise LER exponent and the boundary layer in which the fully directed coefficient is recovered?",
+  "candidate_theorem": "For d=L-1>=2 and fixed alpha,lambda>0, the exponent is min over integer k=0..d of max(k,(1+alpha)*(d-k)). The directed exponent d is reached only for alpha>=d-1. At alpha=d-1 the leading coefficient is binom(2d,d)+L*d*lambda+(L-2)*d*min(lambda,1).",
+  "proof_obligation": "Lower-bound the two sector activity exponents using horizontal current conservation, attain the bound with a split straight path, then classify every one-reverse-jump record at alpha=d-1. Keep the physical record average and binary parity throughout.",
+  "validation": {
+    "sizes": [
+      3,
+      4,
+      5
+    ],
+    "alpha": [
+      0.5,
+      1,
+      2,
+      3
+    ],
+    "critical_lambda": [
+      0.25,
+      0.5,
+      1,
+      2,
+      4
+    ],
+    "method": "Enumerate every configuration of weighted activity Nplus+(1+alpha)*Nminus<=d, aggregate exact integer record-sector coefficient polynomials, and compare their minimum exponent and critical coefficient with the theorem. This enumeration is complete for leading orders up to d, not for finite-p sector sums.",
+    "finite_L3_control": {
+      "p": [
+        0.005,
+        0.01,
+        0.02
+      ],
+      "lambda": [
+        0.25,
+        1,
+        4
+      ],
+      "alpha": 1,
+      "method": "Independent full ternary support gives exact rational Bayes LER; report convergence to the predicted coefficient without fitting."
+    }
+  },
+  "acceptance": [
+    "All proof obligations are stated and independently checked on the finite matrix.",
+    "Exact exponent and coefficient equality at every registered case; preserve a counterexample if a candidate fails.",
+    "Keep fixed L, fixed positive lambda and the p->0 limit explicit. No moderate-p accuracy or thermodynamic threshold claim.",
+    "Publish the result, current topical notes, report/plan, metadata/registry, loop state and verified current browser document."
+  ],
+  "budget": {
+    "max_states_per_case": 100000,
+    "max_runtime_seconds": 120,
+    "new_physical_record_samples": 0
+  },
+  "predecessor": "witness-union-floor-2026-09-19.json",
+  "delivery": [
+    "results/directional-crossover-2026-09-19.json",
+    "wiki/directional-crossover.md"
+  ],
+  "result": "../results/directional-crossover-2026-09-19.json",
+  "decision": "Promote the fixed-size exponent and exact boundary-layer coefficient: all 12 exponents and 15 coefficient checks pass. No finite-p fit or thermodynamic claim.",
+  "successor": "reverse-sector-response-2026-09-19.json"
+}

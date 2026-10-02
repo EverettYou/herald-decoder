@@ -32,8 +32,11 @@ from d4_spatial_policy import (
     D4FluxActionV1,
     D4PostFluxObservationV1,
     D4SpatialCommitRequestV1,
+    D4TemporalBoundaryActionV1,
+    D4TemporalBoundaryHandoffV1,
     canonical_digest,
     decode_flux_action,
+    decode_temporal_boundary_handoff,
     paper_periodic_honeycomb,
 )
 from d4_temporal_composition import (
@@ -122,8 +125,8 @@ class E1PolicyInvocation:
     noncausal: bool
     schedule_request_digest: str
     report: PublicReportedRecordV1
-    policy_request: D4SpatialCommitRequestV1
-    flux_action: D4FluxActionV1
+    policy_request: D4SpatialCommitRequestV1 | D4TemporalBoundaryHandoffV1
+    flux_action: D4FluxActionV1 | D4TemporalBoundaryActionV1
 
 
 @dataclass
@@ -132,7 +135,7 @@ class E1PolicyDecoder:
 
     mode: Mode
     size: int = 2
-    version: str = "d4-stage1-e1-integration-v1"
+    version: str = "d4-stage1-e1-integration-v2"
     requests: list[InnerDecoderRequest] = field(default_factory=list)
     invocations: list[E1PolicyInvocation] = field(default_factory=list)
 
@@ -149,20 +152,51 @@ class E1PolicyDecoder:
     def __call__(self, request: InnerDecoderRequest) -> InnerDecoderResponse:
         self.requests.append(request)
         report = derive_round_local_e1_record(request, size=self.size)
-        policy_request = typed_record_to_commit_request(
-            report,
-            request_id=canonical_digest(
-                {
-                    "protocol": "lab005-d4-stage1-request-v1",
-                    "schedule_request_digest": request.request_digest,
-                    "mode": self.mode,
-                }
-            ),
-            size=self.size,
-            mode=self.mode,
-            scheduler_prefix_digest=request.prefix_digest,
+        policy_request_id = canonical_digest(
+            {
+                "protocol": "lab005-d4-stage1-request-v1",
+                "schedule_request_digest": request.request_digest,
+                "mode": self.mode,
+            }
         )
-        action = decode_flux_action(policy_request)
+        flux_vertices = tuple(
+            site for site, labels in report.reported_labels if FLUX in labels
+        )
+        if len(flux_vertices) % 2:
+            vertex_count = paper_periodic_honeycomb(self.size).vertex_count
+            handoff = D4TemporalBoundaryHandoffV1.from_public(
+                request_id=policy_request_id,
+                decision_round=report.round,
+                scheduler_request_digest=request.request_digest,
+                scheduler_prefix_digest=request.prefix_digest,
+                e1_report_digest=report.report_digest,
+                flux_vertices=flux_vertices,
+                vertex_count=vertex_count,
+            )
+            # The public spatial policy receives the augmented request and
+            # validates its binding before emitting a no-physics defer action.
+            policy_request = D4TemporalBoundaryHandoffV1.from_dict(
+                handoff.to_dict(), vertex_count=vertex_count
+            )
+            action = decode_temporal_boundary_handoff(
+                policy_request,
+                vertex_count=vertex_count,
+                expected_request_id=policy_request_id,
+                expected_scheduler_request_digest=request.request_digest,
+                expected_scheduler_prefix_digest=request.prefix_digest,
+                expected_e1_report_digest=report.report_digest,
+                expected_round=report.round,
+                expected_flux_vertices=flux_vertices,
+            )
+        else:
+            policy_request = typed_record_to_commit_request(
+                report,
+                request_id=policy_request_id,
+                size=self.size,
+                mode=self.mode,
+                scheduler_prefix_digest=request.prefix_digest,
+            )
+            action = decode_flux_action(policy_request)
         self.invocations.append(
             E1PolicyInvocation(
                 mode=self.mode,
@@ -328,6 +362,10 @@ def run_e2_completion_matrix(
 
     for mode_run in e1_matrix.modes:
         for invocation in mode_run.invocations:
+            if isinstance(invocation.policy_request, D4TemporalBoundaryHandoffV1):
+                raise ValueError(
+                    "unresolved_temporal_boundary_handoff: no physical post-flux stage"
+                )
             state = open_temporal_state(
                 trial_id=trial_id,
                 size=size,

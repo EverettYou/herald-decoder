@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j7e-two-edge-complete-next-law-2026-09-25",
+  "status": "registered_before_exact_execution",
+  "question": "Does the smallest J7D cross-round noncommutation opening yield a nonzero difference in the complete next-first public Born law after branch-specific second records are marginalized at a matched first record and final red-X support?",
+  "role": "One bounded exact ideal-instrument discriminator, not isolated action causality, a general D4 stateful channel, caller integration, schedule risk or threshold",
+  "source_basis": ["Jing Appendix A.2/A.4 ideal red-X and star-charge projectors", "J6L/J6M fixed periodic geometry and common triangle-vacuum orbit", "J6O complete two-edge first and edge-0-correction second public law", "J7C exact three-edge null control", "J7D ranked smallest structural opening"],
+  "pinned_inputs": {
+    "jing_pdf_sha256": "7a17c3d3a743e3dec4266b64d0321a6af7a5eeacfab67e42b9ec77d30b65a2ac",
+    "j6l_result_sha256": "c3eee28f083b7f3a4dd82a3e4f8a7d3ec29aa19af92bbc3ab4588129d855c4ab",
+    "j6m_result_sha256": "55bfe46d34c9a8356e828351b0d415ed550312ed315c4c1bda7a51508ef1b932",
+    "j6o_result_sha256": "3c08da92958c80c3e2958d4a250352e66437c05e3735cf110feeead5603fb31f",
+    "j7c_result_sha256": "2bbb48d29e6781f67007a9159a6917aa43622022757f0af769b30df800322a35",
+    "j7d_result_sha256": "4ebd378584bef1a87eb0ea4f4ec40b9c0448a7e58327d82a67445b627ee4876a",
+    "frozen_integrated_history_sha256": "43d9d0d3e4771ccfc764f590f1843cda1e2a7fbce8dae96057710c413a0adb6e"
+  },
+  "model": {
+    "physical_state": "Periodic L=2 J6M 108-qubit common star/triangle +1 orbit with private initial red-X edges [0,4], no absolute logical-sector assignment, perfect source projectors and no readout noise",
+    "first_observation": "Both branches share the complete 24-site binary public first flux/charge/vacuum record on initial support [0,4]. The pinned J6O law has two positive first records, distinguished only at eligible green site 1, each with mass 1/2.",
+    "branch_a": "Apply relation-free public correction [0], measure the complete actual-sector second public record on residual edge [4], then apply one private physical red-X future fault on edge 0 and measure the complete next-first public record on final support [0,4].",
+    "branch_b": "Apply relation-free public correction [4], measure the complete actual-sector second public record on residual edge [0], then apply one private physical red-X future fault on edge 4 and measure the complete next-first public record on final support [0,4].",
+    "private_public_boundary": "Physical/future supports, source orbit, operator masks and postselected state token remain private. Public records contain only 24-site binary flux/charge/vacuum arrays, declared action IDs and causal digests. Neither branch is a relation oracle or a five-round caller action.",
+    "matched_exogenous_keys": "The private initial physical key and each of two full first records are common to both branches. Each branch enumerates all of its own second Born outcomes and uses its predeclared one-edge future-fault key; second outcome bits at different sites are not artificially paired.",
+    "independent_unit_uncertainty": "One exact fixed orbit and geometry; rational probabilities and exact complete-record total variation, not statistical estimates or uncertainty intervals. The two branch histories differ in second sector and future fault timing."
+  },
+  "matrix": {
+    "physical_red_edges_private": [0,4],
+    "first_random_site_private": 1,
+    "branch_a": {"public_action_red_edges": [0], "future_physical_red_edges_private": [0], "residual_red_edges_private": [4]},
+    "branch_b": {"public_action_red_edges": [4], "future_physical_red_edges_private": [4], "residual_red_edges_private": [0]},
+    "second_law": "For both actions at each shared positive first record, use complete actual-sector eligible stars; classify each one-site conditional by exact chronological projectors, then enumerate the full joint law of every non-deterministic second site into full 24-site public arrays. Branch A must reproduce pinned J6O edge-0-correction second law exactly; branch B is new and cannot borrow an edge-reflection assumption.",
+    "next_law": "For every positive first/second prefix in each branch, propagate the registered future red-X fault, check actual-sector eligibility, classify all eligible next sites with exact ordered projector moments, enumerate the complete joint next-first public law and verify each conditional sums to one. Include an independently checked no-new-fault projector-repeat control on the second variable sites.",
+    "discriminator": "At each of the two identical complete first public records, marginalize each branch's own second outcome law and compute exact rational total variation between complete 24-site next-first public records at final support [0,4]. Also retain the J7C four-zero-TV result unchanged as a distinct negative control; do not numerically pool geometries.",
+    "integrity": "Reject swapped declared action, tampered first or second public record, wrong future-fault key and private-field injection; verify source hashes before and after and exact deterministic replay. Do not invoke or alter the frozen caller."
+  },
+  "competing_outcomes": {
+    "finite_history_sensitive": "At least one of the two matched first records has nonzero exact complete-public total variation; this supports finite ideal measurement-history sensitivity but no noisy or causal action-effect claim.",
+    "finite_null": "Both exact total variations are zero despite J7D's structural opening; this is a second finite negative control, not general state sufficiency.",
+    "censored": "A source, actual-sector, J6O reproduction, completeness, binding, repeat, replay or compute gate fails; do not infer either a positive or null full-public contrast."
+  },
+  "budget": {"max_cpu_seconds": 60, "max_variable_second_sites": 2, "max_variable_next_sites": 3, "max_ordered_moment_terms": 262144, "max_positive_second_rows": 16, "max_positive_next_rows": 64, "new_dependencies": 0, "stochastic_histories": 0, "schedule_arm_evaluations": 0, "bootstrap_replicates": 0},
+  "acceptance": ["All seven source/caller pins pass before and after and both initial first records reproduce J6O", "Both complete action-conditioned second public laws normalize; branch A reproduces pinned J6O exactly and branch B is independently evaluated", "Both complete action-bound future-fault next-first laws normalize at all positive prefixes with actual-sector and no-fault-repeat controls", "The two exact complete-record total variations are computed only after both branches close; J7C null is preserved as a separate control", "Public/private/action/future-key binding and replay pass; caller unchanged; zero stochastic histories, arms and bootstraps", "Any finite conclusion remains one ideal two-edge orbit and does not imply general stateful D4 feedback, JIT improvement or threshold"],
+  "stop_rule": "Pin and validate source/J6O/J7C/J7D before computation. If any registered CPU, moment, variable-site or row cap is exceeded, censor at the original bound; do not change the edge, topology or cap post hoc. Fail closed on source/sector/commutation/normalization/J6O/public-private/replay drift. No caller integration or noisy schedule work.",
+  "planned_result": "results/j7e-two-edge-complete-next-law-2026-09-25.json"
+}

@@ -1,0 +1,130 @@
+{
+  "status": "complete_finite_balance_controls_missing_averaged_theorem",
+  "physical_parameters": {
+    "geometry": "square",
+    "p": "1/2",
+    "q": "1"
+  },
+  "new_physical_record_samples": 0,
+  "decoder_runs": 0,
+  "exact_controls": [
+    {
+      "L": 3,
+      "edges": 8,
+      "current_states": 256,
+      "charge_records": 64,
+      "ambiguous_charge_records": 46,
+      "exact_Bayes_risk": "7/16",
+      "conditional_logical_entropy_bits": 0.9234596706506673,
+      "entropy_square_certificate": 0.2131944408295597,
+      "maximum_charge_fiber_sector_ratio_exact": "3/2",
+      "records_attaining_maximum_ratio": 8,
+      "physical_mass_of_maximum_ratio_records_exact": "5/32",
+      "optimal_deterministic_switching_congestion": 2,
+      "optimality_reason": "pigeonhole lower bound plus the exact record-wise NMP capacity certificate",
+      "first_maximum_ratio_witness": {
+        "Q": [
+          -2,
+          0,
+          1
+        ],
+        "sector_counts": [
+          3,
+          2
+        ],
+        "switching_graph": "not a star"
+      },
+      "extremal_selector_congestion": 3
+    },
+    {
+      "L": 4,
+      "edges": 18,
+      "current_states": 262144,
+      "charge_records": 44494,
+      "ambiguous_charge_records": 24638,
+      "exact_Bayes_risk": "11849/32768",
+      "conditional_logical_entropy_bits": 0.8514082240002299,
+      "entropy_square_certificate": 0.1812239909738064,
+      "maximum_charge_fiber_sector_ratio_exact": "6",
+      "records_attaining_maximum_ratio": 96,
+      "physical_mass_of_maximum_ratio_records_exact": "21/8192",
+      "optimal_deterministic_switching_congestion": 6,
+      "optimality_reason": "pigeonhole lower bound plus the exact record-wise NMP capacity certificate",
+      "first_maximum_ratio_witness": {
+        "Q": [
+          -2,
+          0,
+          -1,
+          0,
+          1,
+          -1,
+          0,
+          2
+        ],
+        "sector_counts": [
+          6,
+          1
+        ],
+        "switching_graph": "K_{1,6}"
+      },
+      "extremal_selector_congestion": 16
+    }
+  ],
+  "branch_matrix": {
+    "switching_congestion": {
+      "outcome": "finite_optimum_exact_no_uniform_theorem",
+      "theorem": "For a charge fiber with sector sizes n0,n1 whose switching graph has NMP in both directions, the minimum deterministic image congestion is ceil(max(n0/n1,n1/n0)).",
+      "proof": "Pigeonhole gives the lower bound. Scaled Hall/NMP gives a capacitated matching from the larger sector with that ceiling capacity, while the smaller sector injects into the larger.",
+      "control": "The best possible global congestion is 2 on L3 and 6 on L4, improving the extremal selector's 3 and 16 but providing no all-size bound."
+    },
+    "conditional_entropy": {
+      "outcome": "exact_equivalent_target_no_closure_theorem",
+      "identity": "H(logical sector | Q)=E_Q h2(r_Q), where r_Q is conditional Bayes risk.",
+      "bounds": "For 0<=r<=1/2, 2r<=h2(r)<=2 sqrt(r). Therefore 2 R_L <= H(H|Q) <= 2 sqrt(R_L), and H(H|Q)>=eta implies R_L>=eta^2/4.",
+      "control": "Exact finite conditional entropies are reported, but no reviewed fixed-divergence binary-flow theorem lower-bounds them uniformly in size."
+    },
+    "canonical_imbalance": {
+      "outcome": "finite_physical_star_found_no_unbounded_family",
+      "control": "Canonical L4 contains 96 maximum-imbalance records of sector ratio 6; each minority-one witness has physical switching graph K_{1,6}. Their total physical mass is 21/8192.",
+      "boundary": "This rejects exact or near-unity every-record balance at finite size, but neither two sizes nor a finite K_{1,6} witness proves unbounded all-size imbalance. No analytic canonical family was established."
+    }
+  },
+  "primary_source_applicability": [
+    {
+      "source": "M\u00e9sz\u00e1ros and Morales, Flow polytopes and the Kostant partition function (2012)",
+      "url": "https://doi.org/10.46298/dmtcs.3096",
+      "supported": "integer-flow counts can be represented by Kostant partition functions and flow polytopes",
+      "missing": "the results concern unrestricted nonnegative integral flows and do not compare bounded binary logical-parity sectors under rough-boundary charge conditioning"
+    },
+    {
+      "source": "Kapoor, M\u00e9sz\u00e1ros and Setiabrata, Counting integer points of flow polytopes (2019)",
+      "url": "https://arxiv.org/abs/1906.05592",
+      "supported": "Ehrhart and Kostant formulas count lattice points of integral flow polytopes",
+      "missing": "no size-uniform lower bound on the parity split or conditional logical entropy of the canonical binary square fibers"
+    },
+    {
+      "source": "Felsner, Lattice Structures from Planar Graphs (2004)",
+      "url": "https://doi.org/10.37236/1768",
+      "supported": "fixed-outdegree planar orientations form a distributive lattice under full cycle reversals",
+      "missing": "lattice order does not bound charge-fiber sector ratios or average minority mass"
+    }
+  ],
+  "precise_missing_lemma": {
+    "averaged_balance": "There exist eta,delta>0 independent of L such that physical probability at least delta lies on charge fibers with min(N0,N1)/(N0+N1)>=eta.",
+    "entropy_equivalent": "Equivalently sufficient is a positive size-uniform lower bound on H(logical sector | measured integer charge).",
+    "congestion_sufficient": "A uniformly bounded-congestion switching map on a positive-probability crossing event implies the averaged-balance lemma."
+  },
+  "decision": {
+    "outcome": "explicit_missing_averaged_charge_fiber_lemma",
+    "established": "Optimal finite switching congestion is exactly 2 on L3 and 6 on L4; canonical L4 realizes physical K_{1,6} star fibers; conditional logical entropy is an exact equivalent asymptotic target with an elementary risk certificate.",
+    "not_established": "No size-uniform physical congestion, conditional-entropy lower bound, or analytic family with unbounded sector imbalance is proved.",
+    "threshold_claim": "No square midpoint noncorrectability or decoding-threshold claim is promoted."
+  },
+  "source_sha256": {
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/audit_midpoint_charge_fiber_balance.py": "e699edd6148bc00b5c70f908fc357dddcad70e6935b91df109ad7fbf30e087ac",
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/current_oracle.py": "241916aa389193b7b62a3ea2de7f4267086dfcca60760ee514e27100f40fa6ee",
+    "labs/lab-008-direction-biased-u1-current-channel/manifests/midpoint-charge-fiber-balance-theorem-2026-09-20.json": "42dcebc08b1d7040e3e8253d60b159fa9cd3ed37cf74403ef6cb366e991b235c",
+    "labs/lab-008-direction-biased-u1-current-channel/results/midpoint-switching-pairing-2026-09-20.json": "f9f08b6f7b6deec22daab94800873090f1d9ca5d2e6613d08f48346c31672974",
+    "labs/lab-008-direction-biased-u1-current-channel/results/midpoint-all-size-matching-theorem-2026-09-20.json": "d6ac7f9a78e76559eaa079f59b4d9abeb8cba96ae0cf1ff5d36f52e3bc6879bf"
+  }
+}

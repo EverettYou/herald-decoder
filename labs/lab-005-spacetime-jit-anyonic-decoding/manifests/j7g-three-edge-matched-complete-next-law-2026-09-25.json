@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j7g-three-edge-matched-complete-next-law-2026-09-25",
+  "status": "registered_before_exact_execution",
+  "question": "Can two action-conditioned, fully measured three-edge histories with the same initial error, complete first public record and final support have different complete next-first public Born laws?",
+  "role": "Smallest additional topology after J7E: one preselected positive first record, two registered action/future-fault branches, exact complete public second/next laws; not isolated action causality or noisy schedule performance",
+  "source_basis": ["Jing Appendix A.2/A.4 ideal red-X and charge projectors", "J6L/J6M periodic vacuum-orbit geometry", "J7D matched-final-support structural branches", "J7F positive first-state witness and J7E measured-branch null"],
+  "pinned_inputs": {
+    "jing_pdf_sha256": "7a17c3d3a743e3dec4266b64d0321a6af7a5eeacfab67e42b9ec77d30b65a2ac",
+    "j6l_result_sha256": "c3eee28f083b7f3a4dd82a3e4f8a7d3ec29aa19af92bbc3ab4588129d855c4ab",
+    "j6m_result_sha256": "55bfe46d34c9a8356e828351b0d415ed550312ed315c4c1bda7a51508ef1b932",
+    "j7c_result_sha256": "2bbb48d29e6781f67007a9159a6917aa43622022757f0af769b30df800322a35",
+    "j7d_result_sha256": "4ebd378584bef1a87eb0ea4f4ec40b9c0448a7e58327d82a67445b627ee4876a",
+    "j7e_result_sha256": "a5eaf7cfca8e9b55202a63236bdeeb922fa858f1f43bf1dd71773d8c69c9575d",
+    "j7f_result_sha256": "b939ec8bebe26f44b27f0caff328a37e1a0e22339d5dd43c78670235cf7157c4",
+    "frozen_integrated_history_sha256": "43d9d0d3e4771ccfc764f590f1843cda1e2a7fbce8dae96057710c413a0adb6e"
+  },
+  "model": {
+    "physical_state": "Periodic L=2 J6M 108-qubit common +1 star/triangle vacuum orbit; private initial physical red-X error edges [0,4,3]; exact ideal projectors and no readout noise",
+    "first_observation": "Exactly the J7F preregistered positive complete 24-site binary first record for the three-edge chain: charge 0 at individually random sites 1 and 2, all other eligible sites fixed; exact mass 1/4. No adaptive first-record choice",
+    "branch_a": "Relation-free public correction edge [0], measure the complete actual-sector second public record on residual [4,3], then apply one private later red-X fault edge 0; final support [0,4,3]",
+    "branch_b": "Relation-free public correction edge [4], measure the complete actual-sector second public record on residual [0,3], then apply one private later red-X fault edge 4; final support [0,4,3]",
+    "private_public_boundary": "Physical/future faults, operator masks, orbit and projector state are private. Only complete 24-site binary flux/charge/vacuum arrays, declared public action and causal digests are public; no relation oracle or hidden-history decoder input",
+    "matched_keys": "Both branches share the exact initial physical geometry and selected complete first public record and end with the same final red-X support. Each branch has its own predeclared later physical-fault key and complete second outcome law; do not claim a same-exogenous-future causal action effect",
+    "independent_unit_uncertainty": "One exact finite orbit and one complete first record, not statistical replicates; rational Born masses and exact total variation require no Monte Carlo interval"
+  },
+  "matrix": {
+    "physical_red_edges_private": [0,4,3],
+    "first_variable_sites_private": [1,2],
+    "first_bits": [1,1],
+    "first_probability": "1/4",
+    "branch_a": {"public_action_red_edges": [0], "future_physical_red_edge_private": 0, "residual_red_edges_private": [4,3]},
+    "branch_b": {"public_action_red_edges": [4], "future_physical_red_edge_private": 4, "residual_red_edges_private": [0,3]},
+    "second_and_next": "For each branch, classify every actual-sector eligible second and next star by exact chronological projector moments; enumerate the complete joint Born law over all non-deterministic sites into full 24-site public records; normalize at every positive prefix and marginalize the complete second law",
+    "discriminator": "Exact rational total variation between the two complete next-first public laws conditional on the identical selected first record; separately verify the J7F one-site prediction (next site 1 is fair in A and deterministic +1 in B) and retain J7E/J7C exact nulls without pooling",
+    "integrity": "Before/after source pins, actual-sector eligibility and same-sector commutation, positive first mass, all full-law normalization, public/private/action/future-key binding negative controls and deterministic replay; frozen caller unchanged"
+  },
+  "competing_outcomes": {
+    "finite_full_public_difference": "Both branch laws close and exact TV > 0; this establishes a finite ideal matched-initial/final-support history dependence of the public next-first law, not isolated action causality, an integrated D4 channel or noisy JIT advantage",
+    "finite_null": "Both full laws close and exact TV = 0 despite the J7F one-site prediction; investigate identity/control inconsistency before claiming a null",
+    "censored": "Any source, first/second/next public law, binding, replay, compute or model gate fails; no contrast inference or adaptive cap enlargement"
+  },
+  "budget": {"max_cpu_seconds": 60, "max_ordered_moment_terms": 262144, "max_variable_second_sites": 3, "max_variable_next_sites": 4, "max_positive_second_rows": 16, "max_positive_next_rows": 64, "new_dependencies": 0, "stochastic_histories": 0, "schedule_arm_evaluations": 0, "bootstrap_replicates": 0},
+  "acceptance": ["Eight pins pass before and after; J7F complete first public record and exact first mass reproduce", "Both full action-conditioned second public laws normalize at the actual residual sectors", "Every positive-prefix full next-first public law normalizes at the common final sector and agrees with the predeclared one-site prediction", "Exact complete-record TV is evaluated only after both branches and binding/replay controls pass; J7E/J7C nulls stay separate", "Frozen caller unchanged; no stochastic histories, schedule arms, bootstrap, threshold or general stateful-channel claim"],
+  "stop_rule": "Censor at any original CPU, term, variable-site or row cap. Fail closed on pin, geometry, eligibility, first-mass, Born-law, binding, replay or one-site prediction drift. No alternative first record, additional topology, caller integration, noisy sampling or post-hoc budget increase.",
+  "planned_result": "results/j7g-three-edge-matched-complete-next-law-2026-09-25.json"
+}

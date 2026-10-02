@@ -1,0 +1,21 @@
+{
+  "id": "lab008-physical-absolute-contrast-certified-wedge-2026-09-22",
+  "status": "complete_exact_corollary",
+  "registered_at": "2026-09-22",
+  "parent_contract": "thermodynamic-theory-reorientation-2026-09-22.json",
+  "question": "Can the exact physical-record absolute contrast of equation H12 be bounded uniformly in size in any certified square-lattice region, without replacing it by a signed or boundary-only average?",
+  "research_basis": "Reuse the already proved physical connected-current path and parity-only Peierls bounds in Local Wiki thermodynamic-limits.md and connected-current-defects.md. This is an exact corollary for the H12 observable, not a new path method or a threshold fit.",
+  "frozen_model": "Canonical square_graph(L), L>=3, 0<p<1, real finite h, q=(1+tanh h)/2, perfect signed interior charge, rough left/right boundary, binary right-cut logical parity, physical Bayes risk. Keep p fixed when converting to p_eff in H12.",
+  "registered_branches": {
+    "charge_aware_current": "For p<=1/(1+1/(2cosh h)), transfer the existing convex-current witness bound with gamma=sqrt[p(1-p)(1+sech h)] and square path-growth constant 3 to 1-A_L=2R_L.",
+    "parity_only_complement": "For any h and r=min(p,1-p), transfer the existing Bernoulli occupancy/complement Peierls bound with beta=2sqrt[r(1-r)] and square path-growth constant 3 to the same A_L. Keep this as a separately valid comparator, especially near p=1."
+  },
+  "geometry_and_prefactor": "There are 2L rough vertices, opposite-side path length at least L-1, and at most (4/3)3^n simple n-step paths from any starting vertex. Use the conservative inherited 2b_L C geometric-series prefactor, hence 1-A_L<=32L rho^(L-1)/[3(1-rho)] whenever rho<1.",
+  "acceptance": "Prove the two physical H12 corollaries and their exact scope; verify the h-to-q algebra, strict low-p root and convexity gate, plus a separate high-p complement region. State that these are old sufficient correctability certificates expressed in the new observable, not a moderate-p square phase result.",
+  "verification": "Closed-form algebra and deterministic numerical checks of the strict roots at h=0,0.5 and the directed limit, and p=.98 parity complement. No new current histories, system sizes, bootstrap or threshold fitting.",
+  "compute_budget": {"new_physical_samples": 0, "new_system_sizes": 0, "new_bootstrap_replicates": 0, "new_exact_enumeration": 0},
+  "claim_boundary": "Only the certified low-p and high-p sufficient regions are controlled. No necessity, sharp threshold, moderate-p behavior, line-tension limit, or universality follows.",
+  "stop_rule": "Stop after the two proof transfers and root checks; do not run a size scan or reinterpret the sufficient root as a critical point.",
+  "result": "../results/physical-absolute-contrast-certified-wedge-2026-09-22.json",
+  "outcome": "Both inherited physical path bounds transfer directly to H12. For p below the strict field-dependent low-p root, or p above the strict all-h complement root, A_L tends to one exponentially with an explicit square prefactor. The moderate-p fixed-h square problem remains open."
+}

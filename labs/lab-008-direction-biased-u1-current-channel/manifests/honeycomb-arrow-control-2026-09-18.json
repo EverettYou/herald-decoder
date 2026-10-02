@@ -1,0 +1,153 @@
+{
+  "id": "lab008-honeycomb-arrow-control-2026-09-18",
+  "status": "complete",
+  "stage": 3,
+  "trigger": "Square Stage2 primary intrinsic component resolved at both sizes; exact fair-arrow relabeling controls passed before registration.",
+  "question": "Does changing the preferred arrow pattern on the same honeycomb graph change the intrinsic biased-channel risk?",
+  "prerequisites": [
+    "results/square-mechanism-2026-09-18-analysis.json",
+    "results/mechanism-controls-2026-09-18.json"
+  ],
+  "intervention": "Stored arrows versus all edges oriented from bipartition A to B. This makes the unit field a gradient. It changes both bulk and boundary arrows, so it is NOT a flux-only causal isolation.",
+  "negative_control": "q=.5 exact coordinate relabeling passed on 64 independent pilot records at L3,L5. Production uses common activity/orientation uniforms; its two fair arms have the same law but not necessarily the same physical realization.",
+  "cells": [
+    {
+      "id": "honeycomb-L3-p30-q50-stored",
+      "lattice": "honeycomb",
+      "L": 3,
+      "p": 0.3,
+      "q": 0.5,
+      "arrows": "stored",
+      "shots": 256,
+      "seed": 209185026
+    },
+    {
+      "id": "honeycomb-L3-p30-q50-bipartite",
+      "lattice": "honeycomb",
+      "L": 3,
+      "p": 0.3,
+      "q": 0.5,
+      "arrows": "bipartite",
+      "shots": 256,
+      "seed": 209185026
+    },
+    {
+      "id": "honeycomb-L3-p30-q75-stored",
+      "lattice": "honeycomb",
+      "L": 3,
+      "p": 0.3,
+      "q": 0.75,
+      "arrows": "stored",
+      "shots": 256,
+      "seed": 209185026
+    },
+    {
+      "id": "honeycomb-L3-p30-q75-bipartite",
+      "lattice": "honeycomb",
+      "L": 3,
+      "p": 0.3,
+      "q": 0.75,
+      "arrows": "bipartite",
+      "shots": 256,
+      "seed": 209185026
+    },
+    {
+      "id": "honeycomb-L3-p30-q100-stored",
+      "lattice": "honeycomb",
+      "L": 3,
+      "p": 0.3,
+      "q": 1,
+      "arrows": "stored",
+      "shots": 256,
+      "seed": 209185026
+    },
+    {
+      "id": "honeycomb-L3-p30-q100-bipartite",
+      "lattice": "honeycomb",
+      "L": 3,
+      "p": 0.3,
+      "q": 1,
+      "arrows": "bipartite",
+      "shots": 256,
+      "seed": 209185026
+    },
+    {
+      "id": "honeycomb-L5-p30-q50-stored",
+      "lattice": "honeycomb",
+      "L": 5,
+      "p": 0.3,
+      "q": 0.5,
+      "arrows": "stored",
+      "shots": 256,
+      "seed": 209187026
+    },
+    {
+      "id": "honeycomb-L5-p30-q50-bipartite",
+      "lattice": "honeycomb",
+      "L": 5,
+      "p": 0.3,
+      "q": 0.5,
+      "arrows": "bipartite",
+      "shots": 256,
+      "seed": 209187026
+    },
+    {
+      "id": "honeycomb-L5-p30-q75-stored",
+      "lattice": "honeycomb",
+      "L": 5,
+      "p": 0.3,
+      "q": 0.75,
+      "arrows": "stored",
+      "shots": 256,
+      "seed": 209187026
+    },
+    {
+      "id": "honeycomb-L5-p30-q75-bipartite",
+      "lattice": "honeycomb",
+      "L": 5,
+      "p": 0.3,
+      "q": 0.75,
+      "arrows": "bipartite",
+      "shots": 256,
+      "seed": 209187026
+    },
+    {
+      "id": "honeycomb-L5-p30-q100-stored",
+      "lattice": "honeycomb",
+      "L": 5,
+      "p": 0.3,
+      "q": 1,
+      "arrows": "stored",
+      "shots": 256,
+      "seed": 209187026
+    },
+    {
+      "id": "honeycomb-L5-p30-q100-bipartite",
+      "lattice": "honeycomb",
+      "L": 5,
+      "p": 0.3,
+      "q": 1,
+      "arrows": "bipartite",
+      "shots": 256,
+      "seed": 209187026
+    }
+  ],
+  "result_directory": "results/honeycomb-arrow-control-cells",
+  "max_topology_candidates": 12000000,
+  "analysis": {
+    "unit": "independent physical record, paired across arrows at fixed L,q,p; all three decoders within a cell share each record",
+    "bootstrap_replicates": 4000,
+    "bootstrap_seed": 809182027,
+    "intervals": "pointwise paired percentile bootstrap95; all arrow contrasts exploratory, no global multiplicity claim",
+    "primary": "Report bipartite-minus-stored intrinsic and practical risks, including the fair-channel invariance control. Do not attribute all changes to local flux, since boundary direction assignments also change.",
+    "limits": "Same geometry, same p and observation budget; a physically different preferred direction channel. No phase or geometry-superiority claim.",
+    "result": "results/honeycomb-arrow-control-2026-09-18-analysis.json"
+  },
+  "budget": {
+    "records": 3072,
+    "estimated_seconds": 180,
+    "checkpoint_records": 32,
+    "stopping": "fixed sample counts"
+  },
+  "completed_at": "2026-09-18"
+}

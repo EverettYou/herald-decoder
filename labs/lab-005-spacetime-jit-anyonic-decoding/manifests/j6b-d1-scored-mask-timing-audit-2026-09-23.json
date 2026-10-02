@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j6b-d1-scored-mask-timing-audit-2026-09-23",
+  "status": "registered_before_read_only_audit",
+  "role": "Final frozen-cohort interface diagnostic before deciding whether a new scientific study is justified",
+  "question": "Among J6B paths that reached the scorer, which overlapping residual, union-winding and charge-winding flags accompany failure, and what commit timing is recorded, without changing the unconditional estimand?",
+  "research_basis": "Existing Lab 005 D4 projector/fusion interface and scorer; no new physical model or literature-derived method is introduced. The frozen D0 audit established that scored failures account for most of each proposal-triggered net count difference, but did not identify their overlapping flag patterns or timing.",
+  "competing_explanations": [
+    "Terminal residual dominates scored failures, making a scorer/temporal-completion interface check more informative than more sampling.",
+    "Union or charge winding without terminal residual dominates, favoring a distinct spatial recovery/charge-action diagnostic.",
+    "Flags substantially overlap and timing differs across arms, so this observational audit cannot choose a mechanism; any intervention requires a separate contract."
+  ],
+  "frozen_inputs": {
+    "j6b_manifest": {"path": "manifests/j6b-disjoint-temporal-handoff-pilot-2026-09-23.json", "sha256": "8140182a4be0315a205936626c7ec727f765efe66047c02bbeac588097b7fdb2"},
+    "rows": {"path": "results/j6b-disjoint-temporal-handoff-rows-2026-09-23.jsonl", "sha256": "620c5db65231e5c112a497397aad168eefd7d284f1af362c52d512c6741fbefe"},
+    "paired": {"path": "results/j6b-disjoint-temporal-handoff-paired-analysis-2026-09-23.json", "sha256": "402074b139fafd103ee801e3139de3f1245a7bd3dcee88f976338a206df2657f"},
+    "d0": {"path": "results/j6b-d0-frozen-outcome-attribution-2026-09-23.json", "sha256": "38d1f1b61279f80a26e1e11de795f2aaf7c187d4ee12fed6a80aa5d7b4ca9b30", "required_status": "passed_descriptive_accounting_only"}
+  },
+  "scope": {
+    "cells": ["clean_herald_schedule", "joint_readout_noise"],
+    "modes": ["syndrome_only", "heralded"],
+    "schedules": ["immediate", "fixed_delay_1", "jit_lyons_brown", "offline_full_history"],
+    "independent_unit": "One original five-round matched history; 128 histories per stochastic cell, eight unconditional arms per history.",
+    "scored_mask_bit_order": ["physical_winding", "union_winding", "charge_winding", "terminal_residual"],
+    "legal_physical_commit_rounds": [1, 2, 3, 4],
+    "paired_contrasts": "All 14 online pairs from the immutable J6B paired analysis; offline is arm-level descriptive only."
+  },
+  "diagnostic_matrix": [
+    "For every stochastic cell and all eight arms, retain a full 4-bit mask histogram among scored rows plus failed-closed count. Preserve overlap: no priority-ordered or mutually exclusive attribution among physical, union, charge and terminal-residual flags.",
+    "For every cell and arm, record exact unique-commit-count, invocation-count and per-round physical-commit histograms within the three D0 outcome categories; validate unique_commit_count equals commit_rounds length and legal commit rounds.",
+    "For all 14 original online paired contrasts, count sparse 4-bit mask transitions only where both matched rows were scored, and separately count pairs with either failed-closed row. Reconcile scored-pair and abort-pair totals with D0's matched three-by-three outcome table."
+  ],
+  "integrity_gates": "Verify all four frozen input hashes and D0 status; retain exactly 2176 rows, 272 histories, 16 stochastic arms and 14 paired contrasts. Every mask, outcome, timing and matched-pair histogram must close on the original complete histories; never drop failed-closed rows from the unconditional denominator.",
+  "budget": {"new_stochastic_histories": 0, "new_arm_evaluations": 0, "new_bootstrap_replicates": 0, "max_cpu_seconds": 60, "max_output_mib": 1},
+  "stop_rule": "On any hash, Boolean-score, timing or mass-balance mismatch, write no interpreted result and stop. Do not change the old score, trigger, sample or arm definitions and do not start a larger cohort.",
+  "claim_boundary": "Post-hoc descriptive flag/timing audit only. Neither mask frequency nor timing association identifies a causal failure mechanism, conditional logical-error rate, schedule benefit, threshold or hardware-realistic fault tolerance.",
+  "planned_output": "results/j6b-d1-scored-mask-timing-audit-2026-09-23.json"
+}

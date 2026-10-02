@@ -1,0 +1,810 @@
+{
+  "status": "passed",
+  "scope": "Research setup, migration, correction of gauge mapping, bounded exact validation, and a numerical evidence design; no production LER sweep.",
+  "source_sha256": {
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/audit_sector_predictions.py": "09b10e7ad1e0bcaefdd13d009167f91dad1960025bfe7e38f1a8caf8f626dedd",
+    "src/herald_decoder/lattice_model.py": "b87a5feba27675e26970360d730324b7d3740e4dc0492b4dc478e510f140c9e7",
+    "labs/lab-006-sun-bp-theory/results/a9-orientation-analysis.json": "5ef86fb33192daf66379fc9dc8d29517fc2ccdf7afcc0be2dd8f318bd5be0a31",
+    "labs/lab-008-direction-biased-u1-current-channel/manifests/sector-prediction-audit-2026-09-18.json": "f9d4bf70d761530c27f74ac8839d2bdfdedc760c1c0b40f1ae117ee4738ee6c7"
+  },
+  "arithmetic": "Fraction for all motif probabilities; integer potential and cycle arithmetic",
+  "canonical_lattice_hash_matches_parent_production": true,
+  "effective_prior_state_checks": 171,
+  "motif_rows": [
+    {
+      "fixture": "rough-path",
+      "p": "1/3",
+      "bias_q": "0",
+      "records": 3,
+      "binary_sector_bayes_risk": "1/9",
+      "risk_float": 0.1111111111111111,
+      "Q0_sector_weights": [
+        "4/9",
+        "1/9"
+      ]
+    },
+    {
+      "fixture": "rough-path",
+      "p": "1/3",
+      "bias_q": "1/5",
+      "records": 5,
+      "binary_sector_bayes_risk": "37/225",
+      "risk_float": 0.16444444444444445,
+      "Q0_sector_weights": [
+        "4/9",
+        "17/225"
+      ]
+    },
+    {
+      "fixture": "rough-path",
+      "p": "1/3",
+      "bias_q": "1/2",
+      "records": 5,
+      "binary_sector_bayes_risk": "5/18",
+      "risk_float": 0.2777777777777778,
+      "Q0_sector_weights": [
+        "4/9",
+        "1/18"
+      ]
+    },
+    {
+      "fixture": "rough-path",
+      "p": "1/3",
+      "bias_q": "4/5",
+      "records": 5,
+      "binary_sector_bayes_risk": "37/225",
+      "risk_float": 0.16444444444444445,
+      "Q0_sector_weights": [
+        "4/9",
+        "17/225"
+      ]
+    },
+    {
+      "fixture": "rough-path",
+      "p": "1/3",
+      "bias_q": "1",
+      "records": 3,
+      "binary_sector_bayes_risk": "1/9",
+      "risk_float": 0.1111111111111111,
+      "Q0_sector_weights": [
+        "4/9",
+        "1/9"
+      ]
+    },
+    {
+      "fixture": "gradient-square",
+      "p": "1/3",
+      "bias_q": "0",
+      "records": 15,
+      "binary_sector_bayes_risk": "4/81",
+      "risk_float": 0.04938271604938271,
+      "Q0_sector_weights": [
+        "16/81",
+        "0"
+      ]
+    },
+    {
+      "fixture": "gradient-square",
+      "p": "1/3",
+      "bias_q": "1/5",
+      "records": 65,
+      "binary_sector_bayes_risk": "4132/50625",
+      "risk_float": 0.08161975308641975,
+      "Q0_sector_weights": [
+        "16/81",
+        "32/50625"
+      ]
+    },
+    {
+      "fixture": "gradient-square",
+      "p": "1/3",
+      "bias_q": "1/2",
+      "records": 65,
+      "binary_sector_bayes_risk": "65/648",
+      "risk_float": 0.10030864197530864,
+      "Q0_sector_weights": [
+        "16/81",
+        "1/648"
+      ]
+    },
+    {
+      "fixture": "gradient-square",
+      "p": "1/3",
+      "bias_q": "4/5",
+      "records": 65,
+      "binary_sector_bayes_risk": "4132/50625",
+      "risk_float": 0.08161975308641975,
+      "Q0_sector_weights": [
+        "16/81",
+        "32/50625"
+      ]
+    },
+    {
+      "fixture": "gradient-square",
+      "p": "1/3",
+      "bias_q": "1",
+      "records": 15,
+      "binary_sector_bayes_risk": "4/81",
+      "risk_float": 0.04938271604938271,
+      "Q0_sector_weights": [
+        "16/81",
+        "0"
+      ]
+    },
+    {
+      "fixture": "circulating-square",
+      "p": "1/3",
+      "bias_q": "0",
+      "records": 15,
+      "binary_sector_bayes_risk": "1/81",
+      "risk_float": 0.012345679012345678,
+      "Q0_sector_weights": [
+        "16/81",
+        "1/81"
+      ]
+    },
+    {
+      "fixture": "circulating-square",
+      "p": "1/3",
+      "bias_q": "1/5",
+      "records": 65,
+      "binary_sector_bayes_risk": "3457/50625",
+      "risk_float": 0.06828641975308641,
+      "Q0_sector_weights": [
+        "16/81",
+        "257/50625"
+      ]
+    },
+    {
+      "fixture": "circulating-square",
+      "p": "1/3",
+      "bias_q": "1/2",
+      "records": 65,
+      "binary_sector_bayes_risk": "65/648",
+      "risk_float": 0.10030864197530864,
+      "Q0_sector_weights": [
+        "16/81",
+        "1/648"
+      ]
+    },
+    {
+      "fixture": "circulating-square",
+      "p": "1/3",
+      "bias_q": "4/5",
+      "records": 65,
+      "binary_sector_bayes_risk": "3457/50625",
+      "risk_float": 0.06828641975308641,
+      "Q0_sector_weights": [
+        "16/81",
+        "257/50625"
+      ]
+    },
+    {
+      "fixture": "circulating-square",
+      "p": "1/3",
+      "bias_q": "1",
+      "records": 15,
+      "binary_sector_bayes_risk": "1/81",
+      "risk_float": 0.012345679012345678,
+      "Q0_sector_weights": [
+        "16/81",
+        "1/81"
+      ]
+    }
+  ],
+  "canonical_arrow_audit": [
+    {
+      "lattice": "square",
+      "L": 5,
+      "edges": 32,
+      "incident_vertices": 25,
+      "cycle_rank": 8,
+      "pure_gradient": true,
+      "inconsistent_chords_in_this_basis": 0,
+      "all_edges_increase_vertex_id": true,
+      "witness": null,
+      "boundary_potential_values_if_gradient": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "lattice": "square",
+      "L": 7,
+      "edges": 72,
+      "incident_vertices": 49,
+      "cycle_rank": 24,
+      "pure_gradient": true,
+      "inconsistent_chords_in_this_basis": 0,
+      "all_edges_increase_vertex_id": true,
+      "witness": null,
+      "boundary_potential_values_if_gradient": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "lattice": "square",
+      "L": 9,
+      "edges": 128,
+      "incident_vertices": 81,
+      "cycle_rank": 48,
+      "pure_gradient": true,
+      "inconsistent_chords_in_this_basis": 0,
+      "all_edges_increase_vertex_id": true,
+      "witness": null,
+      "boundary_potential_values_if_gradient": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "lattice": "square",
+      "L": 11,
+      "edges": 200,
+      "incident_vertices": 121,
+      "cycle_rank": 80,
+      "pure_gradient": true,
+      "inconsistent_chords_in_this_basis": 0,
+      "all_edges_increase_vertex_id": true,
+      "witness": null,
+      "boundary_potential_values_if_gradient": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 5,
+      "edges": 74,
+      "incident_vertices": 60,
+      "cycle_rank": 15,
+      "pure_gradient": false,
+      "inconsistent_chords_in_this_basis": 7,
+      "all_edges_increase_vertex_id": true,
+      "witness": {
+        "signed_edge_cycle": [
+          [
+            0,
+            -1
+          ],
+          [
+            6,
+            -1
+          ],
+          [
+            16,
+            1
+          ],
+          [
+            17,
+            -1
+          ],
+          [
+            18,
+            1
+          ],
+          [
+            19,
+            -1
+          ]
+        ],
+        "circulation_in_units_of_h": -2
+      },
+      "boundary_potential_values_if_gradient": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 7,
+      "edges": 146,
+      "incident_vertices": 112,
+      "cycle_rank": 35,
+      "pure_gradient": false,
+      "inconsistent_chords_in_this_basis": 14,
+      "all_edges_increase_vertex_id": true,
+      "witness": {
+        "signed_edge_cycle": [
+          [
+            0,
+            -1
+          ],
+          [
+            6,
+            -1
+          ],
+          [
+            22,
+            1
+          ],
+          [
+            23,
+            -1
+          ],
+          [
+            24,
+            1
+          ],
+          [
+            25,
+            -1
+          ]
+        ],
+        "circulation_in_units_of_h": -2
+      },
+      "boundary_potential_values_if_gradient": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 9,
+      "edges": 242,
+      "incident_vertices": 180,
+      "cycle_rank": 63,
+      "pure_gradient": false,
+      "inconsistent_chords_in_this_basis": 23,
+      "all_edges_increase_vertex_id": true,
+      "witness": {
+        "signed_edge_cycle": [
+          [
+            0,
+            -1
+          ],
+          [
+            6,
+            -1
+          ],
+          [
+            28,
+            1
+          ],
+          [
+            29,
+            -1
+          ],
+          [
+            30,
+            1
+          ],
+          [
+            31,
+            -1
+          ]
+        ],
+        "circulation_in_units_of_h": -2
+      },
+      "boundary_potential_values_if_gradient": null
+    },
+    {
+      "lattice": "honeycomb",
+      "L": 11,
+      "edges": 362,
+      "incident_vertices": 264,
+      "cycle_rank": 99,
+      "pure_gradient": false,
+      "inconsistent_chords_in_this_basis": 34,
+      "all_edges_increase_vertex_id": true,
+      "witness": {
+        "signed_edge_cycle": [
+          [
+            0,
+            -1
+          ],
+          [
+            6,
+            -1
+          ],
+          [
+            34,
+            1
+          ],
+          [
+            35,
+            -1
+          ],
+          [
+            36,
+            1
+          ],
+          [
+            37,
+            -1
+          ]
+        ],
+        "circulation_in_units_of_h": -2
+      },
+      "boundary_potential_values_if_gradient": null
+    }
+  ],
+  "inherited_U1_p030": [
+    {
+      "lattice": "square",
+      "cells": 100,
+      "significant_increases": 95,
+      "p030_slice": [
+        {
+          "lattice": "square",
+          "group": "U1",
+          "L": 5,
+          "p": 0.3,
+          "shots": 20000,
+          "directed": {
+            "logical_failures": 3292,
+            "ler": 0.1646,
+            "wilson95": [
+              0.15952530199157247,
+              0.1698035157948625
+            ],
+            "invalid_correction": 0,
+            "bp_nonconverged": 1117,
+            "mean_iterations": null,
+            "max_terminal_delta": null
+          },
+          "hidden": {
+            "logical_failures": 8210,
+            "ler": 0.4105,
+            "wilson95": [
+              0.4037002192346866,
+              0.41733415521935613
+            ],
+            "invalid_correction": 0,
+            "bp_nonconverged": 1,
+            "mean_iterations": null,
+            "max_terminal_delta": null
+          },
+          "hidden_only_failures": 6594,
+          "directed_only_failures": 1676,
+          "delta_hidden_minus_directed": 0.2459,
+          "paired95_conservative": [
+            0.23396242850949267,
+            0.25774612689131476
+          ],
+          "mcnemar_exact_p": 0.0,
+          "holm_adjusted_p": 0.0
+        },
+        {
+          "lattice": "square",
+          "group": "U1",
+          "L": 7,
+          "p": 0.3,
+          "shots": 20000,
+          "directed": {
+            "logical_failures": 2069,
+            "ler": 0.10345,
+            "wilson95": [
+              0.09930515936468795,
+              0.10774714443140862
+            ],
+            "invalid_correction": 0,
+            "bp_nonconverged": 11248,
+            "mean_iterations": null,
+            "max_terminal_delta": null
+          },
+          "hidden": {
+            "logical_failures": 7955,
+            "ler": 0.39775,
+            "wilson95": [
+              0.3909871840195648,
+              0.4045520873539086
+            ],
+            "invalid_correction": 0,
+            "bp_nonconverged": 629,
+            "mean_iterations": null,
+            "max_terminal_delta": null
+          },
+          "hidden_only_failures": 7024,
+          "directed_only_failures": 1138,
+          "delta_hidden_minus_directed": 0.2943,
+          "paired95_conservative": [
+            0.28295851995317195,
+            0.3055318513441454
+          ],
+          "mcnemar_exact_p": 0.0,
+          "holm_adjusted_p": 0.0
+        },
+        {
+          "lattice": "square",
+          "group": "U1",
+          "L": 9,
+          "p": 0.3,
+          "shots": 20000,
+          "directed": {
+            "logical_failures": 1205,
+            "ler": 0.06025,
+            "wilson95": [
+              0.05703593289667637,
+              0.06363296281466764
+            ],
+            "invalid_correction": 0,
+            "bp_nonconverged": 18509,
+            "mean_iterations": null,
+            "max_terminal_delta": null
+          },
+          "hidden": {
+            "logical_failures": 8035,
+            "ler": 0.40175,
+            "wilson95": [
+              0.39497507376006014,
+              0.40856266132496444
+            ],
+            "invalid_correction": 0,
+            "bp_nonconverged": 19410,
+            "mean_iterations": null,
+            "max_terminal_delta": null
+          },
+          "hidden_only_failures": 7454,
+          "directed_only_failures": 624,
+          "delta_hidden_minus_directed": 0.3415,
+          "paired95_conservative": [
+            0.3309672559250739,
+            0.3519050847464747
+          ],
+          "mcnemar_exact_p": 0.0,
+          "holm_adjusted_p": 0.0
+        },
+        {
+          "lattice": "square",
+          "group": "U1",
+          "L": 11,
+          "p": 0.3,
+          "shots": 20000,
+          "directed": {
+            "logical_failures": 757,
+            "ler": 0.03785,
+            "wilson95": [
+              0.03529274757065852,
+              0.040584751355998996
+            ],
+            "invalid_correction": 0,
+            "bp_nonconverged": 19880,
+            "mean_iterations": null,
+            "max_terminal_delta": null
+          },
+          "hidden": {
+            "logical_failures": 8104,
+            "ler": 0.4052,
+            "wilson95": [
+              0.39841500652541056,
+              0.4120214035108269
+            ],
+            "invalid_correction": 0,
+            "bp_nonconverged": 20000,
+            "mean_iterations": null,
+            "max_terminal_delta": null
+          },
+          "hidden_only_failures": 7776,
+          "directed_only_failures": 429,
+          "delta_hidden_minus_directed": 0.36735,
+          "paired95_conservative": [
+            0.3572086414917762,
+            0.3773536811106134
+          ],
+          "mcnemar_exact_p": 0.0,
+          "holm_adjusted_p": 0.0
+        }
+      ]
+    },
+    {
+      "lattice": "honeycomb",
+      "cells": 100,
+      "significant_increases": 80,
+      "p030_slice": [
+        {
+          "lattice": "honeycomb",
+          "group": "U1",
+          "L": 5,
+          "p": 0.3,
+          "shots": 20000,
+          "directed": {
+            "logical_failures": 492,
+            "ler": 0.0246,
+            "wilson95": [
+              0.02254275745682571,
+              0.026839830425318564
+            ],
+            "invalid_correction": 0,
+            "bp_nonconverged": 2554,
+            "mean_iterations": null,
+            "max_terminal_delta": null
+          },
+          "hidden": {
+            "logical_failures": 3884,
+            "ler": 0.1942,
+            "wilson95": [
+              0.18877652871644549,
+              0.19974092053546808
+            ],
+            "invalid_correction": 0,
+            "bp_nonconverged": 2373,
+            "mean_iterations": null,
+            "max_terminal_delta": null
+          },
+          "hidden_only_failures": 3751,
+          "directed_only_failures": 359,
+          "delta_hidden_minus_directed": 0.1696,
+          "paired95_conservative": [
+            0.1612260450862014,
+            0.17790929213350185
+          ],
+          "mcnemar_exact_p": 0.0,
+          "holm_adjusted_p": 0.0
+        },
+        {
+          "lattice": "honeycomb",
+          "group": "U1",
+          "L": 7,
+          "p": 0.3,
+          "shots": 20000,
+          "directed": {
+            "logical_failures": 100,
+            "ler": 0.005,
+            "wilson95": [
+              0.004113011324666333,
+              0.006077104370877246
+            ],
+            "invalid_correction": 0,
+            "bp_nonconverged": 6449,
+            "mean_iterations": null,
+            "max_terminal_delta": null
+          },
+          "hidden": {
+            "logical_failures": 3185,
+            "ler": 0.15925,
+            "wilson95": [
+              0.15424435341959813,
+              0.16438651915263713
+            ],
+            "invalid_correction": 0,
+            "bp_nonconverged": 13329,
+            "mean_iterations": null,
+            "max_terminal_delta": null
+          },
+          "hidden_only_failures": 3159,
+          "directed_only_failures": 74,
+          "delta_hidden_minus_directed": 0.15425,
+          "paired95_conservative": [
+            0.14742427612503628,
+            0.16101336242126263
+          ],
+          "mcnemar_exact_p": 0.0,
+          "holm_adjusted_p": 0.0
+        },
+        {
+          "lattice": "honeycomb",
+          "group": "U1",
+          "L": 9,
+          "p": 0.3,
+          "shots": 20000,
+          "directed": {
+            "logical_failures": 32,
+            "ler": 0.0016,
+            "wilson95": [
+              0.0011336372618005737,
+              0.002257784278924517
+            ],
+            "invalid_correction": 0,
+            "bp_nonconverged": 10206,
+            "mean_iterations": null,
+            "max_terminal_delta": null
+          },
+          "hidden": {
+            "logical_failures": 2464,
+            "ler": 0.1232,
+            "wilson95": [
+              0.11871721828628955,
+              0.12782750008559088
+            ],
+            "invalid_correction": 0,
+            "bp_nonconverged": 18852,
+            "mean_iterations": null,
+            "max_terminal_delta": null
+          },
+          "hidden_only_failures": 2461,
+          "directed_only_failures": 29,
+          "delta_hidden_minus_directed": 0.1216,
+          "paired95_conservative": [
+            0.11570983450850597,
+            0.12743638344353042
+          ],
+          "mcnemar_exact_p": 0.0,
+          "holm_adjusted_p": 0.0
+        },
+        {
+          "lattice": "honeycomb",
+          "group": "U1",
+          "L": 11,
+          "p": 0.3,
+          "shots": 20000,
+          "directed": {
+            "logical_failures": 5,
+            "ler": 0.00025,
+            "wilson95": [
+              0.00010678963454394949,
+              0.0005851504035326238
+            ],
+            "invalid_correction": 0,
+            "bp_nonconverged": 13061,
+            "mean_iterations": null,
+            "max_terminal_delta": null
+          },
+          "hidden": {
+            "logical_failures": 1906,
+            "ler": 0.0953,
+            "wilson95": [
+              0.0913079519700874,
+              0.09944748201372366
+            ],
+            "invalid_correction": 0,
+            "bp_nonconverged": 19858,
+            "mean_iterations": null,
+            "max_terminal_delta": null
+          },
+          "hidden_only_failures": 1905,
+          "directed_only_failures": 4,
+          "delta_hidden_minus_directed": 0.09505,
+          "paired95_conservative": [
+            0.09008355571897203,
+            0.09995870848361868
+          ],
+          "mcnemar_exact_p": 0.0,
+          "holm_adjusted_p": 0.0
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Finite motif parity is not a two-dimensional threshold measurement.",
+    "The chord count depends on the spanning tree; a nonzero witnessed circulation and the pure-gradient verdict do not.",
+    "Inherited production data were read, not reacquired; no intermediate-bias LER points exist in this audit."
+  ]
+}

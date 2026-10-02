@@ -1,0 +1,2312 @@
+{
+  "status": "complete_obstruction",
+  "physical_parameters": {
+    "geometry": "square",
+    "L": 3,
+    "p": "1/2",
+    "q": "1"
+  },
+  "new_physical_record_samples": 0,
+  "decoder_runs": 0,
+  "current_states_reused": 256,
+  "records": 64,
+  "ambiguous_records": 46,
+  "boundary_flux_polynomial": "F_Q(t)=sum_{j:D_M j=Q} t^{K(j)}",
+  "identities": {
+    "F_Q(1)": "N_0(Q)+N_1(Q)",
+    "F_Q(-1)": "N_0(Q)-N_1(Q)",
+    "posterior_magnetization": "m(Q)=F_Q(-1)/F_Q(1)",
+    "conditional_risk": "r(Q)=(1-|m(Q)|)/2",
+    "Bayes_LER": "2^{-E-1} sum_Q [F_Q(1)-|F_Q(-1)|]"
+  },
+  "identity_failures": 0,
+  "Bayes_LER_exact": "7/16",
+  "conditional_posterior_balance_exact": "8/17",
+  "L3_root_control": {
+    "all_records_real_nonpositive": true,
+    "failed_records": 0,
+    "smallest_root": -4.791287847477915,
+    "largest_root": 0.0,
+    "interpretation": "finite L3 diagnostic only; not an all-size theorem"
+  },
+  "L3_variance_control": {
+    "minimum_ambiguous_variance_exact": "1/4",
+    "maximum_ambiguous_variance_exact": "7/12",
+    "physical_ambiguous_record_average_variance_exact": "48/119",
+    "variance_bound_failures": 0,
+    "bound_if_real_rooted": "r(Q)>=[1-exp(-2 Var(K|Q))]/2"
+  },
+  "primary_source_review": {
+    "source": "Borcea, Branden and Liggett, Negative dependence and the geometry of polynomials, JAMS 2009 / arXiv:0707.2340",
+    "url": "https://arxiv.org/abs/0707.2340",
+    "applicable_closures": [
+      "coordinate conditioning",
+      "projection",
+      "external fields",
+      "diagonal specialization"
+    ],
+    "missing_interface": "conditioning on D_M j=Q is a joint signed linear/divergence constraint (Laurent coefficient extraction), not one of the reviewed closure operations"
+  },
+  "decision": {
+    "outcome": "obstruction",
+    "established": "The boundary-flux polynomial exactly represents physical posterior balance; all L3 identities, real-root diagnostics and variance bounds pass.",
+    "not_established": "Neither real stability of F_Q for arbitrary L nor a size-uniform positive lower bound on Var(K|Q) over positive physical ambiguous-record mass is proved.",
+    "threshold_claim": "No square decoding threshold or midpoint noncorrectability follows from this bounded control."
+  },
+  "record_polynomials": [
+    {
+      "Q": [
+        -2,
+        -1,
+        0
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "sector_counts": [
+        0,
+        1
+      ],
+      "F_at_1": 1,
+      "F_at_minus_1": -1,
+      "conditional_risk_exact": "0",
+      "conditional_flux_mean_exact": "3",
+      "conditional_flux_variance_exact": "0",
+      "roots": [
+        {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.0,
+      "ambiguous": false
+    },
+    {
+      "Q": [
+        -2,
+        -1,
+        1
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sector_counts": [
+        1,
+        1
+      ],
+      "F_at_1": 2,
+      "F_at_minus_1": 0,
+      "conditional_risk_exact": "1/2",
+      "conditional_flux_mean_exact": "5/2",
+      "conditional_flux_variance_exact": "1/4",
+      "roots": [
+        {
+          "real": -1.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.1967346701436833,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        -2,
+        -1,
+        2
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "sector_counts": [
+        1,
+        0
+      ],
+      "F_at_1": 1,
+      "F_at_minus_1": 1,
+      "conditional_risk_exact": "0",
+      "conditional_flux_mean_exact": "2",
+      "conditional_flux_variance_exact": "0",
+      "roots": [
+        {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.0,
+      "ambiguous": false
+    },
+    {
+      "Q": [
+        -2,
+        0,
+        -1
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "sector_counts": [
+        0,
+        1
+      ],
+      "F_at_1": 1,
+      "F_at_minus_1": -1,
+      "conditional_risk_exact": "0",
+      "conditional_flux_mean_exact": "3",
+      "conditional_flux_variance_exact": "0",
+      "roots": [
+        {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.0,
+      "ambiguous": false
+    },
+    {
+      "Q": [
+        -2,
+        0,
+        0
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        0,
+        2,
+        2
+      ],
+      "sector_counts": [
+        2,
+        2
+      ],
+      "F_at_1": 4,
+      "F_at_minus_1": 0,
+      "conditional_risk_exact": "1/2",
+      "conditional_flux_mean_exact": "5/2",
+      "conditional_flux_variance_exact": "1/4",
+      "roots": [
+        {
+          "real": -1.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.1967346701436833,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        -2,
+        0,
+        1
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        1,
+        3,
+        1
+      ],
+      "sector_counts": [
+        3,
+        2
+      ],
+      "F_at_1": 5,
+      "F_at_minus_1": 1,
+      "conditional_risk_exact": "2/5",
+      "conditional_flux_mean_exact": "2",
+      "conditional_flux_variance_exact": "2/5",
+      "roots": [
+        {
+          "real": -2.618033988749895,
+          "imag": 0.0
+        },
+        {
+          "real": -0.38196601125010515,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.2753355179413892,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        -2,
+        0,
+        2
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "sector_counts": [
+        1,
+        1
+      ],
+      "F_at_1": 2,
+      "F_at_minus_1": 0,
+      "conditional_risk_exact": "1/2",
+      "conditional_flux_mean_exact": "3/2",
+      "conditional_flux_variance_exact": "1/4",
+      "roots": [
+        {
+          "real": -1.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.1967346701436833,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        -2,
+        1,
+        -1
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sector_counts": [
+        1,
+        1
+      ],
+      "F_at_1": 2,
+      "F_at_minus_1": 0,
+      "conditional_risk_exact": "1/2",
+      "conditional_flux_mean_exact": "5/2",
+      "conditional_flux_variance_exact": "1/4",
+      "roots": [
+        {
+          "real": -1.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.1967346701436833,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        -2,
+        1,
+        0
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        1,
+        3,
+        1
+      ],
+      "sector_counts": [
+        3,
+        2
+      ],
+      "F_at_1": 5,
+      "F_at_minus_1": 1,
+      "conditional_risk_exact": "2/5",
+      "conditional_flux_mean_exact": "2",
+      "conditional_flux_variance_exact": "2/5",
+      "roots": [
+        {
+          "real": -2.618033988749895,
+          "imag": 0.0
+        },
+        {
+          "real": -0.38196601125010515,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.2753355179413892,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        -2,
+        1,
+        1
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        2,
+        2,
+        0
+      ],
+      "sector_counts": [
+        2,
+        2
+      ],
+      "F_at_1": 4,
+      "F_at_minus_1": 0,
+      "conditional_risk_exact": "1/2",
+      "conditional_flux_mean_exact": "3/2",
+      "conditional_flux_variance_exact": "1/4",
+      "roots": [
+        {
+          "real": -1.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.1967346701436833,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        -2,
+        1,
+        2
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "sector_counts": [
+        0,
+        1
+      ],
+      "F_at_1": 1,
+      "F_at_minus_1": -1,
+      "conditional_risk_exact": "0",
+      "conditional_flux_mean_exact": "1",
+      "conditional_flux_variance_exact": "0",
+      "roots": [
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.0,
+      "ambiguous": false
+    },
+    {
+      "Q": [
+        -2,
+        2,
+        -1
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "sector_counts": [
+        1,
+        0
+      ],
+      "F_at_1": 1,
+      "F_at_minus_1": 1,
+      "conditional_risk_exact": "0",
+      "conditional_flux_mean_exact": "2",
+      "conditional_flux_variance_exact": "0",
+      "roots": [
+        {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.0,
+      "ambiguous": false
+    },
+    {
+      "Q": [
+        -2,
+        2,
+        0
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "sector_counts": [
+        1,
+        1
+      ],
+      "F_at_1": 2,
+      "F_at_minus_1": 0,
+      "conditional_risk_exact": "1/2",
+      "conditional_flux_mean_exact": "3/2",
+      "conditional_flux_variance_exact": "1/4",
+      "roots": [
+        {
+          "real": -1.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.1967346701436833,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        -2,
+        2,
+        1
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "sector_counts": [
+        0,
+        1
+      ],
+      "F_at_1": 1,
+      "F_at_minus_1": -1,
+      "conditional_risk_exact": "0",
+      "conditional_flux_mean_exact": "1",
+      "conditional_flux_variance_exact": "0",
+      "roots": [
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.0,
+      "ambiguous": false
+    },
+    {
+      "Q": [
+        -1,
+        -2,
+        0
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "sector_counts": [
+        0,
+        1
+      ],
+      "F_at_1": 1,
+      "F_at_minus_1": -1,
+      "conditional_risk_exact": "0",
+      "conditional_flux_mean_exact": "3",
+      "conditional_flux_variance_exact": "0",
+      "roots": [
+        {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.0,
+      "ambiguous": false
+    },
+    {
+      "Q": [
+        -1,
+        -2,
+        1
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sector_counts": [
+        1,
+        1
+      ],
+      "F_at_1": 2,
+      "F_at_minus_1": 0,
+      "conditional_risk_exact": "1/2",
+      "conditional_flux_mean_exact": "5/2",
+      "conditional_flux_variance_exact": "1/4",
+      "roots": [
+        {
+          "real": -1.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.1967346701436833,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        -1,
+        -2,
+        2
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "sector_counts": [
+        1,
+        0
+      ],
+      "F_at_1": 1,
+      "F_at_minus_1": 1,
+      "conditional_risk_exact": "0",
+      "conditional_flux_mean_exact": "2",
+      "conditional_flux_variance_exact": "0",
+      "roots": [
+        {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.0,
+      "ambiguous": false
+    },
+    {
+      "Q": [
+        -1,
+        -1,
+        -1
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "sector_counts": [
+        0,
+        1
+      ],
+      "F_at_1": 1,
+      "F_at_minus_1": -1,
+      "conditional_risk_exact": "0",
+      "conditional_flux_mean_exact": "3",
+      "conditional_flux_variance_exact": "0",
+      "roots": [
+        {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.0,
+      "ambiguous": false
+    },
+    {
+      "Q": [
+        -1,
+        -1,
+        0
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        0,
+        3,
+        3
+      ],
+      "sector_counts": [
+        3,
+        3
+      ],
+      "F_at_1": 6,
+      "F_at_minus_1": 0,
+      "conditional_risk_exact": "1/2",
+      "conditional_flux_mean_exact": "5/2",
+      "conditional_flux_variance_exact": "1/4",
+      "roots": [
+        {
+          "real": -1.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.1967346701436833,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        -1,
+        -1,
+        1
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        2,
+        5,
+        2
+      ],
+      "sector_counts": [
+        5,
+        4
+      ],
+      "F_at_1": 9,
+      "F_at_minus_1": 1,
+      "conditional_risk_exact": "4/9",
+      "conditional_flux_mean_exact": "2",
+      "conditional_flux_variance_exact": "4/9",
+      "roots": [
+        {
+          "real": -2.0,
+          "imag": 0.0
+        },
+        {
+          "real": -0.5,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.2944438547464063,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        -1,
+        -1,
+        2
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        2,
+        2,
+        0
+      ],
+      "sector_counts": [
+        2,
+        2
+      ],
+      "F_at_1": 4,
+      "F_at_minus_1": 0,
+      "conditional_risk_exact": "1/2",
+      "conditional_flux_mean_exact": "3/2",
+      "conditional_flux_variance_exact": "1/4",
+      "roots": [
+        {
+          "real": -1.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.1967346701436833,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        -1,
+        0,
+        -1
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        0,
+        2,
+        2
+      ],
+      "sector_counts": [
+        2,
+        2
+      ],
+      "F_at_1": 4,
+      "F_at_minus_1": 0,
+      "conditional_risk_exact": "1/2",
+      "conditional_flux_mean_exact": "5/2",
+      "conditional_flux_variance_exact": "1/4",
+      "roots": [
+        {
+          "real": -1.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.1967346701436833,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        -1,
+        0,
+        0
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        3,
+        7,
+        3
+      ],
+      "sector_counts": [
+        7,
+        6
+      ],
+      "F_at_1": 13,
+      "F_at_minus_1": 1,
+      "conditional_risk_exact": "6/13",
+      "conditional_flux_mean_exact": "2",
+      "conditional_flux_variance_exact": "6/13",
+      "roots": [
+        {
+          "real": -1.7675918792439984,
+          "imag": 0.0
+        },
+        {
+          "real": -0.5657414540893351,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.30135264340114437,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        -1,
+        0,
+        1
+      ],
+      "F_coefficients_low_to_high": [
+        1,
+        6,
+        6,
+        1
+      ],
+      "sector_counts": [
+        7,
+        7
+      ],
+      "F_at_1": 14,
+      "F_at_minus_1": 0,
+      "conditional_risk_exact": "1/2",
+      "conditional_flux_mean_exact": "3/2",
+      "conditional_flux_variance_exact": "15/28",
+      "roots": [
+        {
+          "real": -4.791287847477915,
+          "imag": 0.0
+        },
+        {
+          "real": -0.9999999999999994,
+          "imag": 0.0
+        },
+        {
+          "real": -0.20871215252208,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.3287405724534772,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        -1,
+        0,
+        2
+      ],
+      "F_coefficients_low_to_high": [
+        1,
+        3,
+        1,
+        0
+      ],
+      "sector_counts": [
+        2,
+        3
+      ],
+      "F_at_1": 5,
+      "F_at_minus_1": -1,
+      "conditional_risk_exact": "2/5",
+      "conditional_flux_mean_exact": "1",
+      "conditional_flux_variance_exact": "2/5",
+      "roots": [
+        {
+          "real": -2.618033988749895,
+          "imag": 0.0
+        },
+        {
+          "real": -0.38196601125010515,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.2753355179413892,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        -1,
+        1,
+        -1
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        1,
+        3,
+        1
+      ],
+      "sector_counts": [
+        3,
+        2
+      ],
+      "F_at_1": 5,
+      "F_at_minus_1": 1,
+      "conditional_risk_exact": "2/5",
+      "conditional_flux_mean_exact": "2",
+      "conditional_flux_variance_exact": "2/5",
+      "roots": [
+        {
+          "real": -2.618033988749895,
+          "imag": 0.0
+        },
+        {
+          "real": -0.38196601125010515,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.2753355179413892,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        -1,
+        1,
+        0
+      ],
+      "F_coefficients_low_to_high": [
+        1,
+        5,
+        5,
+        1
+      ],
+      "sector_counts": [
+        6,
+        6
+      ],
+      "F_at_1": 12,
+      "F_at_minus_1": 0,
+      "conditional_risk_exact": "1/2",
+      "conditional_flux_mean_exact": "3/2",
+      "conditional_flux_variance_exact": "7/12",
+      "roots": [
+        {
+          "real": -3.7320508075688767,
+          "imag": 0.0
+        },
+        {
+          "real": -0.9999999999999994,
+          "imag": 0.0
+        },
+        {
+          "real": -0.2679491924311228,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.3442983880427012,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        -1,
+        1,
+        1
+      ],
+      "F_coefficients_low_to_high": [
+        2,
+        5,
+        2,
+        0
+      ],
+      "sector_counts": [
+        4,
+        5
+      ],
+      "F_at_1": 9,
+      "F_at_minus_1": -1,
+      "conditional_risk_exact": "4/9",
+      "conditional_flux_mean_exact": "1",
+      "conditional_flux_variance_exact": "4/9",
+      "roots": [
+        {
+          "real": -2.0,
+          "imag": 0.0
+        },
+        {
+          "real": -0.5,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.2944438547464063,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        -1,
+        1,
+        2
+      ],
+      "F_coefficients_low_to_high": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "sector_counts": [
+        1,
+        1
+      ],
+      "F_at_1": 2,
+      "F_at_minus_1": 0,
+      "conditional_risk_exact": "1/2",
+      "conditional_flux_mean_exact": "1/2",
+      "conditional_flux_variance_exact": "1/4",
+      "roots": [
+        {
+          "real": -1.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.1967346701436833,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        -1,
+        2,
+        -1
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "sector_counts": [
+        1,
+        1
+      ],
+      "F_at_1": 2,
+      "F_at_minus_1": 0,
+      "conditional_risk_exact": "1/2",
+      "conditional_flux_mean_exact": "3/2",
+      "conditional_flux_variance_exact": "1/4",
+      "roots": [
+        {
+          "real": -1.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.1967346701436833,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        -1,
+        2,
+        0
+      ],
+      "F_coefficients_low_to_high": [
+        1,
+        2,
+        1,
+        0
+      ],
+      "sector_counts": [
+        2,
+        2
+      ],
+      "F_at_1": 4,
+      "F_at_minus_1": 0,
+      "conditional_risk_exact": "1/2",
+      "conditional_flux_mean_exact": "1",
+      "conditional_flux_variance_exact": "1/2",
+      "roots": [
+        {
+          "real": -0.9999999933110325,
+          "imag": 0.0
+        },
+        {
+          "real": -1.0000000066889676,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.31606027941427883,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        -1,
+        2,
+        1
+      ],
+      "F_coefficients_low_to_high": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "sector_counts": [
+        1,
+        1
+      ],
+      "F_at_1": 2,
+      "F_at_minus_1": 0,
+      "conditional_risk_exact": "1/2",
+      "conditional_flux_mean_exact": "1/2",
+      "conditional_flux_variance_exact": "1/4",
+      "roots": [
+        {
+          "real": -1.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.1967346701436833,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        0,
+        -2,
+        0
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sector_counts": [
+        1,
+        1
+      ],
+      "F_at_1": 2,
+      "F_at_minus_1": 0,
+      "conditional_risk_exact": "1/2",
+      "conditional_flux_mean_exact": "5/2",
+      "conditional_flux_variance_exact": "1/4",
+      "roots": [
+        {
+          "real": -1.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.1967346701436833,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        0,
+        -2,
+        1
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "sector_counts": [
+        2,
+        2
+      ],
+      "F_at_1": 4,
+      "F_at_minus_1": 0,
+      "conditional_risk_exact": "1/2",
+      "conditional_flux_mean_exact": "2",
+      "conditional_flux_variance_exact": "1/2",
+      "roots": [
+        {
+          "real": -0.9999999933110325,
+          "imag": 0.0
+        },
+        {
+          "real": -1.0000000066889676,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.31606027941427883,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        0,
+        -2,
+        2
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "sector_counts": [
+        1,
+        1
+      ],
+      "F_at_1": 2,
+      "F_at_minus_1": 0,
+      "conditional_risk_exact": "1/2",
+      "conditional_flux_mean_exact": "3/2",
+      "conditional_flux_variance_exact": "1/4",
+      "roots": [
+        {
+          "real": -1.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.1967346701436833,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        0,
+        -1,
+        -1
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sector_counts": [
+        1,
+        1
+      ],
+      "F_at_1": 2,
+      "F_at_minus_1": 0,
+      "conditional_risk_exact": "1/2",
+      "conditional_flux_mean_exact": "5/2",
+      "conditional_flux_variance_exact": "1/4",
+      "roots": [
+        {
+          "real": -1.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.1967346701436833,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        0,
+        -1,
+        0
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        2,
+        5,
+        2
+      ],
+      "sector_counts": [
+        5,
+        4
+      ],
+      "F_at_1": 9,
+      "F_at_minus_1": 1,
+      "conditional_risk_exact": "4/9",
+      "conditional_flux_mean_exact": "2",
+      "conditional_flux_variance_exact": "4/9",
+      "roots": [
+        {
+          "real": -2.0,
+          "imag": 0.0
+        },
+        {
+          "real": -0.5,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.2944438547464063,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        0,
+        -1,
+        1
+      ],
+      "F_coefficients_low_to_high": [
+        1,
+        5,
+        5,
+        1
+      ],
+      "sector_counts": [
+        6,
+        6
+      ],
+      "F_at_1": 12,
+      "F_at_minus_1": 0,
+      "conditional_risk_exact": "1/2",
+      "conditional_flux_mean_exact": "3/2",
+      "conditional_flux_variance_exact": "7/12",
+      "roots": [
+        {
+          "real": -3.7320508075688767,
+          "imag": 0.0
+        },
+        {
+          "real": -0.9999999999999994,
+          "imag": 0.0
+        },
+        {
+          "real": -0.2679491924311228,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.3442983880427012,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        0,
+        -1,
+        2
+      ],
+      "F_coefficients_low_to_high": [
+        1,
+        3,
+        1,
+        0
+      ],
+      "sector_counts": [
+        2,
+        3
+      ],
+      "F_at_1": 5,
+      "F_at_minus_1": -1,
+      "conditional_risk_exact": "2/5",
+      "conditional_flux_mean_exact": "1",
+      "conditional_flux_variance_exact": "2/5",
+      "roots": [
+        {
+          "real": -2.618033988749895,
+          "imag": 0.0
+        },
+        {
+          "real": -0.38196601125010515,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.2753355179413892,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        0,
+        0,
+        -1
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        1,
+        3,
+        1
+      ],
+      "sector_counts": [
+        3,
+        2
+      ],
+      "F_at_1": 5,
+      "F_at_minus_1": 1,
+      "conditional_risk_exact": "2/5",
+      "conditional_flux_mean_exact": "2",
+      "conditional_flux_variance_exact": "2/5",
+      "roots": [
+        {
+          "real": -2.618033988749895,
+          "imag": 0.0
+        },
+        {
+          "real": -0.38196601125010515,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.2753355179413892,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        0,
+        0,
+        0
+      ],
+      "F_coefficients_low_to_high": [
+        1,
+        6,
+        6,
+        1
+      ],
+      "sector_counts": [
+        7,
+        7
+      ],
+      "F_at_1": 14,
+      "F_at_minus_1": 0,
+      "conditional_risk_exact": "1/2",
+      "conditional_flux_mean_exact": "3/2",
+      "conditional_flux_variance_exact": "15/28",
+      "roots": [
+        {
+          "real": -4.791287847477915,
+          "imag": 0.0
+        },
+        {
+          "real": -0.9999999999999994,
+          "imag": 0.0
+        },
+        {
+          "real": -0.20871215252208,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.3287405724534772,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        0,
+        0,
+        1
+      ],
+      "F_coefficients_low_to_high": [
+        3,
+        7,
+        3,
+        0
+      ],
+      "sector_counts": [
+        6,
+        7
+      ],
+      "F_at_1": 13,
+      "F_at_minus_1": -1,
+      "conditional_risk_exact": "6/13",
+      "conditional_flux_mean_exact": "1",
+      "conditional_flux_variance_exact": "6/13",
+      "roots": [
+        {
+          "real": -1.7675918792439984,
+          "imag": 0.0
+        },
+        {
+          "real": -0.5657414540893351,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.30135264340114437,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        0,
+        0,
+        2
+      ],
+      "F_coefficients_low_to_high": [
+        2,
+        2,
+        0,
+        0
+      ],
+      "sector_counts": [
+        2,
+        2
+      ],
+      "F_at_1": 4,
+      "F_at_minus_1": 0,
+      "conditional_risk_exact": "1/2",
+      "conditional_flux_mean_exact": "1/2",
+      "conditional_flux_variance_exact": "1/4",
+      "roots": [
+        {
+          "real": -1.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.1967346701436833,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        0,
+        1,
+        -1
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        2,
+        2,
+        0
+      ],
+      "sector_counts": [
+        2,
+        2
+      ],
+      "F_at_1": 4,
+      "F_at_minus_1": 0,
+      "conditional_risk_exact": "1/2",
+      "conditional_flux_mean_exact": "3/2",
+      "conditional_flux_variance_exact": "1/4",
+      "roots": [
+        {
+          "real": -1.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.1967346701436833,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        0,
+        1,
+        0
+      ],
+      "F_coefficients_low_to_high": [
+        2,
+        5,
+        2,
+        0
+      ],
+      "sector_counts": [
+        4,
+        5
+      ],
+      "F_at_1": 9,
+      "F_at_minus_1": -1,
+      "conditional_risk_exact": "4/9",
+      "conditional_flux_mean_exact": "1",
+      "conditional_flux_variance_exact": "4/9",
+      "roots": [
+        {
+          "real": -2.0,
+          "imag": 0.0
+        },
+        {
+          "real": -0.5,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.2944438547464063,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        0,
+        1,
+        1
+      ],
+      "F_coefficients_low_to_high": [
+        3,
+        3,
+        0,
+        0
+      ],
+      "sector_counts": [
+        3,
+        3
+      ],
+      "F_at_1": 6,
+      "F_at_minus_1": 0,
+      "conditional_risk_exact": "1/2",
+      "conditional_flux_mean_exact": "1/2",
+      "conditional_flux_variance_exact": "1/4",
+      "roots": [
+        {
+          "real": -1.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.1967346701436833,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        0,
+        1,
+        2
+      ],
+      "F_coefficients_low_to_high": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "sector_counts": [
+        1,
+        0
+      ],
+      "F_at_1": 1,
+      "F_at_minus_1": 1,
+      "conditional_risk_exact": "0",
+      "conditional_flux_mean_exact": "0",
+      "conditional_flux_variance_exact": "0",
+      "roots": [],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.0,
+      "ambiguous": false
+    },
+    {
+      "Q": [
+        0,
+        2,
+        -1
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "sector_counts": [
+        0,
+        1
+      ],
+      "F_at_1": 1,
+      "F_at_minus_1": -1,
+      "conditional_risk_exact": "0",
+      "conditional_flux_mean_exact": "1",
+      "conditional_flux_variance_exact": "0",
+      "roots": [
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.0,
+      "ambiguous": false
+    },
+    {
+      "Q": [
+        0,
+        2,
+        0
+      ],
+      "F_coefficients_low_to_high": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "sector_counts": [
+        1,
+        1
+      ],
+      "F_at_1": 2,
+      "F_at_minus_1": 0,
+      "conditional_risk_exact": "1/2",
+      "conditional_flux_mean_exact": "1/2",
+      "conditional_flux_variance_exact": "1/4",
+      "roots": [
+        {
+          "real": -1.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.1967346701436833,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        0,
+        2,
+        1
+      ],
+      "F_coefficients_low_to_high": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "sector_counts": [
+        1,
+        0
+      ],
+      "F_at_1": 1,
+      "F_at_minus_1": 1,
+      "conditional_risk_exact": "0",
+      "conditional_flux_mean_exact": "0",
+      "conditional_flux_variance_exact": "0",
+      "roots": [],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.0,
+      "ambiguous": false
+    },
+    {
+      "Q": [
+        1,
+        -2,
+        0
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "sector_counts": [
+        1,
+        0
+      ],
+      "F_at_1": 1,
+      "F_at_minus_1": 1,
+      "conditional_risk_exact": "0",
+      "conditional_flux_mean_exact": "2",
+      "conditional_flux_variance_exact": "0",
+      "roots": [
+        {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.0,
+      "ambiguous": false
+    },
+    {
+      "Q": [
+        1,
+        -2,
+        1
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "sector_counts": [
+        1,
+        1
+      ],
+      "F_at_1": 2,
+      "F_at_minus_1": 0,
+      "conditional_risk_exact": "1/2",
+      "conditional_flux_mean_exact": "3/2",
+      "conditional_flux_variance_exact": "1/4",
+      "roots": [
+        {
+          "real": -1.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.1967346701436833,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        1,
+        -2,
+        2
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "sector_counts": [
+        0,
+        1
+      ],
+      "F_at_1": 1,
+      "F_at_minus_1": -1,
+      "conditional_risk_exact": "0",
+      "conditional_flux_mean_exact": "1",
+      "conditional_flux_variance_exact": "0",
+      "roots": [
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.0,
+      "ambiguous": false
+    },
+    {
+      "Q": [
+        1,
+        -1,
+        -1
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "sector_counts": [
+        1,
+        0
+      ],
+      "F_at_1": 1,
+      "F_at_minus_1": 1,
+      "conditional_risk_exact": "0",
+      "conditional_flux_mean_exact": "2",
+      "conditional_flux_variance_exact": "0",
+      "roots": [
+        {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.0,
+      "ambiguous": false
+    },
+    {
+      "Q": [
+        1,
+        -1,
+        0
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        2,
+        2,
+        0
+      ],
+      "sector_counts": [
+        2,
+        2
+      ],
+      "F_at_1": 4,
+      "F_at_minus_1": 0,
+      "conditional_risk_exact": "1/2",
+      "conditional_flux_mean_exact": "3/2",
+      "conditional_flux_variance_exact": "1/4",
+      "roots": [
+        {
+          "real": -1.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.1967346701436833,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        1,
+        -1,
+        1
+      ],
+      "F_coefficients_low_to_high": [
+        1,
+        3,
+        1,
+        0
+      ],
+      "sector_counts": [
+        2,
+        3
+      ],
+      "F_at_1": 5,
+      "F_at_minus_1": -1,
+      "conditional_risk_exact": "2/5",
+      "conditional_flux_mean_exact": "1",
+      "conditional_flux_variance_exact": "2/5",
+      "roots": [
+        {
+          "real": -2.618033988749895,
+          "imag": 0.0
+        },
+        {
+          "real": -0.38196601125010515,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.2753355179413892,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        1,
+        -1,
+        2
+      ],
+      "F_coefficients_low_to_high": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "sector_counts": [
+        1,
+        1
+      ],
+      "F_at_1": 2,
+      "F_at_minus_1": 0,
+      "conditional_risk_exact": "1/2",
+      "conditional_flux_mean_exact": "1/2",
+      "conditional_flux_variance_exact": "1/4",
+      "roots": [
+        {
+          "real": -1.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.1967346701436833,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        1,
+        0,
+        -1
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "sector_counts": [
+        1,
+        1
+      ],
+      "F_at_1": 2,
+      "F_at_minus_1": 0,
+      "conditional_risk_exact": "1/2",
+      "conditional_flux_mean_exact": "3/2",
+      "conditional_flux_variance_exact": "1/4",
+      "roots": [
+        {
+          "real": -1.0,
+          "imag": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.1967346701436833,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        1,
+        0,
+        0
+      ],
+      "F_coefficients_low_to_high": [
+        1,
+        3,
+        1,
+        0
+      ],
+      "sector_counts": [
+        2,
+        3
+      ],
+      "F_at_1": 5,
+      "F_at_minus_1": -1,
+      "conditional_risk_exact": "2/5",
+      "conditional_flux_mean_exact": "1",
+      "conditional_flux_variance_exact": "2/5",
+      "roots": [
+        {
+          "real": -2.618033988749895,
+          "imag": 0.0
+        },
+        {
+          "real": -0.38196601125010515,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.2753355179413892,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        1,
+        0,
+        1
+      ],
+      "F_coefficients_low_to_high": [
+        2,
+        2,
+        0,
+        0
+      ],
+      "sector_counts": [
+        2,
+        2
+      ],
+      "F_at_1": 4,
+      "F_at_minus_1": 0,
+      "conditional_risk_exact": "1/2",
+      "conditional_flux_mean_exact": "1/2",
+      "conditional_flux_variance_exact": "1/4",
+      "roots": [
+        {
+          "real": -1.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.1967346701436833,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        1,
+        0,
+        2
+      ],
+      "F_coefficients_low_to_high": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "sector_counts": [
+        1,
+        0
+      ],
+      "F_at_1": 1,
+      "F_at_minus_1": 1,
+      "conditional_risk_exact": "0",
+      "conditional_flux_mean_exact": "0",
+      "conditional_flux_variance_exact": "0",
+      "roots": [],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.0,
+      "ambiguous": false
+    },
+    {
+      "Q": [
+        1,
+        1,
+        -1
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "sector_counts": [
+        0,
+        1
+      ],
+      "F_at_1": 1,
+      "F_at_minus_1": -1,
+      "conditional_risk_exact": "0",
+      "conditional_flux_mean_exact": "1",
+      "conditional_flux_variance_exact": "0",
+      "roots": [
+        {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.0,
+      "ambiguous": false
+    },
+    {
+      "Q": [
+        1,
+        1,
+        0
+      ],
+      "F_coefficients_low_to_high": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "sector_counts": [
+        1,
+        1
+      ],
+      "F_at_1": 2,
+      "F_at_minus_1": 0,
+      "conditional_risk_exact": "1/2",
+      "conditional_flux_mean_exact": "1/2",
+      "conditional_flux_variance_exact": "1/4",
+      "roots": [
+        {
+          "real": -1.0,
+          "imag": 0.0
+        }
+      ],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.1967346701436833,
+      "ambiguous": true
+    },
+    {
+      "Q": [
+        1,
+        1,
+        1
+      ],
+      "F_coefficients_low_to_high": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "sector_counts": [
+        1,
+        0
+      ],
+      "F_at_1": 1,
+      "F_at_minus_1": 1,
+      "conditional_risk_exact": "0",
+      "conditional_flux_mean_exact": "0",
+      "conditional_flux_variance_exact": "0",
+      "roots": [],
+      "real_nonpositive_roots_at_L3": true,
+      "variance_risk_lower_bound": 0.0,
+      "ambiguous": false
+    }
+  ],
+  "elapsed_seconds": 0.005310750100761652,
+  "source_sha256": {
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/check_posterior_balance_polynomial.py": "079770534345ea939ff2b46dd0fbe674f97eeebd9bcefe73807cbe82a81ee12d",
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/current_oracle.py": "241916aa389193b7b62a3ea2de7f4267086dfcca60760ee514e27100f40fa6ee",
+    "labs/lab-008-direction-biased-u1-current-channel/results/square-midpoint-thermodynamics-2026-09-20.json": "77d46c83b845c667f923098cbd052fcc209ac61a806913678421ccbb54593128"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "lab005-j6b-replacement-pilot-registration-2026-09-22",
+  "status": "registration_satisfied_preflight_pending_no_sampling",
+  "registered_at": "2026-09-22",
+  "phase": "J6B",
+  "title": "Replacement J6 pilot registration after causal handoff validation",
+  "dependency": "manifests/j6a-causal-odd-syndrome-time-boundary-handoff-2026-09-22.json",
+  "release_condition": "J6A must produce a passing durable result for every fixed deterministic causality, parity-accounting, anti-leakage, replay, and malformed-input gate.",
+  "purpose": "This predecessor job required a new pilot to be frozen only after the public temporal-boundary handoff and integrated ledger were validated. Its registration is now satisfied, but it never authorized stochastic sampling by itself.",
+  "required_registration_items_after_release": [
+    "new source hashes and the exact handoff interface version",
+    "fresh history seeds and a new matched-history cohort disjoint from J6",
+    "new cell counts, event-resolution thresholds, compute caps, and fixed stop rule",
+    "unconditional abort/denominator semantics for unresolved handoffs",
+    "preflight gates covering causal prefixes, temporal-boundary resolution, action binding, truth/future exclusion, replay, and row completeness",
+    "an explicit statement that J6 remains closed censored and is not pooled with the replacement cohort"
+  ],
+  "prohibited_until_registered": [
+    "Generate replacement histories",
+    "Run schedule arms or bootstrap replicates",
+    "Compare risk or schedule direction",
+    "Reuse J6 histories, rows, selected rates, or event counts as an adaptive extension"
+  ],
+  "budget_before_release": {
+    "new_stochastic_histories": 0,
+    "schedule_arm_evaluations": 0,
+    "bootstrap_replicates": 0
+  },
+  "stop_rule": "If J6A fails or is censored, retain this job as blocked. If J6A passes, create a separate immutable J6B contract before any stochastic action; no aspect of J6 may be repaired, resampled, or reinterpreted.",
+  "release_evidence": "results/j6a-causal-odd-syndrome-time-boundary-handoff-2026-09-22.json",
+  "integrated_reconciliation_evidence": "results/j6b-r0-temporal-ledger-reconciliation-2026-09-23.json",
+  "registration_boundary": "J6A and R0 permit only a new immutable pilot registration. The pilot must freeze the exact integrated later-action supersession semantics and require a separate preflight before any new stochastic history.",
+  "registered_replacement": "manifests/j6b-disjoint-temporal-handoff-pilot-2026-09-23.json",
+  "registration_result": "A disjoint 272-history, 2176-arm, newly rated 0.06 replacement design is frozen with source/runtime hashes, full public/private boundaries, matched keys, unconditional loss, resolution gates and fixed stop. Zero replacement histories, arms, and bootstrap replicates were generated in this registration tick. J6 remains closed censored.",
+  "next_operation": "Run only the new pilot's separate deterministic fail-closed preflight; production is unarmed."
+}

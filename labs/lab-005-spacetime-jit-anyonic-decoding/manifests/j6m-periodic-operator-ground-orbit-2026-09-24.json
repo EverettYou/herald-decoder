@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j6m-periodic-operator-ground-orbit-2026-09-24",
+  "status": "registered_before_exact_execution",
+  "epistemic_role": "Exact symbolic A2/A3/A4 operator-algebra and common-vacuum-orbit existence gate on the fixed 108-qubit periodic support; no sequential instrument or public E2 law",
+  "question": "Does the J6L source-normalized kagome embedding retain the twisted neighboring-star algebra while admitting a nonzero anyon-free common +1 star/triangle state?",
+  "source_basis": [
+    "Jing et al. 2025 Appendix A.1 Eqs. (A1)-(A4): CZ-aware quasi-stabilizer stars, Z triangles, flux-dependent adjacent-star commutator, simultaneous vacuum sector and commuting-projector alternative",
+    "Iqbal et al. 2023 Fig. 2: six-ring-CZ/six-outer-X star and two color triangles; ground-state preparation is separate from a support map"
+  ],
+  "pinned_inputs": {
+    "jing_pdf_sha256": "7a17c3d3a743e3dec4266b64d0321a6af7a5eeacfab67e42b9ec77d30b65a2ac",
+    "iqbal_pdf_sha256": "87348ee1e7659c140a2f1005a7037a19ddbf65bba146717f8a4778e7830f946b",
+    "j6l_result_sha256": "c3eee28f083b7f3a4dd82a3e4f8a7d3ec29aa19af92bbc3ab4588129d855c4ab"
+  },
+  "operator_model": {
+    "source_star": "A_s|x> = (-1)^(sum of six ring CZ pair products on x) |x XOR six outer-X qubits>",
+    "source_triangle": "B_t|x> = (-1)^(parity of its three Z-qubit bits) |x>",
+    "vacuum_sector": "All B_t=+1; computational |0^108> is a valid initial vector in this sector before star averaging",
+    "null_surrogate": "Delete all CZ factors, retaining the same outer-X masks and triangles, only as a diagnostic contrast; it is not proposed as D4 physics"
+  },
+  "matrix": {
+    "stars": 36,
+    "star_triangle_cases": 2592,
+    "star_pair_cases_per_model": 630,
+    "models": ["source_cz_aware", "cz_deleted_null"],
+    "independent_unit": "complete deterministic 108-qubit symbolic operator set; no stochastic samples"
+  },
+  "method": "Represent each A_s as a binary outer-X flip mask and quadratic CZ phase. Compute every pair commutator as an affine GF(2) phase. Require its constant to vanish and its linear mask to lie in the GF(2) row span of all triangle-Z masks; require nonadjacent source stars to commute globally. Check triangle-star commutation by mask parity. Use Gaussian elimination on the 36 X-flip masks to identify orbit rank and all dependent generator relations, checking each relation's phase on |0>; a positive, commuting vacuum orbit defines a nonzero compact common +1 state without enumerating 2^108 amplitudes.",
+  "acceptance": [
+    "All pinned inputs match and the 36 stars and 72 triangle operators have exact expected supports, Hermitian involution and triangle-star commutation.",
+    "Across all 630 source-star pairs, affine commutator constants vanish; nonadjacent stars commute globally; every nonzero adjacent commutator linear mask lies in the vacuum triangle-Z row span. At least one adjacent pair is noncommuting on a fluxful computational basis state, distinguishing the CZ-aware source from the CZ-deleted null.",
+    "Every dependent flip-mask relation has +1 phase on |0>; the compact orbit construction is nonzero, stays triangle-vacuum, and is a common +1 eigenstate of all 36 source stars. Report orbit rank and relation checks, not a 2^108 state vector or a logical-sector assignment.",
+    "No first/post-correction charge probabilities, public E2, histories, schedule arms, bootstrap risk, threshold, or full D4 ground-space degeneracy are inferred."
+  ],
+  "budget": {"max_qubits": 108, "max_stars": 36, "max_triangles": 72, "max_pair_cases_per_model": 630, "max_cpu_seconds": 30, "new_dependencies": 0, "stochastic_histories": 0, "schedule_arm_evaluations": 0, "bootstrap_replicates": 0},
+  "stop_rule": "Fail closed on provenance drift, operator/triangle commutation failure, a source pair commutator outside the triangle-vacuum row span, an unexpected nonadjacent commutator, or a negative dependent relation. A pass authorizes only a separately registered sequential measurement and action-conditioned instrument fixture.",
+  "planned_result": "results/j6m-periodic-operator-ground-orbit-2026-09-24.json"
+}

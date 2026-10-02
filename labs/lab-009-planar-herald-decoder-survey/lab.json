@@ -1,0 +1,162 @@
+{
+  "id": "lab-009-planar-herald-decoder-survey",
+  "title": "Planar herald decoder survey and integration",
+  "stage": "complete",
+  "created": "2026-10-01",
+  "updated": "2026-10-01",
+  "parents": [
+    "lab-002-herald-belief-matching",
+    "lab-003-herald-threshold-phase-diagram"
+  ],
+  "method_dependencies": [
+    "lab-007-decoding-statistical-mechanics"
+  ],
+  "summary": "Survey and reusable integration of configuration MAP, planar logical ML, transfer and controlled MPS on the classical herald channel over p,q in [0,1].",
+  "current_focus": "Integrated decoder survey, independent validation and matched full-domain pilot are delivered.",
+  "next_action": "Reuse the standard methods and retained matched vectors; new physical channels or phase sweeps require a separate contract.",
+  "motivation": "Separate intrinsic logical recovery from posterior-inference and matching losses.",
+  "question": "Which methods can become reusable standard decoders, and what do matched performance and runtime establish?",
+  "report_contract": {
+    "max_lines": 350,
+    "max_evidence_links": 24
+  },
+  "results": [
+    {
+      "id": "planar-decoder-validation",
+      "kind": "data",
+      "format": "json",
+      "title": "Lightweight decoder validation",
+      "summary": "L2 enumeration and larger cross-backend checks with stated endpoint and approximation limits.",
+      "path": "results/validation.json",
+      "presentation": "download"
+    },
+    {
+      "id": "planar-factor-contract-validation",
+      "kind": "data",
+      "format": "json",
+      "title": "Generic planar factor interface check",
+      "summary": "Twelve L2 weighted-oracle records verify reference and edge-order invariance to 3.33e-16; invalid factors are rejected.",
+      "path": "results/planar-factor-contract-validation.json",
+      "presentation": "download"
+    },
+    {
+      "id": "full-prior-diagnostics",
+      "kind": "figure",
+      "format": "image",
+      "title": "Independent full-prior matched diagnostics",
+      "path": "figures/full-prior-matched-diagnostics.png",
+      "presentation": "download",
+      "summary": "Bounded full-domain check; no thermodynamic threshold claim."
+    },
+    {
+      "id": "full-prior-update",
+      "kind": "data",
+      "format": "json",
+      "title": "Bounded full-prior update and provenance",
+      "path": "results/full-prior-update.json",
+      "presentation": "download",
+      "summary": "Bounded full-domain check; no thermodynamic threshold claim."
+    },
+    {
+      "id": "full-prior-symmetry-audit",
+      "kind": "data",
+      "format": "json",
+      "title": "Complete L=2 complement-symmetry audit",
+      "path": "results/full-prior-symmetry-audit.json",
+      "presentation": "download",
+      "summary": "Bounded full-domain check; no thermodynamic threshold claim."
+    },
+    {
+      "id": "full-prior-validation",
+      "kind": "data",
+      "format": "json",
+      "title": "Decoder verification across the full prior domain",
+      "path": "results/validation.json",
+      "presentation": "download",
+      "summary": "Bounded full-domain check; no thermodynamic threshold claim."
+    },
+    {
+      "id": "full-prior-matched-data",
+      "kind": "data",
+      "format": "json",
+      "title": "Matched pilot including independent high-p cells",
+      "path": "results/benchmark.json",
+      "presentation": "download",
+      "summary": "Bounded full-domain check; no thermodynamic threshold claim."
+    },
+    {
+      "id": "full-prior-project-correction-audit",
+      "kind": "data",
+      "format": "json",
+      "title": "Project-wide full-prior correction audit",
+      "summary": "Scientific corrections, full-prior checks, rendered pages and explicit historical test limits.",
+      "path": "results/full-prior-project-correction-audit.json",
+      "presentation": "download"
+    },
+    {
+      "id": "fresh-matched-ler",
+      "kind": "figure",
+      "format": "image",
+      "title": "Fresh matched logical failure comparison",
+      "summary": "Fresh 200 shared unconditional records per cell, Wilson95 intervals. Planar and transfer failure counts coincide; MPS \u03c716 approximate. High-p records independently sampled; no reflection or interpolation.",
+      "path": "figures/fresh-matched-ler.png",
+      "presentation": "page"
+    },
+    {
+      "id": "fresh-conditional-regret",
+      "kind": "figure",
+      "format": "image",
+      "title": "Conditional logical-risk objective gap",
+      "summary": "Selected sector expected loss minus exact planar conditional Bayes risk, averaged over 200 records. Error bars \u00b11.96 sample SE. Exact reference zero; MPS posterior agreement is cohort-specific.",
+      "path": "figures/fresh-conditional-regret.png",
+      "presentation": "page"
+    },
+    {
+      "id": "warm-runtime",
+      "kind": "figure",
+      "format": "image",
+      "title": "Warmed per-shot decoder latency",
+      "summary": "Pooled equal-size fresh eight-cell mix:1600 timings/method/size, one CPU thread; excludes graph setup and independent first call. Median and p95, no claim of native or asymptotic speed.",
+      "path": "figures/warm-runtime.png",
+      "presentation": "page"
+    },
+    {
+      "id": "approximation-diagnostics",
+      "kind": "figure",
+      "format": "image",
+      "title": "MPS and Kac\u2013Ward approximation diagnostics",
+      "summary": "Maximum sampled posterior differences, not rigorous risk bounds. MPS finitechi and KacWard finitepenalty remain approximations. Plot floor1e-17 for zero/roundoff differences; no production threshold inferred.",
+      "path": "figures/approximation-diagnostics.png",
+      "presentation": "page"
+    },
+    {
+      "id": "decoder-workbench",
+      "kind": "artifact",
+      "format": "interactive",
+      "title": "Standard decoder workbench",
+      "summary": "Five registered methods on one visible honeycomb record; full p domain, explicit endpoint errors and approximate MPS.",
+      "path": "results/decoder-workbench.html",
+      "presentation": "page"
+    },
+    {
+      "id": "survey-summary",
+      "kind": "data",
+      "format": "json",
+      "title": "Survey integration summary",
+      "summary": "Promoted methods, validation scope, cohort counts, runtime and scientific limits.",
+      "path": "results/survey-summary.json",
+      "presentation": "result"
+    }
+  ],
+  "frontier": [],
+  "resolved": [
+    "Classical channel and logical loss matched; no interior-q complement folding.",
+    "Four reusable methods integrated; finite-penalty Kac\u2013Ward retained as research code.",
+    "Independent oracle, reference/edge relabeling, full-prior endpoints and batch/support gates passed.",
+    "3,200 matched records retain observed inputs, outputs and per-method timing.",
+    "Four current figure pages, method wiki, report and full-prior workbench pass browser verification."
+  ],
+  "blockers": [],
+  "promotion_candidates": [],
+  "phase": "Survey complete"
+}

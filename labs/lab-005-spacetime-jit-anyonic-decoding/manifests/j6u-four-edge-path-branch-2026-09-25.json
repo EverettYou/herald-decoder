@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j6u-four-edge-path-branch-2026-09-25",
+  "status": "registered_before_exact_execution",
+  "question": "Does a minimal four-edge extension of the ideal D4 three-edge chain make a genuinely new or changed second-site charge record first-dependent, and does nonbranching versus a three-arm branch alter that answer?",
+  "epistemic_role": "Small exact physical-topology falsification matrix on one fixed L=2 vacuum orbit; not a general transition kernel, noisy history, decoder or schedule-risk study",
+  "source_basis": [
+    "Jing et al. 2025 Appendix A.2/A.4: red-X error strings, flux-free quasi-stabilizer readout, ordered post-flux correction measurements and chain/branch distinctions",
+    "J6L periodic incidence, J6M compact common vacuum orbit and J6Q ordered Born projector law",
+    "J6R/J6S/J6T three-edge exact public-law and repeated-versus-new-site controls"
+  ],
+  "pinned_inputs": {
+    "jing_pdf_sha256": "7a17c3d3a743e3dec4266b64d0321a6af7a5eeacfab67e42b9ec77d30b65a2ac",
+    "j6l_result_sha256": "c3eee28f083b7f3a4dd82a3e4f8a7d3ec29aa19af92bbc3ab4588129d855c4ab",
+    "j6m_result_sha256": "55bfe46d34c9a8356e828351b0d415ed550312ed315c4c1bda7a51508ef1b932",
+    "j6q_result_sha256": "00994c73588fd30156f8b5628ef37d77ace171c5c1a7d5cfce4b68c4bb5bf890",
+    "j6r_result_sha256": "d6e87855b94f9cf32d90c7502c5dd2b74112b6217ca6433eec24826cde57c589",
+    "j6s_result_sha256": "aca93661c2ebd3e686efe570401a5f370ec13fac4ef6d898fa0220b826b2695e",
+    "j6t_result_sha256": "1403c7a84b413c95a49fe205c3c6f89d6a2b027070d435586dc756813ba79df9",
+    "frozen_integrated_history_sha256": "43d9d0d3e4771ccfc764f590f1843cda1e2a7fbce8dae96057710c413a0adb6e"
+  },
+  "physical_and_observation_contract": {
+    "geometry": "J6L periodic L=2, 24 blue/green sites, 108 kagome qubits and J6M common +1 star/triangle orbit from |0^108>",
+    "private_physical_red_x_topologies": {
+      "four_edge_nonbranching_path": [0, 4, 3, 7],
+      "four_edge_branched_tree": [0, 4, 3, 5]
+    },
+    "incidence": "Path [0,4,3,7] runs blue:0-green:1-blue:2-green:3-blue:4 with no repeated vertices. Branch [0,4,3,5] has degree three at blue:2, degree two at green:1, and three distinct leaf vertices; neither contains a cycle.",
+    "causal_order": "Prepare same J6M orbit; apply private red-X edges; jointly project all first flux-free stars; apply a specified public red-X correction; jointly project all residual-flux-free second stars in the actual first-postselected sector.",
+    "public_record": "Only full 24-bit flux/charge/vacuum arrays with zero charge at fluxful unmeasured sites; no private error support, operator identity, site-partition or truth in public arrays.",
+    "noise": "Ideal exact Born projector law only; no readout noise or stochastic physical histories"
+  },
+  "competing_outcomes": [
+    "A novel second-site joint charge law differs across positive first public records for at least one path/action; report whether dependence occurs at a newly eligible site or only at a changed operator.",
+    "A novel-site effect occurs only on one of the two topologies, distinguishing path from branch in this finite ideal fixture.",
+    "All complete branches are novel-site independent and any full-record effect is unchanged-observable repetition; the four-edge matrix does not witness transfer.",
+    "One or more branches exceed the registered support/compute cap; retain only censored diagnostics for those branches and make no complete-law claim there."
+  ],
+  "matrix": {
+    "physical_topologies": [[0, 4, 3, 7], [0, 4, 3, 5]],
+    "public_actions_per_topology": ["correct_edge_0", "correct_edge_3", "correct_edges_0_3", "matched_all_four"],
+    "action_edge_lists": {"correct_edge_0": [0], "correct_edge_3": [3], "correct_edges_0_3": [0, 3], "matched_all_four": "same four physical edges in listed order"},
+    "independent_unit": "One fixed exact initial state per geometry with four counterfactual correction actions, not Monte Carlo samples",
+    "maximum_nondeterministic_first_sites": 4,
+    "maximum_nondeterministic_second_sites": 6,
+    "analysis": "At fixed geometry/action compare full conditional second public distributions across every positive first public record, then exact projections onto newly eligible sites and onto newly eligible plus changed-operator sites. List positive joint support and probability; never infer independence from only site marginals."
+  },
+  "acceptance": [
+    "All eight source/prior/caller hashes, exact J6L path versus branch incidence and unchanged five-round caller pass.",
+    "For each of eight geometry/action branches, eligible sites equal flux-free sites; eligible stars commute in the actual triangle sector, and exact first/conditional second rational masses are nonnegative and normalized or the branch is explicitly censored at the registered site cap.",
+    "Every complete positive row contains only first and second full 24-bit public flux/charge/vacuum arrays plus exact probabilities; site partitions and physical support remain private diagnostics.",
+    "Report complete-law dependence on full public records separately from new-only and changed-plus-new joint projections, with path/branch contrast, censored branches and no post-hoc action substitution.",
+    "Zero histories, schedule-arm evaluations, bootstraps, decoder comparison, threshold fits or five-round caller changes; no promotion beyond this one ideal L=2 orbit."
+  ],
+  "budget": {"max_cpu_seconds": 60, "new_dependencies": 0, "stochastic_histories": 0, "schedule_arm_evaluations": 0, "bootstrap_replicates": 0},
+  "stop_rule": "Fail closed on provenance/incidence drift, noncommuting eligible projectors, negative/unnormalized mass, public/private leakage, caller mutation or total CPU overrun. If more than four first or six second sites are nondeterministic, censor only that geometry/action branch without raising the bound or choosing replacement geometry.",
+  "planned_result": "results/j6u-four-edge-path-branch-2026-09-25.json"
+}

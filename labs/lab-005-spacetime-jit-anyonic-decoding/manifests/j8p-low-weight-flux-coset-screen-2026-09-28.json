@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j8p-low-weight-flux-coset-screen-2026-09-28",
+  "status": "registered_before_execution",
+  "integrity_amendment": "First attempt failed before writing a result because a replay assertion passed a decimal numerator string to Fraction(numerator, denominator), which requires an integer. Convert only the three result-row numerator strings to int inside replay assertions and re-pin the runner. The frozen model, matrix, result path, hypotheses and budgets are unchanged; no output from the failed attempt is accepted.",
+  "question": "How much of the frozen IID prior is in distinct first-flux sectors reached by zero, one or two physical red-X edges, and can simple flux-weight/prior equivalence or direct law cost make these sectors tractable?",
+  "hypotheses": {
+    "few_prior_classes": "All single-edge sectors and the pair sectors within a common flux-weight class have the same exact sector prior, making a later symmetry proof worth testing without assuming law equivalence.",
+    "many_prior_classes": "Pair sectors vary in exact prior within a common flux-weight class, rejecting a naive boundary-weight symmetry shortcut.",
+    "direct_cost_censored": "Even one direct first law for each compatible private error in all reached sectors requires more than 65,536 projector terms, motivating a separate validated reduction rather than exhaustive Born evaluation."
+  },
+  "frozen_model": "R6AF ideal periodic L=2 D4 geometry and 36 IID red-X physical edges at p_X=1/10, p_Z=0. First public flux is the 24-bit pre-action J6O boundary. J8O's two specified complete first records, signal-only first-observation timing, relation-free fixed public actions, action-conditioned second-record convention, and private generation/scoring boundary remain unchanged; this is a prior-only screen with zero first/second public-law evaluation.",
+  "matrix": {
+    "maximum_support_weight": 2,
+    "branches": ["Enumerate every zero-, one- and two-edge physical support; deduplicate its public first-flux sector and sum each sector's exact IID prior over all 8,192 compatible errors. Report reached-sector and complementary prior mass with exact rational arithmetic.", "Group reached sectors by minimum observed support weight, flux Hamming weight and exact sector prior. Test single-edge prior equality and whether each pair-flux-weight class splits into multiple prior values. Project the absolute lower bound of one direct first-law term per compatible private error; do not evaluate those Born laws."],
+    "independent_unit": "One distinct public first-flux GF(2) coset; 8,192 compatible private red-X errors are summed by integer weights for that coset. No random sampling or uncertainty interval.",
+    "integrity": "Pin inputs and runner; verify rank 23/nullity 13, 8,192 distinct kernel elements, 1+36+630 low-weight supports, exact IID normalization, J8O vacuum and one-edge sector-prior replay, distinct first-flux deduplication, reached/unreached prior partition, no new Born terms, and hashes before/after. Matching sector priors are only arithmetic equivalence, never an asserted geometry or public-law symmetry."
+  },
+  "budget": {"max_cpu_seconds": 60, "max_prior_weight_evaluations": 5464064, "max_new_born_terms": 0, "inherited_exact_projector_term_ceiling": 65536, "histories": 0, "schedule_arms": 0, "bootstraps": 0, "new_dependencies": 0},
+  "acceptance": ["Exact count and IID prior mass of all first-flux sectors reached by <=2 red-X edges and the complementary mass", "Exact prior-equivalence class count by minimum support and flux weight, with explicit non-symmetry claim boundary", "Direct per-error first-law term lower-bound versus inherited 65,536-term ceiling, without evaluating any first or second law"],
+  "stop_rule": "Stop at all <=2-edge supports, first integrity failure, 5,464,064 integer-weight evaluations or 60 CPU seconds. Do not add weight-3 sectors, evaluate Born laws, infer operator-law symmetry, full-IID information/risk, noisy JIT or threshold.",
+  "runner": "scripts/run_j8p_low_weight_flux_coset_screen.py",
+  "runner_sha256_before_execution": "ca9ca256ef6ebc9ac2d2513a63636f373559d2bafc1aa1bd602e551b44cd9ef4",
+  "pinned_inputs": {
+    "results/j6l-periodic-kagome-incidence-2026-09-24.json": "c3eee28f083b7f3a4dd82a3e4f8a7d3ec29aa19af92bbc3ab4588129d855c4ab",
+    "results/j6m-periodic-operator-ground-orbit-2026-09-24.json": "55bfe46d34c9a8356e828351b0d415ed550312ed315c4c1bda7a51508ef1b932",
+    "results/j8j-full-prior-coverage-feasibility-verified-2026-09-27.json": "1f780fcdb4e0388609e55b9e99cd82ffdecafa3efce0c3f328cb2f0d36f038df",
+    "results/j8o-other-flux-representative-feasibility-2026-09-28.json": "09928813baf99c3e8d7f507284488fc932c09d07508b56224ede5516b633b07c",
+    "results/j8i-all-support-complete-second-laws-verified-2026-09-27.json": "40418c7174aaa5438580a58c1da44886eb778c9e2c9ffe43a42c5014fd44dc3a",
+    "scripts/run_j6o_full_binary_sequential_public_record.py": "c3c0dc32b30576f22d7838cee059139bcd22dc0cda07c8add34bd4b6d6ac95ca",
+    "scripts/run_j7a_postselected_next_first_limiting_fixtures.py": "f3521fca0714d6fe88c4ec9493af235bd6f8919b0a9013092c09052a59ad24af",
+    "scripts/run_j8o_other_flux_representative_feasibility.py": "81ed958403c38d8a0ab256d675586cb2d5f6a9065008bb92d8cd9c4da11948cc"
+  },
+  "planned_result": "results/j8p-low-weight-flux-coset-screen-2026-09-28.json"
+}

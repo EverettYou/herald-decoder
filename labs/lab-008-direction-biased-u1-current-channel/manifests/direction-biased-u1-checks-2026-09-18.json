@@ -1,0 +1,28 @@
+{
+  "id": "lab008-direction-biased-u1-checks-2026-09-18",
+  "origin": "Migrated from Lab 007 on 2026-09-18; original bounded cycle check retained, strengthened by the separately registered sector audit.",
+  "status": "complete",
+  "registered_at": "2026-09-18",
+  "question": "For a U(1) edge channel with P(j=+1)=p q and P(j=-1)=p(1-q), when is the induced complex Fourier link factor gauge-removable, and what does that establish about the fully directional limit?",
+  "fixed_model": {
+    "edge_current": ["-1", "0", "+1"],
+    "probabilities": {"0": "1-p", "+1": "p q", "-1": "p (1-q)"},
+    "observation": "full interior U(1) charge q_v=(D j)_v, with the existing open rough-boundary convention",
+    "score": "existing binary logical-sector parity; no new geometry or decoder"
+  },
+  "checks": [
+    "Enumerate rational zero-charge partition sums on a directed cycle; the original script did not enumerate a path.",
+    "Verify that an exact imaginary gauge shift exists exactly when the signed bias one-form has zero circulation on every cycle.",
+    "Show a nonzero cycle holonomy changes the partition sum as the bias changes, including at q=1."
+  ],
+  "acceptance": [
+    "All finite enumerations agree with their closed-form expressions exactly.",
+    "The feasibility note distinguishes a pure-gauge open-boundary case from periodic/twisted and fluxful cases.",
+    "No claim of a thermodynamic transition or its absence is made from this bounded check."
+  ],
+  "limits": [
+    "This is a mapping and finite-motif feasibility study, not a typical-record contraction or finite-size decoding experiment.",
+    "The q symbol is a direction-bias parameter here; measured vertex charges are denoted Q."
+  ],
+  "result": "results/direction-biased-u1-checks-2026-09-18.json"
+}

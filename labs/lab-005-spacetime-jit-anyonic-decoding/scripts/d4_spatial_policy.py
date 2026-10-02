@@ -47,7 +47,7 @@ _SHA256 = re.compile(r"[0-9a-f]{64}\Z")
 _POLICY_SOURCE_HASHES = {
     "d4_honeycomb.py": "0895892c00f1f629ec469d4f7b4e42fb8e83bc07666edbc3b8fc26a1f30eb869",
     "d4_matching.py": "1ad1c96af3bf98353c89820b68eb07183a49c954650c51218ca5c1b5c211739e",
-    "d4_charge.py": "c7b528d343abedb052e6bea7f5c29f65de2bab5dae96befa339763198bb17e9a",
+    "d4_charge.py": "2ba3dd13feda42e4441ae0089be2403b5c75b626ae0a0542d4aa9089807472fd",
     "d4_postflux.py": "5435f1fcea89c9eccf369f8bfef44b23deea1ebe954b5e0f1dea5fce0cf12658",
 }
 
@@ -297,6 +297,187 @@ class D4FluxActionV1:
 
     def to_dict(self) -> dict[str, Any]:
         return {**self.unsigned_dict(), "action_digest": self.action_digest}
+
+
+@dataclass(frozen=True)
+class D4TemporalBoundaryHandoffV1:
+    """Causal, public all-defer matching request for an odd snapshot.
+
+    Each visible endpoint is paired with its own decision-time *temporal* node.
+    This is parity bookkeeping, not a physical edge or a claim of optimal
+    spacetime matching.  In particular it cannot be passed to the even-only
+    periodic spatial matcher as though a spatial partner had been observed.
+    """
+
+    schema_version: int
+    request_id: str
+    decision_round: int
+    scheduler_request_digest: str
+    scheduler_prefix_digest: str
+    e1_report_digest: str
+    odd_endpoints: tuple[int, ...]
+    temporal_boundary_labels: tuple[str, ...]
+    handoff_digest: str
+
+    @classmethod
+    def from_public(
+        cls,
+        *,
+        request_id: str,
+        decision_round: int,
+        scheduler_request_digest: str,
+        scheduler_prefix_digest: str,
+        e1_report_digest: str,
+        flux_vertices: tuple[int, ...],
+        vertex_count: int,
+    ) -> "D4TemporalBoundaryHandoffV1":
+        vertices = _sorted_unique_indices("odd_endpoints", flux_vertices, vertex_count)
+        if len(vertices) % 2 != 1:
+            raise ValueError("temporal handoff requires an odd public snapshot")
+        labels = tuple(f"time:{decision_round}:vertex:{vertex}" for vertex in vertices)
+        unsigned = {
+            "schema_version": SCHEMA_VERSION,
+            "request_id": request_id,
+            "decision_round": decision_round,
+            "scheduler_request_digest": scheduler_request_digest,
+            "scheduler_prefix_digest": scheduler_prefix_digest,
+            "e1_report_digest": e1_report_digest,
+            "odd_endpoints": list(vertices),
+            "temporal_boundary_labels": list(labels),
+        }
+        handoff = cls(
+            SCHEMA_VERSION, request_id, decision_round, scheduler_request_digest,
+            scheduler_prefix_digest, e1_report_digest, vertices, labels,
+            canonical_digest(unsigned),
+        )
+        handoff.validate(vertex_count=vertex_count)
+        return handoff
+
+    @classmethod
+    def from_dict(cls, payload: Mapping[str, Any], *, vertex_count: int) -> "D4TemporalBoundaryHandoffV1":
+        _exact_keys(payload, {
+            "schema_version", "request_id", "decision_round",
+            "scheduler_request_digest", "scheduler_prefix_digest",
+            "e1_report_digest", "odd_endpoints", "temporal_boundary_labels",
+            "handoff_digest",
+        })
+        handoff = cls(
+            int(payload["schema_version"]), str(payload["request_id"]),
+            int(payload["decision_round"]), str(payload["scheduler_request_digest"]),
+            str(payload["scheduler_prefix_digest"]), str(payload["e1_report_digest"]),
+            tuple(int(vertex) for vertex in payload["odd_endpoints"]),
+            tuple(str(label) for label in payload["temporal_boundary_labels"]),
+            str(payload["handoff_digest"]),
+        )
+        handoff.validate(vertex_count=vertex_count)
+        return handoff
+
+    def unsigned_dict(self) -> dict[str, Any]:
+        return {
+            "schema_version": self.schema_version,
+            "request_id": self.request_id,
+            "decision_round": self.decision_round,
+            "scheduler_request_digest": self.scheduler_request_digest,
+            "scheduler_prefix_digest": self.scheduler_prefix_digest,
+            "e1_report_digest": self.e1_report_digest,
+            "odd_endpoints": list(self.odd_endpoints),
+            "temporal_boundary_labels": list(self.temporal_boundary_labels),
+        }
+
+    def to_dict(self) -> dict[str, Any]:
+        return {**self.unsigned_dict(), "handoff_digest": self.handoff_digest}
+
+    def validate(self, *, vertex_count: int) -> None:
+        if self.schema_version != SCHEMA_VERSION or not self.request_id:
+            raise ValueError("invalid temporal handoff schema or request")
+        if self.decision_round < 0:
+            raise ValueError("temporal handoff round must be nonnegative")
+        for name in ("scheduler_request_digest", "scheduler_prefix_digest", "e1_report_digest", "handoff_digest"):
+            _validate_digest(name, getattr(self, name))
+        _sorted_unique_indices("odd_endpoints", self.odd_endpoints, vertex_count)
+        if not self.odd_endpoints or len(self.odd_endpoints) % 2 != 1:
+            raise ValueError("temporal handoff requires an odd public snapshot")
+        expected = tuple(f"time:{self.decision_round}:vertex:{vertex}" for vertex in self.odd_endpoints)
+        if self.temporal_boundary_labels != expected:
+            raise ValueError("unknown, duplicate, or unbound temporal boundary token")
+        if canonical_digest(self.unsigned_dict()) != self.handoff_digest:
+            raise ValueError("temporal handoff digest does not match its contents")
+
+    @property
+    def augmented_endpoint_count(self) -> int:
+        return len(self.odd_endpoints) + len(self.temporal_boundary_labels)
+
+
+@dataclass(frozen=True)
+class D4TemporalBoundaryActionV1:
+    request_id: str
+    handoff_digest: str
+    status: str
+    correction_edges: tuple[int, ...]
+    action_digest: str
+
+    def unsigned_dict(self) -> dict[str, Any]:
+        return {
+            "request_id": self.request_id,
+            "handoff_digest": self.handoff_digest,
+            "status": self.status,
+            "correction_edges": list(self.correction_edges),
+        }
+
+    def to_dict(self) -> dict[str, Any]:
+        return {**self.unsigned_dict(), "action_digest": self.action_digest}
+
+    def validate(self, handoff: D4TemporalBoundaryHandoffV1, *, vertex_count: int) -> None:
+        handoff.validate(vertex_count=vertex_count)
+        if (self.request_id != handoff.request_id or self.handoff_digest != handoff.handoff_digest
+                or self.status != "defer_temporal_boundary" or self.correction_edges):
+            raise ValueError("temporal action is unbound or fabricates spatial correction")
+        if canonical_digest(self.unsigned_dict()) != self.action_digest:
+            raise ValueError("temporal action digest does not match its contents")
+
+
+def decode_temporal_boundary_handoff(
+    handoff: D4TemporalBoundaryHandoffV1,
+    *,
+    vertex_count: int,
+    expected_request_id: str,
+    expected_scheduler_request_digest: str,
+    expected_scheduler_prefix_digest: str,
+    expected_e1_report_digest: str,
+    expected_round: int,
+    expected_flux_vertices: tuple[int, ...],
+) -> D4TemporalBoundaryActionV1:
+    """Validate the public augmented request before emitting a no-physics defer.
+
+    This intentionally does not invoke the frozen even-only spatial matcher:
+    its only admissible physical correction is empty until a later causal
+    request supplies a resolvable snapshot.
+    """
+
+    handoff.validate(vertex_count=vertex_count)
+    if (
+        handoff.request_id != expected_request_id
+        or handoff.scheduler_request_digest != expected_scheduler_request_digest
+        or handoff.scheduler_prefix_digest != expected_scheduler_prefix_digest
+        or handoff.e1_report_digest != expected_e1_report_digest
+        or handoff.decision_round != expected_round
+        or handoff.odd_endpoints != expected_flux_vertices
+    ):
+        raise ValueError("temporal handoff is not bound to the public causal request")
+    if handoff.augmented_endpoint_count % 2:
+        raise ValueError("augmented matching request has odd parity")
+    unsigned = {
+        "request_id": handoff.request_id,
+        "handoff_digest": handoff.handoff_digest,
+        "status": "defer_temporal_boundary",
+        "correction_edges": [],
+    }
+    action = D4TemporalBoundaryActionV1(
+        handoff.request_id, handoff.handoff_digest, "defer_temporal_boundary",
+        (), canonical_digest(unsigned),
+    )
+    action.validate(handoff, vertex_count=vertex_count)
+    return action
 
 
 @dataclass(frozen=True)

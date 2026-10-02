@@ -1,0 +1,20 @@
+{
+  "id": "lab008-h12-physical-charge-prefix-affinity-2026-09-23",
+  "status": "complete_exact_finite_control_partial_thermodynamic_target",
+  "parent_contract": "thermodynamic-theory-reorientation-2026-09-22.json",
+  "question": "Can sequentially revealing the actual signed charge record turn the physical H12 absolute contrast into an exact, order-independent Hellinger proof interface, and do the first exact controls support either uniform or risk-weighted prefix contraction at p=.30?",
+  "role": "Target-preserving alternative to the failed global path sum; structural theorem plus fixed-size falsification controls, not a transition estimate.",
+  "model": "Canonical L=3 square with its three existing measured signed-charge vertices, physical current probabilities a=1-p,b=pq,c=p(1-q), absolute logical-cut activity parity, p=.30 and q=.50,.90,1. The q=1 cell is a limiting endpoint control.",
+  "hypotheses": [
+    "Every supported prefix has a conditional sector-charge affinity bounded away from one, providing a possible uniform contraction route.",
+    "Only the physical affinity-weighted average contracts; exceptional prefixes block the uniform route but may leave a physical-average theorem viable.",
+    "Neither route contracts meaningfully in the exact control, requiring a different H12 strategy."
+  ],
+  "registered_method": "Use existing exact_enumeration of L=3 currents only. For each of six permutations of the three measured vertices and k=0..3, marginalize exact Z_a(Q) to charge prefixes, compute F_k=sum_prefix sqrt(Z_0^k Z_1^k), and calculate supported-prefix conditional affinities and the physical affinity-weighted factor F_k/F_(k-1). Verify H12 risk and the two-sided inequalities 1-2F_3 <= A_3 <= sqrt(1-4F_3^2), including support-zero cases. No new lattice size or sampled record.",
+  "analysis_plan": "Compare all 18 q/order cells, check exact replay and order-invariant final F_3 and risk, report the minimum/maximum supported-prefix conditional affinity and the weighted factor per step. Mark uniform contraction failed if any supported prefix has affinity one; do not extrapolate any L=3 factor to L infinity.",
+  "budget": {"new_sizes": 0, "stochastic_samples": 0, "bootstrap_replicates": 0, "deterministic_q_order_cells": 18, "external_dependencies": 0},
+  "outputs": {"result": "../results/h12-physical-charge-prefix-affinity-2026-09-23.json", "owning_wiki": "../wiki/thermodynamic-decoding-theory.md"},
+  "acceptance": "Exact chain identity and all 18 cells pass numerical normalization, risk, monotonicity, order-invariance and inequality gates to 1e-12. The only possible promoted claim is a physical-observation proof interface with explicit L=3 feasibility limits, not a size-uniform p=.30 result.",
+  "stop_rule": "Stop after the fixed 18 cells. If an exact identity or gate fails, preserve a censored result and do not use the diagnostic to modify phase claims.",
+  "decision": "The physical charge-prefix affinity chain and two-sided H12 interval pass all 18 exact L=3 controls with maximum error 4.58e-16 and bit-identical replay. Four of six fair-noise reveal orders contain a supported prefix with conditional affinity one; all q=.90 stages contract only in this finite system, with some weighted factors above .9979. The size-uniform p=.30 question remains open. A subsequent algebraic evidence-boundary audit found F_m=E_P[sech(G/2)]/2, so re-estimating F_m from existing gap cohorts would not add independent transition evidence."
+}

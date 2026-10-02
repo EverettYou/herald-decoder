@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "registered_ready",
+  "status": "withdrawn_invalid_interior_q_complement_symmetry",
   "purpose": "Correct the active B17 presentation so the finite-window boundary guide obeys the researcher-supplied p<->1-p symmetry at p=0.5 and the plot shows the full fundamental p domain without inventing unsampled cells.",
   "epistemic_role": "Existing-data presentation correction; the dashed line remains a visual guide and the finite-grid region remains non-joint directional evidence.",
   "sources": {
@@ -28,9 +28,27 @@
     "inferential_interval": false
   },
   "display": {
-    "x_domain": [0.0, 0.5],
-    "y_domain": [0.0, 1.0],
-    "measured_p_centers": [0.08, 0.12, 0.16, 0.2, 0.24, 0.28, 0.32, 0.36, 0.4, 0.45, 0.49],
+    "x_domain": [
+      0.0,
+      0.5
+    ],
+    "y_domain": [
+      0.0,
+      1.0
+    ],
+    "measured_p_centers": [
+      0.08,
+      0.12,
+      0.16,
+      0.2,
+      0.24,
+      0.28,
+      0.32,
+      0.36,
+      0.4,
+      0.45,
+      0.49
+    ],
     "unsampled_display_rule": "Leave the portion outside the measured p-cell edges blank; do not extrapolate the p=0.08 evidence to p=0 or claim a p=0.5 measurement.",
     "curve_legend": false,
     "method_footer": false
@@ -51,5 +69,12 @@
   "render_audit_output": "results/phase-b18-symmetry-constrained-guide-render-audit-2026-08-28.json",
   "new_decoder_runs": 0,
   "new_decodes": 0,
-  "stop_rule": "Stop after one existing-data symmetry correction, report promotion, regression run, and visual audit."
+  "stop_rule": "Stop after one existing-data symmetry correction, report promotion, regression run, and visual audit.",
+  "scientific_status": "withdrawn_invalid_interior_q_complement_symmetry",
+  "withdrawal": {
+    "date": "2026-10-01",
+    "reason": "No general p\u21941\u2212p observation equivalence for incomplete binary heralds; half-domain and horizontal-tangent constraints are invalid. Numerical payload retained only for historical provenance.",
+    "replacement": "wiki/methods/binary-herald-full-prior-domain.md"
+  },
+  "historical_status": "registered_ready"
 }

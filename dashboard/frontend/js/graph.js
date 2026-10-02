@@ -8,6 +8,9 @@
   const ASPECT_RATIO_DEAD_ZONE = .045;
   const ASPECT_RATIO_STRENGTH = .0028;
   const DOUBLE_CLICK_WINDOW_MS = 360;
+  const LAYOUT_CACHE_KEY = 'herald-decoder:knowledge-graph-layout:v1';
+  const LAYOUT_CACHE_VERSION = 1;
+  const LAYOUT_SAVE_DELAY_MS = 350;
   const BASE_LABEL_COUNT = 7;
   const MAX_LABEL_LINES = 3;
   const LABEL_LINE_WIDTH = 24;
@@ -23,6 +26,43 @@
   const clamp = (value, minimum, maximum) => Math.max(minimum, Math.min(maximum, value));
   const hash = value => [...value].reduce((result, character) => ((result * 33) ^ character.charCodeAt(0)) >>> 0, 5381);
   const labelWidth = value => [...String(value)].reduce((width, character) => width + (/[^\x00-\xff]/.test(character) ? 2 : 1), 0);
+
+  // Layout is a reader preference, not project data: retain it locally so one
+  // person's deliberate arrangement never changes anyone else's graph.
+  function readLayoutCache() {
+    try {
+      const raw = window.localStorage?.getItem(LAYOUT_CACHE_KEY);
+      if (!raw) return null;
+      const cached = JSON.parse(raw);
+      if (cached?.version !== LAYOUT_CACHE_VERSION || !cached.nodes || !cached.size) return null;
+      return cached;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  function writeLayoutCache(graph, size, positions, view) {
+    try {
+      const nodes = Object.fromEntries(graph.nodes.flatMap(node => {
+        const point = positions[node.id];
+        return point && Number.isFinite(point.x) && Number.isFinite(point.y)
+          ? [[node.id, { x: Math.round(point.x * 100) / 100, y: Math.round(point.y * 100) / 100 }]]
+          : [];
+      }));
+      window.localStorage?.setItem(LAYOUT_CACHE_KEY, JSON.stringify({
+        version: LAYOUT_CACHE_VERSION,
+        fingerprint: graph.fingerprint,
+        size: { width: size.width, height: size.height },
+        nodes,
+        view: view && [view.x, view.y, view.width, view.height].every(Number.isFinite)
+          ? { x: view.x, y: view.y, width: view.width, height: view.height }
+          : null,
+        saved_at: Date.now()
+      }));
+    } catch (_) {
+      // Private browsing or a full storage quota must never affect rendering.
+    }
+  }
 
   function truncateLabelLine(value, width) {
     let result = '';
@@ -148,6 +188,34 @@
     }));
   }
 
+  function restoredPositions(graph, size) {
+    const seeded = seededPositions(graph, size);
+    const cached = readLayoutCache();
+    if (!cached) return { positions: seeded, restored: 0, hasNewNodes: true, view: null };
+    const scaleX = size.width / Math.max(1, Number(cached.size.width) || size.width);
+    const scaleY = size.height / Math.max(1, Number(cached.size.height) || size.height);
+    let restored = 0;
+    graph.nodes.forEach(node => {
+      const point = cached.nodes[node.id];
+      if (!point || !Number.isFinite(point.x) || !Number.isFinite(point.y)) return;
+      seeded[node.id] = {
+        x: clamp(point.x * scaleX, 24, size.width - 24),
+        y: clamp(point.y * scaleY, 24, size.height - 24),
+        vx: 0, vy: 0, fixed: false, anchored: true
+      };
+      restored += 1;
+    });
+    const view = cached.fingerprint === graph.fingerprint && cached.view
+      ? {
+        x: cached.view.x * scaleX,
+        y: cached.view.y * scaleY,
+        width: cached.view.width * scaleX,
+        height: cached.view.height * scaleY
+      }
+      : null;
+    return { positions: seeded, restored, hasNewNodes: restored < graph.nodes.length, view };
+  }
+
   function mount(graph) {
     activeCleanup();
     const target = document.querySelector('#relation-graph');
@@ -155,27 +223,40 @@
 
     const visibleEdges = graph.display_edges || graph.edges;
     const confirmedEdges = visibleEdges.filter(edge => edge.display_role !== 'predicted');
+    const initialSize = graphSize(target);
+    const restored = restoredPositions(graph, initialSize);
     const state = {
       graph,
-      size: graphSize(target),
-      positions: null,
+      size: initialSize,
+      positions: restored.positions,
       labelOrder: [],
       colorMode: 'community',
       view: null,
       pan: null,
       drag: null,
-      alpha: 1,
+      // An unchanged graph has its final coordinates already. Do not spend
+      // frames recalculating a layout just because the user navigated home.
+      alpha: restored.hasNewNodes ? .42 : 0,
       frame: 0,
       salt: 0,
       disposed: false,
       edgeElements: new Map(),
       nodeElements: new Map(),
       labelElements: new Map(),
-      lastNodeTap: null
+      lastNodeTap: null,
+      saveTimer: 0
     };
-    state.positions = seededPositions(graph, state.size);
     state.labelOrder = spatialLabelRank(graph.nodes, state.positions).map(node => node.id);
-    state.view = { x: 0, y: 0, width: state.size.width, height: state.size.height };
+    state.view = restored.view || { x: 0, y: 0, width: state.size.width, height: state.size.height };
+
+    const saveLayout = () => writeLayoutCache(graph, state.size, state.positions, state.view);
+    const scheduleLayoutSave = () => {
+      if (state.saveTimer) return;
+      state.saveTimer = window.setTimeout(() => {
+        state.saveTimer = 0;
+        saveLayout();
+      }, LAYOUT_SAVE_DELAY_MS);
+    };
 
     const community = id => graph.communities.find(item => item.id === id);
     const nodeColor = node => state.colorMode === 'type'
@@ -384,7 +465,13 @@
         const pull = node.type === 'project' ? .014 : .0042;
         point.vx += (anchor.x - point.x) * pull * state.alpha;
         point.vy += (anchor.y - point.y) * pull * state.alpha;
-        if (point.fixed) return;
+        // Cached nodes are stable reading anchors. During an incremental
+        // update, only newly introduced (or freshly dragged) nodes move.
+        if (point.fixed || point.anchored) {
+          point.vx = 0;
+          point.vy = 0;
+          return;
+        }
         point.vx *= .82;
         point.vy *= .82;
         point.x = clamp(point.x + point.vx, 24, state.size.width - 24);
@@ -404,6 +491,7 @@
         else {
           state.frame = 0;
           updateLabelOrder();
+          saveLayout();
         }
       };
       state.frame = requestAnimationFrame(loop);
@@ -465,6 +553,7 @@
         element.onpointerdown = event => {
           event.stopPropagation();
           const point = state.positions[element.dataset.nodeId];
+          point.anchored = false;
           state.drag = { id: element.dataset.nodeId, pointerId: event.pointerId, startX: event.clientX, startY: event.clientY, moved: false };
           point.fixed = true;
           element.classList.add('dragging');
@@ -502,6 +591,7 @@
           point.y = clamp(position.y, 20, state.size.height - 20);
           state.drag.moved ||= Math.hypot(event.clientX - state.drag.startX, event.clientY - state.drag.startY) > 4;
           updateGeometry();
+          scheduleLayoutSave();
           return;
         }
         if (!state.pan || state.pan.pointerId !== event.pointerId) return;
@@ -525,6 +615,7 @@
             if (isDoubleClick) openNode(drag.id);
           } else state.lastNodeTap = null;
           state.drag = null;
+          saveLayout();
           reheat(.22);
         }
         if (state.pan?.pointerId === event.pointerId) {
@@ -538,7 +629,7 @@
     render();
     renderLegend();
     renderInsights();
-    simulate();
+    if (state.alpha > .012) simulate();
 
     const counts = visibleEdges.reduce((result, edge) => ({ ...result, [edge.display_role]: (result[edge.display_role] || 0) + 1 }), {});
     const count = document.querySelector('#graph-count');
@@ -579,13 +670,16 @@
       });
       state.size = next;
       setView({ x: 0, y: 0, width: next.width, height: next.height });
+      scheduleLayoutSave();
       reheat(.5);
     });
     resizeObserver.observe(target);
 
     activeCleanup = () => {
+      saveLayout();
       state.disposed = true;
       if (state.frame) cancelAnimationFrame(state.frame);
+      if (state.saveTimer) window.clearTimeout(state.saveTimer);
       resizeObserver.disconnect();
     };
   }
@@ -593,6 +687,6 @@
   window.HeraldKnowledgeGraph = {
     mount,
     cleanup: () => activeCleanup(),
-    test: { wrappedLabel, spatialLabelRank, labelWidth, softAspectRatioForce }
+    test: { wrappedLabel, spatialLabelRank, labelWidth, softAspectRatioForce, restoredPositions }
   };
 })();

@@ -1,0 +1,295 @@
+{
+  "bootstrap_replicates": 0,
+  "checks": {
+    "all_conditional_rows_normalized": true,
+    "all_second_sites_flux_free": true,
+    "defer_second_record_unavailable": true,
+    "first_green_source_half_half": true,
+    "matched_blue_pair_equal_and_half_half": true,
+    "no_full_binary_public_e2_inferred": true,
+    "same_j6m_orbit_all_actions": true
+  },
+  "contract_sha256": "f79ba579ac75ed33900c028584666dcb6e829c87d113a87eedc5db49c93a8a32",
+  "cpu_seconds": 0.007543,
+  "first_green_probabilities": {
+    "-1": 0.5,
+    "1": 0.5
+  },
+  "id": "lab005-j6n-sequential-local-projector-moments-2026-09-25",
+  "inference_boundary": "Exact local first-projector/action/second-projector Born moments on one fixed periodic vacuum orbit. Only eligible local stars are measured; no full 24-site E2 joint law, first-record-aware adapter, five-round physical history, schedule risk or threshold follows.",
+  "pinned_input_checks": {
+    "j6l_result": true,
+    "j6m_result": true,
+    "jing_pdf": true
+  },
+  "rows": [
+    {
+      "action": "defer",
+      "action_red_edge_ids": [],
+      "conditional_probability": 1.0,
+      "first_green_eigenvalue": 1,
+      "joint_probability": 0.5,
+      "residual_red_edge_ids": [
+        0,
+        4
+      ],
+      "second_eigenvalues": [],
+      "second_measured_centers": [],
+      "second_record_scope": "unavailable_defer"
+    },
+    {
+      "action": "defer",
+      "action_red_edge_ids": [],
+      "conditional_probability": 1.0,
+      "first_green_eigenvalue": -1,
+      "joint_probability": 0.5,
+      "residual_red_edge_ids": [
+        0,
+        4
+      ],
+      "second_eigenvalues": [],
+      "second_measured_centers": [],
+      "second_record_scope": "unavailable_defer"
+    },
+    {
+      "action": "partial",
+      "action_red_edge_ids": [
+        0
+      ],
+      "conditional_probability": 0.5,
+      "first_green_eigenvalue": 1,
+      "joint_probability": 0.25,
+      "residual_red_edge_ids": [
+        4
+      ],
+      "second_eigenvalues": [
+        1
+      ],
+      "second_measured_centers": [
+        "blue:0"
+      ],
+      "second_record_scope": "eligible_local_stars_only"
+    },
+    {
+      "action": "partial",
+      "action_red_edge_ids": [
+        0
+      ],
+      "conditional_probability": 0.5,
+      "first_green_eigenvalue": 1,
+      "joint_probability": 0.25,
+      "residual_red_edge_ids": [
+        4
+      ],
+      "second_eigenvalues": [
+        -1
+      ],
+      "second_measured_centers": [
+        "blue:0"
+      ],
+      "second_record_scope": "eligible_local_stars_only"
+    },
+    {
+      "action": "partial",
+      "action_red_edge_ids": [
+        0
+      ],
+      "conditional_probability": 0.5,
+      "first_green_eigenvalue": -1,
+      "joint_probability": 0.25,
+      "residual_red_edge_ids": [
+        4
+      ],
+      "second_eigenvalues": [
+        1
+      ],
+      "second_measured_centers": [
+        "blue:0"
+      ],
+      "second_record_scope": "eligible_local_stars_only"
+    },
+    {
+      "action": "partial",
+      "action_red_edge_ids": [
+        0
+      ],
+      "conditional_probability": 0.5,
+      "first_green_eigenvalue": -1,
+      "joint_probability": 0.25,
+      "residual_red_edge_ids": [
+        4
+      ],
+      "second_eigenvalues": [
+        -1
+      ],
+      "second_measured_centers": [
+        "blue:0"
+      ],
+      "second_record_scope": "eligible_local_stars_only"
+    },
+    {
+      "action": "matched",
+      "action_red_edge_ids": [
+        0,
+        4
+      ],
+      "conditional_probability": 0.5,
+      "first_green_eigenvalue": 1,
+      "joint_probability": 0.25,
+      "residual_red_edge_ids": [],
+      "second_eigenvalues": [
+        1,
+        1
+      ],
+      "second_measured_centers": [
+        "blue:0",
+        "blue:2"
+      ],
+      "second_record_scope": "eligible_local_stars_only"
+    },
+    {
+      "action": "matched",
+      "action_red_edge_ids": [
+        0,
+        4
+      ],
+      "conditional_probability": 0.0,
+      "first_green_eigenvalue": 1,
+      "joint_probability": 0.0,
+      "residual_red_edge_ids": [],
+      "second_eigenvalues": [
+        -1,
+        1
+      ],
+      "second_measured_centers": [
+        "blue:0",
+        "blue:2"
+      ],
+      "second_record_scope": "eligible_local_stars_only"
+    },
+    {
+      "action": "matched",
+      "action_red_edge_ids": [
+        0,
+        4
+      ],
+      "conditional_probability": 0.0,
+      "first_green_eigenvalue": 1,
+      "joint_probability": 0.0,
+      "residual_red_edge_ids": [],
+      "second_eigenvalues": [
+        1,
+        -1
+      ],
+      "second_measured_centers": [
+        "blue:0",
+        "blue:2"
+      ],
+      "second_record_scope": "eligible_local_stars_only"
+    },
+    {
+      "action": "matched",
+      "action_red_edge_ids": [
+        0,
+        4
+      ],
+      "conditional_probability": 0.5,
+      "first_green_eigenvalue": 1,
+      "joint_probability": 0.25,
+      "residual_red_edge_ids": [],
+      "second_eigenvalues": [
+        -1,
+        -1
+      ],
+      "second_measured_centers": [
+        "blue:0",
+        "blue:2"
+      ],
+      "second_record_scope": "eligible_local_stars_only"
+    },
+    {
+      "action": "matched",
+      "action_red_edge_ids": [
+        0,
+        4
+      ],
+      "conditional_probability": 0.5,
+      "first_green_eigenvalue": -1,
+      "joint_probability": 0.25,
+      "residual_red_edge_ids": [],
+      "second_eigenvalues": [
+        1,
+        1
+      ],
+      "second_measured_centers": [
+        "blue:0",
+        "blue:2"
+      ],
+      "second_record_scope": "eligible_local_stars_only"
+    },
+    {
+      "action": "matched",
+      "action_red_edge_ids": [
+        0,
+        4
+      ],
+      "conditional_probability": 0.0,
+      "first_green_eigenvalue": -1,
+      "joint_probability": 0.0,
+      "residual_red_edge_ids": [],
+      "second_eigenvalues": [
+        -1,
+        1
+      ],
+      "second_measured_centers": [
+        "blue:0",
+        "blue:2"
+      ],
+      "second_record_scope": "eligible_local_stars_only"
+    },
+    {
+      "action": "matched",
+      "action_red_edge_ids": [
+        0,
+        4
+      ],
+      "conditional_probability": 0.0,
+      "first_green_eigenvalue": -1,
+      "joint_probability": 0.0,
+      "residual_red_edge_ids": [],
+      "second_eigenvalues": [
+        1,
+        -1
+      ],
+      "second_measured_centers": [
+        "blue:0",
+        "blue:2"
+      ],
+      "second_record_scope": "eligible_local_stars_only"
+    },
+    {
+      "action": "matched",
+      "action_red_edge_ids": [
+        0,
+        4
+      ],
+      "conditional_probability": 0.5,
+      "first_green_eigenvalue": -1,
+      "joint_probability": 0.25,
+      "residual_red_edge_ids": [],
+      "second_eigenvalues": [
+        -1,
+        -1
+      ],
+      "second_measured_centers": [
+        "blue:0",
+        "blue:2"
+      ],
+      "second_record_scope": "eligible_local_stars_only"
+    }
+  ],
+  "schedule_arm_evaluations": 0,
+  "schema_version": 1,
+  "status": "passed_exact_local_sequential_projector_moments_only",
+  "stochastic_histories": 0
+}

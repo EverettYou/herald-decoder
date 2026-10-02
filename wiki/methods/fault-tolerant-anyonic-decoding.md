@@ -2,11 +2,12 @@
 title: Fault-Tolerant Anyonic Decoding
 page_type: method
 status: established-background
-updated: 2026-08-28
+updated: 2026-09-23
 source_refs:
   - references/jing2025-intrinsic-heralding/paper.pdf
   - references/lyons2026-anyonic-fault-tolerance/paper.pdf
   - references/jing2026-ilp-topological-decoder/paper.pdf
+  - labs/lab-005-spacetime-jit-anyonic-decoding/REPORT.md
 idea_ids: []
 topics: [Quantum Error Correction, Topological Phases, Decoding Algorithms]
 ---
@@ -17,7 +18,7 @@ topics: [Quantum Error Correction, Topological Phases, Decoding Algorithms]
 
 **Sources**: [Intrinsic Heralding and Optimal Decoders for Non-Abelian Topological Order](/reference?id=jing2025-intrinsic-heralding); [Quantum Computing with Anyons Is Fault Tolerant](/reference?id=lyons2026-anyonic-fault-tolerance); [Integer Linear Programming Decoder for Abelian and Non-Abelian Topological Codes](/reference?id=jing2026-ilp-topological-decoder)
 
-**Last updated**: 2026-08-28
+**Last updated**: 2026-09-23
 
 ## Intrinsic heralding with perfect measurements
 
@@ -196,11 +197,36 @@ the physical interpretation and resource scope of the project, so it is a
 researcher decision. Until resolved, independent per-round resampling and all
 schedule-performance sampling remain prohibited.
 
-Discussion thread-009 is the active decision surface for this model choice. It
-does not ask which cheap diagnostic to run first: the bounded checks are already
-non-discriminating. It asks which physical semantics future noisy spacetime
-histories should claim. Until the researcher answers, only the dependent D4
-generator and schedule-performance branch is paused.
+Discussion thread-009 resolved this model choice in favor of a bounded D4
+phenomenological/projector-level translation. The implemented public boundary
+uses causal signal-only first records, action-conditioned full-binary second
+records, a relation-free charge action, and private ground-state-relative
+scoring; it does not claim a microscopic D(S3) or hardware D4 circuit.
+
+The first frozen five-round, paper-L=2 production pilot retained all 272
+matched histories and 2,176 unconditional schedule/mode rows. It also retained
+valid noisy records rejected by the static periodic decoder as failed-closed
+logical failures instead of dropping them. Zero control passed, but in the
+clean-herald cell JIT invoked on only seven histories per public mode versus
+the preregistered minimum eight. The pilot therefore closed censored before
+bootstrap. It establishes neither a schedule-risk direction nor a herald-mode
+effect, equivalence, threshold, scaling law, or fault-tolerance result. Its
+retained failures instead localize an interface prerequisite: a causal
+spacetime decoder must supply an admissible time-boundary completion when a
+valid instantaneous noisy syndrome has odd spatial parity, rather than passing
+that snapshot directly to an even-parity periodic spatial decoder.
+
+The disjoint replacement supplies that causal defer/later-even-action handoff
+and passes a new fixed-cohort integrity gate. Its [matched finite-pilot
+analysis](../../labs/lab-005-spacetime-jit-anyonic-decoding/results/j6b-disjoint-temporal-handoff-paired-analysis-2026-09-23.json)
+finds four of 14 exploratory pointwise proposal triggers, but with conflicting
+directions and near-saturated unconditional failure. A [frozen outcome
+audit](../../labs/lab-005-spacetime-jit-anyonic-decoding/results/j6b-d0-frozen-outcome-attribution-2026-09-23.json)
+decomposes those four net differences: the scored-failure component accounts
+for 7/10, 8/8, 8/9 and 9/9 of their absolute count differences. This is
+descriptive accounting, not a conditional-on-scored LER or a causal attribution.
+It redirects the next interface check toward paths that reach scoring and
+still fail, without licensing larger sampling, JIT superiority or a threshold.
 
 ## Implication for a future herald decoder
 

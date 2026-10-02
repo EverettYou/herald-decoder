@@ -1,0 +1,212 @@
+{
+  "status": "complete_no_all_width_rate_certificate_three_precise_obstructions",
+  "physical_parameters": {
+    "geometry": "width-three square strip",
+    "p": "1/2",
+    "q": "1"
+  },
+  "new_physical_record_samples": 0,
+  "decoder_runs": 0,
+  "symbolic_recurrence_audit": {
+    "local_state_counterexample": {
+      "width_columns": 4,
+      "candidate_key": "processed-column charge, three frontier bits and identical unprocessed suffix",
+      "key_value": {
+        "processed_charge": [
+          -1,
+          0,
+          0
+        ],
+        "frontier_bits": 3,
+        "suffix_bits": 1
+      },
+      "prefix_edges": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        11
+      ],
+      "frontier_edges": [
+        1,
+        6,
+        11
+      ],
+      "suffix_edges": [
+        3,
+        4,
+        8,
+        9,
+        12
+      ],
+      "left": {
+        "prefix_assignment": 23,
+        "full_state": 79,
+        "selected_path_index": 0,
+        "selected_target": 68,
+        "full_charge": [
+          -1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "right": {
+        "prefix_assignment": 26,
+        "full_state": 106,
+        "selected_path_index": 2,
+        "selected_target": 7274,
+        "full_charge": [
+          -1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "same_full_charge": true,
+      "different_selected_paths": true,
+      "different_selected_targets": true,
+      "conclusion": "charge/frontier plus a common suffix is not a congruence for the shortest-selector map"
+    },
+    "W6_extensional_truth_table": {
+      "edges": 23,
+      "configurations": 8388608,
+      "registered_state_cap": 2000000,
+      "evaluated": false,
+      "reason": "the extensional input table alone exceeds the registered state cap before reduction"
+    }
+  },
+  "embedded_family_audit": [
+    {
+      "width_columns": 3,
+      "simple_path_configurations": 9,
+      "physical_majority_states_mapping_to_zero": 0,
+      "physical_probability_numerator_at_p_half": 0,
+      "physical_probability_denominator_at_p_half": 256,
+      "passes_positive_physical_weight_gate": false
+    },
+    {
+      "width_columns": 4,
+      "simple_path_configurations": 29,
+      "physical_majority_states_mapping_to_zero": 0,
+      "physical_probability_numerator_at_p_half": 0,
+      "physical_probability_denominator_at_p_half": 8192,
+      "passes_positive_physical_weight_gate": false
+    },
+    {
+      "width_columns": 5,
+      "simple_path_configurations": 95,
+      "physical_majority_states_mapping_to_zero": 0,
+      "physical_probability_numerator_at_p_half": 0,
+      "physical_probability_denominator_at_p_half": 262144,
+      "passes_positive_physical_weight_gate": false
+    }
+  ],
+  "uniform_tail_audit": {
+    "pointwise_fact": "M_W(y) is at most the number P_W of simple rough-to-rough paths",
+    "path_counts": [
+      {
+        "width_columns": 3,
+        "simple_paths": 9,
+        "explicit_x_monotone_paths": 9,
+        "pointwise_selector_tail_cutoff": "Pr(M_W >= r)=0 for r>9"
+      },
+      {
+        "width_columns": 4,
+        "simple_paths": 29,
+        "explicit_x_monotone_paths": 27,
+        "pointwise_selector_tail_cutoff": "Pr(M_W >= r)=0 for r>29"
+      },
+      {
+        "width_columns": 5,
+        "simple_paths": 95,
+        "explicit_x_monotone_paths": 81,
+        "pointwise_selector_tail_cutoff": "Pr(M_W >= r)=0 for r>95"
+      },
+      {
+        "width_columns": 6,
+        "simple_paths": 313,
+        "explicit_x_monotone_paths": 243,
+        "pointwise_selector_tail_cutoff": "Pr(M_W >= r)=0 for r>313"
+      },
+      {
+        "width_columns": 7,
+        "simple_paths": 1033,
+        "explicit_x_monotone_paths": 729,
+        "pointwise_selector_tail_cutoff": "Pr(M_W >= r)=0 for r>1033"
+      },
+      {
+        "width_columns": 8,
+        "simple_paths": 3411,
+        "explicit_x_monotone_paths": 2187,
+        "pointwise_selector_tail_cutoff": "Pr(M_W >= r)=0 for r>3411"
+      },
+      {
+        "width_columns": 9,
+        "simple_paths": 11265,
+        "explicit_x_monotone_paths": 6561,
+        "pointwise_selector_tail_cutoff": "Pr(M_W >= r)=0 for r>11265"
+      },
+      {
+        "width_columns": 10,
+        "simple_paths": 37205,
+        "explicit_x_monotone_paths": 19683,
+        "pointwise_selector_tail_cutoff": "Pr(M_W >= r)=0 for r>37205"
+      },
+      {
+        "width_columns": 11,
+        "simple_paths": 122879,
+        "explicit_x_monotone_paths": 59049,
+        "pointwise_selector_tail_cutoff": "Pr(M_W >= r)=0 for r>122879"
+      },
+      {
+        "width_columns": 12,
+        "simple_paths": 405841,
+        "explicit_x_monotone_paths": 177147,
+        "pointwise_selector_tail_cutoff": "Pr(M_W >= r)=0 for r>405841"
+      }
+    ],
+    "all_width_lower_family": "There are exactly 3^(W-1) x-monotone paths: choose the incoming left row and the outgoing row independently at each of W-2 interior columns.",
+    "uniform_summability_result": "The pointwise cutoff is not uniformly summable because P_W is unbounded (indeed P_W >= 3^(W-1)); its width supremum is one at every finite tail index."
+  },
+  "branch_matrix": {
+    "symbolic_width_recursion": {
+      "outcome": "candidate_charge_frontier_quotient_rejected_at_W4",
+      "established": "States 79 and 106 have the same full charge, processed-column charge, frontier bits and common suffix, but select path indices 0 and 2 and produce different targets.",
+      "obstruction": "A valid quotient must retain an exact earlier-path availability language; the extensional W6 input table has 8388608 states and was not built."
+    },
+    "physical_probability_embedded_family": {
+      "outcome": "natural_zero_background_fan_has_zero_physical_majority_weight",
+      "established": "Although there are 9, 29 and 95 path-only configurations at W=3,4,5, none is in the physical majority domain and selected to the zero target.",
+      "obstruction": "Path multiplicity without a positive physical majority-domain numerator cannot lower-bound kappa."
+    },
+    "uniform_fan_tail_upper_bound": {
+      "outcome": "path_count_cutoff_is_valid_but_not_uniformly_summable",
+      "established": "M_W is pointwise bounded by the simple-path count, and the exact counts are recorded through W=12.",
+      "obstruction": "The cutoff grows at least as 3^(W-1), so it gives no width-uniform summable envelope for Pr(M_W>=r)."
+    }
+  },
+  "decision": {
+    "outcome": "no_all_width_selector_rate_certificate_within_registered_matrix",
+    "established": "Each of the three preregistered routes stops at a distinct exact interface: noncongruent local state, zero physical weight for the natural embedded family, and a nonsummable deterministic tail cutoff.",
+    "not_established": "No upper or lower asymptotic rate for kappa, uniform kappa bound, nonzero limiting Bayes risk, midpoint noncorrectability or two-dimensional threshold is established.",
+    "threshold_claim": "No threshold claim is promoted."
+  },
+  "precise_missing_lemma": "Either construct a finite-state congruence for the two-environment shortest-selector language that composes with full-charge majority, or construct a positive-majority-probability nested fan family; otherwise prove a genuinely width-uniform summable multiplicity tail.",
+  "elapsed_seconds": 3.285030333790928,
+  "source_sha256": {
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/audit_midpoint_selector_rate_certificate.py": "7c07cd3d0d4e970c20cecb7280f1f70dddc2931f23d17f7941c157ad91d6d28c",
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/audit_midpoint_selector_automaton_feasibility.py": "acc9851a56372741460b11602acbb6034bb3722b53e0cf10a696f6eb06609fbc",
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/audit_midpoint_boundary_fan_strip_transfer.py": "3732343d698cac476ceb359f6053a6ff7a15219624b5af70d4c751bca417fb92",
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/check_midpoint_switching_pairing.py": "4aec56ec9ef90d6d6d193f896d6f6c5be8bf1a6719bbe085df4acb9c81ac2e18",
+    "labs/lab-008-direction-biased-u1-current-channel/manifests/midpoint-selector-rate-certificate-2026-09-21.json": "68fa1a1af2f2f9c880e5b799b261ce32c80d182ab31ef8e24f37f4fdb9ee5671",
+    "labs/lab-008-direction-biased-u1-current-channel/results/midpoint-selector-automaton-feasibility-2026-09-21.json": "010a31d752b3dfe11618663da6d12e332389080a19ae5c258a82dc6bc0028edb"
+  }
+}

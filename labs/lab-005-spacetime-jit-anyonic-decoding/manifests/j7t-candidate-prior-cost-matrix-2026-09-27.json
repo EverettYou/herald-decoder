@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j7t-candidate-prior-cost-matrix-2026-09-27",
+  "status": "registered_before_candidate_ranking",
+  "role": "Read-only prospective information-ceiling and exact-implementation-cost matrix for all J7S same-first alternatives; no second-law or information evaluation",
+  "question": "Which, if any, of the twelve positive same-first initial-error alternatives has a non-negligible binary-error information ceiling under the already declared sparse IID prior and can fit a two-action exact full-second-law calculation within the inherited 65,536-term ceiling?",
+  "source_basis": ["J7S exhaustive first-record masses and p_X=1/10 restricted-pair prior", "J7M complete second public flux and unchanged two public actions", "J7E full_law denominator, one-site and complete-assignment evaluation structure", "J7B exact ordered-moment term counter"],
+  "pinned_inputs": {
+    "j7s_contract_sha256": "d8a306a5e5ab791b0a358f5071c60fa67de6dc023ec4cea504cddf8b0d203dac",
+    "j7s_result_sha256": "a6734a2e6698bb8e25ab38821d95ca1fd8f1e8f596d04822d87a1fd501f1f01b",
+    "j7m_result_sha256": "5b785f49539d013f8fda307b9c06da637bd5e88c0e9dccb9e6b88b341b90b8df",
+    "full_law_source_sha256": "a80174173e808e6ae99f5a781ed0fbcc72e42d453977fc6a89d0ca535bf0e4e3",
+    "exact_source_sha256": "102a9ce140b9424873559834ecec6bb0ab0f950f1b62711a9140ffe119b744ac"
+  },
+  "runner_sha256_before_execution": "c571a7b5d4d37b9c973d6de4ba76022021c83ddd4236551885a05069ff0a903f",
+  "frozen_model": {
+    "geometry_and_channel": "Same paper-normalized periodic L=2 D4 ideal-projector first record and IID 36-red-edge p_X=1/10, p_Z=0 physical prior as J7S; no new candidate error or rate.",
+    "first_record_and_actions": "J7M complete full-binary first charge/flux/vacuum record, base private error [0,4,3], and the same relation-free public corrections [0] and [1,30,32,34,35]. Both actions have 22 flux-eligible second public charge sites.",
+    "private_boundary": "Initial error identity, its support and prior weight are private generation/analysis fields. An online action receives only the common complete first public record and declared correction; no private field is passed to it.",
+    "prior_interpretation": "For each separate base-versus-candidate binary toy, restrict the already declared IID prior to those two supports and condition on the same first record. Binary entropy H(E|first,pair) is an upper bound on any later record's information about that pair identity. It is not information under the full IID channel or a logical-risk quantity."
+  },
+  "matrix": {
+    "candidate_rows": "All 12 J7S positive candidates, no omission or new candidate selection",
+    "iid_red_x_rate": "1/10",
+    "complete_second_eligible_sites_per_action": 22,
+    "candidate_second_variable_count_per_action": [0,1,2,3,4,5],
+    "cost_formula": "For candidate first-variable count v and action-specific second-variable counts k0,k1, current exact full_law code spends one initial first-mass 2^v plus, for each action a, one denominator 2^v, 22 one-site checks each 2^(2v+1), and every one of 2^ka complete rows at 2^(2v+ka) terms: T=3*2^v+44*2^(2v+1)+2^(2v+2k0)+2^(2v+2k1). This is a term projection conditional on the unknown actual k0,k1, not a computed second law or mathematical lower bound on other algorithms.",
+    "selection_rule": "Compare exact restricted-pair posterior weights and binary entropy ceilings for all 12. Retain every candidate attaining maximal entropy among those with at least one k0,k1 cell strictly below the inherited 65,536-term ceiling; report ties as peer branches. The J7S lexicographic candidate remains a structural control and is not silently substituted.",
+    "risk_dependency": "No unconditional paired logical-risk target is inferred; that separately needs full-channel attempted-history denominator, matched physical/first/second-exogenous keys, private Boolean-union score and uncertainty."
+  },
+  "budget": {"max_cpu_seconds": 10, "max_candidates": 12, "max_cost_cells": 432, "prior_ordered_moment_ceiling": 65536, "new_ordered_moment_terms": 0, "new_physical_errors": 0, "complete_second_law_evaluations": 0, "stochastic_histories": 0, "schedule_arm_evaluations": 0, "bootstrap_replicates": 0, "new_dependencies": 0},
+  "acceptance": ["All five source/result pins pass before and after", "Replay J7S's 12 positive same-first candidates and J7M's two equal 22-eligible-site second flux records", "Evaluate all 12 posterior weights and entropy ceilings at the already declared rate, and all 36 k0/k1 cost cells per candidate without Born evaluation", "Apply the registered maximal-entropy-with-at-least-one-under-cap selection rule and preserve every tie", "Report the current implementation's conditional cost, not a proof of algorithmic impossibility; no information gain, risk or policy claim"],
+  "outcomes": {"peer_candidates": "Register a separate small exact conditional second-site-count preflight for all selected peers before full-law terms; retain the rare lexicographic control.", "none_under_cap": "Do not raise the inherited ceiling; seek a separately registered algebraic reduction or stop this exact engine branch.", "censored": "On pin, row, flux, cost-formula or CPU mismatch, release no candidate selection."},
+  "stop_rule": "Stop after 432 deterministic arithmetic cost cells and 12 entropy ceilings. No new exact Born term, second law, stochastic history, arm, bootstrap, threshold or budget increase.",
+  "planned_result": "results/j7t-candidate-prior-cost-matrix-2026-09-27.json"
+}

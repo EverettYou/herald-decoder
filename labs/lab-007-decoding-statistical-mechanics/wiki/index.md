@@ -5,6 +5,7 @@
 - [Exact observation-conditioned sector partition function](partition-function.md)
 - [What self-conjugacy removes](conjugacy.md)
 - [Spin, current, height, and restricted loop models](statistical-model.md)
+- [Direction-biased U(1) current channel — now in Lab 008](../../lab-008-direction-biased-u1-current-channel/wiki/direction-biased-u1-current-channel.md)
 
 ## Inference and predictions
 

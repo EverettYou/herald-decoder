@@ -114,4 +114,7 @@ local distinction affect logical-sector inference and hard matching? Derive
 the corresponding statistical-mechanics model, then distinguish conventional,
 KT/BKT-like, and algorithmic explanations. This question moves to
 [Lab 007](../lab-007-decoding-statistical-mechanics/PLAN.md), with Lab 006 as its
-parent. Lab 006's numerical study is concluded; further theory belongs there.
+parent. The specific direction-biased U(1) extension now has its own
+[Lab 008](../lab-008-direction-biased-u1-current-channel/PLAN.md), also derived
+from Lab 006. Lab 007 is its general mapping dependency. See the updated
+[interpretation and handoff](wiki/interpretation.md).

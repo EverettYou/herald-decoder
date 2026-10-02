@@ -31,7 +31,7 @@
     }
     const path = decodeURIComponent(parsed.pathname).replace(/^\/+/, '');
     const parts = path.split('/');
-    if (!path || parts.includes('..') || !['labs', 'wiki', 'models'].includes(parts[0])) return null;
+    if (!path || parts.includes('..') || !['labs', 'wiki', 'models', 'src'].includes(parts[0])) return null;
     const fragment = parsed.hash || '';
     if (/\.md$/i.test(path)) {
       if (path.startsWith('wiki/')) return `/wiki?page=${encodeURIComponent(path.slice(5, -3))}${fragment}`;

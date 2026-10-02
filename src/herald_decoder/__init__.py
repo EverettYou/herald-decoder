@@ -14,3 +14,16 @@ __all__ = [
     "square_graph",
     "NUMBA_AVAILABLE",
 ]
+
+from .sector import SectorResult, NumericalInferenceError
+from .configuration_map import HeraldConfigurationMAPDecoder
+from .planar_ml import HeraldPlanarMLDecoder, PlanarParitySolver
+from .transfer_ml import HeraldTransferMLDecoder
+from .mps_ml import HeraldMPSDecoder
+from .registry import DECODER_METHODS, make_decoder
+
+__all__ += [
+    'SectorResult', 'NumericalInferenceError', 'HeraldConfigurationMAPDecoder',
+    'HeraldPlanarMLDecoder', 'PlanarParitySolver', 'HeraldTransferMLDecoder',
+    'HeraldMPSDecoder', 'DECODER_METHODS', 'make_decoder',
+]

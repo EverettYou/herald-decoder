@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j6d-projector-state-sufficiency-2026-09-24",
+  "status": "registered_before_exact_audit",
+  "question": "Do the cited projector-level D4 sources and frozen code determine an action-conditioned cross-round transition on only vacuum/m_flux/e_charge labels?",
+  "epistemic_role": "Necessary-condition and source-provenance audit; not a D4 kernel fit or performance experiment",
+  "upstream": {
+    "j6c_result": "results/j6c-action-feedback-counterfactual-2026-09-24.json",
+    "j6c_sha256": "2ee9127c39cab9e7a5f4ddc173cd2f95d35fe44ce88f4f0fea2fe231cd3928e7",
+    "integrated_history_source_sha256": "43d9d0d3e4771ccfc764f590f1843cda1e2a7fbce8dae96057710c413a0adb6e",
+    "lab004_pipeline_sha256": "5f5b1bcb2fd71ffc3bbbfe6ef21ac98f63eb48d15c036db76714587c82ed03e0",
+    "lab004_postflux_sha256": "5435f1fcea89c9eccf369f8bfef44b23deea1ebe954b5e0f1dea5fce0cf12658"
+  },
+  "primary_sources": [
+    {"url": "https://arxiv.org/html/2507.23765", "scope": "Appendix A.4 post-flux even-parity components of physical-plus-correction union; Appendix D time-ordered errors and syndrome projectors"},
+    {"url": "https://arxiv.org/html/2608.18512", "scope": "Appendix B complete D(G) projector family; Appendix D.2 ordered density-channel composition for measurement and correction"}
+  ],
+  "frozen_exact_matrix": [
+    "Verify pinned local inputs and source-supported physical-chain XOR for no fault/no action, one fault/no action, and one fault/cancelling correction. This checks only the abelian red-X flux-chain frame, not hidden D4 fusion.",
+    "Evaluate a minimal three-dimensional generic projector example with a rank-two coarse-label subspace, two distinct states sharing that label, and an action-conditioned unitary followed by a second projector. Test whether their future outcome probabilities differ. This is a counterexample to automatic coarse-label closure, not a D4-specific failure claim.",
+    "Apply the symbolic lumpability condition Pi_x U^dagger Pi_y U Pi_x = k Pi_x to the generic example; map each cited D4 source and local implementation to what it fixes and what cross-round microscopic/density state it does not fix."
+  ],
+  "acceptance": [
+    "All four pinned hashes pass before exact calculation; matrix and symbolic condition are exact and reproducible.",
+    "The red-X chain identity is separated from hidden projector/charge transition; a generic rank-two counterexample is never presented as a D4 physical counterexample.",
+    "The conclusion says only whether the currently cited sources and frozen local implementation specify a unique numeric three-label action-conditioned law; missing derivation fails closed.",
+    "No new stochastic history, schedule arm, bootstrap, threshold, LER, or JIT-benefit result is generated."
+  ],
+  "budget": {"stochastic_histories": 0, "schedule_arm_evaluations": 0, "bootstrap_replicates": 0, "max_cpu_seconds": 10, "new_dependencies": 0},
+  "stop_rule": "On provenance mismatch or exact-check failure, censor this audit. Even on a pass, do not promote the stipulated J6C feedback table, alter the integrated generator, or resume performance sampling; next derive a D4 geometry-matched two-round projector/density-state fixture and test its action feedback before numerical kernel or caller claims.",
+  "planned_result": "results/j6d-projector-state-sufficiency-2026-09-24.json"
+}

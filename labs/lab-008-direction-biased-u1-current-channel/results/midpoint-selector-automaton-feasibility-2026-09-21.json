@@ -1,0 +1,445 @@
+{
+  "status": "complete_exact_W5_selector_moment_with_bounded_reduced_automaton",
+  "physical_parameters": {
+    "geometry": "width-three square strip",
+    "p": "1/2",
+    "q": "1"
+  },
+  "new_physical_record_samples": 0,
+  "decoder_runs": 0,
+  "width_controls": [
+    {
+      "width_columns": 3,
+      "edges": 8,
+      "configurations": 256,
+      "simple_paths": 9,
+      "charge_fibers": 64,
+      "ambiguous_states": 238,
+      "physical_majority_domain_states": 126,
+      "exact_Bayes_numerator": 112,
+      "selected_targets": 112,
+      "target_multiplicity_histogram": {
+        "1": 98,
+        "2": 14
+      },
+      "selector_second_moment": 154,
+      "ordered_alternate_pairs": 28,
+      "paired_identity_replayed": true,
+      "kappa_exact": "11/9",
+      "maximum_multiplicity": 2,
+      "direct_risk_lower_bound_exact": "567/1408",
+      "selected_path_indices_used": 5,
+      "reduced_selector_mtbdd": {
+        "variable_order": "edge indices 0..E-1, with edge 0 eliminated first",
+        "reduction_key": "(edge variable, reduced low-child id, reduced high-child id)",
+        "retained_semantics": {
+          "charge_prefix": "encoded extensionally by the remaining subfunction; no charge-distinct continuation is merged",
+          "frontier_data": "encoded extensionally by the remaining subfunction",
+          "selected_target_relation": "terminal is the exact output edge mask, or -1 outside the physical majority domain",
+          "earlier_path_availability": "encoded by the shortest-selector terminal map for every suffix assignment"
+        },
+        "terminals": 113,
+        "internal_nodes": 213,
+        "total_states": 326,
+        "registered_state_cap": 2000000,
+        "within_registered_cap": true,
+        "full_unreduced_binary_tree_nodes": 511,
+        "eliminated_equal_child_nodes": 35,
+        "level_profile": [
+          {
+            "edge_variable": 0,
+            "unreduced_width": 128,
+            "new_reduced_nodes": 86,
+            "unique_references": 87
+          },
+          {
+            "edge_variable": 1,
+            "unreduced_width": 64,
+            "new_reduced_nodes": 64,
+            "unique_references": 64
+          },
+          {
+            "edge_variable": 2,
+            "unreduced_width": 32,
+            "new_reduced_nodes": 32,
+            "unique_references": 32
+          },
+          {
+            "edge_variable": 3,
+            "unreduced_width": 16,
+            "new_reduced_nodes": 16,
+            "unique_references": 16
+          },
+          {
+            "edge_variable": 4,
+            "unreduced_width": 8,
+            "new_reduced_nodes": 8,
+            "unique_references": 8
+          },
+          {
+            "edge_variable": 5,
+            "unreduced_width": 4,
+            "new_reduced_nodes": 4,
+            "unique_references": 4
+          },
+          {
+            "edge_variable": 6,
+            "unreduced_width": 2,
+            "new_reduced_nodes": 2,
+            "unique_references": 2
+          },
+          {
+            "edge_variable": 7,
+            "unreduced_width": 1,
+            "new_reduced_nodes": 1,
+            "unique_references": 1
+          }
+        ],
+        "truth_table_replay_mismatches": 0,
+        "anti_merge_gate_passed": true
+      },
+      "target_pair_accumulator": {
+        "key": "exact selected target edge mask",
+        "states": 112,
+        "within_registered_cap": true,
+        "ordered_pair_count": 28,
+        "second_moment_from_pair_identity": 154,
+        "anti_merge_gate": "only identical complete target masks share an accumulator state"
+      }
+    },
+    {
+      "width_columns": 4,
+      "edges": 13,
+      "configurations": 8192,
+      "simple_paths": 29,
+      "charge_fibers": 2450,
+      "ambiguous_states": 6422,
+      "physical_majority_domain_states": 3926,
+      "exact_Bayes_numerator": 2496,
+      "selected_targets": 2368,
+      "target_multiplicity_histogram": {
+        "1": 1213,
+        "2": 802,
+        "3": 313,
+        "4": 30,
+        "5": 10
+      },
+      "selector_second_moment": 7968,
+      "ordered_alternate_pairs": 4042,
+      "paired_identity_replayed": true,
+      "kappa_exact": "3984/1963",
+      "maximum_multiplicity": 5,
+      "direct_risk_lower_bound_exact": "3853369/16318464",
+      "selected_path_indices_used": 19,
+      "reduced_selector_mtbdd": {
+        "variable_order": "edge indices 0..E-1, with edge 0 eliminated first",
+        "reduction_key": "(edge variable, reduced low-child id, reduced high-child id)",
+        "retained_semantics": {
+          "charge_prefix": "encoded extensionally by the remaining subfunction; no charge-distinct continuation is merged",
+          "frontier_data": "encoded extensionally by the remaining subfunction",
+          "selected_target_relation": "terminal is the exact output edge mask, or -1 outside the physical majority domain",
+          "earlier_path_availability": "encoded by the shortest-selector terminal map for every suffix assignment"
+        },
+        "terminals": 2369,
+        "internal_nodes": 5473,
+        "total_states": 7842,
+        "registered_state_cap": 2000000,
+        "within_registered_cap": true,
+        "full_unreduced_binary_tree_nodes": 16383,
+        "eliminated_equal_child_nodes": 1783,
+        "level_profile": [
+          {
+            "edge_variable": 0,
+            "unreduced_width": 4096,
+            "new_reduced_nodes": 2092,
+            "unique_references": 2093
+          },
+          {
+            "edge_variable": 1,
+            "unreduced_width": 2048,
+            "new_reduced_nodes": 1475,
+            "unique_references": 1476
+          },
+          {
+            "edge_variable": 2,
+            "unreduced_width": 1024,
+            "new_reduced_nodes": 883,
+            "unique_references": 884
+          },
+          {
+            "edge_variable": 3,
+            "unreduced_width": 512,
+            "new_reduced_nodes": 512,
+            "unique_references": 512
+          },
+          {
+            "edge_variable": 4,
+            "unreduced_width": 256,
+            "new_reduced_nodes": 256,
+            "unique_references": 256
+          },
+          {
+            "edge_variable": 5,
+            "unreduced_width": 128,
+            "new_reduced_nodes": 128,
+            "unique_references": 128
+          },
+          {
+            "edge_variable": 6,
+            "unreduced_width": 64,
+            "new_reduced_nodes": 64,
+            "unique_references": 64
+          },
+          {
+            "edge_variable": 7,
+            "unreduced_width": 32,
+            "new_reduced_nodes": 32,
+            "unique_references": 32
+          },
+          {
+            "edge_variable": 8,
+            "unreduced_width": 16,
+            "new_reduced_nodes": 16,
+            "unique_references": 16
+          },
+          {
+            "edge_variable": 9,
+            "unreduced_width": 8,
+            "new_reduced_nodes": 8,
+            "unique_references": 8
+          },
+          {
+            "edge_variable": 10,
+            "unreduced_width": 4,
+            "new_reduced_nodes": 4,
+            "unique_references": 4
+          },
+          {
+            "edge_variable": 11,
+            "unreduced_width": 2,
+            "new_reduced_nodes": 2,
+            "unique_references": 2
+          },
+          {
+            "edge_variable": 12,
+            "unreduced_width": 1,
+            "new_reduced_nodes": 1,
+            "unique_references": 1
+          }
+        ],
+        "truth_table_replay_mismatches": 0,
+        "anti_merge_gate_passed": true
+      },
+      "target_pair_accumulator": {
+        "key": "exact selected target edge mask",
+        "states": 2368,
+        "within_registered_cap": true,
+        "ordered_pair_count": 4042,
+        "second_moment_from_pair_identity": 7968,
+        "anti_merge_gate": "only identical complete target masks share an accumulator state"
+      }
+    },
+    {
+      "width_columns": 5,
+      "edges": 18,
+      "configurations": 262144,
+      "simple_paths": 95,
+      "charge_fibers": 80182,
+      "ambiguous_states": 164474,
+      "physical_majority_domain_states": 108978,
+      "exact_Bayes_numerator": 55496,
+      "selected_targets": 48254,
+      "target_multiplicity_histogram": {
+        "1": 17590,
+        "2": 13482,
+        "3": 10244,
+        "4": 3420,
+        "5": 2062,
+        "6": 994,
+        "7": 206,
+        "8": 124,
+        "9": 64,
+        "10": 32,
+        "11": 24,
+        "12": 12
+      },
+      "selector_second_moment": 336814,
+      "ordered_alternate_pairs": 227836,
+      "paired_identity_replayed": true,
+      "kappa_exact": "168407/54489",
+      "maximum_multiplicity": 12,
+      "direct_risk_lower_bound_exact": "2969051121/22073442304",
+      "selected_path_indices_used": 71,
+      "reduced_selector_mtbdd": {
+        "variable_order": "edge indices 0..E-1, with edge 0 eliminated first",
+        "reduction_key": "(edge variable, reduced low-child id, reduced high-child id)",
+        "retained_semantics": {
+          "charge_prefix": "encoded extensionally by the remaining subfunction; no charge-distinct continuation is merged",
+          "frontier_data": "encoded extensionally by the remaining subfunction",
+          "selected_target_relation": "terminal is the exact output edge mask, or -1 outside the physical majority domain",
+          "earlier_path_availability": "encoded by the shortest-selector terminal map for every suffix assignment"
+        },
+        "terminals": 48255,
+        "internal_nodes": 131191,
+        "total_states": 179446,
+        "registered_state_cap": 2000000,
+        "within_registered_cap": true,
+        "full_unreduced_binary_tree_nodes": 524287,
+        "eliminated_equal_child_nodes": 83019,
+        "level_profile": [
+          {
+            "edge_variable": 0,
+            "unreduced_width": 131072,
+            "new_reduced_nodes": 45821,
+            "unique_references": 45822
+          },
+          {
+            "edge_variable": 1,
+            "unreduced_width": 65536,
+            "new_reduced_nodes": 34673,
+            "unique_references": 34674
+          },
+          {
+            "edge_variable": 2,
+            "unreduced_width": 32768,
+            "new_reduced_nodes": 20581,
+            "unique_references": 20582
+          },
+          {
+            "edge_variable": 3,
+            "unreduced_width": 16384,
+            "new_reduced_nodes": 14327,
+            "unique_references": 14328
+          },
+          {
+            "edge_variable": 4,
+            "unreduced_width": 8192,
+            "new_reduced_nodes": 7598,
+            "unique_references": 7599
+          },
+          {
+            "edge_variable": 5,
+            "unreduced_width": 4096,
+            "new_reduced_nodes": 4096,
+            "unique_references": 4096
+          },
+          {
+            "edge_variable": 6,
+            "unreduced_width": 2048,
+            "new_reduced_nodes": 2048,
+            "unique_references": 2048
+          },
+          {
+            "edge_variable": 7,
+            "unreduced_width": 1024,
+            "new_reduced_nodes": 1024,
+            "unique_references": 1024
+          },
+          {
+            "edge_variable": 8,
+            "unreduced_width": 512,
+            "new_reduced_nodes": 512,
+            "unique_references": 512
+          },
+          {
+            "edge_variable": 9,
+            "unreduced_width": 256,
+            "new_reduced_nodes": 256,
+            "unique_references": 256
+          },
+          {
+            "edge_variable": 10,
+            "unreduced_width": 128,
+            "new_reduced_nodes": 128,
+            "unique_references": 128
+          },
+          {
+            "edge_variable": 11,
+            "unreduced_width": 64,
+            "new_reduced_nodes": 64,
+            "unique_references": 64
+          },
+          {
+            "edge_variable": 12,
+            "unreduced_width": 32,
+            "new_reduced_nodes": 32,
+            "unique_references": 32
+          },
+          {
+            "edge_variable": 13,
+            "unreduced_width": 16,
+            "new_reduced_nodes": 16,
+            "unique_references": 16
+          },
+          {
+            "edge_variable": 14,
+            "unreduced_width": 8,
+            "new_reduced_nodes": 8,
+            "unique_references": 8
+          },
+          {
+            "edge_variable": 15,
+            "unreduced_width": 4,
+            "new_reduced_nodes": 4,
+            "unique_references": 4
+          },
+          {
+            "edge_variable": 16,
+            "unreduced_width": 2,
+            "new_reduced_nodes": 2,
+            "unique_references": 2
+          },
+          {
+            "edge_variable": 17,
+            "unreduced_width": 1,
+            "new_reduced_nodes": 1,
+            "unique_references": 1
+          }
+        ],
+        "truth_table_replay_mismatches": 0,
+        "anti_merge_gate_passed": true
+      },
+      "target_pair_accumulator": {
+        "key": "exact selected target edge mask",
+        "states": 48254,
+        "within_registered_cap": true,
+        "ordered_pair_count": 227836,
+        "second_moment_from_pair_identity": 336814,
+        "anti_merge_gate": "only identical complete target masks share an accumulator state"
+      }
+    }
+  ],
+  "branch_matrix": {
+    "reduced_decision_diagram": {
+      "outcome": "passes_W3_W4_replay_and_W5_cap_gate",
+      "established": "The exact multi-terminal reduced decision diagram preserves majority membership and the complete shortest-selector target map with zero truth-table replay mismatches.",
+      "boundary": "This is an extensional finite-width compilation, not a width-independent frontier recurrence."
+    },
+    "target_pair_accumulator": {
+      "outcome": "passes_W3_W4_replay_and_computes_W5_second_moment",
+      "established": "Grouping only identical complete target masks gives the exact ordered collision-pair count and replays S=A+ordered_alternate_pairs at all three widths.",
+      "boundary": "The accumulator enumerates all 2^18 W5 configurations and therefore does not establish scalable transfer complexity."
+    },
+    "analytic_embedded_subfamily": {
+      "outcome": "not_reached_because_both_exact_branches_passed",
+      "established": "No substitute one-sided family bound was needed for the registered W5 feasibility question.",
+      "boundary": "An analytic all-width family remains necessary for any divergence or boundedness claim."
+    }
+  },
+  "decision": {
+    "outcome": "W5_selector_moment_is_exactly_feasible_but_no_rate_is_identified",
+    "established": "At W=5, A=108978, selector second moment S=336814, kappa=168407/54489, and maximum multiplicity 12. The reduced exact selector map has 179446 total states, below the two-million cap, and a zero-mismatch replay.",
+    "not_established": "Three finite widths do not establish exponential, polynomial or bounded kappa behavior, a nonzero limiting Bayes risk, midpoint noncorrectability or a two-dimensional threshold.",
+    "threshold_claim": "No threshold claim is promoted."
+  },
+  "next_interface": "Replace the extensional truth-table compilation by a symbolic width-recursive selector-availability automaton or prove an analytic all-width embedded-family bound before making any rate claim.",
+  "elapsed_seconds": 2.3649458750151098,
+  "source_sha256": {
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/audit_midpoint_selector_automaton_feasibility.py": "acc9851a56372741460b11602acbb6034bb3722b53e0cf10a696f6eb06609fbc",
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/audit_midpoint_boundary_fan_strip_transfer.py": "3732343d698cac476ceb359f6053a6ff7a15219624b5af70d4c751bca417fb92",
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/check_midpoint_switching_pairing.py": "4aec56ec9ef90d6d6d193f896d6f6c5be8bf1a6719bbe085df4acb9c81ac2e18",
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/current_oracle.py": "241916aa389193b7b62a3ea2de7f4267086dfcca60760ee514e27100f40fa6ee",
+    "labs/lab-008-direction-biased-u1-current-channel/manifests/midpoint-selector-automaton-feasibility-2026-09-21.json": "6cc23688b571c4de0ac09ab54a25a73ba73fe65a4705e75111755d8e140081c0",
+    "labs/lab-008-direction-biased-u1-current-channel/results/midpoint-boundary-fan-strip-transfer-2026-09-21.json": "da57a7046ca8bccacd2d6f184526da8dfe38993f035735f4adcd51ce34faa04d"
+  }
+}

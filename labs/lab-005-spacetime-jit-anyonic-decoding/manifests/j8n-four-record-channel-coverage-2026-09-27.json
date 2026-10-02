@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j8n-four-record-channel-coverage-2026-09-27",
+  "status": "registered_before_execution",
+  "question": "How much of the fixed p_X=1/10 IID channel is covered by the four existing complete first records, and what minimum prior mass remains in other first-charge records of the selected flux and in other first-flux sectors?",
+  "hypotheses": {
+    "selected_flux_coverage": "The four exact records capture nearly all prior mass within their selected first-flux sector, with a bounded residual first-charge tail.",
+    "selected_flux_gap": "Other first-charge records retain material selected-flux prior mass despite the four small conditional omitted-error bounds.",
+    "full_channel_gap": "The selected first-flux sector itself holds only a small part of the normalized 36-edge IID prior, so four-record conditional results cannot represent the full channel."
+  },
+  "frozen_model": "R6AF ideal periodic L=2 D4 orbit, 36 IID red-X physical edges at p_X=1/10 and p_Z=0, J6O complete full-binary public first record with vacuum=1-charge. Four disjoint J8L corrected first records share one selected J8J flux sector. J8M supplies rigorous one-site omitted joint-mass upper bounds. The two fixed relation-free public actions and private generation/scoring boundary are unchanged, but no second law or policy is evaluated here.",
+  "matrix": {
+    "branches": ["Sum four disjoint first-record exact known joint masses and omitted upper bounds to form a rigorous coverage interval within the selected first-flux sector; subtract from exact selected-flux prior to bound all other first-charge records there.", "Use exact 36-edge IID normalization and J8J selected-flux prior to calculate the complementary prior mass in all other first-flux sectors; do not enumerate their public laws."],
+    "first_charge_sites": [[], [1], [2], [1, 2]],
+    "independent_unit": "One disjoint complete public first-record event or its complementary flux sector; exact rational arithmetic, no stochastic uncertainty.",
+    "integrity": "Pin all three accepted input results and runner; verify 36-edge IID binomial normalization, rank 23/nullity 13, four distinct corrected 24-bit public records with common flux, J8L known mass and J8M omitted upper-bound consistency, interval partition identities and hash stability. Fail closed on any mismatch."
+  },
+  "budget": {"max_cpu_seconds": 60, "max_total_terms": 65536, "new_born_terms": 0, "new_first_masses": 0, "new_second_laws": 0, "histories": 0, "schedule_arms": 0, "bootstraps": 0, "new_dependencies": 0},
+  "acceptance": ["Exact prior-mass interval for four complete first records and complement among other first-charge records in selected flux", "Exact selected versus other first-flux prior-mass partition over the normalized IID physical channel", "Explicit prohibition on full-IID information/risk inference from this mass-coverage audit"],
+  "stop_rule": "Stop after the two exact arithmetic branches or first integrity/CPU failure. Do not evaluate any additional first or second law, fit a threshold, broaden size/rate grid, or convert coverage into an information theorem.",
+  "runner": "scripts/run_j8n_four_record_channel_coverage.py",
+  "runner_sha256_before_execution": "2f6507b31a4739b7579dff682a8ed90149d25cc8562e2c98d214b3754931baec",
+  "pinned_inputs": {
+    "results/j8j-full-prior-coverage-feasibility-verified-2026-09-27.json": "1f780fcdb4e0388609e55b9e99cd82ffdecafa3efce0c3f328cb2f0d36f038df",
+    "results/j8l-first-record-tail-certificate-2026-09-27.json": "5087fcd2beb3a07a5fd288718b7ad7fd1f885c1dc67c9e2a1d91d5288ca616dc",
+    "results/j8m-structural-tail-and-cost-screen-verified-2026-09-27.json": "85d90713ffedd9451555090aae546e12ccff45a09ce20e8bc560a58287c8285d"
+  },
+  "planned_result": "results/j8n-four-record-channel-coverage-2026-09-27.json"
+}

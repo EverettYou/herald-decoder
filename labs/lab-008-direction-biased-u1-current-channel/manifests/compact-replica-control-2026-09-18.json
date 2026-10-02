@@ -1,0 +1,26 @@
+{
+  "id": "lab008-compact-replica-control-2026-09-18",
+  "status": "complete_rejected_calibration",
+  "authorization": "Continuing the researcher's instruction to explain LER from partition functions, execute the plan step by step, and investigate controlled limits and a possible conformal theory.",
+  "question": "Does the derived compact Gaussian replica candidate admit a controlled regime for the physical ternary-current prior and rough square, or must it be rejected as a quantitative LER approximation?",
+  "basis": "The exact integer-replica target and marked boundary cosets are derived; the Gaussian annulus and its explicit replica continuation are solved. Their applicability to the physical lattice is unproved.",
+  "next_operation": "Analyze vortex core weights and the relation between the bare cumulant expansion and renormalized stiffness; track which operations require the R->1 limit and which boundary assumptions need matching.",
+  "acceptance": [
+    "A symbolic lattice-to-continuum argument identifies a small parameter or explicitly demonstrates the missing control; merely substituting bare variance for stiffness fails this gate.",
+    "Keep the physical record weighting, binary logical twist and rough-boundary observation convention throughout; do not use the annealed R=2 critical point as a physical threshold.",
+    "Promote a quantitatively controlled regime or reject the present Gaussian calibration with a concrete reason and a next analytic alternative. No unsupported numerical p_c or critical LER.",
+    "Write the decision and derivation in the current theory notes and verify the reader-facing result."
+  ],
+  "resources": "Theory first; reuse existing exact results for checks. No additional decoder sweep, large phase scan or resource escalation is registered.",
+  "predecessor": "replica-boundary-theory-2026-09-18.json",
+  "decision": "Reject the present compact-Gaussian annulus as a quantitatively controlled calibration of the physical rough square. Keep it only as a conditional continuum benchmark; this does not reject a future Gaussian infrared fixed point.",
+  "decision_basis": [
+    "Neither p->0 nor the directed p->1 endpoint localizes replica angles near the spin-wave saddle; K is modulus-flat there, so no endpoint supplies the required small-angle parameter.",
+    "The local curvature v0 is a bare cumulant, not the renormalized helicity modulus. Substituting kappa=v0 in the conditional rho=1 annulus disagrees with the exact L3 open-square oracle by 0.0185 to 0.1204 on the frozen grid; the geometry mismatch means this is a rejection of the shortcut, not a continuum fit.",
+    "The exact A_(R-1) vortex charges do not determine core fugacities. No dilute fugacity is established, R>=3 core weights can be complex and species-dependent, and R=2 has the wrong annealed record weighting.",
+    "Integer-replica data do not uniquely determine R->1: an analytic term c sin(pi(R-1))/(R-1) vanishes at every admissible integer R>=2 but changes the R->1 limit by c*pi. The continuation must be inherited from the positive finite-lattice observable before coarse graining."
+  ],
+  "result": "results/compact-replica-control-2026-09-18.json",
+  "completed_at": "2026-09-18 19:46:33 UTC",
+  "next_action": "Register a direct positive-current defect/polymer expansion with a certified omitted-weight remainder for the low-to-intermediate-p square curve. Keep critical continuum matching separate until a physical R->1 stiffness and species-resolved fugacities are derived."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j8z-minimum-joint-charge-order-2026-09-28",
+  "status": "registered_before_execution",
+  "question": "What is the smallest number of simultaneously read second-round public charge bits whose joint marginal distinguishes the fixed J8Y private-error pair with full-record TV 3/4 but zero one- and two-bit TV?",
+  "fork_classification": "All six variable second-charge sites yield only 64 subsets. Exact marginal TV and parity-moment order are independent, reversible, in-scope diagnostics computable together from frozen complete laws with zero new Born work; no researcher ranking or scope expansion is needed.",
+  "frozen_model": "R6AF ideal periodic L=2 D4 public instrument at p_X=1/10, p_Z=0. Freeze the J8Y unique higher-order cell: first-flux mask 3591, equal-prior private errors [0,5,16] and [2,4,15], identical full all-zero-charge first public record of likelihood one, relation-free five-edge public charge action [1,30,32,34,35], full action-conditioned second flux/charge/vacuum record. Private supports are analysis-only, not an action input.",
+  "hypotheses": {
+    "third_order": "At least one three-charge-bit joint marginal has positive exact TV; the minimum order is three after the preregistered one-/two-bit null.",
+    "higher_order": "Every three-charge-bit marginal is equal and the first difference appears at order four, five or six.",
+    "censored": "Any source, selection, fixed-outside-site, normalization, full-TV replay, data-processing, subset-count or CPU gate fails; no partial minimum-order inference is promoted."
+  },
+  "matrix": {
+    "first_flux_mask": 3591,
+    "public_action_red_edges": [1,30,32,34,35],
+    "variable_charge_sites": [0,1,17,20,21,22],
+    "cells": "All 64 subsets of the six variable charge sites, grouped by order 0 through 6. For each exact pair of public laws, calculate joint-marginal TV and absolute difference of charge-parity expectation. Report first positive marginal and parity orders, max TV per order, first lexicographic maximizing site set and positive-subset counts. Verify all other 18 charge sites are fixed identically and the six-site TV equals complete public-record TV.",
+    "independent_unit": "One exact charge-site subset under the frozen private-error pair and fixed public action; no sampling uncertainty.",
+    "integrity": "Pin both complete-law census and J8Y selection result, replay private supports/first masses/action/full TV, check 64 exact marginal and parity contractions, one-/two-site zero, data processing, fixed outside-site charges, six-site equality, source hashes and zero Born/history/arm/bootstrap counters."
+  },
+  "budget": {"max_cpu_seconds": 5, "max_subsets": 64, "new_born_terms": 0, "histories": 0, "schedule_arms": 0, "bootstraps": 0, "new_dependencies": 0},
+  "acceptance": ["All 64 prospectively fixed subsets and parity moments evaluated exactly", "Minimum distinguishable joint marginal order and first parity order identified with full-law replay and data-processing gates", "Conclusion restricted to the selected finite public-record cell; no full-IID information, logical risk, noisy JIT, scaling or threshold claim"],
+  "stop_rule": "Stop after the fixed six-site 64-subset matrix or first integrity/5-CPU-second cap. Do not select another witness, expand sites or model, evaluate new Born laws, generate histories or increase budget.",
+  "source_result": "results/j8x-deterministic-first-collision-census-2026-09-28.json",
+  "selection_result": "results/j8y-action-overlap-and-low-order-witness-2026-09-28.json",
+  "runner": "scripts/run_j8z_minimum_joint_charge_order.py",
+  "runner_sha256_before_execution": "a00ac3d0a0513a5f6c056a841e8457de906c0466630da40f03c5b2502b843e5a",
+  "pinned_inputs": {
+    "results/j8x-deterministic-first-collision-census-2026-09-28.json": "dc30573624220402bad8ba964a8e46dfd5a35c22960cf6925eb324eb82e5e9ee",
+    "results/j8y-action-overlap-and-low-order-witness-2026-09-28.json": "28cd06be314225369746a5c055bcc78bbd6e4f842b88abfa80ae8b402f8a7066",
+    "scripts/run_j8b_alternate_first_complete_second_laws.py": "5f5cb79d07cf16a89a80285f743c22dcd1df2301a6413f2ccb0424701bc0b3fc"
+  },
+  "planned_result": "results/j8z-minimum-joint-charge-order-2026-09-28.json"
+}

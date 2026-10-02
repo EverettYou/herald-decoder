@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j6b-d3-selected-frozen-history-replay-2026-09-23",
+  "status": "registered_before_replay",
+  "epistemic_role": "Post-hoc selected-history interface case study on the existing J6B cohort; not a new stochastic study, risk estimate or causal attribution",
+  "question": "For bounded examples of scored JIT terminal-residual failure with zero, one and multiple commits, where do hidden physical syndrome, public first readout, causal action, latest frame and final residual first disagree, and do replayed arms exactly match frozen J6B rows?",
+  "program_alignment": "Lab 005 WP4 noisy repeated-measurement interface diagnosis. D1 saw frequent JIT terminal residual; D2 verified the final-chain/frame identity on simple fixed fixtures but did not explain the stochastic paths.",
+  "research_basis": "Reuse the registered J6B phenomenological/projector-level D4 L=2 five-round physical channel, E1 public interface, action-conditioned full-binary E2 record, private Boolean-union scorer, and immutable seed/key rule. No new source-derived model, method or external dependency.",
+  "competing_explanations": [
+    "No physical commit despite nonzero final hidden syndrome: causal schedule did not issue an effective full-snapshot action by the endpoint.",
+    "A commit occurred but a later physical transition changed the hidden syndrome after the last action, making its absolute frame stale.",
+    "At the last commit, noisy public readout differed from the hidden syndrome or the public spatial action left a residual even before later transitions.",
+    "Recomputed residual, public binding or stored J6B row disagrees on replay: treat this as a correctness/provenance defect and stop dependent interpretation."
+  ],
+  "frozen_inputs": {
+    "j6b_manifest": {"path": "manifests/j6b-disjoint-temporal-handoff-pilot-2026-09-23.json", "sha256": "8140182a4be0315a205936626c7ec727f765efe66047c02bbeac588097b7fdb2"},
+    "j6b_rows": {"path": "results/j6b-disjoint-temporal-handoff-rows-2026-09-23.jsonl", "sha256": "620c5db65231e5c112a497397aad168eefd7d284f1af362c52d512c6741fbefe"},
+    "d1": {"path": "results/j6b-d1-scored-mask-timing-audit-2026-09-23.json", "sha256": "8d19cb6f384e53db6530fc9dabe18ad09e55e074575ce84c57b15c7c4db1eebf"},
+    "d2": {"path": "results/j6b-d2-deterministic-residual-frame-trace-2026-09-23.json", "sha256": "a48168b4fa64a598d5af9687e412c5f04f13d8f35c917508f1b9a88460d5cd72"},
+    "integrated_source": {"path": "scripts/d4_integrated_history.py", "sha256": "43d9d0d3e4771ccfc764f590f1843cda1e2a7fbce8dae96057710c413a0adb6e"},
+    "e1_source": {"path": "scripts/e1_schedule_integration.py", "sha256": "d1ba0232aa06ffe95c8c0673f8ef6371785ace568368cc73e30ddbadfb9d0398"},
+    "spatial_source": {"path": "scripts/d4_spatial_policy.py", "sha256": "40d966e9db072e7ecffa013b1a68aa92cf0d4360e280e968bca152c86632db80"}
+  },
+  "frozen_selection": {
+    "rule": "For each J6B stochastic cell, inspect only syndrome_only/jit_lyons_brown raw rows and choose the smallest history_index in each of four disjoint strata: scored Boolean failure with terminal_residual=true and unique_commit_count 0, 1, or >=2; and scored Boolean success with terminal_residual=false. Selection was fixed before replay; no favorable outcome selection or population inference follows.",
+    "case_order": [
+      {"cell_id": "clean_herald_schedule", "stratum": "residual_no_commit", "history_index": 0, "trial_id": "j6b-clean_herald_schedule-0000"},
+      {"cell_id": "clean_herald_schedule", "stratum": "residual_one_commit", "history_index": 4, "trial_id": "j6b-clean_herald_schedule-0004"},
+      {"cell_id": "clean_herald_schedule", "stratum": "residual_multi_commit", "history_index": 33, "trial_id": "j6b-clean_herald_schedule-0033"},
+      {"cell_id": "clean_herald_schedule", "stratum": "scored_success_control", "history_index": 5, "trial_id": "j6b-clean_herald_schedule-0005"},
+      {"cell_id": "joint_readout_noise", "stratum": "residual_no_commit", "history_index": 23, "trial_id": "j6b-joint_readout_noise-0023"},
+      {"cell_id": "joint_readout_noise", "stratum": "residual_one_commit", "history_index": 5, "trial_id": "j6b-joint_readout_noise-0005"},
+      {"cell_id": "joint_readout_noise", "stratum": "residual_multi_commit", "history_index": 12, "trial_id": "j6b-joint_readout_noise-0012"},
+      {"cell_id": "joint_readout_noise", "stratum": "scored_success_control", "history_index": 30, "trial_id": "j6b-joint_readout_noise-0030"}
+    ]
+  },
+  "fixed_model_and_protocol": "J6B manifest cells 1 and 2, rates and seed rule master_seed=923240000+100000*cell_index+history_index; regenerate only the eight existing seeds and verify raw history digest plus physical/first-observation/second-exogenous keys before replay. Each history is one independent pre-existing five-round unit; all eight public arms are replayed against its stored rows. Online branches consume only causal public prefixes, offline remains a noncausal diagnostic. Reconstruct second public records only after bound physical flux actions; hidden support and truth stay on the private audit side.",
+  "diagnostics": [
+    "For each replayed history, record per-round hidden physical syndrome and public syndrome readout separately, plus their first mismatch round; these private audit fields must never enter a public policy request.",
+    "For each mode/schedule arm, record causal invocation rounds, defer/physical-action statuses, public request/action digests and physical correction edges; a defer has no correction or second public record.",
+    "At each round, compute the private residual boundary of current hidden physical chain XOR the latest committed full-snapshot public frame; report first nonzero round and final residual endpoints, last commit round, and whether later physical transitions occurred. Also compare hidden versus public syndrome at last commit.",
+    "Compare every replayed evaluation field to its exact frozen J6B row. Preserve all 64 unconditional rows, including aborts; do not filter risk denominators or compute new risk/uncertainty. Report classification as overlapping descriptive flags, not exclusive causes."
+  ],
+  "acceptance_and_integrity": [
+    "All frozen hashes match before and after; selector recomputation gives exactly the eight registered IDs and no duplicate history.",
+    "Exactly eight existing histories and 64 complete stored arm rows are replayed; regenerated visible digest and three matched exogenous keys equal the frozen rows, and every replayed J6ArmEvaluationV1 field equals its raw row.",
+    "Every scored row's final private residual equals the independently recomputed final hidden chain XOR latest public frame boundary; every failed-closed row remains an unconditional loss. Same-round action conflicts and unbound second records fail closed.",
+    "Public request/action/second-record dictionaries reveal no physical support, hidden relation, internal second outcome, winding or residual truth. Earlier causal actions cannot depend on later physical states; action-conditioned second records remain bound to the realized action.",
+    "The trace distinguishes observed no-commit, post-commit physical-change, and readout/action-mismatch flags without promoting any eight-case fraction to a cohort mechanism rate or claiming JIT benefit."
+  ],
+  "budget": {"replayed_existing_histories": 8, "replayed_existing_unique_arm_rows": 64, "new_stochastic_seeds": 0, "new_unique_production_histories": 0, "new_unique_production_arm_rows": 0, "new_bootstrap_replicates": 0, "max_wall_seconds": 120, "max_result_mib": 1, "new_external_dependencies": 0},
+  "stop_rule": "On any selection, source/data hash, seed/key, row replay, public/private, score identity, time or output cap failure, write a censored machine-readable result and do not interpret cases. Do not repair, rescore or adaptively extend J6B in this tick.",
+  "claim_boundary": "Post-hoc selected-case interface diagnosis only; no population frequency, statistical comparison, causal mechanism attribution, threshold, scaling, hardware fault tolerance or J6 pooling.",
+  "planned_result": "results/j6b-d3-selected-frozen-history-replay-2026-09-23.json",
+  "execution_correction_before_interpretation": "First attempt censored during diagnostic round-table construction: the trace indexed a four-row adjacent-round detector array as though it contained five readout rows. The replay script now maps detector index i-1 to readout round i and uses the original J6B absorber region name. No case was accepted or interpreted, and selection, frozen inputs, score, arms and budget are unchanged. The final result retains the censored attempt metadata."
+}

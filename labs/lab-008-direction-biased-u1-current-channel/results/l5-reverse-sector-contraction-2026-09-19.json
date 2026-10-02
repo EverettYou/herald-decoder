@@ -1,0 +1,742 @@
+{
+  "status": "completed_width_gates_failed",
+  "scope": "Frozen two-cell L5 affine response contraction; finite-patch intervals only.",
+  "gates_result": "results/l5-reverse-sector-contraction-gates-2026-09-19.json",
+  "cells": [
+    {
+      "cell": {
+        "L": 5,
+        "edge_count": 32,
+        "p": 0.08,
+        "epsilon": 0.03,
+        "q": 0.97,
+        "exact_TV_certificate": 0.005512912000257177,
+        "exact_TV_certificate_rational": "217446037546332771762340337436563569025292769000284186064680084916122287005050617563356428093091/39443045261050590270586428264139311483660321755451150238513946533203125000000000000000000000000000"
+      },
+      "runs": [
+        {
+          "L": 5,
+          "p": 0.08,
+          "epsilon": 0.03,
+          "q": 0.97,
+          "prefix_budget": 1024,
+          "lower_J": 0.0030190557684848405,
+          "upper_J": 0.08700211678346317,
+          "interval_width": 0.08398306101497834,
+          "finalized_upper": 0.08398306101497834,
+          "finalized_probability": 0.5769230549593811,
+          "active_probability": 0.4230769450406197,
+          "surviving_full_records": 1024,
+          "peak_preprune_states": 641956,
+          "profile": [
+            {
+              "vertex": 1,
+              "preprune_states": 20,
+              "active_states": 20,
+              "prefixes": 6,
+              "kept_prefixes": 6,
+              "remaining_cut_edges": 5,
+              "finalized_upper": 0.0,
+              "finalized_probability": 0.0
+            },
+            {
+              "vertex": 2,
+              "preprune_states": 160,
+              "active_states": 160,
+              "prefixes": 31,
+              "kept_prefixes": 31,
+              "remaining_cut_edges": 5,
+              "finalized_upper": 0.0,
+              "finalized_probability": 0.0
+            },
+            {
+              "vertex": 3,
+              "preprune_states": 1280,
+              "active_states": 1280,
+              "prefixes": 162,
+              "kept_prefixes": 162,
+              "remaining_cut_edges": 4,
+              "finalized_upper": 0.0,
+              "finalized_probability": 0.0
+            },
+            {
+              "vertex": 6,
+              "preprune_states": 20128,
+              "active_states": 19178,
+              "prefixes": 1112,
+              "kept_prefixes": 1024,
+              "remaining_cut_edges": 4,
+              "finalized_upper": 0.0,
+              "finalized_probability": 0.0
+            },
+            {
+              "vertex": 7,
+              "preprune_states": 123408,
+              "active_states": 54003,
+              "prefixes": 6196,
+              "kept_prefixes": 1024,
+              "remaining_cut_edges": 4,
+              "finalized_upper": 1.8448502383078518e-05,
+              "finalized_probability": 5.453642096565247e-05
+            },
+            {
+              "vertex": 8,
+              "preprune_states": 181085,
+              "active_states": 40968,
+              "prefixes": 7674,
+              "kept_prefixes": 1024,
+              "remaining_cut_edges": 3,
+              "finalized_upper": 0.0008193379415161181,
+              "finalized_probability": 0.0026375592143630167
+            },
+            {
+              "vertex": 11,
+              "preprune_states": 531432,
+              "active_states": 112885,
+              "prefixes": 8032,
+              "kept_prefixes": 1024,
+              "remaining_cut_edges": 3,
+              "finalized_upper": 0.005165944012730371,
+              "finalized_probability": 0.018477982725657083
+            },
+            {
+              "vertex": 12,
+              "preprune_states": 553784,
+              "active_states": 122217,
+              "prefixes": 8088,
+              "kept_prefixes": 1024,
+              "remaining_cut_edges": 3,
+              "finalized_upper": 0.013863777620713674,
+              "finalized_probability": 0.04643062616458879
+            },
+            {
+              "vertex": 13,
+              "preprune_states": 309168,
+              "active_states": 52643,
+              "prefixes": 8190,
+              "kept_prefixes": 1024,
+              "remaining_cut_edges": 2,
+              "finalized_upper": 0.028885923643664525,
+              "finalized_probability": 0.10469836968155807
+            },
+            {
+              "vertex": 16,
+              "preprune_states": 641956,
+              "active_states": 132844,
+              "prefixes": 8185,
+              "kept_prefixes": 1024,
+              "remaining_cut_edges": 2,
+              "finalized_upper": 0.04349822612261182,
+              "finalized_probability": 0.17359584303203418
+            },
+            {
+              "vertex": 17,
+              "preprune_states": 635536,
+              "active_states": 136644,
+              "prefixes": 8181,
+              "kept_prefixes": 1024,
+              "remaining_cut_edges": 2,
+              "finalized_upper": 0.057244841287997214,
+              "finalized_probability": 0.2370594078808822
+            },
+            {
+              "vertex": 18,
+              "preprune_states": 335632,
+              "active_states": 54728,
+              "prefixes": 8192,
+              "kept_prefixes": 1024,
+              "remaining_cut_edges": 1,
+              "finalized_upper": 0.06962261346451121,
+              "finalized_probability": 0.31609455192438723
+            },
+            {
+              "vertex": 21,
+              "preprune_states": 256314,
+              "active_states": 53862,
+              "prefixes": 7165,
+              "kept_prefixes": 1024,
+              "remaining_cut_edges": 1,
+              "finalized_upper": 0.07841431961831921,
+              "finalized_probability": 0.3724940579804959
+            },
+            {
+              "vertex": 22,
+              "preprune_states": 90141,
+              "active_states": 18414,
+              "prefixes": 7103,
+              "kept_prefixes": 1024,
+              "remaining_cut_edges": 1,
+              "finalized_upper": 0.08390087414214724,
+              "finalized_probability": 0.40956445175131645
+            },
+            {
+              "vertex": 23,
+              "preprune_states": 14326,
+              "active_states": 2048,
+              "prefixes": 7165,
+              "kept_prefixes": 1024,
+              "remaining_cut_edges": 0,
+              "finalized_upper": 0.08398306101497834,
+              "finalized_probability": 0.5769230549593811
+            }
+          ],
+          "TV_certificate": 0.005512912000257177,
+          "width_gate_passed": false,
+          "diagnostic_physical_envelope": [
+            0.0,
+            0.09251502878372035
+          ],
+          "promoted_physical_LER_interval": null
+        },
+        {
+          "L": 5,
+          "p": 0.08,
+          "epsilon": 0.03,
+          "q": 0.97,
+          "prefix_budget": 4096,
+          "lower_J": 0.005630672854458887,
+          "upper_J": 0.06249842053252214,
+          "interval_width": 0.056867747678063255,
+          "finalized_upper": 0.056867747678063255,
+          "finalized_probability": 0.40089803780895455,
+          "active_probability": 0.5991019621910462,
+          "surviving_full_records": 4096,
+          "peak_preprune_states": 2532424,
+          "profile": [
+            {
+              "vertex": 1,
+              "preprune_states": 20,
+              "active_states": 20,
+              "prefixes": 6,
+              "kept_prefixes": 6,
+              "remaining_cut_edges": 5,
+              "finalized_upper": 0.0,
+              "finalized_probability": 0.0
+            },
+            {
+              "vertex": 2,
+              "preprune_states": 160,
+              "active_states": 160,
+              "prefixes": 31,
+              "kept_prefixes": 31,
+              "remaining_cut_edges": 5,
+              "finalized_upper": 0.0,
+              "finalized_probability": 0.0
+            },
+            {
+              "vertex": 3,
+              "preprune_states": 1280,
+              "active_states": 1280,
+              "prefixes": 162,
+              "kept_prefixes": 162,
+              "remaining_cut_edges": 4,
+              "finalized_upper": 0.0,
+              "finalized_probability": 0.0
+            },
+            {
+              "vertex": 6,
+              "preprune_states": 20128,
+              "active_states": 20128,
+              "prefixes": 1112,
+              "kept_prefixes": 1112,
+              "remaining_cut_edges": 4,
+              "finalized_upper": 0.0,
+              "finalized_probability": 0.0
+            },
+            {
+              "vertex": 7,
+              "preprune_states": 130048,
+              "active_states": 102233,
+              "prefixes": 6698,
+              "kept_prefixes": 4096,
+              "remaining_cut_edges": 4,
+              "finalized_upper": 0.0,
+              "finalized_probability": 0.0
+            },
+            {
+              "vertex": 8,
+              "preprune_states": 404694,
+              "active_states": 138035,
+              "prefixes": 26832,
+              "kept_prefixes": 4096,
+              "remaining_cut_edges": 3,
+              "finalized_upper": 1.007656683388477e-05,
+              "finalized_probability": 3.4589407052588004e-05
+            },
+            {
+              "vertex": 11,
+              "preprune_states": 1838464,
+              "active_states": 413453,
+              "prefixes": 31637,
+              "kept_prefixes": 4096,
+              "remaining_cut_edges": 3,
+              "finalized_upper": 0.0004659525910541976,
+              "finalized_probability": 0.0016321709805691158
+            },
+            {
+              "vertex": 12,
+              "preprune_states": 2072640,
+              "active_states": 463804,
+              "prefixes": 31978,
+              "kept_prefixes": 4096,
+              "remaining_cut_edges": 3,
+              "finalized_upper": 0.002741831883415895,
+              "finalized_probability": 0.009224480380438677
+            },
+            {
+              "vertex": 13,
+              "preprune_states": 1194835,
+              "active_states": 206537,
+              "prefixes": 32737,
+              "kept_prefixes": 4096,
+              "remaining_cut_edges": 2,
+              "finalized_upper": 0.008481491333267612,
+              "finalized_probability": 0.033143619102533106
+            },
+            {
+              "vertex": 16,
+              "preprune_states": 2532424,
+              "active_states": 525736,
+              "prefixes": 32675,
+              "kept_prefixes": 4096,
+              "remaining_cut_edges": 2,
+              "finalized_upper": 0.016870781164221874,
+              "finalized_probability": 0.07109937158485657
+            },
+            {
+              "vertex": 17,
+              "preprune_states": 2520240,
+              "active_states": 540045,
+              "prefixes": 32679,
+              "kept_prefixes": 4096,
+              "remaining_cut_edges": 2,
+              "finalized_upper": 0.02654859944392999,
+              "finalized_probability": 0.11403985315011558
+            },
+            {
+              "vertex": 18,
+              "preprune_states": 1332280,
+              "active_states": 217697,
+              "prefixes": 32767,
+              "kept_prefixes": 4096,
+              "remaining_cut_edges": 1,
+              "finalized_upper": 0.03970184739203267,
+              "finalized_probability": 0.19517163670238033
+            },
+            {
+              "vertex": 21,
+              "preprune_states": 1021496,
+              "active_states": 213973,
+              "prefixes": 28642,
+              "kept_prefixes": 4096,
+              "remaining_cut_edges": 1,
+              "finalized_upper": 0.050234365726222696,
+              "finalized_probability": 0.26980346951140427
+            },
+            {
+              "vertex": 22,
+              "preprune_states": 359265,
+              "active_states": 73617,
+              "prefixes": 28325,
+              "kept_prefixes": 4096,
+              "remaining_cut_edges": 1,
+              "finalized_upper": 0.05678640902620327,
+              "finalized_probability": 0.3173018084830073
+            },
+            {
+              "vertex": 23,
+              "preprune_states": 57275,
+              "active_states": 8192,
+              "prefixes": 28655,
+              "kept_prefixes": 4096,
+              "remaining_cut_edges": 0,
+              "finalized_upper": 0.056867747678063255,
+              "finalized_probability": 0.40089803780895455
+            }
+          ],
+          "TV_certificate": 0.005512912000257177,
+          "width_gate_passed": false,
+          "diagnostic_physical_envelope": [
+            0.00011776085420170997,
+            0.06801133253277931
+          ],
+          "promoted_physical_LER_interval": null
+        }
+      ]
+    },
+    {
+      "cell": {
+        "L": 5,
+        "edge_count": 32,
+        "p": 0.3,
+        "epsilon": 0.01,
+        "q": 0.99,
+        "exact_TV_certificate": 0.008537650280863071,
+        "exact_TV_certificate_rational": "266801571276971003421015032512018476036419923979795715740174216436211784592166117662171494841/31250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "runs": [
+        {
+          "L": 5,
+          "p": 0.3,
+          "epsilon": 0.01,
+          "q": 0.99,
+          "prefix_budget": 1024,
+          "lower_J": 0.0010725219253505023,
+          "upper_J": 0.4758807412374661,
+          "interval_width": 0.4748082193121156,
+          "finalized_upper": 0.4748082193121156,
+          "finalized_probability": 0.9965374262769489,
+          "active_probability": 0.003462573723050158,
+          "surviving_full_records": 1024,
+          "peak_preprune_states": 638100,
+          "profile": [
+            {
+              "vertex": 1,
+              "preprune_states": 20,
+              "active_states": 20,
+              "prefixes": 6,
+              "kept_prefixes": 6,
+              "remaining_cut_edges": 5,
+              "finalized_upper": 0.0,
+              "finalized_probability": 0.0
+            },
+            {
+              "vertex": 2,
+              "preprune_states": 160,
+              "active_states": 160,
+              "prefixes": 31,
+              "kept_prefixes": 31,
+              "remaining_cut_edges": 5,
+              "finalized_upper": 0.0,
+              "finalized_probability": 0.0
+            },
+            {
+              "vertex": 3,
+              "preprune_states": 1280,
+              "active_states": 1280,
+              "prefixes": 162,
+              "kept_prefixes": 162,
+              "remaining_cut_edges": 4,
+              "finalized_upper": 0.0,
+              "finalized_probability": 0.0
+            },
+            {
+              "vertex": 6,
+              "preprune_states": 20128,
+              "active_states": 19178,
+              "prefixes": 1112,
+              "kept_prefixes": 1024,
+              "remaining_cut_edges": 4,
+              "finalized_upper": 0.0,
+              "finalized_probability": 0.0
+            },
+            {
+              "vertex": 7,
+              "preprune_states": 123408,
+              "active_states": 51185,
+              "prefixes": 6196,
+              "kept_prefixes": 1024,
+              "remaining_cut_edges": 4,
+              "finalized_upper": 0.002151769247560295,
+              "finalized_probability": 0.004364647966529998
+            },
+            {
+              "vertex": 8,
+              "preprune_states": 173852,
+              "active_states": 39536,
+              "prefixes": 7503,
+              "kept_prefixes": 1024,
+              "remaining_cut_edges": 3,
+              "finalized_upper": 0.06371822480629687,
+              "finalized_probability": 0.1322071466330357
+            },
+            {
+              "vertex": 11,
+              "preprune_states": 515848,
+              "active_states": 110697,
+              "prefixes": 7996,
+              "kept_prefixes": 1024,
+              "remaining_cut_edges": 3,
+              "finalized_upper": 0.20604369129982986,
+              "finalized_probability": 0.4262092051379329
+            },
+            {
+              "vertex": 12,
+              "preprune_states": 545080,
+              "active_states": 119944,
+              "prefixes": 8074,
+              "kept_prefixes": 1024,
+              "remaining_cut_edges": 3,
+              "finalized_upper": 0.3212911297980593,
+              "finalized_probability": 0.6641247217215924
+            },
+            {
+              "vertex": 13,
+              "preprune_states": 303801,
+              "active_states": 52170,
+              "prefixes": 8191,
+              "kept_prefixes": 1024,
+              "remaining_cut_edges": 2,
+              "finalized_upper": 0.39346445610832126,
+              "finalized_probability": 0.8188684880394035
+            },
+            {
+              "vertex": 16,
+              "preprune_states": 638100,
+              "active_states": 133234,
+              "prefixes": 8190,
+              "kept_prefixes": 1024,
+              "remaining_cut_edges": 2,
+              "finalized_upper": 0.43653543033076747,
+              "finalized_probability": 0.9103239112599706
+            },
+            {
+              "vertex": 17,
+              "preprune_states": 634480,
+              "active_states": 137258,
+              "prefixes": 8183,
+              "kept_prefixes": 1024,
+              "remaining_cut_edges": 2,
+              "finalized_upper": 0.45765577969158755,
+              "finalized_probability": 0.9553046431076989
+            },
+            {
+              "vertex": 18,
+              "preprune_states": 335857,
+              "active_states": 54808,
+              "prefixes": 8192,
+              "kept_prefixes": 1024,
+              "remaining_cut_edges": 1,
+              "finalized_upper": 0.46742957495645515,
+              "finalized_probability": 0.9782250388120097
+            },
+            {
+              "vertex": 21,
+              "preprune_states": 256584,
+              "active_states": 54761,
+              "prefixes": 7168,
+              "kept_prefixes": 1024,
+              "remaining_cut_edges": 1,
+              "finalized_upper": 0.47199595020447627,
+              "finalized_probability": 0.9885753164294974
+            },
+            {
+              "vertex": 22,
+              "preprune_states": 91134,
+              "active_states": 18430,
+              "prefixes": 7153,
+              "kept_prefixes": 1024,
+              "remaining_cut_edges": 1,
+              "finalized_upper": 0.4741700447311719,
+              "finalized_probability": 0.993555336623753
+            },
+            {
+              "vertex": 23,
+              "preprune_states": 14334,
+              "active_states": 2048,
+              "prefixes": 7168,
+              "kept_prefixes": 1024,
+              "remaining_cut_edges": 0,
+              "finalized_upper": 0.4748082193121156,
+              "finalized_probability": 0.9965374262769489
+            }
+          ],
+          "TV_certificate": 0.008537650280863071,
+          "width_gate_passed": false,
+          "diagnostic_physical_envelope": [
+            0.0,
+            0.48441839151832916
+          ],
+          "promoted_physical_LER_interval": null
+        },
+        {
+          "L": 5,
+          "p": 0.3,
+          "epsilon": 0.01,
+          "q": 0.99,
+          "prefix_budget": 4096,
+          "lower_J": 0.002849044530808178,
+          "upper_J": 0.46609705211392854,
+          "interval_width": 0.46324800758312035,
+          "finalized_upper": 0.46324800758312035,
+          "finalized_probability": 0.9907866327483754,
+          "active_probability": 0.009213367251623304,
+          "surviving_full_records": 4096,
+          "peak_preprune_states": 2522768,
+          "profile": [
+            {
+              "vertex": 1,
+              "preprune_states": 20,
+              "active_states": 20,
+              "prefixes": 6,
+              "kept_prefixes": 6,
+              "remaining_cut_edges": 5,
+              "finalized_upper": 0.0,
+              "finalized_probability": 0.0
+            },
+            {
+              "vertex": 2,
+              "preprune_states": 160,
+              "active_states": 160,
+              "prefixes": 31,
+              "kept_prefixes": 31,
+              "remaining_cut_edges": 5,
+              "finalized_upper": 0.0,
+              "finalized_probability": 0.0
+            },
+            {
+              "vertex": 3,
+              "preprune_states": 1280,
+              "active_states": 1280,
+              "prefixes": 162,
+              "kept_prefixes": 162,
+              "remaining_cut_edges": 4,
+              "finalized_upper": 0.0,
+              "finalized_probability": 0.0
+            },
+            {
+              "vertex": 6,
+              "preprune_states": 20128,
+              "active_states": 20128,
+              "prefixes": 1112,
+              "kept_prefixes": 1112,
+              "remaining_cut_edges": 4,
+              "finalized_upper": 0.0,
+              "finalized_probability": 0.0
+            },
+            {
+              "vertex": 7,
+              "preprune_states": 130048,
+              "active_states": 102233,
+              "prefixes": 6698,
+              "kept_prefixes": 4096,
+              "remaining_cut_edges": 4,
+              "finalized_upper": 0.0,
+              "finalized_probability": 0.0
+            },
+            {
+              "vertex": 8,
+              "preprune_states": 404694,
+              "active_states": 133039,
+              "prefixes": 26832,
+              "kept_prefixes": 4096,
+              "remaining_cut_edges": 3,
+              "finalized_upper": 0.0022647778535066533,
+              "finalized_probability": 0.004679533798685997
+            },
+            {
+              "vertex": 11,
+              "preprune_states": 1772288,
+              "active_states": 397592,
+              "prefixes": 31563,
+              "kept_prefixes": 4096,
+              "remaining_cut_edges": 3,
+              "finalized_upper": 0.05889505770845074,
+              "finalized_probability": 0.12228023107313304
+            },
+            {
+              "vertex": 12,
+              "preprune_states": 2012448,
+              "active_states": 456870,
+              "prefixes": 31843,
+              "kept_prefixes": 4096,
+              "remaining_cut_edges": 3,
+              "finalized_upper": 0.183230917616298,
+              "finalized_probability": 0.37963957397480275
+            },
+            {
+              "vertex": 13,
+              "preprune_states": 1179163,
+              "active_states": 205285,
+              "prefixes": 32729,
+              "kept_prefixes": 4096,
+              "remaining_cut_edges": 2,
+              "finalized_upper": 0.29426643263561136,
+              "finalized_probability": 0.6191898836106516
+            },
+            {
+              "vertex": 16,
+              "preprune_states": 2522768,
+              "active_states": 520200,
+              "prefixes": 32708,
+              "kept_prefixes": 4096,
+              "remaining_cut_edges": 2,
+              "finalized_upper": 0.3763659571588162,
+              "finalized_probability": 0.7939340277714677
+            },
+            {
+              "vertex": 17,
+              "preprune_states": 2502544,
+              "active_states": 539004,
+              "prefixes": 32707,
+              "kept_prefixes": 4096,
+              "remaining_cut_edges": 2,
+              "finalized_upper": 0.421890636848188,
+              "finalized_probability": 0.8909897085317631
+            },
+            {
+              "vertex": 18,
+              "preprune_states": 1330577,
+              "active_states": 218650,
+              "prefixes": 32768,
+              "kept_prefixes": 4096,
+              "remaining_cut_edges": 1,
+              "finalized_upper": 0.44479857305678244,
+              "finalized_probability": 0.9446211927086776
+            },
+            {
+              "vertex": 21,
+              "preprune_states": 1024570,
+              "active_states": 217664,
+              "prefixes": 28669,
+              "kept_prefixes": 4096,
+              "remaining_cut_edges": 1,
+              "finalized_upper": 0.4561047595950158,
+              "finalized_probability": 0.9702467231563108
+            },
+            {
+              "vertex": 22,
+              "preprune_states": 363060,
+              "active_states": 73691,
+              "prefixes": 28533,
+              "kept_prefixes": 4096,
+              "remaining_cut_edges": 1,
+              "finalized_upper": 0.4616298816101183,
+              "finalized_probability": 0.9829145665550365
+            },
+            {
+              "vertex": 23,
+              "preprune_states": 57323,
+              "active_states": 8192,
+              "prefixes": 28667,
+              "kept_prefixes": 4096,
+              "remaining_cut_edges": 0,
+              "finalized_upper": 0.46324800758312035,
+              "finalized_probability": 0.9907866327483754
+            }
+          ],
+          "TV_certificate": 0.008537650280863071,
+          "width_gate_passed": false,
+          "diagnostic_physical_envelope": [
+            0.0,
+            0.4746347023947916
+          ],
+          "promoted_physical_LER_interval": null
+        }
+      ]
+    }
+  ],
+  "censored": [],
+  "passed_cells": [],
+  "decision": "reject_within_registered_budgets",
+  "claim_boundary": "A physical LER interval is promoted only for a cell whose final contraction width does not exceed its exact TV certificate; diagnostic envelopes for failed cells are not promoted as physical LER results.",
+  "new_physical_record_samples": 0,
+  "bootstrap_replicates": 0,
+  "decoder_runs": 0,
+  "elapsed_seconds": 448.9044778330717,
+  "source_sha256": {
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/run_l5_reverse_sector_contraction.py": "3fb11e2cd39177b067339101c983fe06d2835ee39468a91a9afc47c083d34a68",
+    "labs/lab-008-direction-biased-u1-current-channel/manifests/l5-reverse-sector-contraction-2026-09-19.json": "6efe8c2b48604fa5e3bff0950d4c6deee5632059dfa81508e0770e4ace7ce441",
+    "labs/lab-008-direction-biased-u1-current-channel/results/l5-reverse-sector-contraction-gates-2026-09-19.json": "718cc85cfd061636c372af728a60b82c85cca535c790ce3ea927e795d902a971"
+  }
+}

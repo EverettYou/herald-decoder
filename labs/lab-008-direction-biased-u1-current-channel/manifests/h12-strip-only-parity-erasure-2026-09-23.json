@@ -1,0 +1,17 @@
+{
+  "id": "lab008-h12-strip-only-parity-erasure-2026-09-23",
+  "status": "complete_exact_all_size_partial_record_bound",
+  "parent": "thermodynamic-theory-reorientation-2026-09-22.json",
+  "question": "Does the complete cut-adjacent strip record, without the bulk charges, retain asymptotic information about the right-cut logical parity?",
+  "scope": "Canonical square independent ternary-current channel at fixed 0<p<1 and uniform horizontal orientation parameter 0<=q<=1. The public partial record is all L signed charges in the right cut-adjacent measured column only; bulk charges are absent. Vertical strip currents are revealed solely as a proof oracle for a data-processing upper bound and are never promoted to the physical record.",
+  "competing_outcomes": {
+    "strip_only_erases_parity": "Conditioning on the proof-oracle vertical currents turns each strip charge into an independent noisy difference of interface and cut currents; the absolute logical contrast is bounded by delta(p,q)^L with delta<1.",
+    "strip_only_retains_parity": "The vertical-current oracle or row factorization fails on the canonical graph, so the proposed product bound does not follow."
+  },
+  "method": "Derive the five-point signed row kernel for Y=X-C and its l1 norm delta. Prove via data processing that A(Q_strip)<=A(Q_strip,V)=delta^L. Check the canonical strip edge partition at previously used L=3,5,7,11 and compare the exact L3 full-strip contrast with delta^3 at the retained p=.30, q=.50,.90,1 cells. No new samples, sizes, bootstrap, or threshold fit.",
+  "independent_unit": "No sampling; the product proof uses the L independent horizontal interface/cut edge pairs as algebraic factors.",
+  "compute_budget": {"new_physical_samples": 0, "new_system_sizes": 0, "bootstrap_replicates": 0, "exact_L3_control_cells": 3, "existing_size_geometry_checks": 4},
+  "acceptance": "All checked strip charges decompose into one left interface edge, one right cut edge, and vertical strip edges only; row-kernel enumeration equals the closed formula; delta<1 at all registered interior-p q controls; exact L3 strip-only contrast is at most delta^3 within 1e-12.",
+  "stop_rule": "Fail closed on any geometry, normalization, row-kernel, or exact-control mismatch. State explicitly that the full physical record includes bulk charges, so this partial-record theorem neither bounds nor classifies full-record H12 at p=.30.",
+  "literature_basis": "Uses the existing Lab 006/007 physical current and signed-charge model and its exact Bayes contrast; no external threshold or universality theorem is imported."
+}

@@ -1,3 +1,7 @@
+## Scientific correction — 2026-10-01
+
+For the binary incomplete-herald channel, the research domain is **0 <= p <= 1, 0 <= q <= 1**. At interior q, error complementation does not give an observation-preserving p ↔ 1−p symmetry: a zero herald combines an ineligible event and a missed eligible event. Claims below that restrict the physical domain to half, enforce a horizontal boundary tangent at half, or infer an all-p ceiling from p≈0.5 are **withdrawn historical claims**, not current conclusions. B18's constrained guide is withdrawn; measured trial counts remain historical evidence. See [full-prior correction](/wiki?page=methods/binary-herald-full-prior-domain.md). The uniform-prior point p=0.5 remains special, but does not justify truncating the domain. Endpoint q=0 and q=1 symmetries require separate observation relabeling and do not establish interior-q symmetry.
+
 # Honeycomb boundary research log, B1--B18
 
 This note preserves the finite-window honeycomb mapping work. Early colored maps are technical history, not current categorical phase claims.
@@ -68,12 +72,11 @@ method footer.
 
 ![B17 resolution-aware finite-window guide.](../figures/phase-b17-resolution-aware-guide-2026-08-28.png)
 
-B18 is the active collaborator-facing summary. It retains the B17 evidence
-region but enforces the physical q_c(p)=q_c(1-p) symmetry through an exact
-horizontal endpoint tangent at p=0.5. The p axis now shows the full [0,0.5]
-fundamental domain; the unsampled low-p strip is not extrapolated.
+B18's complement-symmetric guide was withdrawn on 2026-10-01. Incomplete heralds have no general observation-preserving p↔1−p symmetry, so the enforced horizontal tangent at half and the claimed fundamental half-domain were incorrect.
 
-![B18 symmetry-constrained finite-window guide.](../figures/phase-b18-symmetry-constrained-guide-2026-08-28.png)
+![B19 measured finite-window coverage on the full physical domain.](../figures/phase-b19-full-prior-evidence-coverage-2026-10-01.png)
+
+B19 preserves the measured B14 cells, removes the guide, and displays the full p,q in [0,1] domain. Gray areas have no joint-grid measurements. Lab 009 acquires independent high-p diagnostics; no reflected data are used.
 
 ## Current use
 

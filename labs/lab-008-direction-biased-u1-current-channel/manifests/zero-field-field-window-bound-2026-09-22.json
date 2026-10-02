@@ -1,0 +1,42 @@
+{
+  "id": "lab008-zero-field-field-window-bound-2026-09-22",
+  "status": "complete_exact_window_and_obstruction",
+  "registered_at": "2026-09-22",
+  "parent_contract": "thermodynamic-theory-reorientation-2026-09-22.json",
+  "question": "What size-dependent field window is rigorously perturbative around the undirected h=0 channel, and can total-law comparison control any fixed nonzero h as L grows?",
+  "claim_boundary": "The study gives channel-law and Bayes-risk continuity bounds. It does not determine the fixed-h thermodynamic risk, field relevance at a critical point, or a threshold.",
+  "frozen_model": {
+    "current_alphabet": [0, 1, -1],
+    "zero_field_weights": ["1-p", "p/2", "p/2"],
+    "field_weights": ["1-p", "p exp(h)/(2 cosh h)", "p exp(-h)/(2 cosh h)"],
+    "independent_edges": "E physical edges before deterministic mapping to signed charge and logical sector",
+    "observation": "measured signed interior charge plus binary logical sector for the Bayes-risk comparison"
+  },
+  "registered_branches": {
+    "uniform_window": "Use both KL directions, Pinsker and data processing to bound Bayes-risk change and the zero-field cusp coefficient.",
+    "fixed_field_obstruction": "Use exact product Hellinger affinity to test whether the full current laws remain close at fixed h!=0."
+  },
+  "registered_claims": {
+    "kl": "KL(P0||Ph)=Ep log cosh h and KL(Ph||P0)=Ep[h tanh h-log cosh h].",
+    "risk_bound": "|R_L(h)-R_L(0)| <= min(1,sqrt(Ep kappa(h)/2)), where kappa is the smaller per-active-edge KL factor.",
+    "cusp_bound": "-R'_L(0+) <= sqrt(Ep)/2 whenever the one-sided derivative exists.",
+    "shrinking_window": "If h_L sqrt(E_L) tends to zero, then the Bayes-risk change tends to zero uniformly over geometry and observation maps.",
+    "separation": "The single-edge affinity is alpha=1-p+p cosh(h/2)/sqrt(cosh h); for fixed p>0 and h!=0, TV(P0^E,Ph^E)>=1-alpha^E tends to one."
+  },
+  "verification": "Replay the exact product identities and data-processing chain on the existing L=3 square at p=.30 and h=.10,.50 only.",
+  "acceptance": {
+    "bound": "Closed-form proof of the KL, risk, cusp and shrinking-window statements.",
+    "obstruction": "Closed-form affinity below one for fixed h!=0, proving asymptotic full-law separation.",
+    "replay": "L3 exhaustive errors below 1e-12 and risk difference <= output TV <= current TV <= Pinsker bound."
+  },
+  "compute_budget": {
+    "new_physical_samples": 0,
+    "new_system_sizes": 0,
+    "new_bootstrap_replicates": 0,
+    "existing_control_states_per_cell": 6561,
+    "control_cells": 2
+  },
+  "stop_rule": "Stop after the analytic matrix and L3 replay. Do not infer fixed-h thermodynamic continuity or collect another size.",
+  "result": "../results/zero-field-field-window-bound-2026-09-22.json",
+  "outcome": "Bayes risk is uniformly stable whenever h_L sqrt(E_L) tends to zero, and its zero-field cusp magnitude is at most sqrt(Ep)/2. Conversely, for every fixed p>0 and h!=0 the complete current laws have TV tending to one exponentially in E, so full-law perturbative comparison cannot establish fixed-h thermodynamic continuity."
+}

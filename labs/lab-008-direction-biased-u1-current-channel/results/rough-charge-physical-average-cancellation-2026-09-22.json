@@ -1,0 +1,25 @@
+{
+  "id": "lab008-rough-charge-physical-average-cancellation-2026-09-22",
+  "status": "verified_exact_signed_average_no_go",
+  "contract": "../manifests/rough-charge-physical-average-cancellation-2026-09-22.json",
+  "runner": "../scripts/verify_rough_charge_average_cancellation.py",
+  "theorems": {
+    "right_rough_parity": "H=sum_y Q_right,y mod 2 because each right rough vertex has one incident logical-cut edge and j mod 2 equals |j| mod 2.",
+    "physical_signed_average": "sum_Q[Z_0(Q;p,h)-Z_1(Q;p,h)]=E_{p,h}[(-1)^H]=(1-2p)^L, independent of h.",
+    "boundary_only_signed_average": "Let F_a(Q;h)=sum_{Q_rough} exp[h B(Q_rough)] Z_a(Q,Q_rough;p_eff,0). Then [sum_Q(F_0-F_1)]/[sum_Q(F_0+F_1)]=prod_{y=0}^{L-1}[(1-p_eff)-p_eff cosh(h(L-1+y))]/[(1-p_eff)+p_eff cosh(h(L-1+y))]. The left rough-edge factors cancel.",
+    "boundary_only_limit": "For fixed 0<p<1 and finite h!=0, the absolute value of the boundary-only signed ratio tends to one and its sign is eventually (-1)^L. For sufficiently large L, 1-|rho_L| <= 2L(1-p_eff)/[p_eff cosh(|h|(L-1))].",
+    "physical_absolute_average": "1-2R_L(p,h)=sum_Q |Z_0(Q;p,h)-Z_1(Q;p,h)|=c^E sum_Q exp[h M(Q)] |F_0(Q;h)-F_1(Q;h)|. The absolute value must remain inside the physical-record sum."
+  },
+  "analysis": "Dropping the measured-charge factor before averaging produces asymptotically certain unweighted boundary parity, while the true global logical parity becomes fair. The measured factor cancels in each record's sector ratio but not in the physical record law. Neither signed average controls the absolute contrast or Bayes risk; this rejects two averaging shortcuts, not an averaged physical-sector bound.",
+  "verification": {
+    "new_physical_samples": 0,
+    "new_system_sizes": 0,
+    "states_per_cell": 6561,
+    "p": 0.3,
+    "rows": [
+      {"L": 3, "h": 0.1, "p_eff": 0.29895279298819466, "boundary_only_signed_ratio": 0.05568256328315222, "physical_signed_contrast": 0.0639999999999999, "physical_absolute_contrast": 0.14441244876194168, "bayes_risk": 0.42779377561902915, "max_formula_error": 3.608224830031759e-16, "right_charge_parity_failures": 0},
+      {"L": 3, "h": 0.5, "p_eff": 0.27539657262311235, "boundary_only_signed_ratio": -0.0025790659414872854, "physical_signed_contrast": 0.06400000000000003, "physical_absolute_contrast": 0.22019889949959556, "bayes_risk": 0.3899005502502022, "max_formula_error": 1.1102230246251565e-15, "right_charge_parity_failures": 0}
+    ]
+  },
+  "claim_boundary": "The physical absolute contrast is not estimated uniformly in L. No fixed-field phase, threshold, risk limit or universality claim follows."
+}

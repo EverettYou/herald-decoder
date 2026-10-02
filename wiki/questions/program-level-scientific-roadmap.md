@@ -2,7 +2,7 @@
 title: Program-level scientific roadmap after the finite-window phase map
 page_type: question
 status: proposed-program
-updated: 2026-09-14
+updated: 2026-09-23
 source_refs:
   - labs/lab-007-decoding-statistical-mechanics/REPORT.md
   - references/dennis2001-topological-quantum-memory/paper.pdf
@@ -15,6 +15,7 @@ source_refs:
   - references/iqbal2023-nonabelian-topological-order/paper.pdf
   - references/lyons2026-anyonic-fault-tolerance/paper.pdf
   - references/sala2025-decohering-nonabelian-topological-order/paper.pdf
+  - labs/lab-005-spacetime-jit-anyonic-decoding/REPORT.md
 idea_ids: []
 topics: [Quantum Error Correction, Topological Phases, Symmetry-Enriched Systems]
 ---
@@ -29,7 +30,7 @@ analysis, not the scientific center.
 
 **Sources**: [Topological Quantum Memory](/reference?id=dennis2001-topological-quantum-memory); [Diagnostics of Mixed-State Topological Order and Breakdown of Quantum Memory](/reference?id=fan2023-mixed-state-topological-memory); [Strong-to-Weak Spontaneous Symmetry Breaking in Mixed Quantum States](/reference?id=lessa2024-swssb-mixed-states); [Symmetry Enforced Entanglement in Maximally Mixed States](/reference?id=moharramipour2024-symmetry-enforced-entanglement); [Improved Quantum Error Correction Using Soft Information](/reference?id=pattison2021-soft-information-qec); [Charge-Informed Quantum Error Correction](/reference?id=temkin2025-charge-informed-qec); [Intrinsic Heralding and Optimal Decoders for Non-Abelian Topological Order](/reference?id=jing2025-intrinsic-heralding); [Non-Abelian Topological Order and Anyons on a Trapped-Ion Processor](/reference?id=iqbal2023-nonabelian-topological-order); [Quantum Computing with Anyons Is Fault Tolerant](/reference?id=lyons2026-anyonic-fault-tolerance); [Stability and Loop Models from Decohering Non-Abelian Topological Order](/reference?id=sala2025-decohering-nonabelian-topological-order)
 
-**Last updated**: 2026-09-14
+**Last updated**: 2026-09-23
 
 ## What the strongest papers treat as a major question
 
@@ -159,13 +160,40 @@ Brown.
 topological-syndrome readout noise, and fusion/herald readout noise—not merely a
 perfect-measurement 2D threshold.
 
-Lab 005 now owns this work package. Its first implementation separates the
-causal schedule from the inner spatial decoder and verifies the local
-spacetime-ILP algebra plus bounding-cube age predicate of Jing *et al.* It does
-**not** yet reproduce the Lyons–Brown D(S3) JIT state machine: absorber
-distance, deferred measurement reversal, ungauging, neutrality, re-gauging,
-and linked-cluster behavior remain pending. Repeated noisy D4 herald readout is
-a separately labelled project extension linked to Lab 004.
+Lab 005 owns this work package. Its translated D4 public interface now passes
+all deterministic gates for causal prefixes, action-conditioned post-flux
+records, four schedules, two information modes, ground-state-relative scoring
+and replay. A tiny matched-history (L=2), five-round pilot is preregistered
+under an explicitly phenomenological/projector-level D4 model. Its
+deterministic preflight now passes zero-, single- and multi-cluster arm
+composition under a cumulative Pauli-frame rule: zero-event paths fabricate no
+action, same-round duplicate full-snapshot callbacks collapse, and later
+estimates supersede earlier frames. Exactly eight replayable unconditional rows
+are produced per deterministic history, including failed-closed retention of a
+valid odd noisy-syndrome record rejected by the static periodic decoder. The
+frozen production run retained 272 histories and 2,176 arm rows, but the
+clean-herald JIT arm invoked on only seven histories per mode versus its
+registered minimum eight. The pilot is therefore closed censored before
+bootstrap and supplies no schedule-risk or herald-mode evidence. The retained
+rows additionally expose the next prerequisite: the static periodic inner
+decoder rejects most valid odd instantaneous noisy syndromes, so a causal
+spacetime/time-boundary handoff must be specified before a replacement pilot.
+This remains distinct from exact Lyons--Brown D(S3) circuit reproduction and
+from a circuit-derived noisy D4 implementation.
+
+A separately registered, disjoint replacement then implemented the causal
+temporal-boundary handoff and passed its integrity and event gates at the same
+L=2, five-round scale. Its [paired analysis](../../labs/lab-005-spacetime-jit-anyonic-decoding/results/j6b-disjoint-temporal-handoff-paired-analysis-2026-09-23.json)
+evaluated 14 fixed online contrasts on 128 histories per stochastic cell;
+four exploratory pointwise proposal triggers have mixed directions amid
+0.789–0.992 unconditional failure risks. A subsequent [read-only outcome
+audit](../../labs/lab-005-spacetime-jit-anyonic-decoding/results/j6b-d0-frozen-outcome-attribution-2026-09-23.json)
+shows that most of each triggered net difference is in scored failures, not
+changes in the number of unresolved-handoff aborts. The next high-information
+Lab 005 gate is therefore a bounded audit of scored-path residual, charge and
+union loss under the unchanged public record and scorer—not another broad
+schedule sweep. Neither pilot supports JIT superiority, fault-tolerance
+thresholds, or exact circuit-model claims.
 
 ### WP5 — connect to experiment and resources
 
@@ -405,14 +433,160 @@ formulation to controlled intrinsic inference; it does not resolve the
 microscopic quantum-channel gate or thermodynamic universality.
 [Lab 007, formulation and checks](/lab?id=lab-007-decoding-statistical-mechanics).
 
-The next discriminating direction is an exact finite-width sector contraction
+The researcher's latest priority is decoding transitions and correction
+thresholds. The [threshold study](../../labs/lab-008-direction-biased-u1-current-channel/wiki/decoding-thresholds.md)
+now proves a residual-support/percolation mapping at the directed square
+midpoint and nonvanishing ambiguity probability. The exact L3 risk is 7/16;
+unequal sector counts reject exact balance. Its exact boundary-flux polynomial
+representation passes all L3 root and variance controls, but reviewed
+strong-Rayleigh closures do not cover fixed-divergence conditioning. Exhaustive
+L4 remains real-rooted locally, while an exact `t` versus `1+5t+t^2` pair
+rejects the direct global common-interlacing induction. Residual crossing flips
+are exact charge-preserving sector switches, but deterministic extremal
+selectors collide; their finite stable subsets do not yet have a size-uniform
+probability bound. Full L3/L4 matching nevertheless saturates every smaller
+charge-sector class and exact normalized transport proves the stronger NMP.
+Fixed charge embeds as a planar alpha-orientation, but 578 ambiguous L4 records
+split across the restricted logical graph and 86,528 states admit internal
+cycle moves used by published orientation lattices. All 171 one-/two-edge
+deletion controls retain saturation, yet no reviewed theorem covers the
+restricted graph. Structural NMP and positive normalized minority mass remain
+separate lemmas; only the latter implies nonzero limiting LER and a threshold
+upper bound. This separation is now rigorous: the abstract fiber K_(1,M) has
+NMP and ambiguity probability one while its minority fraction 1/(M+1)
+vanishes. A charge-preserving switching map of uniformly bounded congestion C
+would suffice, since it gives R_L>=Pr(A_L)/(C+1). Exact capacitated transport
+shows the optimal congestion is 2 at L3 and 6 at L4, improving selector values
+3 and 16; canonical L4 contains 96 physical K_(1,6) fibers of total mass
+21/8192. Conditional logical entropy is an equivalent asymptotic target, but
+no size-uniform lower bound or analytic unbounded-imbalance family is proved.
+Bulk-density and CFT work are supporting tools for that target.
+
+The researcher's 2026-09-20 thermodynamic continuation proves an open all-p
+correctable honeycomb bias interval q>.9925857155 and its reflected interval,
+using current and parity-complement path bounds. It also proves an averaged
+bulk evidence-free-energy density limit under periodic arrows, while logical
+correctability depends on the sector-gap distribution. The
+[thermodynamic results](../../labs/lab-008-direction-biased-u1-current-channel/wiki/thermodynamic-limits.md)
+leave necessity and square criticality open. Ordinary RSW plus NMP is now
+proved insufficient. A same-charge two-copy overlap is exact but uses the
+collision-size-biased charge law (p_Q^2), while local block gluing controls
+connectivity rather than full-charge posterior balance. The bounded follow-up
+now closes that proxy route: reviewed local-limit results do not provide the
+needed growing-dimensional atom comparison, and even the Gaussian benchmark
+loses as 2^(-d/2). A direct full-record switching reduction now avoids that
+proxy: positive risk follows if the physical-domain selector preimage second
+moment kappa_L is uniformly bounded. A common-domain four-order matrix finds
+shortest-first decisively better at L3/L4, but its collision differences span
+several boundary/component topologies rather than one standard arm event. The
+exact exchange audit now shows why: closed same-endpoint exchange covers none
+of the L3 collision pairs and only 4,170/64,844 at L4; the dominant objects are
+open boundary fans selected in two different input states. Finite L4 fans have
+nonzero mass but do not form a scale-stable ladder. The next question is a
+uniform summable physical tail for boundary-fan multiplicity. Exact witnesses
+are finite-injective, but BK/Reimer has the wrong two-state conditional law;
+isolated diamond chains permit exponential multiplicity without yet defining a
+physical square event. The first physical width-three square-strip embedding
+does retain finite multiplicity: at W=4 it has A=3926, selector second moment
+7968, kappa=3984/1963 and maximum multiplicity five. Exact charge-majority
+transfer reaches W=5, then exceeds the registered state cap during W=6. Its
+charge/frontier key cannot retain the selector's nonlocal earlier-path
+availability. A reduced exact selector map now passes W=3/W=4 replay and
+computes W=5 with A=108978, S=336814, kappa=168407/54489 and maximum
+multiplicity 12 using 179446 states. Because this compiles the complete W=5
+truth table, no rate or threshold follows. The next prerequisite is a genuine
+all-width certificate: symbolic recursion, a physical-probability embedded
+family, or a uniform summable fan-tail bound. That matrix now closes
+negatively: a W=4 same-charge/frontier witness selects different paths, the
+zero-background family has zero physical majority weight at W=3,4,5, and the
+path-count cutoff grows at least as 3^(W-1), hence is not uniformly summable.
+A nine-source primary-theorem audit then finds no result matching the
+majority-conditioned two-configuration law, restricted logical moves and the
+two-dimensional limit at once. The selector route is therefore demoted. The
+next priority is the decoder-independent logical-sector free-energy-gap
+distribution. The exact identity
+`R_L=E[(1+exp(abs(DeltaF)))^-1]` now proves that correctability is equivalent
+to gap divergence in physical-record probability. Reanalysis of all 15 existing
+`p=.30`, `L=5,7,9` cells shows distinct fair, near-directed and directed
+finite-size patterns but cannot separate typical stiffness, a finite-gap phase
+and rare-tail-controlled decay. The next registered matrix is therefore only
+the boundary window `q=.90,.94,.97`, `L=7,9,11`, gated by an exact L11
+preflight rather than another broad phase-map sweep.
+That exact `L=11,q=.94` preflight now passes every identity and resource gate
+(43,578,135 candidate transitions, 11.48 seconds, 0.91 GiB peak RSS) with zero
+production histories. The registered five-cell boundary acquisition is the
+next bounded Lab 008 operation; its threshold and BKT prohibitions remain.
+The five cells have since completed at their joint precision stops with 2,688
+total records and no hard-cap cell. Complete-matrix analysis was pending,
+so at that checkpoint no mechanism ranking or phase-boundary inference had
+been promoted.
+That analysis is now complete: all three q trajectories show coordinated
+finite-size risk/CDF decline and gap-quantile growth from L7 to L11, while the
+low-gap risk share does not grow. This favors outward typical-gap motion and
+does not support rare-tail takeover through L11, but leaves the thermodynamic
+class open. Any larger-size test needs a separate registered method.
+
+Lab 008 has now completed exact sector contraction on canonical finite patches
 with the same physical channel, full record, rough boundaries and binary score,
-paired with exact-marginal and BP-marginal matching. A periodic integer-winding
+paired with exact-marginal and BP-marginal matching. Its finite data resolve
+an intrinsic direction-bias component together with practical decoder loss.
+The researcher's current priority is an analytic prediction of the LER curve
+from the auxiliary K partition function. A logical-boundary twist observable
+and low-p square expansion are now derived. Deterministic L5 certificates
+control every registered bias through p=.05 and narrow p=.08 only near the
+directed endpoint. A no-fit synthesis against exact-posterior anchors leaves
+fair/intermediate p>=.08 explicitly unresolved. A primary-source audit finds
+no reviewed scalar-counting theorem that controls the public-record l1 target.
+The only target-preserving candidate, the physical even-moment hierarchy, then
+fails its preregistered N=32 width gate at p=.30 for fair and intermediate bias
+using stored L5 posteriors. Low-order moment compression and its proposed
+replica-transfer implementation are closed. The fair/intermediate p>=.08
+analytic curve remains unresolved; no 2D universality class or p_c is
+established by those earlier routes. The researcher's 2026-09-19 continuation
+reopens Lab 008 with a new connected-current theorem: physical LER is bounded
+by simple logical-path probabilities, giving improved biased square
+certificates and a directed L3 exact curve. Combining its affinity with the
+rigorous honeycomb walk growth constant proves all-p optimal correctability
+for fully directional honeycomb noise, with the inherited full charge and
+rough boundaries. This is not an all-p square claim or a CFT identification.
+See the [connected-defect proof](../../labs/lab-008-direction-biased-u1-current-channel/wiki/connected-current-defects.md)
+and the
+[replica and CFT investigation](../../labs/lab-008-direction-biased-u1-current-channel/wiki/complex-weights-and-cft.md).
+The renewed autoresearch continuation also proves that the unchanged path
+witness envelope cannot give a nontrivial fair L5,p=.30 bound, even with all
+overlaps removed. Direct sector analysis instead derives the exact low-noise
+directional crossover and its boundary layer 1-q of order p^(L-2).
+The [crossover theorem](../../labs/lab-008-direction-biased-u1-current-channel/wiki/directional-crossover.md)
+leads to a normalized fixed-p reverse-sector response with exact
+total-variation LER error
+(Ep\epsilon[1-(1-p\epsilon)^{E-1}]\), bounded quadratically in
+(epsilon=1-q). All 15 exact full-support L3 controls pass while retaining
+new records and sector switches. E=32 values are error guarantees only; no L5
+response LER has been inferred. The target-preserving L5 contraction is now
+[preregistered](../../labs/lab-008-direction-biased-u1-current-channel/manifests/l5-reverse-sector-contraction-2026-09-19.json)
+without computation at only p=.08,q=.97 and p=.30,q=.99. It preserves the
+full affine record-sector pair, uses deterministic certified intervals, and
+fails closed unless contraction width is no larger than the corresponding
+exact theorem certificate. The registered calculation now completes without
+censoring but fails both gates: final widths are 10.32 and 54.26 times the
+certificates at p=.08,q=.97 and p=.30,q=.99. No physical L5 LER interval is
+promoted, and the stop rule closes further budget or cell refinement.
+A periodic integer-winding
 or BKT study requires a separately specified geometry, observable and effective
 theory. See [[models/representation-informed-sector-model|the sector model]]
 and [Lab 007, follow-on design](../../labs/lab-007-decoding-statistical-mechanics/wiki/predictions.md).
 
 ## Related pages
+
+The specific direction-biased U(1) extension now belongs to
+[Lab 008](../../labs/lab-008-direction-biased-u1-current-channel/PLAN.md),
+with Lab 006 as experimental parent and Lab 007 as method dependency. Its
+completed finite-mechanism study connects logical-sector free-energy
+distributions to intrinsic LER and practical decoder excess risk using 10,944
+record comparisons. Square L=9 replicates the direction-bias effect, while
+honeycomb controls show preferred-arrow sensitivity. These findings leave the
+thermodynamic class open. See the
+[mechanism evidence](../../labs/lab-008-direction-biased-u1-current-channel/wiki/mechanism-results.md).
 
 - [[thesis|Herald Decoder research program]]
 - [[methods/side-information-aware-decoding|Side-information-aware decoding]]

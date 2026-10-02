@@ -1,0 +1,214 @@
+{
+  "cap_failure": null,
+  "claim_boundary": "Integrity-only finite pilot; no paired risk or schedule advantage inferred before registered uncertainty analysis.",
+  "counters": {
+    "bootstrap_replicates": 0,
+    "production_arm_evaluations": 2176,
+    "production_histories_generated": 272
+  },
+  "event_gates": {
+    "clean_herald_schedule": {
+      "nonempty_detector_histories": 128,
+      "passed": true,
+      "real_action_histories_per_online_arm": {
+        "heralded/fixed_delay_1": 72,
+        "heralded/immediate": 70,
+        "heralded/jit_lyons_brown": 56,
+        "syndrome_only/fixed_delay_1": 72,
+        "syndrome_only/immediate": 70,
+        "syndrome_only/jit_lyons_brown": 56
+      }
+    },
+    "joint_readout_noise": {
+      "nonempty_detector_histories": 128,
+      "passed": true,
+      "real_action_histories_per_online_arm": {
+        "heralded/fixed_delay_1": 69,
+        "heralded/immediate": 72,
+        "heralded/jit_lyons_brown": 57,
+        "syndrome_only/fixed_delay_1": 69,
+        "syndrome_only/immediate": 72,
+        "syndrome_only/jit_lyons_brown": 57
+      }
+    }
+  },
+  "failed_closed_rows": {
+    "clean_herald_schedule": {
+      "count": 456,
+      "reasons": [
+        "ValueError:unresolved_temporal_boundary_handoff"
+      ]
+    },
+    "joint_readout_noise": {
+      "count": 466,
+      "reasons": [
+        "ValueError:unresolved_temporal_boundary_handoff"
+      ]
+    },
+    "zero_control": {
+      "count": 0,
+      "reasons": []
+    }
+  },
+  "integrity_failures": [],
+  "integrity_passed": true,
+  "manifest": "labs/lab-005-spacetime-jit-anyonic-decoding/manifests/j6b-disjoint-temporal-handoff-pilot-2026-09-23.json",
+  "manifest_sha256": "8140182a4be0315a205936626c7ec727f765efe66047c02bbeac588097b7fdb2",
+  "next_action": "Run the registered whole-history paired analysis once",
+  "phase": "J6B production integrity",
+  "preflight_sha256": "813239a72a35ad4007e91bec56aaeefb6c2d6ee132672f8bea0aa75ee525adee",
+  "production_release_passed": true,
+  "provenance": [
+    {
+      "actual_sha256": "436d36f558aaac108129870122672660317e686ae1b1e885157a22004b0b8749",
+      "actual_status": "passed",
+      "expected_sha256": "436d36f558aaac108129870122672660317e686ae1b1e885157a22004b0b8749",
+      "passed": true,
+      "path": "labs/lab-005-spacetime-jit-anyonic-decoding/results/j6a-causal-odd-syndrome-time-boundary-handoff-2026-09-22.json",
+      "required_status": "passed"
+    },
+    {
+      "actual_sha256": "1d2a8b19bf0ea11f7871b83728d148c8188520acb2734ecd1d567b98cbc2d821",
+      "actual_status": "passed",
+      "expected_sha256": "1d2a8b19bf0ea11f7871b83728d148c8188520acb2734ecd1d567b98cbc2d821",
+      "passed": true,
+      "path": "labs/lab-005-spacetime-jit-anyonic-decoding/results/j6b-r0-temporal-ledger-reconciliation-2026-09-23.json",
+      "required_status": "passed"
+    },
+    {
+      "actual_sha256": "ef94a1d4cc1820bfe2ef5a59350355ba8d6e9c4c9cbaea83969109977becc179",
+      "actual_status": "passed",
+      "expected_sha256": "ef94a1d4cc1820bfe2ef5a59350355ba8d6e9c4c9cbaea83969109977becc179",
+      "passed": true,
+      "path": "labs/lab-005-spacetime-jit-anyonic-decoding/manifests/j1-e4b-d4-translation-interface-matrix-2026-09-19.json",
+      "required_status": "passed"
+    },
+    {
+      "actual_sha256": "28e4c72ac9c774b8a6b669105a564512d7fc1fb08901a24b6364de3ec18dac89",
+      "actual_status": "passed",
+      "expected_sha256": "28e4c72ac9c774b8a6b669105a564512d7fc1fb08901a24b6364de3ec18dac89",
+      "passed": true,
+      "path": "labs/lab-005-spacetime-jit-anyonic-decoding/results/j1-e4b-d4-translation-interface-matrix-2026-09-19.json",
+      "required_status": "passed"
+    },
+    {
+      "actual_sha256": "43d9d0d3e4771ccfc764f590f1843cda1e2a7fbce8dae96057710c413a0adb6e",
+      "actual_status": null,
+      "expected_sha256": "43d9d0d3e4771ccfc764f590f1843cda1e2a7fbce8dae96057710c413a0adb6e",
+      "passed": true,
+      "path": "labs/lab-005-spacetime-jit-anyonic-decoding/scripts/d4_integrated_history.py",
+      "required_status": null
+    },
+    {
+      "actual_sha256": "6b2509ed4619ff2a7e4610a2262874abb94fb961c384f7ca6d25407c8f05f8d4",
+      "actual_status": null,
+      "expected_sha256": "6b2509ed4619ff2a7e4610a2262874abb94fb961c384f7ca6d25407c8f05f8d4",
+      "passed": true,
+      "path": "labs/lab-005-spacetime-jit-anyonic-decoding/scripts/generic_history.py",
+      "required_status": null
+    },
+    {
+      "actual_sha256": "ee94606fa604d87694c9ca4408e291fe50c6e49b15e61382ee6c90983b2ec836",
+      "actual_status": null,
+      "expected_sha256": "ee94606fa604d87694c9ca4408e291fe50c6e49b15e61382ee6c90983b2ec836",
+      "passed": true,
+      "path": "labs/lab-005-spacetime-jit-anyonic-decoding/scripts/baseline_harness.py",
+      "required_status": null
+    },
+    {
+      "actual_sha256": "96e0b9bb923a481013064e5b7d7333ecc8eaab1c7fffb9bd7cbeb3aca8a862e4",
+      "actual_status": null,
+      "expected_sha256": "96e0b9bb923a481013064e5b7d7333ecc8eaab1c7fffb9bd7cbeb3aca8a862e4",
+      "passed": true,
+      "path": "labs/lab-005-spacetime-jit-anyonic-decoding/scripts/d4_projector_instrument.py",
+      "required_status": null
+    },
+    {
+      "actual_sha256": "f9578a3d78bae4843099e8c28c5f73ee102b1c180cf1c3b2f46cb93e22bb49c4",
+      "actual_status": null,
+      "expected_sha256": "f9578a3d78bae4843099e8c28c5f73ee102b1c180cf1c3b2f46cb93e22bb49c4",
+      "passed": true,
+      "path": "labs/lab-005-spacetime-jit-anyonic-decoding/scripts/d4_temporal_composition.py",
+      "required_status": null
+    },
+    {
+      "actual_sha256": "40d966e9db072e7ecffa013b1a68aa92cf0d4360e280e968bca152c86632db80",
+      "actual_status": null,
+      "expected_sha256": "40d966e9db072e7ecffa013b1a68aa92cf0d4360e280e968bca152c86632db80",
+      "passed": true,
+      "path": "labs/lab-005-spacetime-jit-anyonic-decoding/scripts/d4_spatial_policy.py",
+      "required_status": null
+    },
+    {
+      "actual_sha256": "d1ba0232aa06ffe95c8c0673f8ef6371785ace568368cc73e30ddbadfb9d0398",
+      "actual_status": null,
+      "expected_sha256": "d1ba0232aa06ffe95c8c0673f8ef6371785ace568368cc73e30ddbadfb9d0398",
+      "passed": true,
+      "path": "labs/lab-005-spacetime-jit-anyonic-decoding/scripts/e1_schedule_integration.py",
+      "required_status": null
+    },
+    {
+      "actual_sha256": "f02f4e483b03bcd399a93546741a96e8ce78eb746bb376a704275ca67830852e",
+      "actual_status": null,
+      "expected_sha256": "f02f4e483b03bcd399a93546741a96e8ce78eb746bb376a704275ca67830852e",
+      "passed": true,
+      "path": "labs/lab-005-spacetime-jit-anyonic-decoding/scripts/persistent_clusters.py",
+      "required_status": null
+    },
+    {
+      "actual_sha256": "cb2ac932c2158dc41d621018b9e4bb921ccd07864486191ff70db34a69b168b5",
+      "actual_status": null,
+      "expected_sha256": "cb2ac932c2158dc41d621018b9e4bb921ccd07864486191ff70db34a69b168b5",
+      "passed": true,
+      "path": "labs/lab-005-spacetime-jit-anyonic-decoding/scripts/lyons_absorber.py",
+      "required_status": null
+    },
+    {
+      "actual_sha256": "2ba3dd13feda42e4441ae0089be2403b5c75b626ae0a0542d4aa9089807472fd",
+      "actual_status": null,
+      "expected_sha256": "2ba3dd13feda42e4441ae0089be2403b5c75b626ae0a0542d4aa9089807472fd",
+      "passed": true,
+      "path": "labs/lab-005-spacetime-jit-anyonic-decoding/../lab-004-d4-intrinsic-heralded-decoding/scripts/d4_charge.py",
+      "required_status": null
+    },
+    {
+      "actual_sha256": "9e120e1402f2cd5332ecbea1d15ded2979e8d0fe2165083eeb21794cbed22225",
+      "actual_status": null,
+      "expected_sha256": "9e120e1402f2cd5332ecbea1d15ded2979e8d0fe2165083eeb21794cbed22225",
+      "passed": true,
+      "path": "labs/lab-005-spacetime-jit-anyonic-decoding/results/j6-d4-matched-history-pilot-rows-2026-09-19.jsonl",
+      "required_status": null
+    },
+    {
+      "actual_sha256": "fa2bc6d7b7de69004d266557b1b885a0369fb3944d3dbcee94ee54fb6e6cfcf3",
+      "actual_status": null,
+      "expected_sha256": "fa2bc6d7b7de69004d266557b1b885a0369fb3944d3dbcee94ee54fb6e6cfcf3",
+      "passed": true,
+      "path": "labs/lab-005-spacetime-jit-anyonic-decoding/results/j6-d4-matched-history-pilot-analysis-2026-09-19.json",
+      "required_status": null
+    }
+  ],
+  "provenance_passed": true,
+  "raw_rows": "labs/lab-005-spacetime-jit-anyonic-decoding/results/j6b-disjoint-temporal-handoff-rows-2026-09-23.jsonl",
+  "raw_rows_sha256": "620c5db65231e5c112a497397aad168eefd7d284f1af362c52d512c6741fbefe",
+  "resolved_handoff_histories_by_mode": {
+    "heralded": 158,
+    "syndrome_only": 158
+  },
+  "resource_use": {
+    "cpu_seconds": 46.97367,
+    "peak_rss_bytes": 124534784,
+    "raw_rows_bytes": 2278841,
+    "wall_seconds": 47.84388
+  },
+  "runner_sha256": "b7a8c987e59c03eee7aafbc07ab7de887eacd274ad26a3797be33719efee6119",
+  "runtime": {
+    "numba": "0.65.0",
+    "numpy": "1.26.4",
+    "pymatching": "2.4.0",
+    "python": "3.13.2",
+    "scipy": "1.17.1"
+  },
+  "schema_version": 1,
+  "status": "production_integrity_passed_bootstrap_pending"
+}

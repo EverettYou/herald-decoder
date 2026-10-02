@@ -1,0 +1,17 @@
+{
+  "id": "lab008-h12-unrevealed-cut-parity-mask-2026-09-23",
+  "status": "complete_exact_all_size_partial_record_bound",
+  "parent": "thermodynamic-theory-reorientation-2026-09-22.json",
+  "question": "Can a fixed fraction of the L cut-adjacent signed charges, even together with every bulk charge, produce nonvanishing logical-sector contrast as L grows?",
+  "scope": "Canonical square independent-current channel at fixed edge activity 0<p<1, any edge-wise orientation bias, right rough-boundary parity H, all bulk charges Q_B, and charges Q_T on any subset T of the L cut-adjacent measured vertices. Other strip charges are unobserved. Exact finite-size theorem only; no claim for the complete strip record.",
+  "competing_outcomes": {
+    "parity_mask": "Cut activities at rows outside T remain independent Bernoulli(p), multiply every conditional sector polarization by (1-2p)^(L-|T|), and force the partial-record Bayes risk near one half when the number omitted grows.",
+    "leakage": "Some supposedly unobserved cut activity enters Q_B or Q_T, invalidating the factorization."
+  },
+  "method": "Prove disjoint-edge conditional factorization, then audit canonical cut endpoints at existing L=3,5,7,11 and check all eight L=3 strip subsets at each retained q=0.5,0.9,1 against exact sector masses. No new physical samples, sizes, noise points, or bootstrap.",
+  "observables": ["logical-cut activity independence gate", "partial-record absolute sector contrast", "registered upper bound |1-2p|^(L-|T|)", "maximum exact-control violation"],
+  "compute_budget": {"new_physical_samples": 0, "new_system_sizes": 0, "bootstrap_replicates": 0, "exact_L3_subset_cells": 24, "existing_size_geometry_checks": 4},
+  "acceptance": "For every exact control, partial-record contrast is at most |1-2p|^(L-|T|) within 1e-12; all cut endpoints satisfy the required disjointness; record the all-size Bayes-risk lower bound and the limit for L-|T| tending to infinity.",
+  "stop_rule": "Fail closed on any incidence or exact-mass violation. Never infer the full-record phase at p=.30 or a threshold from this partial-record theorem.",
+  "literature_basis": "The independent ternary edge prior and physically measured signed charges are the registered Lab 006/007 model; this is a model-specific parity-factorization corollary rather than a literature-derived transition claim."
+}

@@ -1,0 +1,29 @@
+{
+  "id": "lab008-connected-current-defects-2026-09-19",
+  "status": "complete",
+  "result": "../results/connected-current-defects-2026-09-19.json",
+  "delivery": "../results/connected-current-delivery-2026-09-19.json",
+  "decision": "Promote the connected-witness theorem, biased finite-square upper bounds, exact L3 directed curve on p<=.2 and all-p directed-honeycomb correctability theorem. Retain trivial/loose fair moderate-p bounds and the failed full-interval polynomial certificate. No square threshold or CFT identification.",
+  "authorization": "Researcher explicitly requests continued calculation on 2026-09-19. Reopen Lab 008 for a new target-preserving connected-defect theorem, retaining prior negative results.",
+  "question": "Can discrete convexity of the exact current cost reduce logical failure to one connected unit-current path, yielding a positive path partition bound on the physical Bayes LER without replica continuation?",
+  "hypotheses": [
+    "When (1-p)^2 >= p^2 q(1-q), a logically wrong maximum-weight current implies a simple boundary-to-boundary unit shift from the true current with likelihood ratio at least one. Conformal flow decomposition and discrete convexity supply the proof.",
+    "The fixed-path witness probability depends only on counts of forward/backward steps and can be evaluated as a finite binomial sum. Summing paths bounds physical Bayes LER because current-MAP is an admissible charge-only rule.",
+    "At q=1,p<=1/2, minimizing occupied count then right-boundary current removes the second path orientation. A positive oriented-path partition function bounds LER and reproduces the known directed dilute coefficient.",
+    "A half-Chernoff bound gives a link fugacity gamma=sqrt(p(1-p))*(sqrt(q)+sqrt(1-q)); 3 gamma<1 supplies a sufficient exponential-correctability region, not the exact threshold."
+  ],
+  "validation": {
+    "exact_states": "Every ternary current on canonical square L3; independently compute MAP and Bayes sectors and check failure-witness implication record by record. Endpoint uses binary support and the specified tie rule.",
+    "path_counts": "All simple logical paths on square L3,L4,L5, before weighting; preserve the actual rough-boundary geometry. Abort above 10000000 DFS calls or 60 seconds per graph.",
+    "grid": {"L": [3,4,5], "p": [0.01,0.03,0.05,0.08,0.10,0.30], "q": [0.5,0.75,0.97,1.0]},
+    "controls": "Independent explicit path-current probabilities on short paths, q reflection, positive measure normalization, prior low-p coefficients, and source hashes.",
+    "comparisons": "Existing certified L5 intervals at p=.05,.08 remain frozen. Intersect with the new analytic upper bound; no fitting or new physical-record samples.",
+    "budget": "Bounded deterministic theorem checks and path enumeration; no production decoder sweep, approximate contraction or CFT fit."
+  },
+  "acceptance": "Prove the physical-LER interface and validate it exhaustively before using finite path sums. Report all grid results, useful and trivial bounds alike. A sufficient correctability theorem is kept distinct from a threshold estimate; do not claim a complete moderate-p curve.",
+  "derived_extension": "The universal unit-path affinity combines with the rigorously known honeycomb connective constant mu=sqrt(2+sqrt(2))<2. At q=1, gamma<=1/2 for every p, so physical Bayes LER vanishes exponentially on honeycomb patches whose rough-boundary separation grows linearly. This is an analytic consequence to verify geometrically and on a small trivalent witness graph, not a numerical threshold fit. No equivalent all-p square statement is registered.",
+  "exact_patch_extension": "Before evaluating it, register a bounded exact directed-square L3 solution: count sector coefficients in t=p/(1-p), certify their sign on t in [0,1] using exact rational Bernstein coefficients, and sum the smaller sectors into an exact LER polynomial. If a sign certificate fails, report that obstruction rather than numerically fitting a curve. Current complementation supplies p>1/2 if the first branch is certified.",
+  "exact_patch_adaptation": "The full [0,.5] certificate failed for 17 of 64 record differences. Retain this failure and attempt the fixed smaller interval [0,.2], equivalently t in [0,1/4], with the same exact rational sign test. This is an explicitly adaptive analytic domain check, not a fitted polynomial or a claim that the original interval passed.",
+  "sources": ["https://arxiv.org/abs/quant-ph/0110143", "https://arxiv.org/abs/1610.04012", "https://arxiv.org/abs/1007.0575"],
+  "deliverables": ["wiki/connected-current-defects.md", "scripts/check_connected_current_defects.py", "results/connected-current-defects-2026-09-19.json", "current report/plan/registry and exact reader-facing page verification"]
+}

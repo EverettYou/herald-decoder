@@ -1,0 +1,35 @@
+{
+  "checks": {
+    "E2_returns_completion_not_next_hidden_history": true,
+    "accepted_D2_fixtures_with_distinct_online_actions_and_shared_history": [
+      "early_edge_0",
+      "late_edge_0",
+      "early_then_late_edge_0",
+      "readout_only"
+    ],
+    "accepted_D4_stochastic_histories": 256,
+    "accepted_D4_unconditional_JIT_rows": 512,
+    "hidden_projector_update_has_no_bound_action": true,
+    "history_generation_action_argument_absent": true,
+    "physical_chain_precomputed_from_exogenous_faults": true,
+    "private_final_loss_uses_latest_public_frame": true,
+    "public_first_record_built_before_schedule_evaluation": true,
+    "same_round_action_conditioned_E2_present": true
+  },
+  "claim_boundary": "Structural model-identifiability review only: it can show an absent or present action-to-future path in the implemented phenomenological pilot, not establish the correct physical D4 feedback law, a causal performance effect, or a threshold.",
+  "classification": {
+    "absent_path": "prior_public_action_to_future_hidden_anyon_or_projector_state_or_future_first_record",
+    "identifiable_now": "finite-size causal timing/readout behavior under one precomputed exogenous history and its private score",
+    "implemented_path": "exogenous_faults_to_hidden_chain_and_first_record; causal_schedule_to_same_round_E2_and_latest_frame_score",
+    "interpretation": "The missing path is an implemented-model limit, not a finding that JIT physics has no benefit. Existing J6B finite-pilot facts remain at their registered scope.",
+    "not_identifiable_now": "whether earlier active correction prevents later non-Abelian charge hiding or reveals absorbed anyons"
+  },
+  "contract_sha256": "09b506541e0397e2fa551cfd124540ae0ce5184ef61a2b16f2e91dcb52242472",
+  "cpu_seconds": 0.01997,
+  "new_arm_evaluations": 0,
+  "new_bootstrap_replicates": 0,
+  "new_stochastic_histories": 0,
+  "reason": null,
+  "schema_version": 1,
+  "status": "passed_structural_model_limit_only"
+}

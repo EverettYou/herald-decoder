@@ -33,6 +33,13 @@ class ProjectDocumentViewerTests(unittest.TestCase):
         with self.assertRaises(FileNotFoundError):
             server.project_document_payload("dashboard/server.py")
 
+    def test_integrated_decoder_source_is_readable(self):
+        payload = server.project_document_payload("src/herald_decoder/README.md")
+        self.assertEqual(payload["kind"], "markdown")
+        self.assertIn("make_decoder", payload["content"])
+        source = server.project_document_payload("src/herald_decoder/planar_ml.py")
+        self.assertEqual(source["kind"], "code")
+
 
 if __name__ == "__main__":
     unittest.main()

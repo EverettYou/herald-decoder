@@ -1,0 +1,134 @@
+{
+  "status": "passed",
+  "scope": "Deterministic interface fixtures only. No production history generation, decoder performance comparison, bootstrap, threshold, crossing or fault-tolerance claim.",
+  "provenance": [
+    {
+      "name": "j1_e4_manifest",
+      "path": "labs/lab-005-spacetime-jit-anyonic-decoding/manifests/j1-e4-d4-lyons-brown-translation-manifest-2026-08-29.json",
+      "expected_sha256": "6db58efc743fdf54925414f6d1689ac07ccef36faf62f77fcdeb056ad0860a52",
+      "actual_sha256": "6db58efc743fdf54925414f6d1689ac07ccef36faf62f77fcdeb056ad0860a52",
+      "passed": true
+    },
+    {
+      "name": "r6af_manifest",
+      "path": "labs/lab-004-d4-intrinsic-heralded-decoding/manifests/r6af-two-stage-public-charge-reproduction-manifest-2026-09-01.json",
+      "expected_sha256": "d808a3032f4e48233f09e8886cd0580799598d24f945d27d5f9e1617040b6ffc",
+      "actual_sha256": "d808a3032f4e48233f09e8886cd0580799598d24f945d27d5f9e1617040b6ffc",
+      "passed": true
+    },
+    {
+      "name": "r6af_preflight",
+      "path": "labs/lab-004-d4-intrinsic-heralded-decoding/results/r6af-two-stage-public-charge-preflight-2026-09-01.json",
+      "expected_sha256": "cd8d12cd3d920b6f933a7d78f1512d68904abb911d4cf0d0f8d72ca944367c81",
+      "actual_sha256": "cd8d12cd3d920b6f933a7d78f1512d68904abb911d4cf0d0f8d72ca944367c81",
+      "passed": true,
+      "required_status": "passed",
+      "actual_status": "passed"
+    }
+  ],
+  "gate_groups": [
+    {
+      "gate": "normalization_and_perfect_limits",
+      "nodes": [
+        "labs/lab-005-spacetime-jit-anyonic-decoding/scripts/test_d4_projector_instrument.py::test_e1b_report_distribution_is_normalized_and_has_correct_perfect_limit",
+        "labs/lab-005-spacetime-jit-anyonic-decoding/scripts/test_generic_history.py::test_confusion_matrix_is_normalized_on_registered_domain_grid",
+        "labs/lab-005-spacetime-jit-anyonic-decoding/scripts/test_generic_history.py::test_zero_data_and_syndrome_noise_recover_truth_and_detector_identity"
+      ],
+      "returncode": 0,
+      "passed": true,
+      "stdout": ".....                                                                    [100%]\n5 passed in 0.52s",
+      "stderr": ""
+    },
+    {
+      "gate": "action_binding_and_r6af_boundary",
+      "nodes": [
+        "labs/lab-005-spacetime-jit-anyonic-decoding/scripts/test_d4_projector_instrument.py::test_e2a_rejects_wrong_action_binding_and_noncharge_reports",
+        "labs/lab-004-d4-intrinsic-heralded-decoding/scripts/test_r6af_two_stage_public_charge.py::test_r6af_localizes_public_charge_interface_before_sampling",
+        "labs/lab-004-d4-intrinsic-heralded-decoding/scripts/test_d4_charge.py::test_private_scorer_rejects_record_bound_to_wrong_action_support"
+      ],
+      "returncode": 0,
+      "passed": true,
+      "stdout": "...                                                                      [100%]\n3 passed in 0.51s",
+      "stderr": ""
+    },
+    {
+      "gate": "full_binary_relation_free_public_action",
+      "nodes": [
+        "labs/lab-004-d4-intrinsic-heralded-decoding/scripts/test_d4_charge.py::test_public_charge_action_uses_full_binary_record_only",
+        "labs/lab-004-d4-intrinsic-heralded-decoding/scripts/test_r4_sequential.py::test_second_record_is_binary_and_internal_sentinel_is_not_observable"
+      ],
+      "returncode": 0,
+      "passed": true,
+      "stdout": "..                                                                       [100%]\n2 passed in 0.44s",
+      "stderr": ""
+    },
+    {
+      "gate": "causal_prefix_and_truth_separation",
+      "nodes": [
+        "labs/lab-005-spacetime-jit-anyonic-decoding/scripts/test_generic_history.py::test_causal_prefix_is_categorical_and_excludes_sidecars_and_future",
+        "labs/lab-005-spacetime-jit-anyonic-decoding/scripts/test_d4_temporal_composition.py::test_public_state_has_deterministic_digest_and_no_truth_fields"
+      ],
+      "returncode": 0,
+      "passed": true,
+      "stdout": "..                                                                       [100%]\n2 passed in 0.48s",
+      "stderr": ""
+    },
+    {
+      "gate": "shared_history_four_schedule_binding",
+      "nodes": [
+        "labs/lab-005-spacetime-jit-anyonic-decoding/scripts/test_generic_history.py::test_generated_history_binds_all_four_schedules_to_one_digest",
+        "labs/lab-005-spacetime-jit-anyonic-decoding/scripts/test_e1_schedule_integration.py::test_e2b_completes_both_modes_across_all_schedules_with_matched_design"
+      ],
+      "returncode": 0,
+      "passed": true,
+      "stdout": "..                                                                       [100%]\n2 passed in 0.54s",
+      "stderr": ""
+    },
+    {
+      "gate": "matched_mode_schedule_semantics",
+      "nodes": [
+        "labs/lab-005-spacetime-jit-anyonic-decoding/scripts/test_e1_schedule_integration.py::test_i2_modes_share_trace_timing_scheduler_and_declared_information_budget",
+        "labs/lab-005-spacetime-jit-anyonic-decoding/scripts/test_e1_schedule_integration.py::test_i3_private_truth_change_preserves_every_public_request_and_action"
+      ],
+      "returncode": 0,
+      "passed": true,
+      "stdout": "..                                                                       [100%]\n2 passed in 0.54s",
+      "stderr": ""
+    },
+    {
+      "gate": "ground_state_relative_scoring",
+      "nodes": [
+        "labs/lab-004-d4-intrinsic-heralded-decoding/scripts/test_d4_sampler.py::test_winding_observation_is_sector_agnostic_logical_failure",
+        "labs/lab-005-spacetime-jit-anyonic-decoding/scripts/test_d4_temporal_composition.py::test_private_scorer_requires_completed_frozen_public_transition"
+      ],
+      "returncode": 0,
+      "passed": true,
+      "stdout": "..                                                                       [100%]\n2 passed in 0.49s",
+      "stderr": ""
+    },
+    {
+      "gate": "deterministic_replay",
+      "nodes": [
+        "labs/lab-005-spacetime-jit-anyonic-decoding/scripts/test_e1_schedule_integration.py::test_e2c_private_truth_change_and_replay_preserve_every_public_cell",
+        "labs/lab-004-d4-intrinsic-heralded-decoding/scripts/test_r6af_two_stage_pilot.py::test_zero_and_small_history_gates_are_replayable"
+      ],
+      "returncode": 0,
+      "passed": true,
+      "stdout": "..                                                                       [100%]\n2 passed in 0.71s",
+      "stderr": ""
+    }
+  ],
+  "gate_group_count": 8,
+  "gate_groups_executed": 8,
+  "all_gates_passed": true,
+  "production_histories_generated": 0,
+  "performance_evaluations": 0,
+  "bootstrap_replicates": 0,
+  "stochastic_pilot_authorized": true,
+  "stochastic_pilot_executed": false,
+  "next_action": "Register a tiny matched-history stochastic pilot under the translated D4 model.",
+  "source_sha256": {
+    "labs/lab-005-spacetime-jit-anyonic-decoding/scripts/run_j1_e4b_translation_interface_matrix.py": "2213ee05c809caabd650e47f5ebe73c94f60264e67918690917b77bf5cdd80ad",
+    "labs/lab-005-spacetime-jit-anyonic-decoding/manifests/j1-e4b-d4-translation-interface-matrix-2026-09-19.json": "ef94a1d4cc1820bfe2ef5a59350355ba8d6e9c4c9cbaea83969109977becc179"
+  }
+}

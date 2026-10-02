@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "phase": "J1-E4C",
+  "title": "Remediated D4 charge-source public-contract compatibility audit",
+  "registered_at": "2026-09-19T14:54:55Z",
+  "parent_gate": "manifests/j1-e4b-d4-translation-interface-matrix-2026-09-19.json",
+  "question": "Does the remediated Lab 004 d4_charge.py remain behaviorally compatible with the frozen Lab 005 public adapter contract when only the stale source-hash guard is bypassed in memory?",
+  "scope": "Deterministic public-contract replay only. The old source body is unavailable, so this audit can establish public behavioral compatibility but cannot claim line-level or internal-algorithm equivalence.",
+  "frozen_old_hash": "c7b528d343abedb052e6bea7f5c29f65de2bab5dae96befa339763198bb17e9a",
+  "current_remediated_hash": "2ba3dd13feda42e4441ae0089be2403b5c75b626ae0a0542d4aa9089807472fd",
+  "intervention": "In the pytest process only, require the old and current hashes to match their registered values, then replace exactly _POLICY_SOURCE_HASHES['d4_charge.py'] with the current hash. No source or manifest is mutated by the test plugin.",
+  "compatibility_dimensions": [
+    "public function signatures and exact field sets",
+    "flux correction syndrome fidelity for sizes 2 and 3",
+    "full-binary relation-free charge action",
+    "wrong-action and wrong-support rejection",
+    "action-conditioned second observation binding",
+    "truth and future-field exclusion",
+    "causal temporal ordering and deterministic replay",
+    "matched syndrome-only/heralded execution across all four schedules",
+    "ground-state-relative winding and private scorer boundary",
+    "remediated R6AF signal-only/action-conditioned preflight"
+  ],
+  "acceptance": "All selected legacy Lab 005 public-contract tests and remediated Lab 004 public-interface tests pass with exactly one in-memory hash override; source hashes match; zero production histories or performance evaluations are produced.",
+  "stop_rule": "On any failed test or unexpected hash, classify the public contract as incompatible and remediate the adapter. On pass, authorize only a later disk hash update and rerun of the unchanged J1-E4B matrix.",
+  "compute_budget": "One deterministic pytest compatibility suite; no sampling, bootstrap, performance metric or threshold analysis.",
+  "runner": "scripts/run_j1_e4c_d4_charge_compatibility.py",
+  "plugin": "scripts/j1_e4c_charge_hash_override.py",
+  "result": "results/j1-e4c-d4-charge-semantic-compatibility-2026-09-19.json",
+  "outcome": {
+    "public_contract_compatible": true,
+    "tests_passed": 77,
+    "tests_failed": 0,
+    "internal_algorithm_equivalence_claimed": false,
+    "production_histories_generated": 0,
+    "performance_evaluations": 0,
+    "decision": "Authorize a later update of only the Lab 005 d4_charge.py frozen hash and rerun the unchanged J1-E4B matrix."
+  },
+  "completed_at": "2026-09-19T14:58:00Z"
+}

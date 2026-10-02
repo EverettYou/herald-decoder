@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j6r-three-edge-topology-causal-law-2026-09-25",
+  "status": "registered_before_exact_execution",
+  "question": "On the same ideal D4 state, does a connected three-edge chain create a multi-site first charge record or first-outcome-dependent post-action law, and how does that contrast with a three-edge star branch?",
+  "epistemic_role": "Small exact topology/action discrimination of the physical projector law, not a general kernel, noisy repeated history or schedule result",
+  "source_basis": [
+    "Jing et al. 2025 Appendix A.2/A.4 projector and error/correction union rules, including the distinction between nonbranching and branched structures",
+    "J6L periodic red-edge incidence, J6M compact +1 vacuum orbit, J6Q exact two-edge geometry law and ordered Born expansion"
+  ],
+  "pinned_inputs": {
+    "jing_pdf_sha256": "7a17c3d3a743e3dec4266b64d0321a6af7a5eeacfab67e42b9ec77d30b65a2ac",
+    "j6l_result_sha256": "c3eee28f083b7f3a4dd82a3e4f8a7d3ec29aa19af92bbc3ab4588129d855c4ab",
+    "j6m_result_sha256": "55bfe46d34c9a8356e828351b0d415ed550312ed315c4c1bda7a51508ef1b932",
+    "j6q_result_sha256": "00994c73588fd30156f8b5628ef37d77ace171c5c1a7d5cfce4b68c4bb5bf890",
+    "frozen_integrated_history_sha256": "43d9d0d3e4771ccfc764f590f1843cda1e2a7fbce8dae96057710c413a0adb6e"
+  },
+  "physical_and_observation_contract": {
+    "geometry": "same periodic L=2, 24 blue/green sites and 108 kagome qubits as J6Q",
+    "initial_state": "same J6M compact common +1 star/triangle orbit from |0^108> for every branch",
+    "private_physical_red_x_triplets": {"connected_chain": [0, 4, 3], "three_arm_star": [0, 1, 2]},
+    "topological_selection": "J6L: 0-4 share green:1 and 4-3 share blue:2, with no 0-3 common endpoint; 0,1,2 share only blue:0, with three distinct green endpoints. This is a tree-chain versus three-arm star comparison, not a loop/homology comparison.",
+    "causal_order": "prepare fixed orbit, apply private red-X triplet, jointly measure all flux-free first stars, apply only the specified public red-X correction prefix, then measure all flux-free second stars unless deferred",
+    "actions_per_triplet": {"defer": [], "partial_one": "first listed edge", "partial_two": "first two listed edges", "matched": "all three listed edges"},
+    "public_record": "only full 24-bit flux/charge/vacuum arrays with vacuum=1-charge and charge=0 at fluxful unmeasured sites; private error support/operator state/relations stay outside public arrays",
+    "noise": "ideal projectors, exact rational Born law, no stochastic faults or readout noise"
+  },
+  "competing_outcomes": [
+    "The connected chain has at least two nondeterministic eligible first sites and a nontrivial joint record; the star branch lacks that internal chain structure.",
+    "At least one correction prefix makes the second conditional law differ between positive first records, demonstrating physically consequential first-record awareness.",
+    "No tested branch exhibits first-outcome dependence, or support exceeds the exact bound; this limits rather than proves any general independence claim."
+  ],
+  "matrix": {
+    "physical_triplets": [[0, 4, 3], [0, 1, 2]],
+    "actions_per_triplet": ["defer", "partial_one", "partial_two", "matched"],
+    "first_and_second_outcomes": "enumerate all positive exact joint first assignments, then every positive second assignment conditional on each actual first result, including correlated charge patterns",
+    "independent_unit": "one exact fixed state per specified triplet, not Monte Carlo samples",
+    "maximum_nondeterministic_first_sites": 3,
+    "maximum_nondeterministic_second_sites": 3
+  },
+  "method": "Pin source/geometry/state/prior-law hashes. Verify the declared edge adjacency and flux masks; in every first/residual triangle sector verify that eligible stars equal flux-free sites and commute. Use the J6Q ordered projector sandwich on the same initial state; classify deterministic/nondeterministic sites by exact moments, then enumerate their exact joint first and conditional second Born masses. Stop each branch if more than three random sites are required. Compare conditional second public distributions for every pair of positive first public records at fixed geometry/action, using full public-array support and rational probabilities; do not compare only a marginal or private state. Check the two-edge J6Q result as pinned provenance, not as newly sampled data.",
+  "acceptance": [
+    "All five hashes, intended J6L chain/star incidence, unchanged old caller, and source-local operator conventions pass.",
+    "Eight geometry/action branches pass first/second flux eligibility, actual-sector pairwise commutation, nonnegative normalized rational first and conditional second joint laws, or explicitly censor only branches exceeding the three-random-site bound.",
+    "Each complete public record is exactly three full 24-bit arrays, defer has no E2, correction edge IDs are public and private physical support/operator data never enter a public record.",
+    "Analysis explicitly reports first random-site counts, correlations, whether full conditional second distributions differ across positive first records, and chain-versus-star contrast; absence of an effect is not promoted to a general theorem.",
+    "Zero stochastic histories, schedule arms, bootstrap replicates, decoder comparisons, thresholds or five-round physical promotions."
+  ],
+  "budget": {"max_cpu_seconds": 60, "new_dependencies": 0, "stochastic_histories": 0, "schedule_arm_evaluations": 0, "bootstrap_replicates": 0},
+  "stop_rule": "Fail closed on provenance/incidence drift, noncommuting eligible projectors, negative or unnormalized masses, public/private leakage, old-caller modification or budget overrun; if support exceeds three random sites, retain only diagnostic counts and label the affected branch censored. No adaptive extra geometries or noisy sampling in this contract.",
+  "planned_result": "results/j6r-three-edge-topology-causal-law-2026-09-25.json"
+}

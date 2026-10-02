@@ -1,0 +1,52 @@
+{
+  "id": "lab008-residual-directed-sector-transport-2026-09-22",
+  "status": "complete_rejected_as_uniform_coupling",
+  "registered_at": "2026-09-22",
+  "parent_contract": "thermodynamic-theory-reorientation-2026-09-22.json",
+  "question": "Does a deterministic residual-directed crossing flip define a Q-preserving sector transport with size-uniform inverse multiplicity and action distortion?",
+  "claim_boundary": "This is an exact finite construction and analytic obstruction test. It cannot establish a thermodynamic phase or threshold; a transport is promoted only if every structural gate passes and a size-uniform bound is proved.",
+  "frozen_model": {
+    "geometry": "canonical square",
+    "channel": "q=1 binary currents",
+    "sizes": [3, 4],
+    "states": "all 2^|E| binary currents",
+    "public_record": "all measured integer charges Q",
+    "logical_label": "right-cut activity parity",
+    "physical_p_for_distortion": [0.3, 0.5]
+  },
+  "transport": {
+    "residual_orientation": "stored edge direction when j_e=0 and reversed direction when j_e=1",
+    "domain": "states whose residual digraph has a directed crossing between opposite rough sides",
+    "path_rule": "minimize path length, then prefer left-to-right over right-to-left, then lexicographically minimize edge-index sequence and vertex sequence",
+    "action": "toggle j_e on every selected path edge",
+    "expected_invariants": "binary feasibility, unchanged measured integer Q, and flipped logical parity"
+  },
+  "metrics": [
+    "domain equality with ambiguous charge-fiber membership",
+    "binary, Q-preservation and logical-flip failures",
+    "maximum inverse multiplicity and multiplicity histogram",
+    "fraction with T(T(j))=j",
+    "selected path-length and activity-change ranges",
+    "maximum reciprocal weight distortion at p=.30 and p=.50"
+  ],
+  "analytic_controls": {
+    "all_zero": "The all-zero current selects a shortest all-forward crossing of length L-1, so Delta N=L-1.",
+    "weight_ratio": "w(Tj)/w(j)=(p/(1-p))^DeltaN; for p!=1/2 the all-zero witness already forbids a size-uniform two-sided distortion bound."
+  },
+  "acceptance": {
+    "structural": "zero domain, binary, Q and logical-flip failures",
+    "multiplicity": "a proved L-independent inverse-multiplicity bound, not merely equal values at L3/L4",
+    "action": "a proved L-independent two-sided weight-ratio bound in the declared p region",
+    "promotion": "only if structural, multiplicity and action gates all pass",
+    "rejection": "any failed structural gate or analytic size-growing multiplicity/action obstruction rejects this rule as a uniform coupling"
+  },
+  "compute_budget": {
+    "new_physical_samples": 0,
+    "new_system_sizes": 0,
+    "bootstrap_replicates": 0,
+    "maximum_binary_states": 262400
+  },
+  "stop_rule": "Stop after L3/L4 exhaustive evaluation and the all-zero analytic control. Do not tune the path order or add sizes after seeing the result.",
+  "result": "../results/residual-directed-sector-transport-2026-09-22.json",
+  "outcome": "All structural gates pass, but maximum inverse multiplicity grows from 3 to 8 and the all-zero witness proves exponential reciprocal weight distortion for every fixed p!=1/2. The registered rule is rejected as a size-uniform coupling; midpoint multiplicity remains a distinct open gate."
+}

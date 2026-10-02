@@ -1,0 +1,52 @@
+{
+  "id": "lab008-current-activity-expansion-2026-09-18",
+  "status": "complete",
+  "authorization": "Continue the researcher's priority to explain the LER curve from the positive-current partition function without a decoder sweep.",
+  "question": "How far beyond the leading dilute term can a direct finite-activity current expansion predict square Bayes LER with a rigorous omitted-weight remainder?",
+  "epistemic_role": "Smallest discriminating deterministic pilot: accept raw activity truncation where its certified interval is useful, and reject brute-force extension where the binomial tail remains too broad.",
+  "frozen_model": {
+    "geometry": "Canonical open square from current_oracle.square_graph; full interior integer charge; unmeasured rough endpoints; binary logical-cut activity parity.",
+    "edge_prior": "Independent j in {0,+1,-1} with probabilities 1-p,pq,p(1-q).",
+    "observable": "Unconditional Bayes LER=sum_Q min(Z_0(Q),Z_1(Q)); no decoder output, selected records or conditional denominator.",
+    "truncation": "Include every current configuration with nonzero-edge activity |supp(j)|<=k. Group exact positive weights by public charge Q and logical sector.",
+    "certified_remainder": "If LER_k is the truncated sum, then LER_k<=LER<=min(1/2,LER_k+Pr[Binomial(E,p)>k]). This follows recordwise from nonnegative omitted sector weights.",
+    "independent_unit": "Deterministic exhaustive current configuration; there is no Monte Carlo sampling unit or sampling uncertainty."
+  },
+  "matrix": {
+    "exact_replay": {
+      "L": 3,
+      "k": 12,
+      "cells": [[0.1,0.5],[0.1,1.0],[0.3,0.75],[0.46,0.97]],
+      "reference": "results/replica-boundary-theory-2026-09-18.json"
+    },
+    "pilot": {
+      "L": 5,
+      "k_sequence": [0,1,2,3,4],
+      "p": [0.02,0.05,0.08],
+      "q": [0.5,0.75,0.97,1.0]
+    }
+  },
+  "alternatives_discriminated": [
+    "Raw activity truncation is already quantitatively useful through p=0.05 on L5.",
+    "Raw activity truncation is controlled but too broad by p=0.08, requiring connected-polymer resummation or a transfer calculation rather than a larger blind support enumeration."
+  ],
+  "budget": {
+    "L3_full_states": 6561,
+    "L5_states_through_k4": 617089,
+    "maximum_total_enumerated_configurations": 623650,
+    "no_sampling": true,
+    "no_decoder_runs": true
+  },
+  "acceptance": [
+    "L3 k=12 reproduces all four frozen exact LER references within 1e-12 and omitted mass is below 1e-12.",
+    "For every L5 cell, lower bounds are monotone in k, cumulative mass equals the Binomial(E,p) CDF within 1e-10, and the final interval contains the leading dilute prediction only when mathematically applicable; containment is diagnostic, not required.",
+    "At L5,p=0.02,k=4 the certified width is at most 0.002; at p=0.05 it is at most 0.05. If p=0.08 width exceeds 0.10, stop raw activity extension and require a resummed/transfer alternative.",
+    "Report intervals, not midpoint estimates; make no threshold, phase, CFT or decoder claim."
+  ],
+  "stop_rule": "Stop after the frozen matrix. Do not increase k, size or p in this contract. Promote raw activity truncation only over the certified useful range; otherwise record the rejection and register a different analytic representation later.",
+  "registered_at": "2026-09-18 20:53:16 UTC",
+  "result": "results/current-activity-expansion-2026-09-18.json",
+  "decision": "Promote k=4 raw activity truncation only as a certified L5 low-p interval through p=.05. Reject blind raw-support extension at p=.08, where the absolute interval width is .10849; use a connected-polymer resummation or positive transfer representation next.",
+  "completed_at": "2026-09-18 20:53:16 UTC",
+  "next_action": "Register the smallest connected-polymer or positive-transfer comparison that preserves the exact positive-current observable and reduces the p=.08 remainder without a decoder sweep."
+}

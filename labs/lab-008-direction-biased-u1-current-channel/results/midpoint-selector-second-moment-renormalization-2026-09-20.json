@@ -1,0 +1,485 @@
+{
+  "status": "complete_collision_identity_missing_summable_arm_bound",
+  "physical_parameters": {
+    "geometry": "square",
+    "p": "1/2",
+    "q": "1"
+  },
+  "new_physical_record_samples": 0,
+  "decoder_runs": 0,
+  "exact_controls": [
+    {
+      "L": 3,
+      "edges": 8,
+      "simple_rough_to_rough_paths": 9,
+      "common_physical_majority_domain_states": 126,
+      "order_matrix": {
+        "lexicographic_lower": {
+          "domain_states": 126,
+          "distinct_targets": 86,
+          "maximum_multiplicity": 3,
+          "preimage_multiplicity_second_moment": 220,
+          "paired_identity": {
+            "diagonal_ordered_pairs": 126,
+            "off_diagonal_unordered_collision_pairs": 47,
+            "identity": "sum_y m_y^2 = A_L + 2 N_offdiag",
+            "replayed": true
+          },
+          "kappa_exact": "110/63",
+          "kappa": 1.746031746031746,
+          "direct_risk_lower_bound_exact": "3969/14080",
+          "direct_risk_lower_bound": 0.2818892045454545,
+          "collision_geometry": {
+            "symmetric_difference_edge_count": {
+              "3": 40,
+              "4": 7
+            },
+            "connected_components": {
+              "1": 47
+            },
+            "odd_rough_boundary_endpoints": {
+              "2": 47
+            },
+            "joint_class_count": {
+              "edges=3;components=1;odd_rough=2": 40,
+              "edges=4;components=1;odd_rough=2": 7
+            },
+            "same_path_off_diagonal_pairs": 0,
+            "interior_odd_degree_failures": 0
+          }
+        },
+        "lexicographic_upper": {
+          "domain_states": 126,
+          "distinct_targets": 86,
+          "maximum_multiplicity": 3,
+          "preimage_multiplicity_second_moment": 220,
+          "paired_identity": {
+            "diagonal_ordered_pairs": 126,
+            "off_diagonal_unordered_collision_pairs": 47,
+            "identity": "sum_y m_y^2 = A_L + 2 N_offdiag",
+            "replayed": true
+          },
+          "kappa_exact": "110/63",
+          "kappa": 1.746031746031746,
+          "direct_risk_lower_bound_exact": "3969/14080",
+          "direct_risk_lower_bound": 0.2818892045454545,
+          "collision_geometry": {
+            "symmetric_difference_edge_count": {
+              "3": 40,
+              "4": 7
+            },
+            "connected_components": {
+              "1": 47
+            },
+            "odd_rough_boundary_endpoints": {
+              "2": 47
+            },
+            "joint_class_count": {
+              "edges=3;components=1;odd_rough=2": 40,
+              "edges=4;components=1;odd_rough=2": 7
+            },
+            "same_path_off_diagonal_pairs": 0,
+            "interior_odd_degree_failures": 0
+          }
+        },
+        "shortest_then_lexicographic": {
+          "domain_states": 126,
+          "distinct_targets": 112,
+          "maximum_multiplicity": 2,
+          "preimage_multiplicity_second_moment": 154,
+          "paired_identity": {
+            "diagonal_ordered_pairs": 126,
+            "off_diagonal_unordered_collision_pairs": 14,
+            "identity": "sum_y m_y^2 = A_L + 2 N_offdiag",
+            "replayed": true
+          },
+          "kappa_exact": "11/9",
+          "kappa": 1.2222222222222223,
+          "direct_risk_lower_bound_exact": "567/1408",
+          "direct_risk_lower_bound": 0.40269886363636365,
+          "collision_geometry": {
+            "symmetric_difference_edge_count": {
+              "3": 14
+            },
+            "connected_components": {
+              "1": 14
+            },
+            "odd_rough_boundary_endpoints": {
+              "2": 14
+            },
+            "joint_class_count": {
+              "edges=3;components=1;odd_rough=2": 14
+            },
+            "same_path_off_diagonal_pairs": 0,
+            "interior_odd_degree_failures": 0
+          }
+        },
+        "longest_then_lexicographic": {
+          "domain_states": 126,
+          "distinct_targets": 95,
+          "maximum_multiplicity": 3,
+          "preimage_multiplicity_second_moment": 196,
+          "paired_identity": {
+            "diagonal_ordered_pairs": 126,
+            "off_diagonal_unordered_collision_pairs": 35,
+            "identity": "sum_y m_y^2 = A_L + 2 N_offdiag",
+            "replayed": true
+          },
+          "kappa_exact": "14/9",
+          "kappa": 1.5555555555555556,
+          "direct_risk_lower_bound_exact": "81/256",
+          "direct_risk_lower_bound": 0.31640625,
+          "collision_geometry": {
+            "symmetric_difference_edge_count": {
+              "3": 27,
+              "4": 4,
+              "5": 4
+            },
+            "connected_components": {
+              "1": 27,
+              "2": 8
+            },
+            "odd_rough_boundary_endpoints": {
+              "2": 27,
+              "4": 8
+            },
+            "joint_class_count": {
+              "edges=3;components=1;odd_rough=2": 27,
+              "edges=4;components=2;odd_rough=4": 4,
+              "edges=5;components=2;odd_rough=4": 4
+            },
+            "same_path_off_diagonal_pairs": 0,
+            "interior_odd_degree_failures": 0
+          }
+        }
+      },
+      "finite_family_summary": {
+        "orders": [
+          "lexicographic_lower",
+          "lexicographic_upper",
+          "shortest_then_lexicographic",
+          "longest_then_lexicographic"
+        ],
+        "best_order": "shortest_then_lexicographic",
+        "best_kappa_exact": "11/9",
+        "family_average_kappa_exact": "395/252",
+        "deterministic_averaging_consequence": "At least one registered order has kappa no larger than the finite-family average; this does not imply an all-size bound."
+      }
+    },
+    {
+      "L": 4,
+      "edges": 18,
+      "simple_rough_to_rough_paths": 80,
+      "common_physical_majority_domain_states": 138030,
+      "order_matrix": {
+        "lexicographic_lower": {
+          "domain_states": 138030,
+          "distinct_targets": 58534,
+          "maximum_multiplicity": 16,
+          "preimage_multiplicity_second_moment": 457086,
+          "paired_identity": {
+            "diagonal_ordered_pairs": 138030,
+            "off_diagonal_unordered_collision_pairs": 159528,
+            "identity": "sum_y m_y^2 = A_L + 2 N_offdiag",
+            "replayed": true
+          },
+          "kappa_exact": "76181/23005",
+          "kappa": 3.3114975005433602,
+          "direct_risk_lower_bound_exact": "1587690075/9985196032",
+          "direct_risk_lower_bound": 0.15900439710065373,
+          "collision_geometry": {
+            "symmetric_difference_edge_count": {
+              "3": 62734,
+              "4": 36490,
+              "5": 18064,
+              "6": 21826,
+              "7": 16058,
+              "8": 3140,
+              "9": 1096,
+              "10": 120
+            },
+            "connected_components": {
+              "1": 144064,
+              "2": 15464
+            },
+            "odd_rough_boundary_endpoints": {
+              "0": 24922,
+              "2": 120566,
+              "4": 14040
+            },
+            "joint_class_count": {
+              "edges=10;components=1;odd_rough=2": 84,
+              "edges=10;components=2;odd_rough=4": 36,
+              "edges=3;components=1;odd_rough=2": 62734,
+              "edges=4;components=1;odd_rough=0": 21682,
+              "edges=4;components=1;odd_rough=2": 14808,
+              "edges=5;components=1;odd_rough=2": 18064,
+              "edges=6;components=1;odd_rough=0": 2874,
+              "edges=6;components=1;odd_rough=2": 9680,
+              "edges=6;components=2;odd_rough=4": 9272,
+              "edges=7;components=1;odd_rough=2": 11366,
+              "edges=7;components=2;odd_rough=2": 1200,
+              "edges=7;components=2;odd_rough=4": 3492,
+              "edges=8;components=1;odd_rough=0": 254,
+              "edges=8;components=1;odd_rough=2": 1698,
+              "edges=8;components=2;odd_rough=0": 112,
+              "edges=8;components=2;odd_rough=4": 1076,
+              "edges=9;components=1;odd_rough=2": 820,
+              "edges=9;components=2;odd_rough=2": 112,
+              "edges=9;components=2;odd_rough=4": 164
+            },
+            "same_path_off_diagonal_pairs": 0,
+            "interior_odd_degree_failures": 0
+          }
+        },
+        "lexicographic_upper": {
+          "domain_states": 138030,
+          "distinct_targets": 58496,
+          "maximum_multiplicity": 16,
+          "preimage_multiplicity_second_moment": 457026,
+          "paired_identity": {
+            "diagonal_ordered_pairs": 138030,
+            "off_diagonal_unordered_collision_pairs": 159498,
+            "identity": "sum_y m_y^2 = A_L + 2 N_offdiag",
+            "replayed": true
+          },
+          "kappa_exact": "76171/23005",
+          "kappa": 3.31106281243208,
+          "direct_risk_lower_bound_exact": "1587690075/9983885312",
+          "direct_risk_lower_bound": 0.15902527176385897,
+          "collision_geometry": {
+            "symmetric_difference_edge_count": {
+              "3": 61514,
+              "4": 35812,
+              "5": 18212,
+              "6": 22662,
+              "7": 16556,
+              "8": 3242,
+              "9": 1296,
+              "10": 204
+            },
+            "connected_components": {
+              "1": 143994,
+              "2": 15504
+            },
+            "odd_rough_boundary_endpoints": {
+              "0": 24460,
+              "2": 120998,
+              "4": 14040
+            },
+            "joint_class_count": {
+              "edges=10;components=1;odd_rough=2": 144,
+              "edges=10;components=2;odd_rough=4": 60,
+              "edges=3;components=1;odd_rough=2": 61514,
+              "edges=4;components=1;odd_rough=0": 21246,
+              "edges=4;components=1;odd_rough=2": 14566,
+              "edges=5;components=1;odd_rough=2": 18212,
+              "edges=6;components=1;odd_rough=0": 2836,
+              "edges=6;components=1;odd_rough=2": 10626,
+              "edges=6;components=2;odd_rough=4": 9200,
+              "edges=7;components=1;odd_rough=2": 11872,
+              "edges=7;components=2;odd_rough=2": 1216,
+              "edges=7;components=2;odd_rough=4": 3468,
+              "edges=8;components=1;odd_rough=0": 254,
+              "edges=8;components=1;odd_rough=2": 1788,
+              "edges=8;components=2;odd_rough=0": 124,
+              "edges=8;components=2;odd_rough=4": 1076,
+              "edges=9;components=1;odd_rough=2": 936,
+              "edges=9;components=2;odd_rough=2": 124,
+              "edges=9;components=2;odd_rough=4": 236
+            },
+            "same_path_off_diagonal_pairs": 0,
+            "interior_odd_degree_failures": 0
+          }
+        },
+        "shortest_then_lexicographic": {
+          "domain_states": 138030,
+          "distinct_targets": 89600,
+          "maximum_multiplicity": 8,
+          "preimage_multiplicity_second_moment": 267718,
+          "paired_identity": {
+            "diagonal_ordered_pairs": 138030,
+            "off_diagonal_unordered_collision_pairs": 64844,
+            "identity": "sum_y m_y^2 = A_L + 2 N_offdiag",
+            "replayed": true
+          },
+          "kappa_exact": "3113/1605",
+          "kappa": 1.939563862928349,
+          "direct_risk_lower_bound_exact": "110769075/408027136",
+          "direct_risk_lower_bound": 0.27147477514828816,
+          "collision_geometry": {
+            "symmetric_difference_edge_count": {
+              "3": 44254,
+              "4": 9366,
+              "5": 5706,
+              "6": 4408,
+              "7": 936,
+              "8": 152,
+              "9": 20,
+              "10": 2
+            },
+            "connected_components": {
+              "1": 59326,
+              "2": 5518
+            },
+            "odd_rough_boundary_endpoints": {
+              "0": 4170,
+              "2": 55156,
+              "4": 5518
+            },
+            "joint_class_count": {
+              "edges=10;components=2;odd_rough=4": 2,
+              "edges=3;components=1;odd_rough=2": 44254,
+              "edges=4;components=1;odd_rough=0": 4170,
+              "edges=4;components=1;odd_rough=2": 5196,
+              "edges=5;components=1;odd_rough=2": 5706,
+              "edges=6;components=2;odd_rough=4": 4408,
+              "edges=7;components=2;odd_rough=4": 936,
+              "edges=8;components=2;odd_rough=4": 152,
+              "edges=9;components=2;odd_rough=4": 20
+            },
+            "same_path_off_diagonal_pairs": 0,
+            "interior_odd_degree_failures": 0
+          }
+        },
+        "longest_then_lexicographic": {
+          "domain_states": 138030,
+          "distinct_targets": 67112,
+          "maximum_multiplicity": 11,
+          "preimage_multiplicity_second_moment": 384082,
+          "paired_identity": {
+            "diagonal_ordered_pairs": 138030,
+            "off_diagonal_unordered_collision_pairs": 123026,
+            "identity": "sum_y m_y^2 = A_L + 2 N_offdiag",
+            "replayed": true
+          },
+          "kappa_exact": "192041/69015",
+          "kappa": 2.7825979859450842,
+          "direct_risk_lower_bound_exact": "4763070225/25171197952",
+          "direct_risk_lower_bound": 0.18922699801904128,
+          "collision_geometry": {
+            "symmetric_difference_edge_count": {
+              "3": 55738,
+              "4": 23196,
+              "5": 10040,
+              "6": 13086,
+              "7": 12990,
+              "8": 5636,
+              "9": 1280,
+              "10": 840,
+              "11": 174,
+              "12": 46
+            },
+            "connected_components": {
+              "1": 95632,
+              "2": 27136,
+              "3": 258
+            },
+            "odd_rough_boundary_endpoints": {
+              "0": 9740,
+              "2": 88362,
+              "4": 24924
+            },
+            "joint_class_count": {
+              "edges=10;components=1;odd_rough=4": 186,
+              "edges=10;components=2;odd_rough=4": 396,
+              "edges=10;components=3;odd_rough=4": 258,
+              "edges=11;components=1;odd_rough=2": 32,
+              "edges=11;components=2;odd_rough=4": 142,
+              "edges=12;components=1;odd_rough=4": 46,
+              "edges=3;components=1;odd_rough=2": 55738,
+              "edges=4;components=1;odd_rough=0": 9396,
+              "edges=4;components=1;odd_rough=2": 13800,
+              "edges=5;components=1;odd_rough=2": 10040,
+              "edges=6;components=1;odd_rough=0": 158,
+              "edges=6;components=1;odd_rough=2": 1550,
+              "edges=6;components=2;odd_rough=4": 11378,
+              "edges=7;components=1;odd_rough=2": 3622,
+              "edges=7;components=2;odd_rough=2": 2778,
+              "edges=7;components=2;odd_rough=4": 6590,
+              "edges=8;components=1;odd_rough=2": 554,
+              "edges=8;components=1;odd_rough=4": 342,
+              "edges=8;components=2;odd_rough=0": 186,
+              "edges=8;components=2;odd_rough=4": 4554,
+              "edges=9;components=1;odd_rough=2": 36,
+              "edges=9;components=1;odd_rough=4": 132,
+              "edges=9;components=2;odd_rough=2": 212,
+              "edges=9;components=2;odd_rough=4": 900
+            },
+            "same_path_off_diagonal_pairs": 0,
+            "interior_odd_degree_failures": 0
+          }
+        }
+      },
+      "finite_family_summary": {
+        "orders": [
+          "lexicographic_lower",
+          "lexicographic_upper",
+          "shortest_then_lexicographic",
+          "longest_then_lexicographic"
+        ],
+        "best_order": "shortest_then_lexicographic",
+        "best_kappa_exact": "3113/1605",
+        "family_average_kappa_exact": "195739/69015",
+        "deterministic_averaging_consequence": "At least one registered order has kappa no larger than the finite-family average; this does not imply an all-size bound."
+      }
+    }
+  ],
+  "branch_matrix": {
+    "paired_collision_geometry": {
+      "outcome": "exact_identity_and_geometry_classification",
+      "established": "The preimage second moment exactly equals the diagonal domain mass plus twice the number of unordered distinct majority-state pairs mapped to one target. Every off-diagonal pair is generated by the symmetric difference of two distinct selected rough-to-rough paths and has even interior degree.",
+      "boundary": "The observed boundary-endpoint and component classes are finite exact controls; their L3/L4 frequencies are not arm exponents or a size trend."
+    },
+    "finite_path_order_matrix": {
+      "outcome": "bounded_order_choice_changes_constants_not_the_missing_theorem",
+      "established": "Four deterministic orders use the identical physical majority domains. Their exact kappa values identify the best registered finite control before any order is preferred.",
+      "boundary": "Finite averaging guarantees one order no worse than the family mean but supplies no uniform-in-L selector construction."
+    },
+    "arm_event_theorem_audit": {
+      "outcome": "standard_arm_results_do_not_bound_full_record_selector_collisions",
+      "established": "Kesten-type RSW/quasi-multiplicativity controls prescribed open/closed arms across annuli. Exact polychromatic arm exponents are established for triangular-site percolation, not generally for square-bond percolation.",
+      "hypothesis_gap": "Selector collisions are conditioned on the complete integer charge record and compare two state-dependent lowest/shortest/longest crossings. Their path symmetric difference can have zero, two, or four rough endpoints and multiple components; it is not a single prescribed monotone or alternating-arm event. A domination from each collision class to a summable physical arm event remains unproved."
+    },
+    "compatible_divergence": {
+      "outcome": "no_positive_mass_square_divergence_family_constructed",
+      "established": "Finite controls contain multiplicities up to 16 and multiple collision topologies.",
+      "boundary": "Neither finite multiplicity nor the abstract star model constructs a square-lattice event on which kappa_L diverges with positive physical mass."
+    }
+  },
+  "primary_source_applicability": [
+    {
+      "source": "Kesten, Scaling relations for 2D-percolation (1987)",
+      "url": "https://doi.org/10.1007/BF01205674",
+      "supported": "RSW-based arm estimates and quasi-multiplicative comparison methods for planar percolation events.",
+      "missing": "a full-charge-conditioned domination of selector-collision pairs by one standard arm event with a summable bound."
+    },
+    {
+      "source": "Smirnov and Werner, Critical exponents for two-dimensional percolation (2001)",
+      "url": "https://doi.org/10.4310/MRL.2001.v8.n6.a4",
+      "supported": "exact critical arm exponents for site percolation on the triangular lattice.",
+      "missing": "the exact-exponent result is not a square-bond theorem and the selector-collision classes are not identified with its alternating-arm events."
+    },
+    {
+      "source": "Schramm and Steif, Quantitative noise sensitivity and exceptional times for percolation (2010)",
+      "url": "https://doi.org/10.4007/annals.2010.171.619",
+      "supported": "algorithmic revealment controls Fourier levels of crossing indicators.",
+      "missing": "a revealment/Fourier inequality for the full-charge-conditioned selector multiplicity second moment."
+    }
+  ],
+  "precise_missing_lemma": "Construct one full-record charge-preserving selector for which the expected preimage multiplicity seen from a uniformly chosen physical majority state, kappa_L, is bounded independently of L; equivalently, dominate every off-diagonal selector-collision class by a family of summable physical events without discarding the charge conditioning.",
+  "decision": {
+    "outcome": "close_standard_arm_shortcut_and_retain_kappa_as_open_target",
+    "established": "The exact collision identity and bounded order matrix isolate what must be controlled. Existing planar arm and revealment theorems do not directly apply to the full-record, state-dependent collision classes.",
+    "not_established": "No uniform kappa_L bound, divergence mechanism on positive physical mass, midpoint noncorrectability, or square decoding threshold is proved.",
+    "threshold_claim": "No square midpoint noncorrectability or decoding-threshold claim is promoted."
+  },
+  "source_sha256": {
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/audit_midpoint_selector_second_moment.py": "05a3eb6fcd3cba58eaad10c8a6c433b5de1c8140009512d8ad9cde569f1e6d66",
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/audit_midpoint_direct_risk_renormalization.py": "a7baf9bd552b6d67d0054e68aeebe7dfaceae624547ff762628eaf8ddda978a7",
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/check_midpoint_switching_pairing.py": "4aec56ec9ef90d6d6d193f896d6f6c5be8bf1a6719bbe085df4acb9c81ac2e18",
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/current_oracle.py": "241916aa389193b7b62a3ea2de7f4267086dfcca60760ee514e27100f40fa6ee",
+    "labs/lab-008-direction-biased-u1-current-channel/manifests/midpoint-selector-second-moment-renormalization-2026-09-20.json": "48f39aa8b3945466eb1d4961b1ee73948eb825c88d686daf2a8f85a67d824889",
+    "labs/lab-008-direction-biased-u1-current-channel/results/midpoint-direct-risk-renormalization-2026-09-20.json": "1aa507c8dcdc36d8080a7799b94c8823418cb4c53d0e62055cf071e30a7d7026"
+  }
+}

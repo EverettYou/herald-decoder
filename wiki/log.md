@@ -1,5 +1,15 @@
 # Wiki log
 
+## 2026-09-19 — Closed the first J6 production pilot as non-informative
+
+Lab 005 retained the frozen 272 histories and all 2,176 unconditional arm
+rows. Zero control passed, but clean-herald JIT invoked on only seven histories
+per mode versus the registered minimum eight, so the stop rule censored the
+pilot before bootstrap. No schedule or herald-mode risk interpretation is
+released. Most stochastic rows instead expose an interface prerequisite: the
+static periodic inner decoder rejects odd instantaneous noisy syndromes, so a
+replacement first needs a separately registered causal time-boundary handoff.
+
 ## 2026-08-29 — Registered the causal D4 spatial-policy handoff
 
 Lab 005 now has a versioned two-call interface for the validated Lab 004 public D4 policy. The schedule supplies only a committed causal prefix; the spatial policy returns a flux action; a physical adapter may later supply the post-action charge record; and simulation truth stays in a separate scorer. Registration identified an important boundary: Lab 004's existing `decode_physical_error` entry point consumes hidden truth for simulation and therefore cannot be used directly by an online JIT decoder. The next bounded gate is an observation-only adapter and anti-leakage fixture, not a noisy-measurement or fault-tolerance claim.

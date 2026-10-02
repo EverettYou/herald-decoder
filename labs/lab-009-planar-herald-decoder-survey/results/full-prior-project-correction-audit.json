@@ -1,0 +1,114 @@
+{
+  "status": "completed_bounded_scientific_correction",
+  "date": "2026-10-01",
+  "changes": [
+    "No interior-q complement folding; full p,q domain [0,1]",
+    "B18 withdrawn in docs, manifests, current result index and rendering/analysis guards",
+    "B19 measured coverage without imposed boundary or mirrored values",
+    "Full-prior decoder parameters, literal high-p MAP weights, deterministic endpoint and near-one support",
+    "Lab009 plan, manifest, theory, workbench, common-record high-p data, report and figures updated"
+  ],
+  "verification": {
+    "focused_regressions": {
+      "tests": 9,
+      "status": "passed"
+    },
+    "withdrawal_regressions": {
+      "tests": 2,
+      "status": "passed"
+    },
+    "independent_L2_errors": 2048,
+    "herald_records_per_error": 64,
+    "checked_L2_parameter_pairs": 13,
+    "larger_checked_cells": 27,
+    "new_high_p_trials": 1600,
+    "new_decoder_evaluations": 8000,
+    "invalid_corrections": 0,
+    "runtime_exceptions": 0,
+    "global_and_local_wiki_lint": "passed",
+    "actual_browser_pages": {
+      "status": "passed",
+      "checks": [
+        {
+          "lab": "lab-003-herald-threshold-phase-diagram",
+          "url": "http://127.0.0.1:8010/lab?id=lab-003-herald-threshold-phase-diagram",
+          "image_loaded": true,
+          "domain_visible": true,
+          "withdrawn_image_absent": true
+        },
+        {
+          "lab": "lab-009-planar-herald-decoder-survey",
+          "url": "http://127.0.0.1:8010/lab?id=lab-009-planar-herald-decoder-survey",
+          "image_loaded": true,
+          "domain_visible": true,
+          "withdrawn_image_absent": true
+        }
+      ],
+      "wiki_visible": true,
+      "browser_errors": []
+    },
+    "source_artifact_report_registry_render_chain": "passed"
+  },
+  "broader_historical_test_limit": {
+    "tests_run": 142,
+    "errors": 46,
+    "failure_types": [
+      "missing/relocated historical manifest or selection fixtures",
+      "torch unavailable in current runtime"
+    ],
+    "missing_fixture_names": [
+      "phase-b1-honeycomb-l5-l13-sentinels-manifest-2026-08-28.json",
+      "phase-b10-honeycomb-measured-endpoints-manifest-2026-08-28.json",
+      "phase-b11-honeycomb-three-layer-reanalysis-manifest-2026-08-28.json",
+      "phase-b12-honeycomb-three-layer-map-manifest-2026-08-28.json",
+      "phase-b13-honeycomb-continuous-log-odds-map-manifest-2026-08-28.json",
+      "phase-b14-honeycomb-two-branch-acquisition-manifest-2026-08-28.json",
+      "phase-b16-strong-smooth-boundary-manifest-2026-08-28.json",
+      "phase-b17-resolution-aware-guide-manifest-2026-08-28.json",
+      "phase-b2-honeycomb-gray-frontier-analysis-2026-08-28.json",
+      "phase-b2-honeycomb-gray-frontier-manifest-2026-08-28.json",
+      "phase-b3-honeycomb-frontier-reuse-manifest-2026-08-28.json",
+      "phase-b3-honeycomb-frontier-reuse-selection-2026-08-28.json",
+      "phase-b4-honeycomb-new-frontier-manifest-2026-08-28.json",
+      "phase-b5-honeycomb-persistent-frontier-manifest-2026-08-28.json",
+      "phase-b5-honeycomb-persistent-frontier-selection-2026-08-28.json",
+      "phase-b6-honeycomb-four-cell-frontier-manifest-2026-08-28.json",
+      "phase-b7-honeycomb-endpoint-followup-manifest-2026-08-28.json",
+      "phase-b8-honeycomb-raise-minimum-manifest-2026-08-28.json",
+      "phase-b9-honeycomb-measured-endpoints-manifest-2026-08-28.json",
+      "phase-s1-honeycomb-slope-flow-gray-frontier-manifest-2026-08-28.json",
+      "phase4-residual80-honeycomb-highq-adaptive-p-confirmation-manifest-2026-08-28.json",
+      "phase4-residual80-honeycomb-highq-l11-l13-scaling-manifest-2026-08-28.json"
+    ],
+    "interpretation": "Broader archived suite is not claimed passing; these path/dependency failures are separate from corrected mathematical and active presentation gates."
+  },
+  "not_claimed": [
+    "Full thermodynamic 2D phase diagram",
+    "All-size floating-point certification",
+    "Completion of all remaining Lab009 survey gates"
+  ],
+  "preserved_valid_special_cases": [
+    "q=0 syndrome complement relabeling",
+    "q=1 exact count complement relabeling for degree\u22643",
+    "Lab008 directed U1 q=1 charge relabeling",
+    "Uniform prior at p=0.5 remains special"
+  ],
+  "sha256": {
+    "wiki/methods/binary-herald-full-prior-domain.md": "0e769a257e5a97ff967f6f6d07ff8c53a4c5270d8a99554c3d063168305bb3a9",
+    "labs/lab-003-herald-threshold-phase-diagram/REPORT.md": "7e14a3dd583849003e31bb43fa475be082ba7784e00d91f5230265b3a7266941",
+    "labs/lab-003-herald-threshold-phase-diagram/results/current-evidence.json": "bbf19972ddee49ad6091a29b2ab6f82660ee3c782e346c3eba82fb4675da8095",
+    "labs/lab-003-herald-threshold-phase-diagram/figures/phase-b19-full-prior-evidence-coverage-2026-10-01.png": "bca5c2357d88dbeb37db3eb477bd546f46dabbad30068a695b80dfac29531a78",
+    "labs/lab-009-planar-herald-decoder-survey/PLAN.md": "0977d2507db2a2d5d27c07aef447a645b20a4f0c315ed16a26b6c2f0566e4b54",
+    "labs/lab-009-planar-herald-decoder-survey/REPORT.md": "744837833052fea614fa3ad56be60b4c3aca66c900506c8d583df38b1539ad85",
+    "labs/lab-009-planar-herald-decoder-survey/results/full-prior-update.json": "29c46b59ffa901638b8a31433705f47c519c393b41f3d314a3c7275e926c39bb",
+    "labs/lab-009-planar-herald-decoder-survey/results/full-prior-symmetry-audit.json": "3bcc3cf9092b07768e313877ac69375a84341b2fbce7ccbf3c1547e906e5d6ed",
+    "labs/lab-009-planar-herald-decoder-survey/results/validation.json": "b1f98f52b183c98d0b20bf5aeab31f1f466d1e3c67553101e2e4e55a54be7c1f",
+    "labs/lab-009-planar-herald-decoder-survey/results/benchmark.json": "f446a379f32887451383bd66544f2721b84c34f71d885b05c3435a2b3851de44",
+    "labs/lab-009-planar-herald-decoder-survey/data/fresh-matched-vectors.npz": "bc88a4fd17c41da219453ac4c3f027233d368f871fad3f9f2b7ab3ffa93c7284",
+    "src/herald_decoder/sector.py": "127ad99b776fe6f5212b70ad7cb3c28f4ee35b342e51f9bfe272309ffcae0ad5",
+    "src/herald_decoder/configuration_map.py": "08fbe8eaab04c78da143ceb10a4b4502819479121717922bcad69b2a743a0e19",
+    "src/herald_decoder/planar_ml.py": "af13876b73d160c4382862badd7803a38969746a47037f583de4cc80fff75def",
+    "src/herald_decoder/mps_ml.py": "270e65ce01eb967654480fce974f41f8248bba5bbf31ad0cb196e3b71df09462"
+  },
+  "sha256_scope": "Historical checkpoint hashes; later survey synthesis supersedes documents."
+}

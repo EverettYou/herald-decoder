@@ -1,0 +1,36 @@
+{
+  "id": "lab008-positive-defect-transfer-2026-09-18",
+  "status": "complete_rejected",
+  "authorization": "Continue the partition-function explanation with the smallest in-scope comparison after raw activity truncation becomes too broad at L5,p=.08.",
+  "question": "Can an exact positive transfer sum over the two-current defect gas tighten the certified LER upper bound beyond the global activity tail?",
+  "design_role": "Prerequisite discriminating test for the positive-transfer branch. It runs before a more elaborate connected-polymer resummation because failure of this strongest simple positive relaxation would reject that relaxation without tuning a truncation order.",
+  "frozen_model": {
+    "physical_channel": "Same canonical open square, ternary independent current prior, full interior integer charge, unmeasured rough endpoints and binary logical parity as the completed activity contract.",
+    "pair_field": "For two currents j0,j1, delta=j0-j1. Enforce D delta=0 at every measured vertex and odd relative logical parity. Each pair has positive weight sqrt(P(j0)P(j1)).",
+    "upper_bound": "For every Q, min(Z0,Z1)<=sqrt(Z0 Z1)<=sum_{j0 in sector0,j1 in sector1,same Q} sqrt(P(j0)P(j1)). Summing Q gives the positive defect-transfer upper bound U_pair.",
+    "baseline": "Completed k=4 activity lower/upper interval from results/current-activity-expansion-2026-09-18.json.",
+    "uncertainty": "None: deterministic transfer contraction and exact algebraic bounds."
+  },
+  "matrix": {
+    "exact_gate": {"L": 3, "cells": [[0.1,0.5],[0.1,1.0],[0.3,0.75],[0.46,0.97]]},
+    "discriminating_cells": {"L": 5, "p": [0.05,0.08], "q": [0.5,0.75,0.97,1.0]}
+  },
+  "acceptance": [
+    "All transfer weights are nonnegative; every measured delta charge is exactly zero; frontier closes; and exact L3 LER never exceeds min(1/2,U_pair) beyond 1e-12.",
+    "Compare the registered activity upper bound with min(activity upper,U_pair) on every L5 cell. Promote the pair transfer only where it strictly reduces width by at least 10%.",
+    "If it improves no p=.08 cell, reject this positive pair relaxation and do not enlarge size or tune a polymer cutoff in this contract.",
+    "No threshold, phase, CFT, decoder or midpoint-estimate claim."
+  ],
+  "budget": {
+    "maximum_frontier_states_per_step": 2000000,
+    "maximum_cells": 12,
+    "no_sampling": true,
+    "no_decoder_runs": true
+  },
+  "stop_rule": "Stop after the frozen L3 gate and L5 p=.05,.08 matrix. Failure is a branch rejection and directs the next contract toward a sharper sector/Hellinger contraction or a controlled connected-cluster expansion.",
+  "registered_at": "2026-09-18 21:58:47 UTC",
+  "result": "results/positive-defect-transfer-2026-09-18.json",
+  "decision": "Reject the configuration-level positive pair relaxation. It improves none of the eight L5 cells; at p=.08 its capped upper bounds are .5,.5,.5,.26273 versus activity bounds .13836,.12506,.11404,.10877.",
+  "completed_at": "2026-09-18 21:58:47 UTC",
+  "next_action": "Register a sharper sector-level Hellinger/TV contraction or a controlled connected-cluster expansion; do not enlarge the rejected pair-transfer matrix."
+}

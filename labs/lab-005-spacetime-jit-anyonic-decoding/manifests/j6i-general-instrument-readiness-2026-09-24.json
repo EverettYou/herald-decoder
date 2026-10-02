@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j6i-general-instrument-readiness-2026-09-24",
+  "status": "registered_before_deterministic_audit",
+  "epistemic_role": "Prerequisite source/operator and public-adapter coverage audit; not a general D4 instrument or performance experiment",
+  "question": "Which of the two independent prerequisites for general action-conditioned post-flux sampling are already established: a lattice-wide operator-state update, and an adapter that can condition on the first public record?",
+  "source": "Jing et al., Appendix A.1 Eq. (A2)-(A4), A.2 Eq. (A6), A.4 Eq. (A13)-(A14), archived PDF printed pages 10, 11, 13; https://arxiv.org/html/2507.23765",
+  "pinned_inputs": {
+    "paper_pdf_sha256": "7a17c3d3a743e3dec4266b64d0321a6af7a5eeacfab67e42b9ec77d30b65a2ac",
+    "j6h_result_sha256": "df7022ef65309ee166c600561ae7c0f7b601dbd71bf5a65b762b84202768a865",
+    "d4_pipeline_sha256": "5f5b1bcb2fd71ffc3bbbfe6ef21ac98f63eb48d15c036db76714587c82ed03e0",
+    "integrated_history_sha256": "43d9d0d3e4771ccfc764f590f1843cda1e2a7fbce8dae96057710c413a0adb6e"
+  },
+  "frozen_source_reading": "A2 specifies kagome star/triangle operators graphically; A4 supplies commuting projector terms. A6 and A13/A14 determine the illustrated ideal short-path four-branch local law. The diagrams are a starting operator specification, not an already implemented lattice-wide density/tableau update.",
+  "matrix": [
+    "source local matched-action case: check J6H normalization and conditional rows, no extrapolation",
+    "source general-geometry/alternative-action case: inventory whether a validated executable operator-state update exists",
+    "Lab 004 postflux sampler: inspect whether first public observation enters the sampling signature and call",
+    "Lab 005 public adapter: inspect whether first public observation enters the second-record call while action and exogenous key remain bound"
+  ],
+  "acceptance": [
+    "All four pinned hashes match and J6H's four local joint rows still normalize.",
+    "Both operator/model and adapter branches are classified separately; absence of first-record input is not called a physical counterexample.",
+    "No general D4 conditional law, production history modification, schedule-risk estimate or threshold claim is promoted from this audit."
+  ],
+  "budget": {"stochastic_histories": 0, "schedule_arm_evaluations": 0, "bootstrap_replicates": 0, "max_cpu_seconds": 15, "new_dependencies": 0},
+  "stop_rule": "Fail closed on hash drift or local normalization failure. If either prerequisite is unvalidated, retain physical schedule-performance freeze and preregister the smallest operator-state plus adapter fixture next.",
+  "planned_result": "results/j6i-general-instrument-readiness-2026-09-24.json"
+}

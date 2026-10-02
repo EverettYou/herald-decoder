@@ -1,0 +1,21 @@
+{
+  "id": "lab008-h12-global-chernoff-audit-2026-09-22",
+  "status": "closed_inconclusive_for_h12",
+  "source_manifest": "../manifests/h12-global-chernoff-audit-2026-09-22.json",
+  "sampling": {"new_sizes": 0, "stochastic_samples": 0, "bootstrap_replicates": 0, "deterministic_cells": 12},
+  "proof": {
+    "weights": "a=1-p, b=pq, c=p(1-q); u_s=a^(1-s)b^s+c^(1-s)a^s, v_s=a^(1-s)c^s+b^(1-s)a^s=u_(1-s)",
+    "log_convexity": "u_s*u_(1-s)>=u_(1/2)^2=gamma^2 by log-convexity of a sum of exponentials, including q=1 by a one-sided limit",
+    "spectral_lower_bound": "T_ij=w_j unless j reverses i, w=(u,u,v,v). T is similar to symmetric S_ij=sqrt(w_i*w_j) on allowed transitions. The Rayleigh quotient of sqrt(w) is 2*(u^2+u*v+v^2)/(u+v)=2*((u+v)-u*v/(u+v))>=3*sqrt(u*v).",
+    "sharpness": "At s=1/2, u=v=gamma=sqrt(p*(1-p))*(sqrt(q)+sqrt(1-q)); every T row sums to 3*gamma, so inf_(0<s<1) rho(T)=3*gamma.",
+    "p_0_30_conclusion": "For q in [1/2,1], 3*gamma>=3*sqrt(0.3*0.7)=1.37477270848675>1. No fixed global Chernoff exponent makes this nonbacktracking path sum summable at p=.30."
+  },
+  "registered_grid": [
+    {"q": 0.5, "rho_s_0_25": 2.090187388045, "rho_s_0_5": 1.944222209522, "rho_s_0_75": 2.090187388045},
+    {"q": 0.75, "rho_s_0_25": 2.037139641635, "rho_s_0_5": 1.877974444222, "rho_s_0_75": 2.037139641635},
+    {"q": 0.97, "rho_s_0_25": 1.780440834003, "rho_s_0_5": 1.592111709563, "rho_s_0_75": 1.780440834003},
+    {"q": 1.0, "rho_s_0_25": 1.435408496011, "rho_s_0_5": 1.374772708487, "rho_s_0_75": 1.435408496011}
+  ],
+  "numerical_check": "Positive-matrix power iteration to 1e-15 relative vector tolerance; independently checked all 12 cells by numpy.linalg.eigvals, with maximum absolute discrepancy 4.42e-13 against the rounded stored values. The s=1/2 row-sum bound and s<->1-s symmetry agree.",
+  "scope": "Only the pathwise Markov/Chernoff bound with one global exponent and unrestricted nonbacktracking path enumeration is ruled out. This does not bound true H12 at p=.30, exclude self-avoiding or path-dependent estimates, or locate a phase boundary."
+}

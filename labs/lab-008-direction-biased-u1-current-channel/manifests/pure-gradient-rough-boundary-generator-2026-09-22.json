@@ -1,0 +1,25 @@
+{
+  "id": "lab008-pure-gradient-rough-boundary-generator-2026-09-22",
+  "status": "complete_exact_identity_and_pointwise_counterfamily",
+  "registered_at": "2026-09-22",
+  "parent_contract": "thermodynamic-theory-reorientation-2026-09-22.json",
+  "question": "At fixed physical jump probability p and nonzero gradient field h, what exactly remains of the field in charge-conditioned logical sector ratios, and can the rough-boundary fugacity be bounded pointwise uniformly in L?",
+  "frozen_model": {
+    "geometry": "Canonical square_graph(L), L>=3, horizontal left-to-right and retained vertical bottom-to-top edges; left and right x=0,L-1 vertices are rough and unmeasured.",
+    "current": "Independent j_e in {0,+1,-1}; w_h(0)=1-p and w_h(±1)=p exp(±h)/(2 cosh h), with 0<p<1 fixed.",
+    "observation": "Integer signed Q_v=sum_in j-sum_out j at every interior detector; full rough charge vector is hidden.",
+    "sector": "Binary occupancy parity across the canonical right logical cut, unchanged by current sign.",
+    "potential": "psi(x,y)=x+y, so each stored edge has psi(head)-psi(tail)=1."
+  },
+  "registered_branches": {
+    "exact_reduction": "Reparameterize the activity as p_eff=p/[p+(1-p)cosh h] and c=[p+(1-p)cosh h]/cosh h; derive sector sums as c^E exp[h M(Q)] times a zero-field p_eff rough-charge generating function.",
+    "pointwise_uniformity_test": "Compare the admissible all-zero current and a single straight left-to-right row current, both with interior Q=0, to test whether rough fugacity ratios can be L-uniform. This is a configuration-level counterfamily, not a posterior-sector theorem."
+  },
+  "verification": "Exhaustively replay only existing square L=3 controls at p=.30, h=.10 and .50: direct product weights, gradient decomposition, activity reparameterization, and every charge-sector partition sum agree below 1e-12.",
+  "acceptance": "State and prove the exact finite-volume identity; verify the registered L3 cells; establish or refute a size-independent pointwise bound on the rough fugacity, with explicit separation from averaged physical posterior claims.",
+  "compute_budget": {"new_physical_samples": 0, "new_system_sizes": 0, "new_bootstrap_replicates": 0, "existing_control_states_per_cell": 6561, "control_cells": 2},
+  "claim_boundary": "Neither activity reparameterization nor the configuration-level counterfamily determines fixed-h Bayes-risk scaling, a square phase, threshold, or uniform sector-posterior estimate.",
+  "stop_rule": "Stop after exact proof and the two L3 replay cells; no new size, sample, crossing, fit or threshold.",
+  "result": "../results/pure-gradient-rough-boundary-generator-2026-09-22.json",
+  "outcome": "The fixed-p field equals a zero-field p_eff channel tilted by a rough-charge fugacity, with a common measured-charge factor cancelling in sector ratios. A straight-row Q=0 family makes pointwise fugacity distortion exp[|h|(L-1)], so any fixed-h theorem needs an averaged sector-conditioned boundary estimate, not a uniform configurationwise gauge bound."
+}

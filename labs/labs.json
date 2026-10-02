@@ -5,7 +5,7 @@
       "title": "Square-lattice string-herald decoder",
       "stage": "complete",
       "summary": "Concluded configuration-level study of hard herald predecoding plus syndrome-only PyMatching on square and honeycomb lattices.",
-      "current_focus": "Lab 001 is concluded; its frozen simulator, boundary conventions, and hard-decision baseline feed Labs 002–003.",
+      "current_focus": "Lab 001 is concluded; its frozen simulator, boundary conventions, and hard-decision baseline feed Labs 002\u2013003.",
       "next_action": "No further implementation in Lab 001. Use its observations and conventions as inputs to Lab 002 and threshold work in Lab 003.",
       "updated": "2026-08-26"
     },
@@ -14,7 +14,7 @@
       "title": "Herald-aware belief matching",
       "stage": "complete",
       "summary": "The phenomenological belief-matching backend is frozen on synchronous damped Numba BP and posterior-LLR PyMatching; D4 adaptation begins through Lab 004 R6A.",
-      "current_focus": "Lab 002 is concluded at the corrected-LLR C8 evidence boundary; its frozen backend feeds Labs 003–005.",
+      "current_focus": "Lab 002 is concluded at the corrected-LLR C8 evidence boundary; its frozen backend feeds Labs 003\u2013005.",
       "next_action": "No further Lab 002 transitions; use the frozen posterior-LLR/damped-Numba backend downstream.",
       "updated": "2026-08-29"
     },
@@ -22,10 +22,10 @@
       "id": "lab-003-herald-threshold-phase-diagram",
       "title": "Herald decoding threshold phase diagram",
       "stage": "complete",
-      "summary": "Phase B18 presents current B14/B11 evidence with a p<->1-p symmetry-constrained guide, the full p=[0,0.5] domain, and the unchanged conservative directional region.",
-      "current_focus": "Lab 003 is concluded at the B18 symmetry-constrained finite-window evidence boundary.",
-      "next_action": "No further Lab 003 transitions; any new threshold or phase-boundary sampling requires a separately registered follow-on study.",
-      "updated": "2026-08-29"
+      "summary": "B19 preserves measured finite-window evidence on the full p,q in [0,1] domain; invalid B18 complement guide withdrawn.",
+      "current_focus": "Corrected full-prior evidence coverage; independent high-p inference belongs to Lab 009.",
+      "next_action": "Lab 009 full-domain diagnostics and decoder integration; no mirrored high-p evidence.",
+      "updated": "2026-10-01"
     },
     {
       "id": "lab-004-d4-intrinsic-heralded-decoding",
@@ -40,10 +40,10 @@
       "id": "lab-005-spacetime-jit-anyonic-decoding",
       "title": "Spacetime just-in-time anyonic decoding",
       "stage": "active",
-      "summary": "Lab 005 transfers the Lyons–Brown repeated-measurement/JIT structure to an explicitly labelled D4 projector/fusion model.",
-      "current_focus": "The D4 translation remains structurally active, but R6AH withdraws legacy R5a as a spatial-performance baseline; any performance input must use the remediated R6AF interface.",
-      "next_action": "Implement and test the registered D4 translation interface matrix; keep stochastic history generation and schedule-performance sampling blocked until it passes.",
-      "updated": "2026-08-29"
+      "summary": "Lab 005 transfers the Lyons\u2013Brown repeated-measurement/JIT structure to an explicitly labelled D4 projector/fusion model.",
+      "current_focus": "J9H proves strictly positive conservative full-prior conditional information about private error under each fixed public action from three frozen L=2 first records; actual action information and logical-risk value remain unidentified.",
+      "next_action": "Preregister the smallest matched logical-class partition audit for the positive pair witnesses; determine whether the second record distinguishes logical classes or only private errors within one class before any risk claim.",
+      "updated": "2026-10-01"
     },
     {
       "id": "lab-006-sun-bp-theory",
@@ -51,7 +51,7 @@
       "stage": "complete",
       "summary": "Completed full-irrep belief-matching study of U(1), SU(2), and SU(3) on square/honeycomb lattices under directed and hidden pair orientation.",
       "current_focus": "Concluded at the audited 600-cell paired comparison: SU2 orientation invariance, U1/SU3 practical LER sensitivity, and bounded finite-size interpretation.",
-      "next_action": "No further Lab 006 acquisition. Lab 007 owns statistical mechanics, conjugacy, the hard-decoder gap, and the KT/BKT-like hypothesis.",
+      "next_action": "No further Lab 006 acquisition. Lab 007 owns the general formulation; Lab 008 studies direction-biased U(1) currents and the origin of the orientation-dependent LER curves.",
       "updated": "2026-09-09",
       "created": "2026-09-04",
       "parents": [
@@ -64,11 +64,44 @@
       "stage": "complete",
       "summary": "Exact statistical-mechanics formulation of representation-informed decoding: sector posteriors, SU(2) orientation quotient, constrained currents and fusion vertex models, with finite hardening counterexamples.",
       "current_focus": "Completed exact classical formulation: normalized sector weights, SU(2) orientation quotient, spin/current and restricted loop reductions, and verified finite decoder-hardening counterexamples.",
-      "next_action": "Next scientific direction: controlled typical-record sector contraction on finite-width strips, compared with exact-marginal and BP-marginal matching; continuum universality remains open.",
+      "next_action": "General formulation remains complete. Lab 008 uses these methods to study direction-biased U(1) and its connection to the Lab 006 LER curves.",
       "updated": "2026-09-14",
       "created": "2026-09-09",
       "parents": [
         "lab-006-sun-bp-theory"
+      ]
+    },
+    {
+      "id": "lab-008-direction-biased-u1-current-channel",
+      "title": "Direction-biased U(1) current channel",
+      "stage": "active",
+      "summary": "Theory of direction-biased U(1) current noise: logical-sector predictions, arrow geometry and the origin of directed versus hidden-orientation LER curves.",
+      "current_focus": "Complementary partial-record bounds locate the full-record question in bulk-strip correlations. A rare saturated-bulk joint record makes logical parity exactly readable, rejecting uniform conditional strip erasure without settling the p=.30 physical average.",
+      "next_action": "Seek a size-uniform estimate or admissible counterfamily for the PHYSICALLY WEIGHTED typical bulk-conditioned strip law at fixed p=.30 and finite h. Freeze marginal/pointwise refinements; no new size acquisition or threshold fit.",
+      "created": "2026-09-18",
+      "updated": "2026-09-23",
+      "parents": [
+        "lab-006-sun-bp-theory"
+      ],
+      "method_dependencies": [
+        "lab-007-decoding-statistical-mechanics"
+      ]
+    },
+    {
+      "id": "lab-009-planar-herald-decoder-survey",
+      "title": "Planar herald decoder survey and integration",
+      "stage": "complete",
+      "summary": "Survey and reusable integration of configuration MAP, planar logical ML, transfer and controlled MPS on the classical herald channel over p,q in [0,1].",
+      "current_focus": "Integrated decoder survey, independent validation and matched full-domain pilot are delivered.",
+      "next_action": "Reuse the standard methods and retained matched vectors; new physical channels or phase sweeps require a separate contract.",
+      "created": "2026-10-01",
+      "updated": "2026-10-01",
+      "parents": [
+        "lab-002-herald-belief-matching",
+        "lab-003-herald-threshold-phase-diagram"
+      ],
+      "method_dependencies": [
+        "lab-007-decoding-statistical-mechanics"
       ]
     }
   ]

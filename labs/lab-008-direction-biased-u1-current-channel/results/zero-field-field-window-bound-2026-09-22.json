@@ -1,0 +1,57 @@
+{
+  "id": "lab008-zero-field-field-window-bound-2026-09-22",
+  "status": "complete_exact_window_and_obstruction",
+  "sampling": false,
+  "theorem": {
+    "relative_entropies": {
+      "zero_to_field": "KL(P_0^E || P_h^E)=Ep log cosh h",
+      "field_to_zero": "KL(P_h^E || P_0^E)=Ep[h tanh h-log cosh h]"
+    },
+    "bayes_risk_bound": "Let kappa(h)=min{log cosh h, h tanh h-log cosh h}. Data processing and Pinsker give |R_L(h)-R_L(0)| <= min{1,sqrt(Ep kappa(h)/2)} for every geometry, charge map and binary sector score.",
+    "cusp_bound": "Since kappa(h)=h^2/2+O(h^4), the exact zero-field one-sided cusp C_L=-R'_L(0+) obeys C_L<=sqrt(Ep)/2 whenever it exists.",
+    "shrinking_field_window": "For any graph sequence with h_L sqrt(E_L) tending to zero, |R_L(h_L)-R_L(0)| tends to zero. On fixed-aspect two-dimensional patches E_L is order L^2, so h_L=o(1/L) is universally perturbative.",
+    "hellinger_obstruction": "The single-edge affinity is alpha(p,h)=1-p+p cosh(h/2)/sqrt(cosh h). For p>0 and h!=0, alpha<1 and TV(P_0^E,P_h^E)>=1-alpha^E tends to one exponentially.",
+    "interpretation": "The shrinking-window theorem is uniform, but no total-law TV/KL argument can control a fixed nonzero field as E grows. A fixed-h thermodynamic theorem must exploit the charge/sector observable or model-specific structure rather than full-current-law proximity."
+  },
+  "existing_size_replay": {
+    "geometry": "canonical square L=3",
+    "p": 0.3,
+    "new_sizes": 0,
+    "new_physical_samples": 0,
+    "cells": [
+      {
+        "h": 0.1,
+        "states": 6561,
+        "risk_zero": 0.4411754999999998,
+        "risk_field": 0.4277937756190291,
+        "risk_change_absolute": 0.013381724380970683,
+        "output_total_variation": 0.025624022307850356,
+        "current_total_variation": 0.06038739295256352,
+        "pinsker_bound": 0.07726663425450195,
+        "maximum_formula_error": 2.864375403532904e-14,
+        "all_inequality_gates": true
+      },
+      {
+        "h": 0.5,
+        "states": 6561,
+        "risk_zero": 0.4411754999999998,
+        "risk_field": 0.38990055025020215,
+        "risk_change_absolute": 0.05127494974979763,
+        "output_total_variation": 0.12914367930109696,
+        "current_total_variation": 0.28948196474375915,
+        "pinsker_bound": 0.3648737946277766,
+        "maximum_formula_error": 2.8199664825478976e-14,
+        "all_inequality_gates": true
+      }
+    ],
+    "verified_chain": "absolute risk change <= output TV <= current TV <= Pinsker bound"
+  },
+  "claim_boundary": {
+    "established": "A universal shrinking-field stability window, a cusp upper bound, and a full-law fixed-field separation obstruction.",
+    "not_established": "Continuity or discontinuity of thermodynamic Bayes risk at fixed h, relevance/irrelevance, critical exponents, or a threshold."
+  },
+  "provenance": {
+    "manifest": "../manifests/zero-field-field-window-bound-2026-09-22.json",
+    "replay": "../scripts/verify_zero_field_field_window.py"
+  }
+}

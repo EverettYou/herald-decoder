@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j6e-two-round-stabilizer-sector-fixture-2026-09-24",
+  "status": "registered_before_exact_execution",
+  "epistemic_role": "Exact source-bounded D4 geometry and projected-charge repeatability fixture; partial physical-state prerequisite, not a full action-conditioned D4 density channel",
+  "question": "On the paper-normalized L=2 D4 honeycomb, which two-round action/measurement facts follow from the red-X chain, post-flux stabilizer parity, and ideal projective repeatability without inventing the first-to-postflux joint law?",
+  "upstream": {
+    "j6d_result_sha256": "847c9c69c87166993839d7dd1af2358ffaaea9e9a3a1506394e8faf578b59126",
+    "d4_honeycomb_sha256": "0895892c00f1f629ec469d4f7b4e42fb8e83bc07666edbc3b8fc26a1f30eb869",
+    "d4_matching_sha256": "1ad1c96af3bf98353c89820b68eb07183a49c954650c51218ca5c1b5c211739e",
+    "d4_postflux_sha256": "5435f1fcea89c9eccf369f8bfef44b23deea1ebe954b5e0f1dea5fce0cf12658",
+    "d4_observation_sha256": "93122546070a68106848cda8fff0f776fc18882add3cb2a3b215dca99ac7edd8"
+  },
+  "primary_source": "https://arxiv.org/html/2507.23765 Appendix A.3-A.4: red-X boundary and first e-charge support, physical-plus-correction union constraints, and sequential stabilizer measurements",
+  "fixed_geometry": "paper_periodic_honeycomb(2), 24 vertices and 36 red-qubit edges; select the lexicographically first two distinct red edges sharing one green center with distinct blue endpoints and homologically trivial path; use one selected edge as a single-edge limit",
+  "action_boundary": "The matching red-X string is an externally prescribed oracle-matched physical intervention for an exact limiting-case test. It is not selected by a causal decoder and must not be evaluated as schedule performance.",
+  "fixed_exact_matrix": [
+    "No fault/no action: zero flux boundary and empty union; no action-conditioned E2 record.",
+    "One-edge fault/defer versus matching red-X correction: defer leaves two flux endpoints and E2 unavailable; matching correction clears flux and yields only even singleton blue/green components.",
+    "Two-edge path fault/defer versus matching red-X correction: defer leaves two blue flux endpoints and E2 unavailable; matching correction clears flux, retains a physical-plus-correction union with a two-blue-star even component and one green singleton. Enumerate the complete binary charge support on active sites, with full-size public zero bits elsewhere and no private support or pairing field.",
+    "For each postflux charge eigen-outcome, apply an ideal repeat measurement with no fault and no intervening action. Its conditional second outcome must equal the first with probability one (Luders repeatability). Reject any implementation that independently redraws the same unchanged measured projector.",
+    "Retain the first-to-postflux joint law and all noisy-readout/other-fault dynamics as unresolved; do not generate stochastic histories, schedule arms or a numeric three-label kernel."
+  ],
+  "analysis_rule": "Report exact boundaries, union components, allowed charge records, and repeatability. Distinguish source-backed support/limits from an unspecified joint first/postflux distribution. A failed geometry or parity gate censors all interpretation.",
+  "acceptance": [
+    "All five upstream hashes and J6D status match; selected L=2 geometry has 24 vertices, 36 edges, two distinct blue endpoints and one green center.",
+    "No-fault, one-edge and two-edge defer/commit flux boundaries and residuals satisfy exact XOR identities; defer has no E2 rather than a fabricated charge outcome.",
+    "Committed path's active charge support is exhaustively enumerated and independently validated against Lab 004 parity constraints; full binary public charge/vacuum arrays contain no physical support or relation metadata.",
+    "Every supported postflux record is repeatable under an unchanged ideal projector; first-to-postflux joint probabilities remain explicitly unresolved.",
+    "Zero stochastic histories, schedule arms and bootstrap replicates; no JIT, LER, threshold or full D4 cross-round-kernel claim."
+  ],
+  "budget": {"stochastic_histories": 0, "schedule_arm_evaluations": 0, "bootstrap_replicates": 0, "max_cpu_seconds": 15, "new_dependencies": 0},
+  "stop_rule": "Fail closed on provenance, geometry, parity, public/private separation or repeatability mismatch. A pass establishes only the source-bounded commuting-stabilizer sector and exact limiting cases; do not integrate a numerical full hidden-state kernel or resume performance sampling until the first/postflux joint instrument is derived and validated.",
+  "planned_result": "results/j6e-two-round-stabilizer-sector-fixture-2026-09-24.json"
+}

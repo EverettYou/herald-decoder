@@ -1,0 +1,143 @@
+{
+  "id": "lab008-size-bias-extension-2026-09-18",
+  "status": "complete",
+  "stage": 4,
+  "question": "Does the intrinsic direction-bias contrast persist at a withheld larger canonical square size, and how do sector ambiguity and practical loss behave near the directed endpoint?",
+  "prerequisites": [
+    "results/square-mechanism-2026-09-18-analysis.json",
+    "results/honeycomb-arrow-control-2026-09-18-analysis.json"
+  ],
+  "trigger": "Square primary intrinsic contrast resolved at both sizes. Honeycomb arrow intervention changes directed intrinsic risk, while fair relabeling controls pass; mechanism comparisons remain interpretable.",
+  "scope": "Finite-size mechanism extension at p=.30. L9 is withheld from the first square decision. No thermodynamic extrapolation, transition location or BKT fit.",
+  "cells": [
+    {
+      "id": "square-L5-p30-q90-extension",
+      "lattice": "square",
+      "L": 5,
+      "p": 0.3,
+      "q": 0.9,
+      "arrows": "stored",
+      "shots": 256,
+      "seed": 309187026
+    },
+    {
+      "id": "square-L5-p30-q97-extension",
+      "lattice": "square",
+      "L": 5,
+      "p": 0.3,
+      "q": 0.97,
+      "arrows": "stored",
+      "shots": 256,
+      "seed": 309187026
+    },
+    {
+      "id": "square-L5-p30-q100-extension",
+      "lattice": "square",
+      "L": 5,
+      "p": 0.3,
+      "q": 1,
+      "arrows": "stored",
+      "shots": 256,
+      "seed": 309187026
+    },
+    {
+      "id": "square-L7-p30-q90-extension",
+      "lattice": "square",
+      "L": 7,
+      "p": 0.3,
+      "q": 0.9,
+      "arrows": "stored",
+      "shots": 256,
+      "seed": 309189026
+    },
+    {
+      "id": "square-L7-p30-q97-extension",
+      "lattice": "square",
+      "L": 7,
+      "p": 0.3,
+      "q": 0.97,
+      "arrows": "stored",
+      "shots": 256,
+      "seed": 309189026
+    },
+    {
+      "id": "square-L7-p30-q100-extension",
+      "lattice": "square",
+      "L": 7,
+      "p": 0.3,
+      "q": 1,
+      "arrows": "stored",
+      "shots": 256,
+      "seed": 309189026
+    },
+    {
+      "id": "square-L9-p30-q50-extension",
+      "lattice": "square",
+      "L": 9,
+      "p": 0.3,
+      "q": 0.5,
+      "arrows": "stored",
+      "shots": 192,
+      "seed": 309191026
+    },
+    {
+      "id": "square-L9-p30-q75-extension",
+      "lattice": "square",
+      "L": 9,
+      "p": 0.3,
+      "q": 0.75,
+      "arrows": "stored",
+      "shots": 192,
+      "seed": 309191026
+    },
+    {
+      "id": "square-L9-p30-q90-extension",
+      "lattice": "square",
+      "L": 9,
+      "p": 0.3,
+      "q": 0.9,
+      "arrows": "stored",
+      "shots": 192,
+      "seed": 309191026
+    },
+    {
+      "id": "square-L9-p30-q97-extension",
+      "lattice": "square",
+      "L": 9,
+      "p": 0.3,
+      "q": 0.97,
+      "arrows": "stored",
+      "shots": 192,
+      "seed": 309191026
+    },
+    {
+      "id": "square-L9-p30-q100-extension",
+      "lattice": "square",
+      "L": 9,
+      "p": 0.3,
+      "q": 1,
+      "arrows": "stored",
+      "shots": 192,
+      "seed": 309191026
+    }
+  ],
+  "result_directory": "results/size-bias-extension-cells",
+  "max_topology_candidates": 12000000,
+  "analysis": {
+    "unit": "independent physical records; paired common activity/sign uniforms across q within this manifest at fixed L,p,n, and all decoders on the same record",
+    "bootstrap_replicates": 4000,
+    "bootstrap_seed": 909182028,
+    "intervals": "Pointwise bootstrap95 for exploratory near-directed contrasts; L9 fair-minus-directed uses the existing conservative97.5 interval. Across-size contrasts use independent bootstrap. Gap-CDF fractions get Wilson95 intervals.",
+    "primary": "Replicate positive intrinsic fair-minus-directed contrast at withheld L9. Quantify q=.9 and .97 minus q=1 risk and P(|DeltaF|<=1) at each size; inspect full gap CDF, without inferring a universal monotonicity.",
+    "comparison": "Stage2/3 samples remain separate. New seed streams are independent of earlier stages. No fit, no stopping based on significance.",
+    "limits": "Only three square sizes and one p for extension. Finite q<1 vs q=1 support differences do not establish a thermodynamic singularity.",
+    "result": "results/size-bias-extension-2026-09-18-analysis.json"
+  },
+  "budget": {
+    "records": 2496,
+    "estimated_seconds": 600,
+    "checkpoint_records": 32,
+    "stopping": "fixed sample counts; profile supports L9 with 2,952,423 topology candidates, below12m cap; no approximate substitute"
+  },
+  "completed_at": "2026-09-18"
+}

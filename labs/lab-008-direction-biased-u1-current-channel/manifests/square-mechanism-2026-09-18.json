@@ -1,0 +1,215 @@
+{
+  "id": "lab008-square-mechanism-2026-09-18",
+  "status": "complete",
+  "registered_at": "2026-09-18",
+  "stage": 2,
+  "prerequisite": "results/response-oracle-validation-2026-09-18.json",
+  "question": "Does the directed/fair square LER contrast persist intrinsically, and how much is matching or BP excess risk?",
+  "selection": "L5 and L7 selected from measured profile: approximately .02 and .09 seconds/record in pilot; L9 deferred for conditional scaling. Pilot samples excluded.",
+  "cells": [
+    {
+      "id": "square-L5-p10-q50",
+      "lattice": "square",
+      "L": 5,
+      "p": 0.1,
+      "q": 0.5,
+      "shots": 192,
+      "seed": 19097036,
+      "arrows": "stored"
+    },
+    {
+      "id": "square-L5-p10-q75",
+      "lattice": "square",
+      "L": 5,
+      "p": 0.1,
+      "q": 0.75,
+      "shots": 192,
+      "seed": 19097036,
+      "arrows": "stored"
+    },
+    {
+      "id": "square-L5-p10-q100",
+      "lattice": "square",
+      "L": 5,
+      "p": 0.1,
+      "q": 1,
+      "shots": 192,
+      "seed": 19097036,
+      "arrows": "stored"
+    },
+    {
+      "id": "square-L5-p30-q50",
+      "lattice": "square",
+      "L": 5,
+      "p": 0.3,
+      "q": 0.5,
+      "shots": 512,
+      "seed": 19097056,
+      "arrows": "stored"
+    },
+    {
+      "id": "square-L5-p30-q75",
+      "lattice": "square",
+      "L": 5,
+      "p": 0.3,
+      "q": 0.75,
+      "shots": 512,
+      "seed": 19097056,
+      "arrows": "stored"
+    },
+    {
+      "id": "square-L5-p30-q100",
+      "lattice": "square",
+      "L": 5,
+      "p": 0.3,
+      "q": 1,
+      "shots": 512,
+      "seed": 19097056,
+      "arrows": "stored"
+    },
+    {
+      "id": "square-L5-p46-q50",
+      "lattice": "square",
+      "L": 5,
+      "p": 0.46,
+      "q": 0.5,
+      "shots": 192,
+      "seed": 19097072,
+      "arrows": "stored"
+    },
+    {
+      "id": "square-L5-p46-q75",
+      "lattice": "square",
+      "L": 5,
+      "p": 0.46,
+      "q": 0.75,
+      "shots": 192,
+      "seed": 19097072,
+      "arrows": "stored"
+    },
+    {
+      "id": "square-L5-p46-q100",
+      "lattice": "square",
+      "L": 5,
+      "p": 0.46,
+      "q": 1,
+      "shots": 192,
+      "seed": 19097072,
+      "arrows": "stored"
+    },
+    {
+      "id": "square-L7-p10-q50",
+      "lattice": "square",
+      "L": 7,
+      "p": 0.1,
+      "q": 0.5,
+      "shots": 192,
+      "seed": 19099036,
+      "arrows": "stored"
+    },
+    {
+      "id": "square-L7-p10-q75",
+      "lattice": "square",
+      "L": 7,
+      "p": 0.1,
+      "q": 0.75,
+      "shots": 192,
+      "seed": 19099036,
+      "arrows": "stored"
+    },
+    {
+      "id": "square-L7-p10-q100",
+      "lattice": "square",
+      "L": 7,
+      "p": 0.1,
+      "q": 1,
+      "shots": 192,
+      "seed": 19099036,
+      "arrows": "stored"
+    },
+    {
+      "id": "square-L7-p30-q50",
+      "lattice": "square",
+      "L": 7,
+      "p": 0.3,
+      "q": 0.5,
+      "shots": 512,
+      "seed": 19099056,
+      "arrows": "stored"
+    },
+    {
+      "id": "square-L7-p30-q75",
+      "lattice": "square",
+      "L": 7,
+      "p": 0.3,
+      "q": 0.75,
+      "shots": 512,
+      "seed": 19099056,
+      "arrows": "stored"
+    },
+    {
+      "id": "square-L7-p30-q100",
+      "lattice": "square",
+      "L": 7,
+      "p": 0.3,
+      "q": 1,
+      "shots": 512,
+      "seed": 19099056,
+      "arrows": "stored"
+    },
+    {
+      "id": "square-L7-p46-q50",
+      "lattice": "square",
+      "L": 7,
+      "p": 0.46,
+      "q": 0.5,
+      "shots": 192,
+      "seed": 19099072,
+      "arrows": "stored"
+    },
+    {
+      "id": "square-L7-p46-q75",
+      "lattice": "square",
+      "L": 7,
+      "p": 0.46,
+      "q": 0.75,
+      "shots": 192,
+      "seed": 19099072,
+      "arrows": "stored"
+    },
+    {
+      "id": "square-L7-p46-q100",
+      "lattice": "square",
+      "L": 7,
+      "p": 0.46,
+      "q": 1,
+      "shots": 192,
+      "seed": 19099072,
+      "arrows": "stored"
+    }
+  ],
+  "result_directory": "results/square-mechanism-cells",
+  "max_topology_candidates": 12000000,
+  "baseline": {
+    "observations": "full interior U1 charge, rough endpoints unmeasured",
+    "score": "binary final-correction logical parity; syndrome invalidity counted, BP convergence diagnostic only",
+    "decoders": [
+      "sector Bayes",
+      "exact-marginal parent MWPM",
+      "parent-schedule BP-MWPM"
+    ],
+    "bp": {
+      "iterations": 300,
+      "damping": 0.5,
+      "tolerance": 1e-10
+    },
+    "clipping": 1e-12
+  },
+  "analysis": "results/square-mechanism-2026-09-18-analysis.json",
+  "budget": {
+    "records": 5376,
+    "estimated_seconds": 600,
+    "checkpoint_records": 32,
+    "stopping": "fixed sample count per registered cell; no significance-based early stopping"
+  }
+}

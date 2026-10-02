@@ -1,0 +1,87 @@
+{
+  "id": "lab008-parity-aligned-interface-matrix-2026-09-22",
+  "status": "complete_mixed_outcome",
+  "date": "2026-09-22",
+  "manifest": "../manifests/parity-aligned-interface-matrix-2026-09-22.json",
+  "construction": {
+    "separator": "x=floor((L-1)/2)",
+    "anchor_matrix": "every separator vertex",
+    "aligned_state": "bar_U_s=U-H e_s",
+    "exact_sector_gluing": "Z_h(Q)=sum_bar_u sum_(a xor b=h) W_A,a(Q_A,bar_u+h e_s) W_B,b(Q_B,Q_S-bar_u-h e_s)",
+    "interpretation": "sector-specific reindexing of the exact interface sum, not a physical current coupling"
+  },
+  "integrity": {
+    "parameter_cells": 14,
+    "parity_normalization_failures": 0,
+    "maximum_sector_weight_reproduction_error": 2.168404344971009e-19,
+    "new_physical_samples": 0,
+    "new_system_sizes": 0,
+    "bootstrap_replicates": 0,
+    "deterministic_binary_currents": 262400
+  },
+  "aggregate_rows": [
+    {
+      "L": 3,
+      "p": 0.3,
+      "ambiguous_charge_records": 46,
+      "anchors": 3,
+      "aligned_support_overlap_fraction_range": [0.5217391304347826, 0.5652173913043478],
+      "risk": 0.2926891799999999,
+      "aligned_revealed_risk_fraction_range": [0.2236639564195711, 0.2953234554143751],
+      "risk_weighted_aligned_tv_fraction_range": [0.7358486842833689, 0.791881275791854],
+      "minimum_tv_anchor_row": 1
+    },
+    {
+      "L": 3,
+      "p": 0.5,
+      "ambiguous_charge_records": 46,
+      "anchors": 3,
+      "aligned_support_overlap_fraction_range": [0.5217391304347826, 0.5652173913043478],
+      "risk": 0.4375,
+      "aligned_revealed_risk_fraction_range": [0.2857142857142857, 0.30357142857142855],
+      "risk_weighted_aligned_tv_fraction_range": [0.7231292517006802, 0.7289115646258504],
+      "minimum_tv_anchor_row": 1
+    },
+    {
+      "L": 4,
+      "p": 0.3,
+      "ambiguous_charge_records": 24638,
+      "anchors": 4,
+      "aligned_support_overlap_fraction_range": [0.287848039613605, 0.3575371377546879],
+      "risk": 0.2084814226561938,
+      "aligned_revealed_risk_fraction_range": [0.1556656510117717, 0.22174467276519313],
+      "risk_weighted_aligned_tv_fraction_range": [0.8105989308302755, 0.8626870252955222],
+      "minimum_tv_anchor_row": 2
+    },
+    {
+      "L": 4,
+      "p": 0.5,
+      "ambiguous_charge_records": 24638,
+      "anchors": 4,
+      "aligned_support_overlap_fraction_range": [0.287848039613605, 0.3575371377546879],
+      "risk": 0.361602783203125,
+      "aligned_revealed_risk_fraction_range": [0.1974850198328973, 0.23301544434129462],
+      "risk_weighted_aligned_tv_fraction_range": [0.7919826675808682, 0.8197893350845664],
+      "minimum_tv_anchor_row": "1_or_2"
+    }
+  ],
+  "fixed_geometric_path_transport": {
+    "binary_feasibility_fraction": 1.0,
+    "logical_flip_fraction": 1.0,
+    "charge_preservation_fraction": {
+      "L3": 0.5,
+      "L4": 0.25
+    },
+    "action_distortion": "Even among Q-preserving states, toggling an all-zero versus all-one length-(L-1) horizontal path has reciprocal weight ratios (p/(1-p))^(L-1) and ((1-p)/p)^(L-1); no size-uniform distortion bound exists for p!=1/2."
+  },
+  "acceptance_outcome": {
+    "integrity": "pass",
+    "nontriviality": "pass",
+    "physical_coupling": "reject",
+    "uniform_contraction": "not_established",
+    "reason": "Aligned supports overlap and bar_d_Q<1 on many finite records, but risk-weighted aligned TV remains 0.723-0.792 of R_L on L3 and 0.791-0.863 on L4. The two sizes do not support decay, and the one-hot reindexing has no Q-preserving, bounded-distortion state transport."
+  },
+  "decision": "Retain bar_U_s only as an exact parity-aligned algebraic state. Do not call it a mixing coupling. The next discriminating theorem must construct a record-dependent residual-path transport with controlled multiplicity and action distortion, or prove that such uniform control is impossible.",
+  "claim_boundary": "Finite exact controls validate nontrivial support alignment but neither show nor refute thermodynamic contraction. Anchor minima are reported diagnostically and are not selected for promotion.",
+  "replay": "../scripts/run_parity_aligned_interface_matrix.py"
+}

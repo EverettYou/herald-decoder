@@ -1,0 +1,38 @@
+{
+  "id": "lab008-l13-boundary-mps-throughput-audit-2026-09-21",
+  "status": "production_unarmed",
+  "source_preflight": "l13-boundary-mps-preflight-2026-09-21.json",
+  "source_preflight_sha256": "199fad026f60c1e9dca6ecd876910d0089ac1c94e1af29f63cfbdc15698be791",
+  "registered_minimum_matrix": {
+    "records_per_cell": 384,
+    "cells": 3,
+    "primary_evaluations": 1152,
+    "sensitivity_records": 144,
+    "additional_sensitivity_evaluations": 432,
+    "workers": 4,
+    "wall_clock_cap_seconds": 7200
+  },
+  "observed_mean_seconds_by_evaluation": {
+    "chi16_left_to_right": 191.35516063853478,
+    "chi16_right_to_left": 225.4838198754005,
+    "chi32_left_to_right": 393.49990243045613,
+    "chi32_right_to_left": 331.75774686131626
+  },
+  "projection": {
+    "minimum_matrix_worker_seconds": 357347.91661566496,
+    "ideal_four_worker_wall_seconds": 89336.97915391624,
+    "multiple_of_registered_wall_cap": 12.407913771377256,
+    "maximum_primary_evaluations_within_cap_at_observed_mean_ignoring_sensitivity": 150.50547841979812
+  },
+  "decision": "The registered identity/resource preflight passed, but it does not establish production throughput. Starting production would be predictably censored far below the 384-record-per-cell minimum. Production arming is therefore withdrawn pending a semantics-preserving throughput remediation.",
+  "remediation_acceptance": {
+    "semantic_replay": "The optimized implementation must reproduce all 12 frozen preflight posteriors to maximum sector error at most 1e-10.",
+    "throughput": "The same frozen timing matrix must project the entire registered minimum production and sensitivity matrix to at most 7200 wall seconds with four workers.",
+    "scope": "No production histories, reduced record counts, removed sensitivity branches, relaxed gates, new chi values or external dependencies."
+  },
+  "counters": {
+    "production_histories_generated": 0,
+    "bootstrap_replicates": 0,
+    "scientific_L13_records": 0
+  }
+}

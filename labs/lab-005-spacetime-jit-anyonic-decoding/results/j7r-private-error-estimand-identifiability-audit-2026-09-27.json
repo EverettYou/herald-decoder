@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j7r-private-error-estimand-identifiability-audit-2026-09-27",
+  "status": "closed_both_estimands_unidentified_from_existing_fixture",
+  "contract_sha256": "b835bcfa47667e9bf114d897b0c57c37ca9e269a4b5c92c0e248cda911bdd883",
+  "pinned_input_checks": {
+    "j7m_contract_sha256": "matched",
+    "j7m_result_sha256": "matched",
+    "j7p_result_sha256": "matched",
+    "j7q_result_sha256": "matched",
+    "j6_pilot_contract_sha256": "matched"
+  },
+  "common_frozen_observations": {
+    "represented_private_initial_errors": [[0,4,3]],
+    "distinct_private_initial_error_support_count": 1,
+    "selected_first_public_record_mass_given_that_error": "1/4",
+    "public_actions": [[0],[1,30,32,34,35]],
+    "matched_later_fault_keys_private": [[0],[4]],
+    "same_future_next_public_total_variation": {"[0]": "15/16", "[4]": "15/16"},
+    "later_faults_are_not_alternative_initial_errors": true
+  },
+  "branches": {
+    "private_error_information": {
+      "status": "not_identified",
+      "reason": "The exact action laws condition on one fixed private initial error and one selected first public record. No second positive-prior initial error, prior weights, or matched complete public laws under both actions are present. With the represented one-point error support alone, H(E)=0 and I(E;Y|first,A)=0 trivially; this does not measure the information of the paper IID physical-error channel.",
+      "missing": ["at least one competing positive-prior private initial error at the same first public record", "frozen prior and conditioning rule", "complete action-conditioned public laws for each error under matched keys"]
+    },
+    "unconditional_paired_logical_risk": {
+      "status": "not_identified",
+      "reason": "The ideal J7 fixture has no attempted-history ensemble denominator, matched action-arm Boolean-union loss rows, or private residual/winding score for all physical draws. J6's five-round phenomenological pilot has a different data-generating model and cannot supply these rows or be pooled numerically.",
+      "missing": ["frozen physical-error ensemble or explicitly conditional toy target with omitted-mass bound", "unconditional attempted-history denominator", "matched physical/first-observation/second-exogenous keys across actions", "private ground-state-relative Boolean-union score on every attempted unit", "paired uncertainty rule if stochastic"]
+    }
+  },
+  "counters": {"source_artifacts_checked": 5, "branches_checked": 2, "ordered_moment_terms": 0, "new_physical_errors": 0, "stochastic_histories": 0, "schedule_arm_evaluations": 0, "bootstrap_replicates": 0, "new_dependencies": 0},
+  "claim_boundary": "J7P/J7Q retain only a finite ideal selected-record total action effect on public charge laws. Neither information about a random private error, expected logical-risk change, action selection by the frozen JIT policy, noisy-schedule benefit nor threshold is identified.",
+  "next_prerequisite": "Prospectively freeze the smallest same-first-record two-error information test using the corrected paper-normalized IID red-X channel, with explicit positive prior weights and both complete public action laws; separately define any unconditional full-channel risk target and its scored denominator before sampling. Do not convert a conditional toy into a full-channel risk claim."
+}

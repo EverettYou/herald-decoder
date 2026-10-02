@@ -1,0 +1,218 @@
+{
+  "status": "complete_two_environment_geodesic_exchange_gap",
+  "physical_parameters": {
+    "geometry": "square",
+    "p": "1/2",
+    "q": "1"
+  },
+  "new_physical_record_samples": 0,
+  "decoder_runs": 0,
+  "exact_controls": [
+    {
+      "L": 3,
+      "edges": 8,
+      "simple_paths": 9,
+      "majority_domain_states": 126,
+      "distinct_targets": 112,
+      "multiplicity_histogram": {
+        "1": 98,
+        "2": 14
+      },
+      "second_moment": 154,
+      "kappa_exact": "11/9",
+      "collision_pairs": 14,
+      "integrity_checks": {
+        "preimages": 126,
+        "selector_replay": 126,
+        "target_replay": 126,
+        "charge_preservation": 126,
+        "logical_parity_flip": 126,
+        "virtual_divergence_reconnection": 14
+      },
+      "exchange_matrix": {
+        "endpoint_relation": {
+          "same_left=True;same_right=False": 14
+        },
+        "absolute_path_length_difference": {
+          "1": 14
+        },
+        "symmetric_difference_components": {
+          "1": 14
+        },
+        "first_virtual_exchange_branch_lengths": {
+          "left=1;right=2": 7,
+          "left=2;right=1": 7
+        },
+        "same_physical_endpoints_closed_cycle_pairs": {
+          "count": 0,
+          "exact": "0",
+          "value": 0.0
+        },
+        "equal_path_length_pairs": {
+          "count": 0,
+          "exact": "0",
+          "value": 0.0
+        },
+        "all_pairs_have_virtual_boundary_divergence_reconnection": true
+      },
+      "collision_fan_control": {
+        "targets_with_multiplicity_at_least_4": 0,
+        "preimage_mass_at_multiplicity_at_least_4": {
+          "count": 0,
+          "exact": "0",
+          "value": 0.0
+        },
+        "second_moment_from_multiplicity_at_least_4": {
+          "count": 0,
+          "exact": "0",
+          "value": 0.0
+        },
+        "maximum_multiplicity": 2,
+        "maximum_multiplicity_targets": 14,
+        "maximum_target_common_core_edge_count": {
+          "1": 14
+        },
+        "maximum_target_distinct_rough_endpoint_pairs": {
+          "2": 14
+        },
+        "maximum_target_path_length_range": {
+          "1": 14
+        }
+      }
+    },
+    {
+      "L": 4,
+      "edges": 18,
+      "simple_paths": 80,
+      "majority_domain_states": 138030,
+      "distinct_targets": 89600,
+      "multiplicity_histogram": {
+        "1": 54288,
+        "2": 24556,
+        "3": 9034,
+        "4": 1310,
+        "5": 242,
+        "6": 120,
+        "7": 42,
+        "8": 8
+      },
+      "second_moment": 267718,
+      "kappa_exact": "3113/1605",
+      "collision_pairs": 64844,
+      "integrity_checks": {
+        "preimages": 138030,
+        "selector_replay": 138030,
+        "target_replay": 138030,
+        "charge_preservation": 138030,
+        "logical_parity_flip": 138030,
+        "virtual_divergence_reconnection": 64844
+      },
+      "exchange_matrix": {
+        "endpoint_relation": {
+          "same_left=False;same_right=False": 5518,
+          "same_left=False;same_right=True": 21290,
+          "same_left=True;same_right=False": 33866,
+          "same_left=True;same_right=True": 4170
+        },
+        "absolute_path_length_difference": {
+          "0": 7586,
+          "1": 50520,
+          "2": 6342,
+          "3": 396
+        },
+        "symmetric_difference_components": {
+          "1": 59326,
+          "2": 5518
+        },
+        "first_virtual_exchange_branch_lengths": {
+          "left=1;right=2": 24606,
+          "left=1;right=3": 2768,
+          "left=1;right=4": 139,
+          "left=2;right=1": 24606,
+          "left=2;right=2": 4336,
+          "left=2;right=3": 2741,
+          "left=3;right=1": 2768,
+          "left=3;right=2": 2741,
+          "left=4;right=1": 139
+        },
+        "same_physical_endpoints_closed_cycle_pairs": {
+          "count": 4170,
+          "exact": "2085/32422",
+          "value": 0.06430818579976559
+        },
+        "equal_path_length_pairs": {
+          "count": 7586,
+          "exact": "3793/32422",
+          "value": 0.116988464622787
+        },
+        "all_pairs_have_virtual_boundary_divergence_reconnection": true
+      },
+      "collision_fan_control": {
+        "targets_with_multiplicity_at_least_4": 1722,
+        "preimage_mass_at_multiplicity_at_least_4": {
+          "count": 7528,
+          "exact": "3764/69015",
+          "value": 0.0545388683619503
+        },
+        "second_moment_from_multiplicity_at_least_4": {
+          "count": 33900,
+          "exact": "16950/133859",
+          "value": 0.12662577787074458
+        },
+        "maximum_multiplicity": 8,
+        "maximum_multiplicity_targets": 8,
+        "maximum_target_common_core_edge_count": {
+          "1": 8
+        },
+        "maximum_target_distinct_rough_endpoint_pairs": {
+          "8": 8
+        },
+        "maximum_target_path_length_range": {
+          "3": 8
+        }
+      }
+    }
+  ],
+  "weakest_sufficient_counting_lemma": {
+    "identity": "For X uniform on the physical majority domain, T(X) is the selected target and M=m_T(X), kappa_L=E[M]=sum_{r>=1} Pr(M>=r).",
+    "sufficient_condition": "A size-uniform summable tail Pr(M>=r)<=g_r with sum_r g_r<infinity proves sup_L kappa_L<infinity and hence a positive midpoint Bayes-risk lower bound once RSW supplies positive majority-domain mass.",
+    "exchange_requirements": [
+      "encode every alternate preimage by a divergence/reconnection witness in the same full-record selector environment",
+      "bound witness multiplicity, including choices of both rough endpoints and path length",
+      "dominate the physical probability of realized witnesses by a uniformly summable family"
+    ]
+  },
+  "branch_matrix": {
+    "divergence_reconnection_encoding": {
+      "outcome": "virtual_boundary_encoding_exists_but_closed_geodesic_exchange_is_not_exhaustive",
+      "established": "After collapsing each rough side, every exact collision pair has a first divergence and reconnection and passes charge, logical-parity, target and selector replay checks.",
+      "obstruction": "The usual same-endpoint closed exchange covers none of the L3 collisions and only 4,170 of 64,844 L4 collisions. Most pairs change one or both rough endpoints, and many have unequal lengths."
+    },
+    "local_exchange_involution": {
+      "outcome": "standard_same_environment_geodesic_swap_hypothesis_fails",
+      "established": "Same-endpoint pairs form one closed symmetric-difference component, while one-endpoint and two-endpoint changes form open boundary fans with one and two components respectively.",
+      "hypothesis_gap": "The two paths are shortest-selected in two different preimage states, not geodesics in one common edge environment. Standard equal-length geodesic subpath exchange therefore supplies neither selector preservation nor a bound on alternate endpoint choices."
+    },
+    "positive_mass_collision_ladder": {
+      "outcome": "finite_collision_fans_found_but_no_scale_stable_ladder",
+      "established": "At L4, multiplicity-at-least-four targets contain 7,528 of 138,030 majority preimages and contribute 33,900 of 267,718 to the second moment. Eight targets have multiplicity eight and mix rough endpoint pairs and path lengths around a common core.",
+      "boundary": "These are finite collision fans, not a nested cylinder event with a size-uniform positive physical probability. No compatible all-size ladder or divergence of kappa_L is established."
+    }
+  },
+  "precise_missing_lemma": "Control open boundary-fan exchanges across two selector environments: prove a uniform summable tail for the number of shortest-selected alternate paths, including variable rough endpoints and unequal path lengths, or construct a nested square event on which that number grows while its physical majority-domain probability does not erase the growth.",
+  "decision": {
+    "outcome": "close_naive_geodesic_exchange_and_retain_boundary_fan_tail_as_open_target",
+    "established": "The registered exact exchange matrix replays both kappa controls and identifies the dominant collision mechanism as an open boundary fan rather than a same-endpoint geodesic loop.",
+    "not_established": "No uniform kappa_L bound, positive-mass collision ladder, midpoint noncorrectability, or square decoding threshold is proved.",
+    "threshold_claim": "No threshold claim is promoted."
+  },
+  "elapsed_seconds": 3.7672083750367165,
+  "source_sha256": {
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/audit_midpoint_shortest_selector_exchange.py": "b9281e39a0aa6729662e0980f1e4ef19bb508088b380f69e97a441ff13a7749b",
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/audit_midpoint_selector_second_moment.py": "05a3eb6fcd3cba58eaad10c8a6c433b5de1c8140009512d8ad9cde569f1e6d66",
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/check_midpoint_switching_pairing.py": "4aec56ec9ef90d6d6d193f896d6f6c5be8bf1a6719bbe085df4acb9c81ac2e18",
+    "labs/lab-008-direction-biased-u1-current-channel/scripts/current_oracle.py": "241916aa389193b7b62a3ea2de7f4267086dfcca60760ee514e27100f40fa6ee",
+    "labs/lab-008-direction-biased-u1-current-channel/manifests/midpoint-shortest-selector-geodesic-exchange-2026-09-20.json": "51d0264e1971fe65bba197aa82b77277cb674da06f91a8c7bc4d0e4b8064bf82",
+    "labs/lab-008-direction-biased-u1-current-channel/results/midpoint-selector-second-moment-renormalization-2026-09-20.json": "0e4ca4969293deda6548e33e21901a8948c33ed6369beaae6903b82dfa8e1832"
+  }
+}

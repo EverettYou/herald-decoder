@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j6k-full-local-star-action-algebra-2026-09-24",
+  "status": "registered_before_exact_execution",
+  "epistemic_role": "Exact complete single-star A2/A4 operator-action algebra on a 12-qubit patch; not a complete L=2 ground state, joint instrument, or public E2 channel",
+  "question": "Do source-defined full star and triangle operators admit a consistent CZ-aware exact local representation under two red-X geometries and no, matched, or partial red-X actions?",
+  "source_basis": [
+    "Jing et al. 2025, Appendix A.1 Eq. (A2)-(A4) and A.2/A.4 local red-X examples, archived PDF printed pages 10-13",
+    "Iqbal et al. 2023, Fig. 2 and caption: 12-body A_s = product of six adjacent-ring CZ factors times X on six outer qubits, with two color-triangle Z products, archived PDF printed page 2"
+  ],
+  "pinned_inputs": {
+    "jing_pdf_sha256": "7a17c3d3a743e3dec4266b64d0321a6af7a5eeacfab67e42b9ec77d30b65a2ac",
+    "iqbal_pdf_sha256": "87348ee1e7659c140a2f1005a7037a19ddbf65bba146717f8a4778e7830f946b",
+    "j6j_result_sha256": "3ab043b72df3eebb4b0dfc588f205dade195bb6482de9ce47b6d8bb3517ad9bd"
+  },
+  "fixed_operator_indexing": {
+    "qubits": "inner ring 0..5 alternating green at 0,2,4 and red at 1,3,5; outer X qubits 6..11",
+    "star": "A = product_{i=0}^{5} CZ(inner_i, inner_(i+1 mod 6)) times product_{j=6}^{11} X_j",
+    "triangles": "B_red=Z_1 Z_3 Z_5, B_green=Z_0 Z_2 Z_4",
+    "local_projector": "A4 star charge sector: (I-A)/2 times (I+B_red)/2 times (I+B_green)/2"
+  },
+  "matrix": {
+    "red_x_physical_sets": [[1, 3], [1, 5]],
+    "actions_per_set": ["none", "matched", "partial_first_red"],
+    "independent_unit": "all 4096 computational basis states of one source-local 12-qubit patch; exhaustive algebra, no stochastic sampling"
+  },
+  "competing_models": {
+    "source_cz_aware": "Exact action of the source's six-CZ ring star and two color triangles.",
+    "pauli_only_surrogate": "Dropping CZ would remove the geometry-dependent Z dressing; J6J already rejects general equality on arbitrary local inputs. Do not promote this surrogate as D4 physics."
+  },
+  "acceptance": [
+    "All pinned hashes match; A and both B operators are Hermitian involutions, commute locally, and the A4 charge projector is idempotent and vanishes outside both-triangle-vacuum sector.",
+    "For each of two red-X geometries and three actions, exhaustive basis conjugation matches the XOR-neighbor Z dressing of A and the red-triangle parity sign; matched actions restore original operators.",
+    "No action or partial action with residual red-X is not assigned a fabricated public E2 record; global flux clearance is not inferred from this single-star patch.",
+    "No full L=2 initial state, inter-star consistency, conditional probability, stochastic histories, schedule arms, bootstrap replicates, LER or threshold are claimed."
+  ],
+  "budget": {"max_basis_states": 4096, "max_branch_cells": 6, "max_cpu_seconds": 20, "new_dependencies": 0, "stochastic_histories": 0, "schedule_arm_evaluations": 0, "bootstrap_replicates": 0},
+  "stop_rule": "Fail closed on source operator/index ambiguity, provenance drift, involution/commutation/projector failure, or any branch-conjugation mismatch. Passing authorizes only explicit embedding of this local operator into the pinned multi-star L=2 geometry as the next gate.",
+  "planned_result": "results/j6k-full-local-star-action-algebra-2026-09-24.json"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "lab008-rough-charge-physical-average-cancellation-2026-09-22",
+  "status": "complete_exact_signed_average_no_go",
+  "registered_at": "2026-09-22",
+  "parent_contract": "thermodynamic-theory-reorientation-2026-09-22.json",
+  "prerequisite_to": "Any size-uniform estimate of the physical-record average of sector-conditioned rough-charge generators",
+  "question": "Does averaging the pure-gradient rough-charge generator without its measured-charge factor retain the physical logical-sector information?",
+  "frozen_model": "Canonical square_graph(L), L>=3, 0<p<1 fixed, finite real h!=0, signed interior charge Q and occupancy parity H on the right logical cut. Use the exact p_eff and c of the registered pure-gradient reduction; no change of physical channel or observation.",
+  "registered_branches": {
+    "boundary_only_signed_average": "Sum F_0(Q)-F_1(Q) over Q without the measured factor exp[h M(Q)]. Factor the zero-field p_eff boundary edges and derive an all-size parity product and its fixed-h limit.",
+    "physical_signed_average": "Retain c^E exp[h M(Q)] and sum Z_0(Q;p,h)-Z_1(Q;p,h) over Q. Compare the exact independent-edge parity expectation with the boundary-only limit.",
+    "physical_absolute_average": "Keep the absolute value inside the Q sum, calculate its exact relation to Bayes risk, and replay only existing L3 p=.30,h=.10,.50 to show that the signed average is not the risk observable. Do not infer any all-size absolute bound from this control."
+  },
+  "acceptance": "Prove both signed all-size formulas, including an explicit bound for the boundary-only limit; state precisely why they cannot determine physical Bayes risk; verify both registered L3 cells below 1e-12.",
+  "verification": "Exhaustively enumerate only the existing L3 square (6561 states) in two previously used cells, compare direct current weights, the reparameterized boundary generator, physical signed contrast, and physical absolute contrast.",
+  "compute_budget": {"new_physical_samples": 0, "new_system_sizes": 0, "new_bootstrap_replicates": 0, "control_cells": 2, "existing_control_states_per_cell": 6561},
+  "claim_boundary": "The unweighted boundary-only signed average is not a physical posterior average. The physical signed average is not the Q-wise absolute contrast that determines Bayes risk. No fixed-h thermodynamic decodability result is claimed.",
+  "stop_rule": "Stop after all-size algebra and the two L3 replay cells. Do not collect another size, sample, fit or threshold.",
+  "result": "../results/rough-charge-physical-average-cancellation-2026-09-22.json",
+  "outcome": "The unweighted boundary-only signed parity ratio tends to +/-1 at fixed h!=0, while the physical signed parity contrast is (1-2p)^L and tends to zero. Bayes risk requires the Q-wise absolute contrast with the measured-charge factor retained; the L3 controls verify every formula but do not yield its thermodynamic bound."
+}

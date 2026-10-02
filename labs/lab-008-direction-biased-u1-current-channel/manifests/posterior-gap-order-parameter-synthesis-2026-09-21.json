@@ -1,0 +1,37 @@
+{
+  "id": "lab008-posterior-gap-order-parameter-synthesis-2026-09-21",
+  "status": "complete_exact_order_parameter_existing_sizes_do_not_discriminate",
+  "not_yet_run": false,
+  "authorization": "Researcher asked the program to step back, use the reference literature, and identify scientifically important questions beyond incremental phase-diagram polishing.",
+  "question": "Can the decoder-independent distribution of DeltaF=log(Z0/Z1) be turned into a physically interpretable order-parameter and scaling protocol that distinguishes correctable, finite-risk and BKT-like regimes?",
+  "predecessor": "midpoint-alternative-theorem-interface-audit-2026-09-21.json",
+  "claim_boundary": "This synthesis may define observables and a discriminating protocol from existing evidence and literature; it cannot infer scaling or universality without new registered size data.",
+  "alternatives": [
+    "Typical stiffness: |DeltaF| grows in probability and Bayes risk vanishes.",
+    "Finite-gap phase: DeltaF retains positive O(1) mass and intrinsic Bayes risk remains nonzero.",
+    "Broad rare-event mixture: typical gaps grow but rare near-zero gaps dominate risk, requiring tail rather than mean scaling."
+  ],
+  "planned_steps": [
+    "Synthesize exact posterior-gap identities, existing finite distributions and the Temkin/Hauser statistical-mechanics mappings without adding samples.",
+    "Define reader-facing scaling observables that separate median stiffness, near-zero gap mass and Bayes-risk tails.",
+    "Preregister the smallest future size/noise matrix only if existing data cannot discriminate the alternatives."
+  ],
+  "budget": {
+    "new_physical_record_samples": 0,
+    "decoder_runs": 0,
+    "maximum_primary_sources": 12,
+    "maximum_existing_result_families": 8,
+    "maximum_runtime_seconds": 300,
+    "new_external_dependencies": 0
+  },
+  "acceptance_criteria": [
+    "The observable is defined directly from physical sector partition sums and does not depend on a path selector or practical decoder.",
+    "The protocol distinguishes typical, near-zero-tail and risk-weighted behavior and states what each implies physically.",
+    "Existing data are used only within matched geometry, channel and observation contracts; no Lab 003 pooling or threshold fit is allowed.",
+    "Any new acquisition is separately preregistered with boundary-focused sampling and uncertainty before it begins."
+  ],
+  "stop_rule": "Do not collect new samples, fit a threshold, claim BKT universality or reuse practical-decoder LER as intrinsic risk. Stop after the order-parameter synthesis and a go/no-go acquisition decision.",
+  "planned_note": "wiki/decoding-thresholds.md",
+  "result": "../results/posterior-gap-order-parameter-synthesis-2026-09-21.json",
+  "decision": "The exact identity R_L=E[(1+exp(abs(DeltaF)))^-1] makes the full posterior-gap distribution a decoder-independent order parameter. Existing L=5,7,9 p=.30 records do not distinguish typical stiffness, persistent finite gaps and rare-tail-controlled risk. Register the smallest boundary-focused q=.90,.94,.97 and L=7,9,11 matrix; do not sample in this synthesis tick."
+}

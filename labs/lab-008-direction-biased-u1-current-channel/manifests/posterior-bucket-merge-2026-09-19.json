@@ -1,0 +1,30 @@
+{
+  "id": "lab008-posterior-bucket-merge-2026-09-19",
+  "status": "complete_rejected",
+  "authorization": "Execute the single remaining structured-merge feasibility branch for unresolved L5,p=.08 q=.5,.75 without increasing B.",
+  "question": "Can a certified finite-state coarsening retain future charge information from all prefixes and tighten fair/intermediate LER bounds under at most 1024 observation states?",
+  "frozen_model": "Same exact current transfer, elimination order, remaining-parity convolution, activity baseline and p=.08 as the completed branch-and-bound contracts.",
+  "merge": {
+    "child_records": "At each detector, distinguish the previous compressed label and new exact charge while forming frontier-sector weights.",
+    "signature": "Merge child records by last charge, current preferred-sector sign and a deterministic bin of absolute posterior log odds after exact remaining-parity convolution.",
+    "certification": "The label is a deterministic coarsening of public charge history. Bayes risk conditioned on the coarsened label is an upper bound on full-record LER; frontier and parity weights are otherwise propagated exactly.",
+    "state_budget": "Use 16,32,64 log-odds bins. With seven possible local charges and two signs this is at most 896 labels, below B=1024."
+  },
+  "matrix": {
+    "exact_gate": {"L": 3, "p_q": [[0.1,0.5],[0.3,0.75]], "modes": ["unmerged",16,64]},
+    "study": {"L": 5, "p": 0.08, "q": [0.5,0.75], "log_odds_bins": [16,32,64], "log_odds_cap": 16.0}
+  },
+  "acceptance": [
+    "Unmerged L3 reproduces exact LER; every merged L3 value remains an upper bound and all masses normalize.",
+    "Every study run uses at most 1024 observation labels and two million transfer states. Compare with activity and both prior priorities.",
+    "Promote only if certified activity-interval width falls by at least 10%. If neither cell passes, close the structured-merge branch at this registered resolution.",
+    "Preserve promoted q=.97,1 bounds; no threshold, fit, decoder or unregistered larger merge."
+  ],
+  "budget": {"maximum_observation_labels": 1024, "maximum_transfer_states": 2000000, "maximum_bins": 64, "no_sampling": true, "no_decoder_runs": true},
+  "stop_rule": "Stop after the frozen bin matrix or first state-cap failure. This is the only registered structured merge.",
+  "registered_at": "2026-09-19 07:52:11 UTC",
+  "result": "results/posterior-bucket-merge-2026-09-19.json",
+  "decision": "Close the registered structured-merge branch. The finest 64-bin merge reduces fair-channel width by 8.11%, below the 10% gate, and gives no q=.75 improvement. No run hits the resource cap, so this is an evidentiary rejection rather than censoring.",
+  "completed_at": "2026-09-19 07:52:11 UTC",
+  "next_action": "Stop contraction micro-optimization. Consolidate the controlled partition-function explanation and benchmark its certified intervals against existing exact-oracle evidence, showing fair/intermediate p=.08+ as unresolved rather than fitting a curve."
+}

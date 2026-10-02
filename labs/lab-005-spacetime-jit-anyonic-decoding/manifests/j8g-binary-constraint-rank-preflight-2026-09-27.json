@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "lab005-j8g-binary-constraint-rank-preflight-2026-09-27",
+  "status": "prospectively_registered",
+  "question": "Can the orbit-character selection constraint reduce the still-uncosted all-support exact projector sums below the inherited total orbit-term ceiling without a new resource budget?",
+  "scientific_boundary": "Rank-only structural prerequisite on the fixed ideal L=2 operator orbit and selected full-binary first record. No new second law, private-error information, risk, noisy JIT, L=3, crossing or threshold.",
+  "method_basis": {
+    "local_exact_identity": "run_j6n_sequential_local_projector_moments.py: orbit Z expectation is one iff the Z mask has even overlap with every orbit-flip generator; ordered products reduce to signed Z masks. First-subset Z masks therefore form a binary linear signature space, and each attainable second-group signature has an affine preimage of size 2^(n-r).",
+    "external_context_only": "Dehaene and De Moor, The Clifford group, stabilizer states, and linear and quadratic operations over GF(2), Phys. Rev. A 68, 042318 (2003), https://arxiv.org/abs/quant-ph/0304125. This motivates binary/quadratic representations, but the project-specific formula is proved by the pinned local exact identity and replay, not assumed from the paper.",
+    "unresolved_alternative": "A group preserving physical action and first public record might identify equivalent supports, but no such automorphism is established; rank signatures alone are not a law-equivalence symmetry. Do not merge supports from matching rank counts."
+  },
+  "runner": "scripts/run_j8g_binary_constraint_rank_preflight.py",
+  "runner_sha256_before_execution": "3a580925919f5ebd906ae68b9db049f7b25a1686ede1ff55ddb262ab200f3c06",
+  "result": "results/j8g-binary-constraint-rank-preflight-2026-09-27.json",
+  "pinned_inputs": {
+    "j8c_result_sha256": "be12bdffc2872ddeaf61b6f2274f73e2c3b9abe22ff976f55de867220bf4f382",
+    "j8f_result_sha256": "238e30738abe130d5f16d11447a413aa816af2a1cb875f6e737fe34da90e60dc",
+    "j6l_result_sha256": "c3eee28f083b7f3a4dd82a3e4f8a7d3ec29aa19af92bbc3ab4588129d855c4ab",
+    "j6m_result_sha256": "55bfe46d34c9a8356e828351b0d415ed550312ed315c4c1bda7a51508ef1b932",
+    "orbit_source_sha256": "ddedd371c1ee946931765dfe9999574965e22e0073c38cc676980cb65d9d4dd7",
+    "operator_source_sha256": "0ac5c45dfb899c9a5ac6cabe36e1300cde03054f053d94db1ee2a4bbd8dcb05f",
+    "record_source_sha256": "c3c0dc32b30576f22d7838cee059139bcd22dc0cda07c8add34bd4b6d6ac95ca",
+    "sector_source_sha256": "45576b8de57ca5007cc8fd969f1094dad924a1a85550dc0dadf00e5f65f346ad",
+    "setup_source_sha256": "f3521fca0714d6fe88c4ec9493af235bd6f8919b0a9013092c09052a59ad24af"
+  },
+  "matrix": {
+    "supports": "Every one of the 54 distinct J8C eight-edge same-first-flux private error supports",
+    "actions": [[0], [1, 30, 32, 34, 35]],
+    "selected_first_public_record": "J8C/J8F all-plus charge selection with fixed full-binary first flux; no other first record",
+    "analysis": "For each support, calculate the GF(2) rank r of the first-variable-star Z-character signatures against every orbit flip. The nonzero-character first-subset solution for a second group, if attainable, is an affine class of size 2^(n-r). Under both actions check all 22 eligible second-site signatures for membership in the first span; replay the necessary nonzero-marginal reachability on all completed J8F controls. Report a conservative sum of at most (2^m-1)2^(n-r) terms per cell for m variable second sites (J8F count where known, inherited bound five otherwise). No sign sum or law is evaluated.",
+    "independent_unit": "One deterministic private-error/selected-first-record/action rank cell; no stochastic sampling unit or interval",
+    "integrity": "Hash-pin runner and all source/results before and after; require 54 unique supports, both fixed actions, J8C first-variable-site replay, action-bound second flux, 22 eligible sites, and J8F nonzero-singleton reachability. A matching rank/fingerprint is not a support equivalence."
+  },
+  "budget": {
+    "max_cpu_seconds": 60,
+    "max_signature_tests": 4096,
+    "max_legacy_orbit_terms": 65536,
+    "eligible_second_sites_per_cell": 22,
+    "max_variable_second_sites_per_cell": 5,
+    "unreplayed_max_variable_sites": 5,
+    "orbit_expectations": 0,
+    "complete_second_laws": 0,
+    "histories": 0,
+    "schedule_arms": 0,
+    "bootstraps": 0,
+    "new_dependencies": 0
+  },
+  "acceptance": [
+    "Complete 54-support/108-action rank matrix or report exact censored prefix at a fixed cap",
+    "Replay J8F public flux and necessary nonzero-singleton reachability on all 45 completed supports",
+    "Distinguish conservative affine-class enumeration count from a validated signed-sum algorithm or measured complete-law cost",
+    "If projected count exceeds 65,536, retain analytic signed-sum and physical action-preserving symmetry as open alternatives; do not infer impossibility or ask for a human ranking",
+    "Evaluate zero orbit expectations, complete laws, histories, arms, bootstraps or risk scores"
+  ],
+  "stop_rule": "Stop after all 54 supports and 108 cells or first signature-test/CPU cap; fail closed on hash, geometry, flux, J8C or J8F replay mismatch. No full-law computation is authorized by a favorable rank result."
+}

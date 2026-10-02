@@ -3,7 +3,7 @@
 set -eu
 
 project_root=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
-default_python="$project_root/.venv-research/bin/python3"
+default_python="$project_root/.venv/bin/python3"
 research_python=${HERALD_RESEARCH_PYTHON:-$default_python}
 
 if [ ! -x "$research_python" ]; then

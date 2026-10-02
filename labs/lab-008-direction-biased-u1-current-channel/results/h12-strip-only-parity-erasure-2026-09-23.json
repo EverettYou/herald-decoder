@@ -1,0 +1,95 @@
+{
+  "claim_boundary": "The bound applies only when bulk charges are hidden. It does not bound full physical-record contrast A(Q_bulk,Q_strip), which can exploit bulk-strip correlations; no p=.30 phase is inferred.",
+  "exact_controls": [
+    {
+      "delta": 0.49,
+      "delta_exact": "49/100",
+      "oracle_bound_delta_cubed": 0.117649,
+      "p": 0.3,
+      "q": 0.5,
+      "signed_row_kernel": {
+        "-1": "0",
+        "-2": "-9/400",
+        "0": "89/200",
+        "1": "0",
+        "2": "-9/400"
+      },
+      "strip_only_L3_contrast": 0.11764899999999999,
+      "violation": 0.0
+    },
+    {
+      "delta": 0.7684,
+      "delta_exact": "1921/2500",
+      "oracle_bound_delta_cubed": 0.453692989504,
+      "p": 0.3,
+      "q": 0.9,
+      "signed_row_kernel": {
+        "-1": "-21/125",
+        "-2": "-81/10000",
+        "0": "2081/5000",
+        "1": "21/125",
+        "2": "-81/10000"
+      },
+      "strip_only_L3_contrast": 0.3317428419034156,
+      "violation": 0.0
+    },
+    {
+      "delta": 0.82,
+      "delta_exact": "41/50",
+      "oracle_bound_delta_cubed": 0.551368,
+      "p": 0.3,
+      "q": 1.0,
+      "signed_row_kernel": {
+        "-1": "-21/100",
+        "-2": "0",
+        "0": "2/5",
+        "1": "21/100",
+        "2": "0"
+      },
+      "strip_only_L3_contrast": 0.4146216399999998,
+      "violation": 0.0
+    }
+  ],
+  "geometry_checks": [
+    {
+      "L": 3,
+      "cut_edges": 3,
+      "gate": "pass",
+      "interface_edges": 3,
+      "vertical_strip_edges": 2
+    },
+    {
+      "L": 5,
+      "cut_edges": 5,
+      "gate": "pass",
+      "interface_edges": 5,
+      "vertical_strip_edges": 4
+    },
+    {
+      "L": 7,
+      "cut_edges": 7,
+      "gate": "pass",
+      "interface_edges": 7,
+      "vertical_strip_edges": 6
+    },
+    {
+      "L": 11,
+      "cut_edges": 11,
+      "gate": "pass",
+      "interface_edges": 11,
+      "vertical_strip_edges": 10
+    }
+  ],
+  "id": "lab008-h12-strip-only-parity-erasure-2026-09-23",
+  "maximum_exact_control_violation": 0.0,
+  "oracle_sha256": "241916aa389193b7b62a3ea2de7f4267086dfcca60760ee514e27100f40fa6ee",
+  "sampling": {
+    "bootstrap_replicates": 0,
+    "new_physical_samples": 0,
+    "new_system_sizes": 0
+  },
+  "source_manifest": "../manifests/h12-strip-only-parity-erasure-2026-09-23.json",
+  "source_sha256": "b87a5feba27675e26970360d730324b7d3740e4dc0492b4dc478e510f140c9e7",
+  "status": "passed_exact_partial_record_bound",
+  "theorem": "For strip charges S and vertical strip currents V, Y=S-D_V V consists of L independent row differences X_y-C_y. Revealing V can only increase absolute logical contrast. Therefore A(S)<=A(S,V)=delta(p,q)^L, where delta=|a^2-b^2-c^2|+2a|b-c|+2bc<1 for a=1-p,b=pq,c=p(1-q), 0<p<1 and 0<=q<=1."
+}

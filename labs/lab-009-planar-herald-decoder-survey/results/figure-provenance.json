@@ -1,0 +1,77 @@
+{
+  "status": "generated",
+  "figures": [
+    {
+      "id": "fresh-matched-ler",
+      "files": [
+        "figures/fresh-matched-ler.png",
+        "figures/fresh-matched-ler.svg",
+        "figures/fresh-matched-ler.pdf"
+      ],
+      "inputs": [
+        "results/benchmark.json",
+        "data/fresh-matched-vectors.npz"
+      ],
+      "semantics": "Fresh 200 shared unconditional records per cell, Wilson95 intervals. Planar and transfer failure counts coincide; MPS \u03c716 approximate. High-p records independently sampled; no reflection or interpolation."
+    },
+    {
+      "id": "fresh-conditional-regret",
+      "files": [
+        "figures/fresh-conditional-regret.png",
+        "figures/fresh-conditional-regret.svg",
+        "figures/fresh-conditional-regret.pdf"
+      ],
+      "inputs": [
+        "results/benchmark.json",
+        "data/fresh-matched-vectors.npz"
+      ],
+      "semantics": "Selected sector expected loss minus exact planar conditional Bayes risk, averaged over 200 records. Error bars \u00b11.96 sample SE. Exact reference zero; MPS posterior agreement is cohort-specific."
+    },
+    {
+      "id": "warm-runtime",
+      "files": [
+        "figures/warm-runtime.png",
+        "figures/warm-runtime.svg",
+        "figures/warm-runtime.pdf"
+      ],
+      "inputs": [
+        "data/warm-runtime-summary.csv",
+        "results/benchmark.json"
+      ],
+      "semantics": "Pooled equal-size fresh eight-cell mix:1600 timings/method/size, one CPU thread; excludes graph setup and independent first call. Median and p95, no claim of native or asymptotic speed."
+    },
+    {
+      "id": "approximation-diagnostics",
+      "files": [
+        "figures/approximation-diagnostics.png",
+        "figures/approximation-diagnostics.svg",
+        "figures/approximation-diagnostics.pdf"
+      ],
+      "inputs": [
+        "results/validation.json"
+      ],
+      "semantics": "Maximum sampled posterior differences, not rigorous risk bounds. MPS finitechi and KacWard finitepenalty remain approximations. Plot floor1e-17 for zero/roundoff differences; no production threshold inferred."
+    }
+  ],
+  "input_sha256": {
+    "data/fresh-matched-vectors.npz": "bc88a4fd17c41da219453ac4c3f027233d368f871fad3f9f2b7ab3ffa93c7284",
+    "data/warm-runtime-summary.csv": "e9318898367b3a18a0beebdf7379345ea36fb3955083e591c304dec4b6a80ef1",
+    "results/benchmark.json": "f446a379f32887451383bd66544f2721b84c34f71d885b05c3435a2b3851de44",
+    "results/validation.json": "b1f98f52b183c98d0b20bf5aeab31f1f466d1e3c67553101e2e4e55a54be7c1f"
+  },
+  "output_sha256": {
+    "figures/fresh-matched-ler.png": "831dc695bd37c018f38f097e4d889547f95f5fe709a95de97227174e01ba0295",
+    "figures/fresh-matched-ler.svg": "69be800411cfb238c396444caec27e002e3cc94e78b2afca63e56e47b79f2a29",
+    "figures/fresh-matched-ler.pdf": "57a5fd05f2b8b9090813956ca45bb8c299cda21023604948c1e34ab5a44d6ee0",
+    "figures/fresh-conditional-regret.png": "d187579540e2e0ba06915d01ae088ddc020ca75b7fa7d9b272558e1d751fb01c",
+    "figures/fresh-conditional-regret.svg": "2d6a3ac544eeb4da047574dc5300afbd77f654249530165461ff0facfbd9bf3d",
+    "figures/fresh-conditional-regret.pdf": "abe0217583a5a8f13f3e86e841067e4f5e62ae6b24929fd6d758bbf689365e27",
+    "figures/warm-runtime.png": "e41728b421211426124af479e3ff4c815259e74ec3e9cd0c18aaa75bcb18f26e",
+    "figures/warm-runtime.svg": "4bd2b2f3f5001660878e4ae7bd04d9f6bf86623db72fd2fd3c30f53c193a0128",
+    "figures/warm-runtime.pdf": "2b01b359a3ce50d4781f8815bc937ac06d92a8809b47ad830028d2ee3b07fa94",
+    "figures/approximation-diagnostics.png": "41ffc62adc97c9525d3a311f0db73d83619cdba1c993a0d05cca55a54d019e35",
+    "figures/approximation-diagnostics.svg": "9406694a8200d2ddaf7573689079a657f31932a2e864c830fa0215a9c18ed690",
+    "figures/approximation-diagnostics.pdf": "94bf713d5fa80e6bd165fa52d3b1be19c62a355223be27cac9f93e3ed0daf537"
+  },
+  "new_threshold_fits": 0
+}

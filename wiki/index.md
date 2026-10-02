@@ -34,3 +34,5 @@ The dashboard turns these roles into live, type-based navigation. A new paper be
 ## Index health
 
 The dashboard Index view computes its page totals, type/status distribution, topic coverage, source-ledger coverage, recent updates, and deterministic lint result at view time. This prevents stale manually maintained numbers and keeps the Index useful as the library grows.
+
+- [Binary herald full-prior domain](methods/binary-herald-full-prior-domain.md) — invalid interior-q complement symmetry, endpoint exceptions and corrected evidence scope.
